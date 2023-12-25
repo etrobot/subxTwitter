@@ -1,5 +1,6 @@
 Python-dotenv
 feedparser
+oracledb
 requests
 markdown
 litellm

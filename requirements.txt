@@ -3,6 +3,8 @@ feedparser
 oracledb
 requests
 markdown
+fastapi
+uvicorn
 litellm
 pandas
 bs4

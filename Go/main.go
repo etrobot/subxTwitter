@@ -12,14 +12,12 @@ import (
 )
 
 func indexHandler(w http.ResponseWriter, r *http.Request) {
-	// 解析模板文件
 	tmpl, err := template.ParseFiles("template.html")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 
-	// 渲染模板并发送给客户端
 	err = tmpl.Execute(w, nil)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
@@ -29,7 +27,6 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 
 func subscribeHandler(w http.ResponseWriter, r *http.Request) {
 	email := r.FormValue("email")
-	// Oracle connection string
 	cs := "(DESCRIPTION=(RETRY_COUNT=20)(RETRY_DELAY=3)(ADDRESS=(PROTOCOL=TCPS)(PORT=1522)(HOST=adb.us-sanjose-1.oraclecloud.com))(CONNECT_DATA=(SERVICE_NAME=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(SECURITY=(SSL_SERVER_DN_MATCH=YES)))"
 
 	// Connect to Oracle database
@@ -66,10 +63,8 @@ func subscribeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// 设置路由
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/subscribe", subscribeHandler)
 
-	// 启动HTTP服务器，监听指定端口
 	http.ListenAndServe(":8080", nil)
 }

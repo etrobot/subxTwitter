@@ -2,205 +2,204 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton for Twitter List</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Dark theme styles */
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPT Subscripton for Twitter List</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Dark theme styles */
 
-        body.dark {
-            background-color: #1f2937;
-            color: #f8fafc;
-        }
+    body.dark {
+      background-color: #1f2937;
+      color: #f8fafc;
+    }
+    body.dark a,
+    body.dark select,
+    body.dark input{
+      background-color: #374151;
+      color: #f8fafc;
+      border: 0;
+    }
 
-        body.dark input,
-        body.dark select {
-            background-color: #374151;
-            color: #f8fafc;
-            border: 0;
-        }
-
-        /* Flexbox styles */
-        .flex-container {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 1rem;
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-        }
-    </style>
+    /* Flexbox styles */
+    .flex-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+    }
+  </style>
 </head>
 
 <body class="flex flex-col min-h-screen">
-    <!--<div class="flex-grow"></div>-->
-    <div class="mb-16">
-        <h1 id="title" class="text-center text-2xl font-bold">GPT Subscripton for Twitter List</h1>
-        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mt-4">
-            <input type="email" name="email" placeholder="Enter your email address" required
-                class="border border-gray-300 rounded-md px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
-            <div class="flex items-center mt-2 w-full max-w-xs">
+  <!--<div class="flex-grow"></div>-->
+  <div class="mb-16">
+    <h1 id="title" class="text-center text-2xl font-bold">GPT Subscripton for Twitter List</h1>
+    <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mt-4">
+      <div class="flex items-center mt-2 w-full max-w-xs">
+        <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank" rel="noopener noreferrer"
+          class="border border-gray-300 rounded-md px-3 py-1 mt-2 mr-2 max-w-xs">
+          ?
+        </a>
+        <input type="number" name="target_id" placeholder="Enter target ID" required
+          class="border border-gray-300 rounded-md px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 mt-2 w-full max-w-xs">
 
-                <input type="text" name="target_id" placeholder="Enter target ID" required
-                    class="border border-gray-300 rounded-md px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 mt-2 w-full max-w-xs">
-                <a href="https://help.twitter.com/en/using-x/x-lists" target="_blank" rel="noopener noreferrer"
-                    class="ml-1 flex items-center justify-center w-6 h-6 rounded-full text-white bg-blue-500">
-                    ?
-                </a>
-            </div>
-            <div class="flex items-center mt-4 w-full max-w-xs">
-                <span class="w-full" id="time-label">Daily Push Time</span>
-                <input type="time" name="mail_time" required
-                    class="w-full border border-gray-300 rounded-md px-4 py-1 focus:ring focus:border-blue-300">
-            </div>
-            <input type="hidden" name="current_language" id="current-language" value="">
-            <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded-md mt-4 w-full max-w-xs"
-                id="subscribe-btn">Subscribe</button>
-        </form>
-        <div class="flex-container">
-            <select id="language-select" class="border border-gray text-blue-500 px-2 py-1 rounded-md">
-                <option value="zh-CN">简体中文</option>
-                <option value="zh-TW">繁體中文</option>
-                <option value="en">English</option>
-                <option value="ja">日本語</option>
-                <option value="ko">한국어</option>
-            </select>
-
-            <button id="theme-toggle" class="border border-gray text-blue-500 px-2 py-1 rounded-md">🌒</button>
-        </div>
+      </div>
+      <div class="flex items-center mt-4 w-full max-w-xs">
+        <select id="language-select" class="border border-gray-300 mr-1 ml-auto bg-transparent py-1 rounded-md">
+         <option value="zh-CN">简体中文</option>
+         <option value="zh-TW">繁體中文</option>
+         <option value="en">English</option>
+         <option value="ja">日本語</option>
+         <option value="ko">한국어</option>
+         <option value="es">Español</option>
+         <option value="pt">Português</option>
+         <option value="de">Deutsch</option>
+         <option value="fr">Français</option>
+         <option value="ar">العربية</option>
+         <option value="id">Bahasa(ID)</option>
+         <option value="ms">Bahasa Melayu</option>
+         <option value="tl">Filipino</option>
+         <option value="vi">Tiếng Việt</option>
+         <option value="pl">Polski</option>
+         <option value="nl">Nederlands</option>
+        </select>
+        <input type="email" name="email" placeholder="Enter your email address" required
+        class="border border-gray-300 rounded-md px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+      </div>
+      <div class="flex items-center mt-4 w-full max-w-xs">
+        <span class="ml-auto mr-auto" id="time-label">Daily Push Time</span>
+        <input type="time" id="mail-time" required
+          class="pl-1 ml-1 mr-1 border border-gray-300 rounded-md py-1 focus:ring focus:border-blue-300">
+          <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+      </div>
+      <input type="hidden" name="current_language" id="current-language" value="">
+      <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded-md mt-4 w-full max-w-xs"
+        id="subscribe-btn">Subscribe</button>
+    </form>
+    <div class="flex-container">
+      <button id="theme-toggle" class="px-2 py-1 rounded-md">🌒</button>
     </div>
-    <script>
-        document.getElementById('subscribe-form').addEventListener('submit', function (event) {
-            // 阻止表单的默认提交行为
-            event.preventDefault();
+  </div>
+  <script>
+    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+      // 阻止表单的默认提交行为
+      event.preventDefault();
 
-            // 获取当前日期对象
-            var currentDate = new Date();
+      // 获取当前日期对象
+      var currentDate = new Date();
 
-            // 获取用户选择的时间
-            var mailTimeValue = document.getElementById('mail-time').value;
+      // 获取用户选择的时间
+      var mailTimeValue = document.getElementById('mail-time').value;
 
-            // 将用户选择的时间与当前日期拼接成一个字符串
-            var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
+      // 将用户选择的时间与当前日期拼接成一个字符串
+      var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
 
-            // 将拼接后的字符串转换为时间戳
-            var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
+      // 将拼接后的字符串转换为时间戳
+      var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
 
-            // 判断 selectedDateTimeTimestamp 是否小于当前时间
-            if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
-                // 如果是，则增加一天
-                selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
-            }
+      // 判断 selectedDateTimeTimestamp 是否小于当前时间
+      if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
+        // 如果是，则增加一天
+        selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
+      }
 
-            // 将增加一天后的时间戳设置到隐藏的 input 元素中
-            document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
+      // 将增加一天后的时间戳设置到隐藏的 input 元素中
+      document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
 
-            // 提交表单
-            this.submit();
-        });
+      // 提交表单
+      this.submit();
+    });
 
-        var userLang = navigator.language || navigator.userLanguage;
-        var emailInput = document.querySelector('input[name="email"]');
-        var targetIdInput = document.querySelector('input[name="target_id"]');
-        var timeLabel = document.getElementById("time-label");
-        var subscribeBtn = document.getElementById("subscribe-btn");
-        var languageSelect = document.getElementById("language-select");
-        var themeToggle = document.getElementById("theme-toggle");
-        var body = document.body;
+    var userLang = navigator.language || navigator.userLanguage;
+    var emailInput = document.querySelector('input[name="email"]');
+    var targetIdInput = document.querySelector('input[name="target_id"]');
+    var timeLabel = document.getElementById("time-label");
+    var subscribeBtn = document.getElementById("subscribe-btn");
+    var languageSelect = document.getElementById("language-select");
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
 
-        // 检测浏览器或系统是否处于深色主题模式
-        function isDarkTheme() {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                // 浏览器或系统处于深色主题模式
-                return true;
-            } else {
-                // 浏览器或系统处于浅色主题模式
-                return false;
-            }
-        }
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
 
-        // Toggle theme function
-        themeToggle.addEventListener("click", function () {
-            body.classList.toggle("dark");
-            if (body.classList.contains("dark")) {
-                themeToggle.textContent = "☀";
-            } else {
-                themeToggle.textContent = "️🌒";
-            }
-        });
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
 
-        // 根据系统主题模式切换初始主题
-        if (isDarkTheme()) {
-            body.classList.add("dark");
-            themeToggle.textContent = "☀";
-        } else {
-            body.classList.remove("dark");
-            themeToggle.textContent = "️🌒";
-        }
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+    const languageData = {
+         "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
+         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新时间", "Twitter列表的GPT订阅"],
+         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Time", "GPT Subscription for Twitter List"],
+         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新時間", "Twitter列表的GPT訂閱"],
+         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新時間", "TwitterリストのGPTサブスクリプション"],
+         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 시간", "Twitter 목록을 위한 GPT 구독"],
+         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar hora", "Suscripción GPT para la lista de Twitter"],
+         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar hora", "Assinatura GPT para Lista do Twitter"],
+         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Zeit", "GPT-Abonnement für Twitter-Liste"],
+         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour l'heure", "Abonnement GPT pour la liste Twitter"],
+         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / وقت التحديث","اشتراك GPT لقائمة تويتر"],
+         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Waktu", "Langganan GPT untuk Daftar Twitter"],
+         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Masa", "Langganan GPT untuk Senarai Twitter"],
+         "tl": ["Maglagay ng iyong email", "Maglagay ng ID ng target list", "Araw-araw na Oras ng Pag-push", "Mag-subscribe / Mag-update ng Oras", "GPT Subscription para sa Twitter List"],
+         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật thời gian", "Đăng ký GPT cho Danh sách Twitter"],
+         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj godzinę", "Subskrypcja GPT dla listy Twitter"],
+         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Tijd", "GPT-abonnement voor Twitter-lijst"]
+    };
 
-        // Function to set placeholders and titles based on language
-        function setLanguage(selectedLanguage) {
-            if (selectedLanguage === "zh-CN") {
-                // 设置简体中文占位符和标题
-                emailInput.placeholder = "请输入您的邮箱地址";
-                targetIdInput.placeholder = "请输入目标ID";
-                timeLabel.textContent = "每日推送时间";
-                subscribeBtn.textContent = "订阅/更新时间";
-                document.getElementById("title").textContent = "Twitter列表的GPT订阅";
-            } else if (selectedLanguage === "zh-TW") {
-                // 設定簡體中文佔位符和標題
-                emailInput.placeholder = "請輸入您的郵件地址";
-                targetIdInput.placeholder = "請輸入目標ID";
-                timeLabel.textContent = "每日推送時間";
-                subscribeBtn.textContent = "訂閱/更新時間";
-                document.getElementById("title").textContent = "Twitter清單的GPT訂閱";
-            } else if (selectedLanguage === "en") {
-                // 设置英文占位符和标题
-                emailInput.placeholder = "Enter your email address";
-                targetIdInput.placeholder = "Enter target ID";
-                timeLabel.textContent = "Daily Push Time";
-                subscribeBtn.textContent = "Subscribe / Update Time";
-                document.getElementById("title").textContent = "GPT Subscripton for Twitter List";
-            } else if (selectedLanguage === "ja") {
-                // 设置日语占位符和标题
-                emailInput.placeholder = "メールアドレスを入力してください";
-                targetIdInput.placeholder = "ターゲットIDを入力してください";
-                timeLabel.textContent = "毎日のプッシュ時間";
-                subscribeBtn.textContent = "購読/更新時間";
-                document.getElementById("title").textContent = "TwitterリストのGPTサブスクリプション";
-            } else if (selectedLanguage === "ko") {
-                // 设置韩语占位符和标题
-                emailInput.placeholder = "이메일 주소를 입력하세요";
-                targetIdInput.placeholder = "대상 ID를 입력하세요";
-                timeLabel.textContent = "매일 푸시 시간";
-                subscribeBtn.textContent = "구독/업데이트 시간";
-                document.getElementById("title").textContent = "Twitter 목록을 위한 GPT 구독";
-            } else {
-                // 默认设置为中文占位符和标题
-                emailInput.placeholder = "请输入您的邮箱地址";
-                targetIdInput.placeholder = "请输入目标ID";
-                timeLabel.textContent = "每日推送时间";
-                subscribeBtn.textContent = "订阅";
-                document.getElementById("title").textContent = "Twitter列表的GPT订阅";
-            }
-        }
+    // Function to set placeholders and titles based on language
+    function setLanguage(selectedLanguage) {
+     const placeholders = languageData.columns.reduce((acc, column) => {
+      acc[column] = languageData[selectedLanguage][languageData.columns.indexOf(column)];
+      return acc;
+     }, {});
 
-        // Initial set of placeholders and titles
-        setLanguage(userLang);
-        var defaultLanguageInput = document.getElementById("current-language");
-        defaultLanguageInput.value = userLang;
+     emailInput.placeholder = placeholders.emailPlaceholder;
+     targetIdInput.placeholder = placeholders.targetIdPlaceholder;
+     timeLabel.textContent = placeholders.timeLabel;
+     subscribeBtn.textContent = placeholders.subscribeBtn;
+     document.getElementById("title").textContent = placeholders.title;
+    }
 
-        // Toggle language function
-        languageSelect.addEventListener("change", function () {
-            var selectedLanguage = languageSelect.value;
-            setLanguage(selectedLanguage);
-            // 更新隐藏 input 的值
-            var currentLanguageInput = document.getElementById("current-language");
-            currentLanguageInput.value = selectedLanguage;
-        });
-    </script>
-    </div>
+    // Initial set of placeholders and titles
+    setLanguage(userLang);
+    var defaultLanguageInput = document.getElementById("current-language");
+    defaultLanguageInput.value = userLang;
+
+    // Toggle language function
+    languageSelect.addEventListener("change", function () {
+      var selectedLanguage = languageSelect.value;
+      setLanguage(selectedLanguage);
+      // 更新隐藏 input 的值
+      var currentLanguageInput = document.getElementById("current-language");
+      currentLanguageInput.value = selectedLanguage;
+    });
+  </script>
+  </div>
 </body>
 
 </html>

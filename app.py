@@ -16,32 +16,42 @@ async def subscribe(request: Request):
     form_data = await request.form()
     print(form_data)
     email = form_data["email"]
+    mail_time = datetime.utcfromtimestamp(int(form_data["mail_time"]))
+    expire_date = datetime.now() + timedelta(days=7)
     cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 
     # Connect to Oracle database
     conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
 
     cursor = conn.cursor()
-    cursor.execute("SELECT COUNT(*) FROM users WHERE email = :email", email=email)
-    count = cursor.fetchone()[0]
+    cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
+    row = cursor.fetchone()
 
-    if count > 0:
-        print("The email already exists in the table.")
-    else:
-        id = "i/lists/1733652180576686386"
-        expire_date = datetime.now() + timedelta(days=7)
+    if row is not None:
+        expire_date = row[4]
         cursor.execute(
-            "INSERT INTO users (email, target_id, mail_time, expire_date) VALUES (:email, :target_id, :mail_time, :expire_date)",
+            "UPDATE users SET lang = :lang, target_id = :target_id, mail_time = :mail_time WHERE email = :email",
+            target_id=form_data["target_id"],
+            mail_time=mail_time,
             email=email,
-            target_id=id,
-            mail_time=datetime.now(),
-            expire_date=expire_date)
+            lang=form_data["current_language"]
+        )
         conn.commit()
-        print("The values have been inserted into the table.")
+        print("The record has been updated.")
+    else:
+        cursor.execute("INSERT INTO users (email, target_id, mail_time, expire_date,lang) VALUES (:email, :target_id, :mail_time, :expire_date, :lang)",
+            email=email,
+            target_id=form_data["target_id"],
+            mail_time=mail_time,
+            expire_date=expire_date,
+            lang=form_data["current_language"]
+        )
+        conn.commit()
+        print("A new record has been inserted.")
 
     conn.close()
 
-    return "订阅成功！感谢您的订阅：" + email
+    return email+" Subscribed, Expire Date："+expire_date.strftime("%Y-%m-%d")
 
 
 if __name__ == "__main__":

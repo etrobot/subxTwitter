@@ -4,12 +4,21 @@ from fastapi.templating import Jinja2Templates
 import oracledb
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-
+cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 
 @app.get("/")
 def index(request: Request):
     return templates.TemplateResponse("template.html", {"request": request})
 
+
+@app.post("/unsubscribe")
+async def unsubscribe(email: str):
+    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM users WHERE email = :email", email=email)
+    conn.commit()
+    conn.close()
+    return email+" Unsubscribed"
 
 @app.post("/subscribe")
 async def subscribe(request: Request):
@@ -18,7 +27,6 @@ async def subscribe(request: Request):
     email = form_data["email"]
     mail_time = datetime.utcfromtimestamp(int(form_data["mail_time"]))
     expire_date = datetime.now() + timedelta(days=7)
-    cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 
     # Connect to Oracle database
     conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
@@ -52,7 +60,6 @@ async def subscribe(request: Request):
     conn.close()
 
     return email+" Subscribed, Expire Date："+expire_date.strftime("%Y-%m-%d")
-
 
 if __name__ == "__main__":
     import uvicorn

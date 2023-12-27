@@ -1,5 +1,7 @@
 import os,re
 from datetime import datetime,timedelta
+
+import oracledb
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -42,7 +44,7 @@ def sendEmail(message:str,receiver:str=os.environ['MAILTO'],subject:str=''):
         print('邮件发送失败')
     smtp.quit() # 结束
 
-def sumTweets(prompt:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106',mail=True,render=True):
+def sumTweets(user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106',render=True):
     '''
     抓取目标推特AI总结并发邮件
     :param lang:
@@ -52,59 +54,58 @@ def sumTweets(prompt:str,lang = '中文',length:int = 10000, model='openai/gpt-3
     :param render:
     :return:
     '''
-    users=os.environ['TARGET']
     info: str = os.environ['INFO']
     nitter:str = os.environ['NITTER']
-    minutes:int = int(float(os.environ['MINS']))
     result = ''
-    for user in users.split(';'):
-        rss_url = f'https://{nitter}/{user}/rss'
-        feed = parse(rss_url)
-        df = pd.json_normalize(feed.entries)
-        df['timestamp'] = df['published'].apply(lambda x: pd.Timestamp(x).timestamp())
-        if not 'i/lists' in user:
-            df = df.reindex(index=df.index[::-1])
-        compareTime = datetime.utcnow() - timedelta(minutes=minutes)
-        compareTime = pd.Timestamp(compareTime).timestamp()
-        df = df[df['timestamp'] > compareTime]
-        if len(df) == 0:
-            continue
-        for k, v in df.iterrows():
-            pattern = r'<a\s+.*?href="([^"]*https://%s/[^/]+/status/[^"]*)"[^>]*>'%nitter.replace(".",r'\.')
-            matches = re.findall(pattern, v['summary'])
-            if len(matches) > 0:
-                if matches[0] in df['id'].values:
-                    indices = df[df['id'] == matches[0]]
-                    df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % indices['summary'].values[0],
-                                                 v['summary'])
-                    if 'i/lists' in user:
-                        df = df.drop(indices.index)
-                else:
-                    headers = {
-                        'accept-language': 'zh-CN,zh-TW;q=0.9,zh;q=0.8,en-US;q=0.7,en;q=0.6,ja;q=0.5',
-                        'User-Agent': "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36"
-                    }
-                    session = requests.Session()
-                    session.headers = headers
-                    oripost = session.get(matches[0]).text
-                    quote = BeautifulSoup(oripost, 'html.parser').title.string.replace(" | nitter", '')
-                    df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
-        df['content'] = df['published'].str[len('Sun, '):-len(' GMT')] + '[' + df['author'] + ']' + '(' + df[
-            'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
-        # df.to_csv('test.csv', index=False)
-        tweets = df['content'].to_csv().replace(nitter, 'x.com')[:length]
-        if len(prompt)<10:
-            prompt =  "<tweets>{tweets}</tweets>\n以上是一些推，你是一名{lang}专栏『{info}最新资讯』的资深作者，请在以上推中，挑选出和『{info}』相关信息(若有)的推,汇编成一篇用markdown排版的{lang}文章，包含发推时间、作者(若有)、推特链接(若有)和推特内容以及你的解读和评论，如果没有{info}相关资讯请回复『NOT FOUND』"
-        prompt =  prompt.format(tweets=tweets,lang=lang,info=info)
-        print('tweets:', prompt)
-        if not 'NOT FOUND' in result:
-            result = result + '\n##%s\n\n'%user + completion(model=model, messages=[{"role": "user", "content": prompt, }], api_key=os.environ['OPENAI_API_KEY'],
-                       base_url=os.environ['API_BASE_URL'])["choices"][0]["message"]["content"]
-    if mail and len(result) > 0:
-        if render:
-            result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
-        sendEmail(result)
+    rss_url = f'https://{nitter}/i/lists/{user}/rss'
+    feed = parse(rss_url)
+    df = pd.json_normalize(feed.entries)
+    for k, v in df.iterrows():
+        pattern = r'<a\s+.*?href="([^"]*https://%s/[^/]+/status/[^"]*)"[^>]*>'%nitter.replace(".",r'\.')
+        matches = re.findall(pattern, v['summary'])
+        if len(matches) > 0:
+            if matches[0] in df['id'].values:
+                indices = df[df['id'] == matches[0]]
+                df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % indices['summary'].values[0],
+                                             v['summary'])
+                if 'i/lists' in user:
+                    df = df.drop(indices.index)
+            else:
+                headers = {
+                    'accept-language': 'zh-CN,zh-TW;q=0.9,zh;q=0.8,en-US;q=0.7,en;q=0.6,ja;q=0.5',
+                    'User-Agent': "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Mobile Safari/537.36"
+                }
+                session = requests.Session()
+                session.headers = headers
+                oripost = session.get(matches[0]).text
+                quote = BeautifulSoup(oripost, 'html.parser').title.string.replace(" | nitter", '')
+                df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
+    df['content'] = df['published'].str[len('Sun, '):-len(' GMT')] + '[' + df['author'] + ']' + '(' + df[
+        'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
+    # df.to_csv('test.csv', index=False)
+    tweets = df['content'].to_csv().replace(nitter, 'x.com')[:length]
+    prompt =  "<tweets>{tweets}</tweets>\n以上是一些推，你是一名{lang}资深作者，请将以上推文汇编成一篇用markdown排版的{lang}文章，包含发推时间、作者(若有)、推特链接(若有)和推特内容以及你的解读和评论"
+    prompt =  prompt.format(tweets=tweets,lang=lang,info=info)
+    print('tweets:', prompt)
+    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
+    sendEmail(result,receiver=mail)
     return result
 
 if __name__=='__main__':
-    sumTweets(os.environ.get('PROMPT',''),mail=True,render=True)
+    cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
+    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    cursor = conn.cursor()
+    # Define the SQL query
+    checkTime = datetime.now() - timedelta(minutes=5)
+    pushTime = datetime.now() + timedelta(minutes=5)
+    sql_query = "SELECT * FROM users WHERE expire_date >= CURDATE() AND mail_time <= :pushTime AND mail_time >= :checkTime"
+    # Execute the query
+    cursor.execute(sql_query,pushTime=pushTime,checkTime=checkTime)
+
+    # Fetch all rows from the result set
+    rows = cursor.fetchall()
+
+    # Print the results
+    for row in rows:
+        print(row)
+        sumTweets(user=row[4],mail=row[0],render=True)

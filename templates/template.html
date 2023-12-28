@@ -1,79 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GPT Subscripton for Twitter List</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
     /* Dark theme styles */
     body.dark {
-      background-color: #1f2937;
-      color: #f8fafc;
+      background-color:#212129;
+      color: #ccc;
     }
-    body.dark a,
-    body.dark select,
-    body.dark input{
-      background-color: #374151;
-      color: #f8fafc;
-      border: 0;
-    }
-
-  </style>
+    #title {
+    background: linear-gradient(to right, blue, aqua);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+    </style>
 </head>
 
 <body >
-    <div>
-      <button id="theme-toggle" class="px-2 py-1 rounded-md">🌒</button>
-    </div>
-<div class="flex flex-col w-full fixed bottom-0 backdrop-filter backdrop-blur-sm">
-  <div class="p-8">
-    <p id="title" class="text-center text-2xl font-bold">GPT Subscripton for Twitter List</p>
-    <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mt-1">
-      <div class="flex items-center mt-2 w-full max-w-xs">
-        <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank" rel="noopener noreferrer"
-          class="border border-gray-300 rounded-md px-3 py-1 mt-2 mr-2 max-w-xs">
-          ?
-        </a>
-        <input type="number" name="target_id" placeholder="Enter target ID" required
-          class="border border-gray-300 rounded-md px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 mt-2 w-full max-w-xs">
-
-      </div>
-      <div class="flex items-center mt-4 w-full max-w-xs">
-        <select id="language-select" class="border border-gray-300 mr-1 ml-auto bg-transparent py-1 rounded-md">
-         <option value="zh-CN">简体中文</option>
-         <option value="zh-TW">繁體中文</option>
-         <option value="en">English</option>
-         <option value="ja">日本語</option>
-         <option value="ko">한국어</option>
-         <option value="es">Español</option>
-         <option value="pt">Português</option>
-         <option value="de">Deutsch</option>
-         <option value="fr">Français</option>
-         <option value="ar">العربية</option>
-         <option value="id">Bahasa(ID)</option>
-         <option value="ms">Bahasa Melayu</option>
-         <option value="tl">Filipino</option>
-         <option value="vi">Tiếng Việt</option>
-         <option value="pl">Polski</option>
-         <option value="nl">Nederlands</option>
-        </select>
-        <input type="email" name="email" placeholder="Enter your email address" required
-        class="border border-gray-300 rounded-md px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
-      </div>
-      <div class="flex items-center mt-4 w-full max-w-xs">
-        <span class="ml-auto mr-auto" id="time-label">Daily Push Time</span>
-        <input type="time" id="mail-time" required
-          class="pl-1 ml-1 mr-1 border border-gray-300 rounded-md py-1 focus:ring focus:border-blue-300">
-          <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
-      </div>
-      <input type="hidden" name="current_language" id="current-language" value="">
-      <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded-md mt-4 w-full max-w-xs"
-        id="subscribe-btn">Subscribe</button>
-    </form>
-  </div>
+    <button id="theme-toggle" class="fixed px-2 rounded">🌒</button>
+    <div id="title" class="w-full mt-3 text-center font-bold">GPT Subscripton for Twitter List</div>
+<div id="parentContainer" class="flex flex-wrap p-2">
+<div id="originalCard" class="flex flex-col rounded-xl mx-auto my-1 p-4 max-w-sm bg-gray-500 bg-opacity-10">
+    <div class="flex w-full items-center space-x-2 ">
+<div class="w-16 h-10 rounded overflow-hidden">
+    <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=240x240"
+         class="object-none w-full h-full"/>
 </div>
-  <script>
+
+        <a href="https://twitter.com/i/lists/1733652180576686386" class="text-sm w-full">
+            <div class="font-bold">AGI Thoughts ➤</div>
+            <div class="text-gray-500">1733652180576686386</div>
+        </a>
+        <button class="bg-blue-400 text-white px-3 py-1  rounded-full">🔔</button>
+    </div>
+    <div class="mt-2 text-sm">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+</div>
+</div>
+<div class="flex flex-col w-full fixed bottom-0 backdrop-filter backdrop-blur-lg w-full items-center">
+    <div class="text-sm px-2 pb-2 pt-2 text-center">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-white rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+<a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-2 w-full max-w-sm">
+                                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                </select>
+            </div>
+            <div class="flex items-center mt-2 w-full">
+                <span type="hidden" class="hidden" id="time-label">Daily Push Time</span>
+                <input type="time" id="mail-time" required
+                       class="px-auto m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                            <button type="submit" class="bg-blue-500 text-white p-1 rounded-full m-1 w-full"
+                    id="subscribe-btn">Subscribe
+            </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
+
+        </form>
+        © subxTwitter 2024
+    </div>
+</div>
+
+<script>
+  // 获取原始卡片元素
+  const originalCard = document.getElementById('originalCard');
+  // 获取要插入的父元素
+  const parentContainer = document.getElementById('parentContainer'); // 替换为实际的父元素ID
+  // 定义要创建的卡片数量
+  const cardCount = 5; // 替换为你想要的数量
+  // 循环复制并插入卡片
+  for (let i = 0; i < cardCount; i++) {
+    // 使用cloneNode复制元素
+    const clonedCard = originalCard.cloneNode(true);
+    // 修改一些可能需要个性化的内容，例如链接、文本等
+    // 将复制后的元素插入到父容器中
+    parentContainer.appendChild(clonedCard);
+  }
+</script>
+<script>
     document.getElementById('subscribe-form').addEventListener('submit', function (event) {
       // 阻止表单的默认提交行为
       event.preventDefault();
@@ -188,8 +224,10 @@
       var currentLanguageInput = document.getElementById("current-language");
       currentLanguageInput.value = selectedLanguage;
     });
-  </script>
-  </div>
+
+
+</script>
+</div>
 </body>
 
 </html>

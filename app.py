@@ -10,7 +10,32 @@ cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port
 def index(request: Request):
     return templates.TemplateResponse("template.html", {"request": request})
 
-
+@app.post("/sub_quaterly_call_back")
+def sub_quaterly_call_back(email: str):
+    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
+    row = cursor.fetchone()
+    cursor.execute(
+        "UPDATE users SET expire_date = :expire_date WHERE email = :email",
+        expire_date=max(row[4],datetime.now())+timedelta(days=90),
+    )
+    conn.commit()
+    conn.close()
+    return
+@app.post("/sub_yearly_call_back")
+def sub_yearly_call_back(email: str):
+    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
+    row = cursor.fetchone()
+    cursor.execute(
+        "UPDATE users SET expire_date = :expire_date WHERE email = :email",
+        expire_date=max(row[4],datetime.now())+timedelta(days=365),
+    )
+    conn.commit()
+    conn.close()
+    return
 @app.post("/unsubscribe")
 async def unsubscribe(email: str):
     conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)

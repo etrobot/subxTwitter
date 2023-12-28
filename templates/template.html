@@ -7,7 +7,6 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     /* Dark theme styles */
-
     body.dark {
       background-color: #1f2937;
       color: #f8fafc;
@@ -20,24 +19,17 @@
       border: 0;
     }
 
-    /* Flexbox styles */
-    .flex-container {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 1rem;
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-    }
   </style>
 </head>
 
-<body class="flex flex-col min-h-screen">
-  <!--<div class="flex-grow"></div>-->
-  <div class="mb-16">
-    <h1 id="title" class="text-center text-2xl font-bold">GPT Subscripton for Twitter List</h1>
-    <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mt-4">
+<body >
+    <div>
+      <button id="theme-toggle" class="px-2 py-1 rounded-md">🌒</button>
+    </div>
+<div class="flex flex-col w-full fixed bottom-0 backdrop-filter backdrop-blur-sm">
+  <div class="p-8">
+    <p id="title" class="text-center text-2xl font-bold">GPT Subscripton for Twitter List</p>
+    <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mt-1">
       <div class="flex items-center mt-2 w-full max-w-xs">
         <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank" rel="noopener noreferrer"
           class="border border-gray-300 rounded-md px-3 py-1 mt-2 mr-2 max-w-xs">
@@ -79,10 +71,8 @@
       <button type="submit" class="bg-blue-500 text-white px-4 py-1 rounded-md mt-4 w-full max-w-xs"
         id="subscribe-btn">Subscribe</button>
     </form>
-    <div class="flex-container">
-      <button id="theme-toggle" class="px-2 py-1 rounded-md">🌒</button>
-    </div>
   </div>
+</div>
   <script>
     document.getElementById('subscribe-form').addEventListener('submit', function (event) {
       // 阻止表单的默认提交行为

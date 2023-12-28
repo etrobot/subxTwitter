@@ -34,17 +34,13 @@ def sendEmail(message:str,receiver:str=os.environ['MAILTO'],subject:str=''):
     msg = MIMEText(message,'html','utf-8') #中文需参数‘utf-8'，单字节字符不需要
     msg['Subject'] = Header(subject, 'utf-8') #邮件主题
     msg['from'] = sender    #自己的邮件地址
-    smtp = smtplib.SMTP()
-    try :
-        smtp.connect(smtpserver) # 链接
-        smtp.login(username, password) # 登陆
-        smtp.sendmail(sender, receiver, msg.as_string()) #发送
-        print('邮件发送成功')
-    except smtplib.SMTPException:
-        print('邮件发送失败')
+    smtp = smtplib.SMTP(smtpserver, 587)
+    smtp.starttls()
+    smtp.login(username, password)
+    smtp.sendmail(sender, receiver, msg.as_string()) #发送
     smtp.quit() # 结束
 
-def sumTweets(user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106',render=True):
+def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106',render=True):
     '''
     抓取目标推特AI总结并发邮件
     :param lang:
@@ -56,8 +52,8 @@ def sumTweets(user:str,mail:str,lang = '中文',length:int = 10000, model='opena
     '''
     info: str = os.environ['INFO']
     nitter:str = os.environ['NITTER']
-    result = ''
-    rss_url = f'https://{nitter}/i/lists/{user}/rss'
+    rss_url = f'https://{nitter}/i/lists/{twitter_user}/rss'
+    print(rss_url)
     feed = parse(rss_url)
     df = pd.json_normalize(feed.entries)
     for k, v in df.iterrows():
@@ -68,7 +64,7 @@ def sumTweets(user:str,mail:str,lang = '中文',length:int = 10000, model='opena
                 indices = df[df['id'] == matches[0]]
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % indices['summary'].values[0],
                                              v['summary'])
-                if 'i/lists' in user:
+                if 'i/lists' in twitter_user:
                     df = df.drop(indices.index)
             else:
                 headers = {
@@ -87,25 +83,40 @@ def sumTweets(user:str,mail:str,lang = '中文',length:int = 10000, model='opena
     prompt =  "<tweets>{tweets}</tweets>\n以上是一些推，你是一名{lang}资深作者，请将以上推文汇编成一篇用markdown排版的{lang}文章，包含发推时间、作者(若有)、推特链接(若有)和推特内容以及你的解读和评论"
     prompt =  prompt.format(tweets=tweets,lang=lang,info=info)
     print('tweets:', prompt)
+    result = completion(model=model, messages=[{"role": "user", "content": prompt, }],
+                                                       api_key=os.environ['OPENAI_API_KEY'],
+                                                       base_url=os.environ['API_BASE_URL'])["choices"][0]["message"][
+        "content"]
     result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
     sendEmail(result,receiver=mail)
     return result
 
-if __name__=='__main__':
+def run():
     cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
     conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
     cursor = conn.cursor()
     # Define the SQL query
-    checkTime = datetime.now() - timedelta(minutes=5)
-    pushTime = datetime.now() + timedelta(minutes=5)
-    sql_query = "SELECT * FROM users WHERE expire_date >= CURDATE() AND mail_time <= :pushTime AND mail_time >= :checkTime"
-    # Execute the query
-    cursor.execute(sql_query,pushTime=pushTime,checkTime=checkTime)
-
+    checkTime = datetime.utcnow() - timedelta(minutes=5)
+    pushTime = datetime.utcnow() + timedelta(minutes=5)
+    # sql_query = "SELECT * FROM users WHERE expire_date >= :curdate AND mail_time <= :pushTime AND mail_time >= :checkTime"
+    # cursor.execute(sql_query,curdate=datetime.now(),pushTime=pushTime,checkTime=checkTime)
+    sql_query = "SELECT * FROM users WHERE expire_date >= :curdate"
+    cursor.execute(sql_query,curdate=datetime.now())
     # Fetch all rows from the result set
     rows = cursor.fetchall()
 
     # Print the results
     for row in rows:
-        print(row)
-        sumTweets(user=row[4],mail=row[0],render=True)
+        # print(row)
+        # print(checkTime, pushTime,row[3])
+        sumTweets(twitter_user=row[1],mail=row[0],lang=row[2],render=True)
+        sql_update = "UPDATE users SET mail_time = :new_mail_time WHERE email = :email"
+        cursor.execute(sql_update, {"new_mail_time": row[3]+timedelta(days=1), "email": row[1]})
+        conn.commit()
+
+    cursor.close()
+    conn.close()
+
+if __name__=='__main__':
+    run()
+

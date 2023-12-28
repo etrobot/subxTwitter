@@ -59,7 +59,7 @@ async def subscribe(request: Request):
 
     conn.close()
 
-    return email+" Subscribed, Expire Date："+expire_date.strftime("%Y-%m-%d")
+    return email+" Subscribed, Expire Date："+expire_date.strftime("%Y-%m-%d")+" Push Time:"+row[3]
 
 if __name__ == "__main__":
     import uvicorn

@@ -11,51 +11,71 @@
       background-color:#212129;
       color: #ccc;
     }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
     #title {
-    background: linear-gradient(to right, blue, aqua);
-    -webkit-background-clip: text;
-    color: transparent;
-    display: inline-block;
-  }
+        background: linear-gradient(to right, blue, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
     </style>
 </head>
 
-<body >
-    <button id="theme-toggle" class="fixed px-2 rounded">🌒</button>
-    <div id="title" class="w-full mt-3 text-center font-bold">GPT Subscripton for Twitter List</div>
-<div id="parentContainer" class="flex flex-wrap p-2">
-<div id="originalCard" class="flex flex-col rounded-xl mx-auto my-1 p-4 max-w-sm bg-gray-500 bg-opacity-10">
-    <div class="flex w-full items-center space-x-2 ">
-<div class="w-16 h-10 rounded overflow-hidden">
-    <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=240x240"
-         class="object-none w-full h-full"/>
-</div>
+<body class="bg-gray-100">
 
-        <a href="https://twitter.com/i/lists/1733652180576686386" class="text-sm w-full">
-            <div class="font-bold">AGI Thoughts ➤</div>
-            <div class="text-gray-500">1733652180576686386</div>
-        </a>
-        <button class="bg-blue-400 text-white px-3 py-1  rounded-full">🔔</button>
-    </div>
-    <div class="mt-2 text-sm">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<div class="sidebar w-full max-w-sm">
+    <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+    <div class="w-full text-center font-bold"><h1 id="title">GPT Subscripton for Twitter List</h1></div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+    <div id="originalCard" class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=240x240"
+                     class="object-none w-full h-full"/>
+            </div>
+
+            <a href="https://twitter.com/i/lists/1733652180576686386" class="text-sm w-full">
+                <div class="font-bold">AGI Thoughts ➤</div>
+                <div class="text-gray-500">1733652180576686386</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
     </div>
 </div>
-</div>
-<div class="flex flex-col w-full fixed bottom-0 backdrop-filter backdrop-blur-lg w-full items-center">
-    <div class="text-sm px-2 pb-2 pt-2 text-center">
-        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col items-center mb-2">
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
             <div class="flex items-center  w-full">
                 <input type="number" name="target_id" placeholder="Enter target ID" required
-                       class="m-1 border border-white rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
-<a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
                    rel="noopener noreferrer"
                    class="border border-white rounded px-3 py-1  mr-2">
                     ?
                 </a>
             </div>
-            <div class="flex items-center mt-2 w-full max-w-sm">
-                                <input type="email" name="email" placeholder="Enter your email address" required
+            <div class="flex items-center mt-2 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
                        class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
                 <select id="language-select"
                         class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
@@ -77,19 +97,18 @@
                     <option value="nl">Nederlands</option>
                 </select>
             </div>
-            <div class="flex items-center mt-2 w-full">
-                <span type="hidden" class="hidden" id="time-label">Daily Push Time</span>
+            <div class="flex mt-2 w-full">
                 <input type="time" id="mail-time" required
-                       class="px-auto m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
-                            <button type="submit" class="bg-blue-500 text-white p-1 rounded-full m-1 w-full"
-                    id="subscribe-btn">Subscribe
-            </button>
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
                 <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
             </div>
             <input type="hidden" name="current_language" id="current-language" value="">
 
         </form>
-        © subxTwitter 2024
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
     </div>
 </div>
 
@@ -108,8 +127,15 @@
     // 将复制后的元素插入到父容器中
     parentContainer.appendChild(clonedCard);
   }
+
 </script>
 <script>
+document.querySelector('button.subx').addEventListener('click', function(event) {
+  console.log(this.value)
+  event.preventDefault();
+  document.querySelector('input[name="target_id"]').value = this.value;
+});
+
     document.getElementById('subscribe-form').addEventListener('submit', function (event) {
       // 阻止表单的默认提交行为
       event.preventDefault();
@@ -179,23 +205,24 @@
     }
     const languageData = {
          "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
-         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新时间", "Twitter列表的GPT订阅"],
-         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Time", "GPT Subscription for Twitter List"],
-         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新時間", "Twitter列表的GPT訂閱"],
-         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新時間", "TwitterリストのGPTサブスクリプション"],
-         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 시간", "Twitter 목록을 위한 GPT 구독"],
-         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar hora", "Suscripción GPT para la lista de Twitter"],
-         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar hora", "Assinatura GPT para Lista do Twitter"],
-         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Zeit", "GPT-Abonnement für Twitter-Liste"],
-         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour l'heure", "Abonnement GPT pour la liste Twitter"],
-         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / وقت التحديث","اشتراك GPT لقائمة تويتر"],
-         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Waktu", "Langganan GPT untuk Daftar Twitter"],
-         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Masa", "Langganan GPT untuk Senarai Twitter"],
+         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新设定", "Twitter列表的GPT订阅"],
+         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Setting", "GPT Subscription for Twitter List"],
+         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新設定", "Twitter列表的GPT訂閱"],
+         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新設定", "TwitterリストのGPTサブスクリプション"],
+         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 설정", "Twitter 목록을 위한 GPT 구독"],
+         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar configuración", "Suscripción GPT para la lista de Twitter"],
+         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar configuração", "Assinatura GPT para Lista do Twitter"],
+         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Einstellung", "GPT-Abonnement für Twitter-Liste"],
+         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour la configuration", "Abonnement GPT pour la liste Twitter"],
+         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / تحديث الإعداد","اشتراك GPT لقائمة تويتر"],
+         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Pengaturan", "Langganan GPT untuk Daftar Twitter"],
+         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Tetapan", "Langganan GPT untuk Senarai Twitter"],
          "tl": ["Maglagay ng iyong email", "Maglagay ng ID ng target list", "Araw-araw na Oras ng Pag-push", "Mag-subscribe / Mag-update ng Oras", "GPT Subscription para sa Twitter List"],
-         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật thời gian", "Đăng ký GPT cho Danh sách Twitter"],
-         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj godzinę", "Subskrypcja GPT dla listy Twitter"],
-         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Tijd", "GPT-abonnement voor Twitter-lijst"]
+         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật cài đặt", "Đăng ký GPT cho Danh sách Twitter"],
+         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj ustawienia", "Subskrypcja GPT dla listy Twitter"],
+         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Instelling", "GPT-abonnement voor Twitter-lijst"]
     };
+
 
     // Function to set placeholders and titles based on language
     function setLanguage(selectedLanguage) {
@@ -224,6 +251,7 @@
       var currentLanguageInput = document.getElementById("current-language");
       currentLanguageInput.value = selectedLanguage;
     });
+
 
 
 </script>

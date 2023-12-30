@@ -1,4 +1,5 @@
 python-multipart
+beautifulsoup4
 Python-dotenv
 feedparser
 oracledb
@@ -8,4 +9,3 @@ fastapi
 uvicorn
 litellm
 pandas
-bs4

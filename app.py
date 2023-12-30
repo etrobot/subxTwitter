@@ -1,18 +1,142 @@
+import os
 from datetime import datetime, timedelta
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request,HTTPException
+from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import FileResponse
+import httpx
+from base64 import b64encode
+from pydantic import BaseModel
 import oracledb
-app = FastAPI()
-templates = Jinja2Templates(directory="templates")
-cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 
+cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
+favicon_path = 'favicon.ico'
+PAYPAL_CLIENT_ID = "ATX59pVlDt_8UmXLeAm6J91GNiwqvkfVcom7co-luyx5-gxzn6PbPrkgxc1MSWuVJ5dco9cZNRwltB70"
+PAYPAL_CLIENT_SECRET = "ELV8q43R81OuHySD8z3AtJeahMITRQJPPc1WaJc98KSv5UqqOHVrjKlrbbQxy5JubjGIVheqg8GCiNl_"
+base = "https://api-m.sandbox.paypal.com"
+
+app = FastAPI()
+app.mount("/static", StaticFiles(directory="static"), name="static")
+templates = Jinja2Templates(directory="templates")
+
+
+class Cart(BaseModel):
+    # Define your Cart structure here
+    # Example: items: List[Item]
+    pass
+
+class AccessToken(BaseModel):
+    access_token: str
+
+@app.post("/api/orders")
+async def create_order(cart: Cart):
+    try:
+        access_token = await generate_access_token()
+        url = f"{base}/v2/checkout/orders"
+        payload = {
+            "intent": "CAPTURE",
+            "purchase_units": [
+                {
+                    "amount": {
+                        "currency_code": "USD",
+                        "value": "110.00",
+                    },
+                },
+            ],
+        }
+
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                url,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {access_token}",
+                },
+                json=payload,
+            )
+
+            order_data = await handle_response(response)
+            order_id = order_data['jsonResponse'].get('id')  # Extract the order ID
+            return {"id":order_id}# Return the order ID to the frontend
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to create order.")
+
+@app.post("/api/capture-paypal-order")
+async def capture_paypal_order(request: Request):
+    order_id_data = await request.json()
+    try:
+        orderID = order_id_data.get("orderID")  # Extract the orderID from the request data
+
+        if not orderID:
+            raise HTTPException(status_code=400, detail="Order ID is missing in the request.")
+
+        access_token = await generate_access_token()
+        url = f"{base}/v2/checkout/orders/{orderID}/capture"
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                url,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {access_token}",
+                },
+            )
+            order_data = await handle_response(response)
+            return order_data['jsonResponse']
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to capture order.")
+
+
+async def generate_access_token():
+    try:
+        if not PAYPAL_CLIENT_ID or not PAYPAL_CLIENT_SECRET:
+            raise Exception("MISSING_API_CREDENTIALS")
+
+        auth = b64encode(f"{PAYPAL_CLIENT_ID}:{PAYPAL_CLIENT_SECRET}".encode()).decode()
+        url = f"{base}/v1/oauth2/token"
+
+        async with httpx.AsyncClient() as client:
+            response = await client.post(
+                url,
+                headers={
+                    "Authorization": f"Basic {auth}",
+                },
+                data={"grant_type": "client_credentials"},
+            )
+
+            data = AccessToken(**response.json())
+            return data.access_token
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail="Failed to generate Access Token.")
+
+async def handle_response(response):
+    try:
+        return {
+            "jsonResponse": response.json(),
+            "httpStatusCode": response.status_code,
+        }
+    except Exception as e:
+        raise HTTPException(status_code=response.status_code, detail=response.text)
+
+@app.get('/favicon.ico', include_in_schema=False)
+async def favicon():
+    return FileResponse(favicon_path)
 @app.get("/")
 def index(request: Request):
     return templates.TemplateResponse("template.html", {"request": request})
 
+@app.get("/{lang}")
+async def get_static_page(lang: str):
+    try:
+        return FileResponse(f"static/{lang}.html")
+    except FileNotFoundError:
+        raise HTTPException(status_code=404, detail="Page not found")
+
 @app.post("/sub_quaterly_call_back")
 def sub_quaterly_call_back(email: str):
-    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
     row = cursor.fetchone()
@@ -25,7 +149,7 @@ def sub_quaterly_call_back(email: str):
     return
 @app.post("/sub_yearly_call_back")
 def sub_yearly_call_back(email: str):
-    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
     row = cursor.fetchone()
@@ -38,7 +162,7 @@ def sub_yearly_call_back(email: str):
     return
 @app.post("/unsubscribe")
 async def unsubscribe(email: str):
-    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
+    conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
     cursor = conn.cursor()
     cursor.execute("DELETE FROM users WHERE email = :email", email=email)
     conn.commit()

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+        <div class="w-full text-center font-bold my-20"><div id="title">GPT Subscripton for Twitter List</div></div>
+        <div class="w-full text-center text-2xl font-bold my-4"><div >$15 for ONE YEAR </div></div>
+    <!-- Replace "test" with your own sandbox Business account app client ID -->
+    <script src="https://www.paypal.com/sdk/js?client-id=ATX59pVlDt_8UmXLeAm6J91GNiwqvkfVcom7co-luyx5-gxzn6PbPrkgxc1MSWuVJ5dco9cZNRwltB70&currency=USD"></script>
+    <!-- Set up a container element for the button -->
+    <div id="paypal-button-container" class="w-full max-w-xs mx-auto "></div>
+    <script>
+
+paypal.Buttons({
+  createOrder() {
+          return fetch("/api/orders", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              cart: [
+                {
+                  sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+                  quantity: "YOUR_PRODUCT_QUANTITY",
+                },
+              ]
+            })
+          })
+          .then((response) => response.json())
+          .then((order) => order.id);
+      },
+  onApprove(data) {
+    // This function captures the funds from the transaction.
+    return fetch("/api/capture-paypal-order", {
+      method: "POST",
+      body: JSON.stringify({
+        orderID: data.orderID
+      })
+    })
+    .then((response) => response.json())
+    .then((details) => {
+      // This function shows a transaction success message to your buyer.
+      alert('Transaction completed by ' + details.payer.name.given_name);
+    });
+  }
+}).render('#paypal-button-container');
+//This function displays payment buttons on your web page.
+
+    </script>
+<script>
+  var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script>
+  </body>
+</html>

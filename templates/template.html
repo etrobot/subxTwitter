@@ -11,6 +11,9 @@
       background-color:#212129;
       color: #ccc;
     }
+    body.dark input{
+        color: #000;
+    }
     @media (min-width: 768px) {
         .subcard{
             max-width:360px;
@@ -92,7 +95,7 @@
                     ?
                 </a>
             </div>
-            <div class="flex items-center mt-2 w-full">
+            <div class="flex items-center mt-1 w-full">
                 <input type="email" name="email" placeholder="Enter your email address" required
                        class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
                 <select id="language-select"
@@ -115,7 +118,7 @@
                     <option value="nl">Nederlands</option>
                 </select>
             </div>
-            <div class="flex mt-2 w-full">
+            <div class="flex mt-1 w-full">
                 <input type="time" id="mail-time" required
                        class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
                 <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"

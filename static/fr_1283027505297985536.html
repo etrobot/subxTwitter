@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1283027505297985536">
+                <div class="font-bold">Building In Public</div>
+                <div class="text-gray-500">1283027505297985536</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Les Tweets du Nouvel An 2024</h1>
+<p>Le temps passe vite, et voici déjà le Nouvel An 2024! Les célébrations et les résolutions sont au rendez-vous. Voici un aperçu de quelques tweets intéressants qui ont marqué le début de cette nouvelle année.</p>
+<ul>
+<li>
+<p><a class="text-blue-500" href="http://x.com/swyx/status/1741747812667429074#m">01 Jan 2024 09:06:53@swyx</a>: Le célèbre auteur acclame la nouvelle année et partage sa joie avec des emojis festifs.</p>
+</li>
+<li>
+<p><a class="text-blue-500" href="http://x.com/swyx/status/1741749814512259505#m">01 Jan 2024 09:14:50@swyx</a>: Un engagement à mener une vie plus saine en 2024, en se concentrant sur une alimentation équilibrée. Une résolution qui mérite d'être applaudie.</p>
+</li>
+<li>
+<p><a class="text-blue-500" href="http://x.com/swyx/status/1741751588929339447#m">01 Jan 2024 09:21:53@swyx</a>: Un rappel instructif sur l'importance de la réflexion dans l'apprentissage.</p>
+</li>
+<li>
+<p><a class="text-blue-500" href="http://x.com/threehourcoffee/status/1741746546784526513#m">01 Jan 2024 09:01:51@threehourcoffee</a>: Une réflexion sur la construction de bonnes habitudes, mettant en avant l'idée de suivre une dynamique plutôt que de simplement compter les jours.</p>
+</li>
+<li>
+<p><a class="text-blue-500" href="http://x.com/swyx/status/1741710101671731709#m">01 Jan 2024 06:37:02@swyx</a>: Un constat sur l'évolution des technologies en intelligence artificielle au fil du temps.</p>
+</li>
+<li>
+<p><a class="text-blue-500" href="http://x.com/matteing/status/1741691885201052156#m">01 Jan 2024 05:24:39@matteing</a>: Un partage sincère sur le bilan de l'année précédente, reflétant sur les moments forts.</p>
+</li>
+<li>
+<p><a class="text-blue-500" href="http://x.com/Suhail/status/1741656674396680242#m">01 Jan 2024 03:04:44@Suhail</a>: Une histoire encourageante sur le travail acharné et la détermination à réaliser des objectifs, même en plein réveillon du Nouvel An.</p>
+</li>
+</ul>
+<p>Il est intéressant de voir comment les gens utilisent les réseaux sociaux pour partager leurs expériences, leurs résolutions et leurs réflexions. Cela montre l'importance de la connexion et du partage, même à l'ère numérique. Bonne année à tous!</p>
+        </div><br><a class="text-blue-500" href="/lang/fr_1283027505297985536">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

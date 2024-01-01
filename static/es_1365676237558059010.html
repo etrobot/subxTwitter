@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Artículo de redes sociales</h1>
+<hr />
+<p>A continuación se presentan algunos tweets interesantes que capturan diferentes perspectivas sobre la productividad, la escritura, los desafíos de la vida moderna y las reflexiones personales. </p>
+<ul>
+<li>
+<p><strong>Dickie Bush</strong> compartió su estudio sobre la rutina de escritura de 500 escritores legendarios, resumiéndolo en 6 simples acciones diarias.</p>
+</li>
+<li>
+<p><strong>Ali Abdaal</strong> habló sobre la importancia de creer en uno mismo como primer paso para lograr algo. También promocionó su nuevo libro "Feel-Good Productivity", que promete ser una lectura transformadora.</p>
+</li>
+<li>
+<p><strong>SweatyStartup</strong> puso de manifiesto la falta de preparación de ciertas personas ante situaciones de emergencia, y señaló la ironía de quienes presumen sobre su capacidad de supervivencia en momentos difíciles.</p>
+</li>
+<li>
+<p><strong>Jack Butcher</strong> compartió imágenes que parecen ser parte de un proceso creativo, mostrando su compromiso con su arte.</p>
+</li>
+<li>
+<p><strong>Sahil Bloom</strong> destacó las mejores ideas del año, así como los dos tipos de conocimiento que impactan en nuestra forma de aprender y crecer.</p>
+</li>
+<li>
+<p><strong>Josiah Fitness</strong> se unió a la cohorte de Dickie Bush, mostrando su interés por la productividad y el crecimiento personal.</p>
+</li>
+</ul>
+<p>Estos tweets reflejan diferentes aspectos de la vida moderna, desde el trabajo creativo y la productividad hasta la reflexión personal y la preparación para situaciones de emergencia. Son recordatorios de la importancia de creer en uno mismo, mantener una mentalidad abierta para aprender y crecer, y estar preparado para los desafíos que puedan surgir en el camino.</p>
+<p>Es interesante ver cómo las redes sociales pueden ofrecer una mezcla variada de ideas, perspectivas y reflexiones, que pueden ser una fuente de inspiración y motivación para el lector atento.</p>
+        </div><br><a class="text-blue-500" href="/lang/es_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

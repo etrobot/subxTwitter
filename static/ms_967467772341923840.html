@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/967467772341923840">
+                <div class="font-bold">BitCoin</div>
+                <div class="text-gray-500">967467772341923840</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Bitcoin: Sorotan Tahun 2024</h1>
+<p>Pada 1 Januari 2024, pelbagai pengguna Twitter menyambut tahun baru dengan meraikan kemajuan Bitcoin. Muneeb <a class="text-blue-400" href="http://x.com/muneeb/status/1741818048187666859#m">@muneeb</a> menyatakan kegembiraannya dengan menyebut bahawa tahun 2024 adalah tahun bagi Bitcoin. Bruce Fenton <a class="text-blue-400" href="http://x.com/brucefenton/status/1741812855941255184#m">@brucefenton</a> pula memberikan komen sensasional mengenai isu organ. </p>
+<p>Pada masa yang sama, Lopp <a class="text-blue-400" href="http://x.com/lopp/status/1741812769505399121#m">@lopp</a> memaklumkan tentang peningkatan hash rate Bitcoin, sementara MrChrisEllis <a class="text-blue-400" href="http://x.com/MrChrisEllis/status/1741810017802604776#m">@MrChrisEllis</a> memberikan komen mengenai ketidakstabilan harga Bitcoin dan spekulasi sekelilingnya.</p>
+<p>TuurDemeester <a class="text-blue-400" href="http://x.com/TuurDemeester/status/1741801983089021399#m">@TuurDemeester</a> menjanjikan harga Bitcoin mencapai $100k sebelum 1 Januari 2025. Sementara itu, nvk <a class="text-blue-400" href="http://x.com/nvk/status/1741800750441791589#m">@nvk</a> dan Ishikawa_Sachi <a class="text-blue-400" href="http://x.com/Ishikawa_Sachi/status/1741753906047373805#m">@Ishikawa_Sachi</a> berkongsi rasa syukur mereka di tahun baru.</p>
+<p>Terakhir, UnseenJapanSite <a class="text-blue-400" href="http://x.com/UnseenJapanSite/status/1741758092721664247#m">@UnseenJapanSite</a> membahaskan isu keterhadan maklumat bencana alam di web Jepun, manakala Blockstream <a class="text-blue-400" href="http://x.com/Blockstream/status/1686341764335194112#m">@Blockstream</a> memperkatakan tentang perbualan berkaitan Bitcoin.</p>
+<p>Terdapat pelbagai sahsiah yang mengutarakan pandangan masing-masing mengenai Bitcoin di Twitter. Walaupun terdapat spekulasi harga dan ketidakstabilan, kebanyakan individu dan organisasi masih merasakan optimis mengenai masa depan Bitcoin.</p>
+<p>Disediakan oleh: Penulis Bahasa Melayu Blog</p>
+        </div><br><a class="text-blue-400" href="/lang/ms_967467772341923840">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

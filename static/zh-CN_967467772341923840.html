@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/967467772341923840">
+                <div class="font-bold">BitCoin</div>
+                <div class="text-gray-500">967467772341923840</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>比特币世界的动态</h1>
+<h2>2023年8月1日</h2>
+<ul>
+<li><strong>Blockstream</strong> 发布了Blockstream Talk #26，介绍了Simplicity语言和其对比特币的潜在影响。推文中提到了Simiplicity语言如何利用组合器和jet来实现OP_CHECKTEMPLATEVERIFY和SIGHASH_ANYPREVOUT功能，以及通过软分叉实现的可能性。这表明了比特币技术的持续进步和创新。</li>
+</ul>
+<h2>2024年1月1日</h2>
+<ul>
+<li><strong>lopp</strong> 分享了美国政府自2014年以来没收和出售了超过18.5万个比特币，此举引发了对于HODL的讨论。这显示了比特币作为一种资产的潜力，以及HODL策略在长期持有比特币上的优势。</li>
+<li><strong>WhalePanda</strong> 在视频中祝福大家新年快乐，展示了比特币社区的热情和活力。</li>
+<li><strong>TuurDemeester</strong> 祝愿大家新年快乐，并表示对于2024年的进展感到兴奋，暗示了对于比特币未来的乐观态度。</li>
+<li><strong>OyasumiAf</strong> 赞扬了某件写作，表达了对于优秀内容和创意的认可。</li>
+<li><strong>lopp</strong> 分享了关于Electrum服务器实现性能测试的笔记，这表明了对比特币技术的持续关注和研究。</li>
+</ul>
+<h2>2024年1月1日以后</h2>
+<ul>
+<li>一些开发者和社区成员分享了对于新年的祝福和对比特币未来发展的期待，展示了比特币社区的活力和热情。</li>
+</ul>
+<p>这些推文不仅展示了比特币技术和市场的动态，也反映了社区成员对比特币未来的信心和乐观态度。比特币作为一种全球性数字货币，吸引了全球范围内的关注和研究。这些推文也展现了比特币社区的多样性和活力，以及对于技术创新和进步的持续关注。</p>
+        </div><br><a class="text-blue-500" href="/lang/zh-CN_967467772341923840">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

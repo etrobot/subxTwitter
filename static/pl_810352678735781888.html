@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Polski</h1>
+<hr />
+<p><em>01 stycznia 2024 10:39:14</em>  </p>
+<p><strong>@Rainmaker1973</strong><br />
+<img alt="link" src="http://x.com/Rainmaker1973/status/1741771055293694121#m" /><br />
+Kiddies' Motor Wheel był zmechanizowaną zabawką sprzedawaną dla małych dzieci, jak pokazuje ten film z 1927 roku.  </p>
+<p><em>To jest ciekawy fakt z historii zabawek dla dzieci. Dowiadujemy się jak ludzie bawili się swoimi dziećmi ponad 100 lat temu!</em></p>
+<hr />
+<p><em>01 stycznia 2024 10:29:08</em>  </p>
+<p><strong>@BobEUnlimited</strong><br />
+<img alt="link" src="http://x.com/BobEUnlimited/status/1741768512245268628#m" /><br />
+Jeśli wzrost pozostaje stabilny wokół potencjału, bezrobocie jest stabilne na niskim poziomie, a inflacja jest na poziomie docelowym, dlaczego zmieniać politykę?</p>
+<p><em>To jest bardzo interesujące pytanie ekonomiczne. Autor zastanawia się, dlaczego zmieniać coś, jeśli wszystko wydaje się być stabilne.</em></p>
+<hr />
+<p><em>01 stycznia 2024 08:11:47</em>  </p>
+<p><strong>@Rainmaker1973</strong><br />
+<img alt="link" src="http://x.com/Rainmaker1973/status/1741733946432380991#m" /><br />
+2024 nie zaczął się najlepiej w Japonii.  </p>
+<p><em>To jest smutna wiadomość. Zawsze smutno widzieć ludzi cierpiących z powodu naturalnych katastrof.</em></p>
+<hr />
+<p><em>01 stycznia 2024 10:19:59</em>  </p>
+<p><strong>@Rainmaker1973</strong><br />
+<img alt="link" src="http://x.com/Rainmaker1973/status/1741766210260230591#m" /><br />
+Jak produkowane są piłki tenisowe.  </p>
+<p><em>To jest fascynujące! Można zobaczyć cały proces produkcji.</em></p>
+<hr />
+<p><em>01 stycznia 2024 09:24:25</em>  </p>
+<p><strong>@ArtirKel</strong><br />
+<img alt="link" src="http://x.com/ArtirKel/status/1741752223988863451#m" /><br />
+Szczęśliwego nowego roku!</p>
+<p><em>Miło widzieć życzenia noworoczne od innych użytkowników.</em></p>
+<hr />
+<p><em>01 stycznia 2024 08:45:15</em>  </p>
+<p><strong>@Rainmaker1973</strong><br />
+<img alt="link" src="http://x.com/Rainmaker1973/status/1741742368393408912#m" /><br />
+Dzisiaj, w 1985 roku, został utworzony system nazw domen internetowych.</p>
+<p><em>To jest ważna data w historii internetu!</em></p>
+<hr />
+<p><em>01 stycznia 2024 08:02:46</em>  </p>
+<p><strong>@Rainmaker1973</strong><br />
+<img alt="link" src="http://x.com/Rainmaker1973/status/1741731676932174208#m" /><br />
+01.01.2024</p>
+<p><em>Fajne zdjęcie z początku nowego roku.</em></p>
+<hr />
+<p>To były ciekawe tweet-y z różnych dziedzin życia. Pokazują one różnorodność treści na Twitterze. Jeśli masz zainteresowanie w jakimś temacie, zawsze możesz znaleźć informacje i ciekawe dyskusje na Twitterze.</p>
+        </div><br><a class="text-blue-500" href="/lang/pl_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

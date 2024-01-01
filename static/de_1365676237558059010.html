@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Deutsch Artikel</h1>
+<hr />
+<p><strong>01 Jan 2024 10:14:30 @ShaneAParrish</strong>
+Es kann schwierig sein zu schätzen, wie sehr das Vermeiden der Standardmethoden des Scheiterns die Erfolgschancen dramatisch erhöht.</p>
+<p><em>Kommentar: Der Autor weist darauf hin, dass das Umgehen von gängigen Misserfolgsmustern die Wahrscheinlichkeit des Erfolgs drastisch steigern kann. Dies kann als Aufforderung verstanden werden, unkonventionelle Wege zu gehen und neue Ansätze zu verfolgen.</em></p>
+<p><strong>28 Jul 2022 11:42:37 @dickiebush</strong>
+Ich habe die Schreibroutine von 500 legendären Schriftstellern studiert.</p>
+<p><em>Kommentar: Die Hingabe und Forschung, die in die Schreibroutine von so vielen Schriftstellern gesteckt wurden, ist bewundernswert. Es zeigt, wie viel Arbeit und Disziplin hinter dem Handwerk des Schreibens stecken.</em></p>
+<p><strong>01 Jan 2024 08:34:52 @AliAbdaal</strong>
+Zu glauben, dass man etwas tun kann, ist der erste Schritt, es tatsächlich tun zu können.</p>
+<p><em>Kommentar: Der Glaube an sich selbst und die eigene Fähigkeit, etwas zu erreichen, ist entscheidend für den Erfolg. Positives Denken kann die Grundlage für große Leistungen legen.</em></p>
+<p><strong>01 Jan 2024 01:53:15 @sweatystartup</strong>
+Jeder wohlhabende Mann sollte einen Pickup-Truck besitzen.</p>
+<p><em>Kommentar: Dieser Tweet könnte als Kommentar zur praktischen Lebensweise interpretiert werden. Ein Pickup-Truck könnte als Symbol für Unabhängigkeit und Vorbereitung auf alle Eventualitäten gesehen werden.</em></p>
+<p><strong>31 Dec 2023 21:28:50 @SahilBloom</strong>
+Die 2 Arten von Wissen.</p>
+<p><img alt="" src="http://x.com/pic/ext_tw_video_thumb%2F1741208750994624512%2Fpu%2Fimg%2FGL4Zw-mupBDx-Do1.jpg" /></p>
+<p><em>Kommentar: Dieser Tweet bringt die Idee der verschiedenen Arten von Wissen ans Licht und könnte zur Reflexion über das eigene Wissenserwerb anregen.</em></p>
+<hr />
+<p>Insgesamt spiegeln die Tweets eine Vielzahl von Themen wider, von persönlichem Wachstum und Produktivität bis hin zu praktischer Lebensweise und Forschung. Die Autoren liefern vielschichtige und ermutigende Botschaften, die den Leser zum Nachdenken anregen. Es ist faszinierend zu sehen, wie vielfältig die Themen und Ansichten in der Twitter-Community sein können.</p>
+        </div><br><a class="text-blue-500" href="/lang/de_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

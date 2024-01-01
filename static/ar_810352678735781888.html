@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>الإقتصاد والأحداث الثقافية</h1>
+<h2>تأتي العام الجديد 2024 مع العديد من الأحداث والتطورات المختلفة. في عالم الإقتصاد، تبادل بوب مارتن <a class="text-blue-500" href="http://x.com/BobEUnlimited/status/1741768512245268628#m">BobEUnlimited</a> وجهة نظره حول سياسات الاحتياطي الاتحادي، حيث يقول إن النمو مستقر حول المستوى المحتمل ومعدل البطالة ثابت عند أدنى مستوياته، والتضخم يتحرك حول الهدف المستهدف، ما دام ذلك الوضع ثابتاً فلماذا الحاجة لتغيير السياسة النقدية؟ وهذا يعني أن الأهداف الرئيسية للفيد تتحقق بمعدلاتها الحالية.</h2>
+<p>ويضيف بوب أنه يبدو أنه لا يوجد شيء يستحق التغيير في الوقت الحالي، ولا يمكن تجاهل حقيقة وجود ضغوط متزايدة في الوقت الراهن. ومع ذلك، يؤكد بأن الأمور يمكن أن تتغير مستقبلاً.</p>
+<p>وفي اليابان، شوهدت بعض الأحداث السلبية في بداية العام الجديد بحسب <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741733946432380991#m">Rainmaker1973</a>. وفي وقت لاحق نرى مقاطع فيديو تُظهر مدى تأثير هذه الأحداث في المناطق المختلفة.</p>
+<h2>حيوانات وطبيعة</h2>
+<p>وبما أننا في عالم الطبيعة والحيوانات، شارك في المقاطع المصورة من <a class="text-blue-500" href="http://x.com/Rainmaker1973">Rainmaker1973</a> العديد من الفيديوهات الجميلة التي تبين كيف تتفاعل الحيوانات مع بيئتها وكيف يتم صنع الكرات وغيرها من التفاصيل الدقيقة التي قد لا تلاحظها في حياتك اليومية.</p>
+<p>هذه التغريدات تعكس جانبًا من الثقافة والاقتصاد وأيضًا الفضول حيال الطبيعة والحيوانات.</p>
+<h2>الحكمة والتقنية</h2>
+<p>في الوقت نفسه، تأمل <a class="text-blue-500" href="http://x.com/ArtirKel/status/1741752223988863451#m">ArtirKel</a> في بداية سنة جديدة ويتمنى للجميع عاماً مليئاً بالنجاح والتفوق. بينما يستعرض المستخدم <a class="text-blue-500" href="http://x.com/ToughSf/status/1741761185102332257#m">ToughSf</a> بعض من أفضل الأعمال الخيال العلمي الصعبة.</p>
+<p>في النهاية، تقدم <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741748128141726192#m">Rainmaker1973</a> لمحةً تحتضن فيها الفن والتصوير وتكنولوجيا الإنترنت، لتدخلنا إلى عالم مذهل من الإبداع والعلم والتاريخ.</p>
+<p>كل تلك التغريدات تعكس قدرًا كبيرًا من التنوع في عالمنا، وتجسد كيف يمكن للتقنية والفن والعلوم أن تتلاقى وتتناغم في ساعة واحدة.</p>
+        </div><br><a class="text-blue-500" href="/lang/ar_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

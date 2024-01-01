@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1283027505297985536">
+                <div class="font-bold">Building In Public</div>
+                <div class="text-gray-500">1283027505297985536</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Happy New Year 2024: Mga Pahayag ng Twitter</h1>
+<ol>
+<li><strong><a class="text-blue-500" href="http://x.com/dickiebush/status/1552620538513825792#m">dickiebush</a></strong> (28 Jul 2022 11:42:37)</li>
+<li>
+<p>"I studied the writing routine of 500 legendary writers. Turns out, great writing is simple—if you do these 6 things every day."</p>
+<p>Ang pagsusuri ng mga karanasan ng iba't ibang manunulat ay maaaring maging isang mahalagang hakbang sa pagsulong ng ating mga kakayahan sa pagsusulat.</p>
+</li>
+<li>
+<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741747812667429074#m">swyx</a></strong> (01 Jan 2024 09:06:53)</p>
+</li>
+<li>
+<p>"Happy new year!🥳"</p>
+<p>Isa sa mga tradisyon tuwing bagong taon ay ang pagbati ng mga kabutihang hangarin sa ating mga kaibigan at kapamilya.</p>
+</li>
+<li>
+<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741749814512259505#m">swyx</a></strong> (01 Jan 2024 09:14:50)</p>
+</li>
+<li>
+<p>"Eating is the next frontier. I'm on the @chefjeffsf grind."</p>
+<p>Ang pagsisimula ng bagong taon ay maaaring maging oras para sa pagbabago ng ating mga gawi sa pagkain at pangangalaga sa kalusugan.</p>
+</li>
+<li>
+<p><strong><a class="text-blue-500" href="http://x.com/neuranne/status/1741362263175442471#m">neuranne</a></strong> (31 Dec 2023 07:34:51)</p>
+</li>
+<li>
+<p>"We learn better from experience, but we learn best from reflecting on experience."</p>
+<p>Ang pagmuni-muni at pag-aaral sa ating mga karanasan ay makatutulong sa atin upang mas maging matalino at epektibo sa ating mga gawain.</p>
+</li>
+<li>
+<p><strong><a class="text-blue-500" href="http://x.com/matteing/status/1741693823112167658#m">matteing</a></strong> (01 Jan 2024 05:32:21)</p>
+</li>
+<li>
+<p>"Thank you for the templates. It took much longer than 30 minutes, but was worth it!"</p>
+<p>Ang paggamit ng mga template ay isa sa mga paraan upang gawing mabilis at maayos ang ating mga proyekto.</p>
+</li>
+</ol>
+<p>Ang bagong taon ay panahon ng pag-asa at pagbabago. Sa bawat tweet mula sa iba't ibang manunulat at personalidad, makikita natin ang kanilang mga layunin at hangarin sa darating na taon. Ang pagbabasa at pakikinig sa kanilang mga saloobin at karanasan ay maaring maging inspirasyon sa atin upang mapaunlad ang ating sarili sa larangan ng pagsusulat, pag-aaral, pagkain, at iba pa. Ang bagong taon ay simula ng panibagong yugto, at ang mga pahayag sa Twitter ay maaaring magbigay inspirasyon sa atin sa pagtahak ng bagong landas.</p>
+        </div><br><a class="text-blue-500" href="/lang/tl_1283027505297985536">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

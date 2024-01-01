@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1283027505297985536">
+                <div class="font-bold">Building In Public</div>
+                <div class="text-gray-500">1283027505297985536</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Bản Tin Tiếng Việt</h1>
+<h2>Thứ Hai, 02 tháng 10, 2023</h2>
+<p>Chào mừng năm mới!🥳 Có ảnh dự án mới tại Bangkok của <a class="text-blue-500" href="http://x.com/marckohlbrugge" title="marckohlbrugge">@marckohlbrugge</a> và thông tin về cách tinh chỉnh cảnh giác khi website bị tấn công từ Cloudflare. Còn <a class="text-blue-500" href="http://x.com/swyx" title="swyx">@swyx</a> đã chia sẻ về việc theo dõi đà tăng của mình thay vì theo dõi số ngày liên tiếp. </p>
+<p>Tuy nhiên, có một số tweet không liên quan đến nền văn minh Việt Nam. Mời bạn xem xét và bình luận về nó.</p>
+<h2>Thứ Hai, 01 tháng 01, 2024</h2>
+<p>Như chúng ta đã thấy trên Twitter, <a class="text-blue-500" href="http://x.com/swyx" title="swyx">@swyx</a> chia sẻ ảnh và kế hoạch sức khỏe cho năm 2024 của mình. Ông cũng đề cập đến việc theo dõi đà tăng của mình thay vì theo dõi số ngày liên tiếp khi xây dựng thói quen. </p>
+<p>Ngoài ra, còn có <a class="text-blue-500" href="http://x.com/matteing" title="matteing">@matteing</a> chia sẻ về bài viết tổng kết năm của mình và <a class="text-blue-500" href="http://x.com/Suhail" title="Suhail">@Suhail</a> kể lại kỷ niệm về việc code suốt đêm để hoàn thành dự án của mình.</p>
+<p>Nếu bạn muốn thảo luận và chia sẻ ý kiến của mình về các tweet này, hãy để lại bình luận dưới đây. Chúng ta cùng nhau tạo ra một cộng đồng trí thức và tương tác tích cực trên mạng xã hội.</p>
+        </div><br><a class="text-blue-500" href="/lang/vi_1283027505297985536">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

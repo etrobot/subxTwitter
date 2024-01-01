@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Mga Pahayag ng Social Media: Mga Inspirasyon at Pagpapakita ng Kakaibang Pananaw</h1>
+<p>Isang pahayag mula kay ShaneAParrish noong Enero 1, 2024: Mahirap maunawaan kung gaano kahalaga ang pag-iwas sa karaniwang paraan ng pagkabigo upang mapalakas ang tsansa ng tagumpay.</p>
+<p>Isang pahayag mula kay dickiebush noong Hulyo 28, 2022: Ako'y nag-aral ng mga gawi sa pagsusulat ng 500 mga kilalang manunulat.</p>
+<p>Isang pahayag mula kay AliAbdaal noong Enero 1, 2024: Ang paniniwala na kaya mo gawin ang isang bagay ay unang hakbang na kailangan para sa pagiging kayang gawin ito.</p>
+<p>Sa ilalim ng tweet, sinundan niya ito ng isang papuring sa kanyang libro, Feel-Good Productivity.</p>
+<p>Mga Pahayag mula kay sweatystartup noong Enero 1, 2024: Maraming mayayamang tao ang hindi makakapagbigay ng kaligtasan at mga pangangailangan ng pamilya sa loob ng 72 oras kung sakaling mawawalan ng kuryente, tubig, o signal ng cellphone sa kanilang lugar.</p>
+<p>Isa pang pahayag niya: Ang pagyabang ng mga tao sa NYC na nakatagal sa bagyong Sandy ay katuwa-tuwa.</p>
+<p>Mga Pahayag mula kay dickiebush noong December 31, 2023: 15 oras na lang para sumakay sa January Ship 30 cohort! Sinundan niya ito ng larawan ng kanyang tweet na nagpapatunay ng kanilang programa.</p>
+<p>At dito nagtapos ang kanyang tweet na may tweet mula sa nakaraan na nagpapakita ng kanyang kasiyahan sa naging pagtanggap sa kanilang programa.</p>
+<p>Mga Pahayag mula kay jackbutcher noong Enero 1, 2024: Pumasa sa set 031. Sinundan niya ito ng larawan ng kanyang likha.</p>
+<p>Isang pahayag mula kay SahilBloom noong December 30, 2023: Ang mga pinakamahusay na ideya sa 2023. Sinundan niya ito ng kanyang tweet na nagpapakita ng mga ideya.</p>
+<p>Isang pahayag mula kay josiahfitness noong December 31, 2023: Nagpasya akong sumali sa cohort ni dickiebush at Nicolascole77.</p>
+<p>Isang pahayag mula kay SahilBloom noong December 31, 2023: Sinulat ko ang liham na ito para sa aking sarili 10 taon na ang nakalilipas bago ako grumadweyt.</p>
+<p>Mga Pahayag mula kay sweatystartup noong December 31, 2023: Nagpakita ng larawan ng babae sa isang partey.</p>
+<p>Isang pahayag mula kay packyM noong December 31, 2023: Ang larawan na ito ay nagsasabing magiging kahanga-hanga ang 2024.</p>
+<p>At marami pang iba.</p>
+<p><em>Ang mga tweet na ito ay nagpapakita ng iba't ibang pananaw, inspirasyon, at kaguluhan sa social media. Ito ay isang repleksyon ng kung paano naiiba ang bawat indibidwal at kung paano sila nabibigyan ng boses sa online na espasyo. Patuloy nilang pinapakita ang kanilang kakaibang pananaw sa mga bagay-bagay, nagbibigay inspirasyon, at nagpapakita ng kanilang mga likha at nararanasan. Ang social media ay isang lugar kung saan maaari nating masilayan ang iba't ibang perspektibo at karanasan ng tao.</em></p>
+        </div><br><a class="text-blue-500" href="/lang/tl_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

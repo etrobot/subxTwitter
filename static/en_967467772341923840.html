@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/967467772341923840">
+                <div class="font-bold">BitCoin</div>
+                <div class="text-gray-500">967467772341923840</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>The Latest from Bitcoin Twitter</h1>
+<ul>
+<li>
+<p><strong>Blockstream Talk #26 - Simplicity, Bitcoin’s Last Soft Fork?</strong>  </p>
+<ul>
+<li><em>01 Aug 2023 11:43:01 @Blockstream</em>  </li>
+<li><a class="text-blue-500" href="https://blockstream-talk-23225031.simplecast.com/episodes/blockstream-talk-26-simplicity-bitcoins-last-soft-fork">Blockstream Talk #26</a></li>
+<li>Blockstream discusses Simplicity, a potential soft fork for Bitcoin, and its use of combinators &amp; jets to enable OP_CHECKTEMPLATEVERIFY &amp; SIGHASH_ANYPREVOUT functionality.</li>
+</ul>
+</li>
+<li>
+<p><strong>US Government’s BTC Seizures</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 08:38:39 @lopp</em>  </li>
+<li><a class="text-blue-500" href="https://jlopp.github.io/us-marshals-bitcoin-auctions/">US Government Bitcoin Seizures</a></li>
+<li>A report on the US Government's seizure and sale of over 185,000 BTC since 2014, prompting speculation on the potential gains from HODLing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Happy New Year Greetings</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 06:28:20 @WhalePanda</em>  </li>
+<li>A New Year greeting from WhalePanda.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bitcoin Progress</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 04:51:32 @TuurDemeester</em>  </li>
+<li>A message of gratitude for the progress in advancing Truth in the world through Bitcoin.</li>
+</ul>
+</li>
+<li>
+<p><strong>Electrum Server Performance Report</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 04:15:36 @lopp</em>  </li>
+<li><a class="text-blue-500" href="https://blog.keys.casa/electrum-server-performance-report-2022/">Electrum Server Performance Report</a></li>
+<li>Casa engineers share their findings on the performance of popular Electrum server implementations.</li>
+</ul>
+</li>
+<li>
+<p><strong>COVID-19 Vaccination Commentary</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 00:07:15 @csuwildcat</em>  </li>
+<li>A discussion on vaccination mandates and personal medical choices.</li>
+</ul>
+</li>
+<li>
+<p><strong>Bitcoin’s Impact on MicroStrategy</strong>  </p>
+<ul>
+<li><em>31 Dec 2023 13:44:36 @saylor</em>  </li>
+<li>An infographic illustrating the rise of MicroStrategy empowered by Bitcoin.</li>
+</ul>
+</li>
+<li>
+<p><strong>Joining the Bitcoin Community</strong>  </p>
+<ul>
+<li><em>31 Dec 2023 20:56:05 @Mandrik</em>  </li>
+<li>A lighthearted comment on the potential of making money through Bitcoin-related ventures.</li>
+</ul>
+</li>
+<li>
+<p><strong>Anticipation for 2024</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 00:46:28 @Excellion</em>  </li>
+<li>A New Year greeting and expression of excitement for the Bitcoin community in 2024.</li>
+</ul>
+</li>
+<li>
+<p><strong>Altcoin Mention</strong>  </p>
+<ul>
+<li><em>01 Jan 2024 00:24:28 @jimmysong</em>  </li>
+<li>A reference to "Altcoin Redux."</li>
+</ul>
+</li>
+</ul>
+<p>Bitcoin Twitter is a diverse and active space, featuring discussions and updates on technical developments, market trends, and social commentary. It reflects the community's passion for Bitcoin and its impact on various industries and individuals. From technical discussions about potential soft forks to lighthearted banter, Bitcoin Twitter provides a glimpse into the multifaceted nature of the cryptocurrency ecosystem.</p>
+        </div><br><a class="text-blue-500" href="/lang/en_967467772341923840">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

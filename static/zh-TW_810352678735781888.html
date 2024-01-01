@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>推特精選</h1>
+<h2>2024年1月1日</h2>
+<h3>10:00:01 - <a class="text-blue-500" href="http://x.com/ToughSf/status/1741761185102332257#m">@ToughSf</a></h3>
+<p>開始新年的第一天，作者整理了一些最優秀的硬科幻作品。其中包括來自The Lunar War的Altair-class NEMM歐洲護衛艦，具有模塊化任務硬點。作者在推文中列出了相關的藝術作品連結，顯示了這些硬科幻作品的視覺表現。有興趣的讀者可以點擊連結查看更多關於這些作品的資訊。</p>
+<h3>09:57:15 - 13:00:01 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741760488487227756#m">@Rainmaker1973</a></h3>
+<p>在接下來的幾條推文中，作者分享了一些關於動物和自然界的有趣事實。例如，動物在鏡子中的反應、海棘星的歷史和蠍子在紫外線下的發光現象。這些推文展示了自然界的多樣性和神奇之處，讓我們更加了解世界上的各種生物。</p>
+<h3>09:24:25 - 08:02:46 - <a class="text-blue-500" href="http://x.com/ArtirKel/status/1741752223988863451#m">@ArtirKel</a></h3>
+<p>這兩則推文則是作者分享了對新年的祝福和美好的期待。在充滿希望和祝福的氛圍中，我們和作者一起期待著2024年的美好。</p>
+<h3>07:31:46 - <a class="text-blue-500" href="http://x.com/ATabarrok/status/1741723877472919625#m">@ATabarrok</a></h3>
+<p>這條推文提到了一個話題，作者似乎在這之前開了一個討論，讓我們感到好奇，並且想要進一步了解討論的內容。</p>
+<h2>2024年1月1日之前</h2>
+<p>在這之前的一些推文中，作者分享了一些關於歷史事件、科學知識和巧妙攝影技巧的內容。這些包括了歷史事件的紀念、科學家和攝影師的介紹，以及世界各地迎接新年的場景。這些推文讓我們了解了更多不同領域的知識和事件，同時也展示了推主對於各種議題和知識的關注和熱愛。</p>
+<p>綜上所述，這些推文展示了作者對於硬科幻作品、自然生物、攝影藝術、科學知識和歷史事件的關注和分享。這種多元的內容讓我們在開始新的一年時，獲得了豐富的知識和靈感，並且感受到了作者對於這些領域的熱情。期待在新的一年中，能夠看到更多精彩的內容和分享。</p>
+        </div><br><a class="text-blue-500" href="/lang/zh-TW_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

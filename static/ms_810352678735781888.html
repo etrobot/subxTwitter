@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Artikel: Rangkaian Tweet Menarik</h1>
+<p>Pada 01 Jan 2024, pengguna Twitter @Rainmaker1973 berkongsi video yang memperlihatkan fenomena 'trophallaxis', iaitu perpindahan makanan atau cecair lain di kalangan anggota komuniti semut kura-kura melalui pemakanan dari mulut ke mulut. Laman <a class="text-blue-400" href="http://x.com/Rainmaker1973/status/1741815107003261366#m">sini</a> menunjukkan perkongsian tersebut.</p>
+<p>Beliau juga berkongsi video animasi yang menunjukkan proses pernafasan di dalam dada manusia, yang menjelaskan koordinasi dinamik paru-paru, diafragma, dan tulang rusuk pada 01 Jan 2024 jam 13:04:52. Anda boleh menonton video tersebut <a class="text-blue-400" href="http://x.com/Rainmaker1973/status/1741807702936863100#m">di sini</a>.</p>
+<p>Selain itu, pada 01 Jan 2024, @Rainmaker1973 turut berkongsi gambaran Elang Arfak di dalam Tweet yang menarik. Anda boleh melihat video tersebut <a class="text-blue-400" href="http://x.com/Rainmaker1973/status/1741798354995003482#m">di sini</a>.</p>
+<p>Penulis juga turut memuat naik imej Fluff Poplar yang sangat mudah terbakar dengan kelajuan yang pantas di dalam acara pembakaran terkawal di Calahorra, Sepanyol pada 01 Jan 2024 jam 11:48:28. Anda boleh melihat video tersebut <a class="text-blue-400" href="http://x.com/Rainmaker1973/status/1741788478000582785#m">di sini</a>.</p>
+<p>Pengguna @Gilesyb turut berkongsi sebuah perbincangan antara @tylercowen dan ahli falsafah utilitarian, Peter Singer, yang membincangkan topik 'effective altruism' pada 01 Jan 2024. Anda boleh meninjau perbualan tersebut dalam <a class="text-blue-400" href="http://x.com/Gilesyb/status/1740998667429900781#m">laman ini</a>.</p>
+<p>Pada 01 Jan 2024, @danielleboccell membuat penanda aras kepada @dela3499 yang memuatkan ayat 'binatang surai'. Anda boleh melihat Tweet tersebut <a class="text-blue-400" href="http://x.com/danielleboccell/status/1741611519165489612#m">di sini</a>.</p>
+<p>Ini merupakan beberapa perkongsian menarik yang boleh memberi pandangan untuk artikel di dalam blog Bahasa Melayu anda.</p>
+<p>Terima kasih.</p>
+        </div><br><a class="text-blue-400" href="/lang/ms_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

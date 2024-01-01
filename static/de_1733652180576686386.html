@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1733652180576686386">
+                <div class="font-bold">AGI Thoughts</div>
+                <div class="text-gray-500">1733652180576686386</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>NYE Codemarathon mit Matt Brockman und Anna Brockman. Entspannendster Teil des Jahres.</h1>
+<p>Die Autoren von Büchern verdienen selten viel Geld mit dem Buchverkauf.</p>
+<p>Die Tugenden von heute waren vor einem Jahrhundert Laster, was bedeutet, dass einige Neujahrsvorsätze in der Vergangenheit das Gegenteil der heutigen Vorsätze waren. </p>
+<p>Besserer Zugang zum Wissen ist ...</p>
+<p>Die Washington Post enthüllt die russische Strategie, um Frankreich politisch zu destabilisieren, indem sie die Extreme Rechte aufsteigen lässt.</p>
+<p>Wer hätte gedacht, dass Kaffee den Zusammenhalt der Gesellschaft zerstört 😨☕</p>
+<p>Frohes Neues Jahr ohne Doom 🍾🥂</p>
+<p>Vergiss die Schreibmaschine, was ist mit P(Doom | PowerPoint) ?</p>
+<p>Perplexity wünscht ein frohes neues Jahr! Lass uns 2024 zu einem Jahr der Erkenntnisse und Antworten machen.</p>
+<p>Arbeiten an einem Projekt, das lokale LLMs und JSON-Antworten erfordert. Mixtral scheint sehr gut darin zu sein, einfache, gültige JSON-Antworten zurückzugeben.</p>
+<p>LlamaIndex hat 5-10+ Ressourcen zum Aufbau von Full-Stack RAG, und unser mongodb-demo-Repo ist eines der umfassendsten in Bezug auf Setup.</p>
+<p>Die einen wahren amerikanischen Kunstform galt einst als Zerstörung des sozialen Gefüges und der Jugend.</p>
+<p>2024: Lass uns RAG weniger zu einem Hack machen.</p>
+<p>Full-Stack RAG Starter Pack 🔎📦 - mit MongoDB, Flask, Render und Next.js</p>
+<p>Wow, Inline C++-Erweiterungen für PyTorch sind so einfach? Ich bin extrem beeindruckt.</p>
+<p>2023 für mich war alles über: </p>
+<p>❤️</p>
+<p>2023: LlamaIndex 🦙</p>
+<p>2023 ist eine Menge "Lass uns es tun"</p>
+<p><em>Zeit und Autor fehlen 在这里</em></p>
+<p>Meine Interpretation:
+Die Tweets reflektieren ein breites Spektrum an Interessen und Diskussionen. Von technischen Diskussionen über Kaffee und Neujahrsvorsätze bis hin zu politischen Enthüllungen. Es zeigt, wie vielfältig und engagiert die Twitter-Nutzer sind, und wie Social Media als Plattform für Wissen, Diskussion und Kontakte genutzt wird.</p>
+        </div><br><a class="text-blue-500" href="/lang/de_1733652180576686386">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

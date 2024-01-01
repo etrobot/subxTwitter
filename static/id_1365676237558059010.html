@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Bahasa Indonesia Article</h1>
+<h2>Tweet Compilation</h2>
+<ol>
+<li>
+<p><a class="text-blue-400" href="http://x.com/SahilBloom/status/1741809282541088807#m">01 Jan 2024 13:11:08 Sahil Bloom</a>: Saya harap teman-teman yang Anda cintai dan pedulikan semuanya sehat dan berkembang. Saya tahu itu mungkin mustahil, jadi saya kira saya harap teman-teman yang Anda cintai dan pedulikan tahu bahwa Anda mencintai dan peduli pada mereka. Itu yang terpenting pada akhirnya.</p>
+</li>
+<li>
+<p><a class="text-blue-400" href="http://x.com/SahilBloom/status/1741812457352388680#m">01 Jan 2024 13:23:45 Sahil Bloom</a>: Dan ya, saya menikahi Elizabeth.  </p>
+</li>
+</ol>
+<p><img alt="Wedding Photo" src="http://x.com/pic/media%2FGCwpMrwW4AATZr3.jpg" />  </p>
+<ol>
+<li>
+<p><a class="text-blue-400" href="http://x.com/SahilBloom/status/1741814989076254979#m">01 Jan 2024 13:33:49 Sahil Bloom</a>: Saya pertama kali mendapatkan ide untuk melakukan ini dari guru matematika saya yang meminta kami menulis surat kepada diri sendiri yang akan dikirim saat kami lulus dari sekolah menengah.</p>
+</li>
+<li>
+<p><a class="text-blue-400" href="http://x.com/dickiebush/status/1741814908314870117#m">01 Jan 2024 13:33:30 Dickie Bush</a>: Saya melihat kembali setiap episode 2023 dari podcast kami, The Espresso Hour.</p>
+</li>
+</ol>
+<p><img alt="Podcast Episode 12" src="http://x.com/pic/card_img%2F1741814955760816129%2FimtG-BIG%3Fformat%3Djpg%26name%3D800x320_1" /> </p>
+<ol>
+<li>
+<p><a class="text-blue-400" href="http://x.com/packyM/status/1741811336814702915#m">01 Jan 2024 13:19:18 Packy McCormick</a>: 2024 akan menjadi tahun paling liar yang pernah kami alami dan paling tenang yang akan kami alami.</p>
+</li>
+<li>
+<p><a class="text-blue-400" href="http://x.com/sweatystartup/status/1741803355884708054#m">01 Jan 2024 12:47:35 The Sweaty Startup</a>: Tweet ini membuat orang sangat kesal karena mereka tahu saya benar ketika mereka berpikir secara kritis tentangnya.</p>
+</li>
+<li>
+<p><a class="text-blue-400" href="http://x.com/fortelabs/status/1741791810391806134#m">01 Jan 2024 12:01:43 Forte Labs</a>: Resolusi Tahun Baru gagal karena sebagian besar hanya sekedar angan-angan.  </p>
+</li>
+</ol>
+<h2>Comments</h2>
+<ul>
+<li>Sahil Bloom meresmikan pernikahannya dengan Elizabeth.</li>
+<li>Dickie Bush adalah seorang podcaster yang merencanakan untuk menulis dan menerbitkan setiap hari pada tahun 2023.</li>
+<li>Terdapat diskusi mengenai resolusi Tahun Baru dan mengapa seringkali gagal.</li>
+</ul>
+<h2>Conclusion</h2>
+<p>Dari rangkaian tweet di atas, terdapat beragam topik yang dibahas mulai dari kehidupan pribadi, podcast, hingga wawasan tentang resolusi Tahun Baru. Ini menunjukkan keberagaman informasi dan aktivitas yang terjadi di platform media sosial Twitter.</p>
+        </div><br><a class="text-blue-400" href="/lang/id_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>新年展望</h1>
+<h2>ToughSf</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/ToughSf/status/1741761185102332257#m">01 Jan 2024 10:00:01</a></li>
+<li><strong>作者</strong>: <a class="text-blue-500" href="http://x.com/ToughSf" title="ToughSf">@ToughSf</a></li>
+<li><strong>内容</strong>：分享了一则艺术作品，Altair-class NEMM European Frigate。</li>
+</ul>
+<p>哇，新年开始就有如此震撼的科幻艺术作品，让人对未来充满期待和想象。</p>
+<h2>Rainmaker1973</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741760488487227756#m">01 Jan 2024 09:57:15</a></li>
+<li><strong>内容</strong>：一段视频展示了动物对镜子反应的情况。</li>
+</ul>
+<p>这段视频展示了动物看到自己在镜子中的反应，非常有趣。</p>
+<h2>ArtirKel</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/ArtirKel/status/1741752223988863451#m">01 Jan 2024 09:24:25</a></li>
+<li><strong>内容</strong>：祝大家新年快乐！</li>
+</ul>
+<p>简洁的新年祝福，带来了温暖的祝福氛围。</p>
+<h2>Rainmaker1973</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741756493798519133#m">01 Jan 2024 09:41:23</a></li>
+<li><strong>内容</strong>：紫外线下蝎子的发光情况。</li>
+</ul>
+<p>看到这段视频，让人对生物体内奇妙的发光现象充满好奇。</p>
+<h2>Rainmaker1973</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741733946432380991#m">01 Jan 2024 08:11:47</a></li>
+<li><strong>内容</strong>：分享了一则灾难视频。</li>
+</ul>
+<p>在新年伊始就发生如此灾难，让人对世界充满了思索和关切。</p>
+<h2>Ben_Reinhardt</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/Ben_Reinhardt/status/1740747370558828918#m">29 Dec 2023 14:51:29</a></li>
+<li><strong>内容</strong>：一则图片。</li>
+</ul>
+<p>这幅艺术作品展示了独特的抽象风格，使人陷入对艺术的思考中。</p>
+<h2>JohnF_Sullivan</h2>
+<ul>
+<li><strong>时间</strong>: <a class="text-blue-500" href="http://x.com/JohnF_Sullivan/status/1741378038544355597#m">31 Dec 2023 08:37:32</a></li>
+<li><strong>内容</strong>：关于孙子兵法在商业上的应用。</li>
+</ul>
+<p>孙子兵法在商业上的灵活运用，展示了古代智者的智慧与洞察。</p>
+<p>以上推文体现了人类对未来的期待、对自然生物的探索，以及对世界事物的思考。每一则推文都带来了不同的情感和思绪，展现了推特作为信息分享平台的多样性和丰富性。希望在新的一年里，大家都能看到更多不同领域的精彩内容。</p>
+        </div><br><a class="text-blue-500" href="/lang/zh-CN_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

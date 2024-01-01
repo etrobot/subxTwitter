@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1733652180576686386">
+                <div class="font-bold">AGI Thoughts</div>
+                <div class="text-gray-500">1733652180576686386</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>NYE Coding Marathon &amp; New Year Thoughts</h1>
+<h2>推特文章</h2>
+<ul>
+<li><strong>作者:</strong> @gdb</li>
+<li><strong>时间:</strong> 01 Jan 2024 07:08:36</li>
+<li>
+<p>NYE编码马拉松，与 @badphilosopher 和 @theannabrockman 一起。今年最放松的时刻。</p>
+</li>
+<li>
+<p><strong>作者:</strong> @ylecun</p>
+</li>
+<li><strong>时间:</strong> 01 Jan 2024 06:29:16</li>
+<li>
+<p>只有少数作者能从图书销售中获得可观的收入。</p>
+</li>
+<li>
+<p><strong>作者:</strong> @PessimistsArc</p>
+</li>
+<li><strong>时间:</strong> 31 Dec 2023 16:42:25</li>
+<li>
+<p>今天的美德在一个世纪前是恶习，这意味着过去的新年决议和今天的决议是相反的。</p>
+</li>
+<li>
+<p><strong>作者:</strong> @ylecun</p>
+</li>
+<li><strong>时间:</strong> 01 Jan 2024 06:00:50</li>
+<li>
+<p>更好的获取知识是...</p>
+</li>
+<li>
+<p><strong>作者:</strong> @ObsDelphi</p>
+</li>
+<li><strong>时间:</strong> 30 Dec 2023 20:41:06</li>
+<li>华盛顿邮报揭露了俄罗斯在法国政治中激起极右势力的战略。我会给你解释一切。</li>
+</ul>
+<h2>解读和评论</h2>
+<ul>
+<li>作者们在新年里都分享了一些深刻而有趣的思考，从编码马拉松到金钱和政治策略，展现了他们的多元化思维和关注点。</li>
+<li>这些推特内容不仅反映了技术和知识的重要性，也深刻地反映了作者对社会和政治的关注和思考。这些内容值得我们用心思考和反思。</li>
+</ul>
+        </div><br><a class="text-blue-500" href="/lang/zh-CN_1733652180576686386">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from fastapi import FastAPI, Request,HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse,HTMLResponse
 import httpx
 from base64 import b64encode
 from pydantic import BaseModel
@@ -20,16 +20,14 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 
 
-class Cart(BaseModel):
-    # Define your Cart structure here
-    # Example: items: List[Item]
-    pass
+class UserEmail(BaseModel):
+    usermail: str
 
 class AccessToken(BaseModel):
     access_token: str
 
 @app.post("/api/orders")
-async def create_order(cart: Cart):
+async def create_order(usermail: UserEmail):
     try:
         access_token = await generate_access_token()
         url = f"{base}/v2/checkout/orders"
@@ -37,9 +35,10 @@ async def create_order(cart: Cart):
             "intent": "CAPTURE",
             "purchase_units": [
                 {
+                    "reference_id": usermail.usermail,
                     "amount": {
                         "currency_code": "USD",
-                        "value": "110.00",
+                        "value": "5.00",
                     },
                 },
             ],
@@ -82,6 +81,20 @@ async def capture_paypal_order(request: Request):
                 },
             )
             order_data = await handle_response(response)
+            usermail=order_data['jsonResponse']['purchase_units'][0]["reference_id"]
+            try:
+                conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
+                cursor = conn.cursor()
+                cursor.execute("SELECT * FROM users WHERE email = :email", email=usermail)
+                row = cursor.fetchone()
+                cursor.execute(
+                    "UPDATE users SET expire_date = :expire_date WHERE email = :email",
+                    expire_date=max(row[4], datetime.now()) + timedelta(days=90),
+                )
+                conn.commit()
+                conn.close()
+            except Exception as e:
+                print(e)
             return order_data['jsonResponse']
 
     except Exception as e:
@@ -123,43 +136,22 @@ async def handle_response(response):
 @app.get('/favicon.ico', include_in_schema=False)
 async def favicon():
     return FileResponse(favicon_path)
-@app.get("/")
-def index(request: Request):
-    return templates.TemplateResponse("template.html", {"request": request})
 
-@app.get("/{lang}")
+@app.get("/")
+def index():
+    return FileResponse(f"static/index.html")
+
+@app.get("/lang/{lang}")
 async def get_static_page(lang: str):
     try:
         return FileResponse(f"static/{lang}.html")
     except FileNotFoundError:
         raise HTTPException(status_code=404, detail="Page not found")
 
-@app.post("/sub_quaterly_call_back")
-def sub_quaterly_call_back(email: str):
-    conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
-    row = cursor.fetchone()
-    cursor.execute(
-        "UPDATE users SET expire_date = :expire_date WHERE email = :email",
-        expire_date=max(row[4],datetime.now())+timedelta(days=90),
-    )
-    conn.commit()
-    conn.close()
-    return
-@app.post("/sub_yearly_call_back")
-def sub_yearly_call_back(email: str):
-    conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM users WHERE email = :email", email=email)
-    row = cursor.fetchone()
-    cursor.execute(
-        "UPDATE users SET expire_date = :expire_date WHERE email = :email",
-        expire_date=max(row[4],datetime.now())+timedelta(days=365),
-    )
-    conn.commit()
-    conn.close()
-    return
+@app.get("/pay", response_class=HTMLResponse)
+async def pay(request: Request, email: str):
+    return templates.TemplateResponse("pay.html", {"request": request, "usermail": email})
+
 @app.post("/unsubscribe")
 async def unsubscribe(email: str):
     conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)

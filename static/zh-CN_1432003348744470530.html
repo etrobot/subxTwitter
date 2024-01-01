@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1432003348744470530">
+                <div class="font-bold">Design Teams</div>
+                <div class="text-gray-500">1432003348744470530</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>设计科技领域的一周动态</h1>
+<h2>2023年12月28日</h2>
+<h3>发推者：SalesforceUX</h3>
+<p><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1740434190347174281#m">链接</a>
+Itai Asseo，Salesforce Ignite新兴技术负责人，和他的团队尝试了一系列顶级AI工具，看看他们能以多快的速度完成任务。看看哪些AI工具节省了最多的时间，以及通过什么方式实现的。</p>
+<p><strong>我的解读和评论：</strong> 这篇推文介绍了Salesforce Ignite团队的新兴技术实验，尝试了一些AI工具，了解了它们如何影响团队的效率和创造力。AI技术在设计领域的应用将有望在未来发挥更大的作用。</p>
+<h2>2023年12月22日</h2>
+<h3>发推者：MicrosoftDesign</h3>
+<p><a class="text-blue-500" href="http://x.com/MicrosoftDesign/status/1738242997282877755#m">链接</a>
+这个假期，我们与AI艺术家@elliepritts合作，重新创作了世界各地假期记忆的视觉表现。</p>
+<p><strong>我的解读和评论：</strong> 微软设计团队与AI艺术家合作，重新诠释了假期记忆的视觉呈现，展现了技术与艺术的结合，引领了设计领域的前沿趋势。</p>
+<h2>2023年12月20日</h2>
+<h3>发推者：materialdesign</h3>
+<p><a class="text-blue-500" href="http://x.com/materialdesign/status/1737548648857116834#m">链接</a>
+Material Theme Builder 2.0的主题体验更新使假期更加快乐！</p>
+<p><strong>我的解读和评论：</strong> Material Theme Builder 2.0的主题体验更新为假期增添了更多快乐，设计师们的创造力可以得到更好的展现。</p>
+<h2>2023年12月15日</h2>
+<h3>发推者：SalesforceUX</h3>
+<p><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1735772496488497635#m">链接</a>
+2030年的AI世界将会是什么样子呢？</p>
+<p><strong>我的解读和评论：</strong> 这条推文探讨了未来AI在设计领域可能发展的方向，引发人们对未来科技发展的思考。</p>
+<h2>2023年12月14日</h2>
+<h3>发推者：materialdesign</h3>
+<p><a class="text-blue-500" href="http://x.com/materialdesign/status/1735343896719176095#m">链接</a>
+添加搜索到你的应用中？对搜索在Material中的使用有疑问？我们来解答！</p>
+<p><strong>我的解读和评论：</strong> 这条推文展示了设计团队在使用Material中关于搜索功能的指导，为开发者们提供了更多使用指南，提升了设计与技术的结合度。</p>
+<p>综上所述，近期设计科技领域的动态展现了技术与创意的结合，未来设计师们将有更多的机会通过AI工具来提高工作效率和创造力。这也为我们展示了设计科技领域的发展大趋势。</p>
+        </div><br><a class="text-blue-500" href="/lang/zh-CN_1432003348744470530">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

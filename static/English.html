@@ -32,40 +32,57 @@
         display: inline-block;
     }
 
-
     </style>
 </head>
 
-<body class="bg-gray-50">
+<body class="bg-gray-100">
 
 <div class="sidebar w-full max-w-sm items-center">
-    <div>
-        <button id="theme-toggle" class="px-2 rounded">🌒</button>
-    </div>
-    <div class="w-full text-center font-bold">
-        <div id="title">GPT Subscripton for Twitter List</div>
-    </div>
+    <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+    <div class="w-full text-center font-bold"><div id="title">GPT Subscripton for Twitter List</div></div>
     <p class="text-xs mt-4 w-80 m-auto leading-loose">
-        <a href="/lang/zh-CN" class="border-b-2 mr-2">简体中文</a>
-        <a href="/lang/zh-TW" class="border-b-2 mr-2">繁體中文</a>
-        <a href="/lang/en" class="border-b-2 mr-2">English</a>
-        <a href="/lang/ja" class="border-b-2 mr-2">日本語</a>
-        <a href="/lang/ko" class="border-b-2 mr-2">한국어</a>
-        <a href="/lang/es" class="border-b-2 mr-2">Español</a>
-        <a href="/lang/pt" class="border-b-2 mr-2">Português</a>
-        <a href="/lang/de" class="border-b-2 mr-2">Deutsch</a>
-        <a href="/lang/fr" class="border-b-2 mr-2">Français</a>
-        <a href="/lang/ar" class="border-b-2 mr-2">العربية</a>
-        <a href="/lang/id" class="border-b-2 mr-2">Bahasa Indonesia</a>
-        <a href="/lang/ms" class="border-b-2 mr-2">Bahasa Melayu</a>
-        <a href="/lang/tl" class="border-b-2 mr-2">Filipino</a>
-        <a href="/lang/vi" class="border-b-2 mr-2">Tiếng Việt</a>
-        <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
-        <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
+    <a  href="/zh-CN" class="border-b-2 mr-2">简体中文</a>
+    <a href="/zh-TW" class="border-b-2 mr-2">繁體中文</a>
+    <a href="/en" class="border-b-2 mr-2">English</a>
+    <a href="/ja" class="border-b-2 mr-2">日本語</a>
+    <a href="/ko" class="border-b-2 mr-2">한국어</a>
+    <a href="/es" class="border-b-2 mr-2">Español</a>
+    <a href="/pt" class="border-b-2 mr-2">Português</a>
+    <a href="/de" class="border-b-2 mr-2">Deutsch</a>
+    <a href="/fr" class="border-b-2 mr-2">Français</a>
+    <a href="/ar" class="border-b-2 mr-2">العربية</a>
+    <a href="/id" class="border-b-2 mr-2">Bahasa Indonesia</a>
+    <a href="/ms" class="border-b-2 mr-2">Bahasa Melayu</a>
+    <a href="/tl" class="border-b-2 mr-2">Filipino</a>
+    <a href="/vi" class="border-b-2 mr-2">Tiếng Việt</a>
+    <a href="/pl" class="border-b-2 mr-2">Polski</a>
+    <a href="/nl" class="border-b-2 mr-2">Nederlands</a>
     </p>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
-    {{gptDoms}}
+    <div id="originalCard" class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=240x240"
+                     class="object-none w-full h-full"/>
+            </div>
+
+            <a href="https://twitter.com/i/lists/1733652180576686386" class="text-sm w-full">
+                <div class="font-bold">AGI Thoughts ➤</div>
+                <div class="text-gray-500">1733652180576686386</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+    </div>
+    text
 </div>
 <div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
     <div class="text-sm px-2 pb-2 pt-2">
@@ -118,11 +135,31 @@
 </div>
 
 <script>
-document.querySelector('button.subx').addEventListener('click', function(event) {
-  console.log(this.value)
-  event.preventDefault();
-  document.querySelector('input[name="target_id"]').value = this.value;
+  // 获取原始卡片元素
+  const originalCard = document.getElementById('originalCard');
+  // 获取要插入的父元素
+  const parentContainer = document.getElementById('parentContainer'); // 替换为实际的父元素ID
+  // 定义要创建的卡片数量
+  const cardCount = 5; // 替换为你想要的数量
+  // 循环复制并插入卡片
+  for (let i = 0; i < cardCount; i++) {
+    // 使用cloneNode复制元素
+    const clonedCard = originalCard.cloneNode(true);
+    // 修改一些可能需要个性化的内容，例如链接、文本等
+    // 将复制后的元素插入到父容器中
+    parentContainer.appendChild(clonedCard);
+  }
+
+</script>
+<script>
+document.querySelectorAll('button.subx').forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    console.log(this.value);
+    event.preventDefault();
+    document.querySelector('input[name="target_id"]').value = this.value;
+  });
 });
+
 
     document.getElementById('subscribe-form').addEventListener('submit', function (event) {
       // 阻止表单的默认提交行为
@@ -239,8 +276,11 @@ document.querySelector('button.subx').addEventListener('click', function(event) 
       var currentLanguageInput = document.getElementById("current-language");
       currentLanguageInput.value = selectedLanguage;
     });
-</script>
 
+
+
+</script>
+</div>
 </body>
 
 </html>

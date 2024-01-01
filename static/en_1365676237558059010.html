@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Reflecting on Twitter Conversations</h1>
+<h2>Introduction</h2>
+<p>As an experienced English writer, I find Twitter to be a fascinating platform for sharing and discovering insights. In this article, I will compile a series of tweets from various authors and personalities, and provide my interpretation and commentary on the content.</p>
+<h3><a class="text-blue-500" href="http://x.com/dickiebush/status/1552620538513825792#m">28 Jul 2022 11:42:37 @dickiebush</a></h3>
+<ul>
+<li><strong>dickiebush:</strong> I studied the writing routine of 500 legendary writers. Turns out, great writing is simple—if you do these 6 things every day.</li>
+</ul>
+<p>This tweet by dickiebush highlights the simplicity of great writing. It suggests that there are specific actions that writers can take each day to improve their craft.</p>
+<h3><a class="text-blue-500" href="http://x.com/AliAbdaal/status/1741739756331876383#m">01 Jan 2024 08:34:52 @AliAbdaal</a></h3>
+<ul>
+<li><strong>AliAbdaal:</strong> Believing you can do something is the first step to actually being able to do it.</li>
+<li><strong>AliAbdaal:</strong> By asking myself this, I end up visualising myself confidently approaching the task at hand. Or at least, feeling confident I can learn to do the thing over time.</li>
+<li><strong>AliAbdaal:</strong> Elevate your productivity game with my new book, Feel-Good Productivity. Order now for a transformative read.</li>
+</ul>
+<p>AliAbdaal's tweets emphasize the importance of self-belief and visualization in achieving goals. It also serves as a promotion for his new book, "Feel-Good Productivity."</p>
+<h3><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741652999745810825#m">01 Jan 2024 02:50:08 @sweatystartup</a></h3>
+<ul>
+<li><strong>sweatystartup:</strong> An alarming number of wealthy men couldn’t keep their family safe and fed for 72 hours if the power / water / cell reception went out in their region and things got crazy for a few days.</li>
+<li><strong>sweatystartup:</strong> People in NYC bragging about surviving Sandy is hilarious.</li>
+</ul>
+<p>These tweets from sweatystartup shed light on the vulnerability of even wealthy individuals in times of crisis and humorously critiques the bragging culture surrounding survival stories.</p>
+<h3><a class="text-blue-500" href="http://x.com/dickiebush/status/1741423094474973619#m">31 Dec 2023 11:36:34 @dickiebush</a></h3>
+<ul>
+<li><strong>dickiebush:</strong> 15 hours left to hop aboard the January Ship 30 cohort!</li>
+<li><strong>dickiebush:</strong> Seeing the energy in this community is the perfect way to end the year.</li>
+</ul>
+<p>dickiebush's tweets promote a community-based program and express enthusiasm for the involvement and energy within that community.</p>
+<h3>Conclusion</h3>
+<p>Twitter serves as a valuable platform for individuals to share their thoughts, promote their work, and engage in meaningful conversations. The tweets highlighted in this article offer insights into writing routines, self-belief, productivity, awareness of vulnerability, and community engagement. As a writer, it's important to engage with such conversations and continue to learn from diverse perspectives.</p>
+        </div><br><a class="text-blue-500" href="/lang/en_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

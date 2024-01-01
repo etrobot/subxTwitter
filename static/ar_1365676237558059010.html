@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>排版</h1>
+<h2>推特内容</h2>
+<p><a class="text-blue-500" href="http://x.com/ShaneAParrish/status/1741764829856108752#m">01 Jan 2024 10:14:30@ShaneAParrish</a>: يمكن أن يكون من الصعب فهم مدى حجم تجنب الطرق القياسية للفشل بشكل كبير يزيد من فرص النجاح.</p>
+<p><a class="text-blue-500" href="http://x.com/AliAbdaal/status/1741739756331876383#m">01 Jan 2014 08:34:52@AliAbdaal</a>: الاعتقاد بأنك تستطيع فعل شيء هو الخطوة الأولى لفعله فعلياً.</p>
+<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741638685668302922#m">01 Jan 2024 01:53:15@sweatystartup</a>: يجب على كل رجل ثري امتلاك شاحنة صغيرة.</p>
+<p><a class="text-blue-500" href="http://x.com/dickiebush/status/1741634519633985924#m">01 Jan 2024 01:36:42@dickiebush</a>: أسرع طريقة لتصبح خبيرًا في أي موضوع هي أن تكون متخصصًا حتى تكون الشخص الوحيد في العالم القادر على الحديث عنه.</p>
+<h2>评论</h2>
+<p>هذه ال推ات تحمل في طياتها الكثير من الحكمة والتوجيهات للنجاح. من الصعب تجاهل أهمية تجنب الفشل بالطرق القياسية وكذلك الاعتقاد بالقدرة على تحقيق الأهداف والتفوق. وفي النهاية، يظهر استخدام الشاحنة الصغيرة كرمز للقدرة على مواجهة التحديات والتكيف مع الظروف المختلفة.</p>
+<p>يشير الكاتب أيضًا إلى أن الاختصاص والتميز في مجال معين يمكن أن يكون مفتاحًا لتحقيق النجاح وتحقيق أهدافك.</p>
+<p>هذه الرسائل والإيحاءات يمكن أن تكون مفيدة في جميع جوانب الحياة، سواء كانت في المجال الشخصي أو المهني.</p>
+        </div><br><a class="text-blue-500" href="/lang/ar_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

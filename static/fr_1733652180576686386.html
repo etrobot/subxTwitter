@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1733652180576686386">
+                <div class="font-bold">AGI Thoughts</div>
+                <div class="text-gray-500">1733652180576686386</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Mes réflexions sur les tweets</h1>
+<h2>01 Jan 2024</h2>
+<h3>@gdb | 07:08:36</h3>
+<p>Current status: NYE coding marathon with <a class="text-blue-500" href="http://x.com/badphilosopher" title="Matt Brockman">@badphilosopher</a> and <a class="text-blue-500" href="http://x.com/theannabrockman" title="A">@theannabrockman</a>. Most relaxing part of the year.</p>
+<p>Le début de l'année est célébré en faisant un marathon de codage avec des amis. Cela montre à quel point la passion pour le codage est importante pour beaucoup de personnes, même au début de l'année.</p>
+<h3>@ylecun | 06:29:16</h3>
+<p>Only a small number of book authors make significant money from book sales. <a class="text-blue-500" href="http://x.com/trengriffin/status/1741494104423596507#m">x.com/trengriffin/status/1741494104423596507#m</a></p>
+<p>Ce tweet parle du fait que seuls quelques auteurs de livres gagnent beaucoup d'argent grâce à la vente de leurs livres. Cela souligne les défis financiers auxquels sont confrontés de nombreux écrivains.</p>
+<h2>31 Dec 2023</h2>
+<h3>@PessimistsArc | 16:42:25</h3>
+<p>Virtues of today were vices a century ago, meaning some New Year’s resolutions in the past were opposite of resolutions today:</p>
+<p>Le tweet souligne comment les vertus et les vices ont changé au fil du temps, et comment les résolutions du Nouvel An d'aujourd'hui sont différentes de celles du passé. Cela invite à réfléchir sur l'évolution des valeurs au fil des ans.</p>
+<h3>@ObsDelphi | 20:41:06</h3>
+<p>Le Washington Post dévoile la stratégie russe pour déstabiliser politiquement la France en y faisant monter l'extrême-droite. Je vous explique tout. <a class="text-blue-500" href="http://x.com/pic/media%2FGCnzwX7WIAAQDnL.jpg">x.com/pic/media%2FGCnzwX7WIAAQDnL.jpg</a></p>
+<p>Ce tweet mentionne une révélation du Washington Post sur la stratégie russe pour déstabiliser politiquement la France. Cela met en lumière les enjeux géopolitiques et l'influence étrangère dans les affaires nationales.</p>
+<h2>01 Jan 2024</h2>
+<h3>@ylecun | 05:40:14</h3>
+<p>Who knew that coffee destroyed the fabric of society 😨☕ <a class="text-blue-500" href="http://x.com/Dan_Jeffries1/status/1741445839053025450#m">x.com/Dan_Jeffries1/status/1741445839053025450#m</a></p>
+<p>Ce tweet humoristique souligne ironiquement l'effet du café sur la société. Cela montre comment l'humour peut être utilisé pour aborder des sujets variés et légers.</p>
+<h2>Commentaire final</h2>
+<p>Les tweets montrent une diversité de sujets, allant du codage au financement des auteurs, en passant par la politique et l'humour. Cela reflète la variété des préoccupations et des intérêts des utilisateurs de Twitter, ainsi que la capacité de la plate-forme à susciter des discussions sur des sujets divers.</p>
+        </div><br><a class="text-blue-500" href="/lang/fr_1733652180576686386">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

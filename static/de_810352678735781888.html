@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Deutsch Artikel</h1>
+<hr />
+<p><strong>01 Jan 2024 10:22:39 @Rainmaker1973</strong></p>
+<p>Dies ist kein GIF, sondern ein statisches Bild. Die optische Bewegungsillusion beruht darauf, dass man seine Augen schnell über das Design bewegt, um das Design zum Drehen zu bringen, also wenn man sich auf die Mitte des Bildes konzentriert, hört es auf.</p>
+<p><em>Bild</em><br />
+<img alt="Bild" src="http://x.com/pic/media%2FGCv_tRGWwAEGQnX.jpg" /></p>
+<p><em>Kommentar:</em>
+Dieses Bild zeigt eine optische Illusion, die darauf basiert, dass man seine Augen schnell über das Design bewegt, um eine Drehbewegung zu erzeugen. Interessant zu sehen, wie das menschliche Auge auf solche visuellen Reize reagiert.</p>
+<hr />
+<p><strong>01 Jan 2024 10:19:59 @Rainmaker1973</strong></p>
+<p>Wie Tennisbälle hergestellt werden</p>
+<p><em>Video</em><br />
+<img alt="Video" src="http://x.com/pic/ext_tw_video_thumb%2F1741764926690275328%2Fpu%2Fimg%2FAjIpKNx9GFoNKINq.jpg" /></p>
+<p><em>Kommentar:</em>
+Faszinierend zu sehen, wie Tennisbälle in der Produktion hergestellt werden. Ein Einblick in einen Teil des Herstellungsprozesses, den man normalerweise nicht zu sehen bekommt.</p>
+<hr />
+<p><strong>01 Jan 2024 10:14:26 @Rainmaker1973</strong></p>
+<p>Dieses Foto zeigt eine mutige Blauhäher, der versucht, einen imposanten Weißkopfseeadler anzugreifen oder vielleicht nur zu photobomben.</p>
+<p><em>Bild</em><br />
+<img alt="Bild" src="http://x.com/pic/media%2FGCv9yE1XwAA1Ws0.jpg" /></p>
+<p><em>Kommentar:</em>
+Ein witziger Moment, in dem ein Blauhäher versucht, einen Weißkopfseeadler anzugreifen. Die Natur hält oft solche unerwarteten und amüsanten Begegnungen bereit.</p>
+<hr />
+<p><em><a class="text-blue-500" href="http://x.com/...">Weiterlesen</a>...</em></p>
+<p><em><a class="text-blue-500" href="http://x.com/...">Quelle</a></em></p>
+        </div><br><a class="text-blue-500" href="/lang/de_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

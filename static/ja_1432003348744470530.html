@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1432003348744470530">
+                <div class="font-bold">Design Teams</div>
+                <div class="text-gray-500">1432003348744470530</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h3>最新のデザイン業界の動向</h3>
+<hr />
+<p><strong>SalesforceUX</strong>
+<em>28 Dec 2023 18:07:01</em></p>
+<p><a class="text-blue-500" href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">AIツールはデザイン業務の効率を向上させることができるのか</a>、SalesforceのエマージングテクノロジーチームがAIツールの実験を行い、タスクの素早い実行能力を調査しました。</p>
+<p>AIツールが最も時間を節約した方法やその効果について調査結果が発表されています。<a class="text-blue-500" href="http://x.com/search?q=%23DreamDesigners">#DreamDesigners</a></p>
+<hr />
+<p><strong>MicrosoftDesign</strong>
+<em>22 Dec 2023 17:00:00</em></p>
+<p>ホリデーシーズンにAIアーティスト<a class="text-blue-500" href="http://x.com/elliepritts">@elliepritts</a>と協力し、世界中のホリデーメモリーのビジュアル表現を再現しました。</p>
+<p><a class="text-blue-500" href="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg">イメージの例</a></p>
+<hr />
+<p><strong>materialdesign</strong>
+<em>20 Dec 2023 19:00:54</em></p>
+<p>Material Theme Builder 2.0での更新されたテーマング体験により、ホリデーシーズンがより幸せなものになりました。</p>
+<p><a class="text-blue-500" href="http://goo.gle/3RyaMND">更新内容の詳細</a></p>
+<hr />
+<p><strong>materialdesign</strong>
+<em>20 Dec 2023 19:00:57</em></p>
+<p>カラーフィデリティが実現しました。</p>
+<hr />
+<p><strong>materialdesign</strong>
+<em>20 Dec 2023 19:00:58</em></p>
+<p>さらに他にもいろいろな情報があります。</p>
+<hr />
+<p>これらの推文からデザイン業界での新しい動向が垣間見えます。SalesforceやMicrosoft、そしてMaterial Designなど、テクノロジー企業は新しいテクノロジーを取り入れつつ、使いやすく、より効率的なデザインを提供しようと努力しています。AIなどの先端技術を活用したデザインは、今後ますます重要になるでしょう。</p>
+        </div><br><a class="text-blue-500" href="/lang/ja_1432003348744470530">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

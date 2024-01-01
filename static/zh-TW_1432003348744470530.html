@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1432003348744470530">
+                <div class="font-bold">Design Teams</div>
+                <div class="text-gray-500">1432003348744470530</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>最新科技设计动态</h1>
+<h2>推特评论</h2>
+<h3>SalesforceUX</h3>
+<ul>
+<li>28 Dec 2023 18:07:01</li>
+<li><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1740434190347174281#m">链接</a></li>
+<li>
+<p>對 Experimented with a range of top AI tools to see how quickly they could get up to speed on tasks 和 various roles 的討論。領先科技成功實驗的 Itai Asseo 和他的團隊切磋了一系列頂級 AI 工具，以了解他們在任務上快速上手的速度。</p>
+</li>
+<li>
+<p>15 Dec 2023 21:23:06</p>
+</li>
+<li><a class="text-blue-500" href="http://x.com/pic/ext_tw_video_thumb%2F1735772475630239744%2Fpu%2Fimg%2FU7zwuPF9khOcdkdb.jpg">图片链接</a></li>
+<li>
+<p>關於 2030 年 AI 世界的反思問題</p>
+</li>
+<li>
+<p>13 Dec 2023 20:37:01</p>
+</li>
+<li><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1735036119937339594#m">链接</a></li>
+<li>
+<p>加入 Salesforce 專屬人才社群，提升你的設計技能和了解 2024 年新興設計趨勢</p>
+</li>
+<li>
+<p>19 Dec 2023 17:39:12</p>
+</li>
+<li><a class="text-blue-500" href="http://x.com/pic/card_img%2F1741730266383577088%2FaWiK3hdj%3Fformat%3Djpg%26name%3D800x419">图片链接</a></li>
+<li>回顧 Lyft Design Team 在 2023 年的成就和最難忘的時刻</li>
+</ul>
+<h3>MicrosoftDesign</h3>
+<ul>
+<li>22 Dec 2023 17:00:00</li>
+<li><a class="text-blue-500" href="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg">图片链接</a></li>
+<li>與 AI 藝術家合作，重現世界各地的節日記憶</li>
+</ul>
+<h3>materialdesign</h3>
+<ul>
+<li>20 Dec 2023 19:00:54</li>
+<li><a class="text-blue-500" href="http://x.com/pic/media%2FGB0DSamXMAA8j-M.jpg">图片链接</a></li>
+<li>推出更新主題體驗的 Material Theme Builder 2.0</li>
+<li>14 Dec 2023 17:00:00</li>
+<li><a class="text-blue-500" href="http://x.com/pic/media%2FGBUhQpLXYAAswIF.jpg">图片链接</a></li>
+<li>添加搜索到你的應用程式</li>
+<li>12 Dec 2023 17:00:01</li>
+<li><a class="text-blue-500" href="http://x.com/pic/media%2FGBKRvmFX0AYpY9S.jpg">图片链接</a></li>
+<li>Material 3 中的搜索功能</li>
+<li>12 Dec 2023 17:00:03</li>
+<li><a class="text-blue-500" href="http://goo.gle/3RzR715">链接</a></li>
+<li>了解更多關於搜索的資訊</li>
+</ul>
+<h3>FlutterDev</h3>
+<ul>
+<li>12 Dec 2023 21:00:00</li>
+<li><a class="text-blue-500" href="http://x.com/pic/media%2FGBKtSwuaMAAgrl9.jpg">图片链接</a></li>
+<li>在 Flutter 3.16 中，Material 3 現在已默認啟用</li>
+</ul>
+<h3>PinterestDesign</h3>
+<ul>
+<li>13 Dec 2023 14:53:22</li>
+<li><a class="text-blue-500" href="http://x.com/pic/ext_tw_video_thumb%2F1734946486876508160%2Fpu%2Fimg%2FW4RI2XLumy-mTPSt.jpg">图片链接</a></li>
+<li>酷廚潮流的探討</li>
+<li>13 Dec 2023 14:56:05</li>
+<li><a class="text-blue-500" href="http://x.com/pic/ext_tw_video_thumb%2F1734949708731211776%2Fpu%2Fimg%2FqHMAzYg-ukAGUQRi.jpg">图片链接</a></li>
+<li>珍珠潮流的討論</li>
+</ul>
+<h3>Razorpay_Design</h3>
+<ul>
+<li>14 Dec 2023 10:47:37</li>
+<li><a class="text-blue-500" href="http://x.com/pic/card_img%2F1740054423232008192%2FKMrXeFcq%3Fformat%3Djpg%26name%3D800x419">图片链接</a></li>
+<li>我們與 Figma 的第一個案例研究，這真是讓人興奮</li>
+</ul>
+<p>以上內容展示了一些最新的科技设计动态，包括人工智能在设计中的应用、新的设计趋势、Material 3 的更新等。这些推文呈现了科技设计领域的多样性和创新性，对设计师和科技爱好者来说都是非常有价值的资讯。</p>
+        </div><br><a class="text-blue-500" href="/lang/zh-TW_1432003348744470530">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

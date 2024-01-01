@@ -1,6 +1,9 @@
 import os,re
 from datetime import datetime,timedelta
 
+import openai
+from markdownify import markdownify as md
+
 import oracledb
 import pandas as pd
 import requests
@@ -13,8 +16,10 @@ from email.header import Header
 from markdown import markdown
 from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
+# openai v1.0.0+
+client = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'],base_url=os.environ['API_BASE_URL'])
 
-def sendEmail(message:str,receiver:str=os.environ['MAILTO'],subject:str=''):
+def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     '''
     发送邮件的方法
     :param message:
@@ -40,7 +45,7 @@ def sendEmail(message:str,receiver:str=os.environ['MAILTO'],subject:str=''):
     smtp.sendmail(sender, receiver, msg.as_string()) #发送
     smtp.quit() # 结束
 
-def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106',render=True):
+def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
     '''
     抓取目标推特AI总结并发邮件
     :param lang:
@@ -50,7 +55,6 @@ def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, mode
     :param render:
     :return:
     '''
-    info: str = os.environ['INFO']
     nitter:str = os.environ['NITTER']
     rss_url = f'https://{nitter}/i/lists/{twitter_user}/rss'
     print(rss_url)
@@ -76,19 +80,27 @@ def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, mode
                 oripost = session.get(matches[0]).text
                 quote = BeautifulSoup(oripost, 'html.parser').title.string.replace(" | nitter", '')
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
-    df['content'] = df['published'].str[len('Sun, '):-len(' GMT')] + '[' + df['author'] + ']' + '(' + df[
+    df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] + df['author'] + ']' + '(' + df[
         'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
     # df.to_csv('test.csv', index=False)
-    tweets = df['content'].to_csv().replace(nitter, 'x.com')[:length]
-    prompt =  "<tweets>{tweets}</tweets>\n以上是一些推，你是一名{lang}资深作者，请将以上推文汇编成一篇用markdown排版的{lang}文章，包含发推时间、作者(若有)、推特链接(若有)和推特内容以及你的解读和评论"
-    prompt =  prompt.format(tweets=tweets,lang=lang,info=info)
+    contents=[]
+    for tweet in df['content'].values:
+        if len(''.join(contents))<10000:
+            contents.append(tweet)
+        else:
+            break
+    tweets = '<br>'.join(contents).replace(nitter, 'x.com')
+    prompt =  "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior writer of {lang} blog. Please compile the above tweets into a {lang} article formatted in markdown, including the time of tweeting, author (if any), and Twitter link (if any). Yes) and Twitter content as well as your interpretation and comments"
+    prompt =  prompt.format(tweets=md(tweets).replace('\n\n','\n'),lang=lang)
     print('tweets:', prompt)
     result = completion(model=model, messages=[{"role": "user", "content": prompt, }],
-                                                       api_key=os.environ['OPENAI_API_KEY'],
-                                                       base_url=os.environ['API_BASE_URL'])["choices"][0]["message"][
+                        api_base=os.environ['API_BASE_URL'],
+                        api_key=os.environ['OPENAI_API_KEY'],
+    )["choices"][0]["message"][
         "content"]
     result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
-    sendEmail(result,receiver=mail)
+    if '@' in mail:
+        sendEmail(result,receiver=mail)
     return result
 
 def run():
@@ -98,8 +110,8 @@ def run():
     # Define the SQL query
     checkTime = datetime.utcnow() - timedelta(minutes=5)
     pushTime = datetime.utcnow() + timedelta(minutes=5)
-    # sql_query = "SELECT * FROM users WHERE expire_date >= :curdate AND mail_time <= :pushTime AND mail_time >= :checkTime"
-    # cursor.execute(sql_query,curdate=datetime.now(),pushTime=pushTime,checkTime=checkTime)
+    sql_query = "SELECT * FROM users WHERE expire_date >= :curdate AND mail_time <= :pushTime AND mail_time >= :checkTime"
+    cursor.execute(sql_query,curdate=datetime.now(),pushTime=pushTime,checkTime=checkTime)
     sql_query = "SELECT * FROM users WHERE expire_date >= :curdate"
     cursor.execute(sql_query,curdate=datetime.now())
     # Fetch all rows from the result set

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Principais Tweets do Ano Novo de 2024</h1>
+<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741766882464501977#m">01 Jan 2024 10:22:39 </a>: Este não é um gif, mas uma imagem estática.</p>
+<p>A ilusão óptica de movimento depende do rápido movimento dos olhos sobre o design para fazer o design girar, então se você se concentrar no centro da imagem, ele vai parar.</p>
+<p>[✏️ Vectordivider]</p>
+<p><img alt="" src="http://x.com/pic/media%2FGCv_tRGWwAEGQnX.jpg" />  </p>
+<p>Comentário: Rainmaker1973 compartilha uma imagem com uma ilusão de ótica interessante que pode enganar o cérebro e fazer o design parecer estar girando.</p>
+<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741766210260230591#m">01 Jan 2024 10:19:59</a>: Como as bolas de tênis são feitas  </p>
+<p><img alt="" src="http://x.com/pic/ext_tw_video_thumb%2F1741764926690275328%2Fpu%2Fimg%2FAjIpKNx9GFoNKINq.jpg" />  </p>
+<p>Comentário: Rainmaker1973 compartilha um vídeo mostrando o processo de fabricação das bolas de tênis, proporcionando uma visão interessante dos bastidores de um produto comum.</p>
+<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741752223988863451#m">01 Jan 2024 09:24:25</a>: Feliz ano novo!  </p>
+<p>Comentário: ArtirKel deseja a todos um feliz ano novo, compartilhando boas energias com seus seguidores.</p>
+<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741741011879989652#m">01 Jan 2024 08:39:51</a>: <a class="text-blue-500" href="http://x.com/search?q=%23Today">#Today</a> é o 223º aniversário da descoberta de Ceres, o primeiro asteroide encontrado em 1801: o número de asteroides observados no Sistema Solar interno e externo agora ultrapassa um milhão.</p>
+<p>Comentário: Rainmaker1973 celebra a descoberta histórica de Ceres e destaca a incrível quantidade de asteroides que agora são conhecidos, mostrando o vasto conhecimento que a humanidade adquiriu sobre o universo.</p>
+<p>Estes são apenas alguns dos tweets compartilhados no ano novo de 2024, mostrando uma variedade de conteúdos interessantes e desejos de felicitações. O Twitter continua sendo uma plataforma relevante para compartilhar informações e conectividade, independentemente das diferenças de fuso horário e geografia.</p>
+        </div><br><a class="text-blue-500" href="/lang/pt_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

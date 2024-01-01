@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
+                <div class="font-bold">Never Boring</div>
+                <div class="text-gray-500">1365676237558059010</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>最新のツイートまとめ</h1>
+<h2>28 Jul 2022 11:42:37 - @dickiebush</h2>
+<p>私は500人の伝説的な作家の執筆ルーチンを調査しました。</p>
+<p>結果は、すぐに書くことが簡単だとわかりました―毎日これら6つのことをすれば。</p>
+<h2>01 Jan 2024 08:34:52 - @AliAbdaal</h2>
+<p>「自分にできる」と信じることが、実際にそれを成し遂げる最初の一歩です。</p>
+<h2>01 Jan 2024 02:50:08 - @sweatystartup</h2>
+<p>多くの裕福な男性が、数日間ひどくなったときに家族を安全かつ食べ物を提供できないことに気づかされます。</p>
+<h2>31 Dec 2023 23:19:09 - @sweatystartup</h2>
+<p>ゲイリーはいい人だ！実際に彼と会ったことがある。</p>
+<h2>01 Jan 2024 01:36:42 - @dickiebush</h2>
+<p>どんなトピックにでも専門家になる最も早い方法は、非常に具体的になって、世界で唯一そのことについて話せるようになることです。</p>
+<h2>31 Dec 2023 11:36:34 - @dickiebush</h2>
+<p>1月のShip 30コホートに参加するのに残り15時間！</p>
+<h2>31 Dec 2023 22:12:45 - @josiahfitness</h2>
+<p>私は@dickiebush と@Nicolascole77 と一緒にコホートに参加することにしました。</p>
+<p>以上は最新の推文の一部です。それぞれの発信者からの貴重なメッセージが含まれており、人々にとって刺激的で価値のある情報となっています。これらのメッセージは日常生活や成功についての示唆に富んでおり、十分な研究と理解が必要です。</p>
+        </div><br><a class="text-blue-500" href="/lang/ja_1365676237558059010">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

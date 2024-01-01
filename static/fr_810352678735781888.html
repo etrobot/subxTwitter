@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPT Subscripton for Twitter List</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Dark theme styles */
+    body.dark {
+      background-color:#212129;
+      color: #ccc;
+    }
+    body.dark input{
+        color: #000;
+    }
+    @media (min-width: 768px) {
+        .subcard{
+            max-width:360px;
+        }
+        #parentContainer {
+            margin-left: 360px;
+        }
+        .sidebar{
+            position:fixed;
+        }
+    }
+    #title {
+        background: linear-gradient(to right, #4085f3, aqua);
+        -webkit-background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    </style>
+</head>
+<body class="bg-gray-100">
+<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-10">
+        <div class="flex w-full items-center space-x-2 ">
+            <div class="w-16 h-10 rounded overflow-hidden">
+                <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
+            </div>
+
+            <a class="text-sm w-full" href="https://twitter.com/i/lists/810352678735781888">
+                <div class="font-bold">Reading</div>
+                <div class="text-gray-500">810352678735781888</div>
+            </a>
+            <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
+        </div>
+        <div class="mt-2 text-sm">
+            <h1>Les derniers tweets intéressants du 01 janvier 2024</h1>
+<p><em>10:22:39 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741766882464501977#m">@Rainmaker1973</a></em><br />
+Ce n'est pas un gif, mais une image statique.<br />
+L'illusion d'optique en mouvement repose sur le fait que vous bougez rapidement les yeux sur le design pour le faire tourner, donc si vous concentrez sur le centre de l'image, il s'arrêtera. [✏️ Vectordivider]</p>
+<p>Ma réaction: L'illusion d'optique peut être très fascinante, et c'est intéressant de savoir comment elle fonctionne. C'est une belle démonstration de la manière dont notre cerveau peut être trompé par des images statiques.</p>
+<p><em>10:19:59 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741766210260230591#m">@Rainmaker1973</a></em><br />
+Comment sont fabriquées les balles de tennis</p>
+<p>Ma réaction: C'est toujours fascinant de voir le processus de fabrication d'objets du quotidien. Cela donne une nouvelle appréciation pour les choses que nous utilisons tous les jours.</p>
+<p><em>10:14:26 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741764814253297832#m">@Rainmaker1973</a></em><br />
+Cette photo montre une pie bleue courageuse essayant d'attaquer, ou peut-être juste de photobomber, un pygargue à tête blanche impérieux.</p>
+<p>Ma réaction: Les interactions entre les oiseaux sont toujours fascinantes à observer. C'est comme s'ils avaient leur propre monde et leurs propres règles.</p>
+<p><em>10:05:20 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741762524117164386#m">@Rainmaker1973</a></em><br />
+Un bison verse une larme dans cette vidéo capturée par le photographe Chris Henry dans le nord de l'Utah.</p>
+<p>Ma réaction: Les animaux peuvent exprimer des émotions d'une manière surprenante. Cette vidéo est à la fois touchante et intrigante.</p>
+<p><em>10:01:10 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741761472361832809#m">@Rainmaker1973</a></em><br />
+Les graines peuvent-elles vraiment germer à l'intérieur de vous ?</p>
+<p>Ma réaction: C'est une idée fausse commune, mais les graines ne peuvent pas germer à l'intérieur du corps humain en raison de l'absence de conditions de germination appropriées.</p>
+<p><em>08:38:32 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741740678709690734#m">@Rainmaker1973</a></em><br />
+Né <a class="text-blue-500" href="http://x.com/search?q=%23Today">#Today</a> en 1894, Satyendra Nath Bose était mathématicien et physicien.</p>
+<p>Ma réaction: Satyendra Nath Bose était un scientifique remarquable qui a apporté d'importantes contributions à la physique quantique, et il mérite d'être célébré pour son travail.</p>
+<p><em>07:53:34 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741729364008411395#m">@Rainmaker1973</a></em><br />
+Les îles de la ligne (partie du Kiribati), Samoa et Tonga, dans l'océan Pacifique, sont les premiers endroits à accueillir la Nouvelle Année, tandis que Samoa américaines, l'île de Baker et l'île de Howland sont parmi les dernières.</p>
+<p>Ma réaction: C'est fascinant de voir comment différentes cultures et régions marquent le passage du temps et célèbrent le début de la nouvelle année.</p>
+<p>Ces tweets offrent un aperçu fascinant de différents sujets, allant de la science au monde animal en passant par la culture et la technologie. Ils nous montrent la diversité et la richesse du contenu disponible sur les réseaux sociaux.</p>
+        </div><br><a class="text-blue-500" href="/lang/fr_810352678735781888">more</a>
+    </div>
+<script>
+    var themeToggle = document.getElementById("theme-toggle");
+    var body = document.body;
+
+    // 检测浏览器或系统是否处于深色主题模式
+    function isDarkTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // 浏览器或系统处于深色主题模式
+        return true;
+      } else {
+        // 浏览器或系统处于浅色主题模式
+        return false;
+      }
+    }
+
+    // Toggle theme function
+    themeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark");
+      if (body.classList.contains("dark")) {
+        themeToggle.textContent = "☀";
+      } else {
+        themeToggle.textContent = "️🌒";
+      }
+    });
+
+    // 根据系统主题模式切换初始主题
+    if (isDarkTheme()) {
+      body.classList.add("dark");
+      themeToggle.textContent = "☀";
+    } else {
+      body.classList.remove("dark");
+      themeToggle.textContent = "️🌒";
+    }
+</script></body>

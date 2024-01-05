@@ -35,9 +35,9 @@ replace_str = '''<a href="/lang/zh-CN" class="border-b-2 mr-2">简体中文</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
 '''
 
-target_str= '''static/'''
+target_str= '''<img alt="'''
 
-replace_str = '''/static/'''
+replace_str = '''<img class="max-w-xs m-2" alt="'''
 
 # 遍历static目录下的所有文件
 static_dir = 'static'

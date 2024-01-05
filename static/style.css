@@ -1,0 +1,28 @@
+/* Dark theme styles */
+body.dark {
+  background-color: #212129;
+  color: #ccc;
+}
+
+body.dark input {
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .subcard {
+    max-width: 360px;
+  }
+  #parentContainer {
+    margin-left: 360px;
+  }
+  .sidebar {
+    position: fixed;
+  }
+}
+
+#title {
+  background: linear-gradient(to right, #4085f3, aqua);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}

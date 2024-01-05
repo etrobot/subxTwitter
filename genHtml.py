@@ -9,14 +9,14 @@ lists=[
     {'id': '810352678735781888', 'name': 'Reading', 'headPicId': 'https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360'}
 ]
 langs = {
-    # 'zh-CN': '简体中文',
-    # 'zh-TW': '繁體中文',
-    # 'en': 'English',
-    # 'ja': '日本語',
-    # 'ko': '한국어',
-    # 'es': 'Español',
-    # 'pt': 'Português',
-    # 'de': 'Deutsch',
+    'zh-CN': '简体中文',
+    'zh-TW': '繁體中文',
+    'en': 'English',
+    'ja': '日本語',
+    'ko': '한국어',
+    'es': 'Español',
+    'pt': 'Português',
+    'de': 'Deutsch',
     'fr': 'Français',
     'ar': 'العربية',
     'id': 'Bahasa Indonesia',
@@ -54,73 +54,13 @@ htmlHead='''<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-    </style>
+   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body class="bg-gray-100">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
 '''
 
-htmlTail='''<script>
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-</script></body>
+htmlTail='''<script src="/static/index.js"></script></body>
 '''
 
 def output():
@@ -130,7 +70,7 @@ def output():
         for li in lists:
             htmlstr = sumTweets(li['id'],'',lang)
             atriclePath='<a href="/lang/{p}">more</a>'.format(p=l + '_' + li['id'])
-            dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId']).replace("{{path}}",atriclePath).replace('<a href','<a class="text-blue-400" href')
+            dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId']).replace("{{path}}",atriclePath).replace('<a href','<a class="text-blue-400" href').replace('<img alt="','<img class="max-w-xs m-2" alt="')
             with open('static/%s.html' % (l + '_' + li['id']), 'w') as f:
                f.write(htmlHead+dom.replace('max-w-md ','').replace(' overflow-hidden h-60','').replace(atriclePath,'<a href="/lang/{p}">{p}</a>'.format(p=l))+htmlTail)
             doms.append(dom)

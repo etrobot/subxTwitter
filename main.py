@@ -90,7 +90,7 @@ def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, mode
         else:
             break
     tweets = '<br>'.join(contents).replace(nitter, 'x.com').replace('x.com/pic',nitter+'/pic')
-    prompt =  "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior writer of {lang} blog. Please compile the above tweets into a {lang} article formatted in markdown, including the time of tweeting, author (if any), and Twitter link (if any). Yes) and Twitter content as well as your interpretation and comments"
+    prompt =  "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior writer of {lang} blog. Please compile the above tweets into a {lang} article formatted in markdown, including the time of tweeting, author (if any), and Twitter link (if any). Yes) and Twitter content as well as your interpretation and comments, need splitting lines"
     prompt =  prompt.format(tweets=md(tweets).replace('\n\n','\n').replace('\_','_'),lang=lang)
     print('tweets:', prompt)
     result = completion(model=model, messages=[{"role": "user", "content": prompt}],

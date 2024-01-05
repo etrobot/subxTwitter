@@ -5,38 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-
-    </style>
+<link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
 <div class="sidebar w-full max-w-sm items-center">
     <div>
@@ -62,12 +34,11 @@
         <a href="/lang/vi" class="border-b-2 mr-2">Tiếng Việt</a>
         <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
-
     </p>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
     
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -80,25 +51,59 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Ang Mga Tweet ng Bagong Taon</h1>
-<p><a class="text-blue-500" href="http://x.com/gdb/status/1741718045007999222#m">01 Jan 2024 07:08:36@gdb</a>: Ang kasalukuyang kalagayan: NYE coding marathon kasama sina <a class="text-blue-500" href="http://x.com/badphilosopher" title="Matt Brockman">@badphilosopher</a> at <a class="text-blue-500" href="http://x.com/theannabrockman" title="A">@theannabrockman</a>. Pinakarelaks na bahagi ng taon.</p>
-<p>Nakakatuwa na ang mga tao ay nagpasya na magtrabaho kasama ang mga mahal sa buhay nila ngayong Bagong Taon. Buhay ng isang developer pero with love and family.</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741708146530226285#m">01 Jan 2024 06:29:16@ylecun</a>: Sa maliit lamang na bilang ng mga may-akda ng libro ang kumikita ng malaki mula sa mga benta ng libro.</p>
-<p>Ang tweet na ito ay isang totoong katotohanan sa industriya ng pag-aakda. Maraming manunulat ang hindi kumikita ng malaki mula sa kanilang mga libro kaya't mahalaga rin na magkaroon sila ng ibang pagkakakitaan.</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741700991366443437#m">01 Jan 2024 06:00:50@ylecun</a>: Mas mabuting access sa kaalaman ay ...</p>
-<p>Tulad ng tweet na ito, napakahalaga ng pagkakaroon ng magandang access sa kaalaman upang mapaunlad ang sarili at ang lipunan.</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741695807366086886#m">01 Jan 2024 05:40:14@ylecun</a>: Sino ang mag-aakalang ang kape ay sumisira sa lipunan 😨☕</p>
-<p>Tila ang tweet na ito ay may halong biro at pagtataka patungkol sa kape. Isa itong paalala na kahit ang simpleng bagay ay maaaring magkaroon ng malalim na epekto sa lipunan.</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741690025576726990#m">01 Jan 2024 05:17:15@ylecun</a>: Maligayang Bagong Taon na Walang Kababalaghan 🍾🥂</p>
-<p>Sa panahon ng maraming alamat at kasaysayan, mahalaga pa rin ang magkaroon ng positibong pananaw sa darating na taon.</p>
-<p><a class="text-blue-500" href="http://x.com/jerryjliu0/status/1741629147452153958#m">01 Jan 2024 01:15:21@jerryjliu0</a>: Sa 2024, gawin nating hindi na hack ang RAG.</p>
-<p>Ang pag-usad at pagpapabuti ng teknolohiya ay isang mahalagang hakbang upang mapabuti ang ating mga kasalukuyang gamit na teknolohiya. 
-Ang mga tweet na ito ay nagpapakita ng iba't ibang usapan at usapin ng mga tao sa social media pagdating sa teknolohiya, kaalaman at pananaw sa buhay.  Ang social media ay isang magandang platform upang maipahayag ang sariling opinyon at palitan ng mga ideya.</p>
-        </div><br><a class="text-blue-500" href="/lang/tl_1733652180576686386">more</a>
+            <h1>Mga Pinakabagong Balita sa Teknolohiya</h1>
+<h2>04 Jan 2024 23:58:13 - @PessimistsArc</h2>
+<p>Hmmm <a class="text-blue-400" href="https://newart.press/p/photocopiers-terrified-the-publishing">newart.press/p/photocopiers-…</a></p>
+<h2>05 Jan 2024 05:08:17 - @hwchase17</h2>
+<p>Imo with some clever state management and promoting this is doable  </p>
+<h2>05 Jan 2024 03:25:55 - @RisingSayak</h2>
+<p>aMUSEd's small size opens up doors to local hacking.   </p>
+<p><img alt="Link to image" src="http://x.com/pic/ext_tw_video_thumb%2F1743111391803047936%2Fpu%2Fimg%2FIGTqr-vQuk8xWy7_.jpg" /></p>
+<h2>05 Jan 2024 03:40:06 - @gdb</h2>
+<p>Personal energy management is as important as any technical skill.</p>
+<h2>05 Jan 2024 02:20:10 - @sama</h2>
+<p>“i’m on a 34-year bulk” -<a class="text-blue-400" href="http://x.com/jaltma" title="Jack Altman">@jaltma</a> eating a cupcake and piece of cake at the same time</p>
+<p><img alt="Link to image" src="http://x.com/pic/media%2FGDC3q0DaUAAKhot.jpg" /></p>
+<h2>05 Jan 2024 01:49:32 - @jerryjliu0</h2>
+<p>A good way to make RAG less hacky: take steps to ensure your context isn't getting arbitrarily split up.</p>
+<h2>05 Jan 2024 01:22:46 - @lateinteraction</h2>
+<p>Thanks for the incredible work and speedy release, <a class="text-blue-400" href="http://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> !  </p>
+<h2>05 Jan 2024 01:24:39 - @lateinteraction</h2>
+<p>Thanks for the incredible work and speedy release, <a class="text-blue-400" href="http://x.com/hwchase17" title="Harrison Chase">@hwchase17</a>!</p>
+<h2>05 Jan 2024 01:20:50 - @sama</h2>
+<p>muslim and arab (especially palestinian) colleagues in the tech community i've spoken with feel uncomfortable</p>
+<h2>04 Jan 2024 22:14:18 - @austinbv</h2>
+<p>Just finished a Tutorial on how I built a RAG with <a class="text-blue-400" href="http://x.com/LangChainAI" title="LangChain">@LangChainAI</a> to help me create YouTube descriptions, titles and more.</p>
+<p><img alt="Link to image" src="http://x.com/pic/card_img%2F1742984293192753152%2F_DfW0lDu%3Fformat%3Djpg%26name%3D800x320_1" /></p>
+<h2>05 Jan 2024 01:06:55 - @llama_index</h2>
+<p>RAGatouille (<a class="text-blue-400" href="http://x.com/bclavie" title="Benjamin Clavié">@bclavie</a>) is an awesome way to easily use ColBERT, a more advanced retrieval model compared to dense embedding-based retrieval techniques.</p>
+<p><img alt="Link to image" src="http://x.com/pic/media%2FGDCmqKuaoAAOLPR.png" /></p>
+<h2>05 Jan 2024 01:11:18 - @jerryjliu0</h2>
+<p>Everyone building RAG uses dense embedding retrieval, but simply doing cosine distance doesn’t always capture fine-grained similarity.</p>
+<p><img alt="Link to image" src="http://x.com/pic/media%2FGDCnOgZbMAABpkM.jpg" /></p>
+<h2>04 Jan 2024 23:00:29 - @llama_index</h2>
+<p>If you want to build a retrieval-augmented chatbot that can preserve contiguous document/code blocks instead of having them chunked up in awkward sections 📑✂️, check out this advanced RAG cookbook in the <a class="text-blue-400" href="http://x.com/NVIDIA" title="NVIDIA">@NVIDIA</a> Generative AI Examples repo!</p>
+<p><img alt="Link to image" src="http://x.com/pic/media%2FGDCJ4I1aIAAcqsy.jpg" /></p>
+<h2>05 Jan 2024 00:41:37 - @hwchase17</h2>
+<p>This is a really good video!</p>
+<p><a class="text-blue-400" href="http://x.com/LangChainAI/status/1743070051991998842#m">Link to tweet</a></p>
+<h2>05 Jan 2024 00:40:59 - @LangChainAI</h2>
+<p>🦜🏗️Building an OpenAI Custom RAG with LangChain: 📹The Ultimate Tutorial to Chat with your Videos!📹</p>
+<p><img alt="Link to image" src="http://x.com/pic/card_img%2F1742984293192753152%2F_DfW0lDu%3Fformat%3Djpg%26name%3D800x320_1" /></p>
+<h2>05 Jan 2024 00:14:29 - @Gradio</h2>
+<p>Announcing 𝚐𝚛𝚊𝚍𝚒𝚘 𝟺.𝟷𝟹 🚀🚀</p>
+<p><img alt="Link to image" src="http://x.com/pic/media%2FGDCay_yawAAJrXC.jpg" /></p>
+<h2>04 Jan 2024 21:52:32 - @osanseviero</h2>
+<p>AI Tube - discover dozens of ML-generated videos  </p>
+<p><img alt="Link to image" src="http://x.com/pic/media%2FGDB5p4LWwAAC66M.jpg" /></p>
+<p>Ang ito ay isang koleksyon ng mga balita sa teknolohiya mula sa mga kagawaran ng AI at karagdagang impormasyon sa teknolohiya.</p>
+<p>Ang bawat tweet ay nagbibigay ng isang ideya o opinyon mula sa mga pumipili ng teknolohiya. Binibigyang-diin sa mga naka-post ang mga dokumento at ang kanilang halaga sa komunidad ng teknolohiya.</p>
+<p>Nangangahulugan lamang na ang Teknolohiya ay patuloy na umaakyat at naghahatid ng mga bagong kakayahan sa bawat aspeto ng ating buhay. Ang mga materyales na ito ay isang magandang paraan upang mapalawak ang ating kaalaman sa bagong teknolohiyang makakatulong sa tin sa hinaharap. Sana ay patuloy nating abangan ang mga bagong pagbabago sa ating mundong kompyuterisasyon.</p>
+        </div><br><a class="text-blue-400" href="/lang/tl_1733652180576686386">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -111,28 +116,35 @@ Ang mga tweet na ito ay nagpapakita ng iba't ibang usapan at usapin ng mga tao s
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Mga Pahayag ng Social Media: Mga Inspirasyon at Pagpapakita ng Kakaibang Pananaw</h1>
-<p>Isang pahayag mula kay ShaneAParrish noong Enero 1, 2024: Mahirap maunawaan kung gaano kahalaga ang pag-iwas sa karaniwang paraan ng pagkabigo upang mapalakas ang tsansa ng tagumpay.</p>
-<p>Isang pahayag mula kay dickiebush noong Hulyo 28, 2022: Ako'y nag-aral ng mga gawi sa pagsusulat ng 500 mga kilalang manunulat.</p>
-<p>Isang pahayag mula kay AliAbdaal noong Enero 1, 2024: Ang paniniwala na kaya mo gawin ang isang bagay ay unang hakbang na kailangan para sa pagiging kayang gawin ito.</p>
-<p>Sa ilalim ng tweet, sinundan niya ito ng isang papuring sa kanyang libro, Feel-Good Productivity.</p>
-<p>Mga Pahayag mula kay sweatystartup noong Enero 1, 2024: Maraming mayayamang tao ang hindi makakapagbigay ng kaligtasan at mga pangangailangan ng pamilya sa loob ng 72 oras kung sakaling mawawalan ng kuryente, tubig, o signal ng cellphone sa kanilang lugar.</p>
-<p>Isa pang pahayag niya: Ang pagyabang ng mga tao sa NYC na nakatagal sa bagyong Sandy ay katuwa-tuwa.</p>
-<p>Mga Pahayag mula kay dickiebush noong December 31, 2023: 15 oras na lang para sumakay sa January Ship 30 cohort! Sinundan niya ito ng larawan ng kanyang tweet na nagpapatunay ng kanilang programa.</p>
-<p>At dito nagtapos ang kanyang tweet na may tweet mula sa nakaraan na nagpapakita ng kanyang kasiyahan sa naging pagtanggap sa kanilang programa.</p>
-<p>Mga Pahayag mula kay jackbutcher noong Enero 1, 2024: Pumasa sa set 031. Sinundan niya ito ng larawan ng kanyang likha.</p>
-<p>Isang pahayag mula kay SahilBloom noong December 30, 2023: Ang mga pinakamahusay na ideya sa 2023. Sinundan niya ito ng kanyang tweet na nagpapakita ng mga ideya.</p>
-<p>Isang pahayag mula kay josiahfitness noong December 31, 2023: Nagpasya akong sumali sa cohort ni dickiebush at Nicolascole77.</p>
-<p>Isang pahayag mula kay SahilBloom noong December 31, 2023: Sinulat ko ang liham na ito para sa aking sarili 10 taon na ang nakalilipas bago ako grumadweyt.</p>
-<p>Mga Pahayag mula kay sweatystartup noong December 31, 2023: Nagpakita ng larawan ng babae sa isang partey.</p>
-<p>Isang pahayag mula kay packyM noong December 31, 2023: Ang larawan na ito ay nagsasabing magiging kahanga-hanga ang 2024.</p>
-<p>At marami pang iba.</p>
-<p><em>Ang mga tweet na ito ay nagpapakita ng iba't ibang pananaw, inspirasyon, at kaguluhan sa social media. Ito ay isang repleksyon ng kung paano naiiba ang bawat indibidwal at kung paano sila nabibigyan ng boses sa online na espasyo. Patuloy nilang pinapakita ang kanilang kakaibang pananaw sa mga bagay-bagay, nagbibigay inspirasyon, at nagpapakita ng kanilang mga likha at nararanasan. Ang social media ay isang lugar kung saan maaari nating masilayan ang iba't ibang perspektibo at karanasan ng tao.</em></p>
-        </div><br><a class="text-blue-500" href="/lang/tl_1365676237558059010">more</a>
+            <h2>Filipino Article</h2>
+<h3>Pagpaplano ng Mga Tweets</h3>
+<p>Ang iba't ibang mga tao mula sa iba't ibang larangan ay patuloy na nagbibigay ng kanilang mga opinyon at impormasyon sa pamamagitan ng Twitter. Narito ang ilang mga tweets mula sa iba't ibang indibidwal na nagpapahayag ng kanilang mga saloobin at karanasan.</p>
+<p><a class="text-blue-400" href="http://x.com/mkobach/status/1743118275964174823#m">05 Jan 2024 03:52:37 @mkobach</a>: Nagtatanong si @mkobach kung ang mga kabataan pa ba ay kumakausap sa telepono? Noong siya ay 14 anyos, ginugol niya ang maraming oras sa telepono.  </p>
+<blockquote>
+<p>Isa itong mahalagang tanong tungkol sa pagbabago ng paraan ng pakikipagkomunikasyon ng kabataan sa kasalukuyan. Siguro ay dapat na rin nating isaalang-alang ang implikasyon nito sa kanilang pakikipag-ugnayan at pakikipag-kapwa.</p>
+</blockquote>
+<p><a class="text-blue-400" href="http://x.com/mkobach/status/1743111519494115564#m">05 Jan 2024 03:25:46 @mkobach</a>: Isang dating guro ay nagtatanong kung ilan sa mga peer-reviewed na akda ay may mga kaso ng plagiarism.  </p>
+<blockquote>
+<p>Isang napakahirap na isyu na dapat pagtuunan ng pansin, at hindi lamang sa akademya kundi maging sa iba't ibang larangan ng pagsusulat at literatura.</p>
+</blockquote>
+<p><a class="text-blue-400" href="http://x.com/sweatystartup/status/1743098623393505519#m">05 Jan 2024 02:34:31 @sweatystartup</a>: Bakit hindi ko magawang mag-check in sa isang hotel mula sa aking telepono at agad na lumakad patungo sa aking kuwarto?  </p>
+<blockquote>
+<p>Isang makabago at kapani-paniwala namang idea na posibleng mapagtuunan ng pansin ng mga establisimyento ngayon.</p>
+</blockquote>
+<p><a class="text-blue-400" href="http://x.com/BoredOpepen/status/1743060916416229520#m">05 Jan 2024 00:04:41 @BoredOpepen</a>: Orange is the new black.</p>
+<blockquote>
+<p>Isang simpleng pahayag na tila may kahulugang di-literal. Maaaring may iba pa itong konteksto na dapat pang alamin.</p>
+</blockquote>
+<p><a class="text-blue-400" href="http://x.com/anuatluru/status/1743028467241791933#m">04 Jan 2024 21:55:45 @anuatluru</a>: Kung ikaw ay ambisyoso ngunit hindi nakapalibot sa mga taong katulad mo, ang pinaka-importante ay simulan mo ang pagbabahagi ng iyong mga saloobin online kung saan naroon ang mga taong katulad mo.</p>
+<blockquote>
+<p>Isang payo na maaaring makatulong sa mga taong naghahanap ng ugnayan at pagkakakilanlan sa kanilang larangan.</p>
+</blockquote>
+<p>Sa mga tweets na ito, malinaw na nakikita ang pagbabago ng lipunan at paraan ng pakikipag-ugnayan ng tao. Mas madaling makapagpahayag ng kanyang saloobin at makakuha ng impormasyon sa pamamagitan ng social media platform tulad ng Twitter. Subalit, patuloy pa rin ang mga isyu at mga katanungan na dapat nating pagtuunan ng pansin bilang mga mamamahayag at mamamayan.</p>
+        </div><br><a class="text-blue-400" href="/lang/tl_1365676237558059010">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -145,54 +157,47 @@ Ang mga tweet na ito ay nagpapakita ng iba't ibang usapan at usapin ng mga tao s
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Mga TWEET NG IBA'T IBANG TAO</h1>
-<p><strong>01 Jan 2024 08:11:08 - Ishikawa_Sachi</strong>
-🚨🚨🚨Ito ang iyong paalala na laging tayong dapat mayroong EMERGENCY KIT READY🚨🚨🚨
-Huwag mo itong ipagpaliban para sa bukas.
-Hindi mo malalaman kung kailan ka hahagupitin.</p>
-<p><em>Ang tweet na ito ay nagbibigay-diin sa kahalagahan ng paghahanda sa anumang sakuna o kalamidad. Mahalaga na laging handa tayo at mayroong emergency kit na maaaring magligtas ng ating buhay.</em></p>
-<p><strong>01 Jan 2024 09:31:06 - Ishikawa_Sachi</strong>
-Nakakaiyak na makita ang ilang Japanese twitter accounts na nagbabahagi ng kanilang address at humihiling ng tulong… Hindi ko mapigilang umiyak. Sana makarating na agad. Sana. Sana ligtas silang lahat. Sana.</p>
-<p><em>Ang tweet na ito ay nagpapakita ng emosyon ng kawalan at takot dahil sa mga sakuna. Ipinapakita nito ang pangangailangan ng tulong at pang-unawa sa oras ng pangangailangan.</em></p>
-<p><strong>01 Jan 2024 09:47:44 - UnseenJapanSite</strong>
-NERV, isa sa pinakapinagkakatiwalaang pinagmulan ng live earthquake/disaster information sa Japanese web, ay limitado ang API sa website na ito. Isa itong malaking isyu sa modernong bersyon ng X (dating Twitter) na maaaring magdulot ng panganib sa mga tao.</p>
-<p><em>Ang tweet na ito ay nagpapakita ng pangangailangan ng tama at sapat na impormasyon sa oras ng kalamidad. Mahalaga na ang mga mapagkakatiwalaang pinagkukunan ay hindi limitado ng anumang teknikal na hadlang.</em></p>
-<p><strong>01 Jan 2024 08:38:39 - lopp</strong>
-Nalalaman mo ba na ang US Government ay nagsanla at ibinenta ang mahigit 185,000 BTC mula 2014? Tingnan kung gaano sila ka ginhawa kung sila ay nagdesisyong HODL: jlopp.github.io/us-marshals-bitcoin-auctions/</p>
-<p><em>Ang tweet na ito ay nagbibigay ng impormasyon tungkol sa di-kapani-paniwalang dami ng Bitcoin na ibinenta ng US Government. Ipinapakita nito kung paano maaaring maging epektibo ang pagiging may balakang sa panahon ng mababagong teknolohiya.</em></p>
-<p><strong>01 Jan 2024 06:28:20 - WhalePanda</strong>
-Maligayang Bagong Taon sa lahat.</p>
-<p><em>Ang tweet na ito ay simpleng pagbati ng Maligayang Bagong Taon mula sa may-ari ng account.</em></p>
-<p><strong>01 Jan 2024 04:51:32 - TuurDemeester</strong>
-Maligayang Bagong Taon sa lahat! Lubos akong nagpapasalamat sa mga nakakabighani at makabuluhang progreso na ating nararating sa pagsulong ng Katotohanan sa Mundo. Ang Bitcoin Moon ay patuloy na umaahon at ang Lighthouse of Liberty ay nagpaparating ng liwanag sa dilim na gabi, mas malayo kaysa kailanman. Hindi ako makapaniwala sa kasabayang pasasalamat para sa 2024. 🙏😊✌️</p>
-<p><em>Ang tweet na ito ay nagpapakita ng positibong pananaw sa hinaharap at pagpapahalaga sa pag-unlad ng teknolohiya at katotohanan sa lipunan. Ipinapakita nito ang pag-asa at determinasyon para sa susunod na taon.</em></p>
-<p><strong>01 Jan 2024 04:15:36 - lopp</strong>
-Ang mga inhinyero ng Casa ay nagsubok ng performance ng 3 popular Electrum server implementations. Narito kung ano ang kanilang natuklasan. #repost blog.keys.casa/electrum-server-performance-report-2022/</p>
-<p><em>Ang tweet na ito ay nagbabahagi ng teknikal na impormasyon tungkol sa pagsubok ng performance ng server implementation. Ipinapakita nito ang kontribusyon ng mga inhinyero sa pagpapaunlad at pagsasaliksik ng teknolohiya.</em></p>
-<p><strong>01 Jan 2024 00:07:15 - csuwildcat</strong>
-Ako ay nabakunahan, ito ay kinakailangan ng aking employer sa oras na iyon. Dapat sana ay makarinig tayo ng libo-libong paghingi ng tawad mula sa mga taong nagde-demonize ng iba para sa kanilang personal na medical choice na walang epekto sa iba. Hindi ako titigil sa pagsasabi nito hanggang sa makita ko ang pangwakas na pagbabayad-pinsala.</p>
-<p><em>Ang tweet na ito ay nagpapakita ng personal na opinyon at pangangailangan ng pag-unawa at pagpapahalaga sa personal na karapatan at desisyon ng bawat isa.</em></p>
-<p><strong>31 Dec 2023 13:44:36 - saylor</strong>
-Ngayong taon, ang Bitcoin ay nagbigay ng kapangyarihan sa MicroStrategy. 🚀</p>
-<p><em>Ang tweet na ito ay nagpapakita ng tagumpay at kapangyarihan ng Bitcoin sa mundo ng negosyo at teknolohiya.</em></p>
-<p><strong>01 Jan 2024 01:54:03 - nvk</strong>
-Ito ang sandali kung kailan siya ay nagiging radikal laban sa mga tao.</p>
-<p><em>Ang tweet na ito ay nagpapakita ng emosyon at reaksyon ng isang tao sa isang pangyayari. Ipinapakita nito ang personal na damdamin ng isang tao sa kanyang paligid.</em></p>
-<p><strong>01 Jan 2024 01:23:13 - lopp</strong>
-Ric ay papadala sa Gary Gensler gulag in 3... 2...</p>
-<p><em>Ang tweet na ito ay nagbibigay ng personal na opinyon at reaksyon sa isang pangyayari. Ipinapakita nito ang komentaryo ng isang indibidwal sa isang kontrobersyal na isyu.</em></p>
-<p><strong>01 Jan 2024 00:46:28 - Excellion</strong>
-Maligayang 2024 sa lahat ng mga Bitcoiners! 🎉 </p>
-<p><em>Ang tweet na ito ay simpleng pagbati ng Maligayang Bagong Taon mula sa may-ari ng account.</em></p>
-<p><strong>01 Jan 2024 00:24:28 - jimmysong</strong>
-Altcoin Redux  </p>
-<p><em>Ang tweet na ito ay nagpapakita ng interes sa Altcoin, isang alternatibong cryptocurrency sa Bitcoin. Ipinapakita nito ang pananaw ng isang tao sa iba't ibang klase ng cryptocurrency.</em></p>
-<p>Sa aking opinyon, ang mga tweets na ito ay nagpapakita ng iba't ibang emosyon at reaksyon ng mga tao sa mga pangyayari sa kanilang paligid. Ito ay nagpapakita ng kahalagahan ng kaligtasan, teknolohiya, seksyon ng negosyo, at personal na pananaw sa mga isyu ng lipunan. Ito ay isang malaking halimbawa ng kung paano ang social media ay maaaring maging plataporma para sa iba't ibang opinyon at damdamin ng mga tao. Ang pagiging responsible at aware sa mga impormasyon at pangyayari sa ating paligid ay mahalaga upang maging handa at maunawaan ang iba't ibang pananaw at opinyon ng mga tao.</p>
-        </div><br><a class="text-blue-500" href="/lang/tl_967467772341923840">more</a>
+            <h1>Mga Tweets ng Bitcoin Wallet na Aqua</h1>
+<p><a class="text-blue-400" href="http://x.com/TuqueCan/status/1743097344097223058#m">05 Jan 2024 02:29:26</a> - @TuqueCan: Ano ang tawag doon sa kandila? 🤔…oh ang Omega candle ay magpe-prints ng maraming beses sa mga chart! Katulad ng inaasahan ni Samson Mow!!! <a class="text-blue-400" href="http://x.com/Excellion" title="Samson Mow">@Excellion</a> 🟢🟢🟢🟢🚀</p>
+<p><a class="text-blue-400" href="http://x.com/Teoyaomiquu/status/1743099831491420376#m">05 Jan 2024 02:39:19</a> - @Teoyaomiquu: Alam ko na marami sa aking mga tagasunod ay hindi sumusuporta sa anumang mga kandidato ng republikano. Pero mangyaring suportahan ang tweet sa ibaba, hindi natin kayang mawala ang Ukraine. Naniniwala ako na ang karaniwang mga botante ng republikano ay sumusuporta sa mga Ukrainians na itinatanggol ang kanilang kalayaan sa kanilang laban para sa kanilang pag-iral.</p>
+<p><a class="text-blue-400" href="http://x.com/NikkiHaley/status/1743095108474470638#m">x.com/NikkiHaley/status/1743095108474470638#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/notgrubles/status/1743058862469427639#m">04 Jan 2024 23:56:31</a> - @notgrubles: Ang Lightning sa Liquid ay nangangahulugan ng privacy *at* auditability.</p>
+<p><a class="text-blue-400" href="http://x.com/notgrubles/status/1743127896112205868#m">05 Jan 2024 04:30:50</a> - @notgrubles: Bilang isang wizard, aking pinuri ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a>. 🪄💧</p>
+<p><a class="text-blue-400" href="http://x.com/21milinfinity/status/1742821018048385335#m">04 Jan 2024 08:11:25</a> - @21milinfinity: Baka ako'y napakamangmang dito, pero ano ang mangyayari sa mga ETF ng <a class="text-blue-400" href="http://x.com/search?q=%23bitcoin">#bitcoin</a> kapag ang mga palitan ay naubos at kailangang bumili ng bagong btc mula sa mga minero? Ano ang mangyayari kung ang mga minero ay magpasya na hindi magbenta sa mga pondo habang ang mga plebs ay nagho-hodl sa isang mas kakaibang rate? Anong klase ng bagabag ang sumusunod pagkatapos?</p>
+<p><a class="text-blue-400" href="http://x.com/CosmoCrixter/status/1742851511728632113#m">04 Jan 2024 10:12:35</a> - @CosmoCrixter: Parang nakakuha tayo ng pangalawang Pasko sa bagong <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> Wallet. Sobrang saya ko sa pagsusuri nito! Salamat sa buong team! 🎄 🎄!!</p>
+<p><a class="text-blue-400" href="http://x.com/AThrouvalas/status/1742888247930376452#m">04 Jan 2024 12:38:34</a> - @AThrouvalas: Ito ang paraan. Ginagawang walang halong kahirapan ng mga <a class="text-blue-400" href="http://x.com/search?q=%23Bitcoin">#Bitcoin</a> swaps sa pagitan ng layer 2 at layer 1 ang tanging paraan para sa mga hindi pamilyar sa teknolohiya tulad ko na makapasok sa BTC bilang isang transaksyunal na pera.</p>
+<p><a class="text-blue-400" href="http://x.com/BTCsessions/status/1742653099737784496#m">x.com/BTCsessions/status/1742653099737784496#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/SatoshiWasRight/status/1742854241243263202#m">04 Jan 2024 10:23:26</a> - @SatoshiWasRight: Honestong iniibig ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a></p>
+<p><a class="text-blue-400" href="http://x.com/AlekceiKozlov/status/1742931795610661025#m">04 Jan 2024 15:31:36</a> - @AlekceiKozlov: Ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> wallet ay talagang isang bagong pagsusunog, kahit pahanggang sa makita na darating.   </p>
+<p><a class="text-blue-400" href="http://x.com/Liquid_BTC/status/1742962986103275905#m">04 Jan 2024 17:35:33</a> - @Liquid_BTC: 🎉 Nagdiriwang ng Bitcoin Genesis Day kasama ang pinakahihintay na launch: Ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> wallet ay narito na!   </p>
+<p><a class="text-blue-400" href="http://x.com/bvanhool/status/1742986686848704603#m">04 Jan 2024 19:09:43</a> - @bvanhool: Ngayong ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> ay narito, napansin mo na mayroon tayong isang pamilihan sa app, kung saan maaari nating idagdag ang mga serbisyo ng bitcoin mula sa ikatlong partido.  </p>
+<p><a class="text-blue-400" href="http://x.com/21milinfinity/status/1742847377814569438#m">04 Jan 2024 09:56:10</a> - @21milinfinity: Mukhang napakaganda ng Aqua wallet. Hindi ko na maantay na gamitin ito para magtransak bukas.</p>
+<p><a class="text-blue-400" href="http://x.com/lynnerae/status/1743087899363758398#m">05 Jan 2024 01:51:54</a> - @lynnerae: Kitakits sa susunod na Biyernes! handa na akong magdiwang sa paglulunsad ng <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a>!</p>
+<p><a class="text-blue-400" href="http://x.com/LOReBitcoin/status/1743009001942470939#m">x.com/LOReBitcoin/status/1743009001942470939#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/cypherpunkstore/status/1743097808541069759#m">05 Jan 2024 02:31:17</a> - @cypherpunkstore: Ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> wallet ay talagang maganda! Naiibigan ko ang nakakatawang quote na lumalabas kapag iniloload ko ang app. 🤣</p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDC5-wraAAAvSQE.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/edwinrivas/status/1742953785037590625#m">04 Jan 2024 16:58:59</a> - @edwinrivas: Dark mode paparating na ng mabilis</p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDA3NcHWAAA17IJ.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/illiteratewithd/status/1742916169219379651#m">04 Jan 2024 14:29:31</a> - @illiteratewithd: Taasan ang halaga hanggang sa 200k sats:  </p>
+<p><a class="text-blue-400" href="http://x.com/BitcoinZAR/status/1742893314938994691#m">04 Jan 2024 12:58:42</a> - @BitcoinZAR: Aray! Nagbayad lang ako ng $6 na gastos upang ilipat ang aking bitcoin mula sa <a class="text-blue-400" href="http://x.com/MuunWallet" title="Muun">@MuunWallet</a> lightning wallet papunta sa <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> lightning wallet. Maliit na halaga na bayaran sa mas malaking plano ng mga bagay.</p>
+<p><a class="text-blue-400" href="http://x.com/fabthefoxx/status/1742880899681673586#m">04 Jan 2024 12:09:22</a> - @fabthefoxx: Para sa akin, ito ang wallet na kailangan ng Africa. <a class="text-blue-400" href="http://x.com/AnitaPosch" title="Anita ⚡🏳️‍🌈 Bitcoin para sa Katarungan">@AnitaPosch</a> Lightning, On-Chain, Liquid at 3 protocols para sa USTD.</p>
+<p><a class="text-blue-400" href="http://x.com/john_zaprite/status/1742871095747784897#m">04 Jan 2024 11:30:24</a> - @john_zaprite: Ang bagong <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> ay maaaring magbago ng larong palakasan. Aking palagay ay ito ay magkaroon ng malaking epekto sa <a class="text-blue-400" href="http://x.com/search?q=%23bitcoin">#bitcoin</a> UX. Pakiramdam ko ay malaking panalo ito. Panahon ang magsasabi. Ngunit Liquid &lt;&gt; LN swaps ay isang biyaya sa kasalukuyan. Tatanggapin ko ito.</p>
+<p><a class="text-blue-400" href="http://x.com/AquaBitcoin/status/1742761528451854390#m">x.com/AquaBitcoin/status/1742761528451854390#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/cryptoquick/status/1742870290689134867#m">04 Jan 2024 11:27:12</a> - @cryptoquick: Sinubukan ko ang <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> at napakakinis ng UX. Ang bayad para sa paglipat ng 100,000 sats ay 404 sa pagsusungit (para sa Lightning routing) at 678 sa pagsusungit (para sa swap), kaya ito ay mga 1% lamang ng maliit, ~$42 na bayad sa mga gastos, mga 40 sentimos lamang. Napakamura ng halaga.</p>
+<p><a class="text-blue-400" href="http://x.com/adam3us/status/1739030646515794222#m">x.com/adam3us/status/1739030646515794222#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/volker_btc/status/1742852010326573433#m">04 Jan 2024 10:14:34</a> - @volker_btc: Sa kaso na ikaw ay may katanungan: Oo, gusto ko ng Aqua ng marami. <a class="text-blue-400" href="http://x.com/Jan3" title="Jan">@JAN3</a> at <a class="text-blue-400" href="http://x.com/Excellion" title="Samson Mow">@Excellion</a> ay gumawa ng magandang trabaho sa pag-integrate ng bitcoin L2 solutions sa isang magandang at walang kahirap-hirap na UX. Walang KYC, malapit na maging open source. Magaling 👏</p>
+<p><a class="text-blue-400" href="http://x.com/JosueLopezGal/status/1742969999872889066#m">04 Jan 2024 18:03:25</a> - @JosueLopezGal: Congratulations sa <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a>, napakamadaling gamitin, non-custodial, at inaasahan na maging open source. Magaling na trabaho <a class="text-blue-400" href="http://x.com/Excellion" title="Samson Mow">@Excellion</a> at <a class="text-blue-400" href="http://x.com/JAN3com" title="JAN3">@JAN3com</a>. Perfect timing din para sa launch.</p>
+<p><a class="text-blue-400" href="http://x.com/marcel039/status/1742975106186396071#m">04 Jan 2024 18:23:42</a> - @marcel039: Ginawa ko lang ang Aqua Wallet <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> ni <a class="text-blue-400" href="http://x.com/JAN3com" title="JAN3">@JAN3com</a> upang tanggapin ang L-BTC <a class="text-blue-400" href="http://x.com/Liquid_BTC" title="Liquid Network 🌊">@Liquid_BTC</a> <a class="text-blue-400" href="http://x.com/search?q=%23LiquidNetwork">#LiquidNetwork</a> <a class="text-blue-400" href="http://x.com/search?q=%23bitcoin">#bitcoin</a> <a class="text-blue-400" href="http://x.com/search?q=%23btc">#btc</a></p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDBKnlXXAAAmfTK.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/AquaBitcoin/status/1742975637990629391#m">04 Jan 2024 18:25:49</a> - @AquaBitcoin: Kami ay awaran sa mga alalahanin ng ilan sa mga tagagamit tungkol sa Privacy Policy ng AQUA. Bilang ganyan, isang bagong binagong bersyon ng nasabing Privacy Policy ay ngayon ay nasa <a class="text-blue-400" href="https://aquawallet.io/privacy/">aquawallet.io/privacy/</a>  </p>
+<p><img alt="Image" src="http://x.com/pic/card_img%2F1742603518748299265%2FzAsEJyPT%3Fformat%3Djpg%26name%3D800x419" /></p>
+<hr />
+<p><em>Nakaka-engganyo ang mga tweets na ito patungkol sa launch ng <a class="text-blue-400" href="http://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> na naglalayong gawing mas madali at maginhawa ang pamamahala ng mga transaksyon ng bitcoin para sa mga gumagamit. Maraming mga bitcoin users ang nagpahayag ng kanilang kasiyahan sa bagong wallet at ang galing ng karanasan sa paggamit nito. Isa itong magandang balita para sa mga tagasunod ng digital currency na nagbibigay-daan para sa mas mabilis at mura pero ligtas na transaksyon.</em></p>
+        </div><br><a class="text-blue-400" href="/lang/tl_967467772341923840">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -205,48 +210,135 @@ Altcoin Redux  </p>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Happy New Year 2024: Mga Pahayag ng Twitter</h1>
-<ol>
-<li><strong><a class="text-blue-500" href="http://x.com/dickiebush/status/1552620538513825792#m">dickiebush</a></strong> (28 Jul 2022 11:42:37)</li>
+            <h1>Mga Tweets ng mga Kilalang Personalidad</h1>
+<h2>Danny Postma</h2>
+<ul>
 <li>
-<p>"I studied the writing routine of 500 legendary writers. Turns out, great writing is simple—if you do these 6 things every day."</p>
-<p>Ang pagsusuri ng mga karanasan ng iba't ibang manunulat ay maaaring maging isang mahalagang hakbang sa pagsulong ng ating mga kakayahan sa pagsusulat.</p>
+<p><strong>05 Jan 2024 05:54:15</strong><br />
+  Si @dannypostmaa ay natutuwa sa iba't ibang tekstura at materyales ng isang bahay, kumpara sa mga karaniwang puting airbnbs na matatagpuan sa Bali. <a class="text-blue-400" href="http://x.com/dannypostmaa/status/1743148887932842160#m">Link sa Twitter</a>  <br />
+<img alt="Link sa Tweet" src="http://x.com/dannypostmaa/status/1743102717856518357#m" /></p>
 </li>
 <li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741747812667429074#m">swyx</a></strong> (01 Jan 2024 09:06:53)</p>
+<p>Ito ay may kasamang tatlong larawan.  </p>
+</li>
+</ul>
+<h2>Indian Bronson</h2>
+<ul>
+<li>
+<p><strong>04 Jan 2024 18:52:54</strong> <br />
+  Ang user na si @Indian_Bronson ay nagbahagi ng isang tweet. <a class="text-blue-400" href="http://x.com/Indian_Bronson/status/1742982451608293381#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p>"Happy new year!🥳"</p>
-<p>Isa sa mga tradisyon tuwing bagong taon ay ang pagbati ng mga kabutihang hangarin sa ating mga kaibigan at kapamilya.</p>
+<p>Walang karagdagang impormasyon.</p>
+</li>
+</ul>
+<h2>Levie</h2>
+<ul>
+<li>
+<p><strong>04 Jan 2024 16:28:50</strong> <br />
+  Ang user na si @levie ay nag-post ng isang graf. <a class="text-blue-400" href="http://x.com/levie/status/1742946195893559482#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741749814512259505#m">swyx</a></strong> (01 Jan 2024 09:14:50)</p>
+<p>Walang karagdagang impormasyon.</p>
+</li>
+</ul>
+<h2>Thepatwalls</h2>
+<ul>
+<li>
+<p><strong>05 Jan 2024 03:24:38</strong> <br />
+  Ang user na si @thepatwalls ay nagbahagi ng isang quote. <a class="text-blue-400" href="http://x.com/shl/status/1743111232897667494#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p>"Eating is the next frontier. I'm on the @chefjeffsf grind."</p>
-<p>Ang pagsisimula ng bagong taon ay maaaring maging oras para sa pagbabago ng ating mga gawi sa pagkain at pangangalaga sa kalusugan.</p>
+<p>Walang karagdagang impormasyon.</p>
+</li>
+</ul>
+<h2>Aadithya Atluru</h2>
+<ul>
+<li>
+<p><strong>04 Jan 2024 21:55:45</strong> <br />
+  Ang user na si @anuatluru ay nagbibigay ng payo sa mga taong ambisyoso. <a class="text-blue-400" href="http://x.com/anuatluru/status/1743028467241791933#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p><strong><a class="text-blue-500" href="http://x.com/neuranne/status/1741362263175442471#m">neuranne</a></strong> (31 Dec 2023 07:34:51)</p>
+<p>Walang karagdagang impormasyon.</p>
+</li>
+</ul>
+<h2>Jack Butcher</h2>
+<ul>
+<li>
+<p><strong>05 Jan 2024 01:26:41</strong><br />
+  Ang user na si @jackbutcher ay nagpost ng isang konsepto. <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743081552903356824#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p>"We learn better from experience, but we learn best from reflecting on experience."</p>
-<p>Ang pagmuni-muni at pag-aaral sa ating mga karanasan ay makatutulong sa atin upang mas maging matalino at epektibo sa ating mga gawain.</p>
+<p>Walang karagdagang impormasyon.</p>
+</li>
+</ul>
+<h2>Amanda Goetz</h2>
+<ul>
+<li>
+<p><strong>05 Jan 2024 01:19:46</strong> <br />
+  Si @AmandaMGoetz ay nagsasabing sinusundan niya ang lead ng isa pang user. <a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079810916921763#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p><strong><a class="text-blue-500" href="http://x.com/matteing/status/1741693823112167658#m">matteing</a></strong> (01 Jan 2024 05:32:21)</p>
+<p>Walang karagdagang impormasyon.</p>
+</li>
+</ul>
+<h2>Timothy Bates</h2>
+<ul>
+<li>
+<p><strong>09 Nov 2023 18:09:11</strong><br />
+  Ang user na si @timothycbates ay nagbahagi ng isang papel. <a class="text-blue-400" href="http://x.com/timothycbates/status/1722677731236737065#m">Link sa Twitter</a></p>
 </li>
 <li>
-<p>"Thank you for the templates. It took much longer than 30 minutes, but was worth it!"</p>
-<p>Ang paggamit ng mga template ay isa sa mga paraan upang gawing mabilis at maayos ang ating mga proyekto.</p>
+<p>May kasamang larawan ng graf.</p>
 </li>
-</ol>
-<p>Ang bagong taon ay panahon ng pag-asa at pagbabago. Sa bawat tweet mula sa iba't ibang manunulat at personalidad, makikita natin ang kanilang mga layunin at hangarin sa darating na taon. Ang pagbabasa at pakikinig sa kanilang mga saloobin at karanasan ay maaring maging inspirasyon sa atin upang mapaunlad ang ating sarili sa larangan ng pagsusulat, pag-aaral, pagkain, at iba pa. Ang bagong taon ay simula ng panibagong yugto, at ang mga pahayag sa Twitter ay maaaring magbigay inspirasyon sa atin sa pagtahak ng bagong landas.</p>
-        </div><br><a class="text-blue-500" href="/lang/tl_1283027505297985536">more</a>
+</ul>
+<h2>Tim Dinh</h2>
+<ul>
+<li>
+<p><strong>05 Jan 2024 00:05:48</strong><br />
+  Ang user na si @tdinh_me ay nag-aanunsyo ng isang darating na GPT store. <a class="text-blue-400" href="http://x.com/tdinh_me/status/1743061198915227765#m">Link sa Twitter</a></p>
+</li>
+<li>
+<p>May kasamang larawan.</p>
+</li>
+</ul>
+<h2>Gumroad</h2>
+<ul>
+<li>
+<p><strong>04 Jan 2024 23:50:47</strong><br />
+  Ang user na si @gumroad ay nagtatanong tungkol sa mobile apps ng Gumroad. <a class="text-blue-400" href="http://x.com/gumroad/status/1743057419167818015#m">Link sa Twitter</a></p>
+</li>
+<li>
+<p>Walang karagdagang impormasyon.  </p>
+</li>
+</ul>
+<h2>Lukeweaver Eth</h2>
+<ul>
+<li>
+<p><strong>04 Jan 2024 23:50:22</strong><br />
+  Ang user na si @lukeweaver_eth ay nagbibigay ng komento tungkol sa OGs. <a class="text-blue-400" href="http://x.com/lukeweaver_eth/status/1743057313584582744#m">Link sa Twitter</a></p>
+</li>
+<li>
+<p>May kasamang larawan.  </p>
+</li>
+</ul>
+<h2>Jitbit</h2>
+<ul>
+<li>
+<p><strong>04 Jan 2024 10:10:29</strong><br />
+  Ang user na si @jitbit ay nag-post ng isang larawan. <a class="text-blue-400" href="http://x.com/jitbit/status/1742850980943712677#m">Link sa Twitter</a></p>
+</li>
+<li>
+<p>May kasamang larawan.</p>
+</li>
+</ul>
+<p><strong>Comment:</strong>
+Napakaraming mga kilalang personalidad ang nagpo-post ng kanilang mga opinion at pagninilay sa Twitter. Ito ay nagbibigay sa atin ng masusing pag-iisip sa kanilang mga pananaw at damdamin. Nawa'y patuloy silang magbahagi ng kanilang kaalaman at karanasan para sa ikauunlad ng ating kaalaman at pag-unawa.</p>
+        </div><br><a class="text-blue-400" href="/lang/tl_1283027505297985536">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -259,54 +351,41 @@ Altcoin Redux  </p>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>AI, Material Design at Pagsasanay ng Salesforce: Isang Tignan sa mga Pinakabagong Teknolohiya</h1>
-<p><em>28 Dec 2023 18:07:01 - SalesforceUX</em></p>
-<p>Nag-eksperimento si Itai Asseo, Head of Emerging Technology ng Salesforce Ignite, at ang kanyang koponan sa iba't ibang pangunahing AI tools upang makita kung gaano kabilis sila makakahanap ng solusyon sa mga gawain.</p>
-<p>Tingnan kung aling AI tools ang nakatipid ng oras at kung paano.</p>
-<p><a class="text-blue-500" href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">Link</a>  </p>
-<p><img alt="Image" src="http://x.com/pic/card_img%2F1740434191811043328%2FLqRH09rj%3Fformat%3Djpg%26name%3D800x419" />  </p>
-<p><em>Komentaryo:</em> Sa gitna ng makabagong teknolohiya, mahalaga ang pagsasagawa ng mga eksperimento upang matukoy kung aling AI tools ang pinakaepektibo at makamit ang mga layunin ng trabaho ng mas mabilis at mas mabisa.</p>
-<hr />
-<p><em>27 Dec 2023 19:54:02 - SalesforceUX</em></p>
-<p>Sumali sa Salesforce Design Team! Tingnan ang mga posisyon.</p>
-<p><em>Komentaryo:</em> Isang pagkakataon para sa mga naghahangad na maging bahagi ng grupo ng design ng Salesforce na magbigay ng makabuluhang kontribusyon sa mundo ng teknolohiya at disenyo.</p>
-<hr />
-<p><em>22 Dec 2023 17:00:00 - MicrosoftDesign</em></p>
-<p>Ngayong holiday season, nagsanib ang Microsoft Design at AI artist <a class="text-blue-500" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> upang likhain ang visual representations ng alaala ng mga pista sa iba't ibang lugar sa mundo.</p>
-<p><img alt="Image" src="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" /></p>
-<p><em>Komentaryo:</em> Isang kahanga-hangang pagsasama ng teknolohiya at sining upang likhain ang mga visual na representations ng mga masasayang alaala ng holiday season.</p>
-<hr />
-<p><em>20 Dec 2023 19:00:54 - materialdesign</em></p>
-<p>Mas magiging masaya ngayong holiday season sa pamamagitan ng pag-update ng theming experience sa Material Theme Builder 2.0! 🎁</p>
-<p><img alt="Image" src="http://x.com/pic/media%2FGB0DSamXMAA8j-M.jpg" /></p>
-<p><em>Komentaryo:</em> Ang pagpapabuti sa mga tool at experience ay naglilikha ng masaya at positibong karanasan para sa mga gumagamit.</p>
-<hr />
-<p><em>20 Dec 2023 19:00:57 - materialdesign</em></p>
-<p>Narito na ang Color fidelity!</p>
-<p><img alt="Image" src="http://x.com/pic/media%2FGB0DS85XcAAdlKN.jpg" /></p>
-<p><em>Komentaryo:</em> Ang pagpapanatili ng tamang kulay at desenyo ay mahalaga upang mapanatili ang magandang user experience.</p>
-<hr />
-<p><em>20 Dec 2023 19:00:58 - materialdesign</em></p>
-<p>At hindi lang ‘yon! Basahin ang mga update sa blog → <a class="text-blue-500" href="http://goo.gle/3RyaMND">goo.gle/3RyaMND</a></p>
-<p><img alt="Image" src="http://x.com/pic/media%2FGB0DTZ6X0AEdIX0.jpg" /></p>
-<p><em>Komentaryo:</em> Mahalaga ang patuloy na pag-aaral at pag-unlad sa mga tools at konsepto ng disenyo upang maiangat ang kalidad ng paglilingkod at karanasan ng mga gumagamit.</p>
-<hr />
-<p><em>19 Dec 2023 17:39:12 - lyftdesignteam</em></p>
-<p>At biglang nagtapos ang 2023! Nagsasara kami ng taon na ito na puno ng magagandang alaala at matagumpay na proyekto. Salamat sa lahat ng nag-ambag upang gawing best ang taong ito!</p>
-<p><img alt="Image" src="http://x.com/pic/card_img%2F1741730266383577088%2FaWiK3hdj%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><em>Komentaryo:</em> Ang pagsasara ng taon ay puno ng pasasalamat at pagmamahal sa mga nag-anib-anib upang makamit ang mga tagumpay na ito.</p>
-<hr />
-<p><em>18 Dec 2023 22:27:22 - PinterestDesign</em></p>
-<p>Kapag naririnig mo ang feedback na "[this was] the best virtual/in-person event I've ever attended," ginagawa mo ang tamang bagay!</p>
-<p><img alt="Image" src="http://x.com/pic/card_img%2F1739554276219994112%2FQsQ5jEel%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><em>Komentaryo:</em> Ang positibong feedback ay patunay na malaking tagumpay ang event at pag-aalok ng magandang karanasan sa mga kalahok.</p>
-<hr />
-<p>Ang teknolohiya ay patuloy na naghahatid ng mga pagbabago at pinapabilis ang proseso ng trabaho at disenyo. Mahalaga ang pagsasagawa ng eksperimento at ang patuloy na pag-unlad upang mas mapabuti ang user experience at makamit ang mga layunin ng bawat proyekto. Ang tulad ng mga ito ay nagpapakita ng kahalagahan ng technolohiya at disenyo sa pagtugon sa mga pangangailangan ng industriya at ng mga tao.</p>
-        </div><br><a class="text-blue-500" href="/lang/tl_1432003348744470530">more</a>
+            <h1>Mga Pinakabagong Balita Tungkol sa Disenyo</h1>
+<h2>Microsoft Design</h2>
+<ul>
+<li>22 Dis 2023 17:00:00</li>
+<li>Ito ang pasko kung saan nagtulungan kami ng #AI artist <a class="text-blue-400" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> upang likhain ang mga visual na representasyon ng paskong alaala sa buong mundo.</li>
+<li><img alt="Paskong Larawan" src="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" /></li>
+<li>Ang kanilang pagsasama sa isang AI artist ay nagpapakita kung gaano kahalaga ang teknolohiya sa pagbuo ng sining.</li>
+</ul>
+<h2>Salesforce UX</h2>
+<ul>
+<li>28 Dis 2023 18:07:01</li>
+<li>Si Itai Asseo, ang Head of Emerging Technology sa Salesforce Ignite, at ang kanyang koponan ay sumubok ng iba't ibang AI tools upang tingnan kung gaano kabilis sila makaka-alam sa mga gawain.</li>
+<li><img alt="AI Tools" src="http://x.com/pic/card_img%2F1742974656301391874%2FyYAEE-0g%3Fformat%3Djpg%26name%3D800x419" /></li>
+<li>Ang eksperimentong ito ay nagpapakita ng kagalingan ng koponan sa paggamit ng AI tools para sa kanilang mga gawain.</li>
+</ul>
+<h2>Material Design</h2>
+<ul>
+<li>20 Dis 2023 19:00:54</li>
+<li>Ang kasiyahan sa mga pista ay mas lalong dumadami sa pamamagitan ng isang bagong theming experience sa Material Theme Builder 2.0! 🎁</li>
+<li><img alt="Bagong Theming Experience" src="http://x.com/pic/media%2FGB0DSamXMAA8j-M.jpg" /></li>
+<li>Ang pagpapabago sa kanilang theming experience ay nagpapakita ng patuloy na pag-unlad at pagpapabuti ng kanilang disenyo para sa kanilang mga produkto.</li>
+</ul>
+<h2>Pinterest Design</h2>
+<ul>
+<li>04 Ene 2024 20:22:30</li>
+<li>Mahal naming makita ito! Ano ba ang mga pin na inyong kinokolekta para sa 2024?</li>
+<li><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1743005001557889096#m">source</a></li>
+<li>Ang pakiusap na makita ang mga pin ng kanilang mga tagasunod ay nagpapakita ng interesante at makabagong mga ideya sa kanilang platform.</li>
+</ul>
+<p>Ito ay ilan lamang sa mga pinakabagong tweet mula sa ilang mga kilalang platform ng disenyo. Ang mundo ng teknolohiya at disenyo ay palaging nagpapabago, at ang mga kaganapan at pagbabago sa mga field na ito ay patuloy na nagbibigay inspirasyon at oportunidad para sa pag-unlad ng sining at teknolohiya.</p>
+        </div><br><a class="text-blue-400" href="/lang/tl_1432003348744470530">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -319,25 +398,52 @@ Altcoin Redux  </p>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Mga Nakaka-engganyong Kaganapan sa Twitter noong Unang Araw ng 2024</h1>
-<p><strong>10:39:14AM @Rainmaker1973</strong></p>
-<p>Narito ang isang bidyo mula noong 1927 na nagpapakita kung paano nilalaro ng mga bata ang Kiddies' Motor Wheel, isang motorized na laruan na malamang ay pinauso noon bilang isang kagamitan para sa mga batang toddlers.</p>
-<p><strong>10:29:08AM @BobEUnlimited</strong></p>
-<p>Kung ang paglago ay nananatiling stable sa paligid ng potensyal, ang kawalan ng trabaho ay nananatiling mababa, at ang inflation ay nasa target, bakit kailangan baguhin ang patakaran?</p>
-<p><strong>10:05:20AM @Rainmaker1973</strong></p>
-<p>Isang bison na umiiyak sa isang bidyo na kinuhanan ng isang litratista sa Northern Utah. </p>
-<p>Ang hinanakit ng bison ay tila nagpapakita ng damdamin ng kalungkutan o pangungulila, at ito ay isang magandang halimbawa ng kung paano ang hayop ay may damdamin din tulad ng tao.</p>
-<p><strong>09:24:25AM @ArtirKel</strong></p>
-<p>Maligayang bagong taon!</p>
-<p>Isang simpleng pagbati mula kay ArtirKel, nais niyang dumaan tayo sa bagong taon na puno ng kasaganahan at kasiyahan.</p>
-<p><strong>08:45:15AM @Rainmaker1973</strong></p>
-<p>Noong araw na ito noong 1985, nilikha ang Internet’s Domain Name System.</p>
-<p>Ang paglikha ng DNS ay naging mahalaga para sa pagpapadali ng pag-access sa mga website at para sa pagpapadala ng mensahe sa buong mundo.</p>
-<p><strong>08:38:32AM @Rainmaker1973</strong></p>
-<p>Isinilang noong araw na ito noong 1894, si Satyendra Nath Bose, isang matematikero at pisikong Indian.</p>
-<p>Ang pagsilang ng isang tanyag na si Bose ay nagbigay-daan sa higit pang mga pag-unlad sa larangan ng agham at teknolohiya.</p>
-<p>Sa aking opinyon, ang mga tweet na ito ay nagpapakita ng iba't ibang kaganapan mula sa kasaysayan, kasalukuyang panahon, at kinabukasan. Ang social media, tulad ng Twitter, ay isang mahusay na paraan para makipag-ugnayan at magbahagi ng impormasyon sa iba't ibang larangan ng interes. Ang bawat tweet ay may kani-kaniyang kwento at aral na maaaring maging inspirasyon para sa mga mambabasa. Ang paggamit ng social media ay isang mahalagang kasangkapan sa pagpapalaganap ng kaalaman at kultura.</p>
-        </div><br><a class="text-blue-500" href="/lang/tl_810352678735781888">more</a>
+            <h1>Top Tweets of the Week</h1>
+<p>Here are some of the most interesting and thought-provoking tweets from the past week:</p>
+<h2>Building a life-size and working LEGO car</h2>
+<ul>
+<li><strong>Author</strong>: @Rainmaker1973</li>
+<li><strong>Time</strong>: 05 Jan 2024 06:15:00</li>
+<li><strong>Link</strong>: <a class="text-blue-400" href="http://x.com/Rainmaker1973/status/1743154107819622844#m">tweet</a></li>
+<li>LEGO enthusiasts have built a life-size and working car entirely out of LEGO bricks. A remarkable feat of engineering and creativity!</li>
+</ul>
+<h2>Boeing Apollo NextGen automated cargo vehicle</h2>
+<ul>
+<li><strong>Author</strong>: @Element115art</li>
+<li><strong>Time</strong>: 04 Jan 2024 23:20:25</li>
+<li><strong>Link</strong>: <a class="text-blue-400" href="http://x.com/Element115art/status/1743049776344502314#m">tweet</a></li>
+<li>Explore an alternate reality where NASA continued to develop the original Apollo hardware, resulting in a next-generation automated cargo vehicle.</li>
+</ul>
+<h2>Big congrats to Pattern Energy for starting construction on SunZia</h2>
+<ul>
+<li><strong>Author</strong>: @JamesHewettDC</li>
+<li><strong>Time</strong>: 03 Jan 2024 17:19:54</li>
+<li><strong>Link</strong>: <a class="text-blue-400" href="http://x.com/JamesHewettDC/status/1742596660000174251#m">tweet</a></li>
+<li>Pattern Energy celebrates the start of construction on SunZia, the largest clean energy project in US history, a significant milestone for renewable energy.</li>
+</ul>
+<h2>Immigration and the semiconductor industry</h2>
+<ul>
+<li><strong>Author</strong>: @ModeledBehavior</li>
+<li><strong>Time</strong>: 04 Jan 2024 15:55:52</li>
+<li><strong>Link</strong>: <a class="text-blue-400" href="http://x.com/ModeledBehavior/status/1742937902169141330#m">tweet</a></li>
+<li>An insightful discussion on immigration and its impact on the semiconductor industry, shedding light on the H-1b visa program.</li>
+</ul>
+<h2>The impact of social media on discourse</h2>
+<ul>
+<li><strong>Author</strong>: @clairlemon</li>
+<li><strong>Time</strong>: 05 Jan 2024 05:42:01</li>
+<li><strong>Link</strong>: <a class="text-blue-400" href="http://x.com/clairlemon/status/1743145809536012719#m">tweet</a></li>
+<li>An insightful reflection on the influence of social media on public discourse and the polarization of societal beliefs.</li>
+</ul>
+<h2>"Son, you're growing up so fast..."</h2>
+<ul>
+<li><strong>Author</strong>: @gojomo</li>
+<li><strong>Time</strong>: 30 Jun 2016 18:27:10</li>
+<li><strong>Link</strong>: <a class="text-blue-400" href="http://x.com/gojomo/status/748583671934779393#m">tweet</a></li>
+<li>A humorous take on the evolution of technology and the choices individuals face in a rapidly changing world.</li>
+</ul>
+<p>These tweets encapsulate a wide range of topics, from innovative creations to insightful discussions on social media and technology. It's fascinating to see the diversity of ideas and perspectives shared on Twitter. As we move forward, let's continue to engage with these thought-provoking conversations and embrace the ever-changing landscape of ideas and innovation.</p>
+        </div><br><a class="text-blue-400" href="/lang/tl_810352678735781888">more</a>
     </div>
 
 </div>
@@ -390,134 +496,6 @@ Altcoin Redux  </p>
         <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
     </div>
 </div>
-
-<script>
-document.querySelectorAll('button.subx').forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    console.log(this.value);
-    event.preventDefault();
-    document.querySelector('input[name="target_id"]').value = this.value;
-  });
-});
-
-
-    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
-      // 阻止表单的默认提交行为
-      event.preventDefault();
-
-      // 获取当前日期对象
-      var currentDate = new Date();
-
-      // 获取用户选择的时间
-      var mailTimeValue = document.getElementById('mail-time').value;
-
-      // 将用户选择的时间与当前日期拼接成一个字符串
-      var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
-
-      // 将拼接后的字符串转换为时间戳
-      var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
-
-      // 判断 selectedDateTimeTimestamp 是否小于当前时间
-      if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
-        // 如果是，则增加一天
-        selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
-      }
-
-      // 将增加一天后的时间戳设置到隐藏的 input 元素中
-      document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
-
-      // 提交表单
-      this.submit();
-    });
-
-    var userLang = navigator.language || navigator.userLanguage;
-    var emailInput = document.querySelector('input[name="email"]');
-    var targetIdInput = document.querySelector('input[name="target_id"]');
-    var timeLabel = document.getElementById("time-label");
-    var subscribeBtn = document.getElementById("subscribe-btn");
-    var languageSelect = document.getElementById("language-select");
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-    const languageData = {
-         "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
-         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新设定", "Twitter列表的GPT订阅"],
-         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Setting", "GPT Subscription for Twitter List"],
-         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新設定", "Twitter列表的GPT訂閱"],
-         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新設定", "TwitterリストのGPTサブスクリプション"],
-         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 설정", "Twitter 목록을 위한 GPT 구독"],
-         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar configuración", "Suscripción GPT para la lista de Twitter"],
-         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar configuração", "Assinatura GPT para Lista do Twitter"],
-         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Einstellung", "GPT-Abonnement für Twitter-Liste"],
-         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour la configuration", "Abonnement GPT pour la liste Twitter"],
-         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / تحديث الإعداد","اشتراك GPT لقائمة تويتر"],
-         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Pengaturan", "Langganan GPT untuk Daftar Twitter"],
-         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Tetapan", "Langganan GPT untuk Senarai Twitter"],
-         "tl": ["Maglagay ng iyong email", "Maglagay ng ID ng target list", "Araw-araw na Oras ng Pag-push", "Mag-subscribe / Mag-update ng Oras", "GPT Subscription para sa Twitter List"],
-         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật cài đặt", "Đăng ký GPT cho Danh sách Twitter"],
-         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj ustawienia", "Subskrypcja GPT dla listy Twitter"],
-         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Instelling", "GPT-abonnement voor Twitter-lijst"]
-    };
-
-
-    // Function to set placeholders and titles based on language
-    function setLanguage(selectedLanguage) {
-     const placeholders = languageData.columns.reduce((acc, column) => {
-      acc[column] = languageData[selectedLanguage][languageData.columns.indexOf(column)];
-      return acc;
-     }, {});
-
-     emailInput.placeholder = placeholders.emailPlaceholder;
-     targetIdInput.placeholder = placeholders.targetIdPlaceholder;
-     timeLabel.textContent = placeholders.timeLabel;
-     subscribeBtn.textContent = placeholders.subscribeBtn;
-     document.getElementById("title").textContent = placeholders.title;
-    }
-
-    // Initial set of placeholders and titles
-    setLanguage(userLang);
-    var defaultLanguageInput = document.getElementById("current-language");
-    defaultLanguageInput.value = userLang;
-
-    // Toggle language function
-    languageSelect.addEventListener("change", function () {
-      var selectedLanguage = languageSelect.value;
-      setLanguage(selectedLanguage);
-      // 更新隐藏 input 的值
-      var currentLanguageInput = document.getElementById("current-language");
-      currentLanguageInput.value = selectedLanguage;
-    });
-</script>
-
 </body>
-
+    <script src="/static/index.js"></script>
 </html>

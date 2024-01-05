@@ -35,20 +35,9 @@ replace_str = '''<a href="/lang/zh-CN" class="border-b-2 mr-2">简体中文</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
 '''
 
-target_str = '''document.querySelector('button.subx').addEventListener('click', function(event) {
-  console.log(this.value)
-  event.preventDefault();
-  document.querySelector('input[name="target_id"]').value = this.value;
-});'''
+target_str= '''static/'''
 
-replace_str = '''document.querySelectorAll('button.subx').forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    console.log(this.value);
-    event.preventDefault();
-    document.querySelector('input[name="target_id"]').value = this.value;
-  });
-});
-'''
+replace_str = '''/static/'''
 
 # 遍历static目录下的所有文件
 static_dir = 'static'

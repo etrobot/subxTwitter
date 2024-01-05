@@ -5,38 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-
-    </style>
+<link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
 <div class="sidebar w-full max-w-sm items-center">
     <div>
@@ -62,12 +34,11 @@
         <a href="/lang/vi" class="border-b-2 mr-2">Tiếng Việt</a>
         <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
-
     </p>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
     
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -80,25 +51,41 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>迎接2024年：碼農馬拉松、書籍銷售、新年新目標</h1>
-<p><a class="text-blue-500" href="http://x.com/gdb/status/1741718045007999222#m">01 Jan 2024 07:08:36@gdb</a>: 當前狀態：與 <a class="text-blue-500" href="http://x.com/badphilosopher" title="Matt Brockman">@badphilosopher</a> 和 <a class="text-blue-500" href="http://x.com/theannabrockman" title="A">@theannabrockman</a> 進行跨年編碼馬拉松。這是一年中最輕鬆愉快的時光。</p>
-<p><a class="text-blue-500" href="http://x.com/gdb">@gdb</a> 在這則推文中分享了自己與Matt Brockman和A共同度過的跨年編碼馬拉松，顯示了在新年第一時間致力於技術創作的付出與享受。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741708146530226285#m">01 Jan 2024 06:29:16@ylecun</a>: 只有少數書作家能從銷售書籍中獲得顯著收益。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun">@ylecun</a> 提到了只有少數書籍作家能從書籍銷售中獲得重要收益，這可能引起對於知識創作價值的討論。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741700991366443437#m">01 Jan 2024 06:00:50@ylecun</a>: 更好地接觸知識是...</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun">@ylecun</a> 探討了更好地接觸知識的議題，這可能指向了教育和資訊傳播的重要性。</p>
-<p><a class="text-blue-500" href="http://x.com/perplexity_ai/status/1741676770321907906#m">01 Jan 2024 04:24:35@perplexity_ai</a>: Perplexity祝大家新年快樂！ 讓2024年成為洞察和答案的一年。提醒：我們的兩個月專業計劃禮物將在兩天後失效。讓新的一年充滿知識的力量。</p>
-<p>Perplexity_AI則通過推文向大家送上新年祝福，並提到了他們的專業計劃禮物，強調了知識的重要性。</p>
-<p><a class="text-blue-500" href="http://x.com/BraceSproul/status/1741640130375610757#m">01 Jan 2024 01:58:59@BraceSproul</a>: 在進行一個需要本地LLM（通過 <a class="text-blue-500" href="http://x.com/OLLAMA" title="Ollama">@OLLAMA</a> &amp; <a class="text-blue-500" href="http://x.com/LangChainAI" title="LangChain">@LangChainAI</a>）和JSON響應的項目。看起來Mixtral回復簡單有效的JSON響應做得很好（在要求單鍵JSON響應時為86/86）。</p>
-<p>BraceSproul分享了自己在項目中使用的技術和工具，展示了技術創作者的實際工作情況。</p>
-<p><a class="text-blue-500" href="http://x.com/francoisfleuret/status/1741481952618676698#m">31 Dec 2023 15:30:27@francoisfleuret</a>: 啊，原來 <a class="text-blue-500" href="http://x.com/PyTorch" title="PyTorch">@pytorch</a> 的內嵌C++擴展這麼簡單？我非常驚訝。</p>
-<p>フランソワ強調了對 pytorch 內嵌C++擴展的驚訝，这可能是对于技术发展和复杂性的一种表达。</p>
-<p>2024年開始，技術創作者們在不同領域進行著各種工作和討論。這些推文不僅展示了他們的工作成果，還暗示了科技與知識的價值和重要性。隨著新一年的來臨，期待這些技術創作者能夠在各自的領域不斷取得成就，為科技和知識傳播領域帶來更多的創新和啟發。</p>
-        </div><br><a class="text-blue-500" href="/lang/zh-TW_1733652180576686386">more</a>
+            <h1>最新科技趨勢</h1>
+<h2>2024年1月5日</h2>
+<p><a class="text-blue-400" href="http://x.com/sama/status/1743095010080546921#m">@sama</a> - 02:20:10
+“我正在進行34年的集肌” - <a class="text-blue-400" href="http://x.com/jaltma" title="Jack Altman">@jaltma</a> 一邊吃杯子蛋糕一邊吃蛋糕</p>
+<p><a class="text-blue-400" href="http://x.com/jerryjliu0/status/1743087302363250782#m">@jerryjliu0</a> - 01:49:32
+建立 RAG 讓 RAG 不那麼實驗。採取措施確保你的上下文不會被任意分割。</p>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1743080566373892375#m">@lateinteraction</a> - 01:22:46
+感謝 <a class="text-blue-400" href="http://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> 出色的工作和迅速的發布！</p>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1743081038044340467#m">@lateinteraction</a> - 01:24:39
+感謝 <a class="text-blue-400" href="http://x.com/hwchase17" title="Harrison Chase">@hwchase17</a> 出色的工作和迅速的發布！</p>
+<p><a class="text-blue-400" href="http://x.com/sama/status/1743080079515959364#m">@sama</a> - 01:20:50
+在科技界，我曾經和一些穆斯林和阿拉伯（尤其是巴勒斯坦）的同事交談，他們對最近的經歷感到不舒服，往往是出於對報復和事業前景的損害的恐懼。</p>
+<p><a class="text-blue-400" href="http://x.com/lama_index/status/1743076579302105338#m">@llama_index</a> - 01:06:55
+RAGatouille（<a class="text-blue-400" href="http://x.com/bclavie" title="Benjamin Clavié">@bclavie</a>）是一種將 ColBERT 與 RAG 輕鬆使用的絕佳方式，ColBERT 是一種比密集嵌入式檢索技術更先進的檢索模型。</p>
+<p><a class="text-blue-400" href="http://x.com/jerryjliu0/status/1743077679258320925#m">@jerryjliu0</a> - 01:11:18
+每個建立 RAG 的人都使用密集嵌入式檢索，但僅僅做余弦距離並不總是能夠捕捉細粒度的相似性。</p>
+<p><a class="text-blue-400" href="http://x.com/llama_index/status/1743044758329831886#m">@llama_index</a> - 23:00:29
+如果您想建立一個檢索增強型聊天機器人，可以保留連續的文檔/代碼塊，而不是將它們切分成尷尬的部分，請查看 <a class="text-blue-400" href="http://x.com/NVIDIA" title="NVIDIA">@NVIDIA</a> Generative AI Examples 存儲庫中的此高級 RAG 食譜！</p>
+<p><a class="text-blue-400" href="http://x.com/LangChainAI/status/1743070051991998842#m">@LangChainAI</a> - 00:40:59
+🦜🏗️使用 LangChain 建立 OpenAI 客製化的 RAG：📹與您的視頻聊天的終極教程！📹</p>
+<p><a class="text-blue-400" href="http://x.com/Gradio/status/1743063380087505115#m">@Gradio</a> - 00:14:29
+宣布𝚐𝚛𝚊𝚍𝚒𝚘 𝟺.𝟷𝟹 🚀🚀</p>
+<p><a class="text-blue-400" href="http://x.com/osanseviero/status/1743027658961637632#m">@osanseviero</a> - 21:52:32
+AI Tube - 發現數十個 ML 生成的視頻</p>
+<p><a class="text-blue-400" href="http://x.com/ylecun/status/1743048968118919471#m">@ylecun</a> - 23:17:12
+嘿，<a class="text-blue-400" href="http://x.com/HachetteUS" title="Hachette Book Group">@HachetteUS</a>，<a class="text-blue-400" href="http://x.com/HachetteLivre" title="Hachette Livre">@HachetteLivre</a>，<a class="text-blue-400" href="http://x.com/GroupeLagardere" title="Lagardère">@GroupeLagardere</a>，以及<a class="text-blue-400" href="http://x.com/arnaudlagardere" title="Arnaud Lagardère">@arnaudlagardere</a> ，放下對<a class="text-blue-400" href="http://x.com/internetarchive" title="Internet Archive">@internetarchive</a>的敌忾。</p>
+<p><a class="text-blue-400" href="http://x.com/hwchase17/status/1743029845297401882#m">@hwchase17</a> - 22:01:13
+我一直想嘗試 ColBERT - 這讓它如此容易，我沒有理由不試試！</p>
+<hr />
+<p>以上是一些最新的科技趨勢。檢索增強型聊天機器人和開放式人工智能定制是當前的研究熱點。此外，科技界的多元化和包容性也是需要關注的議題。</p>
+        </div><br><a class="text-blue-400" href="/lang/zh-TW_1733652180576686386">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -111,62 +98,71 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>推特綜合</h1>
-<p><a class="text-blue-500" href="http://x.com/dickiebush/status/1552620538513825792#m">28 Jul 2022 11:42:37@dickiebush</a>: 我研究了500位傳奇作家的寫作習慣。</p>
-<p>結果是，偉大的寫作很簡單 - 只要你每天做這6件事情：</p>
-<p><a class="text-blue-500" href="http://x.com/AliAbdaal/status/1741739756331876383#m">01 Jan 2024 08:34:52@AliAbdaal</a>: 相信自己能做某事是實際能夠做到的第一步。</p>
-<p><a class="text-blue-500" href="http://x.com/AliAbdaal/status/1741739766779990429#m">01 Jan 2024 08:34:55@AliAbdaal</a>: 用了我的新書《感覺良好的高效能》來提升你的生產力遊戲。立即預訂，進行改變性的閱讀：</p>
-<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741652999745810825#m">01 Jan 2024 02:50:08@sweatystartup</a>: 一大堆有錢人如果在他們的地區停電/斷水/手機訊號中斷，情況突變了幾天，無法保證家人安全和溫飽。</p>
-<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741671697541951987#m">01 Jan 2024 04:04:26@sweatystartup</a>: 紐約人吹噓自己倖存桑迪風暴是可笑的。</p>
-<p><a class="text-blue-500" href="http://x.com/dickiebush/status/1741423094474973619#m">31 Dec 2023 11:36:34@dickiebush</a>: 還有15小時可以加入1月份的 30 艦隊！</p>
-<p><a class="text-blue-500" href="http://x.com/dickiebush/status/1741608495353380960#m">31 Dec 2023 23:53:17@dickiebush</a>: 看到社群中的活力是結束這一年的完美方式。</p>
-<p><a class="text-blue-500" href="http://x.com/dickiebush/status/1741643364833853629#m">01 Jan 2024 02:11:51@dickiebush</a>: 還有3個小時！！⏳⏳⏳</p>
-<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741638685668302922#m">01 Jan 2024 01:53:15@sweatystartup</a>: 每個有錢人都應該擁有一輛皮卡車。</p>
-<p><a class="text-blue-500" href="http://x.com/dickiebush/status/1741634519633985924#m">01 Jan 2024 01:36:42@dickiebush</a>: 成為任何話題的專家最快的方法是變得如此具體，以至於你是世界上唯一能談論它的人。</p>
-<p><a class="text-blue-500" href="http://x.com/jackbutcher/status/1741620882286559639#m">01 Jan 2024 00:42:30@jackbutcher</a>: 確定 031</p>
-<p><a class="text-blue-500" href="http://x.com/jackbutcher/status/1741631810621014032#m">01 Jan 2024 01:25:56@jackbutcher</a>: 選擇加入：
-<img alt="圖片" src="http://x.com/pic/card_img%2F1741622252888637440%2FlnunDfnX%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><a class="text-blue-500" href="http://x.com/josiahfitness/status/1741583196074963108#m">31 Dec 2023 22:12:45@josiahfitness</a>: 我決定和@dickiebush 和@Nicolascole77 一起加入學分。
-<img alt="" src="http://x.com/pic/card_img%2F1741423094474973619%2FlnunDfnX%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><a class="text-blue-500" href="http://x.com/SahilBloom/status/1741077086691848615#m">30 Dec 2023 12:41:39@SahilBloom</a>: 2023年最好的想法。
-<img alt="圖片" src="http://x.com/pic/media%2FGCmKbneWMAAqTwA.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/SahilBloom/status/1741209756239352037#m">30 Dec 2023 21:28:50@SahilBloom</a>: 知識的兩種類型。
-<img alt="圖片" src="http://x.com/pic/ext_tw_video_thumb%2F1741208750994624512%2Fpu%2Fimg%2FGL4Zw-mupBDx-Do1.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/SahilBloom/status/1741604555517734944#m">31 Dec 2023 23:37:38@SahilBloom</a>: 我在畢業前10年前寫了這封信給自己。
-<img alt="圖片" src="http://x.com/pic/media%2FGCtsHKWW8AALbcz.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741602280204345553#m">31 Dec 2023 23:28:35@sweatystartup</a>: 
-<img alt="圖片" src="http://x.com/pic/media%2FGCtqCVvWwAARBjM.jpg" />
-<img alt="圖片" src="http://x.com/pic/media%2FGCtqCVwWwAARBjM.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741599904676360477#m">31 Dec 2023 23:19:09@sweatystartup</a>: Gary 是個好人！我親自見過他。
-<a class="text-blue-500" href="http://x.com/gmovestr/status/1741597346985836741#m">x.com/gmovestr/status/1741597346985836741#m</a></p>
-<p><a class="text-blue-500" href="http://x.com/recostseg/status/1741591733584978024#m">31 Dec 2023 22:46:41@recostseg</a>: 雖然明天獎金折舊率降至60%，但第179條保留！</p>
-<p><a class="text-blue-500" href="http://x.com/gas_biz/status/1741503300531335400#m">x.com/gas_biz/status/1741503300531335400#m</a></p>
-<p><a class="text-blue-500" href="http://x.com/Eden_Eats/status/1741334890510172261#m">31 Dec 2023 05:46:04@Eden_Eats</a>: DoorDash 是個好選擇，如果你想買一個 $15 的沙拉花費 $60。</p>
-<p><a class="text-blue-500" href="http://x.com/rufusgifford/status/1741520615146717620#m">31 Dec 2023 18:04:05@rufusgifford</a>: 🇺🇸🇩🇰❤️
-<img alt="圖片" src="http://x.com/pic/media%2FGCsfxLNXEAAmbcU.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/lamamals/status/1741441234919657707#m">31 Dec 2023 12:48:39@lamamals</a>: 作為藝術家，對我來說，2023年是不可思議的一年。
-<img alt="圖片" src="http://x.com/pic/media%2FGCq9bJ9b0AAWOMA.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/jalil_eth/status/1741581368369332698#m">31 Dec 2023 22:05:29@jalil_eth</a>: //#繼續......
-<img alt="圖片" src="http://x.com/pic/card_img%2F1741759911904825344%2FqWWrjiWt%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><a class="text-blue-500" href="http://x.com/fortelabs/status/1741580026754072796#m">31 Dec 2023 22:00:10@fortelabs</a>: 我從2008年開始的最古老的年度儀式是寫感恩清單</p>
-<p><a class="text-blue-500" href="http://x.com/packyM/status/1741575576081641822#m">31 Dec 2023 21:42:28@packyM</a>: 2024年會是不可思議的一年。
-<a class="text-blue-500" href="http://x.com/jasonjoyride/status/1741569286572040372#m">x.com/jasonjoyride/status/1741569286572040372#m</a></p>
-<p><a class="text-blue-500" href="http://x.com/opepenedition/status/1741562587337130021#m">31 Dec 2023 20:50:52@opepenedition</a>: 
-<img alt="圖片" src="http://x.com/pic/media%2FGCtF8TbXMAAUfc1.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/packyM/status/1741562005130035219#m">31 Dec 2023 20:48:33@packyM</a>: 費城鷹隊</p>
-<p><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741557879621001279#m">31 Dec 2023 20:32:09@sweatystartup</a>: 新年快樂！
-<img alt="圖片" src="http://x.com/pic/media%2FGCtBp42WkAAXgOk.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/jackbutcher/status/1741557676012650734#m">31 Dec 2023 20:31:21@jackbutcher</a>: 2023年遷移了16,031張支票中的10,657張（到目前為止）</p>
-<p><a class="text-blue-500" href="http://x.com/0xDigitalOil/status/1741511827622691269#m">31 Dec 2023 17:29:10@0xDigitalOil</a>: 2023年是美好的一年。
-<img alt="圖片" src="http://x.com/pic/media%2FGCsXxzIXAAAOm2R.jpg" /></p>
-<p><a class="text-blue-500" href="http://x.com/ShaanVP/status/1741545139418616237#m">31 Dec 2023 19:41:32@ShaanVP</a>: 對於孩子來說，假期是關於給予和接受禮物的喜悅。</p>
-<hr />
-<p>這篇匯總了一系列推文，在這些推文中，作者分享了寫作的習慣、生產力提升的方法、生活中的趣事以及對過去和未來的展望。此外，也有一些點子、開心、學習的經驗和計劃相關的內容。整體來說，這些推文呈現了作者們豐富多彩的生活和思維。</p>
-        </div><br><a class="text-blue-500" href="/lang/zh-TW_1365676237558059010">more</a>
+            <h1>最新網站推特消息</h1>
+<p><a class="text-blue-400" href="http://x.com/sweatystartup/status/1743098623393505519#m">05 Jan 2024 02:34:31@sweatystartup</a>: 為什麼我無法透過手機辦理入住酒店，直接走到我的房間呢？</p>
+<p>他們知道我已經付款了。他們有我的信息。而且我口袋裡還有手機。</p>
+<p>浪費10分鐘以上在前台辦理辦理拿取塑料鑰匙和已經有的信用卡支付保證金是荒謬的！！</p>
+<p><a class="text-blue-400" href="http://x.com/BoredOpepen/status/1743060916416229520#m">05 Jan 2024 00:04:41@BoredOpepen</a>: 橘色是新的黑色。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCYqBCbQAAwBGO.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/anuatluru/status/1743028467241791933#m">04 Jan 2024 21:55:45@anuatluru</a>: 如果你是一個有雄心的人，但周圍沒有其他同樣有雄心的人，你應該做的第一件事是開始在線上與其他同樣有雄心的人分享你的想法。</p>
+<p><a class="text-blue-400" href="http://x.com/BradleyWhitford/status/1743006181587894723#m">04 Jan 2024 20:27:11@BradleyWhitford</a>: 有一個傳言說馬丁辛支持羅伯特肯尼迪總統。這個消息是不正確的。馬丁要求我們代表他發布這條消息。</p>
+<p><a class="text-blue-400" href="http://x.com/VanityFair/status/1743030148377485651#m">04 Jan 2024 22:02:25@VanityFair</a>: 唐納德特朗普“不應該像一個‘正常’的2024年總統候選人一樣受到報道”，Molly Jong-Fast寫道“即使有四項刑事起訴，感覺上他還是被當作這樣對待。”</p>
+<p><img alt="" src="http://x.com/pic/card_img%2F1742649041995833344%2FiE9N5p44%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p><a class="text-blue-400" href="http://x.com/RpsAgainstTrump/status/1743032372323303931#m">04 Jan 2024 22:11:16@RpsAgainstTrump</a>: 新</p>
+<p><img alt="" src="http://x.com/pic/amplify_video_thumb%2F1743032263883784192%2Fimg%2FwGuYK_JQy69T9ZXI.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743081552903356824#m">05 Jan 2024 01:26:41@jackbutcher</a>: 關於證據的概念</p>
+<p><a class="text-blue-400" href="http://x.com/businessbarista/status/1743067411069223211#m">05 Jan 2024 00:30:30@businessbarista</a>: 我將會把這場全國冠軍賽的故事講給後人聽。</p>
+<p><a class="text-blue-400" href="http://x.com/businessbarista/status/1743069736458395770#m">05 Jan 2024 00:39:44@businessbarista</a>: 完整內容：</p>
+<p><a class="text-blue-400" href="http://x.com/businessbarista/status/1742590471434543269#m">x.com/businessbarista/status/1742590471434543269#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/fortelabs/status/1743059736516292761#m">05 Jan 2024 00:00:00@fortelabs</a>: 每日進步並不是關於規模，而是關於意義。</p>
+<p><a class="text-blue-400" href="http://x.com/lukeweaver_eth/status/1743057313584582744#m">04 Jan 2024 23:50:22@lukeweaver_eth</a>: OGs讓我感到舒暢</p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743042940946067597#m">x.com/jackbutcher/status/1743042940946067597#m</a></p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCU-gVacAAhsbg.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/checksbot/status/1743054983560364167#m">04 Jan 2024 23:41:07@checksbot</a>: ✅ 支票200的新合成圖</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCTRQhWkAAx6Z8.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/checksbot/status/1743046929926201609#m">04 Jan 2024 23:09:06@checksbot</a>: ✅ 支票622的新合成圖</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCL8fdWcAAEUJK.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/Pixelproperty_/status/1743048814347399392#m">04 Jan 2024 23:16:36@Pixelproperty_</a>: 將軍！</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCNXAQXwAAY6rI.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/EveD/status/1743049901389337022#m">04 Jan 2024 23:20:55@EveD</a>: 這個令人震驚，卑劣，實際上相當可怕。她處理得非常理想。（實際上他們是在追捕她的丈夫）。</p>
+<p><a class="text-blue-400" href="http://x.com/NeriOxman/status/1742993073078947843#m">x.com/NeriOxman/status/1742993073078947843#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743042940946067597#m">04 Jan 2024 22:53:15@jackbutcher</a>: 
+<img alt="" src="http://x.com/pic/media%2FGDCIQmYWkAAXqef.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743040710310347087#m">04 Jan 2024 22:44:24@jackbutcher</a>: 
+<img alt="" src="http://x.com/pic/media%2FGDCGK8CXkAAsCKF.png" />
+<img alt="" src="http://x.com/pic/media%2FGDCGLxdXgAAbFiA.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743040993845186995#m">04 Jan 2024 22:45:31@jackbutcher</a>: 
+<img alt="" src="http://x.com/pic/media%2FGDCGe6xWkAA97_A.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743035251394228233#m">04 Jan 2024 22:22:42@jackbutcher</a>: "市場從來都沒錯"</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCBPZRWgAAapsN.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/notthreadguy/status/1743027076746109348#m">04 Jan 2024 21:50:13@notthreadguy</a>: 經典線索。永恆的。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDB54zdWYAErKba.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGDB54zbWcAAuxDf.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/dutchtide/status/1743003219096125755#m">04 Jan 2024 20:15:25@dutchtide</a>: 每一幅畫都是一個機會，看看我在創作《午夜微風》時學到了什麼。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDBjEYjWwAAfsHB.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/timso_eth/status/1742938118972637362#m">04 Jan 2024 15:56:44@timso_eth</a>: SWIRLING OPEPEN</p>
+<p><a class="text-blue-400" href="http://x.com/gatomotto/status/1743027911299354895#m">04 Jan 2024 21:53:32@gatomotto</a>: 綜合。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDB6pRuXcAAuUyy.png" />
+<img alt="" src="http://x.com/pic/media%2FGDB6pRkWUAAIW9O.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/_0ND1/status/1743014262757315037#m">04 Jan 2024 20:59:18@_0ND1</a>: 
+<img alt="" src="http://x.com/pic/media%2FGDBuKNKW0AAZDQ-.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743018009550020963#m">04 Jan 2024 21:14:11@jackbutcher</a>: 
+<img alt="" src="http://x.com/pic/media%2FGDBxpBnXUAAD28a.png" />
+<img alt="" src="http://x.com/pic/media%2FGDBxpCMXYAAgXSu.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743012000714617076#m">04 Jan 2024 20:50:19@jackbutcher</a>: 對原始版調色板的opepen設置進行嘗試</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDBp9jMXkAA767y.png" />
+<img alt="" src="http://x.com/pic/media%2FGDBp9jMWkAIBSuA.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743016339487273346#m">04 Jan 2024 21:07:33@jackbutcher</a>: 以及對原始網格的超文字翻譯</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDBv96JXkAATufr.png" />
+<img alt="" src="http://x.com/pic/media%2FGDBv96uWIAACp4L.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743017248850063497#m">04 Jan 2024 21:11:10@jackbutcher</a>: 事實</p>
+<p><a class="text-blue-400" href="http://x.com/jalil_eth/status/1743009832385286518#m">04 Jan 2024 20:41:42@jalil_eth</a>: 透明度：</p>
+<p><a class="text-blue-400" href="http://x.com/coindisc/status/1742932934611579237#m">x.com/coindisc/status/1742932934611579237#m</a></p>
+        </div><br><a class="text-blue-400" href="/lang/zh-TW_1365676237558059010">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -179,39 +175,41 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>推文汇编</h1>
-<p><a class="text-blue-500" href="http://x.com/lopp/status/1741740707893612967#m">01 Jan 2024 08:38:39@lopp</a>: 你知道自2014年以來，美國政府已經扣押並出售了超過185,000 BTC嗎？看看如果他們決定持有多好：<a class="text-blue-500" href="https://jlopp.github.io/us-marshals-bitcoin-auctions/">jlopp.github.io/us-marshals-…</a></p>
-<p><a class="text-blue-500" href="http://x.com/mogelina/status/1741730001391866314#m">01 Jan 2024 07:56:06@mogelina</a>: NHKのテレビ放送  </p>
-<p><a class="text-blue-500" href="http://x.com/WhalePanda/status/1741707914958590333#m">01 Jan 2024 06:28:20@WhalePanda</a>: 新年快樂。</p>
-<p><a class="text-blue-500" href="http://x.com/OyasumiAf/status/1741567877097177147#m">31 Dec 2023 21:11:53@OyasumiAf</a>: 無可挑剔的寫作。沒有筆記。</p>
-<p><a class="text-blue-500" href="http://x.com/TuurDemeester/status/1741683553786585577#m">01 Jan 2024 04:51:32@TuurDemeester</a>: 大家新年快樂！對於我們在推進這個世界上真相的激動進步，我感到無比感激。比特幣的月球墮落和自由的燈塔，在黑暗的夜晚中投射出比以往更遠的光芒。我對2024年感到非常興奮。</p>
-<p><a class="text-blue-500" href="http://x.com/lopp/status/1741674509889872119#m">01 Jan 2024 04:15:36@lopp</a>: Casa工程師測試了3種流行的Electrum服務器實現。這就是我們發現的。<a class="text-blue-500" href="http://x.com/search?q=%23repost">#轉發</a> <a class="text-blue-500" href="https://blog.keys.casa/electrum-server-performance-report-2022/">blog.keys.casa/electrum-serv…</a></p>
-<p><a class="text-blue-500" href="http://x.com/csuwildcat/status/1741612010561778167#m">01 Jan 2024 00:07:15@csuwildcat</a>: 我接種了疫苗，當時我的雇主要求接種。我們應該看到無數人為了拒絕對他人毫無影響的個人醫療選擇而妖魔化他人的道歉湧出。在我看到補償之前，我不會停止說這句話。</p>
-<p><a class="text-blue-500" href="http://x.com/tomselliott/status/1657021799652024324#m">x.com/tomselliott/status/1657021799652024324#m</a></p>
-<p><a class="text-blue-500" href="http://x.com/saylor/status/1741455314405249438#m">31 Dec 2023 13:44:36@saylor</a>: 今年<a class="text-blue-500" href="http://x.com/search?q=%23Bitcoin">#比特幣</a>使<a class="text-blue-500" href="http://x.com/MicroStrategy" title="MicroStrategy">@MicroStrategy</a>更上一層樓。</p>
-<p><a class="text-blue-500" href="http://x.com/nvk/status/1741638885535256666#m">01 Jan 2024 01:54:03@nvk</a>: 這就是他被激進化反對人類的時刻。</p>
-<p><a class="text-blue-500" href="http://x.com/lopp/status/1741193570004918343#m">30 Dec 2023 20:24:31@lopp</a>: 有趣的是，比特幣推特的一個方面是，許多參與者自欺欺人地認為比特幣推特代表了比特幣。</p>
-<p><a class="text-blue-500" href="http://x.com/nvk/status/1741638646954946569#m">01 Jan 2024 01:53:06@nvk</a>: 人們需要相信一些東西，我想。</p>
-<p><a class="text-blue-500" href="http://x.com/cypherpunkstore/status/1741634016162582964#m">01 Jan 2024 01:34:42@cypherpunkstore</a>: 來自<a class="text-blue-500" href="http://Cypherpunk.Store">Cypherpunk.Store</a>團隊的2024新年快樂！🎆</p>
-<p><a class="text-blue-500" href="http://x.com/jxpcsnmz/status/1741424011903643735#m">31 Dec 2023 11:40:13@jxpcsnmz</a>: 特別是，現在 ossify 真正是一個 “我是比特幣新手，我可以修復它”，因為 SegWit 和 Taproot 的設計是期望未來的軟分叉會擴展：SegWit 版本1到16，Tapleaf 非0xC0版本，Taproot 附錄，Taproot OP_SUCCESS.. ..</p>
-<p><a class="text-blue-500" href="http://x.com/peterktodd/status/1741636201151365513#m">01 Jan 2024 01:43:23@peterktodd</a>: 值得注意的是，BRC20風格的協議無法被過濾掉。經適當設計，沒有辦法將它們與普通交易區分開來。它們不需要將任何數據放入鏈中來運作。</p>
-<p><a class="text-blue-500" href="http://x.com/coryklippsten/status/1741621106535235928#m">x.com/coryklippsten/status/1741621106535235928#m</a></p>
-<p><a class="text-blue-500" href="http://x.com/lopp/status/1741631128442753082#m">01 Jan 2024 01:23:13@lopp</a>: Ric 將在三...兩...一...秒被送到 Gary Gensler 的古拉格。</p>
-<p><a class="text-blue-500" href="http://x.com/RicFlairNatrBoy/status/1741597100314345848#m">x.com/RicFlairNatrBoy/status/1741597100314345848#m</a></p>
-<p><a class="text-blue-500" href="http://x.com/COLDCARDwallet/status/1741629841210843222#m">01 Jan 2024 01:18:06@COLDCARDwallet</a>: 我們將這個美好的一年歸功於你們，我們的客戶，<a class="text-blue-500" href="http://x.com/search?q=%23calculatorcrew">#計算機幫</a>。</p>
-<p><a class="text-blue-500" href="http://x.com/hodling_time/status/1741623212578869276#m">01 Jan 2024 00:51:46@hodling_time</a>: 精神病患也...</p>
-<p><a class="text-blue-500" href="http://x.com/Excellion/status/1741621881428672866#m">01 Jan 2024 00:46:28@Excellion</a>: 祝所有<a class="text-blue-500" href="http://x.com/search?q=%23Bitcoiners">#比特幣愛好者</a>2024新年快樂！🎉</p>
-<p><a class="text-blue-500" href="http://x.com/Mandrik/status/1741563901655810270#m">31 Dec 2023 20:56:05@Mandrik</a>: 有人幫我設計一堆在<a class="text-blue-500" href="http://x.com/search?q=%23Bitcoin">#比特幣</a>上刻著卷心酥圖片的錢？</p>
-<p><a class="text-blue-500" href="http://x.com/notgrubles/status/1741533832895992130#m">31 Dec 2023 18:56:36@notgrubles</a>: 作為一名巫師，我期待在 2024 年與<a class="text-blue-500" href="http://x.com/Liquid_BTC" title="Liquid Network 🌊">@Liquid_BTC</a>一起玩得開心。🧙‍♂️</p>
-<p><a class="text-blue-500" href="http://x.com/jimmysong/status/1741616345014219203#m">01 Jan 2024 00:24:28@jimmysong</a>: 代幣回歸</p>
-<hr />
-<p>解讀和評論：</p>
-<p>這些推文包括了各種主題，從比特幣相關的技術討論到個人觀點的表達，再到新年的祝福和趣事分享。推特作爲一個即時更新的信息平臺，讓人們能夠快速地了解到各種社會話題和個人見解。可能部分內容需要進一步的了解和討論，但這些推文給我們展現了當前社會的多樣性和活躍度。</p>
-        </div><br><a class="text-blue-500" href="/lang/zh-TW_967467772341923840">more</a>
+            <h1>貨幣和加密貨幣世界的最新趨勢</h1>
+<p><a class="text-blue-400" href="http://x.com/lopp/status/1743095160408305664#m">05 Jan 2024 02:20:46</a> <strong>@lopp</strong>: 如果你不喜歡 mempool，你可以直接關掉它 😉</p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDC3z8LWMAAidjg.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/MrChrisEllis/status/1743093692695486805#m">05 Jan 2024 02:14:56</a> <strong>@MrChrisEllis</strong>: 在通貨膨脹的時代，中產階級為了保住購買力而進行資產交易，稅收法可能需要改革。</p>
+<p><a class="text-blue-400" href="http://x.com/nic__carter/status/1743091532461220051#m">05 Jan 2024 02:06:21</a> <strong>@nic__carter</strong>: Mossad 使用加密貨幣來獵殺哈馬斯。我敢打賭，利茲·沃倫也會找個理由來抱怨這件事。</p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDC0gUeWcAAxqEC.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/SarahAshtonLV/status/1743081625917739459#m">05 Jan 2024 01:26:59</a> <strong>@SarahAshtonLV</strong>: 俄羅斯人先飛往古巴，然後經墨西哥越境到美國，被允許進行庇護聽證會，最後決定回到普京那裡。</p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCrf82XkAAGVAB.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/BitcoinMagazine/status/1743078402586710369#m">05 Jan 2024 01:14:10</a> <strong>@BitcoinMagazine</strong>: 消息來了：比特幣分糖期不到 100 天了 💥  </p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCoKNvXwAAAWmS.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/BitcoinMagazine/status/1743083558326153306#m">05 Jan 2024 01:34:39</a> <strong>@BitcoinMagazine</strong>: 猜猜比特幣分糖期時的價格，就有機會獲得 1 個比特幣的獎金！🚀   </p>
+<p><img alt="Image" src="http://x.com/pic/card_img%2F1741924667416363008%2F7iWL_lfq%3Fformat%3Dpng%26name%3D800x419" />  </p>
+<p><a class="text-blue-400" href="http://x.com/Truthcoin/status/1743079958476714363#m">05 Jan 2024 01:20:21</a> <strong>@Truthcoin</strong>: 當我在尋找某物時，我的腦海中總會浮現一段電影片段：《黑超特警組》中那句“它在哪裡！”的台詞，當時是在描寫蟲子袭击珠寶店的場景。</p>
+<p><a class="text-blue-400" href="http://x.com/Mandrik/status/1742955762488365311#m">04 Jan 2024 17:06:50</a> <strong>@Mandrik</strong>: 好人應該違抗壞法律</p>
+<p><a class="text-blue-400" href="http://x.com/Truthcoin/status/1743073625328992679#m">05 Jan 2024 00:55:11</a> <strong>@Truthcoin</strong>: 有人因為一些白癡「不喜歡」弗萊明的發現，而導致數百萬人死亡。</p>
+<p><a class="text-blue-400" href="http://x.com/Truthcoin/status/1743073391509123534#m">05 Jan 2024 00:54:15</a> <strong>@Truthcoin</strong>: 一種原汁原味的核心未改變的軟分叉  </p>
+<p><a class="text-blue-400" href="http://x.com/bitschmidty/status/1742909238211424587#m">04 Jan 2024 14:01:58</a> <strong>@bitschmidty</strong>: 最近有一些令人不安且無可辯駁的證據表明比特幣核心中有後門被放入。</p>
+<p><a class="text-blue-400" href="http://x.com/lopp/status/1742915291414474992#m">04 Jan 2024 14:26:01</a> <strong>@lopp</strong>: 問題在於諷刺需要思考才能識別 😬</p>
+<p><a class="text-blue-400" href="http://x.com/brucefenton/status/1743067867237539860#m">05 Jan 2024 00:32:18</a> <strong>@brucefenton</strong>: “當我在英格蘭時，</p>
+<p><a class="text-blue-400" href="http://x.com/Truthcoin/status/1743066843974107208#m">05 Jan 2024 00:28:14</a> <strong>@Truthcoin</strong>: 比特幣只有約 1.5 億個未使用交易輸出（UTXO）。</p>
+<p><a class="text-blue-400" href="http://x.com/jackmallers/status/1743064210869715028#m">05 Jan 2024 00:17:47</a> <strong>@jackmallers</strong>: 現在批准 ETF！</p>
+<p><img alt="Image" src="http://x.com/pic/card_img%2F1742044150575329280%2FEXh1LuSV%3Fformat%3Djpg%26name%3D800x320_1" />  </p>
+<p><a class="text-blue-400" href="http://x.com/jackmallers/status/1743064212471939419#m">05 Jan 2024 00:17:47</a> <strong>@jackmallers</strong>: 不確定為什麼有這個標題或圖像。我並沒有說過那句話，那是10年前在一次學校拍攝照片時的照片 🤣</p>
+<p><a class="text-blue-400" href="http://x.com/brucefenton/status/1743040690026696799#m">04 Jan 2024 22:44:19</a> <strong>@brucefenton</strong>: 我見過很多優秀的溝通者。沒有人能像Vivek一樣。</p>
+<p><a class="text-blue-400" href="http://x.com/brucefenton/status/1743063115552407948#m">05 Jan 2024 00:13:25</a> <strong>@brucefenton</strong>: <a class="text-blue-400" href="http://x.com/MarkYusko" title="Mark W. Yusko #TwoPointOneQuadrillion">@MarkYusko</a> 在這裡也是偉大的溝通者 😀  </p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCaqViWcAAHm7W.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/hrdng/status/1743009981203615790#m">04 Jan 2024 20:42:17</a> <strong>@hrdng</strong>: 為下週的<a class="text-blue-400" href="http://x.com/bitcoinoptech" title="Bitcoin Optech">@bitcoinoptech</a>準備我的 v3 轉發討論摘要，我感覺自己像一個陰謀論者一樣。</p>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDBp8CEacAAVVFM.jpg" /></p>
+<p><strong>詮釋和評論：</strong><br />
+這些推文涵蓋了加密貨幣和全球貨幣政策的各種話題，從比特幣分糖期、加密貨幣在國際情報活動中的應用，到歷史和政策上的趨勢。作者們對於貨幣、加密貨幣和全球金融議題有著自己的觀點和詮釋，這些推文提供了讀者對於這些議題的不同角度和見解。</p>
+        </div><br><a class="text-blue-400" href="/lang/zh-TW_967467772341923840">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -224,100 +222,82 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>新年新气象</h1>
-<h2>2024年1月1日</h2>
-<ul>
-<li><strong><a class="text-blue-500" href="http://x.com/dickiebush/status/1552620538513825792#m">dickiebush</a></strong></li>
-<li>
-<p>我研究了500位传奇作家的写作习惯。结果显示，优秀的写作很简单-只要你每天做这6件事情：</p>
-<ul>
-<li>我对这部推特的解读：作者通过研究众多传奇作家的写作习惯，得出了结论：优秀的写作并不复杂，关键在于坚持每天做好几件简单而重要的事情。</li>
-</ul>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741747812667429074#m">swyx</a></strong></p>
-</li>
-<li>新年快乐！🥳</li>
-<li>分享了几张图片</li>
-<li>
-<p>作者在推文中展示了一些新年快乐的图片，表达了对新一年的祝福和庆祝。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741749814512259505#m">swyx</a></strong></p>
-</li>
-<li>我将专注于<a class="text-blue-500" href="http://x.com/chefjeffsf" title="chef jeff">@chefjeffsf</a>的饮食习惯，并计划在2024年实现更健康的目标</li>
-<li>
-<p>我将专注于健康的饮食习惯，同时提出了2024年的健康目标。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741751588929339447#m">swyx</a></strong></p>
-</li>
-<li>引用了一篇关于生物黑客的博客文章</li>
-<li>
-<p>作者分享了一篇关于生物黑客的博客文章，向读者推荐了一篇权威的科技资讯。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/neuranne/status/1741362263175442471#m">neuranne</a></strong></p>
-</li>
-<li>引用了一篇关于从经验中学习的文章</li>
-<li>
-<p>作者分享了一篇关于从经验中学习的文章，并附带了文章链接。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/matteing/status/1741693823112167658#m">matteing</a></strong></p>
-</li>
-<li>感谢别人提供的模板，并分享了一张模板设计的图片</li>
-<li>
-<p>作者感谢他人分享的模板，并展示了自己使用模板设计的作品。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/neuranne/status/1741750573169320046#m">neuranne</a></strong></p>
-</li>
-<li>我很高兴我的帮助对你有所帮助</li>
-<li>
-<p>作者对别人感谢自己的帮助表示高兴和感激。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/threehourcoffee/status/1741746546784526513#m">threehourcoffee</a></strong></p>
-</li>
-<li>我不擅长养成习惯，但我喜欢追求不断前进的动力</li>
-<li>
-<p>作者分享了对习惯养成的看法，认为追求不断前进的动力比追踪习惯的连续性更重要。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741740516809850890#m">swyx</a></strong></p>
-</li>
-<li>引用了一篇关于OpenAI和GPT-4的文章</li>
-<li>
-<p>作者分享了一篇关于OpenAI和GPT-4的文章，并对其中的观点进行讨论。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/swyx/status/1741740916610851039#m">swyx</a></strong></p>
-</li>
-<li>对前文进行解释和发表自己的观点</li>
-<li>
-<p>作者对之前分享的文章内容进行了进一步的解释和评论。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/Suhail/status/1741723975330492785#m">Suhail</a></strong></p>
-</li>
-<li>分享了自己的新年计划的图片</li>
-<li>
-<p>作者分享了自己在新年所做的计划，并展示了相关的图片。</p>
-</li>
-<li>
-<p><strong><a class="text-blue-500" href="http://x.com/pitbull/status/1741685851694813483#m">pitbull</a></strong></p>
-</li>
-<li>分享了一段新年寄语</li>
-<li>作者分享了一段新年寄语，表达对新一年的祝福和庆祝。</li>
-</ul>
-<h2>总结与展望</h2>
-<p>新年伊始，各位作者在推特上分享了自己的心情、计划和观点。无论是对新年的祝福，还是对健康习惯的承诺，每一条推特都代表着对新一年的期许和展望。期待他们在新的一年里能够有所收获，实现自己的目标和愿望。</p>
-        </div><br><a class="text-blue-500" href="/lang/zh-TW_1283027505297985536">more</a>
+            <h1>2024年1月5日的推特</h1>
+<p><a class="text-blue-400" href="http://x.com/thepatwalls/status/1743096037391126648#m">05 Jan 2024 02:24:15@thepatwalls</a>: </p>
+<p>.@elonmusk 你可能不會看到這條信息...  </p>
+<p>但有很小的機會它會出現在你的時間軸上。  </p>
+<p>所以，我就表達一下。</p>
+<p>去年我買了一輛特斯拉，天哪，我高興得不得了。</p>
+<p>這是一個多麼驚人的產品。簡直... 完美。</p>
+<p>我在5分鐘內就成為了特斯拉的超級粉絲。</p>
+<p>這感覺就像是再次成為了小孩。就像當我第一次拿到第一代iPod的感覺。</p>
+<p>我觀看了400個YouTube視頻，關於每一個功能。</p>
+<p>我告訴所有朋友，他們也需要買一輛。</p>
+<p>然後，我又買了兩輛特斯拉的TSLA股票。</p>
+<p>我愿意參與這個使命！</p>
+<p>但... 一切在幾個星期前改變了，當你發佈了"假期更新"。</p>
+<p>我最喜歡的功能：自動駕駛。</p>
+<p>從改變了我的生活到"我再也不想使用它"。</p>
+<p>警告、警告聲、嘀咕聲，還有對我大聲呵斥！</p>
+<p>感覺上有一個"老大哥"在監督我，確保我不會將目光移開3秒鐘。</p>
+<p>這些改變給人很反用戶的感覺。</p>
+<p>這讓我感到難過。讓我不再對開車感到興奮（我以前開車時感到非常愉悅）。</p>
+<p>這絕對讓我不願意向朋友和家人推薦特斯拉。</p>
+<p>我知道這是一個NHTSA的事情，但我希望你能為這個提出第一原則的、創意的解決方案。</p>
+<p>如果你看到這條信息，謝謝你的閱讀。</p>
+<p>也謝謝你造了這麼棒的產品。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDC1diTWkAAIvwm.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/BoredOpepen/status/1743060916416229520#m">05 Jan 2024 00:04:41@BoredOpepen</a>: </p>
+<p>橙色就是新黑。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCYqBCbQAAwBGO.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/anuatluru/status/1743028467241791933#m">04 Jan 2024 21:55:45@anuatluru</a>: 若你是一個雄心勃勃的人，但周圍沒有同樣雄心勃勃的人，你應該做的第一件事情就是開始在線上與其他有雄心勃勃的人分享你的想法。</p>
+<p><a class="text-blue-400" href="http://x.com/5harath/status/1743075127984542060#m">05 Jan 2024 01:01:09@5harath</a>: 大新聞🚨 </p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCllw8W4AAR_Zj.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079810916921763#m">05 Jan 2024 01:19:46@AmandaMGoetz</a>: 我跟進你的腳步。我希望能找到一個6個月的贊助商為“人生如遊戲”贊助！！</p>
+<p><a class="text-blue-400" href="http://x.com/5harath/status/1743083889466192278#m">05 Jan 2024 01:35:58@5harath</a>: 是的，我期望收到那份🔥</p>
+<p><a class="text-blue-400" href="http://x.com/swyx/status/1743082386613494022#m">05 Jan 2024 01:30:00@swyx</a>: 正在尋找一位利用OpenAI GPTs賺取真正錢的人，為Latent Space Podcast進行訪談。</p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743081552903356824#m">05 Jan 2024 01:26:41@jackbutcher</a>: 事實的證明</p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079635674439685#m">05 Jan 2024 01:19:04@AmandaMGoetz</a>: 可以將CEO替換為任何其他頭銜...合夥人、父母等等。</p>
+<p><a class="text-blue-400" href="http://x.com/agazdecki/status/1743065673377738890#m">x.com/agazdecki/status/1743065673377738890#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/forgebitz/status/1742907154581852229#m">04 Jan 2024 13:53:41@forgebitz</a>: 是什麼讓你不敢要小費</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDAMZmtWQAAswmG.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/rrhoover/status/1743070866718794121#m">05 Jan 2024 00:44:13@rrhoover</a>: 正在進行一個項目...</p>
+<p><a class="text-blue-400" href="http://x.com/5harath/status/1743075163988529304#m">05 Jan 2024 01:01:18@5harath</a>: HeyGen?</p>
+<p><a class="text-blue-400" href="http://x.com/jitbit/status/1742850980943712677#m">04 Jan 2024 10:10:29@jitbit</a>: </p>
+<p><img alt="" src="http://x.com/pic/media%2FGC_Zq2LWAAAjvpx.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/shl/status/1743071242406728023#m">05 Jan 2024 00:45:43@shl</a>: 如果你不想被管理，你就必須自己管理（你的老闆）</p>
+<p><a class="text-blue-400" href="http://x.com/timothycbates/status/1722677731236737065#m">09 Nov 2023 18:09:11@timothycbates</a>: PS：金錢的價值是主觀的，可以通過％的比例來體驗，而不是絕對的尺度（即，價值= log $）。所以，為了重新獲得從1000美元到10000美元的主觀提升，你需要獲得10萬美元。並且，再次進行這樣的提升之後，你需要100萬美元！</p>
+<p><a class="text-blue-400" href="http://x.com/timothycbates/status/1722677724785913871#m">09 Nov 2023 18:09:10@timothycbates</a>: 金錢增加了幸福感，但諾貝爾獲獎者們認為，這種效應在8萬美元時停止。一篇新論文顯示，對於絕大多數人來說，收入的增加會一直產生效果，沒有極限，除非規模不足以捕捉快樂。</p>
+<p><img alt="" src="http://x.com/pic/media%2FF-glkW7WoAAPPXH.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/tdinh_me/status/1743061198915227765#m">05 Jan 2024 00:05:48@tdinh_me</a>: GPT商店即將推出。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCY626bgAAEu3D.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/gumroad/status/1743057419167818015#m">04 Jan 2024 23:50:47@gumroad</a>: 如果Gumroad的移動應用程序允許您的客戶發現並購買更多的產品，但...</p>
+<p><a class="text-blue-400" href="http://x.com/lukeweaver_eth/status/1743057313584582744#m">04 Jan 2024 23:50:22@lukeweaver_eth</a>: 老手們讓我振奮。</p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743042940946067597#m">x.com/jackbutcher/status/1743042940946067597#m</a></p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCU-gVacAAhsbg.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/checksbot/status/1743054983560364167#m">04 Jan 2024 23:41:07@checksbot</a>: ✅ 檢查200的新合照。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCTRQhWkAAx6Z8.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/checksbot/status/1743046929926201609#m">04 Jan 2024 23:09:06@checksbot</a>: ✅ 檢查622的新合照。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCL8fdWcAAEUJK.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/tdinh_me/status/1743054178896031767#m">04 Jan 2024 23:37:55@tdinh_me</a>: 一個人所能做的規模使得其他許多企業顯得滑稽💪</p>
+<p><a class="text-blue-400" href="http://x.com/yasser_elsaid_/status/1742551325039038790#m">x.com/yasser_elsaid_/status/1742551325039038790#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/layer3xyz/status/1743022098518597816#m">04 Jan 2024 21:30:26@layer3xyz</a>: 我們還通過季節性獎勵計劃和本地獎勵商店來重新設計忠誠獎勵。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDB1XBtbIAAButI.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/Pixelproperty_/status/1743048814347399392#m">04 Jan 2024 23:16:36@Pixelproperty_</a>: 將軍喝采✅</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCNXAQXwAAY6rI.png" /></p>
+<p><a class="text-blue-400" href="http://x.com/arvidkahl/status/1742911973573226908#m">04 Jan 2024 14:12:50@arvidkahl</a>: “我們的服務器備案不足，需要24/7運行，請給小費！” 這對SaaS行業和餐廳同樣適用。</p>
+<p><a class="text-blue-400" href="http://x.com/forgebitz/status/1742907154581852229#m">x.com/forgebitz/status/1742907154581852229#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1742889502551478438#m">04 Jan 2024 12:43:33@AmandaMGoetz</a>: 為什麼大多數人設定目標時會失敗？</p>
+<p><img alt="" src="http://x.com/pic/media%2FGC_8w6cXMAAfPJn.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGC_8w6VWAAA8x62.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGC_8w6cXcAAj8aS.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743045183824945157#m">04 Jan 2024 23:02:10@AmandaMGoetz</a>: 加入🧩“人生如遊戲”-我的每週通訊，教你如何在個人和職業生活中實現成長和成功，而不需要犧牲或過勞。</p>
+<p><img alt="" src="http://x.com/pic/card_img%2F1741947358026334208%2F1E1RtnFR%3Fformat%3Djpg%26name%3D800x419" /></p>
+        </div><br><a class="text-blue-400" href="/lang/zh-TW_1283027505297985536">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -330,83 +310,36 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>最新科技设计动态</h1>
-<h2>推特评论</h2>
-<h3>SalesforceUX</h3>
-<ul>
-<li>28 Dec 2023 18:07:01</li>
-<li><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1740434190347174281#m">链接</a></li>
-<li>
-<p>對 Experimented with a range of top AI tools to see how quickly they could get up to speed on tasks 和 various roles 的討論。領先科技成功實驗的 Itai Asseo 和他的團隊切磋了一系列頂級 AI 工具，以了解他們在任務上快速上手的速度。</p>
-</li>
-<li>
-<p>15 Dec 2023 21:23:06</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/pic/ext_tw_video_thumb%2F1735772475630239744%2Fpu%2Fimg%2FU7zwuPF9khOcdkdb.jpg">图片链接</a></li>
-<li>
-<p>關於 2030 年 AI 世界的反思問題</p>
-</li>
-<li>
-<p>13 Dec 2023 20:37:01</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1735036119937339594#m">链接</a></li>
-<li>
-<p>加入 Salesforce 專屬人才社群，提升你的設計技能和了解 2024 年新興設計趨勢</p>
-</li>
-<li>
-<p>19 Dec 2023 17:39:12</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/pic/card_img%2F1741730266383577088%2FaWiK3hdj%3Fformat%3Djpg%26name%3D800x419">图片链接</a></li>
-<li>回顧 Lyft Design Team 在 2023 年的成就和最難忘的時刻</li>
-</ul>
-<h3>MicrosoftDesign</h3>
-<ul>
-<li>22 Dec 2023 17:00:00</li>
-<li><a class="text-blue-500" href="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg">图片链接</a></li>
-<li>與 AI 藝術家合作，重現世界各地的節日記憶</li>
-</ul>
-<h3>materialdesign</h3>
-<ul>
-<li>20 Dec 2023 19:00:54</li>
-<li><a class="text-blue-500" href="http://x.com/pic/media%2FGB0DSamXMAA8j-M.jpg">图片链接</a></li>
-<li>推出更新主題體驗的 Material Theme Builder 2.0</li>
-<li>14 Dec 2023 17:00:00</li>
-<li><a class="text-blue-500" href="http://x.com/pic/media%2FGBUhQpLXYAAswIF.jpg">图片链接</a></li>
-<li>添加搜索到你的應用程式</li>
-<li>12 Dec 2023 17:00:01</li>
-<li><a class="text-blue-500" href="http://x.com/pic/media%2FGBKRvmFX0AYpY9S.jpg">图片链接</a></li>
-<li>Material 3 中的搜索功能</li>
-<li>12 Dec 2023 17:00:03</li>
-<li><a class="text-blue-500" href="http://goo.gle/3RzR715">链接</a></li>
-<li>了解更多關於搜索的資訊</li>
-</ul>
-<h3>FlutterDev</h3>
-<ul>
-<li>12 Dec 2023 21:00:00</li>
-<li><a class="text-blue-500" href="http://x.com/pic/media%2FGBKtSwuaMAAgrl9.jpg">图片链接</a></li>
-<li>在 Flutter 3.16 中，Material 3 現在已默認啟用</li>
-</ul>
-<h3>PinterestDesign</h3>
-<ul>
-<li>13 Dec 2023 14:53:22</li>
-<li><a class="text-blue-500" href="http://x.com/pic/ext_tw_video_thumb%2F1734946486876508160%2Fpu%2Fimg%2FW4RI2XLumy-mTPSt.jpg">图片链接</a></li>
-<li>酷廚潮流的探討</li>
-<li>13 Dec 2023 14:56:05</li>
-<li><a class="text-blue-500" href="http://x.com/pic/ext_tw_video_thumb%2F1734949708731211776%2Fpu%2Fimg%2FqHMAzYg-ukAGUQRi.jpg">图片链接</a></li>
-<li>珍珠潮流的討論</li>
-</ul>
-<h3>Razorpay_Design</h3>
-<ul>
-<li>14 Dec 2023 10:47:37</li>
-<li><a class="text-blue-500" href="http://x.com/pic/card_img%2F1740054423232008192%2FKMrXeFcq%3Fformat%3Djpg%26name%3D800x419">图片链接</a></li>
-<li>我們與 Figma 的第一個案例研究，這真是讓人興奮</li>
-</ul>
-<p>以上內容展示了一些最新的科技设计动态，包括人工智能在设计中的应用、新的设计趋势、Material 3 的更新等。这些推文呈现了科技设计领域的多样性和创新性，对设计师和科技爱好者来说都是非常有价值的资讯。</p>
-        </div><br><a class="text-blue-500" href="/lang/zh-TW_1432003348744470530">more</a>
+            <h1>最新的設計文章</h1>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1743005001557889096#m">04 Jan 2024 20:22:30 @PinterestDesign</a>: 我們很喜歡看到這些！你在 2024 年釘選了什麼？</p>
+<p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1742981931527197012#m">04 Jan 2024 18:50:50 @MicrosoftDesign</a>: 這個月的桌布由 <a class="text-blue-400" href="http://x.com/search?q=%23OliviaXu">#OliviaXu</a> 呈獻 😍。</p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740434190347174281#m">28 Dec 2023 18:07:01 @SalesforceUX</a>: Itai Asseo，Salesforce Ignite 新興科技主管，和他的團隊試驗了一系列頂尖 AI 工具，看看他們在任務上能多快上手。</p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740098733746839762#m">27 Dec 2023 19:54:02 @SalesforceUX</a>: 加入 Salesforce 的設計團隊！查看這些職位。 ⬇️</p>
+<p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1738242997282877755#m">22 Dec 2023 17:00:00 @MicrosoftDesign</a>: 這個假期季節，我們與 <a class="text-blue-400" href="http://x.com/search?q=%23AI">#AI</a> 藝術家 <a class="text-blue-400" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> 合作，重新創造了世界各地的假日回憶的視覺呈現。</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548648857116834#m">20 Dec 2023 19:00:54 @materialdesign</a>: 在 Material Theme Builder 2.0 中更新了主題體驗，假期更加快樂！🎁</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548659972059565#m">20 Dec 2023 19:00:57 @materialdesign</a>: 顏色忠實度來了！</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548666242510935#m">20 Dec 2023 19:00:58 @materialdesign</a>: 還有更多！閱讀部落格上的更新 → <a class="text-blue-400" href="http://goo.gle/3RyaMND">goo.gle/3RyaMND</a></p>
+<p><a class="text-blue-400" href="http://x.com/lyftdesignteam/status/1737165697917333931#m">19 Dec 2023 17:39:12 @lyftdesignteam</a>: 就這樣，一切都結束了！我們以回顧團隊多樣的成就和最難忘的時刻作為 2023 年的結束為結束 👀 祝賀每個讓今年成為最好一年的人！🎉</p>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1736875833506062380#m">18 Dec 2023 22:27:22 @PinterestDesign</a>: 當你聽到像 “[這是] 我參加過的最好的虛擬/實際活動” 的反饋時，你一定做對了一些事情！</p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735772496488497635#m">15 Dec 2023 21:23:06 @SalesforceUX</a>: 2030 年的 AI 世界會是什麼樣子？</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735736482281758732#m">15 Dec 2023 19:00:00 @materialdesign</a>: 對 Material 中的搜索有疑問嗎？我們在這裡回答！</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735343896719176095#m">14 Dec 2023 17:00:00 @materialdesign</a>: 在應用程式中添加搜索？</p>
+<p><a class="text-blue-400" href="http://x.com/Razorpay_Design/status/1735250181875237073#m">14 Dec 2023 10:47:37 @Razorpay_Design</a>: 我們很興奮與 Figma 一起進行我們的第一個案例研究。</p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735036119937339594#m">13 Dec 2023 20:37:01 @SalesforceUX</a>: 準備通過設計/UX 中的見解、機會和聯繫提升你的職業生涯？加入 Salesforce 的專屬人才社群！</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735029292180848685#m">13 Dec 2023 20:09:53 @materialdesign</a>: 搜索欄的結構包括：</p>
+<p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1734981512830013861#m">13 Dec 2023 17:00:01 @MicrosoftDesign</a>: 查看一些我們為 Microsoft Teams 更新的圖像！</p>
+<p><a class="text-blue-400" href="http://x.com/FlutterDev/status/1734679518034457022#m">12 Dec 2023 21:00:00 @FlutterDev</a>: 在 Flutter 3.16 中，Material 3 現在已經默認啟用了。🎉</p>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734949639952945476#m">13 Dec 2023 14:53:22 @PinterestDesign</a>: 誰還對 “Kitschens” 潮流感興趣？</p>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734950323481924000#m">13 Dec 2023 14:56:05 @PinterestDesign</a>: 我們也喜歡 “Be Jelly” 的美學</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619122971906364#m">12 Dec 2023 17:00:01 @materialdesign</a>: Material 3 中的搜索 🔍</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619127799820480#m">12 Dec 2023 17:00:02 @materialdesign</a>: ◼️ 使用搜索欄和視圖來進行搜索查詢的導航。</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619131008418160#m">12 Dec 2023 17:00:03 @materialdesign</a>: 了解更多關於搜索 → <a class="text-blue-400" href="http://goo.gle/3RzR715">goo.gle/3RzR715</a></p>
+<p>以上是最新的一些設計推文。希望這篇文章能幫助你了解當前的設計趨勢和重要消息。</p>
+        </div><br><a class="text-blue-400" href="/lang/zh-TW_1432003348744470530">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -419,20 +352,38 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>推特精選</h1>
-<h2>2024年1月1日</h2>
-<h3>10:00:01 - <a class="text-blue-500" href="http://x.com/ToughSf/status/1741761185102332257#m">@ToughSf</a></h3>
-<p>開始新年的第一天，作者整理了一些最優秀的硬科幻作品。其中包括來自The Lunar War的Altair-class NEMM歐洲護衛艦，具有模塊化任務硬點。作者在推文中列出了相關的藝術作品連結，顯示了這些硬科幻作品的視覺表現。有興趣的讀者可以點擊連結查看更多關於這些作品的資訊。</p>
-<h3>09:57:15 - 13:00:01 - <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741760488487227756#m">@Rainmaker1973</a></h3>
-<p>在接下來的幾條推文中，作者分享了一些關於動物和自然界的有趣事實。例如，動物在鏡子中的反應、海棘星的歷史和蠍子在紫外線下的發光現象。這些推文展示了自然界的多樣性和神奇之處，讓我們更加了解世界上的各種生物。</p>
-<h3>09:24:25 - 08:02:46 - <a class="text-blue-500" href="http://x.com/ArtirKel/status/1741752223988863451#m">@ArtirKel</a></h3>
-<p>這兩則推文則是作者分享了對新年的祝福和美好的期待。在充滿希望和祝福的氛圍中，我們和作者一起期待著2024年的美好。</p>
-<h3>07:31:46 - <a class="text-blue-500" href="http://x.com/ATabarrok/status/1741723877472919625#m">@ATabarrok</a></h3>
-<p>這條推文提到了一個話題，作者似乎在這之前開了一個討論，讓我們感到好奇，並且想要進一步了解討論的內容。</p>
-<h2>2024年1月1日之前</h2>
-<p>在這之前的一些推文中，作者分享了一些關於歷史事件、科學知識和巧妙攝影技巧的內容。這些包括了歷史事件的紀念、科學家和攝影師的介紹，以及世界各地迎接新年的場景。這些推文讓我們了解了更多不同領域的知識和事件，同時也展示了推主對於各種議題和知識的關注和熱愛。</p>
-<p>綜上所述，這些推文展示了作者對於硬科幻作品、自然生物、攝影藝術、科學知識和歷史事件的關注和分享。這種多元的內容讓我們在開始新的一年時，獲得了豐富的知識和靈感，並且感受到了作者對於這些領域的熱情。期待在新的一年中，能夠看到更多精彩的內容和分享。</p>
-        </div><br><a class="text-blue-500" href="/lang/zh-TW_810352678735781888">more</a>
+            <h1>最新推特轉載</h1>
+<h2><a class="text-blue-400" href="http://x.com/lemire/status/1743101391822831616#m">05 Jan 2024 02:45:31@lemire</a></h2>
+<p>🥳
+<img alt="" src="http://x.com/pic/media%2FGDC9efjW0AARUkq.jpg" /></p>
+<p>雅各·勒米爾分享了一張慶祝的表情符號圖片。</p>
+<h2><a class="text-blue-400" href="http://x.com/TacitHaven/status/1743084297437782148#m">05 Jan 2024 01:37:36@TacitHaven</a></h2>
+<p>"Auftragstaktik"</p>
+<p>"指揮任務戰術"</p>
+<h2><a class="text-blue-400" href="http://x.com/AlecStapp/status/1743082204610146751#m">05 Jan 2024 01:29:17@AlecStapp</a></h2>
+<p>NYC教師聯盟聲稱對於交通壅塞收費的環境評估不夠徹底。</p>
+<h2><a class="text-blue-400" href="http://x.com/thedispatch/status/1735426186837393844#m">14 Dec 2023 22:27:00@thedispatch</a></h2>
+<p>歡迎來到 The Dispatch。關於我們正在做什麼以及為什麼我們這樣做的一些內容。</p>
+<h2><a class="text-blue-400" href="http://x.com/NYRangers/status/1743097900643532934#m">05 Jan 2024 02:31:39@NYRangers</a></h2>
+<p>這就是為什麼 Artemi 不能去參加全明星賽🥹 - 但他說"請立即轉推以投票支持我的隊友⤵️"</p>
+<h2><a class="text-blue-400" href="http://x.com/rSanti97/status/1743003683074318434#m">04 Jan 2024 20:17:16@rSanti97</a></h2>
+<p>讀到 James Pethokoukis 的新書中的一個瘋狂觀點</p>
+<h2><a class="text-blue-400" href="http://x.com/pmarca/status/1742994469358874721#m">04 Jan 2024 19:40:39@pmarca</a></h2>
+<p>預測中國全球經濟優勢的專家人數眾多。</p>
+<h2><a class="text-blue-400" href="http://x.com/gojomo/status/1743093044453560650#m">05 Jan 2024 02:12:21@gojomo</a></h2>
+<p>...</p>
+<h2><a class="text-blue-400" href="http://x.com/burgwx/status/1743080077913715117#m">05 Jan 2024 01:20:50@burgwx</a></h2>
+<p>格陵蘭大氣阻塞和阿拉斯加脊增強導致北美的冷空氣核心轉移到加拿大南部。</p>
+<h2><a class="text-blue-400" href="http://x.com/AgnesCallard/status/1743087662800511303#m">05 Jan 2024 01:50:58@AgnesCallard</a></h2>
+<p>“文化中的核心概念是“協調”，即使我們會在不同的均衡狀態中落入某一個而不是其他的原因。文化指向相同遊戲的不同均衡點之間的差異。”</p>
+<h2><a class="text-blue-400" href="http://x.com/asymmetricinfo/status/1743088027306492246#m">05 Jan 2024 01:52:25@asymmetricinfo</a></h2>
+<p>也許我只是變得古怪和不高興了，但我真的覺得我以前遇到過更好的惡作劇。</p>
+<h2><a class="text-blue-400" href="http://x.com/RuxandraTeslo/status/1742928913876324660#m">04 Jan 2024 15:20:09@RuxandraTeslo</a></h2>
+<p>我不再是一個“文化孤僻者”：在這篇文章中，我論證了想法的重要性。我擔心對科學進步的悲觀和安全主義文化的影響。我將這一切都與 Jonathan Haidt 對“焦慮一代”的假設聯繫起來。</p>
+<ul>
+<li>此為自動摘要，請移步原始推特了解詳情。</li>
+</ul>
+        </div><br><a class="text-blue-400" href="/lang/zh-TW_810352678735781888">more</a>
     </div>
 
 </div>
@@ -485,134 +436,6 @@
         <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
     </div>
 </div>
-
-<script>
-document.querySelectorAll('button.subx').forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    console.log(this.value);
-    event.preventDefault();
-    document.querySelector('input[name="target_id"]').value = this.value;
-  });
-});
-
-
-    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
-      // 阻止表单的默认提交行为
-      event.preventDefault();
-
-      // 获取当前日期对象
-      var currentDate = new Date();
-
-      // 获取用户选择的时间
-      var mailTimeValue = document.getElementById('mail-time').value;
-
-      // 将用户选择的时间与当前日期拼接成一个字符串
-      var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
-
-      // 将拼接后的字符串转换为时间戳
-      var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
-
-      // 判断 selectedDateTimeTimestamp 是否小于当前时间
-      if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
-        // 如果是，则增加一天
-        selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
-      }
-
-      // 将增加一天后的时间戳设置到隐藏的 input 元素中
-      document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
-
-      // 提交表单
-      this.submit();
-    });
-
-    var userLang = navigator.language || navigator.userLanguage;
-    var emailInput = document.querySelector('input[name="email"]');
-    var targetIdInput = document.querySelector('input[name="target_id"]');
-    var timeLabel = document.getElementById("time-label");
-    var subscribeBtn = document.getElementById("subscribe-btn");
-    var languageSelect = document.getElementById("language-select");
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-    const languageData = {
-         "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
-         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新设定", "Twitter列表的GPT订阅"],
-         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Setting", "GPT Subscription for Twitter List"],
-         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新設定", "Twitter列表的GPT訂閱"],
-         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新設定", "TwitterリストのGPTサブスクリプション"],
-         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 설정", "Twitter 목록을 위한 GPT 구독"],
-         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar configuración", "Suscripción GPT para la lista de Twitter"],
-         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar configuração", "Assinatura GPT para Lista do Twitter"],
-         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Einstellung", "GPT-Abonnement für Twitter-Liste"],
-         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour la configuration", "Abonnement GPT pour la liste Twitter"],
-         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / تحديث الإعداد","اشتراك GPT لقائمة تويتر"],
-         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Pengaturan", "Langganan GPT untuk Daftar Twitter"],
-         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Tetapan", "Langganan GPT untuk Senarai Twitter"],
-         "tl": ["Maglagay ng iyong email", "Maglagay ng ID ng target list", "Araw-araw na Oras ng Pag-push", "Mag-subscribe / Mag-update ng Oras", "GPT Subscription para sa Twitter List"],
-         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật cài đặt", "Đăng ký GPT cho Danh sách Twitter"],
-         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj ustawienia", "Subskrypcja GPT dla listy Twitter"],
-         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Instelling", "GPT-abonnement voor Twitter-lijst"]
-    };
-
-
-    // Function to set placeholders and titles based on language
-    function setLanguage(selectedLanguage) {
-     const placeholders = languageData.columns.reduce((acc, column) => {
-      acc[column] = languageData[selectedLanguage][languageData.columns.indexOf(column)];
-      return acc;
-     }, {});
-
-     emailInput.placeholder = placeholders.emailPlaceholder;
-     targetIdInput.placeholder = placeholders.targetIdPlaceholder;
-     timeLabel.textContent = placeholders.timeLabel;
-     subscribeBtn.textContent = placeholders.subscribeBtn;
-     document.getElementById("title").textContent = placeholders.title;
-    }
-
-    // Initial set of placeholders and titles
-    setLanguage(userLang);
-    var defaultLanguageInput = document.getElementById("current-language");
-    defaultLanguageInput.value = userLang;
-
-    // Toggle language function
-    languageSelect.addEventListener("change", function () {
-      var selectedLanguage = languageSelect.value;
-      setLanguage(selectedLanguage);
-      // 更新隐藏 input 的值
-      var currentLanguageInput = document.getElementById("current-language");
-      currentLanguageInput.value = selectedLanguage;
-    });
-</script>
-
 </body>
-
+    <script src="/static/index.js"></script>
 </html>

@@ -5,38 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-
-    </style>
+<link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
 <div class="sidebar w-full max-w-sm items-center">
     <div>
@@ -62,12 +34,11 @@
         <a href="/lang/vi" class="border-b-2 mr-2">Tiếng Việt</a>
         <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
-
     </p>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
     
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -80,53 +51,44 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>2024年の新年、テクノロジー業界の人たちはどんなことを呟いた？</h1>
-<p><a class="text-blue-500" href="http://x.com/gdb/status/1741718045007999222#m">01 Jan 2024 07:08:36@gdb</a>
-NYEコーディングマラソン中の現在の状況：<a class="text-blue-500" href="http://x.com/badphilosopher" title="Matt Brockman">@badphilosopher</a> と<a class="text-blue-500" href="http://x.com/theannabrockman" title="A">@theannabrockman</a> と一緒に。今年で最もリラックスできる瞬間。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741708146530226285#m">01 Jan 2024 06:29:16@ylecun</a>
-本の著者のほんの一部しか本の売り上げで大金を得られない。</p>
-<p><a class="text-blue-500" href="http://x.com/PessimistsArc/status/1741500062859940008#m">31 Dec 2023 16:42:25@PessimistsArc</a>
-今日の美点は、100年前の欠点だった。過去の新年の決意事項と今日の決意事項は逆だった。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741700991366443437#m">01 Jan 2024 06:00:50@ylecun</a>
-知識へのアクセスがより良くなりました。</p>
-<p><a class="text-blue-500" href="http://x.com/ObsDelphi/status/1741197741114486913#m">30 Dec 2023 20:41:06@ObsDelphi</a>
-ワシントン・ポストがフランスの政治を不安定にするロシアの戦略を明らかにしました。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741695807366086886#m">01 Jan 2024 05:40:14@ylecun</a>
-誰がコーヒーが社会の結び目を壊すと考えていたのか😨☕</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741690025576726990#m">01 Jan 2024 05:17:15@ylecun</a>
-ドゥームのない新年をお祝い🍾🥂</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741689623607198171#m">01 Jan 2024 05:15:39@ylecun</a>
-タイプライターは気にするな、P(doom | PowerPoint) はどうなの？</p>
-<p><a class="text-blue-500" href="http://x.com/perplexity_ai/status/1741676770321907906#m">01 Jan 2024 04:24:35@perplexity_ai</a>
-Perplexityからの新年のご挨拶！2024年は洞察と答えの年にしましょう。2か月のProプランの特典はもう2日で終了です。知識を得て新年を始めましょう。</p>
-<p><a class="text-blue-500" href="http://x.com/BraceSproul/status/1741640130375610757#m">01 Jan 2024 01:58:59@BraceSproul</a>
-ローカルLLMsとJSONレスポンスが必要なプロジェクトに取り組んでいます。Mixtralは、単純で有効なJSONレスポンスを返すのに非常に優れているようです(単一のキーJSONレスポンスを要求した場合、86/86)。</p>
-<p><a class="text-blue-500" href="http://x.com/jerryjliu0/status/1741635872192356803#m">01 Jan 2024 01:42:04@jerryjliu0</a>
-LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持っており、私たちのmongodb-demoリポジトリは設定面において最も包括的の一つです。</p>
-<p><a class="text-blue-500" href="http://x.com/ylecun/status/1741630996426993912#m">01 Jan 2024 01:22:42@ylecun</a>
-真のアメリカ芸術は、かつて社会の結び目を壊し青少年を堕落させると考えられていました。</p>
-<p><a class="text-blue-500" href="http://x.com/PessimistsArc/status/1741509026377068906#m">31 Dec 2023 17:18:02@PessimistsArc</a>
-本当に！</p>
-<p><a class="text-blue-500" href="http://x.com/jerryjliu0/status/1741629147452153958#m">01 Jan 2024 01:15:21@jerryjliu0</a>
-2024年、RAGを少しハック感のないものにしましょう。</p>
-<p><a class="text-blue-500" href="http://x.com/llama_index/status/1741562214853837296#m">31 Dec 2023 20:49:23@llama_index</a>
-フルスタックRAGスターターパック🔎📦- <a class="text-blue-500" href="http://x.com/MongoDB" title="MongoDB">@MongoDB</a>, Flask, <a class="text-blue-500" href="http://x.com/render" title="Render">@render</a>, and <a class="text-blue-500" href="http://x.com/nextjs" title="Next.js">@nextjs</a> </p>
-<p><a class="text-blue-500" href="http://x.com/francoisfleuret/status/1741481952618676698#m">31 Dec 2023 15:30:27@francoisfleuret</a>
-ワオ、<a class="text-blue-500" href="http://x.com/PyTorch" title="PyTorch">@pytorch</a>のinline C++拡張機能はそれほど簡単なものなのか？とても感動しています。</p>
-<p><a class="text-blue-500" href="http://x.com/HardKothari/status/1741610913256398886#m">01 Jan 2024 00:02:53@HardKothari</a>
-2023年は私にとって以下のようなものでした：</p>
-<p><a class="text-blue-500" href="http://x.com/jerryjliu0/status/1741610890854863001#m">01 Jan 2024 00:02:48@jerryjliu0</a>
-❤️</p>
-<p><a class="text-blue-500" href="http://x.com/jerryjliu0/status/1741610167593320530#m">31 Dec 2023 23:59:56@jerryjliu0</a>
-2023：<a class="text-blue-500" href="http://x.com/llama_index" title="LlamaIndex 🦙">@llama_index</a></p>
-<p><a class="text-blue-500" href="http://x.com/disiok/status/1741596106902196649#m">31 Dec 2023 23:04:03@disiok</a>
-2023年はたくさんの“やってみよう”があった！</p>
-<p>以上が2024年の新年におけるテクノロジー業界の一部の考えや発言です。各人の関心は多岐にわたり、新しい年に向けての様々な展望や願望が反映されています。</p>
-        </div><br><a class="text-blue-500" href="/lang/ja_1733652180576686386">more</a>
+            <h1>最新のテクノロジーに関するツイート</h1>
+<p><a class="text-blue-400" href="http://x.com/sama/status/1743095010080546921#m">05 Jan 2024 02:20:10@sama</a>: "i’m on a 34-year bulk" -<a class="text-blue-400" href="http://x.com/jaltma" title="Jack Altman">@jaltma</a> eating a cupcake and piece of cake at the same time</p>
+<p>ジャック・アルトマン氏が「34年間の大食い中」とツイートしました。彼はカップケーキとケーキを同時に食べています。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDC3q0DaUAAKhot.jpg" /> </p>
+<p><a class="text-blue-400" href="http://x.com/jerryjliu0/status/1743087302363250782#m">05 Jan 2024 01:49:32@jerryjliu0</a>: RAGをより洗練されたものにするための良い方法：文脈が不当に分割されないようにするための手順を踏むこと。</p>
+<p><a class="text-blue-400" href="http://x.com/llama_index/status/1743044758329831886#m">x.com/llama_index/status/1743044758329831886#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1743080566373892375#m">05 Jan 2024 01:22:46@lateinteraction</a>: 素晴らしい仕事と迅速なリリースに感謝します、<a class="text-blue-400" href="http://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a>！</p>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1743040090400858288#m">x.com/lateinteraction/status/1743040090400858288#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1743081038044340467#m">05 Jan 2024 01:24:39@lateinteraction</a>: 素晴らしい仕事と迅速なリリースに感謝します、<a class="text-blue-400" href="http://x.com/hwchase17" title="Harrison Chase">@hwchase17</a>！</p>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1736804963760976092#m">x.com/lateinteraction/status/1736804963760976092#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/sama/status/1743080079515959364#m">05 Jan 2024 01:20:50@sama</a>: 最近の経験について話すことが不快で、しばしば報復やキャリアの見通しが損なわれることを恐れて、私が話したテクノロジーコミュニティのイスラム教徒やアラブ人（特にパレスチナ人）の同僚。</p>
+<p><a class="text-blue-400" href="http://x.com/austinbv/status/1743033136160645463#m">04 Jan 2024 22:14:18@austinbv</a>: 面白い動画についてのチュートリアルを終えたところです。<a class="text-blue-400" href="http://x.com/LangChainAI" title="LangChain">@LangChainAI</a>と一緒にYouTubeの説明文やタイトルなどを作成するためのRAGを作りました。</p>
+<p><img alt="" src="http://x.com/pic/card_img%2F1742984293192753152%2F_DfW0lDu%3Fformat%3Djpg%26name%3D800x320_1" />  </p>
+<p><a class="text-blue-400" href="http://x.com/llama_index/status/1743076579302105338#m">05 Jan 2024 01:06:55@llama_index</a>: RAGatouille (<a class="text-blue-400" href="http://x.com/bclavie" title="Benjamin Clavié">@bclavie</a>)は、より高度な検索モデルであるColBERTを簡単に使用できる素晴らしい方法です。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCmqKuaoAAOLPR.png" />  </p>
+<p><a class="text-blue-400" href="http://x.com/jerryjliu0/status/1743077679258320925#m">05 Jan 2024 01:11:18@jerryjliu0</a>: RAGを構築するすべての人が密な埋め込み検索を使用していますが、単にコサイン距離をとるだけでは細かい類似性を捉えることができません。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCnOgZbMAABpkM.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/llama_index/status/1743044758329831886#m">04 Jan 2024 23:00:29@llama_index</a>: 分割された不格好なセクションになるのではなく、連続したドキュメントやコードブロックを保存できる検索強化チャットボットを構築したい場合は、NVIDIA Generative AI Examplesリポジトリの高度なRAGクックブックをご覧ください。</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCJ4I1aIAAcqsy.jpg" /></p>
+<p><a class="text-blue-400" href="http://x.com/hwchase17/status/1743070211379786045#m">05 Jan 2024 00:41:37@hwchase17</a>: 本当に素晴らしい動画です！</p>
+<p><a class="text-blue-400" href="http://x.com/LangChainAI/status/1743070051991998842#m">x.com/LangChainAI/status/1743070051991998842#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/LangChainAI/status/1743070051991998842#m">05 Jan 2024 00:40:59@LangChainAI</a>: 🦜🏗️オープンAIカスタムRAGの構築方法 LangChainとともに：📹動画とチャットを使った究極のチュートリアル！</p>
+<p><img alt="" src="http://x.com/pic/card_img%2F1742984293192753152%2F_DfW0lDu%3Fformat%3Djpg%26name%3D800x320_1" /></p>
+<p><a class="text-blue-400" href="http://x.com/Gradio/status/1743063380087505115#m">05 Jan 2024 00:14:29@Gradio</a>: 𝚐𝚛𝚊𝚍𝚒𝚘4.13の発表 🚀🚀</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCay_yawAAJrXC.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/osanseviero/status/1743027658961637632#m">04 Jan 2024 21:52:32@osanseviero</a>: AI Tube - たくさんの機械学習生成された動画を発見する</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDB5p4LWwAAC66M.jpg" />  </p>
+<p><a class="text-blue-400" href="http://x.com/ylecun/status/1743048968118919471#m">04 Jan 2024 23:17:12@ylecun</a>: <a class="text-blue-400" href="http://x.com/HachetteUS" title="Hachette Book Group">@HachetteUS</a> , <a class="text-blue-400" href="http://x.com/HachetteLivre" title="Hachette Livre">@HachetteLivre</a> , <a class="text-blue-400" href="http://x.com/GroupeLagardere" title="Lagardère">@GroupeLagardere</a> , <a class="text-blue-400" href="http://x.com/arnaudlagardere" title="Arnaud Lagardère">@arnaudlagardere</a>、何らかの手段で<a class="text-blue-400" href="http://x.com/internetarchive" title="Internet Archive">@internetarchive</a>に対する攻撃をやめてください。</p>
+<p><a class="text-blue-400" href="http://x.com/internetarchive/status/1740837746632237301#m">x.com/internetarchive/status/1740837746632237301#m</a></p>
+<p><a class="text-blue-400" href="http://x.com/hwchase17/status/1743029845297401882#m">04 Jan 2024 22:01:13@hwchase17</a>: しばらくColBERTを試してみたかったので、これはとても簡単で、やらない理由がありませんでした！</p>
+<p><a class="text-blue-400" href="http://x.com/bclavie/status/1742950315278672040#m">x.com/bclavie/status/1742950315278672040#m</a></p>
+<p><img alt="" src="http://x.com/pic/media%2FGDB8GnIbEAESpUH.png" /></p>
+<p>この記事は、最新のテクノロジーに関する興味深いツイートをまとめたものです。特に検索モデルやAIに関する情報が多く含まれており、最新の動向について理解するのに役立ちます。</p>
+        </div><br><a class="text-blue-400" href="/lang/ja_1733652180576686386">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -140,27 +102,103 @@ LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
             <h1>最新のツイートまとめ</h1>
-<h2>28 Jul 2022 11:42:37 - @dickiebush</h2>
-<p>私は500人の伝説的な作家の執筆ルーチンを調査しました。</p>
-<p>結果は、すぐに書くことが簡単だとわかりました―毎日これら6つのことをすれば。</p>
-<h2>01 Jan 2024 08:34:52 - @AliAbdaal</h2>
-<p>「自分にできる」と信じることが、実際にそれを成し遂げる最初の一歩です。</p>
-<h2>01 Jan 2024 02:50:08 - @sweatystartup</h2>
-<p>多くの裕福な男性が、数日間ひどくなったときに家族を安全かつ食べ物を提供できないことに気づかされます。</p>
-<h2>31 Dec 2023 23:19:09 - @sweatystartup</h2>
-<p>ゲイリーはいい人だ！実際に彼と会ったことがある。</p>
-<h2>01 Jan 2024 01:36:42 - @dickiebush</h2>
-<p>どんなトピックにでも専門家になる最も早い方法は、非常に具体的になって、世界で唯一そのことについて話せるようになることです。</p>
-<h2>31 Dec 2023 11:36:34 - @dickiebush</h2>
-<p>1月のShip 30コホートに参加するのに残り15時間！</p>
-<h2>31 Dec 2023 22:12:45 - @josiahfitness</h2>
-<p>私は@dickiebush と@Nicolascole77 と一緒にコホートに参加することにしました。</p>
-<p>以上は最新の推文の一部です。それぞれの発信者からの貴重なメッセージが含まれており、人々にとって刺激的で価値のある情報となっています。これらのメッセージは日常生活や成功についての示唆に富んでおり、十分な研究と理解が必要です。</p>
-        </div><br><a class="text-blue-500" href="/lang/ja_1365676237558059010">more</a>
+<h2>2024年1月5日</h2>
+<ul>
+<li><strong>02:34:31</strong>  </li>
+<li><strong>ユーザー:</strong> @sweatystartup  </li>
+<li><a class="text-blue-400" href="http://x.com/sweatystartup/status/1743098623393505519#m">ツイートのリンク</a>  </li>
+<li>
+<p>"なぜホテルでスマホでチェックインして、直接部屋に行けないんだろう？<br />
+  予約は済んでいるし、情報も持っているし、ポケットにはスマホもあるのに。<br />
+  フロントで10分以上無駄にして、プラスチックのカードをもらって、既に持っているクレジットカードを渡さなきゃならないのは馬鹿げている！"</p>
+</li>
+<li>
+<p><strong>01:26:41</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @jackbutcher  </li>
+<li>
+<p>"proofの概念"</p>
+</li>
+<li>
+<p><strong>01:30:30</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @businessbarista  </li>
+<li>
+<p>"この全国選手権ゲームのストーリーは、何年も語り草になるだろう。"  </p>
+</li>
+<li>
+<p><strong>00:39:44</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @businessbarista  </li>
+<li>
+<p>"フルコンテキスト:<br />
+<a class="text-blue-400" href="http://x.com/businessbarista/status/1742590471434543269#m">x.com/businessbarista/status/1742590471434543269#m</a>"</p>
+</li>
+<li>
+<p><strong>00:04:41</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @BoredOpepen  </li>
+<li><a class="text-blue-400" href="http://x.com/BoredOpepen/status/1743060916416229520#m">ツイートのリンク</a>  </li>
+<li>"オレンジは新しいブラックだ。"</li>
+</ul>
+<h2>2024年1月4日</h2>
+<ul>
+<li><strong>23:50:22</strong>  </li>
+<li><strong>ユーザー:</strong> @lukeweaver_eth  </li>
+<li><a class="text-blue-400" href="http://x.com/lukeweaver_eth/status/1743057313584582744#m">ツイートのリンク</a>  </li>
+<li>
+<p>"OGs got me vibing<br />
+<a class="text-blue-400" href="http://x.com/jackbutcher/status/1743042940946067597#m">x.com/jackbutcher/status/1743042940946067597#m</a>"  </p>
+</li>
+<li>
+<p><strong>23:41:07</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @checksbot  </li>
+<li><a class="text-blue-400" href="http://x.com/checksbot/status/1743054983560364167#m">ツイートのリンク</a>  </li>
+<li>
+<p>"✅ Check 200の新しいコンポジット<br />
+<img alt="" src="http://x.com/pic/media%2FGDCTRQhWkAAx6Z8.jpg" />"  </p>
+</li>
+<li>
+<p><strong>23:20:55</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @EveD  </li>
+<li><a class="text-blue-400" href="http://x.com/EveD/status/1743049901389337022#m">ツイートのリンク</a>  </li>
+<li>
+<p>"This is shocking, and petty, and actually quite horrendous. And she handled it so extremely well. (They're actually after her husband). 🤮🤮<br />
+<a class="text-blue-400" href="http://x.com/NeriOxman/status/1742993073078947843#m">x.com/NeriOxman/status/1742993073078947843#m</a>"</p>
+</li>
+<li>
+<p><strong>21:14:11</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @jackbutcher  </li>
+<li><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743018009550020963#m">ツイートのリンク</a>  </li>
+<li>
+<p><img alt="" src="http://x.com/pic/media%2FGDBxpBnXUAAD28a.png" /><br />
+<img alt="" src="http://x.com/pic/media%2FGDBxpCMXYAAgXSu.png" />  </p>
+</li>
+<li>
+<p><strong>20:50:19</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @jackbutcher  </li>
+<li>
+<p>"toying with treatments for an opepen set from the original edition pallet<br />
+<img alt="" src="http://x.com/pic/media%2FGDBp9jMXkAA767y.png" /><br />
+<img alt="" src="http://x.com/pic/media%2FGDBp9jMWkAIBSuA.png" />"  </p>
+</li>
+<li>
+<p><strong>20:41:42</strong>  </p>
+</li>
+<li><strong>ユーザー:</strong> @jalil_eth  </li>
+<li>"transparency:<br />
+<a class="text-blue-400" href="http://x.com/coindisc/status/1742932934611579237#m">x.com/coindisc/status/1742932934611579237#m</a>"  </li>
+</ul>
+<p>以上のツイートをまとめると、SweatyStartupさんがホテルのチェックインシステムに対して疑問を投げかけています。JackButcherさんは「proofの概念」という内容のツイートをしています。BusinessBaristaさんは全国選手権ゲームについての話題を投稿しています。BoredOpepenさんは「Orange is the new black」という内容の投稿をしています。その他、さまざまなトピックについてのツイートが含まれています。</p>
+        </div><br><a class="text-blue-400" href="/lang/ja_1365676237558059010">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -173,36 +211,59 @@ LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>2024年の最初のツイート</h1>
-<p>2019年にTwitterから改名されたX（旧Twitter）の最新バージョンには、日本のウェブで最も信頼されている生の地震/災害情報源の一つであるNERVが、APIの制限を受けてしまいました。これは人々の安全を危険にさらす可能性がある大きな問題です。</p>
-<p>2023年8月1日11:43:01、Blockstreamは「ブロックストリームトーク＃26 - Simplicity、ビットコインの最後のソフトフォーク？」とのツイートを投稿しました。写真付きの投稿です。</p>
-<p>2024年1月1日08:38:39、loppは米国政府が2014年以来185,000 BTCを押収し、売却していたことを紹介しています。彼らがHODLを選んでいたら、どれだけ良い結果になったか見てみましょう。</p>
-<p>2024年1月1日07:56:06、mogelinaはNHKのテレビ放送のスクリーンショットを共有しています。 </p>
-<p>2024年1月1日06:28:20、WhalePandaは「Happy New Year everyone」というメッセージとともにビデオを投稿しています。</p>
-<p>2023年12月31日21:11:53、OyasumiAfは「Absolutely incredible writing. No notes.」とのツイートをしています。写真付きの投稿です。</p>
-<p>2024年1月1日04:51:32、TuurDemeesterは「Happy New Year everyone!」というメッセージと共に2024年に対する興奮を表現しています。</p>
-<p>2024年1月1日04:15:36、loppはCasaのエンジニアが3つの人気あるElectrumサーバーのパフォーマンスをテストした結果を共有しています。写真付きの投稿です。</p>
-<p>2024年1月1日00:07:15、csuwildcatはワクチン接種に関する投稿をしています。</p>
-<p>2023年12月31日13:44:36、saylorは「今年、ビットコインがマイクロストラテジーを支えた」と投稿しています。写真付きの投稿です。</p>
-<p>2024年1月1日01:54:03、nvkは「これが彼が人間に対して過激化した瞬間でした。」とのメッセージと共にビデオを投稿しています。</p>
-<p>2023年12月30日20:24:31、loppはBitcoin Twitterについて興味深いことをツイートしました。</p>
-<p>2024年1月1日01:53:06、nvkは「人々は何かを信じる必要があるんでしょう。」と投稿しています。</p>
-<p>2024年1月1日01:34:42、cypherpunkstoreは「Cypherpunk.Storeチームから2024年の新年おめでとうございます！」とのメッセージと共に写真を投稿しています。 </p>
-<p>2023年12月31日11:40:13、jxpcsnmzはBitcoinに関する投稿をしています。</p>
-<p>2024年1月1日01:43:23、peterktoddはBRC20スタイルのプロトコルに関するツイートをしています。</p>
-<p>2024年1月1日01:23:13、loppはリックに対する予測を投稿しています。</p>
-<p>2024年1月1日01:18:06、COLDCARDwalletは顧客に感謝のメッセージを送りつつ、写真を共有しています。</p>
-<p>2024年1月1日00:51:46、hodling_timeは「サイコパスも…」とのツイートをしています。</p>
-<p>2024年1月1日00:46:28、Excellionは「ビットコインファンの皆さん、2024年あけましておめでとうございます！」とメッセージを投稿しました。</p>
-<p>2023年12月31日20:56:05、Mandrikは「誰か私を助けてビットコインのバクラバの絵を彫るお金を作る手伝いをしてください」とツイートしました。</p>
-<p>2023年12月31日18:56:36、notgrublesは「魔法使いとして、2024年に<a class="text-blue-500" href="http://x.com/Liquid_BTC" title="Liquid Network 🌊">@Liquid_BTC</a>と楽しむことを楽しみにしています。」と投稿しています。</p>
-<p>2024年1月1日00:24:28、jimmysongは「オルトコインリデュークス」とのツイートをしました。</p>
-<p>以上の投稿を見ると、2024年の人々の様々な興味や関心がうかがえます。ビットコインやテクノロジーに関する内容や、新年の挨拶が多くあり、各々が自分の分野や趣味について発信している様子が窺えます。特に、ビットコインやテクノロジーに関する投稿が多いことが注目されます。</p>
-        </div><br><a class="text-blue-500" href="/lang/ja_967467772341923840">more</a>
+            <h1>最新のツイート</h1>
+<h2>05 Jan 2024 02:20:46</h2>
+<ul>
+<li>Author: @lopp</li>
+<li><a class="text-blue-400" href="http://x.com/lopp/status/1743095160408305664#m">Tweet Link</a></li>
+<li>Content: もしあなたがメンプールが嫌いなら、単純にそれをオフにすればいい😉</li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDC3z8LWMAAidjg.jpg" /></li>
+</ul>
+<h2>05 Jan 2024 02:14:56</h2>
+<ul>
+<li>Author: @MrChrisEllis</li>
+<li><a class="text-blue-400" href="http://x.com/MrChrisEllis/status/1743093692695486805#m">Tweet Link</a></li>
+<li>Content: ハイパーインフレ時代には、中流階級の人々が資産を取引して購買力を維持しようとするため、税法の改革が必要かもしれません。</li>
+</ul>
+<h2>05 Jan 2024 02:06:21</h2>
+<ul>
+<li>Author: @nic__carter</li>
+<li><a class="text-blue-400" href="http://x.com/nic__carter/status/1743091532461220051#m">Tweet Link</a></li>
+<li>Content: モサドが暗号通貨を使ってハマスを追跡している。リズ・ウォーレンもこれについて不満を言う方法を見つけるだろう。</li>
+</ul>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDC0gUeWcAAxqEC.jpg" />
+  - <a class="text-blue-400" href="https://www.reuters.com/world/middle-east/turkey-detains-33-people-suspected-espionage-israels-mossad-state-media-2024-01-02/">リンク</a></p>
+<h2>05 Jan 2024 01:26:59</h2>
+<ul>
+<li>Author: @SarahAshtonLV</li>
+<li><a class="text-blue-400" href="http://x.com/SarahAshtonLV/status/1743081625917739459#m">Tweet Link</a></li>
+<li>Content: ロシア人がキューバ、メキシコを経由してアメリカに入り、亡命の聴聞会を受ける資格を得た後、プーチンに戻りたいと言い出した。</li>
+</ul>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCrf82XkAAGVAB.jpg" /></p>
+<h2>05 Jan 2024 01:14:10</h2>
+<ul>
+<li>Author: @BitcoinMagazine</li>
+<li><a class="text-blue-400" href="http://x.com/BitcoinMagazine/status/1743078402586710369#m">Tweet Link</a></li>
+<li>Content: JUST IN: <a class="text-blue-400" href="http://x.com/search?q=%23Bitcoin">#Bitcoin</a>のハルビングまで残り100日を切りました 💥</li>
+</ul>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCoKNvXwAAAWmS.jpg" /></p>
+<h2>05 Jan 2024 01:34:39</h2>
+<ul>
+<li>Author: @BitcoinMagazine</li>
+<li><a class="text-blue-400" href="http://x.com/BitcoinMagazine/status/1743083558326153306#m">Tweet Link</a></li>
+<li>Content: ハルビング時のビットコインの価格を当てて、1 <a class="text-blue-400" href="http://x.com/search?q=%23BTC">#BTC</a> の報酬を獲得しましょう！ 🚀</li>
+</ul>
+<p><img alt="Image" src="http://x.com/pic/card_img%2F1741924667416363008%2F7iWL_lfq%3Fformat%3Dpng%26name%3D800x419" /></p>
+<p>（以下省略）</p>
+<h2>コメント</h2>
+<ul>
+<li>ツイートには暗号通貨や税法改革、国際関係など様々な話題が含まれています。これらの議論は暗号通貨や経済に興味のある読者にとって興味深いものであるでしょう。</li>
+</ul>
+        </div><br><a class="text-blue-400" href="/lang/ja_967467772341923840">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -215,125 +276,72 @@ LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>2024年1月1日のツイートまとめ</h1>
-<ul>
-<li>11:42:37@dickiebush</li>
-<li>500人の伝説の作家の執筆ルーティンを研究しました。<br />
-  結局、素晴らしい執筆はシンプルなものです - 毎日これらの6つのことをするだけでいいことが分かった</li>
-<li>
-<p>これは興味深い研究内容です。日常的な習慣やルーティンが、偉大な作家たちの執筆にどのような影響を与えたのか興味深いですね。</p>
-</li>
-<li>
-<p>09:06:53@swyx</p>
-</li>
-<li>
-<p>Happy new year!🎉</p>
-</li>
-<li>
-<p>09:14:50@swyx</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/chefjeffsf" title="chef jeff">@chefjeffsf</a>の取り組みについて</li>
-<li><a class="text-blue-500" href="http://x.com/thomasschulzz" title="Thomas Schulz">@thomasschulzz</a>への健康目標</li>
-<li>
-<p>新年の抱負や目標を共有するツイートです。自分の目標を公言することで、より実現に向けたモチベーションが高まることがありますね。</p>
-</li>
-<li>
-<p>09:21:53@swyx</p>
-</li>
-<li>3年前の上司についてのツイート</li>
-<li>
-<p>リンク先の情報を参考にされている様子です。</p>
-</li>
-<li>
-<p>07:34:51@neuranne</p>
-</li>
-<li>経験から学ぶことの大切さについてのツイート</li>
-<li>
-<p>反省を通じてより深い学びが得られるということに同意します。</p>
-</li>
-<li>
-<p>09:01:51@threehourcoffee</p>
-</li>
-<li>習慣の構築についての自己啓発的なツイート</li>
-<li>
-<p>目標達成に焦点を当てることで、習慣の構築がよりスムーズになることがあります。</p>
-</li>
-<li>
-<p>08:37:53@swyx</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/simonw/status/1741612289432998051#m">@simonw</a>のツイートについて</li>
-<li>AIに関する情報についてのリンク</li>
-<li>
-<p>AI 技術についての議論が行われているようです。</p>
-</li>
-<li>
-<p>07:32:10@Suhail</p>
-</li>
-<li>新たな挑戦について</li>
-<li>
-<p>新たな目標に向かっての始動について共有しています。</p>
-</li>
-<li>
-<p>05:00:40@pitbull</p>
-</li>
-<li>新年の挨拶と意気込みについて</li>
-<li>
-<p>ポジティブなエネルギーを感じさせるツイートです。</p>
-</li>
-<li>
-<p>06:37:02@swyx</p>
-</li>
-<li>AI OS について</li>
-<li>
-<p>技術的な情報についての備忘録のようなツイート</p>
-</li>
-<li>
-<p>06:19:29@marckohlbrugge</p>
-</li>
-<li>ウェブサイトについてのエピソード</li>
-<li>
-<p>技術的な問題に関する共有がされています。</p>
-</li>
-<li>
-<p>05:44:21@MeetKevon</p>
-</li>
-<li>顧客サービスに関するエピソードについて</li>
-<li>
-<p>顧客との良好な関係について共有するツイートです。</p>
-</li>
-<li>
-<p>04:36:20@Shpigford</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/maybe" title="Maybe">@maybe</a>に関する疑問について</li>
-<li>
-<p>新しいアイデアについての投稿です。</p>
-</li>
-<li>
-<p>03:09:12@levelsio</p>
-</li>
-<li><a class="text-blue-500" href="http://x.com/awakenings" title="Awakenings">@awakenings</a>からの新年の挨拶</li>
-<li>
-<p>良いスタートを切るための新年の挨拶です。</p>
-</li>
-<li>
-<p>03:04:44@Suhail</p>
-</li>
-<li>新しい年に向けての挨拶とエピソードについて</li>
-<li>
-<p>自身の人生やキャリアにおける意欲について共有しています。</p>
-</li>
-<li>
-<p>02:43:06@gaby_goldberg</p>
-</li>
-<li>新しい年に向けた挨拶と今後の活動について</li>
-<li>今後の活動に期待を寄せる投稿です。</li>
-</ul>
-<p>以上、2024年1月1日のツイートまとめでした。日本語に翻訳してみました。</p>
-        </div><br><a class="text-blue-500" href="/lang/ja_1283027505297985536">more</a>
+            <h1>2024年1月5日のツイート</h1>
+<p><a class="text-blue-400" href="http://x.com/dannypostmaa/status/1743102717856518357#m">05 Jan 2024 02:50:47@dannypostmaa</a>: 引っ越しまであと1週間 🤩</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDC6f09bQAAVlvC.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGDC6jMHa0AAOHwk.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGDC-pc5bgAA5trQ.jpg" />  </p>
+<p>引っ越しまであと1週間ということで、楽しみな様子が伝わってきますね。</p>
+<p><a class="text-blue-400" href="http://x.com/thepatwalls/status/1743096037391126648#m">05 Jan 2024 02:24:15@thepatwalls</a>: .<a class="text-blue-400" href="http://x.com/elonmusk" title="Elon Musk">@elonmusk</a> これはおそらく見られないでしょう…</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDC1diTWkAAIvwm.jpg" />  </p>
+<p>エロン・マスクへのメンションが含まれていますが、具体的な内容は不明です。</p>
+<p><a class="text-blue-400" href="http://x.com/BoredOpepen/status/1743060916416229520#m">05 Jan 2024 00:04:41@BoredOpepen</a>: オレンジは新しいブラック</p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCYqBCbQAAwBGO.png" />  </p>
+<p>何か象徴的なことを言っているようですが、具体的な意味は分かりません。</p>
+<p><a class="text-blue-400" href="http://x.com/anuatluru/status/1743028467241791933#m">04 Jan 2024 21:55:45@anuatluru</a>: もしもあなたが野心的な人でありながら同じような野心的な人々がいない場所に住んでいるなら、最初にすべきことは自分の考えをオンラインで共有し、他の同様に野心的な人々が集まる場所で発信することです</p>
+<p>野心的な人々へのメッセージが含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/5harath/status/1743075127984542060#m">05 Jan 2024 01:01:09@5harath</a>: 重大なニュース 🚨  </p>
+<p><img alt="" src="http://x.com/pic/media%2FGDCllw8W4AAR_Zj.jpg" />  </p>
+<p>重大なニュースが明かされる可能性があります。</p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079810916921763#m">05 Jan 2024 01:19:46@AmandaMGoetz</a>: あなたのリードに従っています。Life's a Gameの6か月のスポンサーを見つけたいです。</p>
+<p>Life's a Gameへのスポンサーを探している様子です。</p>
+<p><a class="text-blue-400" href="http://x.com/5harath/status/1743083889466192278#m">05 Jan 2024 01:35:58@5harath</a>: はい、それを実現しています 🔥</p>
+<p>目標の達成を宣言しています。</p>
+<p><a class="text-blue-400" href="http://x.com/swyx/status/1743082386613494022#m">05 Jan 2024 01:30:00@swyx</a>: <a class="text-blue-400" href="http://x.com/OpenAI" title="OpenAI">@OpenAI</a> GPTを使って実際に収益を上げている人物のインタビューを探しています。<a class="text-blue-400" href="http://x.com/latentspacepod" title="Latent Space Podcast">@latentspacepod</a> </p>
+<p>OpenAIのGPTを利用して実際に収益を上げている人物についてのインタビューを探しているようです。</p>
+<p><a class="text-blue-400" href="http://x.com/jackbutcher/status/1743081552903356824#m">05 Jan 2024 01:26:41@jackbutcher</a>: 証明の概念</p>
+<p>何か謎めいた言葉が含まれていますが、具体的な意味は不明です。</p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079635674439685#m">05 Jan 2024 01:19:04@AmandaMGoetz</a>: CEOを代替し、任意の肩書きを挿入してください…パートナー、親など。</p>
+<p>CEOに代わる肩書きについての議論が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/rrhoover/status/1743070866718794121#m">05 Jan 2024 00:44:13@rrhoover</a>: プロジェクトに取り組んでいます…</p>
+<p>何か新しいプロジェクトに取り組んでいる様子です。</p>
+<p><a class="text-blue-400" href="http://x.com/5harath/status/1743075163988529304#m">05 Jan 2024 01:01:18@5harath</a>: HeyGen?</p>
+<p>多くの人物に通知されるようなテーマについての言及が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/jitbit/status/1742850980943712677#m">04 Jan 2024 10:10:29@jitbit</a>: </p>
+<p><img alt="" src="http://x.com/pic/media%2FGC_Zq2LWAAAjvpx.png" /><br />
+<a class="text-blue-400" href="http://x.com/shl/status/1743071242406728023#m">05 Jan 2024 00:45:43@shl</a>: 管理されたくないなら、（上司を）管理しなければなりません</p>
+<p>上司についての意見が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/timothycbates/status/1722677731236737065#m">09 Nov 2023 18:09:11@timothycbates</a>: ちなみに、お金の価値は主観的であり、絶対的な尺度ではなく（つまり、価値=対数$）、$1,000から$10,000に上がると感じる効果を再現するためには、$100,000に上がる必要があります。その後も同様に感じたい場合は、100万ドルに上がる必要があります！</p>
+<p>お金の価値についての考察が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/timothycbates/status/1722677724785913871#m">09 Nov 2023 18:09:10@timothycbates</a>: お金は幸福感を高めますが、ノーベル賞受賞者はこれが$80,000で止まると主張しています。新しい論文では、ほとんどの人々にとって収入の効果は上限がなく、喜びを捉える尺度が限定されていないことを示しています。</p>
+<p>お金の効果についての新しい論文についての言及が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/tdinh_me/status/1743061198915227765#m">05 Jan 2024 00:05:48@tdinh_me</a>: GPTストアが間もなく登場します。</p>
+<p>新しいGPTストアについての情報が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/gumroad/status/1743057419167818015#m">04 Jan 2024 23:50:47@gumroad</a>: Gumroadのモバイルアプリでお客様が発見して購入できる商品が増える可能性がありますが… </p>
+<p>Gumroadのモバイルアプリに関する情報が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/lukeweaver_eth/status/1743057313584582744#m">04 Jan 2024 23:50:22@lukeweaver_eth</a>: OGs got me vibing</p>
+<p>OGsについての投稿が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/checksbot/status/1743054983560364167#m">04 Jan 2024 23:41:07@checksbot</a>: ✅ チェック200の新しいコンポジット</p>
+<p>チェック200に関する更新情報が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/checksbot/status/1743046929926201609#m">04 Jan 2024 23:09:06@checksbot</a>: ✅ チェック622の新しいコンポジット</p>
+<p>チェック622に関する更新情報が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/tdinh_me/status/1743054178896031767#m">04 Jan 2024 23:37:55@tdinh_me</a>: 1人ができることのスケールは、他の多くのビジネスを笑いものにしています 💪</p>
+<p>何か自己宣伝的な言葉が含まれていますが、具体的な意味は分かりません。</p>
+<p><a class="text-blue-400" href="http://x.com/layer3xyz/status/1743022098518597816#m">04 Jan 2024 21:30:26@layer3xyz</a>: 私たちは季節ごとの報酬プログラムとネイティブな報酬ショップを通じてリワードを刷新しています。</p>
+<p>リワードプログラムについての情報が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/Pixelproperty_/status/1743048814347399392#m">04 Jan 2024 23:16:36@Pixelproperty_</a>: 詰め将棋 ✅</p>
+<p>詰め将棋に関する情報が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/arvidkahl/status/1742911973573226908#m">04 Jan 2024 14:12:50@arvidkahl</a>: "私たちのサーバーは深刻な過剰供給状態にあり、24時間稼働しています。チップをください！" これはSaaSの世界とレストランの世界の両方で機能します。</p>
+<p>サーバーの状況についての言及が含まれています。</p>
+<p><a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1742889502551478438#m">04 Jan 2024 12:43:33@AmandaMGoetz</a>: 多くの人々がゴール設定に失敗する理由は？</p>
+<p>ゴール設定についての議論が含まれています。</p>
+<p><strong>解釈とコメント</strong></p>
+<p>これらのツイートはさまざまな話題についての投稿であり、個々のツイートにはそれぞれ異なる内容が含まれています。引っ越しの準備に喜びを感じている投稿や、新しいプロジェクトに取り組んでいる様子など、多岐にわたる情報が含まれています。また、一部の投稿には特定の人物への言及や論文やプログラムに関する情報が含まれており、幅広い関心事が含まれていることがわかります。</p>
+        </div><br><a class="text-blue-400" href="/lang/ja_1283027505297985536">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -346,37 +354,37 @@ LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h3>最新のデザイン業界の動向</h3>
-<hr />
-<p><strong>SalesforceUX</strong>
-<em>28 Dec 2023 18:07:01</em></p>
-<p><a class="text-blue-500" href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">AIツールはデザイン業務の効率を向上させることができるのか</a>、SalesforceのエマージングテクノロジーチームがAIツールの実験を行い、タスクの素早い実行能力を調査しました。</p>
-<p>AIツールが最も時間を節約した方法やその効果について調査結果が発表されています。<a class="text-blue-500" href="http://x.com/search?q=%23DreamDesigners">#DreamDesigners</a></p>
-<hr />
-<p><strong>MicrosoftDesign</strong>
-<em>22 Dec 2023 17:00:00</em></p>
-<p>ホリデーシーズンにAIアーティスト<a class="text-blue-500" href="http://x.com/elliepritts">@elliepritts</a>と協力し、世界中のホリデーメモリーのビジュアル表現を再現しました。</p>
-<p><a class="text-blue-500" href="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg">イメージの例</a></p>
-<hr />
-<p><strong>materialdesign</strong>
-<em>20 Dec 2023 19:00:54</em></p>
-<p>Material Theme Builder 2.0での更新されたテーマング体験により、ホリデーシーズンがより幸せなものになりました。</p>
-<p><a class="text-blue-500" href="http://goo.gle/3RyaMND">更新内容の詳細</a></p>
-<hr />
-<p><strong>materialdesign</strong>
-<em>20 Dec 2023 19:00:57</em></p>
-<p>カラーフィデリティが実現しました。</p>
-<hr />
-<p><strong>materialdesign</strong>
-<em>20 Dec 2023 19:00:58</em></p>
-<p>さらに他にもいろいろな情報があります。</p>
-<hr />
-<p>これらの推文からデザイン業界での新しい動向が垣間見えます。SalesforceやMicrosoft、そしてMaterial Designなど、テクノロジー企業は新しいテクノロジーを取り入れつつ、使いやすく、より効率的なデザインを提供しようと努力しています。AIなどの先端技術を活用したデザインは、今後ますます重要になるでしょう。</p>
-        </div><br><a class="text-blue-500" href="/lang/ja_1432003348744470530">more</a>
+            <h2>ツイート</h2>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1743005001557889096#m">04 Jan 2024 20:22:30 @PinterestDesign</a>: 2024年に何をピンしていますか？  </p>
+<p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1742981931527197012#m">04 Jan 2024 18:50:50 @MicrosoftDesign</a>: 今月の壁紙は <a class="text-blue-400" href="http://x.com/search?q=%23OliviaXu">#OliviaXu</a> によって提供されます 😍。  </p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740434190347174281#m">28 Dec 2023 18:07:01 @SalesforceUX</a>: Salesforce IgniteのEmerging Technologyの責任者であるItai Asseoとそのチームは、AIのトップツールを実験し、タスクにどれだけ速く適応できるかを検証しました。  </p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740098733746839762#m">27 Dec 2023 19:54:02 @SalesforceUX</a>: Salesforce Design Teamに参加しませんか？以下の役割をチェックしてください。 ⬇️  </p>
+<p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1738242997282877755#m">22 Dec 2023 17:00:00 @MicrosoftDesign</a>: このホリデーシーズン、私たちは<a class="text-blue-400" href="http://x.com/search?q=%23AI">#AI</a> アーティスト <a class="text-blue-400" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> と提携し、世界中のホリデーの思い出の視覚的な表現を再現しました。</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548648857116834#m">20 Dec 2023 19:00:54 @materialdesign</a>: Material Theme Builder 2.0で更新されたテーマ体験でホリデーシーズンがより幸せになります！ 🎁</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548659972059565#m">20 Dec 2023 19:00:57 @materialdesign</a>: カラーフィデリティが実現しました！</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548666242510935#m">20 Dec 2023 19:00:58 @materialdesign</a>: そして、それだけではありません！更新内容はブログで読むことができます → <a class="text-blue-400" href="http://goo.gle/3RyaMND">goo.gle/3RyaMND</a></p>
+<p><a class="text-blue-400" href="http://x.com/lyftdesignteam/status/1737165697917333931#m">19 Dec 2023 17:39:12 @lyftdesignteam</a>: そして、それで年が終わります！チームの多様な成果と忘れられない瞬間を振り返って、2023年を最高の年にしました！🎉</p>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1736875833506062380#m">18 Dec 2023 22:27:22 @PinterestDesign</a>: このようなフィードバックを聞くと、「これが私が参加した中で最高のバーチャル/対面イベントだった」ということを知ることができます！</p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735772496488497635#m">15 Dec 2023 21:23:06 @SalesforceUX</a>: 2030年にはAIの世界はどのようになっているのでしょうか？</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735736482281758732#m">15 Dec 2023 19:00:00 @materialdesign</a>: Materialにおける検索について質問がありますか？お手伝いします！</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735343896719176095#m">14 Dec 2023 17:00:00 @materialdesign</a>: アプリに検索を追加しますか？  </p>
+<p><a class="text-blue-400" href="http://x.com/Razorpay_Design/status/1735250181875237073#m">14 Dec 2023 10:47:37 @Razorpay_Design</a>: Figmaとの最初のケーススタディに興奮しています。</p>
+<p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735036119937339594#m">13 Dec 2023 20:37:01 @SalesforceUX</a>: デザイン/UXの洞察、機会、そしてつながりでキャリアを向上させる準備はできていますか？Salesforceの専用のTalent Communityに参加しましょう！</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735029292180848685#m">13 Dec 2023 20:09:53 @materialdesign</a>: 検索バーの解剖学には次のものが含まれます：</p>
+<p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1734981512830013861#m">13 Dec 2023 17:00:01 @MicrosoftDesign</a>: Microsoft Teams用に更新されたイメージの一部を見てみましょう！</p>
+<p><a class="text-blue-400" href="http://x.com/FlutterDev/status/1734679518034457022#m">12 Dec 2023 21:00:00 @FlutterDev</a>: Flutter 3.16では、Material 3がデフォルトで有効になりました。🎉</p>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734949639952945476#m">13 Dec 2023 14:53:22 @PinterestDesign</a>: "Kitschens"のトレンドに賛成の方はいますか？</p>
+<p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734950323481924000#m">13 Dec 2023 14:56:05 @PinterestDesign</a>: 私たちも "Be Jelly" の美学を愛しています</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619122971906364#m">12 Dec 2023 17:00:01 @materialdesign</a>: Material 3での検索 🔍</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619127799820480#m">12 Dec 2023 17:00:02 @materialdesign</a>: ◼️ 検索クエリを通じたナビゲーションのために検索バーとビューを使用します。</p>
+<p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619131008418160#m">12 Dec 2023 17:00:03 @materialdesign</a>: Searchの詳細については→<a class="text-blue-400" href="http://goo.gle/3RzR715">goo.gle/3RzR715</a></p>
+<p><strong>コメント：</strong>
+以上は最新のデザインに関するさまざまな興味深いツイートです。特に、AIのトップツールを使用した実験やホリデーの視覚的な表現など、新しいテクノロジーやデザインに関連する興味深い情報が含まれています。</p>
+        </div><br><a class="text-blue-400" href="/lang/ja_1432003348744470530">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -389,22 +397,54 @@ LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>2024年1月1日の推</h1>
-<h2>10:05:20 <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741762524117164386#m">@Rainmaker1973</a></h2>
-<p>写真家のクリス・ヘンリー氏がユタ北部で撮影したビデオに、バイソンが涙を流しているのが捉えられています。</p>
-<p><img alt="Bison shedding a tear" src="http://x.com/pic/ext_tw_video_thumb%2F1741652029905203200%2Fpu%2Fimg%2FrR74JYF-9Fs5Nobr.jpg" /></p>
-<p>この推で紹介されたビデオは、自然界の美しさと脆さを感じさせるものです。バイソンが涙を流すシーンは、我々人間にとって自然への畏敬の念を呼び起こします。</p>
-<h2>10:01:10 <a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741761472361832809#m">@Rainmaker1973</a></h2>
-<p>人々の間で作られた都市伝説に真実味があるかどうかについてのビデオです。</p>
-<p><img alt="Can seeds really sprout inside you?" src="http://x.com/pic/ext_tw_video_thumb%2F1741542066293792768%2Fpu%2Fimg%2FK6Ti2ly3B6OBaVwz.jpg" /></p>
-<p>今回の推では、人々が信じる様々な都市伝説や迷信について、科学的に検証し、真実を明らかにしています。</p>
-<h2>10:00:01 <a class="text-blue-500" href="http://x.com/ToughSf/status/1741761185102332257#m">@ToughSf</a></h2>
-<p>ハードサイファイ作品の最新情報を紹介しています。</p>
-<p><img alt="Altair-class NEMM European Frigate" src="http://x.com/pic/media%2FGCugrP0WwAAPwHH.jpg" /></p>
-<p>サイファイジャンルは、SFファンにとっては非常に魅力的です。こちらのフリゲート艦のモジュラーなハードポイントは、SFファンにとってはたまらないものでしょう。</p>
-<p>...</p>
-<p>このように、日常生活や科学、技術、自然などの幅広いトピックが取り上げられ、著名な研究者や専門家が情報を提供しています。マークダウンを使用することで、情報をわかりやすく整理し、読み手に伝えやすくしています。</p>
-        </div><br><a class="text-blue-500" href="/lang/ja_810352678735781888">more</a>
+            <h1>最新のツイート</h1>
+<p><a class="text-blue-400" href="http://x.com/lemire/status/1743101391822831616#m">🥳</a><br />
+05 Jan 2024 02:45:31 - @lemire<br />
+楽しい！</p>
+<p><img alt="pic1" src="http://x.com/pic/media%2FGDC9efjW0AARUkq.jpg" /></p>
+<hr />
+<p>"Auftragstaktik"<br />
+05 Jan 2024 01:37:36 - @TacitHaven<br />
+<a class="text-blue-400" href="http://x.com/Scholars_Stage/status/1743068302975311873#m">x.com/Scholars_Stage/status/1743068302975311873#m</a>  </p>
+<hr />
+<p>NYC teachers union claims the environmental review for congestion pricing wasn’t thorough enough.<br />
+05 Jan 2024 01:29:17 - @AlecStapp<br />
+<a class="text-blue-400" href="http://x.com/JosephPolitano/status/1742994667623317658#m">x.com/JosephPolitano/status/1742994667623317658#m</a></p>
+<p><img alt="pic2" src="http://x.com/pic/media%2FGDCsBvYXUAArjwF.jpg" /></p>
+<hr />
+<p>Welcome to The Dispatch. Here’s a little about what we’re doing – and why.<br />
+14 Dec 2023 22:27:00 - @thedispatch<br />
+<img alt="pic3" src="http://x.com/pic/pbs.twimg.com%2Fmedia%2FF80G_e1b0AAwBDf.png" /></p>
+<hr />
+<p>Here's why Artemi can't go to All-Star 🥹 - but he says "PLEASE RETWEET NOW TO VOTE FOR MY TEAMMATES ⤵️"<br />
+05 Jan 2024 02:31:39 - @NYRangers<br />
+<img alt="pic4" src="http://x.com/pic/amplify_video_thumb%2F1743097776123097088%2Fimg%2FxKeadAoXTbrbIwSD.jpg" /></p>
+<hr />
+<p>something insane I learned reading <a class="text-blue-400" href="http://x.com/JimPethokoukis" title="James Pethokoukis ⏩️⤴️">@JimPethokoukis</a>'s new book:<br />
+04 Jan 2024 20:17:16 - @rSanti97  </p>
+<hr />
+<p>The number of experts ("experts") who predicted an inexorable Chinese march to global economic dominance is legion.<br />
+04 Jan 2024 19:40:39 - @pmarca<br />
+<a class="text-blue-400" href="http://x.com/DCTwining/status/1742911098653708728#m">x.com/DCTwining/status/1742911098653708728#m</a></p>
+<hr />
+<p>…<br />
+05 Jan 2024 02:12:21 - @gojomo  </p>
+<hr />
+<p>The Greenland blocking &amp; AK ridge amplification result in the core of the cold airmass over North America displaced into southern Canada.<br />
+05 Jan 2024 01:20:50 - @burgwx<br />
+<img alt="pic5" src="http://x.com/pic/media%2FGDCp0xHW8AA0jfw.jpg" /></p>
+<hr />
+<p>“The core concept in “culture” is “coordination”, ie, whatever it is that makes us fall into one equilibrium over others. Culture points to the many ways that different equilibria of the same game might differ from each other”<br />
+05 Jan 2024 01:50:58 - @AgnesCallard<br />
+<img alt="pic6" src="http://x.com/pic/card_img%2F1743021702244622336%2FHgCjicBk%3Fformat%3Djpg%26name%3D800x419" /></p>
+<hr />
+<p>Maybe I'm just getting old and cranky, but I really feel like I used to have better trolls.<br />
+05 Jan 2024 01:52:25 - @asymmetricinfo  </p>
+<hr />
+<p>I am no longer a Culture Incel: in this post I argue Ideas Matter. And I am worried about the impact of a culture of pessimism and safetyism on scientific progress. I tie this all back to <a class="text-blue-400" href="http://x.com/JonHaidt" title="Jonathan Haidt">@JonHaidt</a> 's hypothesis abt the "Anxious Generation"<br />
+04 Jan 2024 15:20:09 - @RuxandraTeslo<br />
+<img alt="pic7" src="http://x.com/pic/card_img%2F1742926067999150081%2F5D7e3clw%3Fformat%3Djpg%26name%3D800x419" /></p>
+        </div><br><a class="text-blue-400" href="/lang/ja_810352678735781888">more</a>
     </div>
 
 </div>
@@ -457,134 +497,6 @@ LlamaIndexは、フルスタックRAGの構築に5-10以上のリソースを持
         <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
     </div>
 </div>
-
-<script>
-document.querySelectorAll('button.subx').forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    console.log(this.value);
-    event.preventDefault();
-    document.querySelector('input[name="target_id"]').value = this.value;
-  });
-});
-
-
-    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
-      // 阻止表单的默认提交行为
-      event.preventDefault();
-
-      // 获取当前日期对象
-      var currentDate = new Date();
-
-      // 获取用户选择的时间
-      var mailTimeValue = document.getElementById('mail-time').value;
-
-      // 将用户选择的时间与当前日期拼接成一个字符串
-      var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
-
-      // 将拼接后的字符串转换为时间戳
-      var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
-
-      // 判断 selectedDateTimeTimestamp 是否小于当前时间
-      if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
-        // 如果是，则增加一天
-        selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
-      }
-
-      // 将增加一天后的时间戳设置到隐藏的 input 元素中
-      document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
-
-      // 提交表单
-      this.submit();
-    });
-
-    var userLang = navigator.language || navigator.userLanguage;
-    var emailInput = document.querySelector('input[name="email"]');
-    var targetIdInput = document.querySelector('input[name="target_id"]');
-    var timeLabel = document.getElementById("time-label");
-    var subscribeBtn = document.getElementById("subscribe-btn");
-    var languageSelect = document.getElementById("language-select");
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-    const languageData = {
-         "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
-         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新设定", "Twitter列表的GPT订阅"],
-         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Setting", "GPT Subscription for Twitter List"],
-         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新設定", "Twitter列表的GPT訂閱"],
-         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新設定", "TwitterリストのGPTサブスクリプション"],
-         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 설정", "Twitter 목록을 위한 GPT 구독"],
-         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar configuración", "Suscripción GPT para la lista de Twitter"],
-         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar configuração", "Assinatura GPT para Lista do Twitter"],
-         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Einstellung", "GPT-Abonnement für Twitter-Liste"],
-         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour la configuration", "Abonnement GPT pour la liste Twitter"],
-         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / تحديث الإعداد","اشتراك GPT لقائمة تويتر"],
-         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Pengaturan", "Langganan GPT untuk Daftar Twitter"],
-         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Tetapan", "Langganan GPT untuk Senarai Twitter"],
-         "tl": ["Maglagay ng iyong email", "Maglagay ng ID ng target list", "Araw-araw na Oras ng Pag-push", "Mag-subscribe / Mag-update ng Oras", "GPT Subscription para sa Twitter List"],
-         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật cài đặt", "Đăng ký GPT cho Danh sách Twitter"],
-         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj ustawienia", "Subskrypcja GPT dla listy Twitter"],
-         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Instelling", "GPT-abonnement voor Twitter-lijst"]
-    };
-
-
-    // Function to set placeholders and titles based on language
-    function setLanguage(selectedLanguage) {
-     const placeholders = languageData.columns.reduce((acc, column) => {
-      acc[column] = languageData[selectedLanguage][languageData.columns.indexOf(column)];
-      return acc;
-     }, {});
-
-     emailInput.placeholder = placeholders.emailPlaceholder;
-     targetIdInput.placeholder = placeholders.targetIdPlaceholder;
-     timeLabel.textContent = placeholders.timeLabel;
-     subscribeBtn.textContent = placeholders.subscribeBtn;
-     document.getElementById("title").textContent = placeholders.title;
-    }
-
-    // Initial set of placeholders and titles
-    setLanguage(userLang);
-    var defaultLanguageInput = document.getElementById("current-language");
-    defaultLanguageInput.value = userLang;
-
-    // Toggle language function
-    languageSelect.addEventListener("change", function () {
-      var selectedLanguage = languageSelect.value;
-      setLanguage(selectedLanguage);
-      // 更新隐藏 input 的值
-      var currentLanguageInput = document.getElementById("current-language");
-      currentLanguageInput.value = selectedLanguage;
-    });
-</script>
-
 </body>
-
+    <script src="/static/index.js"></script>
 </html>

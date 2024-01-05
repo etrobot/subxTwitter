@@ -17,14 +17,14 @@ langs = {
     # 'es': 'Español',
     # 'pt': 'Português',
     # 'de': 'Deutsch',
-    # 'fr': 'Français',
-    # 'ar': 'العربية',
-    # 'id': 'Bahasa Indonesia',
-    # 'ms': 'Bahasa Melayu',
-    # 'tl': 'Filipino',
-    # 'vi': 'Tiếng Việt',
+    'fr': 'Français',
+    'ar': 'العربية',
+    'id': 'Bahasa Indonesia',
+    'ms': 'Bahasa Melayu',
+    'tl': 'Filipino',
+    'vi': 'Tiếng Việt',
     'pl': 'Polski',
-    # 'nl': 'Nederlands',
+    'nl': 'Nederlands',
 }
 
 

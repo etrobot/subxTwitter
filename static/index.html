@@ -5,38 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-
-    </style>
+<link rel="stylesheet" href="/static/style.css">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
 <div class="sidebar w-full max-w-sm items-center">
     <div>
@@ -62,12 +34,11 @@
         <a href="/lang/vi" class="border-b-2 mr-2">Tiếng Việt</a>
         <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
-
     </p>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
     
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -80,105 +51,36 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>New Year's Twitter Roundup</h1>
-<h2>January 1, 2024</h2>
-<ul>
-<li><strong>07:08:36</strong> by @gdb: </li>
-<li>
-<p>Current status: NYE coding marathon with <a class="text-blue-500" href="http://x.com/badphilosopher" title="Matt Brockman">@badphilosopher</a> and <a class="text-blue-500" href="http://x.com/theannabrockman" title="A">@theannabrockman</a>. Most relaxing part of the year.</p>
-<p>It seems like @gdb is enjoying their New Year's Eve by participating in a coding marathon with some friends. It's great to see people finding joy in their work and spending time with loved ones.</p>
-</li>
-<li>
-<p><strong>06:29:16</strong> by @ylecun: </p>
-</li>
-<li>
-<p>Only a small number of book authors make significant money from book sales.  </p>
-<p>This tweet by @ylecun is an interesting observation about the economics of book publishing. It's a reminder that for many authors, writing is not a lucrative endeavor.</p>
-</li>
-<li>
-<p><strong>06:00:50</strong> by @ylecun: </p>
-</li>
-<li>
-<p>Better access to knowledge is ....  </p>
-<p>@ylecun seems to be discussing the importance of accessibility to knowledge, which is crucial for personal and professional growth.</p>
-</li>
-<li>
-<p><strong>05:40:14</strong> by @ylecun: </p>
-</li>
-<li>
-<p>Who knew that coffee destroyed the fabric of society 😨☕  </p>
-<p>It looks like @ylecun is joking about the potential negative effects of coffee. It's always fun to see lighthearted posts about everyday things.</p>
-</li>
-<li>
-<p><strong>05:17:15</strong> by @ylecun: </p>
-</li>
-<li>
-<p>Happy Doom-Free New Year 🍾🥂  </p>
-<p>This tweet from @ylecun is a positive and hopeful way to start the new year. It's a nice sentiment to share with followers.</p>
-</li>
-<li>
-<p><strong>05:15:39</strong> by @ylecun: </p>
-</li>
-<li>
-<p>Never mind the typewriter, what about P(doom | PowerPoint) ?  </p>
-<p>It seems like @ylecun is teasing about the potential negative impact of using PowerPoint. It's a clever and amusing way to comment on modern technology.</p>
-</li>
-<li>
-<p><strong>04:24:35</strong> by @perplexity_ai: </p>
-</li>
-<li>
-<p>Happy New Year from Perplexity! Let's make 2024 a year of insights and answers. Just a reminder: our 2-month Pro plan gift expires in 2 days. Start the year empowered with knowledge.</p>
-<p>This tweet from @perplexity_ai is a nice way to wish followers a happy new year and promote their services at the same time.</p>
-</li>
-<li>
-<p><strong>01:58:59</strong> by @BraceSproul: </p>
-</li>
-<li>
-<p>Working on a project which requires local LLMs (via <a class="text-blue-500" href="http://x.com/OLLAMA" title="Ollama">@OLLAMA</a> &amp; <a class="text-blue-500" href="http://x.com/LangChainAI" title="LangChain">@LangChainAI</a>) and JSON responses. It looks like Mixtral does very well with returning simple, valid JSON responses (86/86 when asking for single key JSON responses).  </p>
-<p>@BraceSproul seems to be sharing updates about a project they're working on. It's always interesting to see what people in the tech industry are up to.</p>
-</li>
-<li>
-<p><strong>01:42:04</strong> by @jerryjliu0: </p>
-</li>
-<li>
-<p>LlamaIndex has 5-10+ resources for building full-stack RAG, and our mongodb-demo repo (by <a class="text-blue-500" href="http://x.com/seldo" title="Laurie Voss">@seldo</a>) is one of the most comprehensive in terms of setup.</p>
-<p>It looks like @jerryjliu0 is sharing information about resources for building full-stack RAG, which could be helpful for developers.</p>
-</li>
-<li>
-<p><strong>01:22:42</strong> by @ylecun: </p>
-</li>
-<li>
-<p>The one true American art form was once thought to destroy the fabric of society and corrupt the youth.</p>
-<p>@ylecun seems to be making a historical or cultural reference in this tweet. It's intriguing and thought-provoking.</p>
-</li>
-<li>
-<p><strong>01:15:21</strong> by @jerryjliu0: </p>
-</li>
-<li>
-<p>In 2024, let’s make RAG less of a hack.  </p>
-<p>@jerryjliu0 seems to be expressing a desire to improve the RAG process in the new year. It's a positive and ambitious goal.</p>
-</li>
-</ul>
-<h2>December 31, 2023</h2>
-<ul>
-<li><strong>20:49:23</strong> by @llama_index:</li>
-<li>
-<p>Full-stack RAG Starter Pack 🔎📦 - with <a class="text-blue-500" href="http://x.com/MongoDB" title="MongoDB">@MongoDB</a>, Flask, <a class="text-blue-500" href="http://x.com/render" title="Render">@render</a>, and <a class="text-blue-500" href="http://x.com/nextjs" title="Next.js">@nextjs</a>   </p>
-<p>This tweet from @llama_index appears to be promoting a set of tools and technologies for developers working on full-stack RAG projects.</p>
-</li>
-<li>
-<p><strong>15:30:27</strong> by @francoisfleuret: </p>
-</li>
-<li>
-<p>Wow, inline C++ extensions for <a class="text-blue-500" href="http://x.com/PyTorch" title="PyTorch">@pytorch</a> are that simple? I am extremely impressed.</p>
-<p>@francoisfleuret seems to be amazed by the simplicity of inline C++ extensions for PyTorch. It's always exciting to see advancements in technology.</p>
-</li>
-</ul>
-        </div><br><a class="text-blue-500" href="/lang/en_1733652180576686386">more</a>
+            <h1>Tech Roundup: What's Trending on Twitter</h1>
+<h2>05 Jan 2024</h2>
+<h3>Sama (@sama)</h3>
+<p><a class="text-blue-400" href="http://x.com/sama/status/1743080079515959364#m">@sama</a> shared the struggles of Muslim and Arab colleagues in the tech community, who fear speaking out about their experiences due to potential retaliation and damage to their career prospects.</p>
+<h3>Jerry Liu (@jerryjliu0)</h3>
+<p><a class="text-blue-400" href="http://x.com/jerryjliu0/status/1743087302363250782#m">@jerryjliu0</a> and <a class="text-blue-400" href="http://x.com/jerryjliu0/status/1743077679258320925#m">@jerryjliu0</a> delves into the complexities of building RAG, offering insights and tips to make the process less hacky.</p>
+<h3>Jack Altman (@jaltma)</h3>
+<p><a class="text-blue-400" href="http://x.com/jaltma" title="Jack Altman">@jaltma</a> is spotted indulging in a cupcake and a piece of cake simultaneously, declaring that he's on a 34-year bulk, adding a touch of humor to the tech conversation.</p>
+<h3>lateinteraction</h3>
+<p><a class="text-blue-400" href="http://x.com/lateinteraction/status/1743080566373892375#m">@lateinteraction</a> thanked both <a class="text-blue-400" href="http://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> and <a class="text-blue-400" href="http://x.com/hwchase17" title="Harrison Chase">@hwchase17</a> for their incredible work and speedy release.</p>
+<h3>Austin BV (@austinbv)</h3>
+<p><a class="text-blue-400" href="http://x.com/austinbv/status/1743033136160645463#m">@austinbv</a> completed a tutorial on building RAG with <a class="text-blue-400" href="http://x.com/LangChainAI" title="LangChain">@LangChainAI</a> for creating YouTube descriptions and titles.</p>
+<h3>llama_index</h3>
+<p><a class="text-blue-400" href="http://x.com/llama_index/status/1743076579302105338#m">@llama_index</a> provided a shoutout to <a class="text-blue-400" href="http://x.com/bclavie" title="Benjamin Clavié">@bclavie</a>, highlighting the benefits of using ColBERT for retrieval-based chatbots.</p>
+<h3>LangChainAI</h3>
+<p><a class="text-blue-400" href="http://x.com/LangChainAI/status/1743070051991998842#m">@LangChainAI</a> shared a tutorial on building an OpenAI Custom RAG with LangChain, providing valuable insights for chatbot enthusiasts.</p>
+<h3>Gradio</h3>
+<p><a class="text-blue-400" href="http://x.com/Gradio/status/1743063380087505115#m">@Gradio</a> announced the release of Gradio 4.13, signaling new developments in the tech world.</p>
+<h3>Osanseviero (@osanseviero)</h3>
+<p><a class="text-blue-400" href="http://x.com/osanseviero/status/1743027658961637632#m">@osanseviero</a> introduced 'AI Tube,' a platform for discovering machine learning-generated videos, hinting at the growing influence of AI in content creation.</p>
+<h3>Yann LeCun (@ylecun)</h3>
+<p><a class="text-blue-400" href="http://x.com/ylecun/status/1743048968118919471#m">@ylecun</a> urged various organizations to resolve conflicts with <a class="text-blue-400" href="http://x.com/internetarchive" title="Internet Archive">@internetarchive</a>, advocating for peace and collaboration in the tech space.</p>
+<h3>Harrison Chase (@hwchase17)</h3>
+<p><a class="text-blue-400" href="http://x.com/hwchase17/status/1743070211379786045#m">@hwchase17</a> expressed satisfaction with a video, showcasing the positive impact of tech-related content in the online community.</p>
+<p>Overall, the tech community on Twitter remains actively engaged, with discussions ranging from the challenges of minority groups in the industry to the intricacies of building advanced models like RAG and ColBERT. As technology continues to evolve, these conversations offer valuable insights and perspectives for both experts and enthusiasts in the field.</p>
+        </div><br><a class="text-blue-400" href="/lang/en_1733652180576686386">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -191,40 +93,155 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Reflecting on Twitter Conversations</h1>
-<h2>Introduction</h2>
-<p>As an experienced English writer, I find Twitter to be a fascinating platform for sharing and discovering insights. In this article, I will compile a series of tweets from various authors and personalities, and provide my interpretation and commentary on the content.</p>
-<h3><a class="text-blue-500" href="http://x.com/dickiebush/status/1552620538513825792#m">28 Jul 2022 11:42:37 @dickiebush</a></h3>
-<ul>
-<li><strong>dickiebush:</strong> I studied the writing routine of 500 legendary writers. Turns out, great writing is simple—if you do these 6 things every day.</li>
-</ul>
-<p>This tweet by dickiebush highlights the simplicity of great writing. It suggests that there are specific actions that writers can take each day to improve their craft.</p>
-<h3><a class="text-blue-500" href="http://x.com/AliAbdaal/status/1741739756331876383#m">01 Jan 2024 08:34:52 @AliAbdaal</a></h3>
-<ul>
-<li><strong>AliAbdaal:</strong> Believing you can do something is the first step to actually being able to do it.</li>
-<li><strong>AliAbdaal:</strong> By asking myself this, I end up visualising myself confidently approaching the task at hand. Or at least, feeling confident I can learn to do the thing over time.</li>
-<li><strong>AliAbdaal:</strong> Elevate your productivity game with my new book, Feel-Good Productivity. Order now for a transformative read.</li>
-</ul>
-<p>AliAbdaal's tweets emphasize the importance of self-belief and visualization in achieving goals. It also serves as a promotion for his new book, "Feel-Good Productivity."</p>
-<h3><a class="text-blue-500" href="http://x.com/sweatystartup/status/1741652999745810825#m">01 Jan 2024 02:50:08 @sweatystartup</a></h3>
-<ul>
-<li><strong>sweatystartup:</strong> An alarming number of wealthy men couldn’t keep their family safe and fed for 72 hours if the power / water / cell reception went out in their region and things got crazy for a few days.</li>
-<li><strong>sweatystartup:</strong> People in NYC bragging about surviving Sandy is hilarious.</li>
-</ul>
-<p>These tweets from sweatystartup shed light on the vulnerability of even wealthy individuals in times of crisis and humorously critiques the bragging culture surrounding survival stories.</p>
-<h3><a class="text-blue-500" href="http://x.com/dickiebush/status/1741423094474973619#m">31 Dec 2023 11:36:34 @dickiebush</a></h3>
-<ul>
-<li><strong>dickiebush:</strong> 15 hours left to hop aboard the January Ship 30 cohort!</li>
-<li><strong>dickiebush:</strong> Seeing the energy in this community is the perfect way to end the year.</li>
-</ul>
-<p>dickiebush's tweets promote a community-based program and express enthusiasm for the involvement and energy within that community.</p>
-<h3>Conclusion</h3>
-<p>Twitter serves as a valuable platform for individuals to share their thoughts, promote their work, and engage in meaningful conversations. The tweets highlighted in this article offer insights into writing routines, self-belief, productivity, awareness of vulnerability, and community engagement. As a writer, it's important to engage with such conversations and continue to learn from diverse perspectives.</p>
-        </div><br><a class="text-blue-500" href="/lang/en_1365676237558059010">more</a>
+            <h1>The Evolution of Twitter: A Collection of Tweets</h1>
+<hr />
+<h3>Sweatystartup</h3>
+<p><strong>05 Jan 2024 02:34:31</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/sweatystartup/status/1743098623393505519#m">@sweatystartup</a>  </p>
+<p>Why can’t I check in a hotel from my phone and walk directly to my room? They know I paid for the room. They have my information. I have my phone in my pocket. Wasting 10+ minutes at front desks to get plastic keys and give a credit card they already have for incidentals is ridiculous!!!  </p>
+<hr />
+<h3>BoredOpepen</h3>
+<p><strong>05 Jan 2024 00:04:41</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/BoredOpepen/status/1743060916416229520#m">@BoredOpepen</a>  </p>
+<p>Orange is the new black.</p>
+<p><img alt="Orange is the new black" src="http://x.com/pic/media%2FGDCYqBCbQAAwBGO.png" />  </p>
+<hr />
+<h3>Anuatluru</h3>
+<p><strong>04 Jan 2024 21:55:45</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/anuatluru/status/1743028467241791933#m">@anuatluru</a>  </p>
+<p>If you’re an ambitious person that doesn’t live around similarly ambitious people, the #1 thing you should do is start sharing your thoughts online where other similarly ambitious people hang out  </p>
+<hr />
+<h3>BradleyWhitford</h3>
+<p><strong>04 Jan 2024 20:27:11</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/BradleyWhitford/status/1743006181587894723#m">@BradleyWhitford</a>  </p>
+<p>There’s a story going around saying that Martin Sheen is supporting <a class="text-blue-400" href="http://x.com/RobertKennedyJr" title="Robert F. Kennedy Jr">@RobertKennedyJr</a> for president. The story is incorrect. Martin asked us to post this on his behalf.</p>
+<hr />
+<h3>VanityFair</h3>
+<p><strong>04 Jan 2024 22:02:25</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/VanityFair/status/1743030148377485651#m">@VanityFair</a>  </p>
+<p>Donald Trump “shouldn’t be covered like a ‘normal’ 2024 candidate,” writes <a class="text-blue-400" href="http://x.com/MollyJongFast" title="Molly Jong-Fast">@MollyJongFast</a>, “and yet, even four criminal indictments later, it feels like he is being treated that way.”</p>
+<p><img alt="Donald Trump" src="http://x.com/pic/card_img%2F1742649041995833344%2FiE9N5p44%3Fformat%3Djpg%26name%3D800x419" />  </p>
+<hr />
+<h3>RpsAgainstTrump</h3>
+<p><strong>04 Jan 2024 22:11:16</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/RpsAgainstTrump/status/1743032372323303931#m">@RpsAgainstTrump</a>  </p>
+<p><img alt="Video" src="http://x.com/pic/amplify_video_thumb%2F1743032263883784192%2Fimg%2FwGuYK_JQy69T9ZXI.jpg" />  </p>
+<hr />
+<h3>Jackbutcher</h3>
+<p><strong>05 Jan 2024 01:26:41</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743081552903356824#m">@jackbutcher</a>  </p>
+<p>concept of proof</p>
+<hr />
+<h3>Businessbarista</h3>
+<p><strong>05 Jan 2024 00:30:30</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/businessbarista/status/1743067411069223211#m">@businessbarista</a>  </p>
+<p>I’m going to tell the story of this National Championship game for years to come.</p>
+<p><strong>05 Jan 2024 00:39:44</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/businessbarista/status/1743069736458395770#m">@businessbarista</a>  </p>
+<p>Full context: <a class="text-blue-400" href="http://x.com/businessbarista/status/1742590471434543269#m">x.com/businessbarista/status/1742590471434543269#m</a></p>
+<hr />
+<h3>Fortelabs</h3>
+<p><strong>05 Jan 2024 00:00:00</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/fortelabs/status/1743059736516292761#m">@fortelabs</a>  </p>
+<p>Daily progress isn't about scale; it's about significance</p>
+<hr />
+<h3>Lukeweaver_eth</h3>
+<p><strong>04 Jan 2024 23:50:22</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/lukeweaver_eth/status/1743057313584582744#m">@lukeweaver_eth</a>  </p>
+<p>OGs got me vibing <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743042940946067597#m">x.com/jackbutcher/status/1743042940946067597#m</a></p>
+<p><img alt="OGs" src="http://x.com/pic/media%2FGDCU-gVacAAhsbg.png" /></p>
+<hr />
+<h3>Checkbot</h3>
+<p><strong>04 Jan 2024 23:41:07</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/checksbot/status/1743054983560364167#m">@checksbot</a>  </p>
+<p>✅ New Composite of Check 200  </p>
+<p><img alt="Check 200" src="http://x.com/pic/media%2FGDCTRQhWkAAx6Z8.jpg" /></p>
+<p><strong>04 Jan 2024 23:09:06</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/checksbot/status/1743046929926201609#m">@checksbot</a>  </p>
+<p>✅ New Composite of Check 622</p>
+<p><img alt="Check 622" src="http://x.com/pic/media%2FGDCL8fdWcAAEUJK.jpg" /></p>
+<hr />
+<h3>Pixelproperty_</h3>
+<p><strong>04 Jan 2024 23:16:36</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/Pixelproperty_/status/1743048814347399392#m">@Pixelproperty_</a>  </p>
+<p>Checkmate ✅</p>
+<p><img alt="Checkmate" src="http://x.com/pic/media%2FGDCNXAQXwAAY6rI.png" /></p>
+<hr />
+<h3>EveD</h3>
+<p><strong>04 Jan 2024 23:20:55</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/EveD/status/1743049901389337022#m">@EveD</a>  </p>
+<p>This is shocking, and petty, and actually quite horrendous. And she handled it so extremely well. (They're actually after her husband). 🤮🤮</p>
+<p><a class="text-blue-400" href="http://x.com/NeriOxman/status/1742993073078947843#m">x.com/NeriOxman/status/1742993073078947843#m</a></p>
+<hr />
+<h3>Jackbutcher</h3>
+<p><strong>04 Jan 2024 22:53:15</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743042940946067597#m">@jackbutcher</a>  </p>
+<p><img alt="Image 1" src="http://x.com/pic/media%2FGDCIQmYWkAAXqef.png" /></p>
+<p><strong>04 Jan 2024 22:44:24</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743040710310347087#m">@jackbutcher</a>  </p>
+<p><img alt="Image 2" src="http://x.com/pic/media%2FGDCGK8CXkAAsCKF.png" />
+<img alt="Image 3" src="http://x.com/pic/media%2FGDCGLxdXgAAbFiA.jpg" /></p>
+<p><strong>04 Jan 2024 22:45:31</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743040993845186995#m">@jackbutcher</a>  </p>
+<p><img alt="Image 4" src="http://x.com/pic/media%2FGDCGe6xWkAA97_A.png" /></p>
+<p><strong>04 Jan 2024 22:22:42</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743035251394228233#m">@jackbutcher</a>  </p>
+<p>"the market is never vvrong"<br />
+<img alt="Image 5" src="http://x.com/pic/media%2FGDCBPZRWgAAapsN.jpg" /></p>
+<p><strong>04 Jan 2024 21:50:13</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743027076746109348#m">@jackbutcher</a>  </p>
+<p>og threadition. timeless.<br />
+<img alt="Image 6" src="http://x.com/pic/media%2FGDB54zdWYAErKba.jpg" /><br />
+<img alt="Image 7" src="http://x.com/pic/media%2FGDB54zbWcAAuxDf.jpg" /></p>
+<p><strong>04 Jan 2024 20:15:25</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743003219096125755#m">@jackbutcher</a>  </p>
+<p>Each painting is an opportunity to see what I have learned while creating Midnight Breeze.<br />
+<img alt="Image 8" src="http://x.com/pic/media%2FGDBjEYjWwAAfsHB.jpg" /></p>
+<hr />
+<h3>Timso_eth</h3>
+<p><strong>04 Jan 2024 15:56:44</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/timso_eth/status/1742938118972637362#m">@timso_eth</a>  </p>
+<p>SWIRLING OPEPEN</p>
+<hr />
+<h3>Gatomotto</h3>
+<p><strong>04 Jan 2024 21:53:32</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/gatomotto/status/1743027911299354895#m">@gatomotto</a>  </p>
+<p>Synthesis.<br />
+<img alt="Synthesis" src="http://x.com/pic/media%2FGDB6pRuXcAAuUyy.png" /><br />
+<img alt="Synthesis 2" src="http://x.com/pic/media%2FGDB6pRkWUAAIW9O.png" /></p>
+<hr />
+<h3>0ND1</h3>
+<p><strong>04 Jan 2024 20:59:18</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/_0ND1/status/1743014262757315037#m">@_0ND1</a>  </p>
+<p><img alt="Image 9" src="http://x.com/pic/media%2FGDBuKNKW0AAZDQ-.png" /></p>
+<hr />
+<h3>Jackbutcher</h3>
+<p><strong>04 Jan 2024 21:14:11</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743018009550020963#m">@jackbutcher</a>  </p>
+<p><img alt="Image 10" src="http://x.com/pic/media%2FGDBxpBnXUAAD28a.png" />
+<img alt="Image 11" src="http://x.com/pic/media%2FGDBxpCMXYAAgXSu.png" /></p>
+<p><strong>04 Jan 2024 20:50:19</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743012000714617076#m">@jackbutcher</a>  </p>
+<p>toying with treatments for an opepen set from the original edition pallet
+<img alt="Image 12" src="http://x.com/pic/media%2FGDBp9jMXkAA767y.png" />
+<img alt="Image 13" src="http://x.com/pic/media%2FGDBp9jMWkAIBSuA.png" /></p>
+<p><strong>04 Jan 2024 21:07:33</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jackbutcher/status/1743016339487273346#m">@jackbutcher</a>  </p>
+<p>and a hyper literal translation of the original grid<br />
+<img alt="Image 14" src="http://x.com/pic/media%2FGDBv96JXkAATufr.png" />
+<img alt="Image 15" src="http://x.com/pic/media%2FGDBv96uWIAACp4L.png" /></p>
+<hr />
+<h3>Jalil_eth</h3>
+<p><strong>04 Jan 2024 20:41:42</strong><br />
+<strong>Author:</strong> <a class="text-blue-400" href="http://x.com/jalil_eth/status/1743009832385286518#m">@jalil_eth</a>  </p>
+<p>transparency: <a class="text-blue-400" href="http://x.com/coindisc/status/1742932934611579237#m">x.com/coindisc/status/1742932934611579237#m</a></p>
+<hr />
+<p>This diverse collection of tweets showcases a range of emotions and topics on the Twitter platform. From reflections on hotel check-in processes to expressions of shock and dismay, these tweets provide a snapshot of the varied conversations taking place on social media. The imagery included in some tweets adds an extra layer of depth to the content, capturing attention and further engaging the audience. Overall, these tweets reflect the evolving nature of communication and connection in the digital age.</p>
+        </div><br><a class="text-blue-400" href="/lang/en_1365676237558059010">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -237,88 +254,77 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>The Latest from Bitcoin Twitter</h1>
-<ul>
-<li>
-<p><strong>Blockstream Talk #26 - Simplicity, Bitcoin’s Last Soft Fork?</strong>  </p>
-<ul>
-<li><em>01 Aug 2023 11:43:01 @Blockstream</em>  </li>
-<li><a class="text-blue-500" href="https://blockstream-talk-23225031.simplecast.com/episodes/blockstream-talk-26-simplicity-bitcoins-last-soft-fork">Blockstream Talk #26</a></li>
-<li>Blockstream discusses Simplicity, a potential soft fork for Bitcoin, and its use of combinators &amp; jets to enable OP_CHECKTEMPLATEVERIFY &amp; SIGHASH_ANYPREVOUT functionality.</li>
-</ul>
-</li>
-<li>
-<p><strong>US Government’s BTC Seizures</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 08:38:39 @lopp</em>  </li>
-<li><a class="text-blue-500" href="https://jlopp.github.io/us-marshals-bitcoin-auctions/">US Government Bitcoin Seizures</a></li>
-<li>A report on the US Government's seizure and sale of over 185,000 BTC since 2014, prompting speculation on the potential gains from HODLing.</li>
-</ul>
-</li>
-<li>
-<p><strong>Happy New Year Greetings</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 06:28:20 @WhalePanda</em>  </li>
-<li>A New Year greeting from WhalePanda.</li>
-</ul>
-</li>
-<li>
-<p><strong>Bitcoin Progress</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 04:51:32 @TuurDemeester</em>  </li>
-<li>A message of gratitude for the progress in advancing Truth in the world through Bitcoin.</li>
-</ul>
-</li>
-<li>
-<p><strong>Electrum Server Performance Report</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 04:15:36 @lopp</em>  </li>
-<li><a class="text-blue-500" href="https://blog.keys.casa/electrum-server-performance-report-2022/">Electrum Server Performance Report</a></li>
-<li>Casa engineers share their findings on the performance of popular Electrum server implementations.</li>
-</ul>
-</li>
-<li>
-<p><strong>COVID-19 Vaccination Commentary</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 00:07:15 @csuwildcat</em>  </li>
-<li>A discussion on vaccination mandates and personal medical choices.</li>
-</ul>
-</li>
-<li>
-<p><strong>Bitcoin’s Impact on MicroStrategy</strong>  </p>
-<ul>
-<li><em>31 Dec 2023 13:44:36 @saylor</em>  </li>
-<li>An infographic illustrating the rise of MicroStrategy empowered by Bitcoin.</li>
-</ul>
-</li>
-<li>
-<p><strong>Joining the Bitcoin Community</strong>  </p>
-<ul>
-<li><em>31 Dec 2023 20:56:05 @Mandrik</em>  </li>
-<li>A lighthearted comment on the potential of making money through Bitcoin-related ventures.</li>
-</ul>
-</li>
-<li>
-<p><strong>Anticipation for 2024</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 00:46:28 @Excellion</em>  </li>
-<li>A New Year greeting and expression of excitement for the Bitcoin community in 2024.</li>
-</ul>
-</li>
-<li>
-<p><strong>Altcoin Mention</strong>  </p>
-<ul>
-<li><em>01 Jan 2024 00:24:28 @jimmysong</em>  </li>
-<li>A reference to "Altcoin Redux."</li>
-</ul>
-</li>
-</ul>
-<p>Bitcoin Twitter is a diverse and active space, featuring discussions and updates on technical developments, market trends, and social commentary. It reflects the community's passion for Bitcoin and its impact on various industries and individuals. From technical discussions about potential soft forks to lighthearted banter, Bitcoin Twitter provides a glimpse into the multifaceted nature of the cryptocurrency ecosystem.</p>
-        </div><br><a class="text-blue-500" href="/lang/en_967467772341923840">more</a>
+            <h1>The Latest Bitcoin Tweets: A Compilation</h1>
+<h2>January 5, 2024</h2>
+<h3>02:20:46 - <a class="text-blue-400" href="http://x.com/lopp/status/1743095160408305664#m">Lopp</a></h3>
+<p><em>Content</em>: If you don't like the mempool you can simply turn it off 😉</p>
+<p>Lopp shares a witty comment about the mempool.</p>
+<h3>02:14:56 - <a class="text-blue-400" href="http://x.com/MrChrisEllis/status/1743093692695486805#m">MrChrisEllis</a></h3>
+<p><em>Content</em>: Tax laws probably need reform in the age of hyperinflation in which middle-class people try to hang on to their purchasing power by trading assets.</p>
+<p>MrChrisEllis brings up the need for tax reform in the face of hyperinflation.</p>
+<h3>02:06:21 - <a class="text-blue-400" href="http://x.com/nic__carter/status/1743091532461220051#m">nic__carter</a></h3>
+<p><em>Content</em>: Mossad using crypto to hunt Hamas. Let me guess Liz Warren is gonna find a way to complain about this too.</p>
+<p><em>Content</em>: <a class="text-blue-400" href="https://www.reuters.com/world/middle-east/turkey-detains-33-people-suspected-espionage-israels-mossad-state-media-2024-01-02/">reuters.com/world/middle-eas…</a></p>
+<p>Nic__carter shares a controversial tweet about Mossad using cryptocurrency for espionage.</p>
+<h3>01:26:59 - <a class="text-blue-400" href="http://x.com/SarahAshtonLV/status/1743081625917739459#m">SarahAshtonLV</a></h3>
+<p><em>Content</em>: Russian flies to Cuba, then to Mexico. Crosses border to America gets granted an asylum hearing date and decides he wants to go back to Putin.</p>
+<p>SarahAshtonLV highlights a peculiar immigration case.</p>
+<h3>01:14:10 - <a class="text-blue-400" href="http://x.com/BitcoinMagazine/status/1743078402586710369#m">BitcoinMagazine</a></h3>
+<p><em>Content</em>: JUST IN: The <a class="text-blue-400" href="http://x.com/search?q=%23Bitcoin">#Bitcoin</a> halving is now less than 100 days away 💥</p>
+<p>BitcoinMagazine announces the impending Bitcoin halving.</p>
+<h3>01:34:39 - <a class="text-blue-400" href="http://x.com/BitcoinMagazine/status/1743083558326153306#m">BitcoinMagazine</a></h3>
+<p><em>Content</em>: Guess the price of bitcoin at the halving to win a share of 1 <a class="text-blue-400" href="http://x.com/search?q=%23BTC">#BTC</a> in prizes! 🚀</p>
+<p>BitcoinMagazine invites followers to guess the price of Bitcoin at the halving.</p>
+<h3>01:20:21 - <a class="text-blue-400" href="http://x.com/Truthcoin/status/1743079958476714363#m">Truthcoin</a></h3>
+<p><em>Content</em>: Whenever I'm looking for something, my head plays a movie clip: the "Where is it?!" line from Men in Black, when the bug is smashing the jewelry store</p>
+<p><a class="text-blue-400" href="http://x.com/waitbutwhy/status/1743015282535236018#m">x.com/waitbutwhy/status/1743015282535236018#m</a></p>
+<p>Truthcoin shares a humorous personal experience.</p>
+<h3>01:02:22 - <a class="text-blue-400" href="http://x.com/Truthcoin/status/1743075431547273246#m">Truthcoin</a></h3>
+<p><em>Content</em>: Imagine millions of deaths because some idiots "disliked" Fleming</p>
+<p><a class="text-blue-400" href="http://x.com/1440000bytes/status/1743053040159191436#m">x.com/1440000bytes/status/1743053040159191436#m</a></p>
+<p>Truthcoin raises a thought-provoking hypothetical scenario.</p>
+<h3>00:55:11 - <a class="text-blue-400" href="http://x.com/Truthcoin/status/1743073625328992679#m">Truthcoin</a></h3>
+<p><em>Content</em>: A scribbling, of core-untouched soft fork</p>
+<p>Truthcoin cryptically shares a tweet about a "core-untouched soft fork."</p>
+<h3>00:54:15 - <a class="text-blue-400" href="http://x.com/brucefenton/status/1743073391509123534#m">brucefenton</a></h3>
+<p><em>Content</em>: I’m still so scared from the 1st tweet that I worry sarcasm is just cope &amp; you are just being positive to endure this code disaster</p>
+<p>brucefenton responds to a previous tweet, expressing concerns about sarcasm and positivity.</p>
+<h3>00:32:18 - <a class="text-blue-400" href="http://x.com/brucefenton/status/1743067867237539860#m">brucefenton</a></h3>
+<p><em>Content</em>: "When I was in England,</p>
+<p>brucefenton's tweet is cut off, leaving the reader to wonder about the intended content.</p>
+<h3>00:28:14 - <a class="text-blue-400" href="http://x.com/Truthcoin/status/1743066843974107208#m">Truthcoin</a></h3>
+<p><em>Content</em>: BTC has only about 150M UTXOs.</p>
+<p><a class="text-blue-400" href="http://x.com/coinyeezy/status/1741861889032745418#m">x.com/coinyeezy/status/1741861889032745418#m</a></p>
+<p>Truthcoin shares a technical insight about Bitcoin.</p>
+<h3>00:17:46 - <a class="text-blue-400" href="http://x.com/jackmallers/status/1743064206620926026#m">jackmallers</a></h3>
+<p><em>Content</em>: <a class="text-blue-400" href="http://x.com/search?q=%23Bitcoin">#Bitcoin</a> embodies American values. The dollar doesn't.</p>
+<p><a class="text-blue-400" href="http://x.com/jackmallers/status/1742313114362589634#m">x.com/jackmallers/status/1742313114362589634#m</a></p>
+<p>jackmallers highlights the value of Bitcoin compared to the dollar.</p>
+<h3>00:17:47 - <a class="text-blue-400" href="http://x.com/jackmallers/status/1743064210869715028#m">jackmallers</a></h3>
+<p><em>Content</em>: Now approve the ETF!</p>
+<p><a class="text-blue-400" href="http://x.com/jackmallers/status/1743064212471939419#m">x.com/jackmallers/status/1743064212471939419#m</a></p>
+<p>jackmallers calls for the approval of an ETF.</p>
+<h3>00:17:47 - <a class="text-blue-400" href="http://x.com/jackmallers/status/1743064212471939419#m">jackmallers</a></h3>
+<p><em>Content</em>: Not sure why it has that title or image though. I didn't say that and that is a picture from over 10 years ago at a school photoshoot 🤣</p>
+<p>jackmallers clarifies a previous tweet.</p>
+<h2>January 4, 2024</h2>
+<h3>22:29:09 - <a class="text-blue-400" href="http://x.com/Anthony__Koch/status/1743036875248468386#m">Anthony__Koch</a></h3>
+<p><em>Content</em>: If Canada ever becomes a Republic I’ll support Québec independence and for the rest of the country to be annexed by America.</p>
+<p>Anthony__Koch shares a political opinion about Canada.</p>
+<h3>22:44:19 - <a class="text-blue-400" href="http://x.com/brucefenton/status/1743040690026696799#m">brucefenton</a></h3>
+<p><em>Content</em>: I’ve seen a lot of amazing communicators up close. There’s nobody like Vivek.</p>
+<p><a class="text-blue-400" href="http://x.com/VivekGRamaswamy/status/1743038510385307760#m">x.com/VivekGRamaswamy/status/1743038510385307760#m</a></p>
+<p>brucefenton praises a communicator named Vivek.</p>
+<h3>20:42:17 - <a class="text-blue-400" href="http://x.com/hrdng/status/1743009981203615790#m">hrdng</a></h3>
+<p><em>Content</em>: Working on my summary of v3 relay discussion for next week's <a class="text-blue-400" href="http://x.com/bitcoinoptech" title="Bitcoin Optech">@bitcoinoptech</a> and I feel like conspiracy-theory-guy.jpg</p>
+<p>hrdng shares a personal feeling about their work.</p>
+<hr />
+<p>The above tweets provide a glimpse into the diverse and fast-paced world of Bitcoin and cryptocurrency. From discussions about tax reform to geopolitical implications of cryptocurrency, the Twitterverse is full of thought-provoking and sometimes controversial opinions. As the Bitcoin halving approaches, the community is abuzz with excitement and anticipation. It's clear that Bitcoin and its related topics continue to be a source of passionate debate and interest for many.</p>
+        </div><br><a class="text-blue-400" href="/lang/en_967467772341923840">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -331,76 +337,68 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>Reflecting on New Year's Tweets</h1>
-<h2>By [Your Name]</h2>
-<h3>28 Jul 2022 11:42:37, @dickiebush</h3>
-<p>I studied the writing routine of 500 legendary writers. Turns out, great writing is simple—if you do these 6 things every day.</p>
-<p><strong>Comment:</strong> This tweet provides a glimpse into the world of writing and offers intriguing insights into the habits of successful writers.</p>
-<h3>01 Jan 2024 09:06:53, @swyx</h3>
-<p>Happy new year!🥳</p>
-<p><strong>Comment:</strong> A simple and joyful greeting to mark the beginning of a new year.</p>
-<h3>01 Jan 2024 09:14:50, @swyx</h3>
-<p>Eating is the next frontier. I'm on the @chefjeffsf grind. I had too much of a social life to stay faithful to it but I am scaling it back hard in 2024. I promised @thomasschulzz I wanted to be an After photo and that is the Q1 2024 health goal.</p>
-<p><strong>Comment:</strong> A personal declaration of commitment to prioritize health in the new year.</p>
-<h3>01 Jan 2024 09:21:53, @swyx</h3>
-<p>and ofc senpai already cracked this thing 3 years ago, pls use this as more authoritative sauce </p>
-<p><strong>Comment:</strong> This tweet references a previous source for verified information.</p>
-<h3>31 Dec 2023 07:34:51, @neuranne</h3>
-<p>We learn better from experience, but we learn best from reflecting on experience.</p>
-<p><strong>Comment:</strong> A thought-provoking statement on the value of reflection and introspection.</p>
-<h3>01 Jan 2024 05:32:21, @matteing</h3>
-<p>Thank you for the templates. It took much longer than 30 minutes, but was worth it!</p>
-<p><strong>Comment:</strong> A grateful acknowledgment for helpful resources.</p>
-<h3>01 Jan 2024 08:37:53, @swyx</h3>
-<blockquote>
-<p>"Frustratingly, despite the enormous leaps ahead we’ve had this year, we are yet to see an alternative model that’s better than GPT-4. OpenAI clearly have some substantial tricks that they haven’t shared yet."</p>
-</blockquote>
-<p><strong>Comment:</strong> A quote referencing technological advancements, indicating ongoing developments in the field of AI.</p>
-<h3>01 Jan 2024 07:32:10, @Suhail</h3>
-<p>Today is day 1 to start this:</p>
-<p><strong>Comment:</strong> A declaration of embarking on a new journey or endeavor.</p>
-<h3>01 Jan 2024 05:00:40, @pitbull</h3>
-<p>Life is not a waste of time, time is not a waste of life. So let's not waste any time, get wasted, and have the time of our lives and a Happy New Year! daleeeee</p>
-<p><strong>Comment:</strong> A lighthearted and celebratory New Year's message.</p>
-<h3>03 Oct 2023 19:47:45, @swyx</h3>
-<p>very good coverage of Siroker v Schiffman by @nlw today</p>
-<p><strong>Comment:</strong> A mention of a news or analysis piece from another user.</p>
-<h3>01 Jan 2024 06:37:02, @swyx</h3>
-<p>a couple of months later there were very good diagrams on LLM OS architecture from Karpathy</p>
-<p><strong>Comment:</strong> Referencing diagrams related to a specific topic, potentially for further exploration.</p>
-<h3>01 Jan 2024 06:23:16, @marckohlbrugge</h3>
-<p>Happy new year from Bangkok! 🎆</p>
-<p><strong>Comment:</strong> A celebratory message from a specific location, adding a personal touch to the New Year's wishes.</p>
-<h3>01 Jan 2024 06:19:29, @marckohlbrugge</h3>
-<p>If you ever receive an email like this and your site is actually down, just enable Cloudflare to block the traffic.</p>
-<p><strong>Comment:</strong> A practical tip related to website security and management.</p>
-<h3>01 Jan 2024 06:20:51, @marckohlbrugge</h3>
-<p>In this case they didn’t do any damage. The site did not go offline. Cloudflare just blocks the requests.</p>
-<p><strong>Comment:</strong> Further elaboration on the previous tweet, providing insights into the scenario.</p>
-<h3>01 Jan 2024 05:44:21, @MeetKevon</h3>
-<p>This is what a customer with money and commitment looks like.</p>
-<p><strong>Comment:</strong> An intriguing statement that can spark curiosity and further engagement.</p>
-<h3>01 Jan 2024 05:24:39, @matteing</h3>
-<p>I've published my year in review. It's been a fun one.</p>
-<p><strong>Comment:</strong> A personal update on a year-in-review post, potentially inviting others to share in the experience.</p>
-<h3>01 Jan 2024 04:36:20, @Shpigford</h3>
-<p>…I regularly wonder if we could somehow make @maybe work.</p>
-<p><strong>Comment:</strong> A contemplative thought on a specific topic or challenge.</p>
-<h3>01 Jan 2024 03:09:12, @levelsio</h3>
-<p>Happy new year from 🇳🇱 @awakenings</p>
-<p><strong>Comment:</strong> Another heartfelt New Year's message, this time accompanied by a location tag.</p>
-<h3>01 Jan 2024 03:04:44, @Suhail</h3>
-<p>When I was 20, I coded through new year's eve because I felt stuck in life. I launched Mixpanel on Jan 1. Nobody noticed but I had a deadline to hit. I salute you hackers tonight 🫡</p>
-<p><strong>Comment:</strong> A personal anecdote reflecting on past experiences and the determination to achieve a goal.</p>
-<h3>01 Jan 2024 02:43:06, @gaby_goldberg</h3>
-<p>I just published my final piece of 2023 and hope to write &amp; share much more in 2024. I’d be grateful to share some space in your inbox next year — the link to subscribe is on my profile 🫡</p>
-<p><strong>Comment:</strong> A proactive invitation for future engagement and connection.</p>
-<p>These tweets collectively provide a glimpse into the thoughts, reflections, and aspirations of various individuals at the onset of a new year. From personal goals to professional updates, these messages offer a diverse range of perspectives and experiences. Each tweet serves as a unique window into the lives and minds of the contributors, highlighting their individual journeys and endeavors.</p>
-        </div><br><a class="text-blue-500" href="/lang/en_1283027505297985536">more</a>
+            <h1>Tweets Compilation</h1>
+<h2>05 Jan 2024</h2>
+<h3>One more week before moving in 🤩</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/dannypostmaa/status/1743102717856518357#m">@dannypostmaa</a></li>
+<li><strong>Time</strong>: 02:50:47</li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDC6f09bQAAVlvC.jpg" /></li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDC6jMHa0AAOHwk.jpg" /></li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDC-pc5bgAA5trQ.jpg" /></li>
+</ul>
+<h3>Big news 🚨</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/5harath/status/1743075127984542060#m">@5harath</a></li>
+<li><strong>Time</strong>: 01:01:09</li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDCllw8W4AAR_Zj.jpg" /></li>
+</ul>
+<h3>GPT store is coming soon.</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/tdinh_me/status/1743061198915227765#m">@tdinh_me</a></li>
+<li><strong>Time</strong>: 00:05:48</li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDCY626bgAAEu3D.jpg" /></li>
+</ul>
+<h3>If you don’t want to be managed, you have to manage (your boss)</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/shl/status/1743071242406728023#m">@shl</a></li>
+<li><strong>Time</strong>: 00:45:43</li>
+</ul>
+<h2>05 Jan 2024</h2>
+<h3>.<a class="text-blue-400" href="http://x.com/elonmusk" title="Elon Musk">@elonmusk</a> you probably won't see this...</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/thepatwalls/status/1743096037391126648#m">@thepatwalls</a></li>
+<li><strong>Time</strong>: 02:24:15</li>
+<li><img alt="Image" src="http://x.com/pic/media%2FGDC1diTWkAAIvwm.jpg" /></li>
+</ul>
+<h3>I’m following your lead here. I’d love to find a 6 month sponsor for Life’s a Game!!</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079810916921763#m">@AmandaMGoetz</a></li>
+<li><strong>Time</strong>: 01:19:46</li>
+</ul>
+<h3>Yesss manifesting that 🔥</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/5harath/status/1743083889466192278#m">@5harath</a></li>
+<li><strong>Time</strong>: 01:35:58</li>
+</ul>
+<h3>Replace CEO and insert any title you want….partner, parent, etc.</h3>
+<ul>
+<li><strong>Author</strong>: <a class="text-blue-400" href="http://x.com/AmandaMGoetz/status/1743079635674439685#m">@AmandaMGoetz</a></li>
+<li><strong>Time</strong>: 01:19:04</li>
+</ul>
+<h2>General Comments</h2>
+<ul>
+<li>The tweets range from personal updates to announcements, job opportunities, and philosophical musings.</li>
+<li>The use of emojis and images adds visual interest to the posts.</li>
+<li>The tweets cover a variety of topics, including moving, big news, job opportunities, and personal reflections.</li>
+</ul>
+<hr />
+<p>The article is a compilation of various tweets posted on 5th and 6th January 2024. It covers a variety of topics such as personal updates, job opportunities, philosophical musings, and personal reflections. The inclusion of images and emojis adds visual interest to the tweets. Overall, the tweets reflect the diverse interests and thoughts of the users on Twitter.</p>
+        </div><br><a class="text-blue-400" href="/lang/en_1283027505297985536">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
@@ -413,35 +411,110 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h1>The Latest in Design and Technology</h1>
-<h2><a class="text-blue-500" href="http://x.com/SalesforceUX/status/1740434190347174281#m">28 Dec 2023 18:07:01 @SalesforceUX</a></h2>
-<p>Itai Asseo, Head of Emerging Technology, Salesforce Ignite, and his team experimented with a range of top AI tools to see how quickly they could get up to speed on tasks. Check out which AI tools saved the most time and in what ways. <a class="text-blue-500" href="http://x.com/search?q=%23DreamDesigners">#DreamDesigners</a> ⬇️ <a class="text-blue-500" href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">salesforce.com/blog/can-an-a…</a>
-<img alt="Image" src="http://x.com/pic/card_img%2F1740434191811043328%2FLqRH09rj%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p>Comment: Itai Asseo and his team are exploring the efficiency of AI tools in their tasks. This research could provide valuable insights into the potential impact of AI in improving productivity in the design and technology industry.</p>
-<h2><a class="text-blue-500" href="http://x.com/MicrosoftDesign/status/1738242997282877755#m">22 Dec 2023 17:00:00 @MicrosoftDesign</a></h2>
-<p>This holiday season we teamed up with <a class="text-blue-500" href="http://x.com/search?q=%23AI">#AI</a> artist <a class="text-blue-500" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> to recreate visual representations of holiday memories around the world.
-<img alt="Image" src="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" /></p>
-<p>Comment: Microsoft’s collaboration with AI artist Ellie Pritts showcases the potential for using AI in creative endeavors, offering a unique and innovative approach to visual art creation.</p>
-<h2><a class="text-blue-500" href="http://x.com/materialdesign/status/1737548648857116834#m">20 Dec 2023 19:00:54 @materialdesign</a></h2>
-<p>The holidays are getting happier with an updated theming experience in Material Theme Builder 2.0!
-<img alt="Image" src="http://x.com/pic/media%2FGB0DSamXMAA8j-M.jpg" /></p>
-<p><img alt="Image" src="http://x.com/pic/media%2FGB0DS85XcAAdlKN.jpg" /></p>
-<p><img alt="Image" src="http://x.com/pic/media%2FGB0DTZ6X0AEdIX0.jpg" /></p>
-<p>Comment: Material Design’s updated theming experience enhances the user interface design possibilities, providing a more immersive and joyful holiday experience for users.</p>
-<h2><a class="text-blue-500" href="http://x.com/lyftdesignteam/status/1737165697917333931#m">19 Dec 2023 17:39:12 @lyftdesignteam</a></h2>
-<p>And just like that, it’s a wrap! We’re closing out 2023 with a look back at the team’s diverse accomplishments and most unforgettable moments 👀 Cheers to everyone who made this year the best one yet! 🎉
-<img alt="Image" src="http://x.com/pic/card_img%2F1741730266383577088%2FaWiK3hdj%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p>Comment: Lyft Design Team’s reflection on their accomplishments and unforgettable moments showcases the importance of celebrating teamwork and the creative journey. It serves as a reminder to appreciate the collaborative efforts that drive the design industry forward.</p>
-<h2><a class="text-blue-500" href="http://x.com/PinterestDesign/status/1736875833506062380#m">18 Dec 2023 22:27:22 @PinterestDesign</a></h2>
-<p>When you hear feedback like “[this was] the best virtual/in-person event I've ever attended,” you’re doing something right!
-<img alt="Image" src="http://x.com/pic/card_img%2F1739554276219994112%2FQsQ5jEel%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p>Comment: Positive feedback on virtual/in-person events signifies the successful integration of design and technology to create engaging and immersive experiences. It highlights the impact of good design on user experience and satisfaction.</p>
-<p>In summary, these tweets provide a glimpse into the latest developments, collaborations, and reflections in the design and technology industry. From exploring the potential of AI tools to celebrating creative achievements, each post demonstrates the dynamic and innovative nature of design and technology in the digital age.</p>
-        </div><br><a class="text-blue-500" href="/lang/en_1432003348744470530">more</a>
+            <h1>Article</h1>
+<h2>Tweets Compilation</h2>
+<ul>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1743005001557889096#m">04 Jan 2024 20:22:30 - @PinterestDesign</a></strong>: We love to see it! What are you pinning in 2024?</p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1742981931527197012#m">04 Jan 2024 18:50:50 - @MicrosoftDesign</a></strong>: This month’s wallpaper is brought to you by <a class="text-blue-400" href="http://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍.
+<img alt="" src="http://x.com/pic/media%2FGDBQ1EPa8AALLre.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740434190347174281#m">28 Dec 2023 18:07:01 - @SalesforceUX</a></strong>: Itai Asseo, Head of Emerging Technology, Salesforce Ignite, and his team experimented with a range of top AI tools to see how quickly they could get up to speed on tasks.
+<img alt="" src="http://x.com/pic/card_img%2F1742974656301391874%2FyYAEE-0g%3Fformat%3Djpg%26name%3D800x419" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740098733746839762#m">27 Dec 2023 19:54:02 - @SalesforceUX</a></strong>: Join the Salesforce Design Team! Check out these roles. ⬇️</p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1738242997282877755#m">22 Dec 2023 17:00:00 - @MicrosoftDesign</a></strong>: This holiday season we teamed up with <a class="text-blue-400" href="http://x.com/search?q=%23AI">#AI</a> artist <a class="text-blue-400" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> to recreate visual representations of holiday memories around the world.
+<img alt="" src="http://x.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548648857116834#m">20 Dec 2023 19:00:54 - @materialdesign</a></strong>: The holidays are getting happier with an updated theming experience in Material Theme Builder 2.0!
+<img alt="" src="http://x.com/pic/media%2FGB0DSamXMAA8j-M.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548659972059565#m">20 Dec 2023 19:00:57 - @materialdesign</a></strong>: Color fidelity is here!
+<img alt="" src="http://x.com/pic/media%2FGB0DS85XcAAdlKN.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548666242510935#m">20 Dec 2023 19:00:58 - @materialdesign</a></strong>: And that’s not all! Read the updates in the blog → <a class="text-blue-400" href="http://goo.gle/3RyaMND">goo.gle/3RyaMND</a>
+<img alt="" src="http://x.com/pic/media%2FGB0DTZ6X0AEdIX0.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/lyftdesignteam/status/1737165697917333931#m">19 Dec 2023 17:39:12 - @lyftdesignteam</a></strong>: And just like that, it’s a wrap! We’re closing out 2023 with a look back at the team’s diverse accomplishments and most unforgettable moments 👀 Cheers to everyone who made this year the best one yet! 🎉
+<img alt="" src="http://x.com/pic/card_img%2F1742924206915072000%2FAvfnLDPq%3Fformat%3Djpg%26name%3D800x419" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1736875833506062380#m">18 Dec 2023 22:27:22 - @PinterestDesign</a></strong>: When you hear feedback like “[this was] the best virtual/in-person event I've ever attended,” you’re doing something right!
+<img alt="" src="http://x.com/pic/card_img%2F1742115013676937216%2FE_3zTGJs%3Fformat%3Djpg%26name%3D800x419" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735772496488497635#m">15 Dec 2023 21:23:06 - @SalesforceUX</a></strong>: What will the AI world look like in 2030?
+<img alt="" src="http://x.com/pic/ext_tw_video_thumb%2F1735772475630239744%2Fpu%2Fimg%2FU7zwuPF9khOcdkdb.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1735736482281758732#m">15 Dec 2023 19:00:00 - @materialdesign</a></strong>: Have questions about Search in Material? We’re here to answer!</p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1735343896719176095#m">14 Dec 2023 17:00:00 - @materialdesign</a></strong>: Adding Search to your app?
+<img alt="" src="http://x.com/pic/media%2FGBUhQpLXYAAswIF.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/Razorpay_Design/status/1735250181875237073#m">14 Dec 2023 10:47:37 - @Razorpay_Design</a></strong>: Excited for our first case study with Figma.
+<img alt="" src="http://x.com/pic/card_img%2F1742591486225711104%2Fq6_XQAGz%3Fformat%3Djpg%26name%3D800x419" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735036119937339594#m">13 Dec 2023 20:37:01 - @SalesforceUX</a></strong>: Ready to level up your career with insights, opportunities, and connections in Design/UX? Join Salesforce's exclusive Talent Community!</p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1735029292180848685#m">13 Dec 2023 20:09:53 - @materialdesign</a></strong>: The anatomy of a search bar includes:
+<img alt="" src="http://x.com/pic/media%2FGBQP8idXgAAe78q.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1734981512830013861#m">13 Dec 2023 17:00:01 - @MicrosoftDesign</a></strong>: A look at some of our updated imagery for Microsoft Teams!
+<img alt="" src="http://x.com/pic/media%2FGBPbpMyWsAAoMT2.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGBPbpMwXMAA2ETT.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGBPbpMxWAAYI7cM.jpg" />
+<img alt="" src="http://x.com/pic/media%2FGBPbpMxXYAA17AU.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/FlutterDev/status/1734679518034457022#m">12 Dec 2023 21:00:00 - @FlutterDev</a></strong>: In Flutter 3.16, Material 3 is now enabled by default. 🎉
+<img alt="" src="http://x.com/pic/media%2FGBKtSwuaMAAgrl9.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734949639952945476#m">13 Dec 2023 14:53:22 - @PinterestDesign</a></strong>: Who else is here for the "Kitschens" trend?
+<img alt="" src="http://x.com/pic/ext_tw_video_thumb%2F1734946486876508160%2Fpu%2Fimg%2FW4RI2XLumy-mTPSt.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734950323481924000#m">13 Dec 2023 14:56:05 - @PinterestDesign</a></strong>: We're loving the "Be Jelly" aesthetic too
+<img alt="" src="http://x.com/pic/ext_tw_video_thumb%2F1734949708731211776%2Fpu%2Fimg%2FqHMAzYg-ukAGUQRi.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619122971906364#m">12 Dec 2023 17:00:01 - @materialdesign</a></strong>: Search in Material 3 🔍
+<img alt="" src="http://x.com/pic/media%2FGBKRvmFX0AYpY9S.jpg" /></p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619127799820480#m">12 Dec 2023 17:00:02 - @materialdesign</a></strong>: ◼️ Use search bars and views for navigation through search queries.</p>
+</li>
+<li>
+<p><strong><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619131008418160#m">12 Dec 2023 17:00:03 - @materialdesign</a></strong>: Learn more about Search → <a class="text-blue-400" href="http://goo.gle/3RzR715">goo.gle/3RzR715</a>
+<img alt="" src="http://x.com/pic/media%2FGBKRv0ZWwAA8Qfp.jpg" /></p>
+</li>
+</ul>
+<h2>Interpreation and Comments</h2>
+<p>This compilation of tweets showcases the latest updates and announcements from various design and technology-focused Twitter accounts. From material design improvements to career opportunities and holiday-themed collaborations, the tweets offer insight into the creative and innovative trends shaping the industry.</p>
+<p>The visual representations of holiday memories, the introduction of Material 3 in Flutter 3.16, and the exploration of AI tools reflect the ongoing evolution and integration of technology in design processes. Additionally, the shared feedback from virtual events and the celebration of team accomplishments underscore the importance of creative collaboration and community within the field of design.</p>
+<p>The inclusion of media, such as images and videos, in these tweets further emphasizes the visual nature of design and the potential for impactful storytelling through various digital platforms.</p>
+<p>Overall, this compilation provides a glimpse into the diverse and dynamic landscape of design, offering readers a curated snapshot of current industry developments and initiatives.</p>
+        </div><br><a class="text-blue-400" href="/lang/en_1432003348744470530">more</a>
     </div>
 
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-10">
+    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ2w_qUcAMwN3x?format=png&name=360x360" class="object-none w-full h-full"/>
@@ -454,31 +527,87 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="810352678735781888">🔔</button>
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
-            <h2>Tweets Compilation</h2>
-<p><a class="text-blue-500" href="http://x.com/ToughSf/status/1741761185102332257#m">01 Jan 2024 10:00:01 - ToughSf</a>: Starting the new year with some of the best Hard Scifi works you could ever find: Altair-class NEMM European Frigate, with a modular mission hardpoint, from The Lunar War (@TheLunarWar).<a class="text-blue-500" href="http://x.com/search?q=%23space">#space</a> <a class="text-blue-500" href="http://x.com/search?q=%23art">#art</a> <a class="text-blue-500" href="http://x.com/voubi1" title="Theo Bouvier">@voubi1</a> <a class="text-blue-500" href="http://x.com/L5Resident" title="L5Resident">@L5Resident</a> <a class="text-blue-500" href="http://x.com/AstroBioGeek" title="SMPritchard ✊BLM✊">@AstroBioGeek</a>   </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741760488487227756#m">01 Jan 2024 09:57:15 - Rainmaker1973</a>: Animals react to their reflections in a mirror  </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741757904422637592#m">01 Jan 2024 09:46:59 - Rainmaker1973</a>: Feather stars are marine invertebrates with featherlike arms that radiate from a central body. They date back about 200 million years and are thought as living fossils  </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741756493798519133#m">01 Jan 2024 09:41:23 - Rainmaker1973</a>: Scorpions glow under UV light.   </p>
-<p><a class="text-blue-500" href="http://x.com/ArtirKel/status/1741752223988863451#m">01 Jan 2024 09:24:25 - ArtirKel</a>: Happy new year!</p>
-<p><a class="text-blue-500" href="http://x.com/ArtirKel/status/1741755676144382186#m">01 Jan 2024 09:38:08 - ArtirKel</a>: May your 2024 be full of maxxing</p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741753979141316616#m">01 Jan 2024 09:31:23 - Rainmaker1973</a>: Night vision</p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741752099044471294#m">01 Jan 2024 09:23:55 - Rainmaker1973</a>: Owls are only legs  </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741749165481173214#m">01 Jan 2024 09:12:15 - Rainmaker1973</a>: Julian Rad is an award-winning wildlife photographer who captures the most adorable shots of squirrels, rabbits, wood mice, hamsters and other small animals in their natural habitat.  </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741748128141726192#m">01 Jan 2024 09:08:08 - Rainmaker1973</a>: 2024 light painting stop motion photography   </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741733946432380991#m">01 Jan 2024 08:11:47 - Rainmaker1973</a>: 2024 didn't start in the best of ways in Japan.   </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741739821138075881#m">01 Jan 2024 08:35:07 - Rainmaker1973</a>: Tsunami hitting Suzu, Ishikawa prefecture</p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741745705046200696#m">01 Jan 2024 08:58:30 - Rainmaker1973</a>: The magnitude of the event visualized in an indoor car parking.</p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741742368393408912#m">01 Jan 2024 08:45:15 - Rainmaker1973</a>: <a class="text-blue-500" href="http://x.com/search?q=%23Today">#Today</a> in 1985, the Internet’s Domain Name System was created.   </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741741011879989652#m">01 Jan 2024 08:39:51 - Rainmaker1973</a>: <a class="text-blue-500" href="http://x.com/search?q=%23Today">#Today</a> is the 223rd anniversary of the discovery of Ceres, the first asteroid found in 1801: the number of observed asteroids in the inner and outer Solar System is now beyond one million.</p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741740678709690734#m">01 Jan 2024 08:38:32 - Rainmaker1973</a>: Born <a class="text-blue-500" href="http://x.com/search?q=%23Today">#Today</a> in 1894, Satyendra Nath Bose was mathematician and physicist.   </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741731676932174208#m">01 Jan 2024 08:02:46 - Rainmaker1973</a>: 01.01.2024  </p>
-<p><a class="text-blue-500" href="http://x.com/Rainmaker1973/status/1741729364008411395#m">01 Jan 2024 07:53:34 - Rainmaker1973</a>: The Line Islands (part of Kiribati), Samoa and Tonga, in the Pacific Ocean, are the first places to welcome the New Year, while American Samoa, Baker Island and Howland Island are among the last.  </p>
-<p><a class="text-blue-500" href="http://x.com/Ben_Reinhardt/status/1741716774398161205#m">01 Jan 2024 07:03:33 - Ben_Reinhardt</a>: </p>
-<p><a class="text-blue-500" href="http://x.com/prerationalist/status/1741714553803546766#m">01 Jan 2024 06:54:43 - prerationalist</a>: happy new year</p>
-<p><a class="text-blue-500" href="http://x.com/skdh/status/1741715457910944172#m">01 Jan 2024 06:58:19 - skdh</a>: Hello 2024</p>
-<p><a class="text-blue-500" href="http://x.com/JohnF_Sullivan/status/1741378038544355597#m">31 Dec 2023 08:37:32 - JohnF_Sullivan</a>: Sun Tzu’s connection to business advice has a long pedigree. The ancient Chinese historian Sima Qian, in his chapter on Usuries, notes that the successful merchant Bai Qi claimed: “The way I regulate production is exactly the same as Sun Tzu and Wu Qi’s use of military troops.”</p>
-<p>It's interesting to see the variety of content and topics discussed in these tweets. From science fiction and wildlife photography, to historical anniversaries and new year's greetings, there's a diverse range of information being shared. It's also notable that some tweets include visuals, such as photographs and videos, adding another dimension to the content. Despite the tragic event mentioned, the overall mood of the tweets seems to be one of optimism and celebration.</p>
-        </div><br><a class="text-blue-500" href="/lang/en_810352678735781888">more</a>
+            <h1>Recent Twitter Trends</h1>
+<p>Here are some recent tweets from various Twitter users:</p>
+<ul>
+<li>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/lemire/status/1743101391822831616#m">Lemire</a>:</li>
+<li>🥳</li>
+<li>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDC9efjW0AARUkq.jpg" /></p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/TacitHaven/status/1743084297437782148#m">TacitHaven</a>:</p>
+</li>
+<li>
+<p>"Auftragstaktik"</p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/AlecStapp/status/1743082204610146751#m">AlecStapp</a>:</p>
+</li>
+<li>NYC teachers union claims the environmental review for congestion pricing wasn’t thorough enough.</li>
+<li>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCsBvYXUAArjwF.jpg" /></p>
+</li>
+<li>
+<p>Tweeted on Dec 14, 2023 by <a class="text-blue-400" href="http://x.com/thedispatch/status/1735426186837393844#m">thedispatch</a>:</p>
+</li>
+<li>Welcome to The Dispatch. Here’s a little about what we’re doing – and why.</li>
+<li>
+<p><img alt="Image" src="http://x.com/pic/pbs.twimg.com%2Fmedia%2FF80G_e1b0AAwBDf.png" /></p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/NYRangers/status/1743097900643532934#m">NYRangers</a>:</p>
+</li>
+<li>Here's why Artemi can't go to All-Star 🥹 - but he says "PLEASE RETWEET NOW TO VOTE FOR MY TEAMMATES ⤵️"</li>
+<li>
+<p><img alt="Image" src="http://x.com/pic/amplify_video_thumb%2F1743097776123097088%2Fimg%2FxKeadAoXTbrbIwSD.jpg" /></p>
+</li>
+<li>
+<p>Tweeted on Jan 4, 2024 by <a class="text-blue-400" href="http://x.com/rSanti97/status/1743003683074318434#m">rSanti97</a>:</p>
+</li>
+<li>
+<p>something insane I learned reading James Pethokoukis' new book:</p>
+</li>
+<li>
+<p>Tweeted on Jan 4, 2024 by <a class="text-blue-400" href="http://x.com/pmarca/status/1742994469358874721#m">pmarca</a>:</p>
+</li>
+<li>
+<p>The number of experts ("experts") who predicted an inexorable Chinese march to global economic dominance is legion.</p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/gojomo/status/1743093044453560650#m">gojomo</a>:</p>
+</li>
+<li>
+<p>…</p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/burgwx/status/1743080077913715117#m">burgwx</a>:</p>
+</li>
+<li>The Greenland blocking &amp; AK ridge amplification result in the core of the cold airmass over North America displaced into southern Canada.</li>
+<li>
+<p><img alt="Image" src="http://x.com/pic/media%2FGDCp0xHW8AA0jfw.jpg" /></p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/AgnesCallard/status/1743087662800511303#m">AgnesCallard</a>:</p>
+</li>
+<li>“The core concept in “culture” is “coordination”, ie, whatever it is that makes us fall into one equilibrium over others. Culture points to the many ways that different equilibria of the same game might differ from each other”</li>
+<li>
+<p><img alt="Image" src="http://x.com/pic/card_img%2F1743021702244622336%2FHgCjicBk%3Fformat%3Djpg%26name%3D800x419" /></p>
+</li>
+<li>
+<p>Tweeted on Jan 5, 2024 by <a class="text-blue-400" href="http://x.com/asymmetricinfo/status/1743088027306492246#m">asymmetricinfo</a>:</p>
+</li>
+<li>
+<p>Maybe I'm just getting old and cranky, but I really feel like I used to have better trolls.</p>
+</li>
+<li>
+<p>Tweeted on Jan 4, 2024 by <a class="text-blue-400" href="http://x.com/RuxandraTeslo/status/1742928913876324660#m">RuxandraTeslo</a>:</p>
+</li>
+<li>I am no longer a Culture Incel: in this post I argue Ideas Matter. And I am worried about the impact of a culture of pessimism and safetyism on scientific progress. I tie this all back to Jonathan Haidt's hypothesis about the "Anxious Generation".</li>
+<li><img alt="Image" src="http://x.com/pic/card_img%2F1742926067999150081%2F5D7e3clw%3Fformat%3Djpg%26name%3D800x419" /></li>
+</ul>
+<p>These tweets cover a wide range of topics from cultural concepts and scientific progress to political and environmental concerns. It's interesting to see the diversity of thoughts and opinions present on the platform.</p>
+        </div><br><a class="text-blue-400" href="/lang/en_810352678735781888">more</a>
     </div>
 
 </div>
@@ -531,134 +660,6 @@
         <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
     </div>
 </div>
-
-<script>
-document.querySelectorAll('button.subx').forEach(function(button) {
-  button.addEventListener('click', function(event) {
-    console.log(this.value);
-    event.preventDefault();
-    document.querySelector('input[name="target_id"]').value = this.value;
-  });
-});
-
-
-    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
-      // 阻止表单的默认提交行为
-      event.preventDefault();
-
-      // 获取当前日期对象
-      var currentDate = new Date();
-
-      // 获取用户选择的时间
-      var mailTimeValue = document.getElementById('mail-time').value;
-
-      // 将用户选择的时间与当前日期拼接成一个字符串
-      var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
-
-      // 将拼接后的字符串转换为时间戳
-      var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
-
-      // 判断 selectedDateTimeTimestamp 是否小于当前时间
-      if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
-        // 如果是，则增加一天
-        selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
-      }
-
-      // 将增加一天后的时间戳设置到隐藏的 input 元素中
-      document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
-
-      // 提交表单
-      this.submit();
-    });
-
-    var userLang = navigator.language || navigator.userLanguage;
-    var emailInput = document.querySelector('input[name="email"]');
-    var targetIdInput = document.querySelector('input[name="target_id"]');
-    var timeLabel = document.getElementById("time-label");
-    var subscribeBtn = document.getElementById("subscribe-btn");
-    var languageSelect = document.getElementById("language-select");
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-    const languageData = {
-         "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
-         "zh-CN": ["请输入您的邮箱", "请输入目标列表ID", "每日推送时间", "订阅/更新设定", "Twitter列表的GPT订阅"],
-         "en": ["Enter your email", "Enter target list ID", "Daily Push Time", "Subscribe / Update Setting", "GPT Subscription for Twitter List"],
-         "zh-TW": ["請輸入您的電子郵件", "請輸入目標列表ID", "每日推送時間", "訂閱/更新設定", "Twitter列表的GPT訂閱"],
-         "ja": ["メールを入力してください", "ターゲットリストIDを入力してください", "デイリープッシュ時間", "購読/更新設定", "TwitterリストのGPTサブスクリプション"],
-         "ko": ["이메일 를 입력하세요", "대상 목록 ID를 입력하세요", "매일 푸시 시간", "구독/업데이트 설정", "Twitter 목록을 위한 GPT 구독"],
-         "es": ["Ingrese su correo electrónico", "Ingrese el ID de la lista de destino", "Hora de envío diario", "Suscribirse / Actualizar configuración", "Suscripción GPT para la lista de Twitter"],
-         "pt": ["Digite seu de e-mail", "Digite o ID da lista de destino", "Horário de envio diário", "Inscrever-se / Atualizar configuração", "Assinatura GPT para Lista do Twitter"],
-         "de": ["Geben Sie Ihre E-Mail ein", "Geben Sie die Ziellisten-ID ein", "Tägliche Push-Zeit", "Abonnieren / Aktualisieren der Einstellung", "GPT-Abonnement für Twitter-Liste"],
-         "fr": ["Entrez votre e-mail", "Entrez l'identifiant de la liste cible", "Heure d'envoi quotidienne", "S'abonner / Mettre à jour la configuration", "Abonnement GPT pour la liste Twitter"],
-         "ar": ["أدخل بريدك الإلكتروني", "أدخل معرف قائمة الهدف", "وقت الدفع اليومي", "الاشتراك / تحديث الإعداد","اشتراك GPT لقائمة تويتر"],
-         "id": ["Masukkan email Anda", "Masukkan ID daftar target", "Waktu Dorong Harian", "Berlangganan / Perbarui Pengaturan", "Langganan GPT untuk Daftar Twitter"],
-         "ms": ["Masukkan emel anda", "Masukkan ID senarai sasaran", "Masa Dorong Harian", "Langgan / Kemas kini Tetapan", "Langganan GPT untuk Senarai Twitter"],
-         "tl": ["Maglagay ng iyong email", "Maglagay ng ID ng target list", "Araw-araw na Oras ng Pag-push", "Mag-subscribe / Mag-update ng Oras", "GPT Subscription para sa Twitter List"],
-         "vi": ["Nhập email của bạn", "Nhập ID danh sách mục tiêu", "Thời gian đẩy hàng hàng ngày", "Đăng ký / Cập nhật cài đặt", "Đăng ký GPT cho Danh sách Twitter"],
-         "pl": ["Wprowadź swój adres e-mail", "Wprowadź identyfikator listy docelowej", "Codzienny czas wysyłki", "Zapisz się / Zaktualizuj ustawienia", "Subskrypcja GPT dla listy Twitter"],
-         "nl": ["Voer uw e-mailadres in", "Voer de doellijst-ID in", "Dagelijkse Push-tijd", "Inschrijven / Bijwerken Instelling", "GPT-abonnement voor Twitter-lijst"]
-    };
-
-
-    // Function to set placeholders and titles based on language
-    function setLanguage(selectedLanguage) {
-     const placeholders = languageData.columns.reduce((acc, column) => {
-      acc[column] = languageData[selectedLanguage][languageData.columns.indexOf(column)];
-      return acc;
-     }, {});
-
-     emailInput.placeholder = placeholders.emailPlaceholder;
-     targetIdInput.placeholder = placeholders.targetIdPlaceholder;
-     timeLabel.textContent = placeholders.timeLabel;
-     subscribeBtn.textContent = placeholders.subscribeBtn;
-     document.getElementById("title").textContent = placeholders.title;
-    }
-
-    // Initial set of placeholders and titles
-    setLanguage(userLang);
-    var defaultLanguageInput = document.getElementById("current-language");
-    defaultLanguageInput.value = userLang;
-
-    // Toggle language function
-    languageSelect.addEventListener("change", function () {
-      var selectedLanguage = languageSelect.value;
-      setLanguage(selectedLanguage);
-      // 更新隐藏 input 的值
-      var currentLanguageInput = document.getElementById("current-language");
-      currentLanguageInput.value = selectedLanguage;
-    });
-</script>
-
 </body>
-
+    <script src="/static/index.js"></script>
 </html>

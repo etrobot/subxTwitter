@@ -29,7 +29,7 @@ langs = {
 
 
 domTemplate='''
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 max-w-md bg-gray-500 bg-opacity-5">
+    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
         <div class="flex w-full items-center space-x-2 ">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="{{headPicId}}" class="object-none w-full h-full"/>
@@ -72,7 +72,7 @@ def output():
             atriclePath='<a href="/lang/{p}">more</a>'.format(p=l + '_' + li['id'])
             dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId']).replace("{{path}}",atriclePath).replace('<a href','<a class="text-blue-400" href').replace('<img alt="','<img class="max-w-xs m-2" alt="')
             with open('static/%s.html' % (l + '_' + li['id']), 'w') as f:
-               f.write(htmlHead+dom.replace('max-w-md ','').replace(' overflow-hidden h-60','').replace(atriclePath,'<a href="/lang/{p}">{p}</a>'.format(p=l))+htmlTail)
+               f.write(htmlHead+dom.replace('card ','').replace(' overflow-hidden h-60','').replace(atriclePath,'<a href="/lang/{p}">{p}</a>'.format(p=l))+htmlTail)
             doms.append(dom)
         fulldom='\n'.join(doms)
         with open('templates/template.html', 'r') as f:

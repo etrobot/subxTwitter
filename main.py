@@ -1,9 +1,8 @@
 import os,re
 from datetime import datetime,timedelta
-
+import random
 import openai
 from markdownify import markdownify as md
-
 import oracledb
 import pandas as pd
 import requests
@@ -19,6 +18,9 @@ load_dotenv(find_dotenv())
 # openai v1.0.0+
 client = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'],base_url=os.environ['API_BASE_URL'])
 
+NITTER = ['nitter.catsarch.com','nitter.nohost.network','nitter.oksocial.net','nitter.io.lol','nitter.no-logs.com','nitter.manasiwibi.com']
+nitter = random.sample(NITTER,1)
+
 def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     '''
     发送邮件的方法
@@ -30,9 +32,8 @@ def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     if len(message)==0:
         return
     message=message.replace('<td','<td style="border:1px solid grey;"').replace('<table','<table style="border-collapse:collapse;"')
-    subject=datetime.now().strftime('%Y年%m月%d日')+subject
+    subject='GPT Subscription for Twitter Lists'
     sender = os.environ['MAIL'] #发送的邮箱
-    receiver = receiver.split(';')  #要接受的邮箱（注:测试中发送其他邮箱会提示错误）
     smtpserver = os.environ['SMTP']
     username = os.environ['MAIL'] #你的邮箱账号
     password = os.environ['MAILPWD'] #你的邮箱密码
@@ -45,7 +46,7 @@ def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     smtp.sendmail(sender, receiver, msg.as_string()) #发送
     smtp.quit() # 结束
 
-def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
+def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
     '''
     抓取目标推特AI总结并发邮件
     :param lang:
@@ -55,7 +56,6 @@ def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, mode
     :param render:
     :return:
     '''
-    nitter:str = os.environ['NITTER']
     rss_url = f'https://{nitter}/i/lists/{twitter_user}/rss'
     print(rss_url)
     feed = parse(rss_url)
@@ -82,10 +82,10 @@ def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, mode
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
     df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] + df['author'] + ']' + '(' + df[
         'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
-    # df.to_csv('test.csv', index=False)
+    df.to_csv('test.csv', index=False)
     contents=[]
     for tweet in df['content'].values:
-        if len(''.join(contents))<10000:
+        if len(''.join(contents))<length:
             contents.append(tweet)
         else:
             break
@@ -98,6 +98,7 @@ def sumTweets(twitter_user:str,mail:str,lang = '中文',length:int = 10000, mode
                         api_key=os.environ['OPENAI_API_KEY'],
     )["choices"][0]["message"][
         "content"]
+    result=result+'\n\n subscription expired on '+expired+f' <button name="button" onclick="https://subx.fun/pay?email={mail}">$5 for 3 months</button><p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
     result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
     if '@' in mail:
         sendEmail(result,receiver=mail)
@@ -121,7 +122,7 @@ def run():
     for row in rows:
         # print(row)
         # print(checkTime, pushTime,row[3])
-        sumTweets(twitter_user=row[1],mail=row[0],lang=row[2],render=True)
+        sumTweets(expired=row[4].strftime("%Y/%m/%d"),twitter_user=row[1],mail=row[0],lang=row[2])
         sql_update = "UPDATE users SET mail_time = :new_mail_time WHERE email = :email"
         cursor.execute(sql_update, {"new_mail_time": row[3]+timedelta(days=1), "email": row[1]})
         conn.commit()

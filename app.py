@@ -1,5 +1,6 @@
 import os
 from datetime import datetime, timedelta
+import requests
 from fastapi import FastAPI, Request,HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -8,6 +9,8 @@ import httpx
 from base64 import b64encode
 from pydantic import BaseModel
 import oracledb
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 favicon_path = 'favicon.ico'
@@ -156,7 +159,7 @@ async def pay(request: Request, email: str):
 async def unsubscribe(email: str):
     conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
     cursor = conn.cursor()
-    cursor.execute("DELETE FROM users WHERE email = :email", email=email)
+    cursor.execute("UPDATE users SET unsub = :unsub WHERE email = :email", email=email, unsub=datetime.now(),)
     conn.commit()
     conn.close()
     return email+" Unsubscribed"
@@ -165,6 +168,16 @@ async def unsubscribe(email: str):
 async def subscribe(request: Request):
     form_data = await request.form()
     print(form_data)
+    nits = os.environ['NITTER'].split(';')
+    nitter=None
+    for site in nits:
+        url = f"https://{site}/i/lists/{form_data['target_id']}/rss"
+        response = requests.get(url)
+        if response.status_code == 200:
+            nitter = site
+            break
+    if nitter is None:
+        return templates.TemplateResponse("base.html", {"request": request, "main": '<div class="w-full text-center m-4">%s</div>'%'❌ERROR: Not an Available List ID'})
     email = form_data["email"]
     mail_time = datetime.utcfromtimestamp(int(form_data["mail_time"]))
     expire_date = datetime.now() + timedelta(days=7)
@@ -199,8 +212,9 @@ async def subscribe(request: Request):
         print("A new record has been inserted.")
 
     conn.close()
-
-    return email+" Subscribed, daily push on "+row[3].strftime("%H:%M")+", Expire Date："+expire_date.strftime("%Y-%m-%d")
+    info = email+"<br>✅ Subscribed %s <br>daily push on "%row[1]+row[3].strftime("%H:%M")+"<br>Expire Date："+expire_date.strftime("%Y/%m/%d")
+    info = '<div class="w-full text-center m-4">%s</div>'%info
+    return templates.TemplateResponse("base.html", {"request": request, "main": info})
 
 if __name__ == "__main__":
     import uvicorn

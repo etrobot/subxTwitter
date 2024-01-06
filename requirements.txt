@@ -1,6 +1,7 @@
 python-multipart
 beautifulsoup4
 Python-dotenv
+markdownify
 feedparser
 oracledb
 requests

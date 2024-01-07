@@ -1,43 +1,18 @@
 import os
 
 # 定义要替换的目标字符串和替换后的字符串
-target_str = '''<a href="/zh-CN" class="border-b-2 mr-2">简体中文</a>
-        <a href="/zh-TW" class="border-b-2 mr-2">繁體中文</a>
-        <a href="/en" class="border-b-2 mr-2">English</a>
-        <a href="/ja" class="border-b-2 mr-2">日本語</a>
-        <a href="/ko" class="border-b-2 mr-2">한국어</a>
-        <a href="/es" class="border-b-2 mr-2">Español</a>
-        <a href="/pt" class="border-b-2 mr-2">Português</a>
-        <a href="/de" class="border-b-2 mr-2">Deutsch</a>
-        <a href="/fr" class="border-b-2 mr-2">Français</a>
-        <a href="/ar" class="border-b-2 mr-2">العربية</a>
-        <a href="/id" class="border-b-2 mr-2">Bahasa Indonesia</a>
-        <a href="/ms" class="border-b-2 mr-2">Bahasa Melayu</a>
-        <a href="/tl" class="border-b-2 mr-2">Filipino</a>
-        <a href="/vi" class="border-b-2 mr-2">Tiếng Việt</a>
-        <a href="/pl" class="border-b-2 mr-2">Polski</a>
-        <a href="/nl" class="border-b-2 mr-2">Nederlands</a>'''
-replace_str = '''<a href="/lang/zh-CN" class="border-b-2 mr-2">简体中文</a>
-        <a href="/lang/zh-TW" class="border-b-2 mr-2">繁體中文</a>
-        <a href="/lang/en" class="border-b-2 mr-2">English</a>
-        <a href="/lang/ja" class="border-b-2 mr-2">日本語</a>
-        <a href="/lang/ko" class="border-b-2 mr-2">한국어</a>
-        <a href="/lang/es" class="border-b-2 mr-2">Español</a>
-        <a href="/lang/pt" class="border-b-2 mr-2">Português</a>
-        <a href="/lang/de" class="border-b-2 mr-2">Deutsch</a>
-        <a href="/lang/fr" class="border-b-2 mr-2">Français</a>
-        <a href="/lang/ar" class="border-b-2 mr-2">العربية</a>
-        <a href="/lang/id" class="border-b-2 mr-2">Bahasa Indonesia</a>
-        <a href="/lang/ms" class="border-b-2 mr-2">Bahasa Melayu</a>
-        <a href="/lang/tl" class="border-b-2 mr-2">Filipino</a>
-        <a href="/lang/vi" class="border-b-2 mr-2">Tiếng Việt</a>
-        <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
-        <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
-'''
 
-target_str= '''<img alt="'''
+target_str= '''<link rel="stylesheet" href="/static/style.css">'''
 
-replace_str = '''<img class="max-w-xs m-2" alt="'''
+replace_str = '''<link rel="stylesheet" href="/static/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
+         crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV4CMHELK9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('config', 'G-XV4CMHELK9');
+    </script>'''
 
 # 遍历static目录下的所有文件
 static_dir = 'static'

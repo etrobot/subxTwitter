@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime,timedelta
 import oracledb
 
 cs='(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))'
@@ -45,18 +46,21 @@ def update_data(cursor, table_name, data, condition):
     cursor.execute(query, data)
     cursor.connection.commit()
 
-# sql="UPDATE users SET lang = 'zh-CN'"
-# cursor.execute(sql)
-# cursor.connection.commit()
-# conn.close()
 
-# pd.set_option('display.max_columns', None)
-# df=select_data_as_dataframe(cursor,'users')
-# print(df)
-
-rows=select_data(cursor,'users')
-for row in rows:
-    print(row)
-    print(row[4]-row[3])
+def setExpDate(cursor, table='users',days=7, email=None):
+    expire_date = datetime.now() + timedelta(days=days)
+    sql = f"UPDATE {table} SET expire_date = :expire_date"
+    params = {'expire_date': expire_date}
+    if email:
+        sql += " WHERE email = :email"
+        params['email'] = email
+    cursor.execute(sql, params)
+    cursor.connection.commit()
+    conn.close()
 
 
+
+setExpDate(cursor)
+pd.set_option('display.max_columns', None)
+df=select_data_as_dataframe(cursor,'users')
+print(df)

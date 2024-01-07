@@ -39,4 +39,5 @@ jobs:
           MAIL: ${{ vars.MAIL }}
           SMTP: ${{ vars.SMTP }}
           MAILPWD: ${{ secrets.MAILPWD }}
+          OCPWD: ${{ secrets.OCPWD }}
         run: python main.py

@@ -2,17 +2,9 @@ import os
 
 # 定义要替换的目标字符串和替换后的字符串
 
-target_str= '''<link rel="stylesheet" href="/static/style.css">'''
+target_str= '''mt-2 text-sm overflow-hidden h-60'''
 
-replace_str = '''<link rel="stylesheet" href="/static/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
-         crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV4CMHELK9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('config', 'G-XV4CMHELK9');
-    </script>'''
+replace_str = '''mt-4 text-sm overflow-hidden h-60'''
 
 # 遍历static目录下的所有文件
 static_dir = 'static'

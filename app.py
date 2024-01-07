@@ -14,9 +14,9 @@ load_dotenv(find_dotenv())
 
 cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
 favicon_path = 'favicon.ico'
-PAYPAL_CLIENT_ID = "ATX59pVlDt_8UmXLeAm6J91GNiwqvkfVcom7co-luyx5-gxzn6PbPrkgxc1MSWuVJ5dco9cZNRwltB70"
-PAYPAL_CLIENT_SECRET = "ELV8q43R81OuHySD8z3AtJeahMITRQJPPc1WaJc98KSv5UqqOHVrjKlrbbQxy5JubjGIVheqg8GCiNl_"
-base = "https://api-m.sandbox.paypal.com"
+PAYPAL_CLIENT_ID = os.environ['PAYPAL_CLIENT_ID']
+PAYPAL_CLIENT_SECRET = os.environ['PAYPAL_CLIENT_SECRET']
+base = "https://api-m.paypal.com"
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
@@ -155,7 +155,7 @@ async def get_static_page(lang: str):
 async def pay(request: Request, email: str):
     return templates.TemplateResponse("pay.html", {"request": request, "usermail": email})
 
-@app.post("/unsubscribe")
+@app.get("/unsubscribe")
 async def unsubscribe(email: str):
     conn = oracledb.connect(user="ADMIN", password=os.environ['OCPWD'], dsn=cs)
     cursor = conn.cursor()
@@ -225,7 +225,7 @@ async def subscribe(request: Request):
         print("A new record has been inserted.")
 
     conn.close()
-    info = email+"<br>✅ Subscribed %s <br>daily push on "%row[1]+row[3].strftime("%H:%M")+"<br>Expire Date："+expire_date.strftime("%Y/%m/%d")
+    info = email+"<br>✅ Subscribed %s <br>daily push on GMT "%row[1]+row[3].strftime("%H:%M")+"<br>Expire Date："+expire_date.strftime("%Y/%m/%d")
     info = '<div class="w-full text-center m-4">%s</div>'%info
     return templates.TemplateResponse("base.html", {"request": request, "main": info})
 

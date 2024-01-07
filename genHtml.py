@@ -8,23 +8,23 @@ lists=[
     {'id': '1432003348744470530', 'name': 'Design Teams', 'headPicId': 'https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360'},
 ]
 langs = {
-    # 'zh-CN': '简体中文',
-    # 'zh-TW': '繁體中文',
-    # 'en': 'English',
-    # 'ja': '日本語',
-    # 'ko': '한국어',
-    # 'es': 'Español',
-    # 'pt': 'Português',
-    # 'de': 'Deutsch',
-    # 'fr': 'Français',
-    # 'ar': 'العربية',
-    # 'id': 'Bahasa Indonesia',
-    # 'ms': 'Bahasa Melayu',
-    # 'tl': 'Filipino',
-    # 'vi': 'Tiếng Việt',
+    'zh-CN': '简体中文',
+    'zh-TW': '繁體中文',
+    'en': 'English',
+    'ja': '日本語',
+    'ko': '한국어',
+    'es': 'Español',
+    'pt': 'Português',
+    'de': 'Deutsch',
+    'fr': 'Français',
+    'ar': 'العربية',
+    'id': 'Bahasa Indonesia',
+    'ms': 'Bahasa Melayu',
+    'tl': 'Filipino',
+    'vi': 'Tiếng Việt',
     'pl': 'Polski',
-    # 'nl': 'Nederlands',
-    # 'th':'ไทย'
+    'nl': 'Nederlands',
+    'th':'ไทย'
 }
 
 
@@ -41,7 +41,7 @@ domTemplate='''
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="{{listId}}">🔔</button>
         </div>
-        <div class="mt-2 text-sm overflow-hidden h-60">
+        <div class="mt-4 text-sm overflow-hidden h-60">
             {{sumTweets}}
         </div><br>{{path}}
     </div>
@@ -50,7 +50,7 @@ domTemplate='''
 domFinal='''
     <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
         <div class="mt-2 text-sm overflow-hidden h-60">
-            You can edit your own <a href="https://business.twitter.com/en/blog/twitter-101-lists.html">Twitter List</a> and subscribe it in your language:
+            You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language:
         </div><br><br><br><br><br><br><br>
     </div>
 '''
@@ -72,7 +72,7 @@ htmlHead='''<!DOCTYPE html>
       gtag('config', 'G-XV4CMHELK9');
     </script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
 '''
 

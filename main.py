@@ -3,7 +3,7 @@ from datetime import datetime,timedelta
 import random
 import openai
 from markdownify import markdownify
-import oracledb
+from crud import *
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -18,7 +18,7 @@ load_dotenv(find_dotenv())
 # openai v1.0.0+
 client = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'],base_url=os.environ['API_BASE_URL'])
 
-NITTER = ['nitter.catsarch.com','nitter.nohost.network','nitter.oksocial.net','nitter.io.lol','nitter.no-logs.com','nitter.manasiwibi.com']
+NITTER = os.environ['NITTER'].split(';')
 nitter = random.sample(NITTER,1)[0]
 
 def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
@@ -45,6 +45,7 @@ def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     smtp.login(username, password)
     smtp.sendmail(sender, receiver, msg.as_string()) #发送
     smtp.quit() # 结束
+    print(sender, receiver)
 
 def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
     '''
@@ -83,7 +84,7 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
     df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] + df['author'] + ']' + '(' + df[
         'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
     df['content'] = df['content'].apply(lambda x: markdownify(x))
-    df.to_csv('test.csv', index=False)
+    # df.to_csv('test.csv', index=False)
     contents=[]
     for tweet in df['content'].values:
         if len(''.join(contents))<length:
@@ -101,36 +102,42 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
         "content"]
     result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:0.5rem;" alt="').replace('http://','https://')
     if '@' in mail:
-        result = result + '\n\n subscription expired on ' + expired + f' <button name="button" onclick="https://subx.fun/pay?email={mail}">$5 for 3 months</button><p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
+        button=f'''<a style="display: inline-block;
+           padding: 10px 20px;
+           background-color: #4CAF50;
+           color: white;
+           text-decoration: none;
+           border-radius: 4px;
+           border: none;
+           cursor: pointer;
+           text-align: center;
+           font-size: 16px;"
+   href="https://subx.fun/pay?email={mail}">$5 for 3 months</a>
+        '''
+        result = result + '\n\n subscription expired on %s '%expired+button + f'<p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
         sendEmail(result,receiver=mail)
     return result
 
 def run():
-    cs = "(description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.us-sanjose-1.oraclecloud.com))(connect_data=(service_name=g6587d1fcad5014_subxtwitter_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))"
-    conn = oracledb.connect(user="ADMIN", password='Gnpw#0755#OC', dsn=cs)
-    cursor = conn.cursor()
-    # Define the SQL query
-    checkTime = datetime.utcnow() - timedelta(minutes=5)
-    pushTime = datetime.utcnow() + timedelta(minutes=5)
-    sql_query = "SELECT * FROM users WHERE expire_date >= :curdate AND mail_time <= :pushTime AND mail_time >= :checkTime"
-    cursor.execute(sql_query,curdate=datetime.now(),pushTime=pushTime,checkTime=checkTime)
-    sql_query = "SELECT * FROM users WHERE expire_date >= :curdate"
-    cursor.execute(sql_query,curdate=datetime.now())
-    # Fetch all rows from the result set
-    rows = cursor.fetchall()
-
+    pd.set_option('display.max_columns', None)
+    # print(select_data_as_dataframe('users'))
+    # sql_query = "SELECT * FROM users WHERE expire_date >= :curdate AND mail_time <= :pushTime AND mail_time >= :checkTime"
+    curdate = datetime.utcnow()  # 替换为你需要的日期时间
+    checkTime = curdate - timedelta(minutes=5)
+    pushTime = curdate + timedelta(minutes=5)
+    # print(checkTime,pushTime)
+    df = select_data_as_dataframe('users', '*','expire_date >= :curdate AND mail_time <= :pushTime AND mail_time >= :checkTime', curdate=curdate, pushTime=pushTime, checkTime=checkTime)
+    print(df)
     # Print the results
-    for row in rows:
-        print(row)
-        # print(checkTime, pushTime,row[3])
-        sumTweets(expired=row[4].strftime("%Y/%m/%d"),twitter_user=row[1],mail=row[0],lang=row[2])
+    for k,v in df.iterrows():
+        print(v)
+        print(checkTime, pushTime,v['MAIL_TIME'])
+        sumTweets(expired=v['EXPIRE_DATE'].strftime("%Y/%m/%d"),twitter_user=v['TARGET_ID'],mail=v['EMAIL'],lang=v['LANG'])
         sql_update = "UPDATE users SET mail_time = :new_mail_time WHERE email = :email"
-        cursor.execute(sql_update, {"new_mail_time": row[3]+timedelta(days=1), "email": row[1]})
-        conn.commit()
+        cursor.execute(sql_update, {"new_mail_time": v['MAIL_TIME']+timedelta(days=1), "email": v['EMAIL']})
+        cursor.connection.commit()
 
-    cursor.close()
-    conn.close()
+    cursor.connection.close()
 
 if __name__=='__main__':
     run()
-

@@ -10,7 +10,7 @@ body.dark input {
 
 @media (min-width: 768px) {
   .card{
-    width:30%;
+    width:32%;
   }
   .subcard {
     max-width: 360px;

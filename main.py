@@ -2,7 +2,7 @@ import os,re
 from datetime import datetime,timedelta
 import random
 import openai
-from markdownify import markdownify as md
+from markdownify import markdownify
 import oracledb
 import pandas as pd
 import requests
@@ -19,7 +19,7 @@ load_dotenv(find_dotenv())
 client = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'],base_url=os.environ['API_BASE_URL'])
 
 NITTER = ['nitter.catsarch.com','nitter.nohost.network','nitter.oksocial.net','nitter.io.lol','nitter.no-logs.com','nitter.manasiwibi.com']
-nitter = random.sample(NITTER,1)
+nitter = random.sample(NITTER,1)[0]
 
 def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     '''
@@ -82,6 +82,7 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
     df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] + df['author'] + ']' + '(' + df[
         'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
+    df['content'] = df['content'].apply(lambda x: markdownify(x))
     df.to_csv('test.csv', index=False)
     contents=[]
     for tweet in df['content'].values:
@@ -90,17 +91,17 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
         else:
             break
     tweets = '<br>'.join(contents).replace(nitter, 'x.com').replace('x.com/pic',nitter+'/pic')
-    prompt =  "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior writer of {lang} blog. Please compile the above tweets into a {lang} article formatted in markdown, including the time of tweeting, author (if any), and Twitter link (if any). Yes) and Twitter content as well as your interpretation and comments, need splitting lines"
-    prompt =  prompt.format(tweets=md(tweets).replace('\n\n','\n').replace('\_','_'),lang=lang)
+    prompt =  "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior editor of a {lang} blog. Please compile the above tweets into a {lang} article formatted in markdown, including the time of tweeting, author (if any), and Twitter link (if any). Yes) and Twitter content as well as your interpretation and comments"
+    prompt =  prompt.format(tweets=tweets.replace('\n\n','\n').replace('\_','_'),lang=lang)
     print('tweets:', prompt)
     result = completion(model=model, messages=[{"role": "user", "content": prompt}],
                         api_base=os.environ['API_BASE_URL'],
                         api_key=os.environ['OPENAI_API_KEY'],
     )["choices"][0]["message"][
         "content"]
-    result=result+'\n\n subscription expired on '+expired+f' <button name="button" onclick="https://subx.fun/pay?email={mail}">$5 for 3 months</button><p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
-    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables'])
+    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:0.5rem;" alt="').replace('http://','https://')
     if '@' in mail:
+        result = result + '\n\n subscription expired on ' + expired + f' <button name="button" onclick="https://subx.fun/pay?email={mail}">$5 for 3 months</button><p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
         sendEmail(result,receiver=mail)
     return result
 
@@ -120,7 +121,7 @@ def run():
 
     # Print the results
     for row in rows:
-        # print(row)
+        print(row)
         # print(checkTime, pushTime,row[3])
         sumTweets(expired=row[4].strftime("%Y/%m/%d"),twitter_user=row[1],mail=row[0],lang=row[2])
         sql_update = "UPDATE users SET mail_time = :new_mail_time WHERE email = :email"

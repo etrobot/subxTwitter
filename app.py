@@ -191,13 +191,26 @@ async def subscribe(request: Request):
 
     if row is not None:
         expire_date = row[4]
-        cursor.execute(
-            "UPDATE users SET lang = :lang, target_id = :target_id, mail_time = :mail_time WHERE email = :email",
-            target_id=form_data["target_id"],
-            mail_time=mail_time,
-            email=email,
-            lang=form_data["current_language"]
-        )
+        if row[5] is None:
+            cursor.execute(
+                "UPDATE users SET lang = :lang, target_id = :target_id, mail_time = :mail_time WHERE email = :email",
+                target_id=form_data["target_id"],
+                mail_time=mail_time,
+                email=email,
+                lang=form_data["current_language"]
+            )
+        elif row[4]-row[5]>0:
+            expire_date=datetime.now()+timedelta(days=row[4]-row[5])
+            cursor.execute(
+                "UPDATE users SET lang = :lang, target_id = :target_id, mail_time = :mail_time, expire_date= :expire_date WHERE email = :email",
+                target_id=form_data["target_id"],
+                mail_time=mail_time,
+                email=email,
+                lang=form_data["current_language"],
+                expire_date=expire_date
+            )
+        else:
+            return templates.TemplateResponse("pay.html", {"request": request, "usermail": email})
         conn.commit()
         print("The record has been updated.")
     else:

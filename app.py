@@ -225,7 +225,7 @@ async def subscribe(request: Request):
         print("A new record has been inserted.")
 
     conn.close()
-    info = email+"<br>✅ Subscribed %s <br>daily push on GMT "%row[1]+row[3].strftime("%H:%M")+"<br>Expire Date："+expire_date.strftime("%Y/%m/%d")
+    info = email+"<br>✅ Subscribed %s <br>daily push on Greenwich Mean Time (GMT) "%row[1]+row[3].strftime("%H:%M")+"<br>Expire Date："+expire_date.strftime("%Y/%m/%d")
     info = '<div class="w-full text-center m-4">%s</div>'%info
     return templates.TemplateResponse("base.html", {"request": request, "main": info})
 

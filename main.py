@@ -19,7 +19,6 @@ load_dotenv(find_dotenv())
 client = openai.OpenAI(api_key=os.environ['OPENAI_API_KEY'],base_url=os.environ['API_BASE_URL'])
 
 NITTER = os.environ['NITTER'].split(';')
-nitter = random.sample(NITTER,1)[0]
 
 def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     '''
@@ -47,20 +46,43 @@ def sendEmail(message:str,receiver:str='d361@qq.com',subject:str=''):
     smtp.quit() # 结束
     print(sender, receiver)
 
-def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
+def getTwList(twitter_user:str):
+    for nit in NITTER:
+        try:
+            rss_url = f'https://{nit}/i/lists/{twitter_user}/rss'
+            print(rss_url)
+            feed = parse(rss_url)
+            df = pd.json_normalize(feed.entries)
+            df['timestamp'] = df['published'].apply(lambda x: pd.Timestamp(x).timestamp())
+            return df,nit
+        except Exception as e:
+            print(e)
+            continue
+
+def addSubInfo(html_fragment:str,mail:str,expired:str):
+    button = f'''<a style="display: inline-block;
+               padding: 4px;
+               background-color: #2a79ef;
+               color: white;
+               text-decoration: none;
+               border-radius: 4px;
+               border: none;
+               cursor: pointer;
+               text-align: center;
+               font-size: 16px;"
+       href="https://subx.fun/pay?email={mail}">$5 for 3 months</a>
+            '''
+    return html_fragment + '\n\n subscription expired on %s ' %expired  + button + f'<p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
+
+def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
     '''
     抓取目标推特AI总结并发邮件
     :param lang:
     :param length:
     :param model:
-    :param mail:
-    :param render:
     :return:
     '''
-    rss_url = f'https://{nitter}/i/lists/{twitter_user}/rss'
-    print(rss_url)
-    feed = parse(rss_url)
-    df = pd.json_normalize(feed.entries)
+
     for k, v in df.iterrows():
         pattern = r'<a\s+.*?href="([^"]*https://%s/[^/]+/status/[^"]*)"[^>]*>'%nitter.replace(".",r'\.')
         matches = re.findall(pattern, v['summary'])
@@ -69,8 +91,7 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
                 indices = df[df['id'] == matches[0]]
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % indices['summary'].values[0],
                                              v['summary'])
-                if 'i/lists' in twitter_user:
-                    df = df.drop(indices.index)
+                df = df.drop(indices.index)
             else:
                 headers = {
                     'accept-language': 'zh-CN,zh-TW;q=0.9,zh;q=0.8,en-US;q=0.7,en;q=0.6,ja;q=0.5',
@@ -83,7 +104,7 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
     df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] + df['author'] + ']' + '(' + df[
         'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
-    df['content'] = df['content'].apply(lambda x: markdownify(x))
+    df['content'] = df['content'].astype(str).apply(lambda x: markdownify(x))
     # df.to_csv('test.csv', index=False)
     contents=[]
     for tweet in df['content'].values:
@@ -92,8 +113,11 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
         else:
             break
     tweets = '<br>'.join(contents).replace(nitter, 'x.com').replace('x.com/pic',nitter+'/pic')
-    prompt =  "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior editor of a {lang} blog. Please compile the above tweets into a {lang} article formatted in markdown, including the time of tweeting, author (if any), and Twitter link (if any). Yes) and Twitter content as well as your interpretation and comments"
-    prompt =  prompt.format(tweets=tweets.replace('\n\n','\n').replace('\_','_'),lang=lang)
+    prompt = "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior editor of a {lang} blog. " \
+              "Please compile the above tweets into a {lang} article formatted in markdown, including " \
+              "the time of tweeting, author (if any), and Twitter link (if any). Yes) " \
+              "and Twitter content as well as your interpretation and comments"
+    prompt = prompt.format(tweets=tweets.replace('\n\n','\n').replace('\_','_'),lang=lang)
     print('tweets:', prompt)
     result = completion(model=model, messages=[{"role": "user", "content": prompt}],
                         api_base=os.environ['API_BASE_URL'],
@@ -101,21 +125,6 @@ def sumTweets(expired:str,twitter_user:str,mail:str,lang = '中文',length:int =
     )["choices"][0]["message"][
         "content"]
     result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:0.5rem;" alt="').replace('http://','https://')
-    if '@' in mail:
-        button=f'''<a style="display: inline-block;
-           padding: 10px 20px;
-           background-color: #4CAF50;
-           color: white;
-           text-decoration: none;
-           border-radius: 4px;
-           border: none;
-           cursor: pointer;
-           text-align: center;
-           font-size: 16px;"
-   href="https://subx.fun/pay?email={mail}">$5 for 3 months</a>
-        '''
-        result = result + '\n\n subscription expired on %s '%expired+button + f'<p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
-        sendEmail(result,receiver=mail)
     return result
 
 def run():
@@ -130,11 +139,16 @@ def run():
     print(df)
     # Print the results
     for k,v in df.iterrows():
+        mail=v['EMAIL']
+        expired=v['EXPIRE_DATE'].strftime("%Y/%m/%d")
         print(v)
         print(checkTime, pushTime,v['MAIL_TIME'])
-        sumTweets(expired=v['EXPIRE_DATE'].strftime("%Y/%m/%d"),twitter_user=v['TARGET_ID'],mail=v['EMAIL'],lang=v['LANG'])
+        tweetDf,nit=getTwList(v['TARGET_ID'])
+        sumhtml= sumTweets(tweetDf,nit,lang=v['LANG'])
+        if '@' in mail:
+            sendEmail(addSubInfo(sumhtml, mail, expired), receiver=mail)
         sql_update = "UPDATE users SET mail_time = :new_mail_time WHERE email = :email"
-        cursor.execute(sql_update, {"new_mail_time": v['MAIL_TIME']+timedelta(days=1), "email": v['EMAIL']})
+        cursor.execute(sql_update, {"new_mail_time": v['MAIL_TIME']+timedelta(days=1), "email": mail})
         cursor.connection.commit()
 
     cursor.connection.close()

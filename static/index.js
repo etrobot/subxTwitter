@@ -1,13 +1,14 @@
 document.querySelectorAll('button.subx').forEach(function(button) {
   button.addEventListener('click', function(event) {
-    console.log(this.value);
+//    console.log(this.value);
     event.preventDefault();
     document.querySelector('input[name="target_id"]').value = this.value;
   });
 });
+var subscribeForm = document.getElementById('subscribe-form');
+if (subscribeForm !== null) {
 
-
-    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+    subscribeForm.addEventListener('submit', function (event) {
       // 阻止表单的默认提交行为
       event.preventDefault();
 
@@ -19,23 +20,23 @@ document.querySelectorAll('button.subx').forEach(function(button) {
 
       // 将用户选择的时间与当前日期拼接成一个字符串
       var selectedDateTimeString = currentDate.toISOString().slice(0, 10) + 'T' + mailTimeValue;
-
       // 将拼接后的字符串转换为时间戳
       var selectedDateTimeTimestamp = new Date(selectedDateTimeString).getTime() / 1000;
 
       // 判断 selectedDateTimeTimestamp 是否小于当前时间
-      if (selectedDateTimeTimestamp < currentDate.getTime() / 1000) {
+      if (selectedDateTimeTimestamp <  currentDate.getTime() / 1000 - 5 * 60) {
         // 如果是，则增加一天
         selectedDateTimeTimestamp += 24 * 60 * 60; // 24小时 * 60分钟 * 60秒
       }
-
+//      console.log(currentDate.getTime() / 1000)
+//      console.log(selectedDateTimeString)
       // 将增加一天后的时间戳设置到隐藏的 input 元素中
       document.getElementById('mail-time-timestamp').value = selectedDateTimeTimestamp;
 
       // 提交表单
       this.submit();
     });
-
+}
     var userLang = navigator.language || navigator.userLanguage;
     if (userLang.startsWith('en-')) {
           userLang = 'en';

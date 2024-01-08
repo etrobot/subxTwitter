@@ -1,16 +1,16 @@
 import os
 
 # 定义要替换的目标字符串和替换后的字符串
-target_str='subscribe by id in your language.<br><div class="title">Start for FREE</div>'
-replace_str='subscribe by id in your language.<br><div class="title font-bold">Start for FREE</div>'
+# target_str='subscribe by id in your language.<br><div class="title">Start for FREE</div>'
+# replace_str='subscribe by id in your language.<br><div class="title font-bold">Start for FREE</div>'
 
 
 # target_str= '''<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>'''
 # replace_str = '''<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
 # <div class="sidebar w-full max-w-sm items-center"></div>'''
 
-# target_str= '''card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-auto'''
-# replace_str = '''card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-1'''
+# target_str= '''img style="max-width: 20rem;margin:0.2rem auto;"'''
+# replace_str = '''img style="max-width: 20rem;margin:1rem;"'''
 
 # 遍历static目录下的所有文件
 static_dir = 'static'

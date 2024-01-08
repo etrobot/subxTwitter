@@ -128,7 +128,7 @@ def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, mod
                         api_key=os.environ['OPENAI_API_KEY'],
     )["choices"][0]["message"][
         "content"]
-    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:0.2rem auto;" alt="').replace('http://','https://')
+    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:1rem;" alt="').replace('http://','https://')
     return result
 
 def run():

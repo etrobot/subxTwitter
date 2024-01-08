@@ -48,36 +48,37 @@ if (subscribeForm !== null) {
     var languageSelect = document.getElementById("language-select");
     var themeToggle = document.getElementById("theme-toggle");
     var body = document.body;
+// 检测浏览器或系统是否处于深色主题模式
+function isDarkTheme() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && localStorage.getItem("theme") !== 'light') {
+    // 浏览器或系统处于深色主题模式
+    return true;
+  } else {
+    // 浏览器或系统处于浅色主题模式
+    return false;
+  }
+}
 
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
+// Toggle theme function
+themeToggle.addEventListener("click", function () {
+  body.classList.toggle("dark");
+  if (body.classList.contains("dark")) {
+    themeToggle.textContent = "☀";
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeToggle.textContent = "️🌒";
+    localStorage.setItem("theme", "light");
+  }
+});
 
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
+// 根据系统主题模式切换初始主题
+if (isDarkTheme()) {
+  body.classList.add("dark");
+  themeToggle.textContent = "☀";
+} else {
+  body.classList.remove("dark");
+  themeToggle.textContent = "️🌒";
+}
 
 const languageData = {
          "columns": ["emailPlaceholder", "targetIdPlaceholder", "timeLabel", "subscribeBtn", "title"],
@@ -113,7 +114,7 @@ const languageData = {
      targetIdInput.placeholder = placeholders.targetIdPlaceholder;
      timeLabel.textContent = placeholders.timeLabel;
      subscribeBtn.textContent = placeholders.subscribeBtn;
-     document.getElementById("title").textContent = placeholders.title;
+//     document.getElementById("title").textContent = placeholders.title;
 }
 
     // Initial set of placeholders and titles

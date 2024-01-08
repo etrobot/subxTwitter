@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,40 +83,19 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>简体中文文章</h2>
-<h3>2024年1月6日</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Dev__Digest/status/1743651419486405060#m">@Dev__Digest</a> 发布了一条推特：</p>
-<p>新视频介绍如何开始使用<a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>和<a href="https://x.com/UnstructuredIO" title="UnstructuredIO">@UnstructuredIO</a></p>
-<p><br><a style="color:#5da2ff;" href="https://youtu.be/2B161Dpvyxw">youtu.be/2B161Dpvyxw</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDKxuH4bQAAsqOf.jpg" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743369932178628944#m">@taranjeetio</a> 在2024年1月5日发布了一条推特：</p>
-<p>🙌🏻 <a href="https://x.com/embedchain" title="embedchain">@embedchain</a> 再次登上全球趋势，感谢大家的支持。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1743369853069852672%2Fpu%2Fimg%2FCkxYtIOoCGUVNhTE.jpg" /></p>
-<h3>2024年1月6日</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743548363214082171#m">@ylecun</a> 发布了一条推特：</p>
-<p>奖励密度。</p>
-<p>引用：</p>
-<blockquote>
-<p>Saining Xie (@sainingxie): "最后，我们试图重新塑造@ylecun的著名LeCake® - 我们可以拍摄蛋糕的照片，切割它，放置一个（或几个）樱桃在顶部，甚至扭动它们适合我们的口味 - 我个人认为它看起来比原来的还要美味 :) 据我所学，这是当前没有框架能够实现的功能，确实展示了3D几何控制如何能够在简单但具有挑战性的情况下实现精确编辑。（第7页）" | Nitter
-x.com/sainingxie/status/1743513013406064840#m</p>
-</blockquote>
-<p>最后，我们试图重新塑造<a href="https://x.com/ylecun" title="Yann LeCun">@ylecun</a>的著名LeCake® - 我们可以拍摄蛋糕的照片，切割它，放置一个（或几个）樱桃在顶部，甚至扭动它们适合我们的口味 - 我个人认为它看起来比原来的还要美味 :) 据我所学，这是当前没有框架能够实现的功能，确实展示了3D几何控制如何能够在简单但具有挑战性的情况下实现精确编辑。（第7页）</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDIqH4WXsAAdtYL.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDIusfDWsAA6cfl.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743421900519600400#m">@llama_index</a> 在2024年1月5日发布了一条推特：</p>
-<p>不要错过<a href="https://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> 在<a href="https://x.com/weights_biases" title="Weights &amp; Biases">@weights_biases</a> 的播客"Gradient Dissent"，他们讨论了：
-👉🏻 LlamaIndex在AI框架生态系统中的差异化
-👉🏻 检索增强生成的实际用例
-👉🏻 为AI开发和评估数据集
-👉🏻 避免幻觉和偏见
-👉🏻 管理类似LlamaIndex这样的大型开源项目的挑战
-👉🏻 等等</p>
-<p>在YouTube上查看：<a href="https://www.youtube.com/watch?v=xejCaLsYzV4">youtube.com/watch?v=xejCaLsY…</a>
-或在您喜欢的播客应用上查看！</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDHg-gWawAA6FEg.jpg" /></p>
-<p>...</p>
-<p>(这是一个示例，文章包含了推特内容的简体中文翻译，以及每一条推特的链接和作者信息。)</p>
+            <h1>最新AI模型研究动态</h1>
+<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1744003557320274075#m">07 Jan 2024 14:30:24@joaomdmoura</a>: 正在录制一段关于完整的本地AI智能代理团队的新视频 🚣✨</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy/status/1744179910347039080#m">08 Jan 2024 02:11:10@karpathy</a>: e/ia - 智慧增强
+- 不寻求建立取代人类的超智能上帝实体。
+- 建立“心智的自行车”工具，增强并扩展人类的信息处理能力。
+- 针对所有人类，而不是前百分位。
+- 忠于计算机先驱Ashby、Licklider、Bush、Engelbart… </p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy/status/1744200417784045799#m">08 Jan 2024 03:32:39@karpathy</a>: （我会随着思路不断添加想法。）将这些工具看作纯粹扩展智能的方式感觉太过约束，我们也看到了生成AI方面的很多成果。</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/erichorvitz/status/1744173774646222917#m">08 Jan 2024 01:46:47@erichorvitz</a>: <a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> 提出的重要观点：“美国正面临自奥密克戎以来最严重的COVID波。为什么我们还在假装？” <a href="https://tinyurl.com/ms8esuz6">tinyurl.com/ms8esuz6</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+<p><em>以上为部分内容。由于字数限制，请在Polished版本的html文章中查看完整内容。</em></p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

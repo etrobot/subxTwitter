@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,41 +83,50 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Top Tech Tweets of the Week</h1>
-<p>This week saw some exciting developments in the tech world, particularly in the field of artificial intelligence and open-source projects. Here are some of the top tweets that caught our attention:</p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">05 Jan 2024 10:19:23 @alexgleith</a></strong></h3>
-<p>Ang galak talaga ng tech advancements ngayon! Marahil isa sa pinakamahahalagang pag-unlad ay ang kakayahan ng Python na mag-load ng satellite data mula sa buong mundo sa loob lamang ng 6 lines of code at 15 seconds. Sobrang dali na nga ngayon kumpara dati!</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Satellite Data" src="https://nitter.nohost.network/pic/media%2FGDElNyAaYAAM-dG.jpg" /></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">06 Jan 2024 17:44:56 @hwchase17</a></strong></h3>
-<p>Favorite tutorial ko ito! Siguro hinahanda kasi ito sa mga taong may oras at interesadong malaman ang bagong teknolohiya sa pamamagitan ng isang mahabang tutorial na tumatagal ng 4 oras!</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">Tutorial Link</a></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">06 Jan 2024 17:44:07 @LangChainAI</a></strong></h3>
-<p>Naghahanap ka ba ng mga aktibidad para sa weekend mo? Check out ang video ni Krishnaik06 na tumatagal ng mahigit 4 oras. Sakop nito ang iba't ibang teknik at proyekto na maaari mong subukan gamit ang mga tech tools katulad ng AstraDB at Google Gemini Pro.</p>
-<p><br><a style="color:#5da2ff;" href="https://piped.video/watch?v=aWKrL4z5H6w">Video Link</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Weekend Video" src="https://nitter.nohost.network/pic/media%2FGDLUvMxaIAASdCh.jpg" /></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">06 Jan 2024 16:00:29 @taranjeetio</a></strong></h3>
-<p>Si Joe, isang contributor sa open-source, ay nagdagdag ng suporta para sa Google Drive folder bilang data loader sa embedchain. Gumagamit ito ng Google Drive loader mula sa LangChainAI.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Open Source" src="https://nitter.nohost.network/pic/media%2FGDK9BIKaUAAvJx5.jpg" /></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1743680481504514049#m">06 Jan 2024 17:06:37 @jerryjliu0</a></strong></h3>
-<p>Isinalaysay ang napakaraming RAG research sa nakaraang taon, at maaring ito ay magbibigay ng maraming kaalaman sa iba't ibang aspeto. </p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743680234493476899#m">Research Paper</a></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743668544993189951#m">06 Jan 2024 16:19:11 @ylecun</a></strong></h3>
-<p>Nagbigay ng listahan ng mga pagkakamali sa pag-disenyo ng slides. Isa rito ay ang hindi paggamit ng buong espasyo at maliit na fonts.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743416055232430438#m">Slide Design</a></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743369932178628944#m">05 Jan 2024 20:32:36 @taranjeetio</a></strong></h3>
-<p>Trending ang embedchain sa buong mundo sa GitHub! Salamat sa suporta ng lahat.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="GitHub Trending" src="https://nitter.nohost.network/pic/ext_tw_video_thumb%2F1743369853069852672%2Fpu%2Fimg%2FCkxYtIOoCGUVNhTE.jpg" /></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743548363214082171#m">06 Jan 2024 08:21:38 @ylecun</a></strong></h3>
-<p>Reward densification.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/sainingxie/status/1743513013406064840#m">Source</a></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743321585128521849#m">05 Jan 2024 17:20:29 @llama_index</a></strong></h3>
-<p>Inilabas ang isang advanced RAG Cheat Sheet + Recipes, na naglalaman ng mga detalye sa advanced RAGs kabilang ang retrieval at generation aspects.</p>
-<p><br><a style="color:#5da2ff;" href="https://blog.llamaindex.ai/a-cheat-sheet-and-some-recipes-for-building-advanced-rag-803a9d94c41b">Blog Post</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="RAG Cheat Sheet" src="https://nitter.nohost.network/pic/media%2FGDGFnUnbQAAG0ET.jpg" /></p>
-<h3><strong><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743475311939887438#m">06 Jan 2024 03:31:21 @ylecun</a></strong></h3>
-<p>😂😂</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/REVOLVO_OCELOTS/status/1743379197006152174#m">Source</a></p>
-<p>These tweets showcase the latest advancements in technology, particularly in the fields of artificial intelligence, open-source contributions, and slide design. It's inspiring to see how accessible and diverse the technology landscape is becoming. Let's continue to support and stay updated with these developments.</p>
+            <h1>New Developments in AI and Open Source</h1>
+<h2>07 Jan 2024</h2>
+<p><strong>14:30:24</strong> - <a href="https://x.com/joaomdmoura/status/1744003557320274075#m">@joaomdmoura</a>: 
+Recording a new video on a complete local models crew of AI Agents 🚣✨</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Tweet Image" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+<p>The AI models crew from Joaomdmoura is gaining traction!</p>
+<p><strong>20:54:23</strong> - <a href="https://x.com/llama_index/status/1744100187046543416#m">@llama_index</a>: 
+Our Open-Source Roadmap 🗺️</p>
+<p>We have big plans in 2024 to make the LlamaIndex ecosystem even more powerful, accessible, and production-ready for all LLM developers building core use cases (RAG, agents, and more) over their data. </p>
+<p>We’re releasing our 3-6 month roadmap with four high-level goals:</p>
+<ol>
+<li>Make LlamaIndex Production-Ready </li>
+<li>Make LlamaIndex accessible to all users </li>
+<li>Add advanced capabilities (RAG, agents, multimodal, and more) </li>
+<li>Stay on top of the AI Ecosystem</li>
+</ol>
+<p>This is a living document (last updated - today) and will change month by month. Check it out on our Github discussions page!</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Tweet Image" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+<p><em>Comment: Interesting to see the development plans for LlamaIndex in the coming months.</em></p>
+<p><strong>19:29:38</strong> - <a href="https://x.com/SVG__Collection/status/1744078860805697679#m">@SVG__Collection</a>: 
+THELONIOUS MONK</p>
+<p>A dissonant sorcerer, conjuring brilliance in musical chaos… 🎹</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Tweet Image" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></p>
+<p><em>Comment: A tribute to the legendary jazz pianist Thelonious Monk.</em></p>
+<p><strong>08 Jan 2024</strong>
+<strong>01:52:49</strong> - <a href="https://x.com/joaomdmoura/status/1744175292921348320#m">@joaomdmoura</a>: 
+And there you have it, crewAI is number one on <a href="https://x.com/github" title="GitHub">@github</a> trending today 🚀💖📈<br />
+Thank you for all the love and support</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Tweet Image" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+<p><em>Comment: Joaomdmoura celebrates the success of crewAI on GitHub.</em></p>
+<p><strong>08 Jan 2024</strong>
+<strong>02:49:37</strong> - <a href="https://x.com/RisingSayak/status/1744189585171829090#m">@RisingSayak</a>: 
+Thanks to the benevolent hard work of many in the community who continue to come up with cool tricks for LoRA + DreamBooth. </p>
+<p>So, <a href="https://x.com/linoy_tsaban" title="Linoy Tsaban🎗️">@linoy_tsaban</a> and <a href="https://x.com/multimodalart" title="apolinario (multimodal.art)">@multimodalart</a> decided to take it up a notch and do it purely in 🧨 diffusers with 🤗 PEFT:<br />
+<a href="https://huggingface.co/blog/sdxl_lora_advanced_script">huggingface.co/blog/sdxl_lor…</a>  </p>
+<p>This thing should decline to NOT work. So, please give it a try ❤️</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Tweet Image" src="https://nitter.catsarch.com/pic/card_img%2F1742268534476939264%2F3UFVm0dP%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p><em>Comment: RisingSayak introduces new tricks for LoRA and DreamBooth.</em></p>
+<p><strong>08 Jan 2024</strong>
+<strong>03:08:51</strong> - <a href="https://x.com/jerryjliu0/status/1744194426443112838#m">@jerryjliu0</a>: 
+omg this is me just realizing the link is broken</p>
+<p><br><a style="color:#5da2ff;" href="https://arxiv.org/abs/2312.10997">arxiv.org/abs/2312.10997</a></p>
+<p><em>Comment: Jerryjliu0 realizes a broken link and provides the correct URL.</em></p>
+<p>These recent tweets demonstrate the continued advancements and collaborations within the AI and open-source community, paving the way for new developments and possibilities in the field.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

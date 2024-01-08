@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,45 +83,69 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Resumen de los Tweets</h1>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743683126491316460#m">06 Jan 2024 17:17:08 @hwchase17</a></h2>
-<p>Muy fácil forma de construir aplicaciones de RAG.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743682944345219289#m">06 Jan 2024 17:16:24 @hwchase17</a></h2>
-<p>Impresionante ver cómo Langchain se utiliza de forma modular.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">06 Jan 2024 16:00:29 @taranjeetio</a></h2>
-<p>Un colaborador de código abierto llamado Joe ha añadido soporte para la carpeta de Google Drive como cargador de datos en @embedchain. El cargador utiliza el cargador de Google Drive de @LangChainAI.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1743680481504514049#m">06 Jan 2024 17:06:37 @jerryjliu0</a></h2>
-<p>Hubo mucha investigación RAG interesante en los últimos años, y todo estos esfuerzos están rastreados en un solo lugar. "Retrieval-Augmented Generation for Large Language Models: A Survey" por Gao et al. categoriza toda la investigación de RAG en tres categorías.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743669782321492206#m">06 Jan 2024 16:24:06 @LangChainAI</a></h2>
-<p>Hemos lanzado 2 tutoriales en YouTube esta semana que son perfectos para ver durante el fin de semana.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743668544993189951#m">06 Jan 2024 16:19:11 @ylecun</a></h2>
-<p>Aquí tienes una lista de errores imperdonables en el diseño de diapositivas.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/Dev__Digest/status/1743651419486405060#m">06 Jan 2024 15:11:08 @Dev__Digest</a></h2>
-<p>Nuevo video sobre cómo empezar con @LangChainAI y @UnstructuredIO.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743369932178628944#m">05 Jan 2024 20:32:36 @taranjeetio</a></h2>
-<p>¡@embedchain está de moda en @github nuevamente!</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743548363214082171#m">06 Jan 2024 08:21:38 @ylecun</a></h2>
-<p>Densificación de recompensas.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743421900519600400#m">05 Jan 2024 23:59:06 @llama_index</a></h2>
-<p>No te pierdas a @jerryjliu0 en el podcast de @weights_biases, Gradient Dissent.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/_philschmid/status/1743545280086053032#m">06 Jan 2024 08:09:22 @_philschmid</a></h2>
-<p>¡Recibimos un regalo de Navidad tardío de @Microsoft!</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/MatthewBerman/status/1743308046770839776#m">05 Jan 2024 16:26:42 @MatthewBerman</a></h2>
-<p>CrewAI te permite crear equipos increíbles de agentes de IA.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743475311939887438#m">06 Jan 2024 03:31:21 @ylecun</a></h2>
-<p>😂😂</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743321585128521849#m">05 Jan 2024 17:20:29 @llama_index</a></h2>
-<p>Hoja de trucos avanzada RAG + Recetas 🧑‍🍳</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743323977919992086#m">05 Jan 2024 17:30:00 @joaomdmoura</a></h2>
-<p>Langsmith me ayuda mucho en el debugging de las ejecuciones de crewAI.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/DrJimFan/status/1743406712198205522#m">05 Jan 2024 22:58:45 @DrJimFan</a></h2>
-<p>Gracias Tony por compartir videos entre bastidores.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743373507021402171#m">05 Jan 2024 20:46:49 @joaomdmoura</a></h2>
-<p>Sigo sorprendiéndome. Es genial ver todo el apoyo.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/paulkrugman/status/1743273379203788916#m">05 Jan 2024 14:08:56 @paulkrugman</a></h2>
-<p>Amigo, ¿dónde está mi recesión?</p>
-<p>(Traducción y comentarios)</p>
-<p>Incluir todos los tweets en un solo artículo sería poco práctico, dado que algunos de ellos contienen información muy técnica y específica sobre inteligencia artificial y desarrollo de software. En cambio, podrías seleccionar algunos tweets relevantes y crear un artículo que explique cómo la tecnología RAG (Retrieval-Augmented Generation) está siendo utilizada en diversos proyectos de código abierto y cómo está impactando el desarrollo de aplicaciones de inteligencia artificial. También podrías destacar el apoyo y la popularidad de ciertas herramientas y tutoriales relacionados con RAG. Esto permitiría a tus lectores obtener una visión general de las tendencias actuales en el campo de la inteligencia artificial sin abrumarlos con demasiada información técnica.</p>
+            <h2>Novedades en la IA y los Modelos de Lenguaje: Tweets Destacados</h2>
+<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1744003557320274075#m">07 Jan 2024 14:30:24 - @joaomdmoura</a>: Grabando un nuevo video sobre un equipo completo de modelos locales de IA 🚣✨</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+<p>En este tweet, Joao destaca la grabación de un video relacionado con modelos locales de IA. Aparentemente, este video se centra en un equipo completo de modelos de inteligencia artificial y probablemente presentará aspectos interesantes relacionados con este tema.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy/status/1744179910347039080#m">08 Jan 2024 02:11:10 - @karpathy</a>: e/ia - Amplificación de la Inteligencia<br />
+- No busca construir una entidad superinteligente que reemplace a los humanos.<br />
+- Construye herramientas "bicicleta para la mente" que potencian y extienden las capacidades de procesamiento de la información de los humanos.<br />
+- De todos los humanos, no solo el percentil más alto.<br />
+- Fiel a los pioneros de la informática, Ashby, Licklider, Bush, Engelbart, ...</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+<p>En este tweet, Karpathy comparte su visión sobre la amplificación de la inteligencia, resaltando la importancia de construir herramientas que empoderen a los humanos en lugar de reemplazarlos por entidades superinteligentes.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy/status/1744200417784045799#m">08 Jan 2024 03:32:39 - @karpathy</a>: (Agregaré ideas al hilo a medida que surjan).<br />
+Pensar en estas herramientas como una simple extensión de la inteligencia se siente demasiado limitante, también podrían entenderse igualmente como amplificación de la imaginación; también estamos viendo mucho de eso con generative IA.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy" title="Karpathy">@karpathy</a> continúa desarrollando su pensamiento sobre las herramientas de amplificación de la inteligencia, destacando la importancia de la imaginación y la generación en el contexto de la inteligencia artificial.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/erichorvitz/status/1744173774646222917#m">08 Jan 2024 01:46:47 - @erichorvitz</a>: Ideas importantes de <a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> "EE. UU. se enfrenta a la mayor ola de COVID desde Omicron. ¿Por qué seguimos haciendo como si?"
+<a href="https://tinyurl.com/ms8esuz6">tinyurl.com/ms8esuz6</a> Podemos hacerlo mejor. Abajo: <a href="https://x.com/UWproteindesign" title="Institute for Protein Design">@UWproteindesign</a> con diseño que bloquea la proteína spike del Covid. Prometedor como base para un aerosol nasal protector.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+<p>Este tweet señala importantes ideas relacionadas con la crisis de COVID-19, incluido un enlace a un artículo y una imagen con diseños prometedores para un aerosol nasal protector contra el virus.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1743680481504514049#m">06 Jan 2024 17:06:37 - @jerryjliu0</a>: Hubo mucha investigación interesante de RAG en el último año o dos, y afortunadamente para ti, ¡todos estos esfuerzos están rastreados en un solo lugar!</p>
+<p>Este tweet destaca la investigación sobre la generación mejorada para modelos de lenguaje y proporciona enlaces a recursos y una encuesta completa sobre el tema.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1744194426443112838#m">08 Jan 2024 03:08:51 - @jerryjliu0</a>: oh dios mío, acabo de darme cuenta de que el enlace está roto<br />
+<a href="https://arxiv.org/abs/2312.10997">arxiv.org/abs/2312.10997</a></p>
+<p>Este tweet corrige un enlace roto y comparte la dirección correcta de un recurso relacionado con la investigación sobre generación mejorada para modelos de lenguaje.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/RisingSayak/status/1744189585171829090#m">08 Jan 2024 02:49:37 - @RisingSayak</a>: Gracias al arduo trabajo de muchos en la comunidad que continúan ideando trucos geniales para LoRA + DreamBooth.</p>
+<p>Este tweet destaca la colaboración y el trabajo conjunto en la comunidad para mejorar las herramientas y métodos relacionados con la inteligencia artificial.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1744175292921348320#m">08 Jan 2024 01:52:49 - @joaomdmoura</a>: Y ahí lo tienen, crewAI es el número uno en tendencias de <a href="https://x.com/github" title="GitHub">@github</a> hoy 🚀💖📈
+Gracias por todo el amor y el apoyo</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+<p>En este tweet, se celebra el éxito de crewAI como el proyecto número uno en tendencia en la plataforma GitHub, lo que demuestra el interés y apoyo en este campo.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1744100187046543416#m">07 Jan 2024 20:54:23 - @llama_index</a>: Nuestro Mapa de Ruta de Código Abierto 🗺️
+Tenemos grandes planes en 2024 para hacer que el ecosistema de <a href="https://x.com/llama_index" title="LlamaIndex 🦙">@llama_index</a> sea aún más poderoso, accesible y listo para producción para todos los desarrolladores de modelos de lenguaje construyendo casos de uso fundamentales (RAG, agentes y más) sobre sus datos.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+<p>En este tweet se presenta un plan de trabajo detallado para el desarrollo del ecosistema de LlamaIndex, destacando objetivos específicos y la intención de mantenerse actualizado en el campo de la IA.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Rainmaker1973/status/1743906585305350244#m">07 Jan 2024 08:05:04 - @Rainmaker1973</a>: Construyendo un motor Mercedes-AMG G63 V8.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Video" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1743863069070024705%2Fimg%2FreqbqXtwxXo8zIiW.jpg" /></p>
+<p>Este tweet comparte un video sobre la construcción de un motor, lo que puede ser interesante para los entusiastas de la automoción.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/SVG__Collection/status/1744078860805697679#m">07 Jan 2024 19:29:38 - @SVG__Collection</a>: THELONIOUS MONK
+Un hechicero disonante, conjurando brillantez en el caos musical... 🎹</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></p>
+<p>Este tweet menciona a Thelonious Monk, un famoso músico, y destaca su genialidad artística.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1744131432509768024#m">07 Jan 2024 22:58:32 - @ylecun</a>: La firma de capital de riesgo Andreessen-Horowitz <a href="https://x.com/a16z" title="a16z">@a16z</a> escribió una carta a la Cámara de los Lores del Reino Unido en defensa de las plataformas de IA de código abierto.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDRmSs4WkAIjOUM.jpg" /></p>
+<p>En este tweet, se destaca la defensa de las plataformas de IA de código abierto en una carta enviada por una firma de capital de riesgo relevante.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/lateinteraction/status/1744120062473281726#m">07 Jan 2024 22:13:21 - @lateinteraction</a>: En los últimos 4 años, construimos un gran stack alrededor de ColBERT: un paradigma de recuperación que se desempeña robustamente en consultas difíciles, se adapta fácilmente a dominios complicados, y busca miles de millones de tokens en milisegundos.</p>
+<p>En este tweet se menciona el desarrollo de una plataforma de recuperación de información potente, que puede ser de interés para aquellos que trabajan en investigaciones relacionadas con la IA y los modelos de lenguaje.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/RisingSayak/status/1744189585171829090#m">08 Jan 2024 02:49:37 - @RisingSayak</a>: Gracias al arduo trabajo de muchos en la comunidad que continúan ideando trucos geniales para LoRA + DreamBooth.   </p>
+<p>Entonces, <a href="https://x.com/linoy_tsaban" title="Linoy Tsaban🎗️">@linoy_tsaban</a> y <a href="https://x.com/multimodalart" title="apolinario (multimodal.art)">@multimodalart</a> decidieron llevarlo un paso más allá y hacerlo completamente en difusores con 🤗 PEFT:<br />
+<a href="https://huggingface.co/blog/sdxl_lora_advanced_script">huggingface.co/blog/sdxl_lor…</a>  </p>
+<p>¡Este producto debería funcionar! Así que por favor pruébenlo. ❤️</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/card_img%2F1742268534476939264%2F3UFVm0dP%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p>En este tweet se menciona un proyecto específico relacionado con la inteligencia artificial y la generación de lenguaje, lo que puede ser relevante para la audiencia interesada en este tema.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1744175292921348320#m">08 Jan 2024 01:52:49 - @joaomdmoura</a>: Y ahí lo tienen, crewAI es el número uno en tendencias de <a href="https://x.com/github" title="GitHub">@github</a> hoy 🚀💖📈<br />
+Gracias por todo el amor y el apoyo</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+<p>En este tweet, se destaca el éxito de crewAI como el proyecto número uno en tendencia en la plataforma GitHub, lo que demuestra el interés y apoyo en este campo.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1744100187046543416#m">07 Jan 2024 20:54:23 - @llama_index</a>: Nuestro Mapa de Ruta de Código Abierto 🗺️<br />
+Tenemos grandes planes en 2024 para hacer que el ecosistema de <a href="https://x.com/llama_index" title="LlamaIndex 🦙">@llama_index</a> sea aún más poderoso, accesible y listo para producción para todos los desarrolladores de modelos de lenguaje construyendo casos de uso fundamentales (RAG, agentes y más) sobre sus datos.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+<p>En este tweet se presenta un plan detallado para el desarrollo del ecosistema de LlamaIndex, destacando objetivos específicos y la intención de mantenerse actualizado en el campo de la IA.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/lateinteraction/status/1744120062473281726#m">07 Jan 2024 22:13:21 - @lateinteraction</a>: En los últimos 4 años, construimos un gran stack alrededor de ColBERT: un paradigma de recuperación que se desempeña robustamente en consultas difíciles, se adapta fácilmente a dominios complicados, y busca miles de millones de tokens en milisegundos.</p>
+<p>En este tweet se menciona el desarrollo de una plataforma de recuperación de información potente, que puede ser de interés para aquellos que trabajan en investigaciones relacionadas con la IA y los modelos de lenguaje.</p>
+<p>Todas estas publicaciones en Twitter proporcionan una visión interesante sobre los avances recientes en inteligencia artificial, modelos de lenguaje y herramientas relacionadas. Desde investigaciones académicas hasta proyectos de código abierto y discusiones sobre técnicas de generación de lenguaje, estos tweets ofrecen una visión panorámica del estado actual del campo y las tendencias emergentes. Seguiremos atentos a futuras actualizaciones y avances en este emocionante campo.</p>
+<p>Recuerde visitar <a href="https://x.com">x.com</a> para obtener más información sobre estos y otros temas relacionados con la inteligencia artificial.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

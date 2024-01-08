@@ -23,7 +23,7 @@ body.dark input {
   }
 }
 
-#title {
+.title {
   background: linear-gradient(to right, #4085f3, aqua);
   -webkit-background-clip: text;
   color: transparent;

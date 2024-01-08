@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,98 +83,91 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Các Tweet Nổi Bật Trong Cộng Đồng AI Năm 2024</h1>
-<h2>05 Jan 2024</h2>
-<ul>
-<li><strong>10:19:23</strong> @alexgleith</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">Link to Tweet</a></li>
-<li>Bạn đã biết rằng với 2 thư viện Python, 6 dòng mã và khoảng 15 giây, bạn có thể tải dữ liệu vệ tinh từ bất kỳ nơi nào trên thế giới không?</li>
-<li>Ảnh minh họa</li>
-</ul>
-<h2>06 Jan 2024</h2>
-<ul>
-<li><strong>17:44:56</strong> @hwchase17</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">Link to Tweet</a></li>
-<li>Đây là một trong những hướng dẫn yêu thích gần đây của tôi</li>
-<li>
-<p>Video dài 4 giờ!!!!</p>
-</li>
-<li>
-<p><strong>17:44:07</strong> @LangChainAI</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">Link to Tweet</a></li>
-<li>Bạn đang tìm kiếm một cuộc hành động cuối tuần?</li>
-<li>
-<p>Danh sách video hướng dẫn.</p>
-</li>
-<li>
-<p><strong>17:17:08</strong> @hwchase17</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743683126491316460#m">Link to Tweet</a></li>
-<li>
-<p>Cách dễ dàng để xây dựng ứng dụng rag.</p>
-</li>
-<li>
-<p><strong>17:16:24</strong> @hwchase17</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743682944345219289#m">Link to Tweet</a></li>
-<li>
-<p>Tuyệt vời khi thấy langchain được sử dụng theo kiểu module.</p>
-</li>
-<li>
-<p><strong>16:00:29</strong> @taranjeetio</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">Link to Tweet</a></li>
-<li>Một người đóng góp nguồn mở tên Joe đã thêm hỗ trợ cho thư mục Google Drive như một trình tải dữ liệu trong embedchain.</li>
-<li>
-<p>Ảnh minh họa</p>
-</li>
-<li>
-<p><strong>17:06:37</strong> @jerryjliu0</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1743680481504514049#m">Link to Tweet</a></li>
-<li>Có rất nhiều nghiên cứu RAG thú vị trong hai năm qua, và may mắn cho bạn, tất cả những nỗ lực này được theo dõi tại một nơi!</li>
-<li>
-<p>Ảnh minh họa</p>
-</li>
-<li>
-<p><strong>16:24:06</strong> @LangChainAI</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743669782321492206#m">Link to Tweet</a></li>
-<li>
-<p>Chúng tôi đã ra mắt 2 video hướng dẫn YouTube trong tuần này - hoàn hảo cho việc xem cuối tuần đầy vui vẻ.</p>
-</li>
-<li>
-<p><strong>16:19:11</strong> @ylecun</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743668544993189951#m">Link to Tweet</a></li>
-<li>
-<p>Danh sách những sai lầm không thể chấp nhận trong thiết kế slide.</p>
-</li>
-<li>
-<p><strong>15:11:08</strong> @Dev__Digest</p>
-</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/Dev__Digest/status/1743651419486405060#m">Link to Tweet</a></li>
-<li>Video mới về bắt đầu sử dụng LangChain và UnstructuredIO.</li>
-</ul>
-<h2>Nhận Xét</h2>
-<ul>
-<li>
-<p>Cộng đồng AI đang rất sôi động với việc chia sẻ các video hướng dẫn, tutorial và nghiên cứu mới. Các công nghệ như Python, LangChain, UnstructuredIO đang nhận được sự quan tâm lớn từ cộng đồng phát triển, đồng thời đã có sự hợp tác đáng chú ý với các công ty lớn như Microsoft và Google.nodiscard</p>
-</li>
-<li>
-<p>Các video hướng dẫn rất hữu ích cho những ai muốn tiếp cận công nghệ AI và các ứng dụng thực tế của chúng. Việc chia sẻ các tài nguyên, kiến thức và kinh nghiệm qua video hướng dẫn cũng là một cách tốt để thúc đẩy sự phát triển của cộng đồng AI và truyền đạt kiến thức đến nhiều người hơn.</p>
-</li>
-<li>
-<p>Bài viết không chỉ tập trung vào những nghiên cứu, mà còn chia sẻ những kinh nghiệm cá nhân, ý kiến và kiến thức chuyên môn từ các chuyên gia hàng đầu. Điều này giúp giữ cho blog nguồn thông tin chính xác và đáng tin cậy đối với cộng đồng AI.</p>
-</li>
-<li>
-<p>Sự phổ biến của các công nghệ như embedchain và langchain đang được thể hiện qua sự chia sẻ và sự quan tâm lớn từ cộng đồng lập trình viên, đồng thời cũng chứng tỏ sự hấp dẫn của các công nghệ này đối với người dùng cuối.</p>
-</li>
-<li>
-<p>Những sự kiện và thông tin mới nhất đang nhận được sự quan tâm lớn từ cộng đồng, và đây hứa hẹn là một năm đầy hứng khởi trong lĩnh vực AI và công nghệ thông tin.nodiscard</p>
-</li>
-</ul>
+            <h1>Các Tweet Mới Nhất Về Công Nghệ AI và RAG</h1>
+<p>Tin được xuất bản vào 08 Jan 2024 </p>
+<h2>[@joaomdmoura - 07 Jan 2024 14:30:24]</h2>
+<p>Recording a new video on a complete local models crew of AI Agents 🚣✨
+<a href="https://x.com/joaomdmoura/status/1744003557320274075#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+<h2>[@karpathy - 08 Jan 2024 02:11:10]</h2>
+<p><strong><em>e/ia - Intelligence Amplification</em></strong>
+- Does not seek to build superintelligent God entity that replaces humans.
+- Builds “bicycle for the mind” tools that empower and extend the information processing capabilities of humans.
+- Of all humans, not a top percentile.
+- Faithful to computer pioneers Ashby, Licklider, Bush, Engelbart, ...
+<a href="https://x.com/karpathy/status/1744179910347039080#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+<h2>[@karpathy - 08 Jan 2024 03:32:39]</h2>
+<p>(I’ll add thoughts to thread as they come up. )<br />
+Thinking of these tools as purely extending intelligence feels too constraining, could just as importantly be understood as imagination amplification; we’re seeing a lot of that too with generative IA.
+<a href="https://x.com/karpathy/status/1744200417784045799#m">Link tới tweet</a></p>
+<h2>[@erichorvitz - 08 Jan 2024 01:46:47]</h2>
+<p>Important ideas from <a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> "U.S. is facing biggest COVID wave since Omicron. Why are we still playing make-believe?" <a href="https://tinyurl.com/ms8esuz6">tinyurl.com/ms8esuz6</a> We can do better. Below: <a href="https://x.com/UWproteindesign" title="Institute for Protein Design">@UWproteindesign</a> with design that blocks Covid spike protein. Promising as basis for protective nasal spray.
+<a href="https://x.com/erichorvitz/status/1744173774646222917#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+<h2>[@jerryjliu0 - 06 Jan 2024 17:06:37]</h2>
+<p>There was a lot of cool RAG research in the past year or two, and luckily for you, all of these efforts are tracked under one place!<br />
+“Retrieval-Augmented Generation for Large Language Models: A Survey” by Gao et al. does an admirable job categorizing all RAG research into three categories: 1) pre-trained models (e.g. RETRO), 2) Fine-tuning + RAG (e.g. RA-DIT), and 3) RAG in inference mode (e.g. DSP).
+Check the paper out! <a href="https://arxiv.org/abs/2312.10997">arxiv.org/abs/2312.10997</a>
+<a href="https://x.com/jerryjliu0/status/1743680481504514049#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDLMBzca0AACfBu.jpg" /></p>
+<blockquote>
+<p>LlamaIndex 🦙 (@llama_index): "One thing we loved about 2023 was the volume of new research around RAG from the entire community ❤️.</p>
+<p>... (full quote not available)</p>
+</blockquote>
+<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743680234493476899#m">Continue reading this thread...</a></p>
+<p>(Missing tweet by @llama_index)</p>
+<h2>[@jerryjliu0 - 08 Jan 2024 03:08:51]</h2>
+<p>omg this is me just realizing the link is broken
+<a href="https://arxiv.org/abs/2312.10997">arxiv.org/abs/2312.10997</a>
+<a href="https://x.com/jerryjliu0/status/1744194426443112838#m">Link tới tweet</a></p>
+<h2>[@RisingSayak - 08 Jan 2024 02:49:37]</h2>
+<p>Thanks to the benevolent hard work of many in the community who continue to come up with cool tricks for LoRA + DreamBooth. <br />
+So, <a href="https://x.com/linoy_tsaban" title="Linoy Tsaban🎗️">@linoy_tsaban</a> and <a href="https://x.com/multimodalart" title="apolinario (multimodal.art)">@multimodalart</a> decided to take it up a notch and do it purely in 🧨 diffusers with 🤗 PEFT:
+<a href="https://huggingface.co/blog/sdxl_lora_advanced_script">huggingface.co/blog/sdxl_lor…</a>
+<a href="https://x.com/RisingSayak/status/1744189585171829090#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/card_img%2F1742268534476939264%2F3UFVm0dP%3Fformat%3Djpg%26name%3D800x419" /></p>
+<h2>[@joaomdmoura - 08 Jan 2024 01:52:49]</h2>
+<p>And there you have it, crewAI is number one on <a href="https://x.com/github" title="GitHub">@github</a> trending today 🚀💖📈<br />
+Thank you for all the love and support<br />
+<a href="https://github.com/joaomdmoura/crewAI">github.com/joaomdmoura/crewA…</a>
+<a href="https://x.com/joaomdmoura/status/1744175292921348320#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+<h2>[@llama_index - 07 Jan 2024 20:54:23]</h2>
+<p>Our Open-Source Roadmap 🗺️<br />
+We have big plans in 2024 to make the <a href="https://x.com/llama_index" title="LlamaIndex 🦙">@llama_index</a> ecosystem even more powerful, accessible, and production-ready for all LLM developers building core use cases (RAG, agents, and more) over their data.<br />
+We’re releasing our 3-6 month roadmap (thanks <a href="https://x.com/LoganMarkewich" title="Logan Markewich">@LoganMarkewich</a> for putting this together!) with four high-level goals:<br />
+1️⃣ Make LlamaIndex Production-Ready<br />
+2️⃃ Make LlamaIndex accessible to all users<br />
+3️⃃ Add advanced capabilities (RAG, agents, multimodal, and more)<br />
+4️⃃ Stay on top of the AI Ecosystem<br />
+This is a living document (last updated - today) and will change month by month. Check it out on our Github discussions page!<br />
+<a href="https://github.com/run-llama/llama_index/discussions/9888">github.com/run-llama/llama_i…</a><br />
+Let us know your feedback/thoughts, and check out our contributing guide if you want to help out!
+<a href="https://x.com/llama_index/status/1744100187046543416#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+<h2>[@Rainmaker1973 - 07 Jan 2024 08:05:04]</h2>
+<p>Building a Mercedes-AMG G63 V8 engine.<br />
+[📹 Mr. Benz]
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1743863069070024705%2Fimg%2FreqbqXtwxXo8zIiW.jpg" />
+<a href="https://x.com/Rainmaker1973/status/1743906585305350244#m">Link tới tweet</a></p>
+<h2>[@SVG__Collection - 07 Jan 2024 19:29:38]</h2>
+<p>THELONIOUS MONK <br />
+A dissonant sorcerer, conjuring brilliance in musical chaos… 🎹
+<a href="https://x.com/SVG__Collection/status/1744078860805697679#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></p>
+<h2>[@ylecun - 07 Jan 2024 22:58:32]</h2>
+<p>Venture capital firm Andreessen-Horowitz <a href="https://x.com/a16z" title="a16z">@a16z</a> wrote a letter to the UK House of Lords in defense of open source AI platforms.
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDRmSs4WkAIjOUM.jpg" />
+<a href="https://x.com/ylecun/status/1744131432509768024#m">Link tới tweet</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDOaoDdWIAAh3iK.jpg" /></p>
+<h2>[@lateinteraction - 07 Jan 2024 22:13:21]</h2>
+<p>Over the past 4 years, we built a massive stack around ColBERT: a retrieval paradigm that performs robustly on hard queries, adapts easily to hard domains, and searches billions of tokens in milliseconds.<br />
+Watch closely as ColBERT et al become accessible to application builders⤵️<br />
+<a href="https://x.com/LangChainAI/status/1744080648481260015#m">Continue reading this thread...</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDQ4ElpagAAY6dN.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Hình ảnh liên kết" src="https://nitter.catsarch.com/pic/media%2FGDQ4FbObMAALB4G.jpg" /></p>
+<p>Tóm lại: Bài viết này tập trung vào một loạt các tweet mới nhất liên quan đến công nghệ AI và RAG. Các tweet đề cập đến việc chia sẻ nội dung video mới, việc phát triển công cụ tưởng tượng và thông tin về việc xây dựng mô hình lấy thông tin liên quan đến ngôn ngữ lớn. Các tweet cũng thảo luận về việc sử dụng công nghệ mở trong lĩnh vực trí tuệ nhân tạo.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

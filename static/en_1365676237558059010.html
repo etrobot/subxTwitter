@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,53 +83,43 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Latest Twitter Updates from Around the World</h1>
-<p>Here are some recent tweets from different Twitter users, covering a wide range of topics.</p>
-<ol>
-<li>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/paulg/status/1743681297170469316#m">@paulg</a> | 06 Jan 2024 17:09:51</strong>
-   Curiously enough I'd never have met Jessica if it wasn't for the Harvard Extension School. I met her when she was invited to a party at my house by someone she'd met in an acting class she took at the Extension School.</p>
-<p><em>Comment</em>: This tweet expresses a serendipitous encounter that resulted from attending the Harvard Extension School.</p>
-</li>
-<li>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1743680717689647298#m">@mkobach</a> | 06 Jan 2024 17:07:33</strong>
-   Twitter needs to update their algorithm to fix their reply problem. The top replies to any tweet should be relevant comments to the original tweet. Instead, users have figured out how to game the system by posting irrelevant viral videos as replies. Please fix this <a href="https://x.com/elonmusk" title="Elon Musk">@elonmusk</a>.</p>
-<p><em>Comment</em>: The user emphasizes the need for Twitter to address the issue of irrelevant replies and to prioritize relevant comments.</p>
-</li>
-<li>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743670718422740998#m">@businessbarista</a> | 06 Jan 2024 16:27:49</strong>
-   My friends &amp; I are sitting 50-yard-line at the National Championship for free thanks to <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>. Mission 1 accomplished. Mission 2: go viral. Here’s the plan…[...]</p>
-</li>
-</ol>
-<p><em>Comment</em>: This tweet announces a game plan for a viral challenge at the National Championship, involving the tagging of @HubSpot.</p>
-<ol>
-<li>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">@dutchtide</a> | 06 Jan 2024 13:52:01</strong>
-   More painting today, come and join the livestream to vibe and see what today's opepen is all about! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">https://x.com/i/broadcasts/1nA…</a></p>
-</li>
-<li>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665938430333149#m">@AliAbdaal</a> | 06 Jan 2024 16:08:50</strong>
-   Can't attend the Annual Planning Workshop today? No worries! You can still join in on the fun by answering the following prompts to help you reflect on the past year and manifest your best self for 2024 🎉 Let's start by reflecting on 2023 👇</p>
-</li>
-</ol>
-<p><em>Comment</em>: The tweet encourages participation in a reflection and goal-setting exercise for the new year.</p>
-<ol>
-<li><strong><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">@dickiebush</a> | 06 Jan 2024 16:05:22</strong>
-   What I wrote today: Saturday 1/6/24 Total writing time: 3 hours, 17 minutes</li>
-</ol>
-<p><em>Comment</em>: The user shares their productive writing session for the day.</p>
-<ol>
-<li><strong><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743648532278501424#m">@gregisenberg</a> | 06 Jan 2024 14:59:40</strong>
-   We just finished our 2024 kickoff exec offsite in Miami and I have some notes to share with you</li>
-</ol>
-<p><em>Comment</em>: This tweet provides a list of lessons learned from an executive offsite, pertaining to business strategies and best practices.</p>
-<ol>
-<li><strong><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743652378677498244#m">@gregisenberg</a> | 06 Jan 2024 15:14:57</strong>
-   We're hiring like crazy (share this to spread it):</li>
-<li>Partner <a href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a> (join future offsites like this) [...]</li>
-</ol>
-<p><em>Comment</em>: The user announces multiple job openings and invites sharing of the hiring post.</p>
-<p>These tweets provide a snapshot of various topics being discussed on Twitter, from personal reflections and creativity to business strategies and hiring opportunities.</p>
+            <h1>Twitter Roundup: What's Happening in the Twitterverse</h1>
+<h2>08 Jan 2024</h2>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">ShaanVP</a></h3>
+<p><em>05:17:45</em>
+"what would you do if you weren't afraid? (serious question)"</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">mechsicko</a></h3>
+<p><em>03:32:13</em>
+Sharing an artwork by Damien Hirst titled "The Physical Impossibility of Death in the Mind of Someone Living," citing the artist, year, type, medium, movement, and subject.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">sweatystartup</a></h3>
+<p><em>03:30:00</em>
+Highlighting the positive acts of human beings and the kindness they show to each other, emphasizing that the world is a great place.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">jackbutcher</a></h3>
+<p><em>03:14:05</em>
+Sharing an image.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">mkobach</a></h3>
+<p><em>02:36:53</em>
+Expressing dislike for certain ads, sharing an image.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/bunya_eth/status/1744167328529453128#m">bunya_eth</a></h3>
+<p><em>01:21:10</em>
+Sharing street art.</p>
+<h2>07 Jan 2024</h2>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/johnnyxbrown/status/1743997081679704446#m">johnnyxbrown</a></h3>
+<p><em>14:04:40</em>
+Sharing insights from the book "Atomic Habits" by James Clear.</p>
+<h2>06 Jan 2024</h2>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/alijla2021/status/1743733269571440760#m">alijla2021</a></h3>
+<p><em>20:36:23</em>
+Sharing two photos taken two hours apart.</p>
+<hr />
+<p>The tweets cover a range of topics, from thought-provoking questions to artwork, positive affirmations, and even a course on "Afrochemistry" at Rice University. The diverse and eclectic nature of Twitterverse continues to provide insight, entertainment, and thought-provoking discussions.</p>
+<p>What would you do if you weren't afraid? It's a serious question posed by <a href="https://x.com/ShaanVP/status/1744226866255606116#m">@ShaanVP</a>. This tweet encourages introspection and exploration of one's fears and limitations.</p>
+<p>Meanwhile, the tweet by <a href="https://x.com/mechsicko/status/1744200308543332432#m">@mechsicko</a> showcases an artwork by Damien Hirst, inviting viewers to contemplate the concept of life and apparent death.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">@sweatystartup</a> shares a heartwarming perspective, emphasizing the kindness and assistance that human beings offer to one another, challenging the mainstream narrative of negativity.</p>
+<p>On a lighter note, <a href="https://x.com/mkobach/status/1744186379741938012#m">@mkobach</a> expresses disdain for certain ads, sparking potential discussions about the impact of advertising on consumers.</p>
+<p>Through these tweets, we witness the multifaceted nature of Twitter, from philosophical musings to visual art, affirmations, and social commentaries.</p>
+<p>The Twitterverse is indeed a reflection of the diversity and complexity of human expression and experience.</p>
+<p><em>Stay tuned for more Twitter updates!</em></p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

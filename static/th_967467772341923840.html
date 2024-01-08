@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,34 +83,40 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>เร้องว่าด้วย AQUA Wallet Seed BIP32 Derivation Paths?</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/_jonasschnelli_/status/1743742955259584903#m">06 มกราคม 2567 เวลา 21:14:52</a> - โดย @<em>jonasschnelli</em></p>
-<p>ต้นทางการสืบทอด BIP32 ของ AQUA wallet คืออะไรนะ? มันไม่ใช่ BIP44 ถูกปลอกฉลองใช่ไหม?</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Excellion/status/1743831238329471192#m">07 มกราคม 2567 เวลา 03:05:40</a> - โดย @Excellion</p>
-<p>Replied as a quote so others can see.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Excellion/status/1743831026303111367#m">07 มกราคม 2567 เวลา 03:04:50</a> - โดย @Excellion</p>
-<p>.@AquaBitcoin uses:</p>
-<ul>
-<li>BIP49 derivation paths for @Liquid_BTC </li>
-<li>BIP84 derivation paths for #Bitcoin </li>
-</ul>
-<p>We don’t use P2PKH so no BIP44</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/BTCPerception/status/1743614323258163669#m">06 มกราคม 2567 เวลา 12:43:44</a> - โดย @BTCPerception</p>
-<p>การปรับปรุงที่น่าตื่นเต้น 👀</p>
-<p>คุณสามารถเข้าสู่แดชบอร์ดข้อมูลของ Bitcoin Perception และดูโอกาส แม้ว่ามีการประเมินว่ามีข้อดีหรือความเสียดายเกี่ยวกับ Bitcoin มากที่สุดในเวลาใด คุณดีดี: แดชบอร์ดจะเปิดให้สาธารณะในไม่ช้า!</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/basedlayer/status/1743614435581657482#m">06 มกราคม 2567 เวลา 12:44:10</a> - โดย @basedlayer</p>
-<p>ฉันกำลังทำงานกับบางสิ่ง...</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743823332233953330#m">07 มกราคม 2567 เวลา 02:34:15</a> - โดย @TuurDemeester</p>
-<p>ยังไงก็ต้องรับรองว่า The Satoshi Papers จะเข้าไปอยู่ในการนับสุดท้าย 💪</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SwiftOnSecurity/status/1743811347844829316#m">07 มกราคม 2567 เวลา 01:46:38</a> - โดย @SwiftOnSecurity</p>
-<p>ในระหว่างหลายปีที่ผ่านมาที่อยู่ในชุมชนต่างๆ ฉันได้พบกับคนที่บุคคล เจ้าบ้าน เหนียญทอง ที่ทุกคนเกลียดแต่ก็ต้องมองข้ามและลืมไป ถ้าพวกเขาเพียงแค่หันบ่านกากและไปทำสิ่งของตัวเองตั้งแต่นั้นแล้ว แต่พวกเขาพอมากพอจะไม่ทำ เลิกไม่ได้เกี่ยวกับใคร</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/gigachurros/status/1743744365913075735#m">06 มกราคม 2567 เวลา 21:20:28</a> - โดย @gigachurros</p>
-<p>Bitcoin ในที่สุดก็จะทำให้การปกครองของมนุษย์ดีขึ้น มันจะทำให้รัฐบาลมีความโปร่งแสงและมีประสิทธิภาพมากกว่าที่เป็นในปัจจุบันได้มาก</p>
+            <h1>Bitcoin Tweets Buzz</h1>
+<h2>08 Jan 2024</h2>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/derekmross/status/1744220590259491057#m">04:52:49@derekmross</a></h3>
+<p>lol my man if that happens ill print out this tweet and eat it.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m">05:02:26@TwoMinuteTimmy</a></h3>
+<p>Whatever it ends up being it’s going to be a large candle.
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDS5lcZaEAEpSYL.jpg" /></p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/DecentraSuze/status/1744246691824353540#m">06:36:32@DecentraSuze</a></h3>
+<p>Anticipating the SEC's midweek decision on a bitcoin spot ETF. Could this lead to a bitcoin supply crunch?
+My latest <a href="https://x.com/Forbes" title="Forbes">@Forbes</a> article featuring <a href="https://x.com/Excellion" title="Samson Mow">@Excellion</a> <a href="https://x.com/Scaramucci" title="Anthony Scaramucci">@Scaramucci</a> <a href="https://x.com/NateGeraci" title="Nate Geraci">@NateGeraci</a> <a href="https://x.com/ForbesCrypto" title="Forbes Crypto">@ForbesCrypto</a> <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a>
+<a href="https://www.forbes.com/sites/digital-assets/2024/01/08/how-will-a-bitcoin-spot-etf-affect-bitcoins-price/">Read more</a>
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/card_img%2F1744245077579276288%2F9MNW9PQn%3Fformat%3Djpg%26name%3D800x419" /></p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/BTCRoel/status/1744248325761536510#m">06:43:02@BTCRoel</a></h3>
+<p>If we reach $1M bitcoin price before 15-01-2024 i put a small <a href="https://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> logo tattoo on my ass</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/Macronaut_/status/1744249302183186779#m">06:46:54@Macronaut_</a></h3>
+<p>Remember I said 47 mil. BUT I WAS AT LEAST HALF JOKING.
+YOURE BEGINNIG TO SCARE ME.
+BUT I LIKE IT</p>
 <hr />
-<p>ความคิดเห็น:
-ไทยบล็อกรองหัวหน้าบรรณาธิการช่างศพใหญ่ของเรา เลย์ ต้องการกระจายความรู้และข้อมูลที่เป็นประโยชน์ในการใช้งานเดสก์ท็อปและมือถือ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับเซลเลอร์ ความเป็นเจ้าของ กฎหมาย และข้าวเหนียว เยิดใส่ไปที่ไผ่ หรือพูมาเลย์ ค่าแก่ ข่าว หรือไปที่ คราวเดอ์</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/ercwl/status/1744179087562739748#m">02:07:54@ercwl</a></h3>
+<p>Right.
+Somehow it even managed to go down (5,200 BTC → 5,000 BTC)
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDSRf5OWsAAI_2n.jpg" /></p>
 <hr />
-<p>ที่มา: https://nitter.oksocial.net/ เว็บไซต์ชุมชนบนโลกของทวิตเตอร์ ที่ให้ข้อมูลอัพเดททวิตเตอร์ที่ถูกซ่อนอยู่ โดยมีความเป็นเป็นส่วนตัว และเสมอภาคที่รัฐบาลทวิตเตอร์พยายามกำจะไม่ให้ผู้ใช้ได้ออกนอกบางรายการและผู้ใช้ทวิตเตอร์4683321012475558474</p>
+<h4><br><a style="color:#5da2ff;" href="https://x.com/Spartacus____X/status/1744246757423280366#m">06:36:48@Spartacus____X</a></h4>
+<p>If this happens I’ll tattoo your face on my ass. March 31st. $1m US goddamned D per Bitcoin.
+Quoting: Just making sure here, I’m still the only one saying <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a> can go to $1M in days to weeks right? Because when it happens I don’t want any of you bearish MFers saying you also called it.<br />
+x.com/Excellion/status/1744213971559956719#m</p>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1744236724132495770#m">05:56:56@real_vijay</a></h3>
+<p>1/ There is a legitimate concern that the custodial concentration brought about by a <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a> ETF increases the risk of a 6102 event. It should be noted there is some legal protection against this with the US 5th amendment...
+3/ The confiscation of gold in 1933 could get around this protection because dollars were considered equivalent to gold (redeemable at par) and so the US government could take people's gold and give them a paper promise in return (dollars).
+The same cannot be said of <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a>.
+4/ This is not to say that confiscation is impossible or even unlikely in the long term. Only that the US Constitution affords some legal protection against it.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

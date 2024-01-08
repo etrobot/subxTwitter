@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,50 +83,21 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>最新推特消息</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743667575345569806#m">06 Jan 2024 16:15:20</a><br />
-Tuur Demeester (@TuurDemeester)：
-我投票支持有關Allen Farrington的電視節目，他身穿肥胖服裝，並只訪問知識份子。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1743667089812983808%2Fpu%2Fimg%2F5W4hOkF7iPYbq3dW.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743667528620970391#m">06 Jan 2024 16:15:09</a><br />
-Aaron van Wirdum (@AaronvanW)：
-這真是有趣。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDLAXcNWAAAkiEU.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/alexbosworth/status/1743663721962950672#m">06 Jan 2024 16:00:01</a><br />
-Alex Bosworth (@alexbosworth)：
-解決低質量數字資產的方法就是發展更好的商業替代品。我曾看到人們嘗試在閃電網絡上賺錢，發現這很困難，然後轉而製作低質量的資產來換取比特幣。但如果他們在閃電網絡上賺更多錢，他們就不會離開。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743660915281564099#m">06 Jan 2024 15:48:52</a><br />
-Tuur Demeester (@TuurDemeester)：
-這太有趣了，因為它是真的 😅</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK6Hb6XIAAen0l.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK6IpvXEAAnXS7.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743661060648046668#m">06 Jan 2024 15:49:27</a><br />
-Tuur Demeester (@TuurDemeester)：
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK6evfXUAA-gmi.png" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743662822033170905#m">06 Jan 2024 15:56:27</a><br />
-Tuur Demeester (@TuurDemeester)：
-我認為<a href="https://x.com/ThomasEWoods" title="Tom Woods">@ThomasEWoods</a>也是這個領域的寶貴貢獻者之一。例如，他寫了《教會與市場》、《教會面對現代化》和《教會如何建立了西方文明》等書籍。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/lopp/status/1743661547178586178#m">06 Jan 2024 15:51:23</a><br />
-Luke Dashjr (@lopp)：
-看到自稱在天主教與經濟交叉領域專家的人，毫不知曉Jörg Guido Hülsmann，這是一個壯觀的悲劇。Jörg Guido Hülsmann是這個領域最重要的貢獻者之一。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Truthcoin/status/1743660307648573521#m">06 Jan 2024 15:46:27</a><br />
-Paul Sztorc (@Truthcoin)：
-或許這個系統會比我們現在的系統更好，如果我們將GDP的0.1%分配給所有國會議員，這樣他們就會既腐敗又有興趣最大化GDP。</p>
-<p>註：以上內容僅代表作者觀點，不代表本部落格立場。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/lopp/status/1743656125143130361#m">06 Jan 2024 15:29:50</a><br />
-Luke Dashjr (@lopp)：
-我認為未來，零礦工將會構建自己的區塊。</p>
-<p>（就像電力公司也不會構建自己的區塊一樣）</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/lopp/status/1743656125143130361#m">06 Jan 2024 15:29:50</a><br />
-Luke Dashjr (@lopp)：
-我認為未來，零礦工將會構建自己的區塊。</p>
-<p>（就像電力公司也不會構建自己的區塊一樣）</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/WhalePanda/status/1743650752050954554#m">06 Jan 2024 15:08:29</a><br />
-WhalePanda (@WhalePanda)：
-你真的會讓SEC告訴你該做什麼嗎？<br />
-你去吧，然後恐慌買入！</p>
-<p>（註：以上內容僅代表作者觀點，不代表本部落格立場。）</p>
-<p>以上是一些最新的推特消息。我們將繼續關注並分享更多有趣、有深度的內容。</p>
+            <h1>最新加密貨幣世界消息</h1>
+<h2>2024年1月8日</h2>
+<p><strong>derekmross</strong> 在推特上發佈了一條有趣的推文，表示如果某件事情發生，他就會把該推文列印出來吃掉。這引起了眾人的注意。<a href="https://x.com/derekmross/status/1744220590259491057#m">查看推特</a></p>
+<p><strong>TwoMinuteTimmy</strong> 則對未來的加密貨幣市場表達了樂觀態度，表示無論如何，未來的市場將會變得非常大。<a href="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m">查看這則推特</a>。 </p>
+<p><strong>DecentraSuze</strong> 則在熱切期待SEC對比特幣即期ETF的決定，並擔心這可能導致比特幣供應緊缺。她值得一讀的最新一篇文章在Forbes上發布，與Excellion, Samson Mow, Anthony Scaramucci, Nate Geraci, 和 Forbes Crypto有關。<a href="https://www.forbes.com/sites/digital-assets/2024/01/08/how-will-a-bitcoin-spot-etf-affect-bitcoins-price/">查看這篇文章</a>。</p>
+<p><strong>BTCRoel</strong> 則放了一個豪言，表示如果比特幣價格在2024年1月15日前達到1百萬美元，他將在臀部紋上AquaBitcoin的標誌。這引起許多人的註意。<a href="https://x.com/BTCRoel/status/1744248325761536510#m">查看推特</a></p>
+<p><strong>Macronaut_</strong> 曾表示比特幣可能達到4700萬美元，但此時他表示自己已經表示玩笑。<a href="https://x.com/Macronaut_/status/1744249302183186779#m">查看推特</a></p>
+<p><strong>XBitcode</strong> 表達了對Drivechain未來潛力的看法，認為Drivechain將帶來正面的改變。他呼籲支持Bip300。<a href="https://x.com/XBitcode/status/1744254042073690574#m">查看推特</a></p>
+<p><strong>ercwl</strong> 提到閃電網絡的公開通道容量低於1萬比特幣。<a href="https://x.com/ercwl/status/1744179087562739748#m">查看推特</a></p>
+<p><strong>Excellion</strong> 則對Balaji給出的90天的預測表示更為樂觀，認為比特幣價格可能在幾天到幾周內達到1百萬美元。<a href="https://x.com/Excellion/status/1744231232425394509#m">查看推特</a></p>
+<p><strong>loudmouthgrant</strong> 則宣稱如果某件事情發生，他將自己畫指甲。<a href="https://x.com/loudmouthgrant/status/1744245066913222718#m">查看推特</a></p>
+<p><strong>real_vijay</strong> 對比特幣ETF引發的集中存儲提出了一些合法顧慮，表示擁有比特幣的人將受到一定的法律保護。<a href="https://x.com/real_vijay/status/1744236724132495770#m">查看推特</a></p>
+<p><strong>RobertKennedyJr</strong> 則與Dr. Joseph Mercola討論了加拿大銀行如何與政府勾結凍結卡車遊行抗議者的帳戶的問題。<a href="https://x.com/RobertKennedyJr/status/1744163628717416565#m">查看推特</a></p>
+<p>以上是最新的加密貨幣世界新聞，希望對您有所幫助。</p>
+<p><em>(Note: The above is a fictional article and does not represent actual news)</em></p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

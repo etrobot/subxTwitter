@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,48 +83,36 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>การเขียนบล็อก: นี้คือทวีตที่ควรเขียนบล็อกเรื่อง</h1>
-<p>วันที่ 07 มกราคม 2567 เวลา 03:21 น. โดย Suhail
-(https://x.com/Suhail/status/1743835249229140304#m): การเขียนโปรแกรมจะเป็นที่สุขของฉันเสมอ ทุกครั้งที่ฉันกลับมาทำ ฉันพบความพึงพอใจที่ลึก ๆ แค่มีแค่แล็ปท็อป + การเชื่อมต่ออินเทอร์เน็ตก็พอ</p>
-<p>วันที่ 07 มกราคม 2567 เวลา 02:49 น. โดย swyx
-(https://x.com/swyx/status/1743827096953303191#m): มนุษย์ไม่เปลี่ยนแปลง
-<a href="https://x.com/pwlot/status/1678474955682357278?s=20">x.com/pwlot/status/167847495…</a></p>
-<blockquote>
-<p>Pawel Pachniewski (@pwlot): "การเตือน: รายการของปัญหา "ที่ไกลเหนือจากการแก้ไข" ใน AI, จาก "ประวัติย่อของ AI", เผยแพร่เมื่อมกราคม 2021." | OKSocial: nitter
-x.com/pwlot/status/1678474955682357278#m</p>
-</blockquote>
-<h1>หมายเหตุ: การพัฒนาด้าน AI กำลังก้าวหน้าขึ้นอย่างรวดเร็ว</h1>
-<p>วันที่ 06 มกราคม 2567 เวลา 16:09 น. โดย a_karvonen
-(https://x.com/a_karvonen/status/1743666230127411389#m): ฉันฝึก Chess-GPT, ประมาณ 50 ล้านพารามีเตอร์ LLM, เพื่อเล่นที่ระดับ 1500 ELO. เราสามารถมองเห็นสถานะภายในของกระดานได้ การเป็นโปรไฟล์ ELO นักเล่น โดยการทำการทำคาดการณ์ของตัวละครถัดไปเพื่ออื่น ๆ</p>
-<p>วันที่ 06 มกราคม 2567 เวลา 14:22 น. โดย arvidkahl
-(https://x.com/arvidkahl/status/1743639220206391414#m): วันเกิดลุงครับ ขอให้จากสุดใจแก่คุณ (และตัวเอง 😉), ฉันปล่อยตัวของพจนาการ:<br />
-เร็วจนถึงขาย (ebook+audiobook)<br />
-การประกอบธุรกิจระดับมืออาชีพ (ebook, audiobook &amp; toolkit)<br />
-ค้นหานักติดตามของคุณ (คอร์สทั้งหมด + ชุดเครื่องมือ)<br />
-ราคาวันเกิด: 20 ดอลลาร์!</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/card_img%2F1743637874245775360%2FGFgmRFev%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h1>ของขวัญสุดพิเศษสำหรับเทศบาลตำบล</h1>
-<p>วันที่ 06 มกราคม 2567 เวลา 21:35 น. โดย jackbutcher
-(https://x.com/jackbutcher/status/1743748037409681705#m): สำหรับผู้ที่อยากรู้ในกรณี API ของทวิตเตอร์ค่าเป็น 5,000 ดอลลาร์ต่อเดือน</p>
-<h1>คุณฉลาดมาก คุณแนะนำล่ะตรงไหนมักครับ</h1>
-<p>วันที่ 06 มกราคม 2567 เวลา 16:52 น. โดย levelsio
-(https://x.com/levelsio/status/1743676979813958134#m): ยกเลิกกรณี SQLite เมื่อฐานข้อมูลโตเกินไป?  ฐานข้อมูลคู่รูปภาพ AI มีขนาด 35.2 GB และมีรูปภาพ 7,270,478 ในปัจจุบัน (แค่ข้อมูลเมตาดาต้าพิเศษ รูปภาพจะเก็บไว้ที่ R2) ควรต้องจัดการอย่างไรเพื่อให้ฐานข้อมูลยังคงค่อยเร็ว?</p>
-<h1>ทวีตที่แสดงความรู้สึกที่ดี</h1>
-<p>วันที่ 06 มกราคม 2567 เวลา 16:05 น. โดย dickiebush
-(https://x.com/dickiebush/status/1743665067642536281#m): สู้ด้วยไหลสมองของคุณ</p>
-<p>ชื่อสำหรับรายการ: ความดีของวันเสาร์ 1/6/24  เวลาการเขียนทั้งหมด: 3 ชั่วโมง 17 นาที<br />
-• จดได้รับความลึกซึ้งใน 10 สิ่งที่มีความสำคัญตอนนั้น (30 นาที)<br />
-• จดสรุปประจำสัปดาห์ของฉัน "มีเรื่องอะไร" และ "ได้รับความรู้" (30 นาที)<br />
-• เขียนออกไปจากไอเดียที่เก็บอยู่ (30 นาที)<br />
-• ฉบับเริ่มต้น 2 ส่วนที่ยาวไม่เป็น (60 นาที)<br />
-• แนวทางเกี่ยโบสการเลี้ยงสำหรับครึ่งปีต่อไปสำหรับการประชุชมแกนงานเนื้อเพลงวันจันทร์ (30 นาที)<br />
-รู้สึกในระบบที่ดี<br />
--ไอเดียกำลังหมุนอยู่<br />
--ค็อฟฟี่ครับได้ตึงไว้<br />
-ก็อยากเพิ่มก็อยากนานเป็นปี</p>
-<p>และตอนนี้คุณเขียนอะไรไปไหน?<br />
-โปรดทิ้งคำตอบเพื่อให้ฉันทราบ - ฉันอ่านทุกข้อความแล้ว</p>
-<p>ในลักษณะดังกล่าวหนังสือเก่าน่าที่่อยากประท้อนสิ่งของตัวเองการเขียนบล็อก</p>
+            <h1>Latest Tweets Compilation</h1>
+<p>Here are the latest tweets from various Twitter users, featuring a variety of topics including personal reflections, technical issues, professional updates, and more. Let's dive in!</p>
+<h2>08 Jan 2024</h2>
+<p><strong>08:48:09</strong> - <strong>@marckohlbrugge</strong> - <a href="https://x.com/marckohlbrugge/status/1744279812305530993#m">Source</a>
+- Posting about the financial impact and loyal community members for wip.co.</p>
+<p><strong>08:49:03</strong> - <strong>@marckohlbrugge</strong> - <a href="https://x.com/marckohlbrugge/status/1744280039171236096#m">Source</a>
+- Discussing the current low MRR due to a limited number of paying members.</p>
+<p><strong>07:42:59</strong> - <strong>@neuranne</strong> - <a href="https://x.com/neuranne/status/1744263413889413404#m">Source</a>
+- Reflecting on the loss of a personal journal and the unexpected opportunity it provided for personal growth and renewed excitement for daily journaling.</p>
+<p><strong>05:54:29</strong> - <strong>@michwirantono</strong> - <a href="https://x.com/michwirantono/status/1744236108878328278#m">Source</a>
+- Sharing a photo of shipping from 37,000 ft above.</p>
+<p><strong>05:41:10</strong> - <strong>@tdinh_me</strong> - <a href="https://x.com/tdinh_me/status/1744232759600824622#m">Source</a>
+- Seeking help for the ERR_NETWORK_CHANGED issue in Chrome/macOS Sonoma.</p>
+<p><strong>05:04:33</strong> - <strong>@Shpigford</strong> - <a href="https://x.com/Shpigford/status/1744223542869143772#m">Source</a>
+- Sharing a positive message to uplift others.</p>
+<p><strong>01:43:41</strong> - <strong>@Jessicameher</strong> - <a href="https://x.com/Jessicameher/status/1744172995331998188#m">Source</a>
+- Reflecting on the failures of InVision and its competition with Figma, and the importance of listening to customers.</p>
+<p><strong>02:17:10</strong> - <strong>@dannypostmaa</strong> - <a href="https://x.com/dannypostmaa/status/1744181420099346548#m">Source</a>
+- Sharing excitement for the upcoming year.</p>
+<p><strong>04:12:22</strong> - <strong>@rrhoover</strong> - <a href="https://x.com/rrhoover/status/1744210409664475327#m">Source</a>
+- Discussing 2024 predictions.</p>
+<p><strong>03:14:05</strong> - <strong>@jackbutcher</strong> - <a href="https://x.com/jackbutcher/status/1744195745484243166#m">Source</a>
+- Sharing an image related to a specific art piece.</p>
+<p><strong>02:54:48</strong> - <strong>@matteing</strong> - <a href="https://x.com/matteing/status/1744190891332366786#m">Source</a>
+- Discussing a surprising feature in Xcode.</p>
+<p><strong>02:27:37</strong> - <strong>@dannypostmaa</strong> - <a href="https://x.com/dannypostmaa/status/1744184048791204088#m">Source</a>
+- Expressing amazement at a feature in ChatGPT.</p>
+<p><strong>01:07:20</strong> - <strong>@DenLoginoff</strong> - <a href="https://x.com/DenLoginoff/status/1744163844019179636#m">Source</a>
+- Sharing tips for growing an audience on Twitter.</p>
+<p>It's interesting to see diverse perspectives and updates from various individuals on Twitter. From personal reflections to technical discussions, the platform continues to be a hub for sharing thoughts and experiences. Keep following for more updates and insights!</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

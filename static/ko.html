@@ -23,7 +23,7 @@
         <button id="theme-toggle" class="px-2 rounded">🌒</button>
     </div>
     <div class="w-full text-center font-bold">
-        <div id="title">GPT Subscripton to Twitter List</div>
+        <div class="title">GPT Subscripton to Twitter List</div>
     </div>
     <p class="text-xs mt-4 w-80 m-auto leading-loose">
         <a href="/lang/zh-CN" class="border-b-2 mr-2">简体中文</a>
@@ -43,12 +43,13 @@
         <a href="/lang/pl" class="border-b-2 mr-2">Polski</a>
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
         <a href="/lang/th" class="border-b-2 mr-2">ไทย</a>
+        <a href="/static/privacy.html" class="text-blue-500 border-b-2 mr-2">Privacy</a>
     </p>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
     
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-1">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -59,46 +60,96 @@
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
-        <div class="mt-4 text-sm overflow-hidden h-60">
-            <h1>최근 트윗</h1>
-<h2>2024년 1월 6일</h2>
-<ul>
-<li>
-<p><strong>17:17:08</strong> - <a href="https://x.com/hwchase17/status/1743683126491316460#m">@hwchase17</a>: rag 애플리케이션을 만드는 아주 쉬운 방법</p>
-</li>
-<li>
-<p><strong>17:16:24</strong> - <a href="https://x.com/hwchase17/status/1743682944345219289#m">@hwchase17</a>: langchain을 모듈로 사용하는 걸 보니 멋있다</p>
-</li>
-<li>
-<p><strong>16:00:29</strong> - <a href="https://x.com/taranjeetio/status/1743663836992070139#m">@taranjeetio</a>: 개방 소스 기여자인 Joe가 최근에 <a href="https://x.com/embedchain" title="embedchain">@embedchain</a>에 구글 드라이브 폴더를 데이터로더로 추가했습니다.<br />
-이 로더는 <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>의 구글 드라이브 로더를 사용합니다.(<a href="https://nitter.nohost.network/pic/media%2FGDK9BIKaUAAvJx5.jpg">이미지</a>)</p>
-</li>
-<li>
-<p><strong>17:06:37</strong> - <a href="https://x.com/jerryjliu0/status/1743680481504514049#m">@jerryjliu0</a>: RAG 연구가 많이 이루어 졌고 모두 한 곳에서 확인할 수 있습니다! Gao et al.의 “Retrieval-Augmented Generation for Large Language Models: A Survey”는 RAG 연구를 세 가지 범주로 분류했습니다.  </p>
-</li>
-<li>
-<p><strong>16:24:06</strong> - <a href="https://x.com/LangChainAI/status/1743669782321492206#m">@LangChainAI</a>: 이번 주에 유튜브 튜토리얼 2개를 시작했습니다. TypeScript로 만든 Full Stack RAG 앱(<a href="https://piped.video/rQdibOsL1ps">링크</a>)과 AutoPrompt Builder(<a href="https://piped.video/watch?v=mmBo8nlu2j0">링크</a>)입니다.</p>
-</li>
-<li>
-<p><strong>16:19:11</strong> - <a href="https://x.com/ylecun/status/1743668544993189951#m">@ylecun</a>: 발표 자료 제작의 양실한 실수들을 나열했습니다.(<a href="https://x.com/ylecun/status/1743416055232430438#m">링크</a>)</p>
-</li>
-<li>
-<p><strong>15:11:08</strong> - <a href="https://x.com/Dev__Digest/status/1743651419486405060#m">@Dev__Digest</a>: <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>와 <a href="https://x.com/UnstructuredIO" title="UnstructuredIO">@UnstructuredIO</a>와 관련된 새로운 비디오입니다.(<a href="https://piped.video/2B161Dpvyxw">링크</a>)</p>
-</li>
-<li>
-<p><strong>08:21:38</strong> - <a href="https://x.com/ylecun/status/1743548363214082171#m">@ylecun</a>: Densification 보상. (<a href="https://x.com/sainingxie/status/1743513013406064840#m">링크</a>)</p>
-</li>
-</ul>
-<h2>해석 및 코멘트</h2>
-<ul>
-<li>최근 인공지능 및 언어 처리 기술에 대한 다양한 트위터 게시물이 많이 올라왔습니다. RAG(검색 보강 생성) 애플리케이션 및 LangChainAI 등의 기술에 대한 언급이 많이 있습니다. 또한, 유용한 튜토리얼과 리서치 페이퍼에 대한 언급 또한 눈에 띕니다. 한국어 블로그 독자들에게 유용한 정보일 것으로 보입니다.</li>
-</ul>
+        <div class="mt-2 text-sm overflow-hidden h-60">
+            <div class="mt-2 text-sm">
+ <h1>
+  최신 AI 모델 및 연구 소식
+ </h1>
+ <ul>
+  <li>
+   <strong>
+    <br/>
+    <a href="https://x.com/joaomdmoura/status/1744003557320274075#m" style="color:#5da2ff;">
+     joaomdmoura
+    </a>
+   </strong>
+   - 2024년 1월 7일 14:30:24
+  </li>
+  <li>
+   새 비디오에는 AI 에이전트들의 완전한 로컬 모델 크루가 참여합니다 🚣✨
+  </li>
+  <li>
+   <p>
+    <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     <br/>
+     <a href="https://x.com/karpathy/status/1744179910347039080#m" style="color:#5da2ff;">
+      karpathy
+     </a>
+    </strong>
+    - 2024년 1월 8일 02:11:10
+   </p>
+  </li>
+  <li>
+   e/ia - Intelligence Amplification
+  </li>
+  <li>
+   <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  </li>
+  <li>
+   (쓰레드에 대한 추가 생각을 덧붙이겠습니다.)
+  </li>
+  <li>
+   <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  </li>
+  <li>
+   <p>
+    AI 도구가 단순히 지능을 확장하는 것으로만 생각하는 것은 제한적일 수 있다. 상상력을 확장한다고 이해하는 것이 더 중요할 수 있다. 생성적 AI도 많이 보여요.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     <br/>
+     <a href="https://x.com/erichorvitz/status/1744173774646222917#m" style="color:#5da2ff;">
+      erichorvitz
+     </a>
+    </strong>
+    - 2024년 1월 8일 01:46:47
+   </p>
+  </li>
+  <li>
+   <br/>
+   <a href="https://x.com/EricTopol" style="color:#5da2ff;" title="Eric Topol">
+    @EricTopol
+   </a>
+   의 중요한 아이디어: "미국은 Omicron 이후 가장 큰 COVID 파동에 직면하고 있습니다. 왜 우리는 여전히 가짜를 하는 걸까요?"
+   <a href="https://tinyurl.com/ms8esuz6">
+    tinyurl.com/ms8esuz6
+   </a>
+  </li>
+  <li>
+   <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  </li>
+ </ul>
+ <p>
+  ... (이하 생략)
+ </p>
+ <p>
+  내용의 일부가 생략되었습니다. 도움이 필요하시면 계속 이어서 작성해 주세요.
+ </p>
+</div>
+
         </div><br><a href="/lang/ko_1733652180576686386">more</a>
     </div>
 
 
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-1">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -109,117 +160,151 @@
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
-        <div class="mt-4 text-sm overflow-hidden h-60">
-            <h1>최신 트위터 게시물 요약</h1>
-<ul>
-<li>
-<p><strong>2024년 1월 6일 17:09:51</strong>   </p>
-<ul>
-<li><strong>@paulg</strong> <br />
-질문 발난됨에도 불구하고 제시카를 만날 기회가 없었을 것입니다. 나는 하버드 익스텐션 스쿨 덕분에 제시카를 알게 되었다. 그들이 액팅 클래스를 진행한 사람을 통해 제시카를 알았습니다.</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 17:07:33</strong>  </p>
-<ul>
-<li><strong>@mkobach</strong> <br />
-트위터는 댓글 문제를 해결하기 위해 알고리즘을 업데이트해야 합니다.<br />
-모든 트윗의 상위 댓글은 해당 트윗에 대한 관련 댓글이어야 합니다. 사용자들은 무관한 바이럴 비디오를 댓글로 게시하는 방법을 찾아냈습니다.<br />
-이 문제를 해결해 주세요 <a href="https://x.com/elonmusk" title="Elon Musk">@elonmusk</a>.</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 16:27:49</strong>  </p>
-<ul>
-<li><strong>@businessbarista</strong><br />
-친구들과 함께 무료로 내셔널 챔피언쉽 50야드 라인에 앉아 있습니다. <br />
-미션 1 성공.<br />
-미션 2: 바이럴로 만들기.<br />
-여기 계획이 있습니다…</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 16:39:18</strong>  </p>
-<ul>
-<li><strong>@businessbarista</strong><br />
-축구 경기장이 '웨어스 왈도'로 변하는 것은 역사상 처음인 것 같아요.</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 13:52:01</strong>   </p>
-<ul>
-<li><strong>@dutchtide</strong><br />
-오늘은 더 많은 그림을 그리게 될 것이니 라이브 방송에 참여하세요! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 16:08:50</strong>  </p>
-<ul>
-<li><strong>@AliAbdaal</strong><br />
-오늘 연례 계획 워크숍에 참석할 수 없나요? 걱정하지 마세요!<br />
-2023년에 대해 반성하고 2024년에 나아가는 가장 좋은 자신을 만들기 위해 다음 프롬프트에 대답하여 재미있게 참여할 수 있습니다.   </li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 16:08:54</strong>  </p>
-<ul>
-<li><strong>@AliAbdaal</strong><br />
-🚀 전망: 2023년에 기반하여 2024년에 다르게 하고 싶은 점이 있나요? 탐험하고 싶은 새로운 분야가 있나요? 바꾸고 싶은 것이 있나요?</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 15:17:13</strong>  </p>
-<ul>
-<li><strong>@jackbutcher</strong><br />
-조화 조정</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 14:59:40</strong>  </p>
-<ul>
-<li><strong>@gregisenberg</strong><br />
-마이애미에서 우리의 2024년 킥오프 수행 임원 오프사이트를 방금 마쳤고 공유할 노트가 있습니다.  </li>
-</ul>
-<p>우리의 8자리 수표 홀딩 컴퍼니를 구축하는 오프사이트에서 배운 10가지 교훈:  </p>
-<p>교훈 #1: $10백만/년 이상의 현금 유동성을 어떻게 얻을 수 있는 비즈니스를 구축하지 마세요.</p>
-</li>
-<li>
-<p><strong>2024년 1월 6일 15:14:57</strong>  </p>
-<ul>
-<li><strong>@gregisenberg</strong><br />
-우리는 엄청나게 고용중입니다 (이를 공유하여 전파하세요):  </li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a>와 함께하는 파트너됨 (이와 같은 미래 오프사이트에 참여하세요)  </li>
-<li>뉴스레터 경험이 있는 기업가 입주  </li>
-<li>시니어 제품 디자이너, Late Checkout Agency  </li>
-<li>부장판매@boringmarketer / 부장판매@boringmarketer  </li>
-<li>시니어 제품 매니저, Late Checkout Agency  </li>
-<li>CEO, Late Checkout Agency (1000만 달러 이상의 혁신 기관을 운영한 경험이 있어야 함)  </li>
-<li>CEO, <a href="https://x.com/DispatchDesign" title="The Design Dispatcher">@DispatchDesign</a>  </li>
-<li>원장, <a href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a>   </li>
-<li>CEO, <a href="https://x.com/youneedarobot" title="You Probably Need A Robot">@youneedarobot </a>  </li>
-<li>제품 주임, <a href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a>  </li>
-<li>성장 관리자 (뉴스레터 성장, 포트폴리오 성장)  </li>
-<li>M&amp;A 분석가 (회사 매입에 대해 함께 일할 수 있음)  </li>
-<li>글쓴이 (트위터에서 바이럴이 되지 않았다면 신청하지 마세요)  </li>
-<li>입주 기업가 B2B 미디어 비즈니스</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 15:13:57</strong>  </p>
-<ul>
-<li><strong>@gregisenberg</strong><br />
-새로운 노트를 공유하기위해저에게 DM하세요.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<p>위의 트위터 게시물을 요약한 것입니다. 여러 트윗이 있지만 한국어로 블로그에 포스팅에 사용할 수 있을 때 주석과 해석을 포함시키는 것이 좋을 것입니다.</p>
+        <div class="mt-2 text-sm overflow-hidden h-60">
+            <div class="mt-2 text-sm">
+ <h1>
+  한국어 블로그 게시물
+ </h1>
+ <h2>
+  트위터 포스트 요약
+ </h2>
+ <ul>
+  <li>
+   <strong>
+    최신 트윗
+   </strong>
+   :
+   <a href="https://x.com/ShaanVP/status/1744226866255606116#m">
+    ShaanVP
+   </a>
+  </li>
+  <li>
+   08 Jan 2024 05:17:45
+  </li>
+  <li>
+   <p>
+    "당신이 두렵지 않다면 무엇을 할 것인가? (진지한 질문)"
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     컨텐츠
+    </strong>
+    :
+    <a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">
+     johnnyxbrown
+    </a>
+   </p>
+  </li>
+  <li>
+   07 Jan 2024 14:04:40
+  </li>
+  <li>
+   <p>
+    제임스 클리어의 "Atomic Habits"에서 얻은 7가지 인생을 바꿀 통찰
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     작품 소개
+    </strong>
+    :
+    <a href="https://x.com/mechsicko/status/1744200308543332432#m">
+     mechsicko
+    </a>
+   </p>
+  </li>
+  <li>
+   08 Jan 2024 03:32:13
+  </li>
+  <li>
+   <p>
+    다미안 허스트의 "The Physical Impossibility of Death in the Mind of Someone Living" 작품 소개
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     긍정적인 세상에 대한 소감
+    </strong>
+    :
+    <a href="https://x.com/sweatystartup/status/1744199748515504221#m">
+     sweatystartup
+    </a>
+   </p>
+  </li>
+  <li>
+   08 Jan 2024 03:30:00
+  </li>
+  <li>
+   <p>
+    미디어가 전하지 않는 것: 세상은 좋은 곳이다.
+   </p>
+  </li>
+  <li>
+   <p>
+    <strong>
+     아트웍 소개
+    </strong>
+    :
+    <a href="https://x.com/jackbutcher/status/1744195745484243166#m">
+     jackbutcher
+    </a>
+   </p>
+  </li>
+  <li>
+   08 Jan 2024 03:14:05
+  </li>
+  <li>
+   아트웍 공유
+  </li>
+ </ul>
+ <h2>
+  한국어 해석 및 주석
+ </h2>
+ <h3>
+  "당신이 두렵지 않다면 무엇을 할 것인가?" (진지한 질문)
+ </h3>
+ <p>
+  ShaanVP가 질문한 것은 용기가 있다면 어떤 일을 할 것인가에 대한 질문입니다. 많은 이들에게 영감을 줄 수 있는 질문이죠.
+ </p>
+ <h3>
+  "Atomic Habits" 책으로부터의 통찰
+ </h3>
+ <p>
+  "Atomic Habits"이라는 책에서 얻은 7가지 인생을 바꿀 통찰에 대한 소개입니다. 이 책은 어떻게 습관을 바꾸고 새로운 삶을 살 수 있는지에 대한 지혜를 담고 있을 것으로 보입니다.
+ </p>
+ <h3>
+  다미안 허스트의 작품 소개
+ </h3>
+ <p>
+  "The Physical Impossibility of Death in the Mind of Someone Living"이라는 작품에 대한 소개입니다. 미니멀리즘과 픽셀 그리고 미니멀리즘 등의 특징을 가지고 있는 이 작품은 죽음과 생명에 대한 담론을 담고 있습니다.
+ </p>
+ <h3>
+  긍정적인 세상에 대한 소감
+ </h3>
+ <p>
+  눈에 보이지 않는 세상 속에서도 사람들은 서로를 도와주고 있음에 대해 긍정적인 세상에 대한 소감을 담았습니다.
+ </p>
+ <h3>
+  아트웍 공유
+ </h3>
+ <p>
+  아트웍에 대한 공유입니다. 시각적으로 창의적이고 독특한 작품으로 보입니다.
+ </p>
+ <p>
+  이 기사는 트위터에서 다양한 주제에 대한 다양한 소식을 전달하고 있습니다. 사람들의 다양한 관심사와 의견을 반영하고 있으며, 또한 젊은 세대에게 새로운 정보와 영감을 제공할 수 있을 것으로 보입니다.
+ </p>
+</div>
+
         </div><br><a href="/lang/ko_1365676237558059010">more</a>
     </div>
 
 
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-1">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -230,46 +315,198 @@
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
-        <div class="mt-4 text-sm overflow-hidden h-60">
-            <h1>한국어 기사</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/UnleashedChat/status/1743685126658121845#m">06 Jan 2024 17:25:04 @UnleashedChat</a>: <a href="https://Unleashed.Chat">Unleashed.Chat</a> V0.1.2 라이브  </p>
-<ul>
-<li>프론트엔드 성능 개선</li>
-<li>봇이 스트리밍 중일 때 채팅 창에서 위로 스크롤하는 버그 수정</li>
-<li>서버와 GPU 간의 개인 정보 보호 향상</li>
-</ul>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743686667200770223#m">06 Jan 2024 17:31:12 @TuurDemeester</a>: 이더리움은 항상 "블록체인 상의 자바스크립트"였고 실제로는 진정한 싸이퍼펑크 프로젝트는 아니었다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743667528620970391#m">06 Jan 2024 16:15:09 @AaronvanW</a>: 흥미로운데요.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/theinstagibbs/status/1743682932584112603#m">06 Jan 2024 17:16:21 @theinstagibbs</a>: 당신이 출판을 위해 상향 추세를 조정했나요?</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743686605041258906#m">06 Jan 2024 17:30:57 @AaronvanW</a>: </p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1743683157097062550#m">06 Jan 2024 17:17:15 @real_vijay</a>: ETF 장점: 대규모 자본 유입으로 인한 통화 저항성 값을 갖는 안전한 저장소로 글로벌 저축 자금을 유인. ETF 단점: 보관 소련위험 증가 (금이 국가 공격에 취약해진 주요 이유). 후자 위험을 최대한 완화하기 위해 노력해야 합니다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/mikealfred/status/1743666811449806911#m">06 Jan 2024 16:12:18 @mikealfred</a>: 비트코인 베어들을 멋지다고 생각하지 않을 수 없다. 이들은 무척 열심히 일하고 있으며 그 모든 것은 헛수고이다. 수년간의 기회를 놓치고 손해를 입힌 노력 후에 보상은 없다. 고통 관계는 최고 수준이다. 나는 그들에게 깊은 존경밖에 없다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MrChrisEllis/status/1743675660063723939#m">06 Jan 2024 16:47:27 @MrChrisEllis</a>: 곧 보통 사람들도 그냥 보유할 것이다... 정부가 규제하며 가치에 맞게 지불하는 종이 계약.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/NickTimiraos/status/1743667579011371388#m">06 Jan 2024 16:15:21 @NickTimiraos</a>: 오늘 아침 Lorie Logan의 주요 의견: 아침에 overnight 리버스 리포 잔액이 "낮은 수준"에 도달할 때는 앞으로 줄이고 장내 채권 감축을 늦추는 것이 "우리가 너무 일찍 중단 할 가능성을 줄일 수 있기 때문이다." (분석가들이 중기에 그렇게 될 수 있다고 말한다).</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/nvk/status/1743674018694066373#m">06 Jan 2024 16:40:56 @nvk</a>: 이전에 참여하다보면 더큰 고통과 후회를 느낄 것입니다. 그러나 이런 성향이 없었다면 분배와 네트워크 효과가 발생하지 않았을 것입니다. 코인 데이즈 파괴에도 불구하고, 그래도 이것을 경험할 수 있어 고맙다. 무슨 여행이었는가.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/natbrunell/status/1743369776095756628#m">05 Jan 2024 20:31:59 @natbrunell</a>: "그는 나쁜 끝을 맞혔다. 나는 그것을 영원히 원망할 것이다." 홀피니가 사토시 나카모토가 될 수도 있다고 생각했던 사람들에게 일부에서 가족에게 어떤 영향을 미쳤는지에 대해 듣는 것은 몇 분 동안 시간을 내어 볼 가치가 있다. 그녀의 취약점은 실제로 감동적이다. 우리의 대화에 대한 모든 긍정적인 피드백에 감사드립니다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/BowTiedMara/status/1743632499958268092#m">06 Jan 2024 13:55:57 @BowTiedMara</a>: "누가 부를 생성합니까? 부가 정부의일입니까? 부분적으로 거부되었습니까? 정부는 부르실 생산을 방해하거나 돕을 권한이 있지만, 부의 창조는 정부에 의해 생성되지 않습니다." - Juan Bautista Alberdi</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/paoloardoino/status/1743654431734788344#m">06 Jan 2024 15:23:06 @paoloardoino</a>: 이번 주말에 AQUA Wallet을 테스트할 예정이다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/giacomozucco/status/1743667549034672260#m">06 Jan 2024 16:15:14 @giacomozucco</a>: 약 5년 동안 작은 스위스 은행들에게 오렌지 피리칭을 하려다 보니, 유감스러운 일에 대한 경우입니다. 현재 실수의 평판적 위험이 내부에서 보관하고 모든 이익을 유지하는 사업 케이스를 앞세운다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743667575345569806#m">06 Jan 2024 16:15:20 @TuurDemeester</a>: Allen Farrington이 차인으로 변장하고 지적인 사람들만 인터뷰하는 TV쇼의 투표를 한다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/alexbosworth/status/1743663721962950672#m">06 Jan 2024 16:00:01 @alexbosworth</a>: 저금을 위한 더 나은 대체제를 키워서 디지털 자산 작성의 낮은 품질 문제를 해결할 수 있다. 내가 보았던 사람들이 번 문제없이 수익을 올리기 위해 LN에서 돈을 벌려고 하는 것을 보았고, LN에서 더 많은 돈을 벌면 떠나지 않았을 것이다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743660915281564099#m">06 Jan 2024 15:48:52 @TuurDemeester</a>: 정말 웃깁니다. 사실 그 자체가 웃긴다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743661060648046668#m">06 Jan 2024 15:49:27 @TuurDemeester</a>: </p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743662822033170905#m">06 Jan 2024 15:56:27 @TuurDemeester</a>: 컨텍스트와 원래 스레드. 이 외에도 Thomas E Woods(@ThomasEWoods)가 이 분야에 가치있는 기여자로 포함시킬 것이다. 예를 들어, 그는 "교회와 시장", "교회가 현대성에 직면하다", 그리고 "교회가 서구 문명을 만드는 방법"이라는 책을 썼다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/lopp/status/1743661547178586178#m">06 Jan 2024 15:51:23 @lopp</a>: 경고를 보니, SEC는 실제로 10년 동안 발목을 잡아 FOMO를 촉구했다.😬</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/spotted_model/status/1743339250769113405#m">05 Jan 2024 18:30:41 @spotted_model</a>: "전기차 충전소에 $50을 내고 차를 멈추는 일이 5분밖에 걸리지 않는다고 말하는 사람들을 위한 것"이라고 말하는 사람들을 위한 것으로, 우리는 지난 밤 8시에 집에 들어가서 차를 플러그로 꽂았다. 약 15초가 걸렸다. 9시에 벽 충전기가 전기 요금이 3배로 낮아지는 것을 알고 충전을 시작했다. 이 아침에는 15초가 걸려서 전기 요금이 $4.20이다. 아니요, 모든사람이 이런 사용 사례를 가지고 있지는 않다는 것을 알아요. 그러나 많은 사람들이 그들이 원한다면 할 수 있다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/WhalePanda/status/1743562198582964534#m">06 Jan 2024 09:16:36 @WhalePanda</a>: 나는 비트코인 ETF에 대한 유입에 대해 많은 다양한 의견을 들었는데, "주로 오지들이 콜드스토리지 지분 코인을 팔아 ETF를 사기 시작할 것"이라고 생각항하는 사람부터 "2억 달러의 새 자금이 즉시 구매를 시작할 것"이라고 생각하는 사람까지 다양했다. ETF로의 자금 유입이 순이익이 될 것이고, 당연히 첫 유형은 spot을 ETF를 사기 위해 팔고, 항상 그렇듯이, 진짜 우승자는 항상 거래소들(판매 이벤트 + 구매 이벤트)이지만, ETF로의 자금 유입은 공개되어 있기 때문에 이보고서는 긍정적일 것이다. 이로 인해 MSM이 더 많은 승리를 만들어 냄으로써 더 많은 히피를 만들어낼 것이다. 올해 말까지 $100,000.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1743660335612244475#m">06 Jan 2024 15:46:34 @real_vijay</a>: </p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Truthcoin/status/1743660307648573521#m">06 Jan 2024 15:46:27 @Truthcoin</a>: 아마도 우리 시스템보다 더 나은 시스템일 것이다, 우리가 GDP의 0.1%를 분리하여 가장 균일하게 모든 의회원에게 지급한다면 최소한 그들은 부패되어 있을 것이다. 또한 GDP를 극대화하는 데 관심이 있는 연방의회원들이다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/BitcoinMagazine/status/1743659848175165823#m">06 Jan 2024 15:44:38 @BitcoinMagazine</a>: 빠르게들: SEC는 투자자에게 "디지털 자산"에 대한 "FOMO"를 거부하는 것을 권하는 경고를 게시하다. Bitcoin ETF 승인에 대비중이다? 👀</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MaxiDerangement/status/1743642340248449237#m">06 Jan 2024 14:35:03 @MaxiDerangement</a>: 리퀴드 네트워크는 5억 달러의 투자를 받은 회사에게는 막대한 실패로, 유저를 속임으로써 단지 L-BTC라는 쓰레기 동전으로 변환하는 방법이다. 재무 부정적 행위는 저들에겐 유일한 방법이다.</p>
-<p>위의 트윗들을 읽고 나의 의견을 공유하자면, 암호화폐와 블록체인에 대한 관심이 높아지고 있으며, ETF에 대한 여러 의견과 긍정적인 전망이 보이고 있다. 또한 암호화폐와 관련된 기술개선 및 문제점 보완에 대한 계속적인 논의가 이루어지고 있음을 알 수 있다.</p>
+        <div class="mt-2 text-sm overflow-hidden h-60">
+            <div class="mt-2 text-sm">
+ <h3>
+  Bitcoin ETF Decision and Price Predictions
+ </h3>
+ <h4>
+  08 Jan 2024
+ </h4>
+ <p>
+  <strong>
+   Derek M. Ross
+  </strong>
+  (@derekmross) tweeted at 04:52 AM:
+ </p>
+ <blockquote>
+  <p>
+   "lol my man if that happens ill print out this tweet and eat it."
+   <br/>
+   <a href="https://x.com/derekmross/status/1744220590259491057#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  <strong>
+   TwoMinuteTimmy
+  </strong>
+  (@TwoMinuteTimmy) tweeted at 05:02 AM:
+ </p>
+ <blockquote>
+  <p>
+   "Whatever it ends up being it’s going to be a large candle."
+   <br/>
+   <a href="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  <strong>
+   DecentraSuze
+  </strong>
+  (@DecentraSuze) tweeted at 06:36 AM:
+ </p>
+ <blockquote>
+  <p>
+   "Anticipating the SEC's midweek decision on a bitcoin spot ETF. Could this lead to a bitcoin supply crunch?
+  </p>
+  <p>
+   My latest
+   <a href="https://x.com/Forbes">
+    @Forbes
+   </a>
+   article featuring
+   <a href="https://x.com/Excellion">
+    @Excellion
+   </a>
+   ,
+   <a href="https://x.com/Scaramucci">
+    @Scaramucci
+   </a>
+   ,
+   <a href="https://x.com/NateGeraci">
+    @NateGeraci
+   </a>
+   ,
+   <a href="https://x.com/ForbesCrypto">
+    @ForbesCrypto
+   </a>
+   <a href="https://x.com/search?q=%23Bitcoin">
+    #Bitcoin
+   </a>
+   "
+   <br/>
+   <a href="https://x.com/DecentraSuze/status/1744246691824353540#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  <strong>
+   BTCRoel
+  </strong>
+  (@BTCRoel) tweeted at 06:43 AM:
+ </p>
+ <blockquote>
+  <p>
+   "If we reach $1M bitcoin price before 15-01-2024 i put a small
+   <a href="https://x.com/AquaBitcoin">
+    @AquaBitcoin
+   </a>
+   logo tattoo on my ass"
+   <br/>
+   <a href="https://x.com/BTCRoel/status/1744248325761536510#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  <strong>
+   Macronaut_
+  </strong>
+  (@Macronaut_) tweeted at 06:46 AM:
+ </p>
+ <blockquote>
+  <p>
+   "Remember I said 47 mil. BUT I WAS AT LEAST HALF JOKING.
+  </p>
+  <p>
+   YOURE BEGINNIG TO SCARE ME.
+  </p>
+  <p>
+   BUT I LIKE IT"
+   <br/>
+   <a href="https://x.com/Macronaut_/status/1744249302183186779#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  In anticipation of the SEC's midweek decision on a bitcoin spot ETF, various individuals have made bold predictions about the potential future price of Bitcoin. These predictions range from $1 million to $47 million per coin. This reflects the high volatility and speculation surrounding the cryptocurrency market.
+ </p>
+ <hr/>
+ <p>
+  <strong>
+   Eric Wall | BIP-2023-50428
+  </strong>
+  (@ercwl) tweeted at 02:07 AM:
+ </p>
+ <blockquote>
+  <p>
+   "Right.
+  </p>
+  <p>
+   Somehow it even managed to go down (5,200 BTC → 5,000 BTC)"
+   <br/>
+   <a href="https://x.com/ercwl/status/1744179087562739748#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  <strong>
+   XBitcode
+  </strong>
+  (@XBitcode) tweeted at 02:36 AM:
+ </p>
+ <blockquote>
+  <p>
+   "Yeah, this is exactly where the potential of Drivechain is with one big difference looking from today's perspective. Every company could have their block chain in the near future many individuals would have block chains!!!! It is easy to create one today.
+  </p>
+  <p>
+   It's like the computer in 1945 needed thousands of workers to do it, in 1970 needed a Computer scientist to construct one, today we can do it individually with no special knowledge!!
+  </p>
+  <p>
+   Decentralised P2P system for exchange of value that what modern real money are!!!
+  </p>
+  <p>
+   Enable
+   <a href="https://x.com/search?q=%23Bip300">
+    #Bip300
+   </a>
+   "
+   <br/>
+   <a href="https://x.com/XBitcode/status/1744186241539522568#m">
+    Source
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  The discussion also covers the potential impact of Drivechain on the future of blockchain technology and decentralized systems. Drivechain is seen as a way to allow companies and individuals to create and manage their own blockchains, ushering in a new era of decentralized peer-to-peer systems for value exchange.
+ </p>
+ <hr/>
+ <p>
+  <strong>
+   Varied Opinions and Reactions
+  </strong>
+ </p>
+ <p>
+  The tweets also reflect the varied opinions and reactions surrounding the potential price spike and increased institutional involvement in Bitcoin. From bold predictions to skepticism and humorous responses, the cryptocurrency market continues to be a subject of intense speculation and debate.
+ </p>
+ <p>
+  As a senior editor, it is important to provide balanced coverage and analysis of these developments, considering the potential impact on the cryptocurrency market and the broader financial ecosystem. Additionally, providing context and expert insights can help readers navigate the complex and rapidly evolving world of digital assets.
+ </p>
+</div>
+
         </div><br><a href="/lang/ko_967467772341923840">more</a>
     </div>
 
 
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-1">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -280,36 +517,366 @@
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
-        <div class="mt-4 text-sm overflow-hidden h-60">
-            <h1>트위터 글 모음</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1743684244272980171#m">06 Jan 2024 17:21:34@thepatwalls</a>: 토요일에 누군가 작업 중인가요?</p>
-<p>(당신의 작업 공간을 보여주세요)<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLPhNBWcAAufiU.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743681182028460057#m">06 Jan 2024 17:09:24@5harath</a>: 당신의 삶에서 움직이는 돌이 되세요.  </p>
-<p>누군가의 인생에서 중심이 되세요.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dr/status/1743680228768034840#m">06 Jan 2024 17:05:37@dr</a>: 2024년에 드디어 제 수익이 $5,000을 넘을까요?</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743676979813958134#m">06 Jan 2024 16:52:42@levelsio</a>: 데이터베이스가 너무 커지면 SQLite 전략은 무엇일까요?</p>
-<p>Photo AI의 photos.db는 현재 35.2GB에 사진 7,270,478개가 들어 있습니다. 사진은 메타데이터만 있고 실제 이미지는 R2에 저장되어 있습니다.</p>
-<p>기존 사진을 비우고 photos_archive.db에 넣고 photos.db를 빠르게 유지하는 스크립트를 만들어야 할까요?</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743677974480670803#m">06 Jan 2024 16:56:39@levelsio</a>: DB를 파티션으로 나누는 것은 좋지만,
-1) 무한 페이지 네비게이션이 그렇게 쉽지 않습니다. 사용자가 사진을 스크롤할 때 오래된 사진을 가져오기 위해 OFFSET을 사용합니다.
-2) DB 구조를 변경하거나 새 기능을 추가할 때 해야 할 작업이 많아집니다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1743677062140112902#m">06 Jan 2024 16:53:02@marckohlbrugge</a>: Postmark를 사용하는 것이 즐겁습니다. 1.5년 전에 전환했고 후회하지 않습니다. 고객 서비스도 훌륭합니다.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743661828339614146#m">x.com/levelsio/status/1743661828339614146#m</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743302376641945600%2FKch6ZBRQ%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">06 Jan 2024 13:52:01@dutchtide</a>: 오늘도 그림을 그리는 중입니다. 라이브스트림에 참여하여 오늘의 작품을 느껴보세요!</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743688379433140224%2FoaIffG4M%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1742602163954593808#m">03 Jan 2024 17:41:46@neuranne</a>: 오늘은 34살이 되었습니다!</p>
-<p>선형적인 목표를 버리는 것은 내 삶을 바꾸었습니다. 생일을 기념해서 4명의 사람이 과학자가 될 수 있도록 도와주기 위해 $3400을 줄 건데요. $850로 실험을 희망한다면 말씀해주세요.</p>
-<p>(계속)</p>
-<p>(The content exceeds the character limit. Please let me know if you would like to see more.)</p>
+        <div class="mt-2 text-sm overflow-hidden h-60">
+            <div class="mt-2 text-sm">
+ <h1>
+  트위터 게시물 모음
+ </h1>
+ <p>
+  <br/>
+  <a href="https://x.com/marckohlbrugge/status/1744279812305530993#m" style="color:#5da2ff;">
+   08 Jan 2024 08:48:09@marckohlbrugge
+  </a>
+  : $20/mo adds up with loyal community members (
+  <a href="https://wip.co">
+   wip.co
+  </a>
+  )
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/marckohlbrugge/status/1744280039171236096#m" style="color:#5da2ff;">
+   08 Jan 2024 08:49:03@marckohlbrugge
+  </a>
+  : On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/neuranne/status/1744263413889413404#m" style="color:#5da2ff;">
+   08 Jan 2024 07:42:59@neuranne
+  </a>
+  : It finally happened. After years of taking my journal everywhere with me, I lost a notebook. (last seen photo attached)
+ </p>
+ <p>
+  Those pages contained months of self-reflection, ideas &amp; dreams.
+ </p>
+ <p>
+  I should be sad and yet, somehow, it feels right.
+ </p>
+ <p>
+  The loss provided an unexpected opportunity to practice the art of letting go.
+ </p>
+ <p>
+  There’s something special about losing an item meant to record your thoughts. It almost becomes a memento mori:
+ </p>
+ <p>
+  All that is acquired will be lost
+What rises will fall
+Where there is meeting
+there will be separation
+What is born will surely die
+ </p>
+ <p>
+  I’ve also been struggling to journal the past few weeks.
+ </p>
+ <p>
+  Losing my notebook gave me a new appreciation for the act of journaling and the insights stored in those notebooks.
+ </p>
+ <p>
+  Overall I feel a renewed sense of excitement about daily journaling.
+ </p>
+ <p>
+  (and as this notebook was discontinued I’m on the hunt for good brands! ideally spiral bound, unlined)
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDTeB2NXcAATn1g.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/michwirantono/status/1744236108878328278#m" style="color:#5da2ff;">
+   08 Jan 2024 05:54:29@michwirantono
+  </a>
+  : Shipping from 37,000 ft above. The grind doesn’t stop! 💪
+  <a href="https://x.com/AlbertPurnama" title="Albert Purnama">
+   @albertpurnama
+  </a>
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1744236052959944704%2Fpu%2Fimg%2F2t_sRpSnwtDJxgSO.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/tdinh_me/status/1744232759600824622#m" style="color:#5da2ff;">
+   08 Jan 2024 05:41:10@tdinh_me
+  </a>
+  : I've been battling with this ERR_NETWORK_CHANGED issue for 2 months now, if you know how to fix it please share ideas 😅
+ </p>
+ <p>
+  Randomly happen. I'm using Chrome/macOS Sonoma.
+ </p>
+ <p>
+  Searched through countless links on Google/Reddit/ChatGPT with no results 🤦
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDTCKywbEAAC5fF.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/Shpigford/status/1744223542869143772#m" style="color:#5da2ff;">
+   08 Jan 2024 05:04:33@Shpigford
+  </a>
+  : hey you’re pretty great and i’m glad you’re here.
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/Jessicameher/status/1744172995331998188#m" style="color:#5da2ff;">
+   08 Jan 2024 01:43:41@Jessicameher
+  </a>
+  : I worked at InVision during its heyday, from $15m-$100m in revenue. If nothing but to share an important takeaway for other founders, Figma is not why InVision failed.
+ </p>
+ <p>
+  Simply, InVision failed because they stopped listening to customers.
+ </p>
+ <p>
+  Figma built tools InVision customers had been asking for for years. IN had become so obsessed with winning against Adobe and Sketch, and trying to own the end-to-end design system on a much too aggressive timeline that it lost sight of solving for the customer on what they needed at that moment in time, not years from now.
+ </p>
+ <p>
+  Understandably, in a category where Designers are fickle and switch tools easily, IN had every right to be paranoid about the incumbents. Their vision was incredibly ambitious, but that ambition caused a lack of focus on their core product.
+ </p>
+ <p>
+  To be clear, IN had an immense love for their customers and the design community. They championed a movement that gave designers a voice and seat at the table. They didn’t just sell software but a purpose. They created a category!
+ </p>
+ <p>
+  But while IN focused on Adobe, Figma focused on quietly building a better product, slowly. Figma had only raised $15m until 2018, and it took them 8 years to hit their first $1M in rev.
+ </p>
+ <p>
+  I have incredible respect and love for InVision’s founders, team, and know first hand just how HARD building a company is for the long haul. I can only imagine the decisions they needed to make on a daily basis. I feel such great sadness for everyone involved.
+ </p>
+ <p>
+  But while it’s really easy to point fingers at innovators dilemma (totally a fair point), my POV (which may reflect differently from others whom I respect)…figma’s entrance just exposed an internal weakness at InVision, that at which point when you’re already a $100m business, is really hard to course correct.
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/Jessicameher/status/1744172995331998188#m" style="color:#5da2ff;">
+   08 Jan 2024 01:43:41@Jessicameher
+  </a>
+  :
+ </p>
+ <blockquote>
+  <p>
+   Jason Fried (@jasonfried): "It's not nuts, it's perfectly reasonable.
+  </p>
+  <p>
+   It's always sad when a company goes under, and people lose their jobs because of it. But if you can't build a business that can support itself, this is what happens.
+  </p>
+  <p>
+   It happens to the dry cleaner on the corner. It happens to the pizza shop down the street. And it happens to the hot shot SaaS app that spends wildly and can't cover their costs. There are many more just like it.
+  </p>
+  <p>
+   Bootstrap, or raise $350M, at some point, the business has to work, or it's gone. And if you've raised all that money, and you still haven't built a business in the end, then it's exactly the outcome you'd expect.
+  </p>
+  <p>
+   You don't get forever to make it work. They had more time than most.
+  </p>
+  <p>
+   Sad to see, but a sight you'll keep seeing. All this funding can't cover up fundamental economics forever. And too much funding makes it exponentially worse." | Nitter
+   <a href="https://x.com/jasonfried/status/1743460783059845601#m">
+    x.com/jasonfried/status/1743460783059845601#m
+   </a>
+  </p>
+ </blockquote>
+ <p>
+  It's not nuts, it's perfectly reasonable.
+ </p>
+ <p>
+  It's always sad when a company goes under, and people lose their jobs because of it. But if you can't build a business that can support itself, this is what happens.
+ </p>
+ <p>
+  It happens to the dry cleaner on the corner. It happens to the pizza shop down the street. And it happens to the hot shot SaaS app that spends wildly and can't cover their costs. There are many more just like it.
+ </p>
+ <p>
+  Bootstrap, or raise $350M, at some point, the business has to work, or it's gone. And if you've raised all that money, and you still haven't built a business in the end, then it's exactly the outcome you'd expect.
+ </p>
+ <p>
+  You don't get forever to make it work. They had more time than most.
+ </p>
+ <p>
+  Sad to see, but a sight you'll keep seeing. All this funding can't cover up fundamental economics forever. And too much funding makes it exponentially worse.
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/dannypostmaa/status/1744181420099346548#m" style="color:#5da2ff;">
+   08 Jan 2024 02:17:10@dannypostmaa
+  </a>
+  : 2024 is going to be a fun year
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTkcNaoAAmeLH.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTmLebIAAo3e6.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/arvidkahl/status/1744207695941398619#m" style="color:#5da2ff;">
+   08 Jan 2024 04:01:35@arvidkahl
+  </a>
+  : llama.cpp is magical. I use it at Podline for mistral-based summarization in a GPU-less server backend. Slowish, but for a background service, a FREE one, it’s Massive.
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/dannypostmaa/status/1744211423130267705#m" style="color:#5da2ff;">
+   08 Jan 2024 04:16:23@dannypostmaa
+  </a>
+  : need to start playing with this again now my non compete is ending
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/rrhoover/status/1744210409664475327#m" style="color:#5da2ff;">
+   08 Jan 2024 04:12:22@rrhoover
+  </a>
+  : These 2024 prediction from
+  <a href="https://x.com/anuatluru" title="anu ☻">
+   @anuatluru
+  </a>
+  align with many of my interests
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDSt0b9WkAAcS6q.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/rrhoover/status/1744210508394152128#m" style="color:#5da2ff;">
+   08 Jan 2024 04:12:45@rrhoover
+  </a>
+  : Here's the post:
+  <a href="https://anu.substack.com/p/2024">
+   anu.substack.com/p/2024
+  </a>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/mechsicko/status/1744200308543332432#m" style="color:#5da2ff;">
+   08 Jan 2024 03:32:13@mechsicko
+  </a>
+  : The Physical Impossibility of Death in the Mind of Someone Living
+  <br>
+   ￼
+   <br>
+    Artist || Damien Hirst
+    <br>
+     Year || 1991
+     <br>
+      Type || Tiger shark, glass, steel, 5% formaldehyde solution
+      <br>
+       Medium ||
+       <a href="https://x.com/opepenedition" title="Opepen Edition">
+        @opepenedition
+       </a>
+       <br>
+        Movement || minimalism, pixel, meme
+        <br>
+         Subject || Life, apparent death
+        </br>
+       </br>
+      </br>
+     </br>
+    </br>
+   </br>
+  </br>
+ </p>
+ <p>
+  Cc:
+  <a href="https://x.com/jackbutcher" title="Jack Butcher">
+   @jackbutcher
+  </a>
+  <br>
+   🪢
+  </br>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/jackbutcher/status/1744195745484243166#m" style="color:#5da2ff;">
+   08 Jan 2024 03:14:05@jackbutcher
+  </a>
+  :
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/matteing/status/1744190891332366786#m" style="color:#5da2ff;">
+   08 Jan 2024 02:54:48@matteing
+  </a>
+  : Alt + Click on symbol on Xcode surprised me.
+ </p>
+ <p>
+  <br/>
+  <a href="https://matteing.com/posts/alt-click-on-symbol-on-xcode" style="color:#5da2ff;">
+   matteing.com/posts/alt-click…
+  </a>
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743550693024083968%2FPCJUqo2_%3Fformat%3Djpg%26name%3D800x419" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/thepatwalls/status/1744185711492735451#m" style="color:#5da2ff;">
+   08 Jan 2024 02:34:13@thepatwalls
+  </a>
+  : Just got off the phone with my 3 best friends. They're all buying Teslas within the next month. Seems like the default option for buying a car in 2024.
+ </p>
+ <p>
+  I guess it's time to buy more TSLA.
+ </p>
+ <p>
+  (not financial advice)
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/dannypostmaa/status/1744184048791204088#m" style="color:#5da2ff;">
+   08 Jan 2024 02:27:37@dannypostmaa
+  </a>
+  : so I only last week found out about this feature in ChatGPT where you can just have conversations with it and it’s absolutely blowing my mind
+ </p>
+ <p>
+  when Apple fixed Siri to be like this it’s gonna be a game changer and I might use voice for the first time ever
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDSWI3pbQAA1RbD.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/dannypostmaa/status/1744185419707961649#m" style="color:#5da2ff;">
+   08 Jan 2024 02:33:04@dannypostmaa
+  </a>
+  : 🔥
+ </p>
+ <p>
+  <img alt="" src="https://nitter.catsarch.com/pic/media%2FGDSXYLabwAA41bu.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/DenLoginoff/status/1744163844019179636#m" style="color:#5da2ff;">
+   08 Jan 2024 01:07:20@DenLoginoff
+  </a>
+  : As I struggle to get started on growing audience with Twitter/X/etc, here are a few helpful tidbits I learned from
+  <a href="https://x.com/MeetKevon" title="Kevon Cheung 🥦">
+   @MeetKevon
+  </a>
+  ’s newsletter today:
+  <br>
+   1. Don’t try to grow 1000 followers in 10 days - much better to develop a few genuine connections with a small close-knit group of people that can all help each other
+   <br>
+    2. Keep It Simple - short but meaningful tweets (tough one!)
+    <br>
+     3. Share you personal learnings in the hope it helps someone else (meta advice!) - no need to sound authoritative on it, just aim to be helpful, and be open that you’re still learning🥦
+    </br>
+   </br>
+  </br>
+ </p>
+ <hr/>
+ <p>
+  이상입니다.
+ </p>
+</div>
+
         </div><br><a href="/lang/ko_1283027505297985536">more</a>
     </div>
 
 
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 mx-1">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -320,35 +887,308 @@
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
-        <div class="mt-4 text-sm overflow-hidden h-60">
-            <h1>Designing for Better Futures</h1>
-<h2>2024년 1월 5일 19:24:22 - @PinterestDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">원문 보기</a></p>
-<p>새로운 블로그에서 우리가 어떻게 주는 것이 우리에게 많은 보상을 가져다주는지를 탐구합니다. </p>
-<p>멘토십 =
-- 지역 커뮤니티와의 연결
-- 학생들에게 디지털 제품 디자인을 직업 옵션으로 소개
-- 다른 사람들에게 가르치면서 배우는 것</p>
-<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">자세히 알아보기</a></p>
-<hr />
-<h1><em>안녕하세요! 블로그 로고</em></h1>
-<h2>2024년 1월 4일 20:22:30 - @PinterestDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743005001557889096#m">원문 보기</a></p>
-<p>2024년에 당신이 어떤 것을 핀시고 있는지 궁금합니다.</p>
-<h2>2024년 1월 4일 18:50:50 - @MicrosoftDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">원문 보기</a></p>
-<p>이번 달의 배경화면은 <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 에서 제공합니다. <a href="https://msft.it/60059NwpZ">다운로드</a></p>
-<hr />
-<p>이 외의 트윗은 기술적인 내용을 다루고 있으니 더 자세한 내용을 원하신다면 각 트윗의 링크를 참고해 주시기 바랍니다.</p>
-<p><br><a style="color:#5da2ff;" href="https://pinterest.design/why-we-host-an-internal-design-systems-conference-3bb6017c6ca2?source=social.tw">참고 자료</a></p>
-<p>이를 보면 결국, 기술은 결국은 인간과 그들의 관계에 깊은 영향을 끼친다는 것을 알 수 있습니다. 독자분들이 이를 통해 더 나은 미래를 만들어갈 수 있기를 바랍니다.</p>
+        <div class="mt-2 text-sm overflow-hidden h-60">
+            <div class="mt-2 text-sm">
+ <h1>
+  새해, 새로운 분위기!
+ </h1>
+ <p>
+  2024년을 새로 시작하는 것에 흥분되어 있습니다! 우리의 신선한 디자인 모임과 함께 올해를 디자인으로 가득 채우기로 하였습니다! 창의력에 빠져들며 아이디어를 공유하고, 올해 디자인 만들기를 함께 만들어봐요! 🥳
+ </p>
+ <p>
+  <br/>
+  <a href="https://lu.ma/adplistmeetupblr" style="color:#5da2ff;">
+   등록 및 자세한 내용 👇lu.ma/adplistmeetupblr
+  </a>
+ </p>
+ <p>
+  <br/>
+  <a href="https://x.com/search?q=%23zeta" style="color:#5da2ff;">
+   #zeta
+  </a>
+  <a href="https://x.com/search?q=%23design">
+   #design
+  </a>
+  <a href="https://x.com/search?q=%23ux">
+   #ux
+  </a>
+  <a href="https://x.com/search?q=%23meetup">
+   #meetup
+  </a>
+  <a href="https://x.com/search?q=%23bangalore">
+   #bangalore
+  </a>
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <p>
+  Quoting:
+ </p>
+ <blockquote>
+  <p>
+   Vidhunnan: "🌟 새해, 새로운 연결! @ADPList의 방갈로르 모임이 여기 있어요! 🚀
+  </p>
+  <p>
+   🎉 안녕하세요, 디자이너, 제품 매니저, 멘토 및 혁신가 여러분!
+  </p>
+  <p>
+   ADPList 방갈로르 모임에서 새해에 전기를 더하고 있습니다. 우리는 도시의 핵심에서 전문가, 멘토 및 열정가들의 다이내믹한 커뮤니티를 함께 모으고 있습니다.
+  </p>
+  <p>
+   🤝 연결, 대화, 매혹: 캐주얼한 분위기에서 산업의 놀라운 재능의 세계에 뛰어 들어보세요. 여러분의 여정을 공유하고, 다른 사람들에게 영감을 받고, 여러분의 미래를 형성할 수있는 연결을 구축하세요. 여러분의 다음 큰 협력은 아주 가까운 대화에 있을 수도 있습니다!
+  </p>
+  <p>
+   🎤 아이디어를 불태우는 연설: 우리는 위대한 통찰과 라이프 해킹을 공유할 연사들을 준비하고 있습니다. 학습이 훨씬 더 재미있어 질 것입니다.
+  </p>
+  <p>
+   🌈 @LottieFiles에 경성을: LottieFiles에게 이번 이벤트에 대한 호화로운 파트너십에 큰 박수를 보내드립니다. 그들의 애니메이션에 대한 혁신적인 접근 방식이 게임을 바꾸고 있습니다!
+  </p>
+  <p>
+   🏢 @zeta_ux에 큰 감사: 아이디어와 상호 작용이 번성하는 완전 멋진 공간에서 우리를 호스팅 해준 Zeta에게 모자를 내립니다.
+  </p>
+  <p>
+   🍔 음식, 재미, 그리고 탄산음료: 대화는 연설로 끝나지 않습니다. 몇 가지 훌륭한 음식과 웃음 속에 참여해주세요. 기억하세요, 가장 좋은 연결 중 몇 가지는 캐주얼한 식사를 통해 이루어집니다!
+  </p>
+  <p>
+   📢 말을 퍼뜨려주세요: 여러분의 동료와 친구들을 초대하세요. 많으면 많을수록 좋겠죠!
+  </p>
+  <p>
+   🎟️ 제한된 자리가 있습나다: 서두르세요, 지금 자리를 잡으세요!
+🔗 지금 등록하세요:
+   <a href="https://lu.ma/adplistmeetupblr">
+    lu.ma/adplistmeetupblr
+   </a>
+  </p>
+  <p>
+   ADPList 방갈로르 모임에 참여하여 미래를 형성하는 커뮤니티의 일부가 되어 보세요. 함께 배우고, 성장하고, 성공하세요.
+  </p>
+  <p>
+   그곳에서 뵙겠습니다!
+  </p>
+  <h1>
+   ADPListBangalore #NetworkingEvent #LottieFiles #Meetup #BangaloreEvents #ProfessionalGrowth" | Nitter
+  </h1>
+ </blockquote>
+ <p>
+  새로운 연결, 새로운 아이디어, 그리고 새로운 지식을 얻고 싶다면, ADPList의 방갈로르 모임에 참여해보는 것은 어떨까요? 디자이너, 제품 매니저, 멘토, 혁신가 등 다양한 전문가들과의 만남으로 올해를 더욱 새롭게 시작해보세요. 그리고 다양한 분야의 화제가 공유될 예정이니, 이번 모임을 놓치지 마세요! 또한 LottieFiles와 Zeta가 파트너로 참여하여 새로운 아이디어를 만날 수 있는 기회를 제공할 예정입니다. 한정된 자리가 있으니 서두르세요.
+ </p>
+ <p>
+  ✅ 등록 및 자세한 정보:
+  <a href="https://lu.ma/adplistmeetupblr">
+   lu.ma/adplistmeetupblr
+  </a>
+ </p>
+ <p>
+  ✅ 날짜: 07 Jan 2024 06:43:10
+ </p>
+ <p>
+  ✅ 작성자: @zeta_ux (Twitter link:
+  <a href="https://x.com/zeta_ux/status/1743885974206341243#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  새로운 아이디어와 성과를 위해 멘토링을 하는 것이 얼마나 보람 있을 수 있는지에 대한 탐구가 우리 블로그에 새롭게 게시되었습니다.
+ </p>
+ <p>
+  학교 학생들을 디지털 제품 디자인으로 연결하고 가르치는 것뿐만 아니라, 가르치면서 배우며 지역 커뮤니티와의 연결성, 학습 등 다양하게 보상받는 멘토링에 대한 글을 읽어보세요.
+ </p>
+ <p>
+  ✅ 작성자: @PinterestDesign (Twitter link:
+  <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 05 Jan 2024 19:24:22
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  @Pinterest를 많이 사용하는 디자이너가 여러 측면의 디자인을 위한 보드를 Pinterest에 올려놓았습니다. 여러분의 디자인에 도움이 될 수 있으니 팔로우해보세요.
+ </p>
+ <p>
+  ✅ 작성자: Jessica Strelioff (Twitter link:
+  <a href="https://x.com/jstrelioff/status/1742648294726070344#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 04 Jan 2024 20:22:30
+ </p>
+ <p>
+  <img alt="이미지1" src="https://nitter.catsarch.com/pic/media%2FGC8hAGQXIAAHQeV.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  <img alt="이미지2" src="https://nitter.catsarch.com/pic/media%2FGC8hBW0XsAAf-F-.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  <img alt="이미지3" src="https://nitter.catsarch.com/pic/media%2FGC8hCXzXkAAIppi.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+  <img alt="이미지4" src="https://nitter.catsarch.com/pic/media%2FGC8hGr2WkAAVZ1H.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  이번 달의 배경화면은 #OliviaXu에 의해 새롭게 제공되었습니다. 더 많은 배경화면을 확인하고 싶다면 아래 링크를 확인해보세요.
+ </p>
+ <p>
+  ✅ 작성자: @MicrosoftDesign (Twitter link:
+  <a href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 04 Jan 2024 18:50:50
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  우리의 디자인 팀이 새로운 연구를 통해 어떻게 더 빨리 일을 처리할 수 있는지에 대한 후기를 발표했습니다. 어떤 AI 도구가 시간을 가장 많이 절약했는지 확인하고 수업에서 어떻게 활용할 수 있었는지 블로그에서 확인하세요.
+ </p>
+ <p>
+  ✅ 작성자: @SalesforceUX (Twitter link:
+  <a href="https://x.com/SalesforceUX/status/1740434190347174281#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 28 Dec 2023 18:07:01
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/card_img%2F1742974656301391874%2FyYAEE-0g%3Fformat%3Djpg%26name%3D800x419" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  Salesforce Design Team에 합류해보세요! 다양한 역할이 있으니 확인해보세요.
+ </p>
+ <p>
+  ✅ 작성자: @SalesforceUX (Twitter link:
+  <a href="https://x.com/SalesforceUX/status/1740098733746839762#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 27 Dec 2023 19:54:02
+ </p>
+ <hr/>
+ <p>
+  이번 휴일 시즌에는
+  <a href="https://x.com/search?q=%23AI">
+   #AI
+  </a>
+  아티스트
+  <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">
+   @elliepritts
+  </a>
+  와 함께 세계 각지의 휴일 기억을 시각적으로 재현하였습니다. 제안과 일러스트레이션에 대한 자세한 내용을 확인해보세요.
+ </p>
+ <p>
+  ✅ 작성자: @MicrosoftDesign (Twitter link:
+  <a href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 22 Dec 2023 17:00:00
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  Material Theme Builder 2.0에서 테마 경험이 업데이트 되었습니다.
+ </p>
+ <p>
+  ✅ 작성자: @materialdesign (Twitter link:
+  <a href="https://x.com/materialdesign/status/1737548648857116834#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 20 Dec 2023 19:00:54
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGB0DSamXMAA8j-M.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  색상 유사도를 확인할 수 있는 기능을 추가하였습니다.
+ </p>
+ <p>
+  ✅ 작성자: @materialdesign (Twitter link:
+  <a href="https://x.com/materialdesign/status/1737548659972059565#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 20 Dec 2023 19:00:57
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGB0DS85XcAAdlKN.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  더 많은 업데이트 내용은 블로그에서 확인하세요.
+ </p>
+ <p>
+  ✅ 작성자: @materialdesign (Twitter link:
+  <a href="https://x.com/materialdesign/status/1737548666242510935#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 20 Dec 2023 19:00:58
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/media%2FGB0DTZ6X0AEdIX0.jpg" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  2023년을 돌아보는 다양한 성과와 기억을 Instagram에서 확인해보세요.
+ </p>
+ <p>
+  ✅ 작성자: @lyftdesignteam (Twitter link:
+  <a href="https://x.com/lyftdesignteam/status/1737165697917333931#m">
+   여기를 클릭하세요
+  </a>
+  )
+ </p>
+ <p>
+  ✅ 날짜: 19 Dec 2023 17:39:12
+ </p>
+ <p>
+  <img alt="이미지" src="https://nitter.catsarch.com/pic/card_img%2F1744229116134707200%2FcOHxDhRj%3Fformat%3Djpg%26name%3D800x419" style="max-width: 20rem;margin:0.2rem auto;"/>
+ </p>
+ <hr/>
+ <p>
+  위의 트윗들은 디자인 분야에서의 다양한 활동과 정보를 담고 있습니다. 신선한 아이디어와 지식을 얻고자 한다면, 이러한 정보를 빠르게 흡수하고 활용할 수 있을 것입니다. 새로운 배경화면이나 테마 경험의 업데이트에 대한 정보부터 AI를 활용한 공유 등 다양한 컨텐츠로 구성되어 있습니다. 이러한 정보를 통해 디자인 분야에서의 최신 동향을 파악하고 창의적인 아이디어를 얻을 수 있을 것입니다.
+ </p>
+ <p>
+  이러한 활동을 파악하고 함께 공유하는 것은 디자인 커뮤니티의 성장에 기여할 수 있을 것입니다. 한국어 블로그를 통해 더 많은 디자이너들이 이러한 정보를 접할 수 있게끔 번역하여 게시하여 디자인 분야의 성장과 발전에 기여할 수 있을 것입니다.
+ </p>
+</div>
+
         </div><br><a href="/lang/ko_1432003348744470530">more</a>
     </div>
 
 
     <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="mt-4 text-sm overflow-hidden h-60">
-            You can edit your own <a href="https://business.twitter.com/en/blog/twitter-101-lists.html">Twitter List</a> and subscribe it in your language:
+        <div class="mt-2 text-sm overflow-hidden h-60">
+            You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language.<br><div class="title font-bold">Start for FREE</div>
         </div><br><br><br><br><br><br><br>
     </div>
 

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,110 +83,53 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>최신 트위터 게시물 요약</h1>
+            <h1>한국어 블로그 게시물</h1>
+<h2>트위터 포스트 요약</h2>
 <ul>
+<li><strong>최신 트윗</strong>: <a href="https://x.com/ShaanVP/status/1744226866255606116#m">ShaanVP</a></li>
+<li>08 Jan 2024 05:17:45</li>
 <li>
-<p><strong>2024년 1월 6일 17:09:51</strong>   </p>
-<ul>
-<li><strong>@paulg</strong> <br />
-질문 발난됨에도 불구하고 제시카를 만날 기회가 없었을 것입니다. 나는 하버드 익스텐션 스쿨 덕분에 제시카를 알게 되었다. 그들이 액팅 클래스를 진행한 사람을 통해 제시카를 알았습니다.</li>
-</ul>
+<p>"당신이 두렵지 않다면 무엇을 할 것인가? (진지한 질문)"</p>
 </li>
 <li>
-<p><strong>2024년 1월 6일 17:07:33</strong>  </p>
-<ul>
-<li><strong>@mkobach</strong> <br />
-트위터는 댓글 문제를 해결하기 위해 알고리즘을 업데이트해야 합니다.<br />
-모든 트윗의 상위 댓글은 해당 트윗에 대한 관련 댓글이어야 합니다. 사용자들은 무관한 바이럴 비디오를 댓글로 게시하는 방법을 찾아냈습니다.<br />
-이 문제를 해결해 주세요 <a href="https://x.com/elonmusk" title="Elon Musk">@elonmusk</a>.</li>
-</ul>
+<p><strong>컨텐츠</strong>: <a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">johnnyxbrown</a></p>
+</li>
+<li>07 Jan 2024 14:04:40</li>
+<li>
+<p>제임스 클리어의 "Atomic Habits"에서 얻은 7가지 인생을 바꿀 통찰</p>
 </li>
 <li>
-<p><strong>2024년 1월 6일 16:27:49</strong>  </p>
-<ul>
-<li><strong>@businessbarista</strong><br />
-친구들과 함께 무료로 내셔널 챔피언쉽 50야드 라인에 앉아 있습니다. <br />
-미션 1 성공.<br />
-미션 2: 바이럴로 만들기.<br />
-여기 계획이 있습니다…</li>
-</ul>
+<p><strong>작품 소개</strong>: <a href="https://x.com/mechsicko/status/1744200308543332432#m">mechsicko</a></p>
+</li>
+<li>08 Jan 2024 03:32:13</li>
+<li>
+<p>다미안 허스트의 "The Physical Impossibility of Death in the Mind of Someone Living" 작품 소개</p>
 </li>
 <li>
-<p><strong>2024년 1월 6일 16:39:18</strong>  </p>
-<ul>
-<li><strong>@businessbarista</strong><br />
-축구 경기장이 '웨어스 왈도'로 변하는 것은 역사상 처음인 것 같아요.</li>
-</ul>
+<p><strong>긍정적인 세상에 대한 소감</strong>: <a href="https://x.com/sweatystartup/status/1744199748515504221#m">sweatystartup</a></p>
+</li>
+<li>08 Jan 2024 03:30:00</li>
+<li>
+<p>미디어가 전하지 않는 것: 세상은 좋은 곳이다.</p>
 </li>
 <li>
-<p><strong>2024년 1월 6일 13:52:01</strong>   </p>
-<ul>
-<li><strong>@dutchtide</strong><br />
-오늘은 더 많은 그림을 그리게 될 것이니 라이브 방송에 참여하세요! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></li>
-</ul>
+<p><strong>아트웍 소개</strong>: <a href="https://x.com/jackbutcher/status/1744195745484243166#m">jackbutcher</a></p>
 </li>
-<li>
-<p><strong>2024년 1월 6일 16:08:50</strong>  </p>
-<ul>
-<li><strong>@AliAbdaal</strong><br />
-오늘 연례 계획 워크숍에 참석할 수 없나요? 걱정하지 마세요!<br />
-2023년에 대해 반성하고 2024년에 나아가는 가장 좋은 자신을 만들기 위해 다음 프롬프트에 대답하여 재미있게 참여할 수 있습니다.   </li>
+<li>08 Jan 2024 03:14:05</li>
+<li>아트웍 공유</li>
 </ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 16:08:54</strong>  </p>
-<ul>
-<li><strong>@AliAbdaal</strong><br />
-🚀 전망: 2023년에 기반하여 2024년에 다르게 하고 싶은 점이 있나요? 탐험하고 싶은 새로운 분야가 있나요? 바꾸고 싶은 것이 있나요?</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 15:17:13</strong>  </p>
-<ul>
-<li><strong>@jackbutcher</strong><br />
-조화 조정</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 14:59:40</strong>  </p>
-<ul>
-<li><strong>@gregisenberg</strong><br />
-마이애미에서 우리의 2024년 킥오프 수행 임원 오프사이트를 방금 마쳤고 공유할 노트가 있습니다.  </li>
-</ul>
-<p>우리의 8자리 수표 홀딩 컴퍼니를 구축하는 오프사이트에서 배운 10가지 교훈:  </p>
-<p>교훈 #1: $10백만/년 이상의 현금 유동성을 어떻게 얻을 수 있는 비즈니스를 구축하지 마세요.</p>
-</li>
-<li>
-<p><strong>2024년 1월 6일 15:14:57</strong>  </p>
-<ul>
-<li><strong>@gregisenberg</strong><br />
-우리는 엄청나게 고용중입니다 (이를 공유하여 전파하세요):  </li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a>와 함께하는 파트너됨 (이와 같은 미래 오프사이트에 참여하세요)  </li>
-<li>뉴스레터 경험이 있는 기업가 입주  </li>
-<li>시니어 제품 디자이너, Late Checkout Agency  </li>
-<li>부장판매@boringmarketer / 부장판매@boringmarketer  </li>
-<li>시니어 제품 매니저, Late Checkout Agency  </li>
-<li>CEO, Late Checkout Agency (1000만 달러 이상의 혁신 기관을 운영한 경험이 있어야 함)  </li>
-<li>CEO, <a href="https://x.com/DispatchDesign" title="The Design Dispatcher">@DispatchDesign</a>  </li>
-<li>원장, <a href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a>   </li>
-<li>CEO, <a href="https://x.com/youneedarobot" title="You Probably Need A Robot">@youneedarobot </a>  </li>
-<li>제품 주임, <a href="https://x.com/latecheckoutplz" title="LATE CHECKOUT">@latecheckoutplz</a>  </li>
-<li>성장 관리자 (뉴스레터 성장, 포트폴리오 성장)  </li>
-<li>M&amp;A 분석가 (회사 매입에 대해 함께 일할 수 있음)  </li>
-<li>글쓴이 (트위터에서 바이럴이 되지 않았다면 신청하지 마세요)  </li>
-<li>입주 기업가 B2B 미디어 비즈니스</li>
-</ul>
-</li>
-<li>
-<p><strong>2024년 1월 6일 15:13:57</strong>  </p>
-<ul>
-<li><strong>@gregisenberg</strong><br />
-새로운 노트를 공유하기위해저에게 DM하세요.</li>
-</ul>
-</li>
-</ul>
-<hr />
-<p>위의 트위터 게시물을 요약한 것입니다. 여러 트윗이 있지만 한국어로 블로그에 포스팅에 사용할 수 있을 때 주석과 해석을 포함시키는 것이 좋을 것입니다.</p>
+<h2>한국어 해석 및 주석</h2>
+<h3>"당신이 두렵지 않다면 무엇을 할 것인가?" (진지한 질문)</h3>
+<p>ShaanVP가 질문한 것은 용기가 있다면 어떤 일을 할 것인가에 대한 질문입니다. 많은 이들에게 영감을 줄 수 있는 질문이죠.</p>
+<h3>"Atomic Habits" 책으로부터의 통찰</h3>
+<p>"Atomic Habits"이라는 책에서 얻은 7가지 인생을 바꿀 통찰에 대한 소개입니다. 이 책은 어떻게 습관을 바꾸고 새로운 삶을 살 수 있는지에 대한 지혜를 담고 있을 것으로 보입니다.</p>
+<h3>다미안 허스트의 작품 소개</h3>
+<p>"The Physical Impossibility of Death in the Mind of Someone Living"이라는 작품에 대한 소개입니다. 미니멀리즘과 픽셀 그리고 미니멀리즘 등의 특징을 가지고 있는 이 작품은 죽음과 생명에 대한 담론을 담고 있습니다.</p>
+<h3>긍정적인 세상에 대한 소감</h3>
+<p>눈에 보이지 않는 세상 속에서도 사람들은 서로를 도와주고 있음에 대해 긍정적인 세상에 대한 소감을 담았습니다.</p>
+<h3>아트웍 공유</h3>
+<p>아트웍에 대한 공유입니다. 시각적으로 창의적이고 독특한 작품으로 보입니다.</p>
+<p>이 기사는 트위터에서 다양한 주제에 대한 다양한 소식을 전달하고 있습니다. 사람들의 다양한 관심사와 의견을 반영하고 있으며, 또한 젊은 세대에게 새로운 정보와 영감을 제공할 수 있을 것으로 보입니다.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

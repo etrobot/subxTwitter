@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,69 +84,87 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Nouvel article sur notre blog, une exploration de la façon dont donner en retour nous récompense tellement en retour.</h1>
-<p>Mentorat =
-✅ connexion avec la communauté locale
-✅ présentation des étudiants à la conception de produits numériques comme option de carrière
-✅ apprendre tout en enseignant aux autres
-…et bien plus encore</p>
-<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">En savoir plus</a> - 05 Jan 2024 19:24:22 @<a href="https://x.com/PinterestDesign/status/1743352760982979056#m">PinterestDesign</a></p>
+            <h1>Les Derniers Tweets du Monde du Design</h1>
 <hr />
-<p>Nous aimons voir ça ! Qu'épinglez-vous en 2024 ? <a href="https://x.com/jstrelioff/status/1742648294726070344#m">Tweet Link</a> - 04 Jan 2024 20:22:30 @<a href="https://x.com/PinterestDesign/status/1743005001557889096#m">PinterestDesign</a></p>
+<p><em>07 Jan 2024 06:43:10 - @zeta_ux - <a href="https://x.com/zeta_ux/status/1743885974206341243#m">Lien Twitter</a></em></p>
+<p>Nouvelle année, nouvelles vibes ! 🎉
+Excité de commencer 2024 avec notre tout nouveau Design Meetup ! Rejoignez-nous pour plonger dans la créativité, partager des idées et rendre cette année pleine de design ! 🥳</p>
+<p>Inscription et plus de détails 👇<a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23zeta">#zeta</a> <a href="https://x.com/search?q=%23design">#design</a> <a href="https://x.com/search?q=%23ux">#ux</a> <a href="https://x.com/search?q=%23meetup">#meetup</a> <a href="https://x.com/search?q=%23bangalore">#bangalore</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" /></p>
+<blockquote>
+<p>Quoting: Vidhunnan (@vidhunnan): "🌟 Nouvelle année, nouvelles connexions ! Le Meetup de Bangalore de @ADPList est là ! 🚀</p>
+<p>🎉 Bonjour designers, chefs de produits, mentors et innovateurs !</p>
+<p>Préparez-vous pour un début électrisant de l'année au Meetup de Bangalore ADPList. Nous rassemblons une communauté dynamique de professionnels, de mentors et d'enthousiastes au cœur de notre ville.</p>
+<p>🤝 Connectez, conversez et captivez : plongez dans un monde de talents incroyables de notre industrie dans une atmosphère décontractée. Partagez votre parcours, inspirez-vous des autres et créez des liens qui pourraient façonner votre avenir. Votre prochaine grande collaboration pourrait n'être qu'à une conversation de distance !</p>
+<p>🎤 Des discours qui suscitent des idées : nous avons des intervenants qui partageront des idées révolutionnaires et des trucs et astuces. Apprendre va devenir beaucoup plus amusant.</p>
+<p>🌈 Applaudissements à @LottieFiles : Un grand bravo à LottieFiles pour être notre partenaire puissant pour cet événement. Leur approche innovante de l'animation change la donne !</p>
+<p>🏢 Un grand merci à @zeta_ux : Chapeau à Zeta de nous accueillir dans leur espace ultra cool. C'est le cadre parfait pour que les idées et les interactions s'épanouissent.</p>
+<p>🍔 Nourriture, amusement et pétillant : les conversations ne se terminent pas avec les discours. Rejoignez-nous pour de la bonne nourriture et des rires par la suite. Rappelez-vous, certaines des meilleures connexions se font autour d'un repas décontracté !</p>
+<p>📢 Passez le mot : invitez vos collègues et amis. Plus on est de fous, plus on rit !</p>
+<p>🎟️ Places limitées : Dépêchez-vous, réservez votre place dès maintenant !
+🔗 Inscrivez-vous maintenant : <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p>Rejoignez-nous au Meetup de Bangalore ADPList et faites partie d'une communauté qui façonne l'avenir. Apprenons, grandissons et réussissons ensemble.</p>
+<p>On se voit là-bas !</p>
+<h1>ADPListBangalore #NetworkingEvent #LottieFiles #Meetup #BangaloreEvents #ProfessionalGrowth" | Nitter x.com/vidhunnan/status/1743882681711231102#m</h1>
+</blockquote>
 <hr />
-<p>Ce mois-ci, le papier peint est présenté par <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍. <br />
-Pour télécharger ce papier peint et plus encore, consultez ➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a> - 04 Jan 2024 18:50:50 @<a href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">MicrosoftDesign</a></p>
+<p><em>05 Jan 2024 19:24:22 - @PinterestDesign - <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">Lien Twitter</a></em></p>
+<p>Nouveau sur notre blog, une exploration de la manière dont redistribuer récompense beaucoup en retour.</p>
+<p>Mentorat =<br />
+✅ connexion avec la communauté locale<br />
+✅ introduction des étudiants à la conception de produits numériques comme option de carrière<br />
+✅ apprendre en enseignant aux autres<br />
+...et bien plus encore</p>
+<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">pinterest.design/reasons-to-…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
 <hr />
-<p>Itai Asseo, chef de la technologie émergente, Salesforce Ignite, et son équipe ont expérimenté avec une gamme des meilleurs outils d'IA pour voir à quelle vitesse ils pourraient se familiariser avec les tâches.</p>
-<p>Découvrez quels outils d'IA ont permis de gagner le plus de temps et de quelle manière. <a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">En savoir plus</a> - 28 Dec 2023 18:07:01 @<a href="https://x.com/SalesforceUX/status/1740434190347174281#m">SalesforceUX</a></p>
+<p><em>04 Jan 2024 20:22:30 - @PinterestDesign - <a href="https://x.com/PinterestDesign/status/1743005001557889096#m">Lien Twitter</a></em></p>
+<p>Nous adorons le voir ! Que épinglez-vous en 2024?</p>
 <hr />
-<p>Rejoignez l'équipe de conception de Salesforce ! Découvrez ces rôles.
-- Lead/Principal UX Designer: <a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">Poste</a>
-- Chercheur Senior/Responsable, Recherche &amp; Insights: <a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">Poste</a> - 27 Dec 2023 19:54:02 @<a href="https://x.com/SalesforceUX/status/1740098733746839762#m">SalesforceUX</a></p>
+<p><em>04 Jan 2024 18:50:50 - @MicrosoftDesign - <a href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">Lien Twitter</a></em></p>
+<p>Le fond d'écran de ce mois-ci vous est offert par <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍.
+Pour télécharger ce fond d'écran et plus, consultez ➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDBQ1EPa8AALLre.jpg" /></p>
 <hr />
-<p>Cette saison des fêtes, nous nous sommes associés à l'artiste <a href="https://x.com/search?q=%23IA">#IA</a> <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> pour recréer des représentations visuelles de souvenirs de vacances à travers le monde.</p>
-<p>Rendez-vous sur ➡️ <a href="https://microsoft.com/holidays">microsoft.com/holidays</a> pour en savoir plus sur le processus d'Ellie et les prompts qui ont donné vie à des illustrations comme celles-ci. - 22 Dec 2023 17:00:00 @<a href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">MicrosoftDesign</a></p>
+<p><em>28 Dec 2023 18:07:01 - @SalesforceUX - <a href="https://x.com/SalesforceUX/status/1740434190347174281#m">Lien Twitter</a></em></p>
+<p>Itai Asseo, responsable de la technologie émergente, Salesforce Ignite, et son équipe ont expérimenté différentes technologies d'IA pour voir à quelle vitesse ils pouvaient se mettre à niveau sur des tâches.</p>
+<p>Découvrez quelles technologies d'IA ont permis d'économiser le plus de temps et de quelle manière.
+<a href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a> ⬇️
+<a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">salesforce.com/blog/can-an-a…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1742974656301391874%2FyYAEE-0g%3Fformat%3Djpg%26name%3D800x419" /></p>
 <hr />
-<p>Les fêtes deviennent plus joyeuses avec une expérience de thématisation mise à jour dans Material Theme Builder 2.0 ! 🎁 <a href="https://nitter.nohost.network/pic/media%2FGB0DSamXMAA8j-M.jpg">Image</a> - 20 Dec 2023 19:00:54 @<a href="https://x.com/materialdesign/status/1737548648857116834#m">materialdesign</a></p>
+<p><em>27 Dec 2023 19:54:02 - @SalesforceUX - <a href="https://x.com/SalesforceUX/status/1740098733746839762#m">Lien Twitter</a></em></p>
+<p>Rejoignez l'équipe de conception Salesforce ! Consultez ces postes. ⬇️</p>
+<p>Lead/Principal UX Designer
+<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">salesforce.wd12.myworkdayjob…</a></p>
+<p>Senior/Lead Researcher, Research &amp; Insights
+<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">salesforce.wd12.myworkdayjob…</a></p>
+<p>Aidez-nous à promouvoir le changement pour un monde plus inclusif.</p>
 <hr />
-<p>La fidélité des couleurs est là !
-Vous pouvez activer Color Match dans les paramètres pour que les schémas résultants correspondent davantage à vos entrées de couleur clé. <a href="https://nitter.nohost.network/pic/media%2FGB0DS85XcAAdlKN.jpg">Image</a> - 20 Dec 2023 19:00:57 @<a href="https://x.com/materialdesign/status/1737548659972059565#m">materialdesign</a></p>
+<p><em>22 Dec 2023 17:00:00 - @MicrosoftDesign - <a href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">Lien Twitter</a></em></p>
+<p>Cette saison des fêtes, nous nous sommes associés à <a href="https://x.com/search?q=%23AI">#AI</a> artiste <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> pour recréer des représentations visuelles de souvenirs de vacances à travers le monde.</p>
+<p>Rendez-vous sur ➡️ <a href="https://microsoft.com/holidays">microsoft.com/holidays</a> pour en savoir plus sur le processus et les invitations qui ont donné vie à des illustrations comme celles-ci.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" /></p>
 <hr />
-<p>Et ce n'est pas tout ! Lisez les mises à jour dans le blog → <a href="https://goo.gle/3RyaMND">goo.gle/3RyaMND</a> <a href="https://nitter.nohost.network/pic/media%2FGB0DS85XcAAdlKN.jpg">Image</a> - 20 Dec 2023 19:00:58 @<a href="https://x.com/materialdesign/status/1737548666242510935#m">materialdesign</a></p>
+<p><em>20 Dec 2023 19:00:54 - @materialdesign - <a href="https://x.com/materialdesign/status/1737548648857116834#m">Lien Twitter</a></em></p>
+<p>Les fêtes sont plus joyeuses avec une expérience de thématisation mise à jour dans Material Theme Builder 2.0! 🎁</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGB0DSamXMAA8j-M.jpg" /></p>
+<p>Color fidelity is here!</p>
+<p>Vous pouvez activer Color Match dans les paramètres pour que les schémas résultants correspondent plus étroitement à vos entrées de couleur clé.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGB0DS85XcAAdlKN.jpg" /></p>
+<p>Et ce n'est pas tout ! Lisez les mises à jour dans le blog → <a href="https://goo.gle/3RyaMND">goo.gle/3RyaMND</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGB0DTZ6X0AEdIX0.jpg" /></p>
 <hr />
-<p>Et voilà, c'est un wrap ! Nous clôturons 2023 en revenant sur les accomplissements divers de l'équipe et les moments les plus inoubliables. 🎉 Cheers à tous ceux qui ont fait de cette année la meilleure ! <a href="https://www.instagram.com/p/C1CxBKPhdbE/?utm_source=ig_web_copy_link">Post Instagram</a> - 19 Dec 2023 17:39:12 @<a href="https://x.com/lyftdesignteam/status/1737165697917333931#m">lyftdesignteam</a></p>
+<p><em>19 Dec 2023 17:39:12 - @lyftdesignteam - <a href="https://x.com/lyftdesignteam/status/1737165697917333931#m">Lien Twitter</a></em></p>
+<p>Et voilà, c'est fini ! Nous clôturons 2023 en jetant un coup d'œil sur les réalisations diverses de l'équipe et les moments les plus inoubliables. Cheers à tous ceux qui ont fait de cette année la meilleure ! 🎉</p>
+<p><br><a style="color:#5da2ff;" href="https://www.instagram.com/p/C1CxBKPhdbE/?utm_source=ig_web_copy_link">instagram.com/p/C1CxBKPhdbE/…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1744229116134707200%2FcOHxDhRj%3Fformat%3Djpg%26name%3D800x419" /></p>
 <hr />
-<p>Lorsque vous entendez des commentaires comme "[c'était] le meilleur événement virtuel/en personne auquel j'ai jamais assisté", vous faites quelque chose de bien !</p>
-<p>Partage d'un aperçu de l'impact et des avantages de notre conférence annuelle <a href="https://x.com/search?q=%23DesignSystem">#DesignSystem</a> Day sur notre blog: <a href="https://pinterest.design/why-we-host-an-internal-design-systems-conference-3bb6017c6ca2?source=social.tw">En savoir plus</a> - 18 Dec 2023 22:27:22 @<a href="https://x.com/PinterestDesign/status/1736875833506062380#m">PinterestDesign</a></p>
-<hr />
-<p>À quoi ressemblera le monde de l'IA en 2030 ? Découvrez comment l'équipe Salesforce Futures s'est associée à des cinéastes pour créer une vision de l'avenir avec l'IA. ⬇️ <a href="https://www.salesforce.com/news/stories/ai-future-film/">En savoir plus</a> - 15 Dec 2023 21:23:06 @<a href="https://x.com/SalesforceUX/status/1735772496488497635#m">SalesforceUX</a></p>
-<hr />
-<p>Des questions sur la recherche dans Material ? Nous sommes là pour répondre ! Envoyez-les ci-dessous 👇🏽 <a href="https://x.com/materialdesign/status/1735736482281758732#m">Tweet Link</a> - 15 Dec 2023 19:00:00 @<a href="https://x.com/materialdesign/status/1735736482281758732#m">materialdesign</a></p>
-<hr />
-<p>Vous ajoutez la recherche à votre application ? Que vous conceviez pour Flutter, Android ou le Web, nous avons des ressources pour vous aider. → <a href="https://goo.gle/41dvQNW">goo.gle/41dvQNW</a> <a href="https://nitter.nohost.network/pic/media%2FGBUhQpLXYAAswIF.jpg">Image</a> - 14 Dec 2023 17:00:00 @<a href="https://x.com/materialdesign/status/1735343896719176095#m">materialdesign</a></p>
-<hr />
-<p>Excité pour notre premier étude de cas avec Figma. Nous avons travaillé pour créer un système de conception qui dynamise les flux de conception/développement. Nous en avons parlé avec l'équipe de Figma. <a href="https://rb.gy/b73j85">En savoir plus</a> - 14 Dec 2023 10:47:37 @<a href="https://x.com/Razorpay_Design/status/1735250181875237073#m">Razorpay_Design</a></p>
-<hr />
-<p>Prêt à faire évoluer votre carrière avec des informations, des opportunités et des connexions exclusives en Design/UX ? Rejoignez la communauté exclusive de talents de Salesforce ! Inscrivez-vous maintenant !👇🏾 <a href="https://flows.beamery.com/salesforce/blogs-talentcommunity">Lien</a> - 13 Dec 2023 20:37:01 @<a href="https://x.com/SalesforceUX/status/1735036119937339594#m">SalesforceUX</a></p>
-<hr />
-<p>Un aperçu de certaines de nos images mises à jour pour Microsoft Teams ! <a href="https://msft.it/6177ipcpN">Lien</a> <a href="https://nitter.nohost.network/pic/media%2FGBPbpMyWsAAoMT2.jpg">Image 1</a> <a href="https://nitter.nohost.network/pic/media%2FGBPbpMwXMAA2ETT.jpg">Image 2</a> <a href="https://nitter.nohost.network/pic/media%2FGBPbpMxWAAYI7cM.jpg">Image 3</a> <a href="https://nitter.nohost.network/pic/media%2FGBPbpMxXYAA17AU.jpg">Image 4</a> - 13 Dec 2023 17:00:01 @<a href="https://x.com/MicrosoftDesign/status/1734981512830013861#m">MicrosoftDesign</a></p>
-<hr />
-<p>Dans Flutter 3.16, Material 3 est désormais activé par défaut. 🎉 <a href="https://nitter.nohost.network/pic/media%2FGBKtSwuaMAAgrl9.jpg">Image</a> - 12 Dec 2023 21:00:00 @<a href="https://x.com/FlutterDev/status/1734679518034457022#m">FlutterDev</a></p>
-<hr />
-<p>Qui d'autre est fan de la tendance "Kitschens" ? Partage de quelques vidéos lorsque nous avons visité le premier pop-up physique <a href="https://x.com/search?q=%23PinterestPredicts">#PinterestPredicts</a> à NYC. Voir les vidéos et faites-nous savoir laquelle est votre préférée → <a href="https://pinterestpredicts.com/">Lien</a> - 13 Dec 2023 14:53:22 @<a href="https://x.com/PinterestDesign/status/1734949639952945476#m">PinterestDesign</a></p>
-<hr />
-<p>Nous aimons aussi l'esthétique "Be Jelly"
-(et ce clin d'œil à Pinterest Lens !) <a href="https://pinterestpredicts.com/">Lien</a> - 13 Dec 2023 14:56:05 @<a href="https://x.com/PinterestDesign/status/1734950323481924000#m">PinterestDesign</a></p>
-<hr />
-<p>Recherche dans Material 3 🔍
-La recherche permet aux gens d'entrer un mot-clé ou une phrase pour obtenir des informations pertinentes. <a href="https://nitter.nohost.network/pic/media%2FGBKRvmFX0AYpY9S.jpg">Image</a> - 12 Dec 2023 17:00:01 @<a href="https://x.com/materialdesign/status/1734619122971906364#m">materialdesign</a></p>
-<hr />
-<p>◼️ Utilisez des barres et des vues de recherche pour la navigation à travers des requêtes de recherche.
-◼️ Les barres de recherche peuvent afficher des mots-clés ou des phrases suggérés lorsque l'utilisateur tape.
-◼️ Affichez toujours les résultats dans une vue de recherche.
-◼️ Les barres de recherche peuvent inclure une icône de recherche principale et une icône facultative en fin. - 12 Dec 2023 17:00:02 @<a href="https://x.com/materialdesign/status/1734619127799820480#m">materialdesign</a></p>
-<hr />
-<p>En savoir plus sur la recherche → <a href="https://goo.gle/3RzR715">goo.gle/3RzR715</a> <a href="https://nitter.nohost.network/pic/media%2FGBKRv0ZWwAA8Qfp.jpg">Image</a> - 12 Dec 2023 17:00:03 @<a href="https://x.com/materialdesign/status/1734619131008418160#m">materialdesign</a></p>
+<p>Cet article compile les tweets les plus récents du monde du design, couvrant une gamme de sujets tels que les événements de design, le mentorat, les concepts artistiques et les opportunités de carrière. Les tweets reflètent une communauté dynamique et collaborative engagée à inspirer, innover et connecter.</p>
+<p>Les discussions sur les événements de design à Bangalore, les opportunités de mentorat et les nouvelles fonctionnalités de conception témoignent de la vitalité de la communauté du design et de l'engagement envers un avenir inclusif et créatif. Les initiatives de mentorat, les opportunités d'emploi et les projets artistiques soulignent l'importance de la collaboration et de l'apprentissage continu dans le domaine du design.</p>
+<p>Restez à l'écoute pour plus de mises à jour et de nouvelles tendances passionnantes dans le monde du design !</p>
+<p>(<em>Article rédigé par un rédacteur en chef senior pour une publication Française</em>)</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

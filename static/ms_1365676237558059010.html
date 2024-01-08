@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,34 +83,55 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Kesemua Tweet Terkini</h1>
-<p><strong>06 Jan 2024 15:21:38 @typesfast</strong>
-95% kapal-kapal kontena yang sepatutnya melalui Laut Merah kini mengelilingi Ujung Selatan Afrika sejak pagi tadi. Kapal-kapal yang mengalihkan laluan dari laluan biasa dicat orange pada peta @flexport di bawah.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK0IEYaQAEKdD2.jpg" /></p>
-<p><strong>06 Jan 2024 17:09:51 @paulg</strong>
-Saya tidak pernah bertemu Jessica jika bukan kerana Harvard Extension School. Saya bertemu dengannya ketika dia dijemput ke rumah saya oleh seseorang yang dia temui dalam kelas lakonan di Extension School.</p>
-<p><strong>06 Jan 2024 17:07:33 @mkobach</strong>
-Twitter perlu mengemaskini algoritma mereka untuk memperbaiki masalah balas mereka. Balasan teratas kepada sebarang tweet sepatutnya menjadi komen yang relevan dengan tweet asal. Sebaliknya, pengguna telah mengetahui bagaimana untuk memanipulasi sistem dengan memuat naik video viral yang tidak berkaitan sebagai balasan. Sila perbetulkan ini @elonmusk.</p>
-<p><strong>06 Jan 2024 16:27:49 @businessbarista</strong>
-Saya dan rakan-rakan saya duduk di garis 50-yard di Kejuaraan Kebangsaan secara percuma berkat @HubSpot. Misi 1 berjaya dilaksanakan. Misi 2: menjadi viral. Inilah rancangan... (lanjut bacaan di Twitter).</p>
-<p><strong>06 Jan 2024 16:39:18 @businessbarista</strong>
-Saya rasa ini merupakan kali pertama dalam sejarah stadium bola sepak diubah menjadi di mana waldo.</p>
-<p><strong>06 Jan 2024 13:52:01 @dutchtide</strong>
-Lebih banyak lukisan hari ini, datang dan sertai aliran langsung untuk merasai dan melihat apa yang pembukaan hari ini semua tentang!</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743694619827752960%2FapilBoVw%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><strong>06 Jan 2024 16:08:50 @AliAbdaal</strong>
-Tidak dapat menghadiri Bengkel Perancangan Tahunan hari ini? Tidak mengapa! Anda masih boleh menyertai dengan menjawab soalan-soalan berikut untuk membantu anda merenungkan tahun lepas dan mewujudkan diri terbaik anda untuk 2024.</p>
-<p><strong>06 Jan 2024 16:08:54 @AliAbdaal</strong>
-🚀 Menyelusuri Kepada Hadapan: Berdasarkan pengalaman anda pada tahun 2023, apakah yang anda ingin lakukan secara berbeza pada 2024? Adakah kawasan baru yang anda ingin terokai atau perubahan yang anda ingin buat?</p>
-<p><strong>06 Jan 2024 16:08:54 @AliAbdaal</strong>
-Jangan ragu untuk berkongsi pemikiran anda mengenai soalan-soalan ini dalam komen atau menyimpan utas ini untuk pengjournalan peribadi.</p>
-<p><strong>06 Jan 2024 16:05:22 @dickiebush</strong>
-Apa yang saya tulis hari ini: Sabtu 1/6/24. Masa penulisan keseluruhan: 3 jam, 17 minit. (lanjut bacaan di Twitter).</p>
-<p><strong>06 Jan 2024 15:17:13 @jackbutcher</strong>
-Koordynasi pengumpulan.</p>
-<p><strong>06 Jan 2024 14:59:40 @gregisenberg</strong>
-Kami baru sahaja menyiapkan perjumpaan eksekutif tahun 2024 kami di Miami dan saya ada beberapa nota untuk berkongsi dengan anda. 10 pengajaran dari perjumpaan kami membina syarikat pemegang kami bernilai 8 angka. (lanjut bacaan di Twitter).</p>
-<p><em>This article incorporates Tweets from various users on different topics. It's compiled from a variety of sources and offers a glimpse into the current conversations happening on Twitter.</em></p>
+            <h1>Bahasa Melayu Article</h1>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/ShaanVP/status/1744226866255606116#m">08 Jan 2024 05:17:45 ShaanVP</a>: Apa yang anda akan lakukan jika anda tidak takut? (soalan serius)</p>
+<p>ShaanVP bertanya soalan yang menarik tentang ketakutan dan tindakan kita dalam menghadapinya.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">07 Jan 2024 14:04:40 johnnyxbrown</a>: 7 pandangan yang akan mengubah hidup anda daripada "Atomic Habits" oleh James Clear</p>
+<p>Johnyxbrown berkongsi insights menarik dari buku "Atomic Habits" oleh James Clear.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/mechsicko/status/1744200308543332432#m">08 Jan 2024 03:32:13 mechsicko</a>: The Physical Impossibility of Death in the Mind of Someone Living
+￼
+Seni || Damien Hirst
+Tahun || 1991
+Jenis || Tiger shark, glass, steel, 5% formaldehyde solution
+Medium || @opepenedition
+Gerakan || minimalisme, pixel, meme
+Subjek || Kehidupan, kematian yg ketara</p>
+<p>Mechsicko berkongsi maklumat tentang karya seni yang menarik oleh Damien Hirst.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/sweatystartup/status/1744199748515504221#m">08 Jan 2024 03:30:00 sweatystartup</a>: Apa yang media tidak memberitahu anda:</p>
+<p>Dunia ini adalah tempat yang hebat.</p>
+<p>Manusia berusaha untuk membantu satu sama lain setiap hari.</p>
+<p>Dunia adalah tempat yang amat baik.</p>
+<p>Sweatystartup memberikan pandangan positif tentang dunia yang kadang-kadang dilupakan oleh media.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/jackbutcher/status/1744195745484243166#m">08 Jan 2024 03:14:05 jackbutcher</a>:</p>
+<p>Jackbutcher berkongsi gambar yang menarik untuk dinikmati oleh pembaca.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/mkobach/status/1744186379741938012#m">08 Jan 2024 02:36:53 mkobach</a>: Saya benci iklan-iklan ini. Adakah saya seorang yang merasa kesunyian di sini?</p>
+<p>Mkobach mempunyai pendapat negatif tentang iklan tertentu.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/alijla2021/status/1743733269571440760#m">06 Jan 2024 20:36:23 alijla2021</a>: Dua jam antara dua gambar ini</p>
+<p>Alijla2021 berkongsi perubahan yang menarik dalam masa hanya dua jam.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/bunya_eth/status/1744167328529453128#m">08 Jan 2024 01:21:10 bunya_eth</a>: Pelesen bebas untuk seni jalanan</p>
+<p>Bunya_eth berkongsi gambar seni jalanan yang menarik.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/ElliotHershberg/status/1744082999048613920#m">07 Jan 2024 19:46:05 ElliotHershberg</a>: Kemajuan dalam membaca, menulis, dan mengedit DNA telah berterusan.</p>
+<p>ElliotHershberg berkongsi maklumat tentang penemuan baru dalam bidang genetik.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/johnbryanesq/status/1744042901280104535#m">07 Jan 2024 17:06:45 johnbryanesq</a>: Ada sesetengah yang bertanya gambar benteng Revolusi Perang dalam rumah ladang lama di Virginia Barat.</p>
+<p>Johnbryanesq berkongsi kisah menarik tentang penemuan benteng lama di rumah ladang.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/businessbarista/status/1744140008640946497#m">07 Jan 2024 23:32:37 businessbarista</a>: Pergi ke Kejohanan Kebangsaan secara percuma </p>
+<p>Businessbarista berkongsi pengalaman menarik tentang pergi ke kejohanan kebangsaan.</p>
+<hr />
+<p>Pautan Tweet: <a href="https://x.com/businessbarista/status/1744140540474462318#m">07 Jan 2024 23:34:44 businessbarista</a>: Dia berjaya:</p>
+<p>Businessbarista berkongsi kejayaan yang diperolehi.</p>
+<hr />
+<p>Ini adalah artikel yang menyenaraikan beberapa Tweet yang menarik daripada pelbagai pengguna Twitter. Tweet-tweet ini merangkumi pelbagai perkara yang menarik seperti seni, buku, dan pengalaman peribadi. Semoga anda menikmati artikel ini!</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

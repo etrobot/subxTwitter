@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,24 +83,77 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweeter Nachrichten</h1>
-<h2>06 Jan 2024 17:50:11 @Suhail</h2>
+            <h1>Tweets Zusammenfassung</h1>
+<h2>08 Jan 2024</h2>
+<h3>@marckohlbrugge</h3>
 <ul>
-<li>Es ist interessant, dass das Posten auf Twitter (was ich frei tun würde) mehr als für das höchste Abonnement für Twitter bezahlt (für das ich normalerweise nicht bezahlen würde).</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/Suhail/status/1743691447650713803#m">Link zum Tweet</a></li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744279812305530993#m">08:48:09</a>: " $20/mo adds up with loyal community members ([wip.co])"</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744280039171236096#m">08:49:03</a>: "On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)"</li>
 </ul>
-<h2>06 Jan 2024 14:22:40 @arvidkahl</h2>
+<h3>@neuranne</h3>
 <ul>
-<li>Ich werde heute 39 Jahre alt. 🥳</li>
-<li>Als Geschenk an euch (und an mich 😉) veröffentliche ich das Bootstrapper-Bundle:</li>
-<li>Zero to Sold (eBook+Hörbuch)</li>
-<li>The Embedded Entrepreneur (eBook, Hörbuch &amp; Toolkit)</li>
-<li>Find your Following (Kompletter Kurs + Toolkit)</li>
-<li>Geburtstagspreis: $20!</li>
-<li><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">Link zum Tweet</a></li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1744263413889413404#m">08: Jan 2024 07:42:59</a>: Lost a journal but found renewed excitement for daily journaling.</li>
 </ul>
-<p>... (weiterer Inhalt der anderen Tweets)</p>
-<p>Kommentar: Das sind die neuesten Nachrichten von verschiedenen Twitter-Nutzern, die unterschiedliche Themen behandeln, einschließlich Geburtstag, technischer Probleme und Produktankündigungen. Es ist interessant zu sehen, wie vielfältig die Twitter-Gemeinschaft ist und welche verschiedenen Diskussionen und Themen dort stattfinden.</p>
+<h3>@michwirantono</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/michwirantono/status/1744236108878328278#m">08: Jan 2024 05:54:29</a>: Shipping from 37,000 ft above. The grind doesn’t stop! 💪</li>
+</ul>
+<h3>@tdinh_me</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/tdinh_me/status/1744232759600824622#m">08: Jan 2024 05:41:10</a>: Seeking help for the ERR_NETWORK_CHANGED issue in Chrome/macOS Sonoma.</li>
+</ul>
+<h3>@Shpigford</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1744223542869143772#m">08: Jan 2024 05:04:33</a>: Spreading positivity and encouragement.</li>
+</ul>
+<h3>@Jessicameher</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/Jessicameher/status/1744172995331998188#m">08: Jan 2024 01:43:41</a>: Reflecting on InVision's failure and the importance of listening to customers.</li>
+</ul>
+<h3>Quoting: <a href="https://x.com/jasonfried/status/1743460783059845601#m">Jason Fried (@jasonfried)</a></h3>
+<ul>
+<li>Shares perspective on the inevitability of businesses failing if they can't support themselves financially.</li>
+</ul>
+<h3>@dannypostmaa</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744181420099346548#m">08: Jan 2024 02:17:10</a>: Excitement for the year ahead.</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744211423130267705#m">08: Jan 2024 04:16:23</a>: Considering a new venture now that the non-compete is ending.</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744185419707961649#m">08: Jan 2024 02:33:04</a>: Shares enthusiasm about a topic.</li>
+</ul>
+<h3>@arvidkahl</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1744207695941398619#m">08: Jan 2024 04:01:35</a>: Discusses the use of llama.cpp for summarization.</li>
+</ul>
+<h3>@rrhoover</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/rrhoover/status/1744210409664475327#m">08: Jan 2024 04:12:22</a>: Shares interest in 2024 predictions.</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/rrhoover/status/1744210508394152128#m">08: Jan 2024 04:12:45</a>: Adds a link to the predictions post.</li>
+</ul>
+<h3>@mechsicko</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">08: Jan 2024 03:32:13</a>: Sharing an artwork and tagging another user.</li>
+</ul>
+<h3>@jackbutcher</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">08: Jan 2024 03:14:05</a>: Shares an image.</li>
+</ul>
+<h3>@matteing</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/matteing/status/1744190891332366786#m">08: Jan 2024 02:54:48</a>: Sharing a surprising discovery about Xcode.</li>
+</ul>
+<h3>@thepatwalls</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1744185711492735451#m">08: Jan 2024 02:34:13</a>: Discusses the trend of buying Teslas in 2024.</li>
+</ul>
+<h3>Other Users</h3>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa">@dannypostmaa</a>: Shares excitement and experiences with ChatGPT and acknowledges a helpful newsletter.</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/DenLoginoff">@DenLoginoff</a>: Shares helpful tidbits about growing an audience on Twitter.</li>
+</ul>
+<h2>Interpretation und Kommentare</h2>
+<p>The tweets cover a wide range of topics, from business updates and technical issues to personal reflections and art sharing. It's interesting to see the variety of interests and experiences shared on the platform. The quotes from Jason Fried provide a sobering perspective on the challenges of building and maintaining successful businesses. The discussion on InVision's failure also offers valuable insights into the importance of customer-centric focus. Overall, the tweets provide a snapshot of diverse experiences and perspectives in the online community.</p>
+<hr />
+<p>This compilation of tweets offers a glimpse into the thoughts, experiences, and discussions happening on Twitter on January 8th, 2024. From business updates and technical challenges to personal reflections and art sharing, the platform continues to be a space for diverse interests and experiences. The inclusion of a thought-provoking quote from Jason Fried and a meaningful reflection on InVision's failure adds depth to the variety of content shared. These tweets serve as a reminder of the richness and diversity of conversations that take place on social media platforms.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

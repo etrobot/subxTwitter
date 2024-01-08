@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,93 +84,55 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Novedades en Diseño</h1>
-<p>En nuestro blog, una exploración de cómo devolver recompensa tanto a nosotros como a otros.</p>
-<p>Mentoría =
+            <h1>Calendario de diseño: las últimas novedades del mundo del diseño</h1>
+<h2>07 de enero de 2024</h2>
+<ul>
+<li><strong>Autor</strong>: <a href="https://x.com/zeta_ux/status/1743885974206341243#m">@zeta_ux</a></li>
+<li><strong>Hora de publicación</strong>: 06:43:10</li>
+</ul>
+<p>¡Nuevo año, nuevas vibras! 🎉 
+¡Emocionado por comenzar el 2024 con nuestro nuevo Design Meetup! Únete a nosotros mientras exploramos la creatividad, compartimos ideas y hacemos de este año un año repleto de diseño! 🥳</p>
+<p>Registro y más detalles 👇 <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23zeta">#zeta</a> <a href="https://x.com/search?q=%23design">#design</a> <a href="https://x.com/search?q=%23ux">#ux</a> <a href="https://x.com/search?q=%23meetup">#meetup</a> <a href="https://x.com/search?q=%23bangalore">#bangalore</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="New Year, New Vibes" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" /></p>
+<hr />
+<ul>
+<li><strong>Autor</strong>: Vidhunnan (@vidhunnan)</li>
+<li>Hora de publicación: No especificada</li>
+</ul>
+<p>Quoting:
+"🌟 ¡Nuevo año, nuevas conexiones! ¡El Meetup de ADPList en Bangalore está aquí! 🚀
+¡Hola diseñadores, gerentes de producto, mentores e innovadores!
+Prepárense para un comienzo electrizante del año en el Meetup de ADPList en Bangalore. Estamos reuniendo a una comunidad dinámica de profesionales, mentores y entusiastas en el corazón de nuestra ciudad.
+🤝 Conéctate, conversa y cautiva: sumérgete en un mundo de talentos increíbles de nuestra industria en un ambiente informal. Comparte tu viaje, inspírate en otros y forja conexiones que podrían dar forma a tu futuro. ¡Tu próxima gran colaboración podría estar a solo una conversación de distancia!
+🎤 Charlas que encienden ideas: estamos preparando oradores que compartirán ideas innovadoras y trucos de vida. El aprendizaje está a punto de volverse mucho más divertido.
+🌈 Saludos a @LottieFiles: ¡Un gran reconocimiento a LottieFiles por ser nuestro poderoso socio para este evento. Su enfoque innovador en la animación está cambiando el juego!
+🏢 Muchas gracias a @zeta_ux: Un gran agradecimiento a Zeta por hospedarnos en su espacio súper genial. Es el escenario perfecto para que las ideas y las interacciones florezcan.
+🍔 Comida, diversión y burbujas: las conversaciones no terminan con las charlas. Únete a nosotros para disfrutar de buena comida y risas después. Recuerda, algunas de las mejores conexiones se hacen durante una comida informal.
+📢 Corre la voz: Invita a tus colegas y amigos. ¡Cuantos más, mejor!
+🎟️ Cupos limitados disponibles: ¡Date prisa, asegura tu lugar ahora!
+🔗 Regístrate ahora: <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a>
+Únete al Meetup de ADPList en Bangalore y sé parte de una comunidad que está moldeando el futuro. Aprendamos, crezcamos y tengamos éxito juntos.
+¡Nos vemos allí!</p>
+<h1>ADPListBangalore #NetworkingEvent #LottieFiles #Meetup #BangaloreEvents #ProfessionalGrowth" | Nitter</h1>
+<p><br><a style="color:#5da2ff;" href="https://x.com/vidhunnan/status/1743882681711231102#m">x.com/vidhunnan/status/1743882681711231102#m</a></p>
+<p>¡Nuevo año, nuevas conexiones! El Meetup de ADPList en Bangalore está aquí! 🚀</p>
+<p>¡Hola diseñadores, gerentes de productos, mentores e innovadores!</p>
+<p>¡Prepárense para un comienzo electrizante del año en el Meetup de ADPList en Bangalore! Estamos reuniendo a una comunidad dinámica de profesionales, mentores y entusiastas en el corazón de nuestra ciudad.</p>
+<ul>
+<li><strong>Autor</strong>: <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">@PinterestDesign</a></li>
+<li><strong>Hora de publicación</strong>: 19:24:22</li>
+</ul>
+<p>Nuevo en nuestro blog, una exploración de cómo devolver recompensa tanto en retorno.
+¡Mentoría = 
 ✅ conexión con la comunidad local
-✅ introducir a los estudiantes al diseño de productos digitales como opción de carrera
-✅ aprender mientras enseñamos a otros
-…y mucho más</p>
-<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">Link al artículo</a></p>
-<p>Publicado el 05 de Enero de 2024 por <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">@PinterestDesign</a></p>
-<hr />
-<p>¡Nos encanta verlo! ¿Qué están pineando en 2024?</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jstrelioff/status/1742648294726070344#m">Enlace al tweet</a></p>
-<p>Publicado el 04 de Enero de 2024 por <a href="https://x.com/PinterestDesign/status/1743005001557889096#m">@PinterestDesign</a></p>
-<hr />
-<p>Este mes, el fondo de pantalla viene cortesía de <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍. 
-Para descargar este fondo de pantalla y más, visita ➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
-<p>Publicado el 04 de Enero de 2024 por <a href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">@MicrosoftDesign</a></p>
-<hr />
-<p>Itai Asseo, Jefe de Tecnología Emergente, Salesforce Ignite, y su equipo experimentaron con una variedad de herramientas de IA para ver cuán rápido podrían ponerse al día con las tareas.</p>
-<p>Descubre qué herramientas de IA ahorraron más tiempo y de qué manera.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a> ⬇️ <br />
-<a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">Enlace al post</a></p>
-<p>Publicado el 28 de Diciembre de 2023 por <a href="https://x.com/SalesforceUX/status/1740434190347174281#m">@SalesforceUX</a></p>
-<hr />
-<p>¡Únete al equipo de diseño de Salesforce! Echa un vistazo a estos roles. ⬇️   </p>
-<p>Diseñador/a UX Principal/Líder <br />
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">Enlace a la oferta de empleo</a>  </p>
-<p>Investigador/a Senior/Líder, Investigación e Insights <br />
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">Enlace a la oferta de empleo</a>   </p>
-<p>Ayúdanos a impulsar el cambio hacia un mundo más inclusivo.</p>
-<p>Publicado el 27 de Diciembre de 2023 por <a href="https://x.com/SalesforceUX/status/1740098733746839762#m">@SalesforceUX</a></p>
-<hr />
-<p>Esta temporada navideña nos asociamos con la artista de IA <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> para recrear representaciones visuales de recuerdos navideños en todo el mundo.</p>
-<p>Visita ➡️ <a href="https://microsoft.com/holidays">microsoft.com/holidays</a> para conocer más sobre el proceso de Ellie y los temas que dieron vida a ilustraciones como estas.</p>
-<p>Publicado el 22 de Diciembre de 2023 por <a href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">@MicrosoftDesign</a></p>
-<hr />
-<p>Las fiestas se vuelven más felices con una experiencia de tematización actualizada en Material Theme Builder 2.0! 🎁</p>
-<p>Publicado el 20 de Diciembre de 2023 por <a href="https://x.com/materialdesign/status/1737548648857116834#m">@materialdesign</a></p>
-<hr />
-<p>¡La fidelidad del color está aquí!</p>
-<p>Puedes activar Color Match en la configuración para que los esquemas resultantes se asemejen más a tus entradas de color clave.</p>
-<p><br><a style="color:#5da2ff;" href="https://goo.gle/3RyaMND">Enlace al blog</a></p>
-<p>Publicado el 20 de Diciembre de 2023 por <a href="https://x.com/materialdesign/status/1737548659972059565#m">@materialdesign</a></p>
-<hr />
-<p>Y eso no es todo! Lee las actualizaciones en el blog → <a href="https://goo.gle/3RyaMND">goo.gle/3RyaMND</a></p>
-<p>Publicado el 20 de Diciembre de 2023 por <a href="https://x.com/materialdesign/status/1737548666242510935#m">@materialdesign</a></p>
-<hr />
-<p>Y así, ¡se termina! Estamos cerrando 2023 con un vistazo a los diversos logros del equipo y los momentos más inolvidables. ¡Brindamos por todos los que hicieron de este año el mejor!</p>
-<p><br><a style="color:#5da2ff;" href="https://www.instagram.com/p/C1CxBKPhdbE/?utm_source=ig_web_copy_link">Link a la publicación</a></p>
-<p>Publicado el 19 de Diciembre de 2023 por <a href="https://x.com/lyftdesignteam/status/1737165697917333931#m">@lyftdesignteam</a></p>
-<hr />
-<p>Cuando escuchas comentarios como "[este fue] el mejor evento virtual/en persona al que he asistido", ¡estás haciendo algo bien!</p>
-<p>Compartimos el impacto y los beneficios de nuestra conferencia anual <a href="https://x.com/search?q=%23DesignSystem">#DesignSystem</a> Day en nuestro blog:</p>
-<p><br><a style="color:#5da2ff;" href="https://pinterest.design/why-we-host-an-internal-design-systems-conference-3bb6017c6ca2?source=social.tw">Enlace al blog</a></p>
-<p>Publicado el 18 de Diciembre de 2023 por <a href="https://x.com/PinterestDesign/status/1736875833506062380#m">@PinterestDesign</a></p>
-<hr />
-<p>¿Cómo será el mundo de la IA en 2030?</p>
-<p>Echa un vistazo a esta publicación sobre cómo el equipo de Salesforce Futures se asoció con cineastas para crear una visión del futuro con IA.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a><br />
-<a href="https://www.salesforce.com/news/stories/ai-future-film/">Link al artículo</a></p>
-<p>Publicado el 15 de Diciembre de 2023 por <a href="https://x.com/SalesforceUX/status/1735772496488497635#m">@SalesforceUX</a></p>
-<hr />
-<p>¿Tienes preguntas sobre la Búsqueda en Material? ¡Estamos aquí para responder!</p>
-<p>Publicado el 15 de Diciembre de 2023 por <a href="https://x.com/materialdesign/status/1735736482281758732#m">@materialdesign</a></p>
-<hr />
-<p>¿Agregando Búsqueda a tu aplicación?</p>
-<p>Ya sea que estés diseñando para Flutter, Android o Web, tenemos recursos para ayudarte.</p>
-<p><br><a style="color:#5da2ff;" href="https://goo.gle/41dvQNW">Enlace a los recursos</a></p>
-<p>Publicado el 14 de Diciembre de 2023 por <a href="https://x.com/materialdesign/status/1735343896719176095#m">@materialdesign</a></p>
-<hr />
-<p>Emocionados por nuestro primer estudio de caso con Figma.</p>
-<p>Hemos estado trabajando para crear un sistema de diseño que potencie los flujos de trabajo entre diseño y desarrollo, para que puedan crear una mejor experiencia de producto con facilidad. Hablamos sobre algunas de estas prácticas con el equipo de Figma.</p>
-<p><br><a style="color:#5da2ff;" href="https://rb.gy/b73j85">Enlace al estudio de caso</a></p>
-<p>Publicado el 14 de Diciembre de 2023 por <a href="https://x.com/Razorpay_Design/status/1735250181875237073#m">@Razorpay_Design</a></p>
-<hr />
-<p>¿Listo para llevar tu carrera al siguiente nivel con información, oportunidades y conexiones en Diseño/UX?</p>
-<p>Regístrate ahora!👇🏾 <br />
-<a href="https://flows.beamery.com/salesforce/blogs-talentcommunity">Link a la comunidad</a></p>
-<p>Publicado el 13 de Diciembre de 2023 por <a href="https://x.com/SalesforceUX/status/1735036119937339594#m">@SalesforceUX</a></p>
-<hr />
-<p>Una mirada a algunas de nuestras imágenes actualizadas para Microsoft Teams!</p>
-<p>🔗: <a href="https://msft.it/6177ipcpN">msft.it/6177ipcpN</a></p>
-<p>Publicado el 13 de Diciembre de 2023 por <a href="https://x.com/MicrosoftDesign/status/1734981512830013861#m">@MicrosoftDesign</a></p>
-<p>Todas las imágenes tomadas de <a href="https://nitter.nohost.network/">Nitter</a></p>
-<h2>Comentarios y Interpretación</h2>
-<p>Los tweets recopilados muestran el compromiso de las empresas de diseño con temas actuales como la mentoría, la inteligencia artificial, el diseño inclusivo y la colaboración con otras herramientas de diseño. Esto demuestra la importancia del diseño en la creación de productos y experiencias innovadoras. Además, se destaca la colaboración con artistas y la celebración de logros del equipo, lo que resalta la importancia del trabajo en equipo y el reconocimiento de los esfuerzos individuales.</p>
-<p>El contenido de los tweets sugiere un enfoque en la colaboración, la innovación y el impacto positivo en la comunidad, lo que refleja la importancia del diseño en la sociedad actual. El uso de diferentes plataformas de diseño muestra la diversidad de herramientas y enfoques utilizados en la industria del diseño.</p>
+✅ presentar a los estudiantes el diseño de productos digitales como una opción de carrera
+✅ aprender mientras enseñas a otros
+... y mucho más</p>
+<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">pinterest.design/reasons-to-…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Mentorship" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p>[...]</p>
+<p><em>Continuar el artículo con el resto de tweets</em></p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

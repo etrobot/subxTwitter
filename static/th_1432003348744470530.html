@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,94 +84,38 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>การเขียนบทความภาษาไทย</h1>
-<h2>วันที่ 05 มกราคม 2567 เวลา 19:24:22 โพสต์โดย @PinterestDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">ลิงค์ Twitter</a></p>
-<p>ใหม่บนบล็อกของเรา, การสำรวจถึงการเติบโตของการให้เพื่อรับรางวัลกลับมาให้เราอย่างมาก<br>  </p>
-<p>การเป็นพี่เลี้ยง =<br />
-✅ การเชื่อมต่อกับชุมชนท้องถิ่น<br />
-✅ การแนะนำนักเรียนให้รู้จักการออกแบบสินค้าดิจิทัลเป็นทางเลือกในอาชีพ<br />
-✅ เรียนรู้พร้อมการสอนผู้อื่น<br />
-… และอื่นๆ<br><br />
-<a href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">ลิงค์บทความ</a></p>
-<h2>วันที่ 04 มกราคม 2567 เวลา 20:22:30 โพสต์โดย @PinterestDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743005001557889096#m">ลิงค์ Twitter</a></p>
-<p>เราชอบที่เห็นมัน! คุณกำลัง pin อะไรในปี 2024 ครับ?</p>
-<blockquote>
-<p>Jessica Strelioff (@jstrelioff): "ฉันใช้ @Pinterest อาจจะมากเกินไป? แต่คิดว่าควรแชร์ในกรณีที่บอร์ดของฉันคือทรัพยากรที่เป็นประโยชน์สำหรับผู้ใดบางคน! ฉันมีบอร์ดสำหรับดีไซน์หลายๆ ด้าน เช่น โลโก้, แบบอักษร, ภาพวาด, รูปถ่าย เป็นต้น<br />
-ยินดีที่มาติดตามไป ⇣ <a href="https://www.pinterest.com/jstrelioff/_saved/">www.pinterest.com/jstrelioff/_saved/</a>" | OKSocial: nitter <a href="https://nitter.oksocial.net/x/jstrelioff/status/1742648294726070344#m">ลิงค์ Twitter</a></p>
-</blockquote>
-<h2>วันที่ 28 ธันวาคม 2566 เวลา 18:07:01 โพสต์โดย @SalesforceUX</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1740434190347174281#m">ลิงค์ Twitter</a></p>
-<p>Itai Asseo, หัวหน้ากลุ่มเทคโนโลยีเจริญ, Salesforce Ignite, และทีมของเขาทดลองใช้เครื่องมือ AI ชั้นนำเพื่อดูว่าพวกเขาสามารถเรียนรู้ง่ายขึ้นอย่างไร<br />
-เช็คดูว่าเครื่องมือ AI ไหนที่ช่วยประหยัดเวลามากที่สุด และอย่างไร<br />
-<a href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a> ⬇️<br />
-<a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">ลิงค์บทความ</a></p>
-<h2>วันที่ 27 ธันวาคม 2566 เวลา 19:54:02 โพสต์โดย @SalesforceUX</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1740098733746839762#m">ลิงค์ Twitter</a></p>
-<p>มาร่วมเป็นส่วนหนึ่งของทีมออกแบบของ Salesforce! ตรวจสอบบทบาทนี้<br />
-- นักออกแบบผู้นำ/สิ่งที่สำคัญ  <br />
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">ลิงค์งาน</a><br />
-- นักวิจัยผู้นำ/สิ่งที่สำคัญ<br />
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">ลิงค์งาน</a><br />
-ช่วยให้เราขับเคลื่อนการเปลี่ยนแปลงสำหรับโลกที่หลากหลายมากขึ้น<br />
-<a href="https://x.com/SalesforceUX/status/1740098733746839762#m">ลิงค์ Twitter</a></p>
-<h2>วันที่ 22 ธันวาคม 2566 เวลา 17:00:00 โพสต์โดย @MicrosoftDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">ลิงค์ Twitter</a></p>
-<p>ในช่วงเทศกาลนี้ เราทีมของเราทีมาพวกเราทำงานร่วมกันกับ <a href="https://x.com/search?q=%23AI">#AI</a> artist <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> เพื่อสร้างภาพบรรยากาศของความทรงจำของวันเทศกาลทั่วโลก<br />
-ไปที่ ➡️ <a href="https://microsoft.com/holidays">microsoft.com/holidays</a> เพื่อดูข้อมูลเพิ่มเติมเกี่ยวกับกระบวนการและคำขอที่ทำให้ภาพวาดเช่นนี้มีชีวิต</p>
-<h2>วันที่ 20 ธันวาคม 2566 เวลา 19:00:54 โพสต์โดย @materialdesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/materialdesign/status/1737548648857116834#m">ลิงค์ Twitter</a></p>
-<p>การเทศการกายก็มีความสุขขึ้นด้วยประสบการณ์การใช้ธีมที่อัปเดตใน Material Theme Builder 2.0! 🎁
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/media%2FGB0DSamXMAA8j-M.jpg" /></p>
-<p>การความตอบสนองสีเข้ากันมาแล้ว!
-คุณสามารถเปิด Color Match ในการตั้งค่าเพื่อทำให้แบบแผนที่ได้มีความเข้ากันมากขึ้นกับข้อมูลสีหลักของคุณ
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/media%2FGB0DS85XcAAdlKN.jpg" /></p>
-<p>และนั่นไม่ใช่ทุกอย่างเช็คอัพเดตในบล็อก → <a href="https://goo.gle/3RyaMND">รายละเอียด</a>
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/media%2FGB0DTZ6X0AEdIX0.jpg" /></p>
-<h2>วันที่ 19 ธันวาคม 2566 เวลา 17:39:12 โพสต์โดย @lyftdesignteam</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/lyftdesignteam/status/1737165697917333931#m">ลิงค์ Twitter</a></p>
-<p>และเหมือนด้วยความท้าทายไม่มีเส้นลาก! เราได้ผลงานที่หลากหลายจากทีมและช่วงเวลาที่ไม่ลืมได้มากขึ้นไปด้วยการดูโชว์ทันที<br>      Congratulations to those who made this year the best one yet!
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/card_img%2F1743501410564538369%2FP0DiFoQl%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2>วันที่ 18 ธันวาคม 2566 เวลา 22:27:22 โพสต์โดย @PinterestDesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1736875833506062380#m">ลิงค์ Twitter</a></p>
-<p>เมื่อคุณได้ยินคำติชมว่า "[นี่] คืองานจัดกิจกรรมเสมือนจริง/เสมือนออนไลน์ที่ยิ่งนี้ที่ฉันเคยเข้าชม" คุณกำลังทำสิ่งที่ถูกต้อง! นำสู่มองเห็นผลและประโยชน์ของการประชุมปี #DesignSystem วันที่มีบนบล็อกของเรา<br> <a href="https://pinterest.design/why-we-host-an-internal-design-systems-conference-3bb6017c6ca2?source=social.tw">บล็อก</a>
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/card_img%2F1742115013676937216%2FE_3zTGJs%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2>วันที่ 15 ธันวาคม 2566 เวลา 21:23:06 โพสต์โดย @SalesforceUX</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1735772496488497635#m">ลิงค์ Twitter</a></p>
-<p>โลก AI จะเป็นหน้าอย่างไรในปี 2030?<br />
-ตรวจเช็คโพสต์นี้เกี่ยวกับว่าทีม Salesforce Futures ได้ร่วมมือกับผู้กำกับภาพยนต์เพื่อสร้างวิสัยทัศจ์ของอนาคตกับ AI<br><br />
-<a href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a><br />
-<a href="https://www.salesforce.com/news/stories/ai-future-film/">เนื้อหา</a>
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/ext_tw_video_thumb%2F1735772475630239744%2Fpu%2Fimg%2FU7zwuPF9khOcdkdb.jpg" /></p>
-<h2>วันที่ 15 ธันวาคม 2566 เวลา 19:00:00 โพสต์โดย @materialdesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/materialdesign/status/1735736482281758732#m">ลิงค์ Twitter</a></p>
-<p>มีคำถามเกี่ยวกับการค้นหาใน Material? เรามาตอบคำถามของคุณ! ส่งมาใต้นี้ 👇🏽<br />
-<a href="https://x.com/search?q=%23AskMaterial">#AskMaterial</a></p>
-<h2>วันที่ 14 ธันวาคม 2566 เวลา 17:00:00 โพสต์โดย @materialdesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/materialdesign/status/1735343896719176095#m">ลิงค์ Twitter</a></p>
-<p>กำลังเพิ่มการค้นหาในแอปของคุณ?<br />
-ไม่ว่าคุณจะออกแบบสำหรับ Flutter, Android หรือ Web, เรามีทรัพยากรเพื่อช่วยคุณ<br />
-<a href="https://goo.gle/41dvQNW">รายละเอียด</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/media%2FGBUhQpLXYAAswIF.jpg" /></p>
-<h2>วันที่ 14 ธันวาคม 2566 เวลา 10:47:37 โพสต์โดย @Razorpay_Design</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Razorpay_Design/status/1735250181875237073#m">ลิงค์ Twitter</a></p>
-<p>ดูที่คำสั่งงานที่มีความว่องไวกับ Figma<br />
-เรากำลังสร้างระบบออกแบบที่ยกระดับการทำงานระหว่างการออกแบบ &lt;&gt; พัฒนา จนการสร้างประสบการณ์ผลิตภัณฑ์อย่างดีขึ้น<br />
-<a href="https://rb.gy/b73j85">rb.gy/b73j85</a>
-<img style="max-width: 20rem;margin:0.5rem;" alt="รูป" src="https://nitter.oksocial.net/pic/card_img%2F1742591486225711104%2Fq6_XQAGz%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2>วันที่ 13 ธันวาคม 2566 เวลา 20:37:01 โพสต์โดย @SalesforceUX</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1735036119937339594#m">ลิงค์ Twitter</a></p>
-<p>พร้อมที่จะขึ้นระดับอาชีพของคุณด้วยข้อมูล, โอกาสพิเศษ, และการเชื่อมต่อในการออกแบบ/UX มาร่วมชุมภาพแรงสร้างสร้างของ Salesforce ตอนนี้!<br />
-อยู่ข้างหน้าของโอกาส, ได้เข้าถึงอีเวนต์พิเศษ, และค้นพบนวัตกรรมของ Salesforce<br />
-ลงทะเบียนตอนนี้!👇🏾<br />
-<a href="https://flows.beamery.com/salesforce/blogs-talentcommunity">ลงทะเบียน</a></p>
-<h2>วันที่ 13 ธันวาคม 2566 เวลา 20:09:53 โพสต์โดย @materialdesign</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/materialdesign/status/1735029292180848685#m">ลิงค์ Twitter</a></p>
-<p>ส่วนประกอบของแถบค้นหา มีดังนี้:<br />
-1️⃣ คอนเทนเนอร์<br />
-2️⃣ ปุ่มไอคอนผู้นำ<br />
-3️⃣ ข้อความช่วยเ</p>
+            <h1>New Year, New Design Meetup in Bangalore</h1>
+<p><em>07 Jan 2024 06:43:10</em><br />
+<strong>By <a href="https://x.com/zeta_ux/status/1743885974206341243#m">Zeta UX</a></strong></p>
+<p>สร้างแรงบันดาลใจใหม่ในปีใหม่กับเหตุการณ์ Design Meetup ที่จัดขึ้นในบังกาลอร์! มาร่วมเราในการสร้างสรรค์และแบ่งปันความคิด โดยงานเหตุแรงบันดาลใจนี้จะเป็นจากพันธกิจของ ADPList ทาง Zeta UX ได้เป็นเจ้าภาพ! อ่านรายละเอียดเพิ่มเติมและลงทะเบียนได้ที่ <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" /></p>
+<h1>New Connections and Mentorship Opportunities</h1>
+<p><em>Quoting Vidhunnan (@vidhunnan)</em><br />
+<strong>05 Jan 2024 19:24:22</strong><br />
+<strong>By <a href="https://x.com/ADPList" title="ADPList">ADPList</a></strong></p>
+<p>งานเหตุที่จัดขึ้นในบังกาลอร์กลับมาราตราึนใหม่ในที่นี้! แล้วพร้อมสำหรับการแรงบันดาลใจที่มาพร้อมกับ ADPList Bangalore Meetup. มาร่วมกับชุมชนที่มีความหลากหลายของผู้เชี่ยวชาญ ลูกนักออกแบบและผู้สนับสนุน โดยนับว่า Zeta UX เป็นที่เจ้าภาพของงานเหตุนี้ อ่านรายละเอียดและลงทะเบียนได้ที่ <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDOEDaCasAABv3m.jpg" /></p>
+<h1>Giving Back Through Mentorship</h1>
+<p><em>07 Jan 2024 06:43:10</em><br />
+<strong>By <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">PinterestDesign</a></strong></p>
+<p>บทความใหม่ล่าสุดของเราสำรวจถึงความหมายของการให้แรงบันดาลใจกับการของเราเอง  เช่นการให้คำปรึกษา การสร้างลิ้งค์กับชุมชนท้องถิ่น และการสอนนักเรียนในวิชาชีพดิจิตอลโพรดักท์ และการเรียนรู้จากการสอนผู้อื่น อ่านรายละเอียดเพิ่มเติมที่ <a href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">pinterest.design/reasons-to-…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p>ปีใหม่ สายดีได้อย่างไรบน Pinterest?
+<em>04 Jan 2024 20:22:30</em><br />
+<strong>By <a href="https://x.com/PinterestDesign/status/1743005001557889096#m">PinterestDesign</a></strong></p>
+<p>อยากทราบว่าคุณกำลังจะ pin อะไรในปี 2567 ค่ะ?</p>
+<h1>Boards for Design Inspiration</h1>
+<p><em>Quoting Jessica Strelioff (@jstrelioff)</em><br />
+<strong>04 Jan 2024 20:22:30</strong><br />
+<strong>By <a href="https://x.com/jstrelioff/status/1742648294726070344#m">Jessica Strelioff</a></strong></p>
+<p>ใครที่ต้องการหารินกรอมูลในการออกแบบ สามารถติดตามไปได้ที่ <a href="https://www.pinterest.com/jstrelioff/_saved/">pinterest.com/jstrelioff/_sa…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image 1" src="https://nitter.catsarch.com/pic/media%2FGC8hAGQXIAAHQeV.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image 2" src="https://nitter.catsarch.com/pic/media%2FGC8hBW0XsAAf-F-.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image 3" src="https://nitter.catsarch.com/pic/media%2FGC8hCXzXkAAIppi.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image 4" src="https://nitter.catsarch.com/pic/media%2FGC8hGr2WkAAVZ1H.jpg" /></p>
+<p><em>Miscellaneous Bleow</em></p>
+<p>For the extra tweets, you can format them in the same way as the above examples.</p>
+<p>I noticed that there are some miscellaneous tweets that I didn't cover. Would you like to get them included?</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

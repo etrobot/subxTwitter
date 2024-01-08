@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,202 +83,41 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>39岁生日！阿维德•卡尔的特别礼物给您</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">06 Jan 2024 14:22:40</a><br />
-作者：@arvidkahl<br />
-今天是我的39岁生日。🥳  </p>
-<p>作为给您（以及我自己😉）的礼物，我发布了“创业者捆绑包”：</p>
+            <h1>最新动态</h1>
+<h2>2024 年 1 月 08 日</h2>
 <ul>
-<li>《从零到销售》（电子书+有声书）</li>
-<li>《嵌入式企业家》（电子书、有声书和工具包）</li>
-<li>《找到你的粉丝》（完整课程+工具包）</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744279812305530993#m">08 Jan 2024 08:48:09 - marc kohlbrugge</a>: 月费用为 $20 正在不断增加，与忠诚社区成员一起（<a href="https://wip.co">wip.co</a>）</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744280039171236096#m">08 Jan 2024 08:49:03 - marc kohlbrugge</a>: 另一方面，我们付费会员不多，因此月收入相当低（目前约为 $1,000）</li>
 </ul>
-<p>生日特惠价：20美元！
-<a href="https://bootstrappedfounder.gumroad.com/l/bootstrappers-bundle">点击购买</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743637874245775360%2FGFgmRFev%3Fformat%3Djpg%26name%3D800x419" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1743663506690355529#m">06 Jan 2024 15:59:10</a><br />
-作者：@neuranne<br />
-阿维德，生日快乐！这份礼物太棒了，尤其因为最终的受益者是🐶🩷</p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743669002260418587#m">06 Jan 2024 16:21:00</a><br />
-作者：@arvidkahl<br />
-比娜真的很期待我们去宠物商店的行程。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDLBtyXWEAEHwzo.jpg" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743661828339614146#m">06 Jan 2024 15:52:30</a><br />
-作者：@levelsio<br />
-本周我将把所有内容从SendGrid迁移到<a href="https://x.com/postmarkapp" title="Postmark">@postmarkapp</a></p>
-<p>我喜欢Postmark的一切，从注册、登录、设计、颜色到界面，所有功能都非常出色。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK6mWmWEAAhDPq.jpg" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743666966508757324#m">06 Jan 2024 16:12:55</a><br />
-作者：@levelsio<br />
-这部分真是太棒了 ❤️</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK_0NeX0AAT63B.jpg" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1743665621831737797#m">06 Jan 2024 16:07:34</a><br />
-作者：@Shpigford<br />
-这是我真正面临的困境：</p>
-<p>应该构建B2C金融工具还是B2B？</p>
-<p>B2C非常吸引人，因为市场上还没有很好的工具。</p>
-<p>但这条路已经直接通往痛苦和苦难。</p>
-<p>也许智慧告诉我要尝试B2B的路径。</p>
-<hr />
-<p>引用：</p>
-<blockquote>
-<p>Josh Pigford (@Shpigford)："What if we made @maybe OSS fintech tools? 🤔</p>
-<p>银行连接器（全球）
-商家数据（位置、标识、类别）
-交易分类
-诈骗检测</p>
-<p>(在整个事情上不遗余力…)" | Nitter
-x.com/Shpigford/status/1743369518225768713#m</p>
-</blockquote>
-<p>要是我们制作<a href="https://x.com/maybe" title="Maybe">@maybe</a> 开源的金融科技工具呢？🤔</p>
-<p>银行连接器（全球）
-商家数据（位置、标识、类别）
-交易分类
-诈骗检测</p>
-<p>(在整个事情上不遗余力…)</p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743665532987957639#m">06 Jan 2024 16:07:13</a><br />
-作者：@5harath<br />
-这实在是太超值了🔥</p>
-<p>我购买了所有的书籍和课程，绝对物超所值，但是以这个价格购买，你将获得最划算的交易。赶紧行动，让阿维德的日子变得更特别一些👇🏼</p>
-<hr />
-<p>引用：</p>
-<blockquote>
-<p>39岁生日！🥳</p>
-<p>作为给您（以及我自己😉）的礼物，我发布了“创业者捆绑包”：</p>
-<p>《从零到销售》（电子书+有声书）</p>
-<p>《嵌入式企业家》（电子书、有声书和工具包）</p>
-<p>《找到你的粉丝》（完整课程+工具包）</p>
-<p>生日特惠价：20美元！</p>
-<p><br><a style="color:#5da2ff;" href="https://bootstrappedfounder.gumroad.com/l/bootstrappers-bundle">bootstrappedfounder.gumroad.…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743637874245775360%2FGFgmRFev%3Fformat%3Djpg%26name%3D800x419" />
-x.com/arvidkahl/status/1743639220206391414#m</p>
-</blockquote>
-<p>39岁生日！🥳</p>
-<p>作为给您（以及我自己😉）的礼物，我发布了“创业者捆绑包”：</p>
-<p>《从零到销售》（电子书+有声书）</p>
-<p>《嵌入式企业家》（电子书、有声书和工具包）</p>
-<p>《找到你的粉丝》（完整课程+工具包）</p>
-<p>生日特惠价：20美元！</p>
-<p><br><a style="color:#5da2ff;" href="https://bootstrappedfounder.gumroad.com/l/bootstrappers-bundle">bootstrappedfounder.gumroad.…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743637874245775360%2FGFgmRFev%3Fformat%3Djpg%26name%3D800x419" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">06 Jan 2024 16:05:22</a><br />
-作者：@dickiebush<br />
-我今天写了这些内容：星期六1/6/24</p>
-<p>总共写作时间：3小时17分钟</p>
-<p>• 写了10件一直在思考的事情（30分钟）</p>
-<p>• 完成了每周的“发生了什么”和“我学到了什么”的总结（30分钟）</p>
-<p>• 写了20条推文，消化我积压已久的想法（30分钟）</p>
-<p>• 起草了2篇长篇文章，让它们在本周背景中发酵（60分钟）</p>
-<p>• 为下个季度的内容会议起草了我的内容节奏的想法（30分钟）</p>
-<p>感觉今年开局不错。</p>
-<p>• 姑妄听之
-• 咖啡因摄入增多</p>
-<p>很兴奋能够在整个年度持续这样下去。</p>
-<p>你今天写了什么？</p>
-<p>留下评论让我知道——我会读每一条。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK98zfXwAA_7fa.jpg" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743644092972540176#m">06 Jan 2024 14:42:01</a><br />
-作者：@levelsio<br />
-我刚刚发现我的Photo AI R2（<a href="https://x.com/Cloudflare" title="Cloudflare">@Cloudflare</a>的S3）存储桶位于欧洲西部，因为当我在仪表板上创建它时，Cloudflare根据你当前的浏览器位置自动选择了它，而我当时在欧洲。</p>
-<p>Aws\Result Object ( [data:Aws\Result:private] =&gt; Array ( [LocationConstraint] =&gt; WEUR</p>
-<p>但我的Web服务器在美国，Replicate也在美国，所以它会进行很多不必要的美欧之间的往返。</p>
-<p>有什么办法能够轻松地将Cloudflare R2存储桶迁移到新位置吗？我可以创建一个新的存储桶，但不确定如何搬移所有内容。</p>
-<p>现在存储桶中有34.89TB的数据，太多了，搬迁也有些困难。</p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743657953020850287#m">06 Jan 2024 15:37:06</a><br />
-作者：@levelsio<br />
-好了，搞定了，我刚创建了一个新的存储桶photoai-us-west，并将其与<a href="https://r2-us-west.photoai.com">r2-us-west.photoai.com</a>一起使用。</p>
-<p>我发现美欧的传输需要从Replicate美到我的服务器美再到R2欧再到Replicate美等等，过程中会花费很长时间。</p>
-<p>在Daniel Lockyer为我在服务器上设置New Relic之后，欧洲R2花费了1500ms（橙色），美国使用了500ms（浅粉色），所以现在快了3倍！</p>
-<p>不只只是一次往返，因为整个后期处理管道都涉及，包括放大、添加噪音等。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK3DgkXAAeQeX.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDK3DgiWoAA2Lfg.jpg" /></p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/MeetKevon/status/1743655540524486875#m">06 Jan 2024 15:27:31</a><br />
-作者：@MeetKevon<br />
-这是一个在公开场合构建的杰作。</p>
-<p>你可以看到玛丽如何链接到之前分享的帖子。</p>
-<p>这构成了一个美丽的故事情节——你怎么能不信任她呢？</p>
-<p>引用：</p>
-<blockquote>
-<p>2023年是我创业公司迄今为止最好的一年！ 🎉</p>
-<p>感谢您一路以来的陪伴 🎢</p>
-<p>10个亮点 😃（和低点 😩）！</p>
-<p>在下面的帖子中有更多详细/示例</p>
-<ol>
-<li>
-<p>移除了我们的免费套餐 - 定价是困难的，但我们的客户非常支持。这是做出的最佳决定之一。</p>
-</li>
-<li>
-<p>意外删除了我们的数据库中的数据。我几乎哭了。我们的客户再次非常支持（我们真的拥有最好的客户❤️）</p>
-</li>
-<li>
-<p>发布了一个人工智能功能 - 但确保它适合我们的产品，而不仅仅是为了玩玩 🤖</p>
-</li>
-<li>
-<p>为我们的产品添加了颜色主题和表情主题 - 即“无聊”的功能 - 但我们的客户非常喜欢它（比人工智能功能还要多 😂）</p>
-</li>
-<li>
-<p>我们的网站受到信用卡测试者的冲击。当然，这发生在午夜附近，所以我一直忙到凌晨2点 trying to sort out. But@Stripe是非常支持的，谢谢@sammcallister</p>
-</li>
-<li>
-<p>戈尔加入了我们的团队！招聘是困难且耗时的，但是当是合适的时候，是非常值得的</p>
-</li>
-<li>
-<p>我们受到了SVB的影响 - 非常有压力 😭</p>
-</li>
-<li>
-<p>一颗善良的心免费给了我们<a href="https://x.com/LlamaLife" title="Llama Life - calm, focused productivity ✨">@LlamaLife</a> Twitter handle. 信心重塑中。</p>
-</li>
-<li>
-<p>开始构建我们的移动应用（计划将于2024年1月发布）！</p>
-</li>
-</ol>
-<p>10.@ADHDJesse 和我录制了37集我们的播客@TheWeeklyBuild. 作为一个有ADHD的人，相信我，这需要承诺，但我很自豪我们做到了！</p>
-<p>x.com/threehourcoffee/status/1743432860185637304#m</p>
-</blockquote>
-<p>2023年是我创业公司迄今为止最好的一年！ 🎉</p>
-<p>感谢您一路以来的陪伴 🎢</p>
-<p>10个亮点 😃（和低点 😩）！
-下面有更多详细/示例</p>
-<ol>
-<li>
-<p>移除了我们的免费套餐 - 定价是困难的，但我们的客户非常支持。这是做出的最佳决定之一。</p>
-</li>
-<li>
-<p>意外删除了我们的数据库中的数据。我几乎哭了。我们的客户再次非常支持（我们真的拥有最好的客户❤️）</p>
-</li>
-<li>
-<p>发布了一个人工智能功能 - 但确保它适合我们的产品，而不仅仅是为了玩玩 🤖</p>
-</li>
-<li>
-<p>为我们的产品添加了颜色主题和表情主题 - 即“无聊”的功能 - 但我们的客户非常喜欢它（比人工智能功能还要多 😂）</p>
-</li>
-<li>
-<p>我们的网站受到了信用卡测试者的冲击。当然，这发生在午夜附近，所以我一直忙到凌晨2点 trying to sort out. But@Stripe非常支持，谢谢@sammcallister</p>
-</li>
-<li>
-<p>戈尔加入了我们的团队！招聘是困难且耗时的，但是当是合适的时候，是非常值得的</p>
-</li>
-<li>
-<p>我们受到了SVB的影响 - 非常有压力 😭</p>
-</li>
-<li>
-<p>一颗善良的心免费给了我们<a href="https://x.com/LlamaLife" title="Llama Life - calm, focused productivity ✨">@LlamaLife</a> Twitter handle. 信心重塑中。</p>
-</li>
-<li>
-<p>开始构建我们的移动应用（计划将于2024年1月发布）！</p>
-</li>
-</ol>
-<p>10.@ADHDJesse 和我录制了37集我们的播客@TheWeeklyBuild. 作为一个有ADHD的人，相信我，这需要承诺，但我很自豪我们做到了！</p>
+<p>这些 tweet 反映了一些创业者的挑战，包括付费会员数量增长的缓慢和持续付费问题。</p>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1744263413889413404#m">08 Jan 2024 07:42:59 - neuranne</a>: 失去笔记本的感受</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/michwirantono/status/1744236108878328278#m">08 Jan 2024 05:54:29 - michwirantono</a>: 在 37,000 英尺高空发货，不停地前行</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/tdinh_me/status/1744232759600824622#m">08 Jan 2024 05:41:10 - tdinh_me</a>: 寻求解决 Chrome/macOS Sonoma 的 ERR_NETWORK_CHANGED 问题的建议</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1744223542869143772#m">08 Jan 2024 05:04:33 - Shpigford</a>: 对读者的亲切问候</li>
+</ul>
+<p>这些 tweet 反映了一些个人情感和技术挑战，包括失去重要笔记本、工作中的困难以及个人期待。</p>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/Jessicameher/status/1744172995331998188#m">08 Jan 2024 01:43:41 - Jessicameher</a>: 关于 InVision 和 Figma 的观点</li>
+<li>引用 Jason Fried 的观点: <a href="https://x.com/jasonfried/status/1743460783059845601#m">Jason Fried</a></li>
+</ul>
+<p>这些 tweet 还包括了关于创业公司失败原因的见解，以及一些业内人士的观点和引用。</p>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744181420099346548#m">08 Jan 2024 02:17:10 - dannypostmaa</a>: 2024 年会很有趣</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">08 Jan 2024 03:32:13 - mechsicko</a>: 对 Damien Hirst 作品的欣赏</li>
+</ul>
+<p>这些 tweet 包括了一些评论员对未来的期望以及对艺术作品的评价。</p>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/matteing/status/1744190891332366786#m">08 Jan 2024 02:54:48 - matteing</a>: 对 Xcode 的新功能的探讨</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744184048791204088#m">08 Jan 2024 02:27:37 - dannypostmaa</a>: 对 ChatGPT 的新功能的探讨</li>
+</ul>
+<p>这些 tweet 反映了一些技术工作者对新功能的探索与讨论。</p>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744185419707961649#m">08 Jan 2024 02:33:04 - dannypostmaa</a>: 激动人心的发现</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/DenLoginoff/status/1744163844019179636#m">08 Jan 2024 01:07:20 - DenLoginoff</a>: 从 Kevon Cheung 的新闻稿中了解到的一些建议</li>
+</ul>
+<p>这些 tweet 包括了一些对新功能的激动、以及收集到的有用建议。</p>
+<p>以上是最新的 tweets 汇总，涉及了从商业到个人生活、艺术和技术等多个领域的内容。</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

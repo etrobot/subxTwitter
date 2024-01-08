@@ -30,7 +30,7 @@ langs = {
 
 
 domTemplate='''
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-md">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-md mx-1">
         <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="{{headPicId}}" class="object-none w-full h-full"/>
@@ -42,7 +42,7 @@ domTemplate='''
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="{{listId}}">🔔</button>
         </div>
-        <div class="mt-4 text-sm overflow-hidden h-60">
+        <div class="mt-2 text-sm overflow-hidden h-60">
             {{sumTweets}}
         </div><br>{{path}}
     </div>
@@ -51,8 +51,8 @@ domTemplate='''
 domFinal='''
     <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
         <div class="mt-2 text-sm overflow-hidden h-60">
-            You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language:
-        </div><br><br><br><br><br><br><br>
+            You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language.
+        </div><br><div class="title">Start for FREE</div><br><br><br><br><br>
     </div>
 '''
 
@@ -75,9 +75,61 @@ htmlHead='''<!DOCTYPE html>
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
+
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
 '''
 
-htmlTail='''<script src="/static/index.js"></script></body>
+htmlTail='''</div><script src="/static/index.js"></script></body>
 '''
 
 def output(lang:str):
@@ -86,9 +138,7 @@ def output(lang:str):
             htmlstr = localTweets(f'static/{lang}_{li["id"]}.html')
             atriclePath='<a href="/lang/{p}">more</a>'.format(p=lang + '_' + li['id'])
             dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
-            # with open('static/%s.html' % (lang + '_' + li['id']), 'w') as f:
-            #    f.write(htmlHead+dom.replace('card ','').replace(' overflow-hidden h-60','')+htmlTail)
-            doms.append(dom.replace("{{path}}",atriclePath))
+            doms.append(dom.replace("{{path}}",atriclePath).replace('max-w-screen-md mx-auto','mx-1'))
         doms.append(domFinal)
         fulldom='\n'.join(doms)
         with open('templates/template.html', 'r') as f:
@@ -103,13 +153,25 @@ def output(lang:str):
 def localTweets(filename:str):
     with open(filename, 'r') as file:
         content = file.read()
-    print(filename,content)
     # 使用BeautifulSoup解析HTML
     soup = BeautifulSoup(content, 'html.parser')
     # 提取目标HTML片段
     div_element = soup.find('div', class_='mt-2 text-sm')
     return div_element.prettify()
 
+def prepare():
+    for li in lists:
+        tweetDf,disc,nit = getTwList(li['id'])
+        for lang in langs.keys():
+            try:
+                filename = f'static/{lang}_{li["id"]}.html'
+                sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
+                dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
+                with open(filename, 'w') as f:
+                    f.write(htmlHead + dom.replace('card ', '').replace(' overflow-hidden h-60', '') + htmlTail)
+            except Exception as e:
+                print(e)
+            output(lang)
 
 def mission():
     pd.set_option('display.max_columns', None)
@@ -127,15 +189,15 @@ def mission():
         mail=v['EMAIL']
         expired=v['EXPIRE_DATE'].strftime("%Y/%m/%d")
         print(mail, v['MAIL_TIME'])
-        tweetDf,nit=getTwList(v['TARGET_ID'])
+        tweetDf,disc,nit=getTwList(v['TARGET_ID'])
         filename=f'static/{v["LANG"]}_{v["TARGET_ID"]}.html'
         if os.path.isfile(filename) and tweetDf['published'].values[0]<os.path.getmtime(filename):
             html_fragment = localTweets(filename)
-            sendEmail(addSubInfo(html_fragment, mail, expired), receiver=mail)
+            sendEmail(addSubInfo(disc,html_fragment, mail, expired), receiver=mail)
         else:
             sumhtml = sumTweets(df=tweetDf,nitter=nit, lang=v['LANG'])
-            sendEmail(addSubInfo(sumhtml, mail, expired), receiver=mail)
-            dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", v["TARGET_ID"])
+            sendEmail(addSubInfo(disc,v["TARGET_ID"],sumhtml, mail, expired), receiver=mail)
+            dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", v["TARGET_ID"]).replace("{{name}}",disc)
             with open(filename, 'w') as f:
                 f.write(htmlHead + dom.replace('card ', '').replace(' overflow-hidden h-60', '') + htmlTail)
             output(v['LANG'])

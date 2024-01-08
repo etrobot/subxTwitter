@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,43 +83,124 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Container Ships Diverting from Ordinary Course</h1>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Container Ships" src="https://nitter.nohost.network/pic/media%2FGDK0IEYaQAEKdD2.jpg" /></p>
-<p>Tweeted by <a href="https://x.com/typesfast/status/1743654060673093754#m">@typesfast</a> on 06 Jan 2024 at 15:21:38
-95% of container ships that would’ve transited the Red Sea are now going around the Southern Tip of Africa as of this morning. The ships diverting from their ordinary course are marked orange on the <a href="https://x.com/flexport" title="Flexport">@flexport</a> map.</p>
-<h1>Meeting Jessica at Harvard Extension School</h1>
-<p>Tweeted by <a href="https://x.com/paulg/status/1743681297170469316#m">@paulg</a> on 06 Jan 2024 at 17:09:51
-Curiously enough I'd never have met Jessica if it wasn't for the Harvard Extension School. I met her when she was invited to a party at my house by someone she'd met in an acting class she took at the Extension School.</p>
-<h1>Update Needed on Twitter Algorithm</h1>
-<p>Tweeted by <a href="https://x.com/mkobach/status/1743680717689647298#m">@mkobach</a> on 06 Jan 2024 at 17:07:33
-Twitter needs to update their algorithm to fix their reply problem.</p>
-<h1>HubSpot Promotion at National Championship Game</h1>
-<p>Tweeted by <a href="https://x.com/businessbarista/status/1743670718422740998#m">@businessbarista</a> on 06 Jan 2024 at 16:27:49
-My friends &amp; I are sitting 50-yard-line at the National Championship for free thanks to <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>. Mission 1 accomplished. Here’s the plan to go viral at the event.</p>
-<p>Tweeted by <a href="https://x.com/businessbarista/status/1743673608285663626#m">@businessbarista</a> on 06 Jan 2024 at 16:39:18
-First time in history a football stadium was turned into Where’s Waldo.</p>
-<h1>Livestream for Painting</h1>
-<p>Tweeted by <a href="https://x.com/dutchtide/status/1743631508307411091#m">@dutchtide</a> on 06 Jan 2024 at 13:52:01
-More painting today, come and join the livestream to vibe and see what today’s opepen is all about. <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Livestream" src="https://nitter.nohost.network/pic/card_img%2F1743694619827752960%2FapilBoVw%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h1>Annual Planning Workshop</h1>
-<p>Tweeted by <a href="https://x.com/AliAbdaal/status/1743665938430333149#m">@AliAbdaal</a> on 06 Jan 2024 at 16:08:50
-Can't attend the Annual Planning Workshop today? No worries! Reflect on 2023 and manifest your best self for 2024.</p>
-<h1>Personal Writing Achievements</h1>
-<p>Tweeted by <a href="https://x.com/dickiebush/status/1743665067642536281#m">@dickiebush</a> on 06 Jan 2024 at 16:05:22
-List of personal writing achievements for the day.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Achievements" src="https://nitter.nohost.network/pic/media%2FGDK98zfXwAA_7fa.jpg" /></p>
-<h1>Short Inspirational Tweet</h1>
-<p>Tweeted by <a href="https://x.com/jackbutcher/status/1743652879821332720#m">@jackbutcher</a> on 06 Jan 2024 at 15:16:56
-Compounding coordination.</p>
-<h1>Business Offsite Learnings</h1>
-<p>Tweeted by <a href="https://x.com/gregisenberg/status/1743648532278501424#m">@gregisenberg</a> on 06 Jan 2024 at 14:59:40
-Shared lessons from a business offsite. 10 lessons from our offsite building out our 8 figure holding company.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Lesson Image 1" src="https://nitter.nohost.network/pic/media%2FGDKpSG2XsAAtz5m.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Lesson Image 2" src="https://nitter.nohost.network/pic/media%2FGDKpUqFXEAA_TMR.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Lesson Image 3" src="https://nitter.nohost.network/pic/media%2FGDKusrUXQAABt7W.jpg" /></p>
-<hr />
-<p>The article compiles various tweets from Twitter on different topics. This content includes updates on container ships, personal achievements, business lessons, and more. It provides a diverse range of information and insights for the readers.</p>
+            <h1>Các bài viết trên Twitter</h1>
+<p><strong>08 Jan 2024 05:17:45 - <a href="https://x.com/ShaanVP/status/1744226866255606116#m">@ShaanVP</a>:</strong> 
+Nếu bạn không sợ hãi, bạn sẽ làm gì? (câu hỏi nghiêm túc)</p>
+<p><strong>07 Jan 2024 14:04:40 - <a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">@johnnyxbrown</a>:</strong>
+7 nhận định thay đổi cuộc sống từ “Atomic Habits” của James Clear:</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDPrWSlXgAAmoWL.jpg" /></p>
+<p><strong>08 Jan 2024 03:32:13 - <a href="https://x.com/mechsicko/status/1744200308543332432#m">@mechsicko</a>:</strong> 
+Sự Không Thể Vật Lý của Sự Chết Trong Tâm Trí Của Người Sống
+Nghệ sỹ || Damien Hirst
+Năm || 1991
+Loại || Cá mập hổ, kính, thép, dung dịch formaldehyde 5%
+Phương tiện || <a href="https://x.com/opepenedition" title="Opepen Edition">@opepenedition</a>
+Luồng || tối giản, pixel, meme
+Chủ đề || Cuộc sống, sự chết rõ ràng
+Cc: <a href="https://x.com/jackbutcher" title="Jack Butcher">@jackbutcher</a> 🪢</p>
+<p><strong>08 Jan 2024 03:30:00 - <a href="https://x.com/sweatystartup/status/1744199748515504221#m">@sweatystartup</a>:</strong> 
+Những điều báo chí không nói cho bạn: Thế giới là một nơi tuyệt vời. Con người ra sức mỗi ngày để giúp đỡ nhau. Họ sẽ dừng xe ô tô của họ ở vùng nông thôn Mỹ để giúp bạn giải quyết vấn đề của mình. Thế giới là một nơi tuyệt vời.</p>
+<p><strong>08 Jan 2024 03:14:05 - <a href="https://x.com/jackbutcher/status/1744195745484243166#m">@jackbutcher</a>:</strong>
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<p><strong>08 Jan 2024 02:36:53 - <a href="https://x.com/mkobach/status/1744186379741938012#m">@mkobach</a>:</strong> 
+Tôi ghét những quảng cáo này. Tôi có một mình ở đây sao?</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDML6uTWgAAVgDx.jpg" /></p>
+<p><strong>06 Jan 2024 20:36:23 - <a href="https://x.com/alijla2021/status/1743733269571440760#m">@alijla2021</a>:</strong> 
+Hai giờ giữa hai bức ảnh</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDL8KhsXAAA137g.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDL8KhnXgAAs6CE.jpg" /></p>
+<p><strong>08 Jan 2024 01:21:10 - <a href="https://x.com/bunya_eth/status/1744167328529453128#m">@bunya_eth</a>:</strong> 
+Nghệ thuật đường phố không cần phép màu</p>
+<p>Quoting: </p>
+<blockquote>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" />
+x.com/jackbutcher/status/1744048155530862593#m</p>
+</blockquote>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" /></p>
+<p><strong>07 Jan 2024 19:46:05 - <a href="https://x.com/ElliotHershberg/status/1744082999048613920#m">@ElliotHershberg</a>:</strong> 
+Tiến triển trong đọc, viết và chỉnh sửa DNA đã được liên tục. Với tất cả những công cụ mới này, tại sao chúng ta chưa thành công trong việc chữa trị mọi căn bệnh có cơ sở di truyền? Có nhiều lý do—bao gồm việc tài trợ chi phí cho phát triển lâm sàng cho các căn bệnh hiếm—nhưng có một vấn đề kỹ thuật chất lượng đang đe dọa: Việc đưa các phương pháp điều trị gen vào cơ thể một cách an toàn và cụ thể là một vấn đề rất khó khăn. 
+<a href="https://x.com/Dyno_Tx" title="Dyno Therapeutics, Inc.">@Dyno_Tx</a> đang nỗ lực giải quyết vấn đề này. Dưới sự lãnh đạo của <a href="https://x.com/ekelsic" title="Eric Kelsic (he/him)">@ekelsic</a>, nhóm này kết hợp sinh học đa mẫu lớn với trí tuệ nhân tạo để thiết kế các vector điều trị gen mới. Đến nay, họ đã ký được một số hợp tác với các công ty dược phẩm, đã kết thúc vòng gọi vốn Series A lớn do <a href="https://x.com/a16zBioHealth" title="a16z Bio + Health">@a16zBioHealth</a> dẫn đầu, và ra mắt một số sản phẩm phân phối mới trên thị trường. Để hiểu rõ hơn về những gì họ đang làm, tôi đã trò chuyện với nhiều người sáng lập của công ty và nhà đầu tư, đã thăm các phòng thí nghiệm của họ, đọc tất cả các bài nghiên cứu họ đã công bố, và xem xét vô số tài liệu tư nhân và công cộng về công ty. 
+Đối với bài viết đầu tiên của năm 2024 của tạp chí Century of Bio, tôi sẽ chia sẻ câu chuyện của họ. Nghiên cứu nguyên lý và nỗ lực ban đầu này của Dyno sẽ tiết lộ nhiều bài học. 
+Chúng tôi sẽ nghiên cứu về công nghệ đo lường mới, những thách thức của thiết kế chuỗi sinh học, cách chọn lựa vấn đề đáng giá để giải quyết, và những nền tảng dược học ngang hằng của tương lai có thể sẽ nhìn như thế nào. 
+Đọc tại đây: 
+<a href="https://centuryofbio.com/p/dyno">centuryofbio.com/p/dyno</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDQ6PeUXIAAhmok.jpg" /></p>
+<p><strong>07 Jan 2024 21:50:21 - <a href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">@cremieuxrecueil</a>:</strong>
+Trường Đại học Rice có một khoá học mang tên "Hóa học Châu Phi" trong đó sinh viên sẽ "áp dụng công cụ và phân tích hóa học để hiểu về cuộc sống của người da đen tại Hoa Kỳ."</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDRWYc4WIAA27g_.png" /></p>
+<p><strong>08 Jan 2024 00:25:09 - <a href="https://x.com/sweatystartup/status/1744153230756475351#m">@sweatystartup</a>:</strong>
+Chris Kirk với tâm lỏng đá.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1744153108026961921%2Fimg%2FUV7EmO5qVe3az-QE.jpg" /></p>
+<p><strong>07 Jan 2024 14:34:57 - <a href="https://x.com/mikeholden/status/1744004703136989331#m">@mikeholden</a>:</strong> 
+Tôi không quan tâm tới trận chung kết quốc gia vào tối thứ Hai nhưng giờ tôi sẽ theo dõi chỉ để xem xem <a href="https://x.com/businessbarista" title="Alex Lieberman">@businessbarista</a> và các bạn của anh ấy có xuất hiện trên TV trong áo <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> không.</p>
+<p><strong>07 Jan 2024 17:06:45 - <a href="https://x.com/johnbryanesq/status/1744042901280104535#m">@johnbryanesq</a>:</strong>
+Một số người đã hỏi về hình ảnh của pháo đài Cuộc Cách Mạng chúng tôi phát hiện bên trong một ngôi nhà trang trại cũ ở West Virginia. Gần như không có pháo đài gỗ nguyên thủy nào còn tồn tại. Các nhà sử học tin rằng một pháo đài gỗ cổ được biết đến là Pháo đài Byrnside vẫn còn nằm bên trong bức tường của căn nhà lớn này. Nhưng… 
+Chúng tôi phải mua ngôi nhà trước khi có thể dùng cột đòn để kiểm tra xem liệu các búa gỗ còn bên trong thành hay không. Tôi chắc chắn 90% rằng chúng còn ở đó...</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDQVxTTWQAExoQb.jpg" /></p>
+<p><strong>07 Jan 2024 23:32:37 - <a href="https://x.com/businessbarista/status/1744140008640946497#m">@businessbarista</a>:</strong>
+Đi đến Trận chung kết quốc gia miễn phí (tks <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>) ✅ 
+Tạo ra một trò chơi tiếp thị lan truyền ✅ 
+- Nhận ra 8 người hâm mộ màu cam để kiếm tiền 
+Giới báo chí tiếp cận để báo cáo câu chuyện ✅ 
+Lên TV trực tiếp &amp; lan truyền trên mạng xã hội ✅ 
+Hành trình tiếp tục. 
+<a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a></p>
+<p><strong>07 Jan 2024 23:34:44 - <a href="https://x.com/businessbarista/status/1744140540474462318#m">@businessbarista</a>:</strong>
+Anh ấy ghi bàn:</p>
+<p><em>Quoting:</em></p>
+<blockquote>
+<p>Alex Lieberman (@businessbarista): "It's official.</p>
+<p>@HubSpot is sending me &amp; 7 friends to sit 50-yard-line at the College Football National Championship.</p>
+<p>The deal is simple.</p>
+<p>They're paying for our seats. We're gonna do some awesome, creative sh*t to market the brand &amp; hopefully go viral.</p>
+<p>Much much more to come, but I want to just give a huge shoutout to @kippbodnar &amp; the entire HubSpot marketing org.</p>
+<p>I give so much credit to big companies that move fast &amp; take bold risks. Especially ones that are making B2B cool &amp; innovative. </p>
+<p>This $27 billion cruise ship moves like a speedboat.</p>
+<p>Time to make this official with #HubSpotPartner." | Nitter
+x.com/businessbarista/status/1743371381952118893#m</p>
+</blockquote>
+<p>Đã chính thức. 
+<a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> sẽ gửi tôi và 7 người bạn để ngồi ở vị trí 50-yard-line tại Trận chung kết Quốc gia Đại học. 
+Thỏa thuận đơn giản. 
+Họ sẽ trả tiền cho ghế ngồi của chúng tôi. Chúng tôi sẽ thực hiện một số dự án sáng tạo tuyệt vời để quảng bá thương hiệu và hy vọng lan truyền rộng rãi. 
+Nhiều hơn nữa sẽ đến, nhưng tôi chỉ muốn cảm ơn @kippbodnar và toàn bộ tổ chức tiếp thị của HubSpot. 
+Tôi rất khâm phục những công ty lớn di chuyển nhanh chóng và mạo hiểm liều lĩnh. Đặc biệt là những công ty đang làm cho B2B trở nên mới lạ và sáng tạo. 
+Chiếc du thuyền 270 tỷ đô la này di chuyển như một chiếc tàu cánh ngầm. 
+Đến lúc chính thức với #HubSpotPartner.</p>
+<p><strong>07 Jan 2024 23:35:28 - <a href="https://x.com/businessbarista/status/1744140726210814317#m">@businessbarista</a>:</strong>
+Bước 2: Tạo một trò chơi tiếp thị điên rồ</p>
+<p><em>Quoting:</em></p>
+<blockquote>
+<p>Alex Lieberman (@businessbarista): "My friends &amp; I are sitting 50-yard-line at the National Championship for free thanks to @HubSpot.</p>
+<p>Mission 1 accomplished.</p>
+<p>Mission 2: go viral.</p>
+<p>Here’s the plan…</p>
+<p>It’s time to play a game (and yes $ is involved).</p>
+<p>There will be 90,000 football fanatics at the game on Monday (1/8).</p>
+<p>All of them will be dressed in maize &amp; blue or purple…except 8 bright orange smurfs.</p>
+<p>Ready to play a life-sized version of Where’s Waldo?</p>
+<p>1) Find any of the orange smurfs (on TV or at the stadium)
+2) Snap a picture
+3) Post on social, tagging @HubSpot &amp; including #hubspotted
+4) First 50 people to find us &amp; post win $50 cash (via Venmo, Zelle, CashApp). One randomly selected submission wins $500.
+5) Bonus prize if you snap and post a picture of the entire group of 8 in orange.</p>
+<p>Share the challenge with friends, so you can work together &amp; win $.</p>
+<p>P.S. I’m a #HubSpotPartner…thx legal" | Nitter
+x.com/businessbarista/status/1743670718422740998#m</p>
+</blockquote>
+<p>Bạn và bạn tôi đang ngồi ở vị trí 50-yard-line tại Trận chung kết quốc gia Đại học miễn phí nhờ <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>. 
+Nhiệm vụ 1 đã hoàn thành. 
+Nhiệm vụ 2: lan truyền rộng rãi. 
+Đây là kế hoạch… 
+Đã đến lúc chơi một trò chơi (và đúng, có tiền trong đó). 
+Sẽ có 90,000 người hâm mộ bóng đá tại trận đấu vào thứ Hai (1/8). 
+Tất cả họ sẽ mặc áo màu vàng mai và xanh dương hoặc màu tím… trừ 8 chú smurfs màu cam sáng. 
+Sẵn sàng chơi một phiên bản thực tế của Where’s Waldo? 
+1) Tìm bất kỳ chú smurfs màu cam nào (trên TV hoặc tại sân vận động) 
+2) Chụp ảnh 
+3) Đăng trên mạng xã hội, tagging @HubSpot và bao gồm #hubspotted 
+4) 50 người đầu tiên tìm thấy chúng tôi &amp; đăng bài sẽ nhận được 50 đô la tiền mặt (qua Venmo, Zelle, CashApp). Một bài đăng được chọn ngẫu nhiên sẽ nhận được 500 đô la. 
+5) Giải thưởng thêm</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

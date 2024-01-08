@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,62 +83,36 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Resumo dos Tweets de 06 de janeiro de 2024</h1>
-<ul>
-<li>
-<p><strong>Frontend melhora o desempenho</strong>. <strong>Corrigido bug</strong> em que era impossível fazer scroll para cima na janela do chat enquanto o bot estava ativo. Melhorou a privacidade entre servidores e GPUs. <a href="https://x.com/UnleashedChat/status/1743685126658121845#m">Fonte</a> <a href="https://x.com/UnleashedChat">@UnleashedChat</a></p>
-</li>
-<li>
-<p><strong>Ethereum sempre foi "JavaScript na blockchain"</strong> e nunca um projeto real de ciberpunk. <a href="https://x.com/TuurDemeester/status/1743686667200770223#m">Fonte</a> <a href="https://x.com/TuurDemeester">@TuurDemeester</a></p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://www.amazon.nl/-/en/gp/bestsellers/books">Interessante</a> <a href="https://nitter.nohost.network/pic/media%2FGDLAXcNWAAAkiEU.jpg">imagem of journal</a>. <a href="https://x.com/AaronvanW/status/1743667528620970391#m">Fonte</a> <a href="https://x.com/AaronvanW">@AaronvanW</a></p>
-</li>
-<li>
-<p>ETF prós e contras. Influxo maciço de capital e risco de concentração custodial. <a href="https://x.com/real_vijay/status/1743683157097062550#m">Fonte</a> <a href="https://x.com/real_vijay">@real_vijay</a></p>
-</li>
-<li>
-<p>Admirando a resistência dos "ursos do Bitcoin". <a href="https://x.com/mikealfred/status/1743666811449806911#m">Fonte</a> <a href="https://x.com/mikealfred">@mikealfred</a></p>
-</li>
-<li>
-<p>"Muito em breve, todos estarão segurando contratos em papel regulados pelo governo pagos em moeda fiduciária" <a href="https://x.com/MrChrisEllis/status/1743675660063723939#m">Fonte</a> <a href="https://x.com/MrChrisEllis">@MrChrisEllis</a></p>
-</li>
-<li>
-<p>Comentários importantes sobre a QT. <a href="https://x.com/NickTimiraos/status/1743667579011371388#m">Fonte</a> <a href="https://x.com/NickTimiraos">@NickTimiraos</a></p>
-</li>
-<li>
-<p>Reflexões sobre os dias de moedas de Bitcoin destruídas. <a href="https://x.com/mikealfred/status/1743666811449806911#m">Fonte</a> <a href="https://x.com/nvk">@nvk</a></p>
-</li>
-<li>
-<p>Relato emotivo sobre a vida de Hal Finney. <a href="https://x.com/natbrunell/status/1743369776095756628#m">Fonte</a> <a href="https://x.com/natbrunell">@natbrunell</a></p>
-</li>
-<li>
-<p>Teste planejado da AQUA Wallet. <a href="https://x.com/paoloardoino/status/1743654431734788344#m">Fonte</a> <a href="https://x.com/paoloardoino">@paoloardoino</a></p>
-</li>
-<li>
-<p>Opinião sobre a criação de riqueza. <a href="https://x.com/BowTiedMara/status/1743632499958268092#m">Fonte</a> <a href="https://x.com/BowTiedMara">@BowTiedMara</a></p>
-</li>
-<li>
-<p>Comentários sobre a criação de ativos digitais de baixa qualidade. <a href="https://x.com/alexbosworth/status/1743663721962950672#m">Fonte</a> <a href="https://x.com/alexbosworth">@alexbosworth</a></p>
-</li>
-<li>
-<p>Piada sobre a inflação. <a href="https://x.com/TuurDemeester/status/1743660915281564099#m">Fonte</a> <a href="https://x.com/TuurDemeester">@TuurDemeester</a></p>
-</li>
-<li>
-<p>Uma melhor alternativa para o sistema existente. <a href="https://x.com/robinhanson/status/1743639208059715940#m">Fonte</a> <a href="https://x.com/robinhanson">@robinhanson</a></p>
-</li>
-<li>
-<p>O SEC adverte os investidores contra o "FOMO" sobre os "ativos digitais". <a href="https://x.com/BitcoinMagazine/status/1743659848175165823#m">Fonte</a> <a href="https://x.com/BitcoinMagazine">@BitcoinMagazine</a></p>
-</li>
-<li>
-<p>Discussão sobre os influxos no ETF de Bitcoin. <a href="https://x.com/WhalePanda/status/1743562198582964534#m">Fonte</a> <a href="https://x.com/WhalePanda">@WhalePanda</a></p>
-</li>
-<li>
-<p>Crítica ao Liquid Network. <a href="https://x.com/MaxiDerangement/status/1743642340248449237#m">Fonte</a> <a href="https://x.com/MaxiDerangement">@MaxiDerangement</a></p>
-</li>
-</ul>
-<p><strong>Comentário do Editor:</strong></p>
-<p>Os tweets de hoje abordam uma variedade de tópicos relacionados à tecnologia, criptomoedas, investimentos e mais. Destaques incluem atualizações no Unleashed.Chat, reflexões sobre a criação de riqueza, e o aviso da SEC aos investidores sobre os ativos digitais. A comunidade Bitcoin também está discutindo o ETF de Bitcoin e seus possíveis influxos. Esteja atento a esses desenvolvimentos à medida que continuam a moldar o mundo das finanças e da tecnologia.</p>
+            <h1>As últimas notícias do mundo do Bitcoin</h1>
+<hr />
+<p><em>08 Jan 2024 04:52:49 - @derekross:</em></p>
+<p>"lol meu homem se isso acontecer, eu vou imprimir este tweet e comê-lo."</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/derekmross/status/1744220590259491057#m">Link do Tweet</a></p>
+<p>Interpretação/Comentário: Parece que alguém está duvidando de uma situação relacionada ao Bitcoin e afirmando que se isso acontecer, ele vai comer o tweet impresso.</p>
+<hr />
+<p><em>08 Jan 2024 05:02:26 - @TwoMinuteTimmy:</em></p>
+<p>"Seja o que for, isso será uma grande mudança."</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem relacionada" src="https://nitter.catsarch.com/pic/media%2FGDS5lcZaEAEpSYL.jpg" /></p>
+<p>Interpretação/Comentário: Parece que alguém está prevendo uma grande mudança relacionada ao Bitcoin.</p>
+<hr />
+<p><em>08 Jan 2024 06:36:32 - @DecentraSuze:</em></p>
+<p>"Antecipando a decisão da SEC no meio da semana sobre um ETF de bitcoin spot. Será que isso poderia levar a uma escassez de oferta de bitcoin?"</p>
+<p><br><a style="color:#5da2ff;" href="https://www.forbes.com/sites/digital-assets/2024/01/08/how-will-a-bitcoin-spot-etf-affect-bitcoins-price/">Leia mais</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Artigo relacionado" src="https://nitter.catsarch.com/pic/card_img%2F1744245077579276288%2F9MNW9PQn%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p>Interpretação/Comentário: Um artigo que discute a possível decisão da SEC sobre um ETF de bitcoin e seu impacto potencial no preço do bitcoin.</p>
+<hr />
+<p><em>08 Jan 2024 06:43:02 - @BTCRoel:</em></p>
+<p>"Se atingirmos o preço de US$ 1 milhão antes de 15-01-2024, vou tatuar um pequeno logo da <a href="https://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> na minha bunda."</p>
+<p>Interpretação/Comentário: Um usuário do Twitter está fazendo uma declaração ousada sobre tatuar o logo de uma empresa se o preço do bitcoin atingir um certo valor.</p>
+<hr />
+<p><em>08 Jan 2024 06:46:54 - @Macronaut_:</em></p>
+<p>"Lembra que eu disse 47 mil. MAS EU ESTAVA PELO MENOS METADE BRINCANDO.</p>
+<p>VOCÊS ESTÃO COMEÇANDO A ME ASSUSTAR.</p>
+<p>MAS EU GOSTO DISSO."</p>
+<p>Interpretação/Comentário: Parece que alguém está se surpreendendo com a possibilidade do preço do bitcoin atingir um valor específico.</p>
+<hr />
+<p>Continue reading the article by <a href="https://x.com/PortugueseArticle">following this link</a></p>
+<p><strong>Note</strong>: Please add the remaining translations.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,77 +83,126 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Aktuelle Twitter-Nachrichten - 06. Januar 2024</h1>
-<ul>
-<li>
-<p>15:21:38 - <strong>@typesfast</strong>: 95% der Containerfrachter, die normalerweise das Rote Meer durchqueren würden, umrunden nun den südlichen Teil Afrikas. Die Schiffe, die von ihrem gewöhnlichen Kurs abweichen, sind auf der <a href="https://x.com/flexport" title="Flexport">@flexport</a>-Karte unten orange markiert.<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Bild" src="https://nitter.nohost.network/pic/media%2FGDK0IEYaQAEKdD2.jpg" /></p>
-</li>
-<li>
-<p>17:09:51 - <strong>@paulg</strong>: Kurioserweise hätte ich Jessica nie kennengelernt, wenn es nicht für die Harvard Extension School gewesen wäre. Ich traf sie, als sie von jemandem, den sie in einem Schauspielkurs an der Extension School kennengelernt hatte, zu einer Party in mein Haus eingeladen wurde.</p>
-</li>
-<li>
-<p>17:07:33 - <strong>@mkobach</strong>: Twitter muss ihren Algorithmus aktualisieren, um ihr Antwortproblem zu beheben.<br />
-Die Top-Antworten auf jeden Tweet sollten relevante Kommentare zum Original-Tweet sein. Stattdessen haben Benutzer herausgefunden, wie sie das System umgehen können, indem sie irrelevante virale Videos als Antworten posten.<br />
-Bitte beheben Sie das <a href="https://x.com/elonmusk" title="Elon Musk">@elonmusk</a>.</p>
-</li>
-<li>
-<p>16:27:49 - <strong>@businessbarista</strong>: Meine Freunde und ich sitzen dank <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> kostenlos in der National Championship am 50-Yard-Line.<br />
-Mission 1 abgeschlossen.<br />
-Mission 2: viral gehen.<br />
-Hier ist der Plan...</p>
-</li>
-<li>
-<p>16:39:18 - <strong>@businessbarista</strong>: Ich glaube, das ist das erste Mal in der Geschichte, dass ein Fußballstadion zu "Wo ist Walter?" wurde.</p>
-</li>
-<li>
-<p>13:52:01 - <strong>@dutchtide</strong>: Heute mehr Malerei, komm und schließe dich dem Livestream an und schau, worum es bei der heutigen Öffnung geht! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a><br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Bild" src="https://nitter.nohost.network/pic/card_img%2F1743691027071021056%2FBZS3c3G6%3Fformat%3Djpg%26name%3D800x419" /></p>
-</li>
-<li>
-<p>16:08:50 - <strong>@AliAbdaal</strong>: Kannst du heute nicht am jährlichen Planungsworkshop teilnehmen? Kein Problem!<br />
-Du kannst immer noch beim Spaß mitmachen, indem du auf die folgenden Anreize antwortest, um das vergangene Jahr zu reflektieren und dein bestes Selbst für 2024 zu manifestieren 🎉</p>
-</li>
-<li>
-<p>16:08:54 - <strong>@AliAbdaal</strong>: 🚀 Nach vorne schauen: Basierend auf deinen Erfahrungen im Jahr 2023, was möchtest du 2024 anders machen? Gibt es neue Bereiche, die du erkunden möchtest oder Veränderungen, die du vornehmen möchtest?</p>
-</li>
-<li>
-<p>16:05:22 - <strong>@dickiebush</strong>: Was ich heute geschrieben habe: Samstag, 6. Januar 2024</p>
-</li>
-<li>Gesamt schreibzeit: 3 Stunden, 17 Minuten</li>
-<li>
-<ul>
-<li>Tagebuch über 10 Dinge geschrieben, die im Mittelpunkt standen (30 Minuten)</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Meine wöchentliche Zusammenfassung von "was passiert ist" und "was ich gelernt habe" abgeschlossen (30 Minuten)</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>20 Tweets geschrieben, um meine Ideen abzuarbeiten (30 Minuten)</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>2 Langform-Beiträge entworfen, um sie in dieser Woche im Hintergrund wirken zu lassen (60 Minuten)</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Ideen zu meinem Content-Rhythmus für das nächste Quartal für unser Content-Meeting am Montag niedergeschrieben (30 Minuten)  </li>
-</ul>
-</li>
-<li>
-<p>15:17:13 - <strong>@jackbutcher</strong>: Koordinierte Anhäufung</p>
-</li>
-<li>
-<p>14:59:40 - <strong>@gregisenberg</strong>: Wir haben gerade unser 2024 Kick-off Executive Offsite in Miami beendet und ich habe einige Notizen zu teilen.</p>
-</li>
-</ul>
-<p>Wenn du den gesamten Inhalt der Tweets in Deutsch bearbeitest, beachte bitte, dass einige Inhalte möglicherweise nicht direkt übersetzt werden können und in einer angemessenen Weise interpretiert werden müssen.</p>
+            <h1>Die neuesten Tweets</h1>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">08 Jan 2024 05:17:45 - ShaanVP</a>: Was würdest du tun, wenn du keine Angst hättest? (ernsthafte Frage) </p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnnyxbrown/status/1743997081679704446#m">07 Jan 2024 14:04:40 - johnnyxbrown</a>: 7 lebensverändernde Erkenntnisse aus "Atomic Habits" von James Clear:</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Atomic Habits" src="https://nitter.catsarch.com/pic/media%2FGDPrWSlXgAAmoWL.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">08 Jan 2024 03:32:13 - mechsicko</a>: Die physische Unmöglichkeit des Todes im Verstand eines Lebenden<br />
+Künstler || Damien Hirst<br />
+Jahr || 1991<br />
+Typ || Tigerhai, Glas, Stahl, 5% Formaldehydlösung<br />
+Medium || <a href="https://x.com/opepenedition" title="Opepen Edition">@opepenedition</a> <br />
+Bewegung || Minimalismus, Pixel, Meme<br />
+Thema || Leben, scheinbarer Tod<br />
+Cc: <a href="https://x.com/jackbutcher" title="Jack Butcher">@jackbutcher</a> 🪢</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">08 Jan 2024 03:30:00 - sweatystartup</a>: Was die Medien dir nicht sagen: </p>
+<p>Die Welt ist ein großartiger Ort. </p>
+<p>Menschen geben jeden Tag alles, um anderen Menschen zu helfen. </p>
+<p>Gefallen. Hilfe. </p>
+<p>Sie werden buchstäblich in ländlichen Gebieten Amerikas anhalten, um dir bei der Lösung deines Problems zu helfen. </p>
+<p>Die Welt ist ein ausgezeichneter Ort.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">08 Jan 2024 03:14:05 - jackbutcher</a>: </p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Jack Butcher" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">08 Jan 2024 02:36:53 - mkobach</a>: Ich hasse diese Werbungen. Bin ich alleine hier?</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Annoyed" src="https://nitter.catsarch.com/pic/media%2FGDML6uTWgAAVgDx.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/alijla2021/status/1743733269571440760#m">06 Jan 2024 20:36:23 - alijla2021</a>: Zwei Stunden zwischen den beiden Fotos</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Transformation" src="https://nitter.catsarch.com/pic/media%2FGDL8KhsXAAA137g.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Transformation" src="https://nitter.catsarch.com/pic/media%2FGDL8KhnXgAAs6CE.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/bunya_eth/status/1744167328529453128#m">08 Jan 2024 01:21:10 - bunya_eth</a>: Pepermissionless Street Art</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Street Art" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" />x.com/jackbutcher/status/1744048155530862593#m</p>
+<hr />
+<p>Quoting: </p>
+<blockquote>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Street Art" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" /></p>
+</blockquote>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ElliotHershberg/status/1744082999048613920#m">07 Jan 2024 19:46:05 - ElliotHershberg</a>: Der Fortschritt beim Lesen, Schreiben und Bearbeiten von DNA war unaufhaltsam. </p>
+<p>Trotz all dieser neuen Werkzeuge haben wir noch nicht jede Krankheit mit genetischer Basis erfolgreich geheilt. </p>
+<p>Es gibt mehrere Gründe – einschließlich der Finanzierung der Kosten für die klinische Entwicklung seltener Krankheiten – aber es gibt auch ein technisches Problem: </p>
+<p>Die sichere und spezifische Übertragung von Gen-Therapien im Körper ist ein wirklich schwerwiegendes Problem. </p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Dyno_Tx" title="Dyno Therapeutics, Inc.">@Dyno_Tx</a> ist bestrebt, dieses Problem zu lösen. Unter der Leitung von <a href="https://x.com/ekelsic" title="Eric Kelsic (he/him)">@ekelsic</a> kombiniert das Team Hochdurchsatz-Biologie (massive multiplexierte Experimente) mit KI, um neue Vektoren für die Gen-Therapie zu entwickeln. </p>
+<p>Bisher haben sie mehrere Pharma-Partnerschaften geschlossen, eine massive Serie A unter der Leitung von <a href="https://x.com/a16zBioHealth" title="a16z Bio + Health">@a16zBioHealth</a> abgeschlossen und mehrere neue Lieferprodukte auf den Markt gebracht. </p>
+<p>Um zu verstehen, woran sie arbeiten, habe ich mit vielen der Mitbegründer und Investoren des Unternehmens gesprochen, ihre Labors besucht, jede von ihnen veröffentlichte Arbeit gelesen und unzählige private und öffentliche Materialien über das Unternehmen überprüft. </p>
+<p>Für den ersten CoB-Essay des Jahres 2024 teile ich ihre Geschichte. </p>
+<p>Die genaue Untersuchung von Dynos These und den ersten Bemühungen enthüllt viele Lektionen.</p>
+<p>Wir werden neue Mess-Technologien, die Herausforderungen der biologischen Sequenzierung, die Auswahl von lösbaren Problemen und das Aussehen der horizontalen Biotech-Plattformen der Zukunft untersuchen. </p>
+<p>Hier lesen: <a href="https://centuryofbio.com/p/dyno">centuryofbio.com/p/dyno</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Dyno Therapeutics" src="https://nitter.catsarch.com/pic/media%2FGDQ6PeUXIAAhmok.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">07 Jan 2024 21:50:21 - cremieuxrecueil</a>: Die Rice University bietet einen Kurs mit dem Namen "Afrochemistry" an, in dem die Studierenden "chemische Methoden und Analysen anwenden, um das Leben der Schwarzen in den USA zu verstehen."</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Afrochemistry" src="https://nitter.catsarch.com/pic/media%2FGDRWYc4WIAA27g_.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744153230756475351#m">08 Jan 2024 00:25:09 - sweatystartup</a>: Chris Kirk mit eiskaltem Blut.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Chris Kirk" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1744153108026961921%2Fimg%2FUV7EmO5qVe3az-QE.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mikeholden/status/1744004703136989331#m">07 Jan 2024 14:34:57 - mikeholden</a>: Ich hatte null Interesse am nationalen Meisterschaftsspiel am Montag, aber jetzt werde ich dabei sein, nur um zu sehen, ob <a href="https://x.com/businessbarista" title="Alex Lieberman">@businessbarista</a> und seine Freunde im <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>-Shirt im Fernsehen zu sehen sind.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnbryanesq/status/1744042901280104535#m">07 Jan 2024 17:06:45 - johnbryanesq</a>: Einige haben nach Bildern des Forts aus dem Unabhängigkeitskrieg gefragt, das wir in einem alten Plantagenhaus in West Virginia entdeckt haben. </p>
+<p>Fast keine der originalen Holzforts der Revolutionszeit sind erhalten geblieben. Historiker glauben, dass ein altes Holzfort, das als Byrnside's Fort bekannt ist, noch innerhalb der Mauern dieses großen Hauses existiert. Aber ...</p>
+<p>Wir mussten das Grundstück kaufen, bevor wir mit einem Brecheisen an die Wände gehen konnten, um zu sehen, ob die Stämme dort waren. Ich war zu 90% sicher, dass sie dort waren.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Revolutionary War Fort" src="https://nitter.catsarch.com/pic/media%2FGDQVxTTWQAExoQb.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140008640946497#m">07 Jan 2024 23:32:37 - businessbarista</a>: Kostenlos zum National Championship gehen (@HubSpot) ✅ </p>
+<p>Einen viralen Marketingschachzug aushecken ✅ 
+- Finde die 8 orangenen Fans für $</p>
+<p>Die Presse erreicht uns, um die Geschichte zu covern ✅</p>
+<p>Live im Fernsehen auftreten &amp; in den sozialen Medien viral gehen ⬜️</p>
+<p>Die Reise geht weiter.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140540474462318#m">07 Jan 2024 23:34:44 - businessbarista</a>: Er hat es geschafft.</p>
+<hr />
+<p>Quoting: </p>
+<blockquote>
+<p>Alex Lieberman (@businessbarista): "Es ist offiziell. </p>
+<p>@HubSpot schickt mich &amp; 7 Freunde, um in der National Championship am 50-Yard-Line zu sitzen.</p>
+<p>Der Deal ist einfach.</p>
+<p>Sie bezahlen für unsere Plätze. Wir werden etwas Fantastisches, Kreatives machen, um die Marke zu vermarkten und hoffentlich viral zu gehen.</p>
+<p>Es wird noch viel mehr kommen, aber ich möchte mich bei @kippbodnar &amp; dem gesamten HubSpot-Marketingteam bedanken.</p>
+<p>Ich schätze große Unternehmen, die schnell handeln und Risiken eingehen. Besonders solche, die B2B cool und innovativ machen.</p>
+<p>Dieses 27-Milliarden-Dollar-Kreuzfahrtschiff bewegt sich wie ein Schnellboot.</p>
+<p>Zeit, das offiziell zu machen mit #HubSpotPartner." | Nitter
+x.com/businessbarista/status/1743371381952118893#m</p>
+</blockquote>
+<p>Es ist offiziell.   </p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> schickt mich &amp; 7 Freunde, um in der National Championship am 50-Yard-Line zu sitzen.  </p>
+<p>Der Deal ist einfach.  </p>
+<p>Sie bezahlen für unsere Plätze. Wir werden etwas Fantastisches, Kreatives machen, um die Marke zu vermarkten und hoffentlich viral zu gehen.  </p>
+<p>Es wird noch viel mehr kommen, aber ich möchte mich bei <a href="https://x.com/kippbodnar" title="KippBodnar.eth">@kippbodnar</a> &amp; dem gesamten HubSpot-Marketingteam bedanken.  </p>
+<p>Ich schätze große Unternehmen, die schnell handeln und Risiken eingehen. Besonders solche, die B2B cool und innovativ machen.  </p>
+<p>Dieses 27-Milliarden-Dollar-Kreuzfahrtschiff bewegt sich wie ein Schnellboot.  </p>
+<p>Zeit, das offiziell zu machen mit <a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a>.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140726210814317#m">07 Jan 2024 23:35:28 - businessbarista</a>: Schritt 2: Ein verrückten Marketingschachzug erstellen</p>
+<hr />
+<p>Quoting: </p>
+<blockquote>
+<p>Alex Lieberman (@businessbarista): "Meine Freunde &amp; ich sitzen dank @HubSpot kostenlos in der National Championship am 50-Yard-Line. </p>
+<p>Mission 1 erfüllt.</p>
+<p>Mission 2: viral werden.</p>
+<p>Hier ist der Plan…</p>
+<p>Es ist Zeit, ein Spiel zu spielen (und ja, Geld ist dabei).</p>
+<p>Es wird 90.000 Fußballfanatiker bei dem Spiel am Montag (1/8) geben.</p>
+<p>Alle werden in Mais &amp; Blau oder Lila gekleidet sein…außer 8 hellorange Schlümpfen.</p>
+<p>Bereit für eine lebensgroße Version von Wo ist Walter?</p>
+<p>1) Finde einen der orange Schlümpfe (im Fernsehen oder im Stadion)
+2) Mach ein Foto
+3) Poste es in den sozialen Medien, markiere @HubSpot &amp; füge #hubspotted hinzu
+4) Die ersten 50 Personen, die uns finden und posten, erhalten 50 $ Bargeld (über Venmo, Zelle, CashApp). Eine zufällig ausgewählte Einsendung gewinnt 500 $. 
+5) Bonuspreis, wenn du ein Foto von der gesamten Gruppe von 8 in Orange machst und postest.</p>
+<p>Teile die Challenge mit Freunden, damit ihr zusammenarbeiten &amp; Geld gewinnen könnt.</p>
+<p>P.S. Ich bin ein #HubSpotPartner ... Danke, Rechtsabteilung." | Nitter
+x.com/businessbarista/status/1743670718422740998#m</p>
+</blockquote>
+<p>Meine Freunde &amp; ich sitzen dank <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> kostenlos in der National Championship am 50-Yard-Line.  </p>
+<p>Mission 1 erfüllt.  </p>
+<p>Mission 2: viral werden.  </p>
+<p>Hier ist der Plan…  </p>
+<p>Es ist Zeit, ein Spiel zu spielen (und ja, Geld ist dabei).  </p>
+<p>Es wird 90.000 Fußballfanatiker bei dem Spiel am Montag (1/8) geben.  </p>
+<p>Alle werden in Mais &amp; Blau oder Lila gekleidet sein…außer 8 hellorange Schlümpfen.  </p>
+<p>Bereit für eine lebensgroße Version von Wo ist Walter?  </p>
+<p>1) Finde einen der orange Schlümpfe (im Fernsehen oder im Stadion)<br />
+2) Mach ein Foto<br />
+3) Poste es in den sozialen Medien, markiere <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> &amp; füge <a href="https://x.com/search?q=%23hubspotted">#hubspotted</a> hinzu<br />
+4) Die ersten 50 Personen, die uns finden und posten, erhalten 50 $ Bargeld (über Venmo, Zelle, CashApp). Eine zufällig ausgewählte Einsendung gewinnt 500 $. <br />
+5) Bonuspreis, wenn du ein Foto von der gesamten Gruppe von 8 in Orange machst und postest.  </p>
+<p>Teile die Challenge mit Freunden, damit ihr zusammenarbeiten &amp; Geld gewinnen könnt.  </p>
+<p>P.S. Ich bin ein <a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a> ... Danke, Rechtsabteilung</p>
+<hr />
+<p>Das waren die neuesten Tweets, die heute und gestern veröffentlicht wurden. Von Street Art und Afrochemie-Kursen bis hin zu einem Marketingstunt bei einem Fußballspiel und einem Blick auf die Herausforderungen der Gen-Therapie, war eine breite Palette an Themen abgedeckt. Wir werden sehen, was als nächstes in der Welt von Twitter passiert!</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

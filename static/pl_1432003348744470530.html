@@ -3,44 +3,78 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-    </style>
+   <link rel="stylesheet" href="/static/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
+         crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV4CMHELK9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('config', 'G-XV4CMHELK9');
+    </script>
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
-                <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full">
+                <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
 
             <a class="text-sm w-full" href="https://twitter.com/i/lists/1432003348744470530">
@@ -50,86 +84,55 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>Nowe inspiracje z designem w 2024 roku</h2>
-<br><p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1743005001557889096#m">04 Jan 2024 20:22:30 - @PinterestDesign</a></p>
-<p>PinterestDesign pyta, co nowego pineczkujemy w 2024 roku. Co sądzicie?</p>
-<br><p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1742981931527197012#m">04 Jan 2024 18:50:50 - @MicrosoftDesign</a></p>
-<p>MicrosoftDesign prezentuje nowy tapet na styczeń, stworzony przez #OliviaXu 😍.</p>
-<br><p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740434190347174281#m">28 Dec 2023 18:07:01 - @SalesforceUX</a></p>
-<p>Itai Asseo z zespołu Salesforce Ignite eksperymentuje z różnymi narzędziami AI, aby szybko opanować nowe zadania.</p>
-<br><p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1740098733746839762#m">27 Dec 2023 19:54:02 - @SalesforceUX</a></p>
-<p>Przyłącz się do zespołu Salesforce Design! Sprawdź dostępne stanowiska.</p>
-<br><p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1738242997282877755#m">22 Dec 2023 17:00:00 - @MicrosoftDesign</a></p>
-<p>MicrosoftDesign współpracuje z artystką AI, <a class="text-blue-400" href="http://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a>, aby odtworzyć wizualne reprezentacje świątecznych wspomnień z całego świata.</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548648857116834#m">20 Dec 2023 19:00:54 - @materialdesign</a></p>
-<p>MaterialDesign wprowadza nowe doświadczenia w tworzeniu motywów w Material Theme Builder 2.0!</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548659972059565#m">20 Dec 2023 19:00:57 - @materialdesign</a></p>
-<p>Odtwarzana dokładność kolorów jest już tutaj!</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1737548666242510935#m">20 Dec 2023 19:00:58 - @materialdesign</a></p>
-<p>To nie koniec! Sprawdź aktualizacje na blogu → <a class="text-blue-400" href="http://goo.gle/3RyaMND">goo.gle/3RyaMND</a></p>
-<br><p><a class="text-blue-400" href="http://x.com/lyftdesignteam/status/1737165697917333931#m">19 Dec 2023 17:39:12 - @lyftdesignteam</a></p>
-<p>Rok 2023 dobiega końca, a zespół Lyft Design Team wspomina swoje różnorodne osiągnięcia i najbardziej niezapomniane chwile.</p>
-<br><p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1736875833506062380#m">18 Dec 2023 22:27:22 - @PinterestDesign</a></p>
-<p>Pozytywne opinie na temat wydarzeń wirtualnych i hybrydowych świadczą o sukcesie działalności!</p>
-<br><p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735772496488497635#m">15 Dec 2023 21:23:06 - @SalesforceUX</a></p>
-<p>Jak będzie wyglądał świat sztucznej inteligencji w 2030 roku?</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735736482281758732#m">15 Dec 2023 19:00:00 - @materialdesign</a></p>
-<p>Masz pytania dotyczące wyszukiwania w Material? Jesteśmy tu, aby odpowiedzieć!</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735343896719176095#m">14 Dec 2023 17:00:00 - @materialdesign</a></p>
-<p>Planujesz dodać wyszukiwanie do aplikacji?</p>
-<br><p><a class="text-blue-400" href="http://x.com/Razorpay_Design/status/1735250181875237073#m">14 Dec 2023 10:47:37 - @Razorpay_Design</a></p>
-<p>Razorpay prezentuje swoje pierwsze studium przypadku z platformą Figma.</p>
-<br><p><a class="text-blue-400" href="http://x.com/SalesforceUX/status/1735036119937339594#m">13 Dec 2023 20:37:01 - @SalesforceUX</a></p>
-<p>Gotowy na awans w swojej karierze związanej z projektowaniem i UX? Dołącz do wyłącznej Społeczności Talentów Salesforce!</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1735029292180848685#m">13 Dec 2023 20:09:53 - @materialdesign</a></p>
-<p>Anatomia paska wyszukiwania jest ważna - oto jej elementy.</p>
-<br><p><a class="text-blue-400" href="http://x.com/MicrosoftDesign/status/1734981512830013861#m">13 Dec 2023 17:00:01 - @MicrosoftDesign</a></p>
-<p>Przedstawiamy kilka nowych obrazków dla Microsoft Teams!</p>
-<br><p><a class="text-blue-400" href="http://x.com/FlutterDev/status/1734679518034457022#m">12 Dec 2023 21:00:00 - @FlutterDev</a></p>
-<p>W Flutter 3.16, Material 3 jest teraz domyślnie włączone. 🎉</p>
-<br><p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734949639952945476#m">13 Dec 2023 14:53:22 - @PinterestDesign</a></p>
-<p>Kto jeszcze jest zainteresowany trendem "Kitschens"?</p>
-<br><p><a class="text-blue-400" href="http://x.com/PinterestDesign/status/1734950323481924000#m">13 Dec 2023 14:56:05 - @PinterestDesign</a></p>
-<p>Podoba nam się również estetyka "Be Jelly".</p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619122971906364#m">12 Dec 2023 17:00:01 - @materialdesign</a></p>
-<p>Nowe możliwości wyszukiwania w Material 3 🔍.  </p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619127799820480#m">12 Dec 2023 17:00:02 - @materialdesign</a></p>
-<p>◼️ Używaj pasków i widoków wyszukiwania do nawigacji przez zapytania wyszukiwania.  </p>
-<br><p><a class="text-blue-400" href="http://x.com/materialdesign/status/1734619131008418160#m">12 Dec 2023 17:00:03 - @materialdesign</a></p>
-<p>Dowiedz się więcej o funkcji wyszukiwania → <a class="text-blue-400" href="http://goo.gle/3RzR715">goo.gle/3RzR715</a></p>
-        </div><br><a class="text-blue-400" href="/lang/pl_1432003348744470530">more</a>
+            <h1>Nowy rok, nowe wibracje!</h1>
+<p><br><a style="color:#5da2ff;" href="https://x.com/zeta_ux/status/1743885974206341243#m">@zeta_ux</a> - 07 stycznia 2024, 06:43:10</p>
+<p>Nowy rok, nowe wibracje! 🎉<br />
+Z przyjemnością rozpoczynamy 2024 rok od naszego świeżego spotkania projektantów! Dołącz do nas, gdy zagłębimy się w kreatywność, dzielimy się pomysłami i uczynimy ten rok pełen wspaniałego designu! 🥳  </p>
+<p>Rejestracja i więcej szczegółów 👇<a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a>  </p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23zeta">#zeta</a> <a href="https://x.com/search?q=%23design">#design</a> <a href="https://x.com/search?q=%23ux">#ux</a> <a href="https://x.com/search?q=%23meetup">#meetup</a> <a href="https://x.com/search?q=%23bangalore">#bangalore</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" /></p>
+<hr />
+<p>Cytując: </p>
+<blockquote>
+<p>Vidhunnan (@vidhunnan): "🌟 Nowy rok, Nowe Połączenia! Spotkanie ADPList w Bangalore jest już tutaj! 🚀</p>
+<p>🎉 Witajcie Projektanci, Kierownicy Produktu, Mentorzy i Innowatorzy!</p>
+<p>Przygotuj się na elektryzujący początek roku na spotkaniu ADPList w Bangalore. Łączymy dynamiczną społeczność profesjonalistów, mentorów i entuzjastów w sercu naszego miasta.</p>
+<p>🤝 Połącz, Porozmawiaj i Zachwyć: Zanurz się w świecie niesamowitych talentów z naszej branży w swobodnej atmosferze. Podziel się swoją podróżą, zainspiruj się innymi i nawiąż kontakty, które mogą kształtować Twoją przyszłość. Twój kolejny duży projekt może być zaledwie jednym rozmową!</p>
+<p>🎤 Prelekcje, które inspirują: Mamy dla Was mówców, którzy podzielą się przełomowymi spostrzeżeniami i życiowymi sztuczkami. Nauka stanie się o wiele bardziej przyjemna.</p>
+<p>🌈 Brawa dla @LottieFiles: Duże uznanie dla LottieFiles za to, że są naszym silnym partnerem na tym wydarzeniu. Ich innowacyjne podejście do animacji zmienia grę!</p>
+<p>🏢 Ogromne podziękowania dla @zeta_ux: Kapelusze zdejmowane przed Zeta za gościnę w ich ultra-ciekawej przestrzeni. To idealne miejsce do rozwoju pomysłów i interakcji.</p>
+<p>🍔 Jedzenie, Zabawa i Fajerwerki: Rozmowy nie kończą się po prelekcjach. Dołącz do nas na pysznym jedzeniu i śmiechu. Pamiętaj, że niektóre z najlepszych połączeń powstają przy okazji luźnego posiłku!</p>
+<p>📢 Rozpowszechnij wieść: Zaproś swoich kolegów i przyjaciół. Im więcej, tym lepiej!</p>
+<p>🎟️ Ograniczona liczba miejsc: Pospiesz się, złap swoje miejsce teraz!
+🔗 Zarejestruj się teraz: https://lu.ma/adplistmeetupblr</p>
+<p>Dołącz do nas na spotkaniu ADPList w Bangalore i bądź częścią społeczności, która kształtuje przyszłość. Nauczmy się, rozwijajmy i odnosimy sukcesy razem.</p>
+<p>Do zobaczenia tam!</p>
+<h1>ADPListBangalore #WydarzenieNetworkingowe #LottieFiles #Spotkanie #WydarzeniaBangalore #RozwójZawodowy" | Nitter</h1>
+<p>x.com/vidhunnan/status/1743882681711231102#m</p>
+</blockquote>
+<p>🌟 Nowy rok, Nowe Połączenia! <a href="https://x.com/ADPList" title="ADPList">@ADPList</a>'s Spotkanie w Bangalore już tutaj! 🚀  </p>
+<p>🎉 Witajcie Projektanci, Kierownicy Produktu, Mentorzy i Innowatorzy!  </p>
+<p>Przygotujcie się na elektryzujący początek roku na spotkaniu ADPList w Bangalore. Łączymy dynamiczną społeczność profesjonalistów, mentorów i entuzjastów w sercu naszego miasta.  </p>
+<p>🤝 Połącz, Porozmawiaj i Zachwyć: Zanurzcie się w świecie niesamowitych talentów z naszej branży w swobodnej atmosferze. Podzielcie się swoją podróżą, zainspirujcie się innymi i nawiążcie kontakty, które mogą kształtować Waszą przyszłość. Wasz kolejny duży projekt może być zaledwie jedną rozmową!  </p>
+<p>🎤 Prelekcje, które inspirują: Mamy dla Was mówców, którzy podzielą się przełomowymi spostrzeżeniami i życiowymi sztuczkami. Nauka stanie się o wiele bardziej przyjemna.  </p>
+<p>🌈 Brawa dla <a href="https://x.com/LottieFiles" title="LottieFiles">@LottieFiles</a>: Duże uznanie dla LottieFiles za to, że są naszym silnym partnerem na tym wydarzeniu. Ich innowacyjne podejście do animacji zmienia grę!  </p>
+<p>🏢 Ogromne podziękowania dla <a href="https://x.com/zeta_ux" title="Zeta Design">@zeta_ux</a>: Kapelusze zdejmowane przed Zeta za gościnę w ich ultra-ciekawej przestrzeni. To idealne miejsce do rozwoju pomysłów i interakcji.  </p>
+<p>🍔 Jedzenie, Zabawa i Fajerwerki: Rozmowy nie kończą się po prelekcjach. Dołączcie do nas na pysznym jedzeniu i śmiechu. Pamiętajcie, że niektóre z najlepszych połączeń powstają przy okazji luźnego posiłku!  </p>
+<p>📢 Rozpowszechnij wieść: Zaproście swoich kolegów i przyjaciół. Im więcej, tym lepiej!  </p>
+<p>🎟️ Ograniczona liczba miejsc: Pospieszcie się, złapcie swoje miejsce teraz!<br />
+🔗 Zarejestrujcie się teraz: <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a>  </p>
+<p>Dołączcie do nas na spotkaniu ADPList w Bangalore i bądźcie częścią społeczności, która kształtuje przyszłość. Nauczmy się, rozwijajmy i odnosimy sukcesy razem.  </p>
+<p>Do zobaczenia tam!  </p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23ADPListBangalore">#ADPListBangalore</a> <a href="https://x.com/search?q=%23WydarzenieNetworkingowe">#WydarzenieNetworkingowe</a> <a href="https://x.com/search?q=%23LottieFiles">#LottieFiles</a> <a href="https://x.com/search?q=%23Spotkanie">#Spotkanie</a> <a href="https://x.com/search?q=%23WydarzeniaBangalore">#WydarzeniaBangalore</a> <a href="https://x.com/search?q=%23RozwójZawodowy">#RozwójZawodowy</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDOEDaCasAABv3m.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">05 stycznia 2024, 19:24:22@PinterestDesign</a>: Nowy post na naszym blogu, eksploracja tego, jak dawanie nagród jest tak korzystne.  </p>
+<p>Mentorstwo = <br />
+✅ połączenie z lokalną społecznością<br />
+✅ zapoznanie studentów z projektowaniem produktów cyfrowych jako opcją kariery<br />
+✅ uczenie się podczas nauczania innych<br />
+…i wiele więcej  </p>
+<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">pinterest.design/reasons-to-…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
+        </div><br>{{path}}
     </div>
-<script>
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-</script></body>
+</div><script src="/static/index.js"></script></body>

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,71 +83,48 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>تركيب التغريدات الرئيسية</h1>
+            <h1>البصريات</h1>
 <hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/typesfast/status/1743654060673093754#m">06 يناير 2024 15:21:38 @typesfast</a>: 95% من سفن الحاويات التي كانت ستعبر البحر الأحمر الآن تتجه حول الطرف الجنوبي من أفريقيا منذ صباح اليوم. تم تحديد السفن التي تحولت من مسارها العادي باللون البرتقالي على الخريطة المقدمة من <a href="https://x.com/flexport" title="Flexport">@flexport</a>.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK0IEYaQAEKdD2.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/paulg/status/1743681297170469316#m">06 يناير 2024 17:09:51 @paulg</a>: بشكل غريب للغاية، لم أكن في حالة لقاء جيسيكا إذا لم يكن لكلية هارفارد للتمديد. إلتقيت بها عندما دعيت إلى حفل في منزلي من قبل شخص التقت به في صف دراما أخذته في كلية التمديد.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1743680717689647298#m">06 يناير 2024 17:07:33 @mkobach</a>: يجب أن تقوم تويتر بتحديث خوارزميتها لإصلاح مشكلتها في الردود.</p>
-<p>أفضل الردود على أي تغريدة يجب أن تكون تعليقات ذات صلة بالتغريدة الأصلية. بدلاً من ذلك، اكتشف المستخدمون كيفية العبث بالنظام من خلال نشر مقاطع فيديو فيروسية غير ذات صلة كردود على التغريدات.</p>
-<p>يرجى إصلاح هذا <a href="https://x.com/elonmusk" title="إيلون ماسك">@elonmusk</a>.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743670718422740998#m">06 يناير 2024 16:27:49 @businessbarista</a>: أصدقائي وأنا نجلس في منتصف الملعب في بطولة الكرة الوطنية مجانًا بفضل <a href="https://x.com/HubSpot" title="هاب سبوت">@HubSpot</a>.</p>
-<p>المهمة الأولى تحققت.</p>
-<p>المهمة الثانية: أن تصبح فيروسيًا.</p>
-<p>إليك الخطة...</p>
-<p>حان الوقت للعب لعبة (ونعم، هناك مال متضمن).</p>
-<p>سيكون هناك 90.000 مهووس لكرة القدم في المباراة يوم الإثنين (8 يناير).</p>
-<p>سيكونون جميعًا ملابس باللون الأصفر والأزرق أو الأرجواني... باستثناء 8 سنفور برتقالي مشرق.</p>
-<p>هل أنتم مستعدون للعب نسخة الحجم الطبيعي من أين يوجد والدو؟</p>
-<p>1) العثور على أي سنفور برتقالي (على التلفزيون أو في الملعب).
-2) التقاط صورة
-3) نشرها على وسائل التواصل الاجتماعي، مع وسم <a href="https://x.com/HubSpot" title="هاب سبوت">@HubSpot</a> وتضمين <a href="https://x.com/search?q=%23hubspotted">#hubspotted</a>
-4) أول 50 شخصًا يجدونا وينشرون يفوزون بمبلغ 50 دولارًا نقدًا (عبر فينمو، زيل، أو CashApp). سيتم اختيار إرسال واحد عشوائي ليفوز بمبلغ 500 دولار.
-5) جائزة إضافية إذا التقطت ونشرت صورة للمجموعة بأكملها من 8 أشخاص باللون البرتقالي.</p>
-<p>شارك التحدي مع أصدقائك، حتى تتمكن من العمل معًا والربح.</p>
-<p>ملاحظة: أنا شريك في <a href="https://x.com/HubSpot" title="هاب سبوت">@HubSpot</a> ... شكراً قانونياً.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743673608285663626#m">06 يناير 2024 16:39:18 @businessbarista</a>: أعتقد أن هذه هي المرة الأولى في التاريخ التي تحول فيها استاد كرة القدم إلى أين يوجد.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">06 يناير 2024 13:52:01 @dutchtide</a>: المزيد من اللوحات الفنية اليوم، تفضل وانضم إلى البث المباشر للاستمتاع ورؤية ما الذي سيحدث اليوم! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743691027071021056%2FBZS3c3G6%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665938430333149#m">06 يناير 2024 16:08:50 @AliAbdaal</a>: لا تستطيع الحضور إلى ورشة عمل التخطيط السنوية اليوم؟ لا داعي للقلق!</p>
-<p>مازال بإمكانك المشاركة في المرح عن طريق الإجابة على الاستفسارات التالية لمساعدتك في التأمل والتصور لنفسك لعام 2024 🎉</p>
-<p>لنبدأ بالتأمل في عام 2023 👇</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665955132027187#m">06 يناير 2024 16:08:54 @AliAbdaal</a>: 🚀 النظر إلى الأمام: بناءً على تجاربك في عام 2023، ما الذي تود فعله بشكل مختلف في عام 2024؟ هل هناك مجالات جديدة تود استكشافها أو تغييرات ترغب في تحقيقها؟</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665957220839593#m">06 يناير 2024 16:08:54 @AliAbdaal</a>: لا تتردد في مشاركة أفكارك حول هذه الاستفسارات في التعليقات، أو قم بإرفاق هذا الموضوع للكتابة في يوميات شخصية 📝</p>
-<p>دعونا ندعم بعضنا البعض وننظر إلى الوراء ونتقدم!</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">06 يناير 2024 16:05:22 @dickiebush</a>: ما كتبت اليوم: السبت 6/1/24</p>
-<p>إجمالي وقت الكتابة: 3 ساعات و17 دقيقة</p>
-<p>• كتبت تفصیلاً عن 10 أشياء كانت في أعلى أفكاري (30 دقيقة)</p>
-<p>• إنهاء ملخص الأسبوعي "ماذا حدث" و "ماذا تعلمت" (30 دقيقة)</p>
-<p>• كتابة 20 تغريدة للعمل من خلال مجموعتي من الأفكار (30 دقيقة)</p>
-<p>• صياغة 2 مشاركات طويلة لتركها تتخمر في الخلفية هذا الأسبوع (60 دقيقة)</p>
-<p>• كتابة أفكار حول إيقاع المحتوى الخاص بي للربع القادم لاجتماعنا حول المحتوى يوم الاثنين (30 دقيقة)</p>
-<p>أشعر بأنني في تدفق جيد لبدء العام.</p>
-<p>• الأفكار تتدحرج
-• الكابتشينو تزداد ازدحاماً</p>
-<p>متحمس للمضي قدماً بهذا الشكل طوال العام.</p>
-<p>الآن، ماذا كتبتم اليوم؟</p>
-<p>اترك تعليقًا لأعرف—أقرأ كل واحدة منها.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK98zfXwAA_7fa.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652948737995139#m">06 يناير 2024 15:17:13 @jackbutcher</a>: التنسيق المركب</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652879821332720#m">06 يناير 2024 15:16:56 @jackbutcher</a>: صباح الخير</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDKy_2QWwAA0XRu.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743648532278501424#m">06 يناير 2024 14:59:40 @gregisenberg</a>: لقد انتهينا من اجتماعنا التنفيذي لبداية عام 2024 في ميامي ولدي بعض الملاحظات لأشاركها معك</p>
-<p>10 دروس من اجتماعنا التأسيسي للشركة الحاصلة على 8 أرقام: </p>
-<p>Lesson #1: لا تبني شركة لا يمكن لها أن تصل إلى 10 مليون دولار سنويًا من الدخل نقدي بطريقة ما</p>
-<p>Lesson #2: أفضل أفكار الشركات واضحة بطريقة مؤلمة</p>
-<p>Lesson #3: الإطار F&amp;G للأعمال </p>
-<p>Lesson #4: لا تبنى البرمجيات، ثم ابني المجتمع</p>
-<p>Lesson #5: أفضل عمال المنتجات يأتون من مجال الألعاب أو التواصل الاجتماعي للمستهلكين</p>
-<p>Lesson #6: إذا كانت السلعة مباعة بالكامل، يريد العملاء ذلك أكثر</p>
-<p>Lesson #7: 90% من المنتجات القابلة للتطبيق الأدنى يمكن إنشاؤها في 24 ساعة أو أقل</p>
-<p>Lesson #8: بمجرد تحقيق ملاءمة المنتج والسوق، يصبح التركيز الرئيسي على التوسع وتنويع</p>
-<p>Lesson #9: إذا كنت بحاجة للسؤال ما إذا كان لديك ملاءمة منتج وسوق، فأنت ليس لديك ذلك</p>
-<p>Lesson #10: ابحث عن أماكن رائعة لعمل اجتماعاتك الخارجية</p>
-<p>*ملاحظة: الاعتذار عن أي أخطاء في الطباعة، لا أستخدم ChatGPT لكتابة تغريداتي</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDKpSG2XsAAtz5m.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDKpUqFXEAA_TMR.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDKusrUXQAABt7W.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">08 Jan 2024 05:17:45 ShaanVP</a>: ماذا ستفعل إذا لم يكن لديك خوف؟ (سؤال جاد)</p>
+<p>هذا هو السؤال الذي طرحه المستخدم ShaanVP عبر تويتر.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnnyxbrown/status/1743997081679704446#m">07 Jan 2024 14:04:40 johnnyxbrown</a>: 7 insights that can change your life from the book "Atomic Habits" by James Clear. </p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDPrWSlXgAAmoWL.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">08 Jan 2024 03:32:13 mechsicko</a>: فن العيش وسط الظلمة</p>
+<p>في هذا التغريدة، يتم عرض عمل فني بواسطة الفنان داميان هيرست. يوضح هذا العمل تساؤلات حول الحياة والموت والمأساة.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">08 Jan 2024 03:30:00 sweatystartup</a>: ما لا يُقال عن العالم</p>
+<p>التغريدة تركز على الجوانب الإيجابية في الحياة، مشيرة إلى أن الناس يبذلون قصارى جهدهم يومياً لمساعدة بعضهم البعض.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">08 Jan 2024 03:14:05 jackbutcher</a>: </p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">08 Jan 2024 02:36:53 mkobach</a>: أنا أكره هذه الإعلانات</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDML6uTWgAAVgDx.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/alijla2021/status/1743733269571440760#m">06 Jan 2024 20:36:23 alijla2021</a>: تغييرات في الشكل خلال ساعتين</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDL8KhsXAAA137g.jpg" /></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDL8KhnXgAAs6CE.jpg" /></p>
+<hr />
+<p><br><a style="color:#5da2ff;" href="https://x.com/ElliotHershberg/status/1744082999048613920#m">07 Jan 2024 19:46:05 ElliotHershberg</a>: تقدم في فهم الحمض النووي</p>
+<p>تغريدة تتحدث عن التقدم في فهم الحمض النووي والتقنيات الجديدة والتحديات التي تواجه علاج الأمراض الوراثية.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">07 Jan 2024 21:50:21 cremieuxrecueil</a>: دورة تدريسية تسمى "Afrochemistry"</p>
+<p>رايس يوفر دورة تدريسية تسمى "Afrochemistry" تهدف إلى فهم الحياة السوداء في الولايات المتحدة.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744153230756475351#m">08 Jan 2024 00:25:09 sweatystartup</a>: كريس كيرك بأعصاب من حديد</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1744153108026961921%2Fimg%2FUV7EmO5qVe3az-QE.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mikeholden/status/1744004703136989331#m">07 Jan 2024 14:34:57 mikeholden</a>: لم يكن لدي اهتمام بمباراة بطولة الوطنية يوم الاثنين الليل ولكني سأتابع الأمر لأرى ما إذا كان <a href="https://x.com/businessbarista" title="Alex Lieberman">@businessbarista</a> وأصدقائه يظهرون على التلفزيون بقمصان <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnbryanesq/status/1744042901280104535#m">07 Jan 2024 17:06:45 johnbryanesq</a>: تم العثور على حصن يعود للحرب الثورية داخل منزل قديم في ويست فيرجينيا.</p>
+<hr />
+<p><strong>Source:</strong> <a href="https://x.com/johnbryanesq/status/1744042901280104535#m">x.com/johnbryanesq/status/1744042901280104535</a></p>
+<p>تغريدة توضح كيف تم العثور على حصن تاريخي يعود للحرب الثورية داخل منزل قديم في ويست فيرجينيا.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140008640946497#m">07 Jan 2024 23:32:37 businessbarista</a>: حان الوقت للذهاب إلى البطولة الوطنية مجانًا (شكرًا <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>)</p>
+<p>تغريدة تتحدث عن الاستعداد لحدث رياضي كبير بدعم من شركة مشهورة.</p>
+<hr />
+<p>ملاحظة: تم استبدال الروابط بنص قصير لسهولة القراءة.</p>
+<p><strong>Quoted Tweets:</strong></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140726210814317#m">07 Jan 2024 23:35:28 businessbarista</a>:</p>
+<p>تم التأكيد: أنا وأصدقائي سنجلس في البطولة الوطنية على مقاعد الـ 50 ياردة مجانًا بفضل <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>.  </p>
+<hr />
+<p><strong>Quoted Tweets:</strong></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140540474462318#m">07 Jan 2024 23:34:44 businessbarista</a>:</p>
+<p>خطوة 2: إنشاء حدث تسويقي مجنون</p>
+<hr />
+<p>سيتم تحديث القائمة بمرور الوقت.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

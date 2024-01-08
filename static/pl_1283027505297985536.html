@@ -3,44 +3,77 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-    </style>
+   <link rel="stylesheet" href="/static/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
+         crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV4CMHELK9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('config', 'G-XV4CMHELK9');
+    </script>
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
-                <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full">
+                <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
 
             <a class="text-sm w-full" href="https://twitter.com/i/lists/1283027505297985536">
@@ -50,129 +83,114 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweety</h1>
-<h2>04 Jan 2024</h2>
-<h3>19:46:46 @swyx</h3>
-<br><p><a class="text-blue-400" href="http://x.com/swyx/status/1742996010715259374#m">This person does not exist</a><br />
-(and can be made by anyone on their laptop in minutes)</p>
+            <h1>Najnowsze Wiadomości</h1>
+<h3>08 Jan 2024 08:48:09</h3>
+<ul>
+<li>Autor: <a href="https://x.com/marckohlbrugge/status/1744279812305530993#m">@marckohlbrugge</a></li>
+<li>Treść: $20/mo adds up with loyal community members (<a href="https://wip.co">wip.co</a>)</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" /></li>
+</ul>
+<h3>08 Jan 2024 08:49:03</h3>
+<ul>
+<li>Autor: <a href="https://x.com/marckohlbrugge/status/1744280039171236096#m">@marckohlbrugge</a></li>
+<li>Treść: On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)</li>
+</ul>
+<h3>08 Jan 2024 07:42:59</h3>
+<ul>
+<li>Autor: <a href="https://x.com/neuranne/status/1744263413889413404#m">@neuranne</a></li>
+<li>Treść: Long post about losing a journal and finding new excitement for daily journaling</li>
+</ul>
+<h3>08 Jan 2024 05:54:29</h3>
+<ul>
+<li>Autor: <a href="https://x.com/michwirantono/status/1744236108878328278#m">@michwirantono</a></li>
+<li>Treść: Shipping from 37,000 ft above. The grind doesn’t stop!</li>
+</ul>
+<h3>08 Jan 2024 05:41:10</h3>
+<ul>
+<li>Autor: <a href="https://x.com/tdinh_me/status/1744232759600824622#m">@tdinh_me</a></li>
+<li>Treść: Searching for solutions for ERR_NETWORK_CHANGED issue</li>
+</ul>
+<h3>08 Jan 2024 05:04:33</h3>
+<ul>
+<li>Autor: <a href="https://x.com/Shpigford/status/1744223542869143772#m">@Shpigford</a></li>
+<li>Treść: hey you’re pretty great and i’m glad you’re here.</li>
+</ul>
+<h3>08 Jan 2024 01:43:41</h3>
+<ul>
+<li>Autor: <a href="https://x.com/Jessicameher/status/1744172995331998188#m">@Jessicameher</a></li>
+<li>Treść: Insightful take on InVision's failure due to not listening to customers</li>
+</ul>
+<h3>08 Jan 2024 02:17:10</h3>
+<ul>
+<li>Autor: <a href="https://x.com/dannypostmaa/status/1744181420099346548#m">@dannypostmaa</a></li>
+<li>Treść: 2024 is going to be a fun year</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek 1" src="https://nitter.catsarch.com/pic/media%2FGDSTkcNaoAAmeLH.jpg" /></li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek 2" src="https://nitter.catsarch.com/pic/media%2FGDSTmLebIAAo3e6.jpg" /></li>
+</ul>
+<h3>08 Jan 2024 04:01:35</h3>
+<ul>
+<li>Autor: <a href="https://x.com/arvidkahl/status/1744207695941398619#m">@arvidkahl</a></li>
+<li>Treść: llama.cpp is magical. I use it at Podline for mistral-based summarization in a GPU-less server backend.</li>
+</ul>
+<h3>08 Jan 2024 04:16:23</h3>
+<ul>
+<li>Autor: <a href="https://x.com/dannypostmaa/status/1744211423130267705#m">@dannypostmaa</a></li>
+<li>Treść: need to start playing with this again now my non compete is ending</li>
+</ul>
+<h3>08 Jan 2024 04:12:22</h3>
+<ul>
+<li>Autor: <a href="https://x.com/rrhoover/status/1744210409664475327#m">@rrhoover</a></li>
+<li>Treść: Interest in 2024 predictions</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDSt0b9WkAAcS6q.jpg" /></p>
+<h3>08 Jan 2024 04:12:45</h3>
+<ul>
+<li>Autor: <a href="https://x.com/rrhoover/status/1744210508394152128#m">@rrhoover</a></li>
+<li>Treść: Share of 2024 predictions post</li>
+</ul>
+<h3>08 Jan 2024 03:32:13</h3>
+<ul>
+<li>Autor: <a href="https://x.com/mechsicko/status/1744200308543332432#m">@mechsicko</a></li>
+<li>Treść: Artistic commentary on "The Physical Impossibility of Death in the Mind of Someone Living"</li>
+</ul>
+<h3>08 Jan 2024 03:14:05</h3>
+<ul>
+<li>Autor: <a href="https://x.com/jackbutcher/status/1744195745484243166#m">@jackbutcher</a></li>
+<li>Treść: Image shared</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<h3>08 Jan 2024 02:54:48</h3>
+<ul>
+<li>Autor: <a href="https://x.com/matteing/status/1744190891332366786#m">@matteing</a></li>
+<li>Treść: Surprise discovery in Xcode</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/card_img%2F1743550693024083968%2FPCJUqo2_%3Fformat%3Djpg%26name%3D800x419" /></p>
+<h3>08 Jan 2024 02:34:13</h3>
+<ul>
+<li>Autor: <a href="https://x.com/thepatwalls/status/1744185711492735451#m">@thepatwalls</a></li>
+<li>Treść: Friends buying Teslas</li>
+</ul>
+<h3>08 Jan 2024 02:27:37</h3>
+<ul>
+<li>Autor: <a href="https://x.com/dannypostmaa/status/1744184048791204088#m">@dannypostmaa</a></li>
+<li>Treść: Excitement over ChatGPT feature</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDSWI3pbQAA1RbD.jpg" /></p>
+<h3>08 Jan 2024 02:33:04</h3>
+<ul>
+<li>Autor: <a href="https://x.com/dannypostmaa/status/1744185419707961649#m">@dannypostmaa</a></li>
+<li>Treść: Fire emoji</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDSXYLabwAA41bu.jpg" /></p>
+<h3>08 Jan 2024 01:07:20</h3>
+<ul>
+<li>Autor: <a href="https://x.com/DenLoginoff/status/1744163844019179636#m">@DenLoginoff</a></li>
+<li>Treść: Helpful tidbits for growing audience on Twitter</li>
+</ul>
 <hr />
-<h3>18:52:54 @Indian_Bronson</h3>
-<blockquote>
-<p>there will only be one way left to prove you're a human and not AI generated<br />
-<img class="max-w-xs m-2" alt="chart" src="http://nitter.io.lol//pic/media%2FGDBRKCZbMAEpzFp.jpg" /></p>
-</blockquote>
-<hr />
-<h3>16:28:50 @levie</h3>
-<p>This chart should make you go insane. This is the number of high skilled workers that want to work here. There is a cap at 85,000 slots that will be filled. We are actively shooting our future selves in the foot.<br />
-<img class="max-w-xs m-2" alt="chart" src="http://nitter.io.lol//pic/media%2FGDAwU3cawAA2TzA.jpg" /></p>
-<hr />
-<h3>13:53:41 @forgebitz</h3>
-<p>what is stopping you from asking for a tip<br />
-<img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/media%2FGDAMZmtWQAAswmG.jpg" /></p>
-<hr />
-<h2>05 Jan 2024</h2>
-<h3>06:23:41 @swyx</h3>
-<br><p><a class="text-blue-400" href="http://x.com/debarghya_das/status/1743104752077180976#m">@debarghya_das</a></p>
-<hr />
-<h3>06:22:18 @shl</h3>
-<p>You can’t choose your religion, but you can choose the religion of your kids</p>
-<hr />
-<h3>05:54:15 @dannypostmaa</h3>
-<p>what I really love about this house is how many different textures and materials it has, versus the typical white airbnbs being build all around bali<br />
-<img class="max-w-xs m-2" alt="image1" src="http://nitter.io.lol//pic/media%2FGDDoP6WbIAAwWPM.jpg" />
-<img class="max-w-xs m-2" alt="image2" src="http://nitter.io.lol//pic/media%2FGDDoXBfaUAAnvmK.jpg" />
-<img class="max-w-xs m-2" alt="image3" src="http://nitter.io.lol//pic/media%2FGDDoafubMAAsJnP.jpg" /></p>
-<hr />
-<h3>04:14:05 @dannypostmaa</h3>
-<p>Who can help us? We're stuck with this one for ages😅<br />
-<a class="text-blue-400" href="http://x.com/fayazara/status/1742998359760343207#m">@fayazara</a></p>
-<hr />
-<h3>03:24:38 @shl</h3>
-<p>The older you get, the younger your parents feel</p>
-<hr />
-<h3>02:54:06 @aarolston</h3>
-<p>Overthinking is a disease. It only has one cure: Action.<br />
-<img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/media%2FGDC-PzHW0AA4ceE.png" /></p>
-<hr />
-<h3>02:50:47 @dannypostmaa</h3>
-<p>One more week before moving in 🤩<br />
-<img class="max-w-xs m-2" alt="image1" src="http://nitter.io.lol//pic/media%2FGDC6f09bQAAVlvC.jpg" />
-<img class="max-w-xs m-2" alt="image2" src="http://nitter.io.lol//pic/media%2FGDC6jMHa0AAOHwk.jpg" />
-<img class="max-w-xs m-2" alt="image3" src="http://nitter.io.lol//pic/media%2FGDC-pc5bgAA5trQ.jpg" /></p>
-<hr />
-<h3>03:12:50 @dannypostmaa</h3>
-<p>Really proud of my wife for designing all of the interior/style without any prior experience 🥹</p>
-<hr />
-<h3>03:02:53 @5harath</h3>
-<p>I genuinely feel very few people do podcasts the way <a class="text-blue-400" href="http://x.com/naval" title="Naval">@naval</a> mentioned here on <a class="text-blue-400" href="http://x.com/getairchat" title="Airchat">@getairchat</a>!<br />
-<img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/amplify_video_thumb%2F1743105704636862464%2Fimg%2FNZtGGkA4k_qLyNSD.jpg" /></p>
-<hr />
-<h3>03:02:54 @5harath</h3>
-<p>Check the full chat: <a class="text-blue-400" href="https://getairchat.com/s/CROoec24">getairchat.com/s/CROoec24</a><br />
-<img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/card_img%2F1743103880005562368%2FOPR3V_sf%3Fformat%3Djpg%26name%3D800x419" /></p>
-<hr />
-<h3>02:24:15 @thepatwalls</h3>
-<br><p><a class="text-blue-400" href="http://x.com/elonmusk" title="Elon Musk">@elonmusk</a> you probably won't see this... <br />
-<img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/media%2FGDC1diTWkAAIvwm.jpg" /></p>
-<hr />
-<h3>00:44:13 @rrhoover</h3>
-<p>Working on a project...</p>
-<hr />
-<h3>01:19:46 @AmandaMGoetz</h3>
-<p>I’m following your lead here. I’d love to find a 6 month sponsor for Life’s a Game!!</p>
-<hr />
-<h3>01:19:04 @AmandaMGoetz</h3>
-<p>Replace CEO and insert any title you want….partner, parent, etc.<br />
-<a class="text-blue-400" href="http://x.com/agazdecki/status/1743065673377738890#m">@agazdecki</a></p>
-<hr />
-<h3>00:45:43 @shl</h3>
-<p>If you don’t want to be managed, you have to manage (your boss)</p>
-<hr />
-<h2>09 Nov 2023</h2>
-<h3>18:09:11 @timothycbates</h3>
-<p>PS: The value of money is subjective and experienced on a % scale not an absolute scale (i.e., value = log$ ). SO to repeat the subjective bump you get going from $1k to $10k, you need to go to $100k. And to do it again after that, you need a million!<br />
-<img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/media%2FF-glkW7WoAAPPXH.png" /></p>
-<hr />
-<h3>18:09:10 @timothycbates</h3>
-<p>Money increases happiness, but Nobelists argued this stopped at $80k. A new paper shows that for the vast majority, the effect of higher income works all the way up with no limit in sight barring scales not going high enough to capture the joy.</p>
-<hr />
-<h3>10:10:29 @jitbit</h3>
-<p><img class="max-w-xs m-2" alt="image" src="http://nitter.io.lol//pic/media%2FGC_Zq2LWAAAjvpx.png" /></p>
-<hr />
-<p>This article compiles various tweets from social media platform Twitter. The tweets range from personal updates to philosophical thoughts and professional endeavors. It provides a glimpse into the diverse thoughts and activities of individuals on the platform.</p>
-        </div><br><a class="text-blue-400" href="/lang/pl_1283027505297985536">more</a>
+<h2>Komentarz Redakcyjny</h2>
+<p>Wiadomości z Twittera są zróżnicowane - od narzekania na problemy techniczne, po intelektualne refleksje i przypomnienie o ważnych lekcjach biznesowych. Jednocześnie istnieje pewna ogólne uczucie optymizmu i podekscytowania związane z nadchodzącym rokiem.</p>
+<p>Wiadomości te pokazują, że Twitter nadal jest miejscem, gdzie ludzie dzielą się swoimi myślami, doświadczeniami i odkryciami. Ciekawe czytanie dla wszystkich zainteresowanych różnymi aspektami życia zawodowego i osobistego.</p>
+        </div><br>{{path}}
     </div>
-<script>
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-</script></body>
+</div><script src="/static/index.js"></script></body>

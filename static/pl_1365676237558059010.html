@@ -3,44 +3,77 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-    /* Dark theme styles */
-    body.dark {
-      background-color:#212129;
-      color: #ccc;
-    }
-    body.dark input{
-        color: #000;
-    }
-    @media (min-width: 768px) {
-        .subcard{
-            max-width:360px;
-        }
-        #parentContainer {
-            margin-left: 360px;
-        }
-        .sidebar{
-            position:fixed;
-        }
-    }
-    #title {
-        background: linear-gradient(to right, #4085f3, aqua);
-        -webkit-background-clip: text;
-        color: transparent;
-        display: inline-block;
-    }
-
-    </style>
+   <link rel="stylesheet" href="/static/style.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
+         crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV4CMHELK9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('config', 'G-XV4CMHELK9');
+    </script>
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
-                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full">
+                <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
 
             <a class="text-sm w-full" href="https://twitter.com/i/lists/1365676237558059010">
@@ -50,80 +83,54 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Twitterkowe Nowości</h1>
-<h2>05 Jan 2024</h2>
-<ul>
-<li><strong>03:52:37</strong> - <strong><a class="text-blue-400" href="http://x.com/mkobach/status/1743118275964174823#m">@mkobach</a></strong>: Czy nastolatkowie wciąż rozmawiają przez telefon? Gdy miałem 14 lat, spędzałem godziny na telefonie.</li>
-</ul>
-<blockquote>
-<p>Ciekawe, czy dzisiejsza młodzież wciąż lubi rozmawiać przez telefon, czy może raczej korzysta z innych form komunikacji.</p>
-</blockquote>
-<ul>
-<li><strong>03:25:46</strong> - <strong><a class="text-blue-400" href="http://x.com/mkobach/status/1743111519494115564#m">@mkobach</a></strong>: Jako ktoś, kto kiedyś pracował w środowisku akademickim, zastanawiam się, ile recenzowanych prac naukowych zawiera przypadki plagiatu.</li>
-</ul>
-<blockquote>
-<p>Ciekawostka, ile prac naukowych faktycznie zawiera plagiat.  </p>
-</blockquote>
-<ul>
-<li><strong>03:20:55</strong> - <strong><a class="text-blue-400" href="http://x.com/EveD/status/1743049901389337022#m">@EveD</a></strong>: To szokujące, i podłe, a tak naprawdę straszne. A ona poradziła sobie z tym naprawdę dobrze.</li>
-</ul>
-<blockquote>
-<p>Komentarz do sytuacji życiowej i doświadczeń autorki.  </p>
-</blockquote>
-<h2>04 Jan 2024</h2>
-<ul>
-<li><strong>21:50:13</strong> - <strong>@notthreadguy</strong> - <strong><img class="max-w-xs m-1" alt="" src="http://nitter.io.lol//pic/media%2FGDB54zdWYAErKba.jpg" /></strong></li>
-</ul>
-<blockquote>
-<p>Najprawdopodobniej zdjęcie lub obrazek; brak konkretnego treści.</p>
-</blockquote>
-<ul>
-<li><strong>20:15:25</strong> - <strong>@dutchtide</strong> - <strong><img class="max-w-xs m-1" alt="" src="http://nitter.io.lol//pic/media%2FGDBjEYjWwAAfsHB.jpg" /></strong></li>
-</ul>
-<blockquote>
-<p>Również zdjęcie lub obrazek bez dodatkowego komentarza autora.  </p>
-</blockquote>
-<ul>
-<li><strong>23:41:07</strong> - <strong>@checksbot</strong> - ✅ Nowa kompozycja czeku 200 </li>
-</ul>
-<blockquote>
-<p>Wydaje się, że rzecz dotyczy jakiegoś wydarzenia związanego z czekiem.</p>
-</blockquote>
-<p>Powyżej przedstawione są najnowsze tweety z różnych dziedzin. Ciekawostką jest fakt, ile osób nadal preferuje rozmowę telefoniczną, a także jak wygląda sytuacja z plagiatem wśród recenzowanych prac naukowych. Komentarze autorki <strong>@EveD</strong> odnoszące się do sytuacji życiowej sugerują, iż Twitter jest miejscem, gdzie ludzie dzielą się swoimi spostrzeżeniami i doświadczeniami.</p>
-<p><em>Article written by [Your Name]</em></p>
-        </div><br><a class="text-blue-400" href="/lang/pl_1365676237558059010">more</a>
+            <h1>Najnowsze tweety</h1>
+<h2>8 stycznia 2024, 05:17:45</h2>
+<p><strong>@ShaanVP</strong><br />
+<a href="https://x.com/ShaanVP/status/1744226866255606116#m">link do tweetu</a><br />
+"Co byś zrobił, gdybyś nie bał się? (poważne pytanie)"</p>
+<p>Interpretacja: ShaanVP zadaje ważne pytanie o odwagę i działanie pomimo strachu. </p>
+<h2>7 stycznia 2024, 14:04:40</h2>
+<p><strong>@johnnyxbrown</strong><br />
+<a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">link do tweetu</a><br />
+"7 life-changing insights from “Atomic Habits” by James Clear"<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDPrWSlXgAAmoWL.jpg" /><br />
+Interpretacja: Johnnyxbrown dzieli się cennymi spostrzeżeniami z książki "Atomic Habits" autorstwa Jamesa Cleara.</p>
+<h2>8 stycznia 2024, 03:32:13</h2>
+<p><strong>@mechsicko</strong><br />
+<a href="https://x.com/mechsicko/status/1744200308543332432#m">link do tweetu</a><br />
+"The Physical Impossibility of Death in the Mind of Someone Living"<br />
+Interpretacja: mechsicko dzieli się sztuką i wzmiankuje artystę, medium oraz ruch artystyczny.</p>
+<h2>8 stycznia 2024, 03:30:00</h2>
+<p><strong>@sweatystartup</strong><br />
+<a href="https://x.com/sweatystartup/status/1744199748515504221#m">link do tweetu</a><br />
+"Co media ci nie powiedzą: Świat jest wspaniałym miejscem"<br />
+Interpretacja: sweatystartup przypomina o pozytywnych aspektach ludzkiej natury i o dobroci świata.</p>
+<h2>8 stycznia 2024, 03:14:05</h2>
+<p><strong>@jackbutcher</strong><br />
+<a href="https://x.com/jackbutcher/status/1744195745484243166#m">link do tweetu</a><br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /><br />
+Interpretacja: Jack Butcher dzieli się artystycznym obrazem.</p>
+<h2>8 stycznia 2024, 02:36:53</h2>
+<p><strong>@mkobach</strong><br />
+<a href="https://x.com/mkobach/status/1744186379741938012#m">link do tweetu</a><br />
+"Nie znoszę tych reklam. Czy tylko ja mam takie odczucia?"<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDML6uTWgAAVgDx.jpg" /><br />
+Interpretacja: mkobach wyraża swoją opinię na temat reklam.</p>
+<h2>6 stycznia 2024, 20:36:23</h2>
+<p><strong>@alijla2021</strong><br />
+<a href="https://x.com/alijla2021/status/1743733269571440760#m">link do tweetu</a><br />
+"Dwie godziny między tymi dwoma zdjęciami"<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek1" src="https://nitter.catsarch.com/pic/media%2FGDL8KhsXAAA137g.jpg" /><br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek2" src="https://nitter.catsarch.com/pic/media%2FGDL8KhnXgAAs6CE.jpg" /><br />
+Interpretacja: alijla2021 dzieli się zaskakującym porównaniem dwóch zdjęć.</p>
+<h2>8 stycznia 2024, 01:21:10</h2>
+<p><strong>@bunya_eth</strong><br />
+<a href="https://x.com/bunya_eth/status/1744167328529453128#m">link do tweetu</a><br />
+"Peemptyczna sztuka uliczna"<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Obrazek" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" /><br />
+Interpretacja: bunya_eth promuje sztukę uliczną.</p>
+<hr />
+<p>To są niektóre z najnowszych tweetów na platformie Twitter. Może być ciekawe zobaczyć twarze różnych ludzi i jakie refleksje wywołują ich posty na Twitterze.</p>
+        </div><br>{{path}}
     </div>
-<script>
-    var themeToggle = document.getElementById("theme-toggle");
-    var body = document.body;
-
-    // 检测浏览器或系统是否处于深色主题模式
-    function isDarkTheme() {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // 浏览器或系统处于深色主题模式
-        return true;
-      } else {
-        // 浏览器或系统处于浅色主题模式
-        return false;
-      }
-    }
-
-    // Toggle theme function
-    themeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark");
-      if (body.classList.contains("dark")) {
-        themeToggle.textContent = "☀";
-      } else {
-        themeToggle.textContent = "️🌒";
-      }
-    });
-
-    // 根据系统主题模式切换初始主题
-    if (isDarkTheme()) {
-      body.classList.add("dark");
-      themeToggle.textContent = "☀";
-    } else {
-      body.classList.remove("dark");
-      themeToggle.textContent = "️🌒";
-    }
-</script></body>
+</div><script src="/static/index.js"></script></body>

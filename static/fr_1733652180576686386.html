@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,59 +83,114 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Les derniers tweets sur l'IA et la technologie - 06 Jan 2024</h1>
-<h2>17:44:56 - @hwchase17</h2>
-<p>This is one of my favorite recent tutorials
-4 hours long!!!!
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDLUvMxaIAASdCh.jpg" />
-<a href="https://x.com/hwchase17/status/1743690126369402905#m">Source</a></p>
-<h2>17:44:07 - @LangChainAI</h2>
-<p>Looking for a weekend actively? This video by @krishnaik06 has you covered. It's over <strong>4</strong> hours long and covers:
-- Chat With PDF Using @AstraDB
-- Blog Generation Using LLAMA 2
-- End To End LLm Projects Using Pinecone VectorDB
-- Google Gemini Pro Demo
-- Multi-Language Invoice Extractor
-- Conversational Q&amp;A Chatbot Using Gemini Pro API
-Check it out: <a href="https://piped.video/watch?v=aWKrL4z5H6w">piped.video/watch?v=aWKrL4z5…</a></p>
-<h2>17:17:08 - @hwchase17</h2>
-<p>Very easy way to build rag apps
-<a href="https://x.com/hwchase17/status/1743683126491316460#m">Source</a></p>
-<h2>17:16:24 - @hwchase17</h2>
-<p>Awesome to see langchain being used modularly
-<a href="https://x.com/hwchase17/status/1743682944345219289#m">Source</a></p>
-<h2>16:00:29 - @taranjeetio</h2>
-<p>An Open source contributor named Joe recently added support for Google Drive folder as a data loader in @embedchain. The loader uses @LangChainAI's Google Drive loader.
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDK9BIKaUAAvJx5.jpg" />
-<a href="https://x.com/taranjeetio/status/1743663836992070139#m">Source</a></p>
-<h2>17:06:37 - @jerryjliu0</h2>
-<p>There was a lot of cool RAG research in the past year or two, and luckily for you, all of these efforts are tracked under one place! Check the paper out! <a href="https://blog.llamaindex.ai/a-cheat-sheet-and-some-recipes-for-building-advanced-rag-803a9d94c41b">blog.llamaindex.ai/a-cheat-s…</a>
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDLMBzca0AACfBu.jpg" />
-<a href="https://x.com/llama_index/status/1743680234493476899#m">Source</a></p>
-<h2>16:24:06 - @LangChainAI</h2>
-<p>We launched 2 YouTube tutorials this week - perfect for some fun weekend watching
-What tutorial should we film next?
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image 1" src="https://nitter.nohost.network/pic/media%2FGDLCXkVacAAQ90g.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image 2" src="https://nitter.nohost.network/pic/media%2FGDLCaXPbcAAt1No.jpg" />
-<a href="https://x.com/LangChainAI/status/1743669782321492206#m">Source</a></p>
-<h2>16:19:11 - @ylecun</h2>
-<p>Here is a list of inexcusable mistakes in slide design
-<a href="https://x.com/ylecun/status/1743416055232430438#m">Source</a></p>
-<h2>15:11:08 - @Dev__Digest</h2>
-<p>New video on getting started with @LangChainAI and @UnstructuredIO
-<a href="https://nitter.nohost.network/pic/media%2FGDKxuH4bQAAsqOf.jpg">Image</a>
-<a href="https://x.com/Dev__Digest/status/1743651419486405060#m">Source</a></p>
-<h2>16:26:42 - @MatthewBerman</h2>
-<p>CrewAI allows you to create incredible AI agent teams, similar to AutoGen.
-Here is a step-by-step guide to use it:
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDF28_6aIAA1Iid.jpg" />
-<a href="https://x.com/MatthewBerman/status/1743308046770839776#m">Source</a></p>
-<h2>17:30:00 - @joaomdmoura</h2>
-<p>Langsmith helps me so much on debugging crewAI executions, really empowers some of the development &lt;3
-<a href="https://x.com/joaomdmoura/status/1743323977919992086#m">Source</a></p>
-<p><em>Compiled by Senior Editor, Français Blog</em></p>
+            <h1>Titre : Les dernières actualités sur l'IA et les modèles de langage en 2024</h1>
 <hr />
-<p>Ce sont quelques-uns des tweets récents sur l'IA et la technologie. Ils couvrent un large éventail de sujets, allant des tutoriels vidéo aux contributions open source, en passant par les erreurs de conception de diapositives. Ces tweets offrent un aperçu intéressant des développements actuels dans le domaine de l'IA, et sont une ressource précieuse pour ceux qui s'intéressent à ce sujet en constante évolution.</p>
+<ol>
+<li><strong>Tweet du 07 Jan 2024 14:30:24</strong></li>
+<li>Auteur : <a href="https://x.com/joaomdmoura/status/1744003557320274075#m">@joaomdmoura</a></li>
+<li>Contenu : En train d'enregistrer une nouvelle vidéo sur un équipage complet de modèles locaux d'agents d'AI 🚣✨</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+</li>
+<li>
+<p><strong>Tweet du 08 Jan 2024 02:11:10</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/karpathy/status/1744179910347039080#m">@karpathy</a></li>
+<li>Contenu : Réflexion sur l'amplification de l'intelligence plutôt que la création d'une entité surpuissante.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+</li>
+<li>
+<p><strong>Tweet du 08 Jan 2024 03:32:39</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/karpathy/status/1744200417784045799#m">@karpathy</a></li>
+<li>
+<p>Contenu : Ajout de réflexions sur l'amplification de l'imagination via les outils d'IA.</p>
+</li>
+<li>
+<p><strong>Tweet du 08 Jan 2024 01:46:47</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/erichorvitz/status/1744173774646222917#m">@erichorvitz</a></li>
+<li>Contenu : Partage des idées importantes de <a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> concernant la situation de la COVID-19 ainsi qu'une photo pertinente.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+</li>
+<li>
+<p><strong>Tweet du 06 Jan 2024 17:06:37</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/jerryjliu0/status/1743680481504514049#m">@jerryjliu0</a></li>
+<li>Contenu : Partage d'une publication inspirante sur la recherche en RAG.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDLMBzca0AACfBu.jpg" /></p>
+</li>
+<li>
+<p><strong>Tweet du 08 Jan 2024 03:08:51</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/jerryjliu0/status/1744194426443112838#m">@jerryjliu0</a></li>
+<li>
+<p>Contenu : Réalisation que le lien partagé précédemment est inactif.</p>
+</li>
+<li>
+<p><strong>Tweet du 08 Jan 2024 02:49:37</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/RisingSayak/status/1744189585171829090#m">@RisingSayak</a></li>
+<li>
+<p>Contenu : Annonce d'une nouvelle avancée avec un lien vers des informations supplémentaires.</p>
+</li>
+<li>
+<p><strong>Tweet du 08 Jan 2024 01:52:49</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/joaomdmoura/status/1744175292921348320#m">@joaomdmoura</a></li>
+<li>Contenu : Partage de l'enthousiasme pour la popularité d'un projet sur GitHub.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+</li>
+<li>
+<p><strong>Tweet du 07 Jan 2024 20:54:23</strong></p>
+</li>
+<li>Auteur : <a href="https://x.com/llama_index/status/1744100187046543416#m">@llama_index</a></li>
+<li>Contenu : Partage des projets futurs de l'écosystème LlamaIndex.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+</li>
+<li>
+<p><strong>Tweet du 07 Jan 2024 08:05:04</strong></p>
+<ul>
+<li>Auteur : <a href="https://x.com/Rainmaker1973/status/1743906585305350244#m">@Rainmaker1973</a></li>
+<li>Contenu : Partage d'une vidéo sur la construction d'un moteur Mercedes-AMG G63 V8.</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1743863069070024705%2Fimg%2FreqbqXtwxXo8zIiW.jpg" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Tweet du 07 Jan 2024 19:29:38</strong></p>
+<ul>
+<li>Auteur : <a href="https://x.com/SVG__Collection/status/1744078860805697679#m">@SVG__Collection</a></li>
+<li>Contenu : Appreciation pour la contribution musicale de Thelonious Monk.</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Tweet du 07 Jan 2024 22:58:32</strong></p>
+<ul>
+<li>Auteur : <a href="https://x.com/ylecun/status/1744131432509768024#m">@ylecun</a></li>
+<li>Contenu : Partage du plaidoyer d'Andreessen-Horowitz en faveur des plateformes d'IA open source.</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDRmSs4WkAIjOUM.jpg" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Tweet du 07 Jan 2024 22:13:21</strong></p>
+<ul>
+<li>Auteur : <a href="https://x.com/lateinteraction/status/1744120062473281726#m">@lateinteraction</a></li>
+<li>Contenu : Promotion de la recherche et de l'intégration de ColBERT et d'autres techniques de récupération.</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQ4ElpagAAY6dN.jpg" /></li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQ4FbObMAALB4G.jpg" /></li>
+</ul>
+</li>
+</ol>
+<hr />
+<p>Cet article compile une sélection de tweets sur les récentes avancées et réflexions dans le domaine de l'intelligence artificielle, des modèles de langage et de la recherche en 2024. Les tweets proviennent de diverses personnalités influentes dans le domaine de l'IA et offrent un aperçu des développements et des discussions en cours. [//] : # (Veuillez noter que cet article est basé sur des traductions et des résumés des tweets originaux en anglais.)</p>
+<hr />
+<p><em>Veuillez noter que cet article est basé sur des traductions et des résumés des tweets originaux en anglais.</em></p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,39 +84,56 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Giving Back and Growing Together</h1>
-<p><em>05 Jan 2024 19:24:22</em><br />
-<strong>Author:</strong> @PinterestDesign<br />
-<strong>Link:</strong> <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">Tweet</a><br />
-New on our blog, an exploration of how giving back rewards us so much in return.  </p>
-<p>Mentorship = <br />
-✅ connection with local community<br />
-✅ introducing students to digital product design as a career option<br />
-✅ learning while teaching others<br />
-…and much more  </p>
+            <h1>January 7th, 2024</h1>
+<h2>New Year, New Connections in Bangalore</h2>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/zeta_ux/status/1743885974206341243#m">Zeta Design (@zeta_ux)</a>:</h3>
+<p>New year, new vibes! 🎉 Excited to kick off 2024 with our fresh Design Meetup! Join us as we dive into creativity, share ideas, and make this year design-tastic! 🥳</p>
+<p>Registration &amp; More details 👇<a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23zeta">#zeta</a> <a href="https://x.com/search?q=%23design">#design</a> <a href="https://x.com/search?q=%23ux">#ux</a> <a href="https://x.com/search?q=%23meetup">#meetup</a> <a href="https://x.com/search?q=%23bangalore">#bangalore</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="zeta design meetup" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" /></p>
+<h3>Quoting Vidhunnan (@vidhunnan):</h3>
+<blockquote>
+<p>"🌟 New Year, New Connections! @ADPList's Bangalore Meetup is Here! 🚀</p>
+<p>🎉 Hello Designers, Product Managers, Mentors, and Innovators!</p>
+<p>Get set for an electrifying start to the year at the ADPList Bangalore Meetup. We're bringing together a dynamic community of professionals, mentors, and enthusiasts in the heart of our city.</p>
+<p>🤝 Connect, Converse, and Captivate: Dive into a world of amazing talents from our industry in a casual atmosphere. Share your journey, get inspired by others, and forge connections that could shape your future. Your next big collaboration could be just a conversation away!</p>
+<p>🎤 Talks That Spark Ideas: We're lining up speakers who'll share groundbreaking insights and life hacks. Learning's about to get a lot more fun.</p>
+<p>🌈 Cheers to @LottieFiles: A big shoutout to LottieFiles for being our powerhouse partner for this event. Their innovative approach to animation is changing the game!</p>
+<p>🏢 Big Thanks to @zeta_ux: Hats off to Zeta for hosting us in their ultra-cool space. It's the perfect setting for ideas and interactions to flourish.</p>
+<p>🍔 Food, Fun, and Fizz: The conversations don't end with the talks. Join us for some great food and laughter afterwards. Remember, some of the best connections are made over a casual meal!</p>
+<p>📢 Spread the Word: Invite your colleagues and friends. The more, the merrier!</p>
+<p>🎟️ Limited Spots Available: Hurry, grab your spot now!
+🔗 Register now: <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p>Join us at the ADPList Bangalore Meetup and be a part of a community that's shaping the future. Let's learn, grow, and succeed together.</p>
+<p>See you there!</p>
+<h1>ADPListBangalore #NetworkingEvent #LottieFiles #Meetup #BangaloreEvents #ProfessionalGrowth" | Nitter</h1>
+<p><br><a style="color:#5da2ff;" href="https://x.com/vidhunnan/status/1743882681711231102#m">x.com/vidhunnan/status/1743882681711231102#m</a></p>
+</blockquote>
+<p>The Zeta Design and ADPList Bangalore Meetup is set to kick off the new year with a bang, bringing together professionals, mentors, and enthusiasts in the heart of Bangalore. The event promises to be a platform for inspiring talks and the forging of new connections.</p>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">Pinterest Design (@PinterestDesign)</a>:</h3>
+<p>New on our blog, an exploration of how giving back rewards us so much in return.</p>
+<p>Mentorship = ✅ connection with local community
+✅ introducing students to digital product design as a career option
+✅ learning while teaching others
+…and much more</p>
 <p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">pinterest.design/reasons-to-…</a></p>
-<p><em>04 Jan 2024 20:22:30</em><br />
-<strong>Author:</strong> @PinterestDesign<br />
-<strong>Link:</strong> <a href="https://x.com/PinterestDesign/status/1743005001557889096#m">Tweet</a><br />
-We love to see it! What are you pinning in 2024?</p>
-<p><em>28 Dec 2023 18:07:01</em><br />
-<strong>Author:</strong> @SalesforceUX<br />
-<strong>Link:</strong> <a href="https://x.com/SalesforceUX/status/1740434190347174281#m">Tweet</a><br />
-Itai Asseo, Head of Emerging Technology, Salesforce Ignite, and his team experimented with a range of top AI tools to see how quickly they could get up to speed on tasks.   </p>
-<p>Check out which AI tools saved the most time and in what ways.<br />
-<a href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a> ⬇️ <br />
-<a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">salesforce.com/blog/can-an-a…</a></p>
-<p><em>27 Dec 2023 19:54:02</em><br />
-<strong>Author:</strong> @SalesforceUX<br />
-<strong>Link:</strong> <a href="https://x.com/SalesforceUX/status/1740098733746839762#m">Tweet</a><br />
-Join the Salesforce Design Team! Check out these roles. ⬇️   </p>
-<p>Lead/Principal UX Designer <br />
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">salesforce.wd12.myworkdayjob…</a>  </p>
-<p>Senior/Lead Researcher, Research &amp; Insights <br />
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">salesforce.wd12.myworkdayjob…</a>   </p>
-<p>Help us drive change for a more inclusive world.</p>
-<p>And so on...</p>
-<p>In this article, we compile a series of tweets from design and technology brands such as PinterestDesign, MicrosoftDesign, and SalesforceUX. These tweets showcase the latest updates, events, and opportunities in the design and UX industry, as well as insights into AI, mentorship, and design system conferences. The tweets provide a glimpse into the evolving landscape of digital product design, AI integration, and career opportunities within innovative companies.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Pinterest design blog" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
+<h3>Quoting Jessica Strelioff (@jstrelioff):</h3>
+<blockquote>
+<p>"I use @Pinterest maybe an embarrassing amount? but figured I'd share in case my boards are helpful resources to anyone! I have a board for most of aspects of design: logos, type, illustration, photography, etc.</p>
+<p>Feel free to follow along ⇣ <a href="https://www.pinterest.com/jstrelioff/_saved/">pinterest.com/jstrelioff/_sa…</a>" | Nitter
+<a href="https://x.com/jstrelioff/status/1742648294726070344#m">x.com/jstrelioff/status/1742648294726070344#m</a></p>
+</blockquote>
+<p>Pinterest Design recently published a blog post exploring the benefits of mentorship and how it rewards both the mentor and the mentee. The article sheds light on the positive impacts of mentorship in the design community.</p>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">Microsoft Design (@MicrosoftDesign)</a>:</h3>
+<p>This month’s wallpaper is brought to you by <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍. 
+To download this wallpaper and more check out ➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Microsoft design wallpaper" src="https://nitter.catsarch.com/pic/media%2FGDBQ1EPa8AALLre.jpg" /></p>
+<p>Microsoft Design introduces their latest wallpaper created by Olivia Xu, providing their audience with a link to download the wallpaper. The emphasis on visual aesthetics is evident in this tweet.</p>
+<hr />
+<p>The tweets above provide insights into upcoming design meetups, the benefits of mentorship, and the release of new design content. It's clear that the design community is active and vibrant as ever.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

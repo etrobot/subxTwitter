@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,97 +83,55 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>2024年1月6日のツイート</h1>
+            <h1>Bitcoin Tweets Compilation</h1>
+<hr />
+<h2>Tweet 1</h2>
 <ul>
-<li><br><a style="color:#5da2ff;" href="https://x.com/UnleashedChat/status/1743685126658121845#m">Unleashed.Chat V0.1.2 live</a>  </li>
-<li>フロントエンドのパフォーマンス向上。</li>
-<li>チャットウィンドウでの上スクロールができないバグを修正。</li>
-<li>
-<p>サーバーとGPU間のプライバシーを向上させました。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743686667200770223#m">06 Jan 2024 17:31:12@TuurDemeester</a>: Ethereumは常に "ブロックチェーン上のJavaScript" であり、決して真のサイファーパンクプロジェクトではありませんでした。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743667528620970391#m">06 Jan 2024 16:15:09@AaronvanW</a>: それは興味深いです。
-  <a href="https://www.amazon.nl/-/en/gp/bestsellers/books">amazon.nl/-/en/gp/bestseller…</a></p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/theinstagibbs/status/1743682932584112603#m">06 Jan 2024 17:16:21@theinstagibbs</a>: それを公開するためにブルランを調整しましたか。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1743683157097062550#m">06 Jan 2024 17:17:15@real_vijay</a>: ETF プロ: 資本の大量流入によりインフレに対して耐性のある貯蔵価値にグローバルな節約を引き寄せる。<br />
-  ETF コン: 保管集中リスクの増加（これがゴールドが国家の攻撃に脆弱になった主な理由）<br />
-  後者のリスクを可能な限り軽減するために取り組む必要があります。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/mikealfred/status/1743666811449806911#m">06 Jan 2024 16:12:18@mikealfred</a>: Bitcoinのベアは、世界中で誰よりも一生懸命働いており、それが全て無駄に終わることになります。数年間の逃した機会と損失の後も報われることはありません。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MrChrisEllis/status/1743675660063723939#m">06 Jan 2024 16:47:27@MrChrisEllis</a>: まもなく一般の人々もHOLDしているでしょう…政府によって規制された紙の契約がフィアットで解決される。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/NickTimiraos/status/1743667579011371388#m">06 Jan 2024 16:15:21@NickTimiraos</a>: Lorie Logan氏の注目すべきコメント:<br />
-  彼女は、夜間逆レポ saldosが「低水準」に達するにつれて、トレジャリー償還を遅らせるべきであると述べています（アナリストたちは年中にそれが発生する可能性があると述べています）<br />
-  QTを遅らせることは、「早期に停止する可能性を減少させる」と彼女は述べています。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/nvk/status/1743674018694066373#m">06 Jan 2024 16:40:56@nvk</a>: より早く参入したほど、感じる痛みと後悔が強くなります。<br />
-  しかし、これらの傾向がなければ、分配やネットワーク効果は発生しなかったでしょう。<br />
-  コインが失われてしまったにもかかわらず、ただ自分がそれを見ることができたことに感謝しています。<br />
-  なんという旅路でしょう。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/natbrunell/status/1743369776095756628#m">05 Jan 2024 20:31:59@natbrunell</a>: "彼の人生の最期は悪かった。私はそれを常に恨んでいます。"<br />
-  サトシ・ナカモトである可能性が以前からあると思っていた/思っている人であれば、<a href="https://x.com/franfinney" title="Fran Finney">@franfinney</a> によるこのパワフルなクリップを数分間見ることは価値があります。彼女の脆弱性は感動的です。<br />
-  私たちの対話に対する肯定的なフィードバックをいただきありがとうございます <a href="https://piped.video/rNGFlITup40?si=_3EyCjRxxN6hZnjc">piped.video/rNGFlITup40?si=_3Ey…</a><br />
-<a href="https://x.com/search?q=%23RunningBitcoinChallenge">#RunningBitcoinChallenge</a> に参加しましょう！Coin Storiesチームとの目標$5,000には半分以上到達しています！<a href="https://secure.alsagoldenwest.org/site/TR/Endurance/General?team_id=6000&amp;pg=team&amp;fr_id=1240">secure.alsagoldenwest.org/si…</a></p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/BowTiedMara/status/1743632499958268092#m">06 Jan 2024 13:55:57@BowTiedMara</a>: 「富は誰が生み出すのか？富は政府の業績ですか？富は定められるのですか？政府はその生産を妨げるか助けるかの権限を持っていますが、富の創造は政府によって生み出されるものではありません。」<br />
-  — フアン・バウティスタ・アルベルディ</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/paoloardoino/status/1743654431734788344#m">06 Jan 2024 15:23:06@paoloardoino</a>: 今週末はAQUAウォレットをテストします。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/giacomozucco/status/1743667549034672260#m">06 Jan 2024 16:15:14@giacomozucco</a>: およそ5年間、スイスの小さな銀行をオレンジ色に染めるのに時間を費やしましたが、残念ながらそのような状況です。現時点では、失敗の場合の評判リスクが、自社での保管とマージンを維持するビジネスケースを上回っています。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743667575345569806#m">06 Jan 2024 16:15:20@TuurDemeester</a>: Allen Farrington氏が肥満スーツを着用し、知識人だけとインタビューするテレビ番組に投票します。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/alexbosworth/status/1743663721962950672#m">06 Jan 2024 16:00:01@alexbosworth</a>: 低品質なデジタルアセットの作成に対する治療法は、単純に商取引のためのより良い代替手段を成長させることです。私はLNで収益を得ようとする人たちを見てきましたが、それは難しいと感じて低品質な資産を作ってサトシにフリップします。しかし、彼らがLNでさらに多くのお金を稼いでいたならば、彼らは去らなかったでしょう。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743660915281564099#m">06 Jan 2024 15:48:52@TuurDemeester</a>: それが面白いからです。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743662822033170905#m">06 Jan 2024 15:56:27@TuurDemeester</a>: コンテキストと元のスレッド。<a href="https://x.com/ThomasEWoods" title="Tom Woods">@ThomasEWoods</a> もこのニッチに価値ある貢献者として数えるでしょう。彼は「The Church and the Market」、「The Church Confronts Modernity」、「How The Church Built Western Civilization」などの本を執筆しています。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/lopp/status/1743659901275029882#m">06 Jan 2024 15:51:23@lopp</a>: これらの警告を見るのは面白いです。SECは実際には10年間もの間この問題に取り組んでいなかったため、FOMOを増幅させました。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/spotted_model/status/1743339250769113405#m">05 Jan 2024 18:30:41@spotted_model</a>: EVを望まないと言っている人たちがいますが、ICE車をガソリンスタンドに寄って5分で給油できるから（50ドルで）。昨夜、家に着いて車を充電しました。約15秒かかりました。夜9時、壁充電器は電気料金が3分の1に下がることを知り、充電を開始しました。朝、15秒で充電を外し、満タンで車を動かすことができました。時間：30秒。費用：4.80ドル。皆がこの用途を持っているわけではないことはわかっていますが、多くの人がそれをすることができます。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/WhalePanda/status/1743562198582964534#m">06 Jan 2024 09:16:36@WhalePanda</a>: Bitcoin ETFへの流入に関する様々な意見を見ましたが、それは「大部分のOGがコールドストレージスポットコインを売却し、ETFを購入する」というものから「即座に購入を開始するための20億ドルの新しい資金がある」というものまでさまざまです。<br />
-  いずれのETFへの流入も概してプラスであり、最初のタイプはスポットを売却してETFを購入するため、初期の上昇余地は少ないでしょう。そして常に勝者は取引所であり（売却イベント+購入イベント）、報道は肯定的でしょう。この報道は多くの大手メディアによって取り上げられ、より多くの興奮が生まれるでしょう。<br />
-  年末までに10万ドルになるでしょう。</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1743660335612244475#m">06 Jan 2024 15:46:34@real_vijay</a>: </p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/BitcoinMagazine/status/1743659848175165823#m">06 Jan 2024 15:44:38@BitcoinMagazine</a>: JUST IN: 🇺🇸 SECが「デジタルアセット」に関する「FOMO」を拒否するよう投資家に警告を投稿<br />
-<a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a> ETFの承認に向けて準備中か？ 👀</p>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MaxiDerangement/status/1743642340248449237#m">06 Jan 2024 14:35:03@MaxiDerangement</a>: Liquid Networkは、VCから5億ドルの投資を受けた会社にとって大失敗です。現在の唯一の方法は、雷の請求書をしぶしぶL-BTCに変換し、それをユーザーに押し付けることです。<a href="https://x.com/aquawallet" title="渚">@aquawallet</a> が実行している</p>
-</li>
+<li><strong>Time</strong>: 08 Jan 2024 04:52:49</li>
+<li><strong>Author</strong>: <a href="https://x.com/derekmross/status/1744220590259491057#m">@derekmross</a></li>
+<li><strong>Content</strong>: lol my man if that happens ill print out this tweet and eat it.</li>
 </ul>
-<p>以上です。</p>
+<h2>Tweet 2</h2>
+<ul>
+<li><strong>Time</strong>: 08 Jan 2024 05:02:26</li>
+<li><strong>Author</strong>: <a href="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m">@TwoMinuteTimmy</a></li>
+<li><strong>Content</strong>: Whatever it ends up being it’s going to be a large candle.</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDS5lcZaEAEpSYL.jpg" /></p>
+<h2>Tweet 3</h2>
+<ul>
+<li><strong>Time</strong>: 08 Jan 2024 06:36:32</li>
+<li><strong>Author</strong>: <a href="https://x.com/DecentraSuze/status/1744246691824353540#m">@DecentraSuze</a></li>
+<li><strong>Content</strong>: Anticipating the SEC's midweek decision on a bitcoin spot ETF. Could this lead to a bitcoin supply crunch? My latest @Forbes article featuring @Excellion, @Scaramucci, @NateGeraci, @ForbesCrypto #Bitcoin</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/card_img%2F1744245077579276288%2F9MNW9PQn%3Fformat%3Djpg%26name%3D800x419" /></p>
+<h2>Tweet 4</h2>
+<ul>
+<li><strong>Time</strong>: 08 Jan 2024 06:43:02</li>
+<li><strong>Author</strong>: <a href="https://x.com/BTCRoel/status/1744248325761536510#m">@BTCRoel</a></li>
+<li><strong>Content</strong>: If we reach $1M bitcoin price before 15-01-2024 i put a small @AquaBitcoin logo tattoo on my ass</li>
+</ul>
+<h2>Tweet 5</h2>
+<ul>
+<li><strong>Time</strong>: 08 Jan 2024 06:46:54</li>
+<li><strong>Author</strong>: <a href="https://x.com/Macronaut_/status/1744249302183186779#m">@Macronaut_</a></li>
+<li><strong>Content</strong>: Remember I said 47 mil. BUT I WAS AT LEAST HALF JOKING. YOURE BEGINNIG TO SCARE ME. BUT I LIKE IT</li>
+</ul>
+<hr />
+<h2>Interpretation and Comments</h2>
+<ul>
+<li>The tweets reflect the excitement of the cryptocurrency community, particularly around the potential price of Bitcoin reaching $1 million.</li>
+<li>There is also anticipation around the SEC's decision on a Bitcoin spot ETF and its potential impact on the Bitcoin market.</li>
+<li>Some tweets contain humor and light-hearted bets related to the price of Bitcoin.</li>
+<li>The community seems divided on how fast the price of Bitcoin could reach $1 million, with varying timeframes and opinions.</li>
+</ul>
+<p>Overall, the tweets provide insights into the sentiments and expectations within the Bitcoin and cryptocurrency community.</p>
+<hr />
+<h2>References</h2>
+<ul>
+<li><br><a style="color:#5da2ff;" href="https://www.forbes.com/sites/digital-assets/2024/01/08/how-will-a-bitcoin-spot-etf-affect-bitcoins-price/">Forbes Article</a></li>
+<li><br><a style="color:#5da2ff;" href="https://blog.lopp.net/open-source-transcription-software-comparisons/">Comparison of Open Source Transcription Software</a></li>
+</ul>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

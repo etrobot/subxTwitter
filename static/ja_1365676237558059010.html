@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,23 +83,58 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>2024年1月6日のツイート</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/paulg/status/1743681297170469316#m">17:09:51</a> @paulg: 不思議なことに、私がハーバード・エクステンションスクールで出会っていたなら、ジェシカには会っていなかったでしょう。彼女とは、彼女がエクステンションスクールで受けた演技クラスで知り合った誰かによって私の家で開かれたパーティで出会いました。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1743680717689647298#m">17:07:33</a> @mkobach: Twitterは返信の問題を修正するためにアルゴリズムを更新する必要があります。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743670718422740998#m">16:27:49</a> @businessbarista: @HubSpotのおかげで、私たちは無料でナショナル・チャンピオンシップの50ヤードラインに座っています。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743673608285663626#m">16:39:18</a> @businessbarista: これはおそらく、初めてスタジアムがウォーリーをさがせのように変わったことでしょう。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">13:52:01</a> @dutchtide: 今日も絵を描きます。ライブ配信に参加して、今日のオペペンにどんな雰囲気があるかを見てください！</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665938430333149#m">16:08:50</a> @AliAbdaal: 今日の年次企画ワークショップに参加できない場合、心配しないでください！
-2024年の最良の自分を反映し、具現化するために、以下のプロンプトに回答することで、楽しんで参加することができます🎉</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743666349689841670#m">16:14:40</a> @AliAbdaal: 🚀前進を見据える：2023年の経験に基づいて、2024年に何を異なるようにしたいですか？ 新しい領域を探索したいですか、変更を加えたいですか？</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665957220839593#m">06:08:54</a> @AliAbdaal: これらのプロンプトについてのあなたの考えをコメントで共有していただくか、パーソナルなジャーナリングのためにこのスレッドをブックマークしてください📝</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">16:05:22</a> @dickiebush: 本日私が書いたもの：2024年1月6日（土）</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652948737995139#m">06:17:13</a> @jackbutcher: 複利協調</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652879821332720#m">06:16:56</a> @jackbutcher: おはよう</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743652378677498244#m">15:14:57</a> @gregisenberg: 私たちは大量に採用しています（これを共有して広げてください）</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743648532278501424#m">15:59:40</a> @gregisenberg: 私たちの2024年のキックオフエグゼクオフサイトが終了しました</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743652378677498244#m">15:14:57</a> @gregisenberg: 私たちは大量に採用しています（これを共有して広げてください）</p>
-<p><strong>コメント：</strong> この日のツイートはさまざまなトピックにわたります。ユーザー間のつながりや成功へのチャレンジ、ビジネス戦略などに関する情報が含まれています。特に、ハーバード・エクステンションスクールでの出会いや企業の成長戦略など、興味深い情報が含まれています。</p>
+            <h1>2024年1月8日のツイートまとめ</h1>
+<ul>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">ShaanVP</a>によるツイート（2024年1月8日 5:17:45）: 「何か怖れることがなかったら、あなたは何をしますか？（真剣な質問）」</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnnyxbrown/status/1743997081679704446#m">johnnyxbrown</a>によるツイート（2024年1月7日 14:04:40）: James Clearの「Atomic Habits」からの7つの人生を変える示唆</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">mechsicko</a>によるツイート（2024年1月8日 03:32:13）: Damien Hirstの作品「The Physical Impossibility of Death in the Mind of Someone Living」の紹介</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">sweatystartup</a>によるツイート（2024年1月8日 03:30:00）: メディアが伝えないこと：人類は日々お互いを助けるために尽力している</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">jackbutcher</a>によるツイート（2024年1月8日 03:14:05）: 画像ツイート</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">mkobach</a>によるツイート（2024年1月8日 02:36:53）: 広告に対する苦情</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/alijla2021/status/1743733269571440760#m">alijla2021</a>によるツイート（2024年1月6日 20:36:23）: 2枚の写真間の2時間の変化</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/bunya_eth/status/1744167328529453128#m">bunya_eth</a>によるツイート（2024年1月8日 01:21:10）: 街での新しいアート作品について</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ElliotHershberg/status/1744082999048613920#m">ElliotHershberg</a>によるツイート（2024年1月7日 19:46:05）: DNA編集の進歩と課題について</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">cremieuxrecueil</a>によるツイート（2024年1月7日 21:50:21）: Rice Universityの「Afrochemistry」というコースについて</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744153230756475351#m">sweatystartup</a>によるツイート（2024年1月8日 00:25:09）: Chris Kirkについてのツイート</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mikeholden/status/1744004703136989331#m">mikeholden</a>によるツイート（2024年1月7日 14:34:57）: 国内選手権ゲームに対する興味</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnbryanesq/status/1744042901280104535#m">johnbryanesq</a>によるツイート（2024年1月7日 17:06:45）: 歴史的な発見に関する写真ツイート</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140008640946497#m">businessbarista</a>によるツイート（2024年1月7日 23:32:37）: ナショナルチャンピオンシップへの参加について</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140540474462318#m">businessbarista</a>によるツイート（2024年1月7日 23:34:44）: 成功するためのスタントについて</p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140726210814317#m">businessbarista</a>によるツイート（2024年1月7日 23:35:28）: ヴァイラルを狙ったプランについて</p>
+</li>
+</ul>
+<p>以上</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

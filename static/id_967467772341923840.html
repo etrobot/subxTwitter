@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,38 +83,20 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Ringkasan Tweet</h1>
-<ol>
-<li><strong>AaronvanW</strong> (06 Jan 2024 17:52:05)
-   <img style="max-width: 20rem;margin:0.5rem;" alt="AaronvanW" src="https://x.com/AaronvanW/status/1743691921946464496#m" /></li>
-<li>
-<p>AaronvanW membagikan gambar buku terlaris di Amazon.nl.</p>
-</li>
-<li>
-<p><strong>UnleashedChat</strong> (06 Jan 2024 17.25:04)
-   <img style="max-width: 20rem;margin:0.5rem;" alt="UnleashedChat" src="https://x.com/UnleashedChat/status/1743685126658121845#m" /></p>
-</li>
-<li>
-<p>Unleashed.Chat V0.1.2 diluncurkan dengan beberapa perbaikan kinerja frontend dan privasi yang ditingkatkan.</p>
-</li>
-<li>
-<p><strong>TuurDemeester</strong> (06 Jan 2024 17:31:12)
-   <img style="max-width: 20rem;margin:0.5rem;" alt="TuurDemeester" src="https://x.com/TuurDemeester/status/1743686667200770223#m" /></p>
-</li>
-<li>
-<p>TuurDemeester menyatakan bahwa Ethereum tidak pernah menjadi proyek cypherpunk yang sebenarnya.</p>
-</li>
-<li>
-<p><strong>theinstagibbs</strong> (06 Jan 2024 17:16:21)
-   <img style="max-width: 20rem;margin:0.5rem;" alt="theinstagibbs" src="https://x.com/theinstagibbs/status/1743682932584112603#m" /></p>
-</li>
-<li>Seorang pengguna mencurahkan kekagumannya pada AaronvanW atas kesuksesan bukunya.</li>
-</ol>
-<p>Dan seterusnya...</p>
-<h2>Interpretasi dan Komentar</h2>
-<p>Dari kumpulan tweet di atas, terdapat beragam topik yang dibahas, mulai dari peluncuran Unleashed.Chat V0.1.2, diskusi tentang Ethereum, komentar tentang ETF, pendapat tentang Bitcoin bears, hingga pembaruan dari SEC terkait "FOMO" terhadap digital assets.</p>
-<p>Ini menunjukkan betapa dinamisnya percakapan di dunia daring, yang melibatkan berbagai topik mulai dari teknologi, keuangan, hingga politik. Dengan begitu banyak peristiwa yang terjadi, penting bagi kita untuk tetap update dan terbuka terhadap berbagai perspektif yang ada.</p>
-<p>Jika Anda memiliki pandangan atau komentar mengenai salah satu tweet di atas, jangan ragu untuk berbagi di kolom komentar di bawah!</p>
+            <h1>Berbagai Prediksi Bitcoin: Dari Tattoo hingga Harga yang Fantastis</h1>
+<p>Pada 8 Januari 2024, komunitas kripto tampaknya sedang diselimuti oleh antusiasme dan ekspektasi yang tinggi terhadap pergerakan harga Bitcoin. Berikut beberapa prediksi dan komentar menarik yang ramai dibicarakan di Twitter:</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/derekmross/status/1744220590259491057#m">08 Jan 2024 04:52:49@derekmross</a>: @derekrmross mengatakan bahwa jika prediksinya menjadi kenyataan, ia akan mencetak tweet ini dan memakannya dengan santai.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m">08 Jan 2024 05:02:26@TwoMinuteTimmy</a>: Menyertai dengan komentar lucu, @TwoMinuteTimmy mengunggah gambar grafik kandil besar yang disertai dengan caption "Whatever it ends up being it's going to be a large candle."</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/DecentraSuze/status/1744246691824353540#m">08 Jan 2024 06:36:32@DecentraSuze</a>: <a href="https://x.com/DecentraSuze">@DecentraSuze</a> membahas antisipasi atas keputusan SEC terkait ETF Bitcoin yang diharapkan akan mempengaruhi pasokan Bitcoin.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/BTCRoel/status/1744248325761536510#m">08 Jan 2024 06:43:02@BTCRoel</a>: @BTCRoel bahkan menawarkan taruhan dengan menjanjikan akan membuat tato logo AQUA Wallet di pantatnya jika harga Bitcoin mencapai $1 juta sebelum 15 Januari 2024.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Macronaut_/status/1744249302183186779#m">08 Jan 2024 06:46:54@Macronaut_</a>: @Macronaut_ merespons prediksi harga Bitcoin dengan candaan, mengekspresikan kewaspadaannya namun juga ketertarikannya terhadap kemungkinan tersebut.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Spartacus____X/status/1744246757423280366#m">08 Jan 2024 06:36:48@Spartacus____X</a>: Pengguna @Spartacus____X bahkan berani bertaruh dengan mengatakan bahwa jika prediksi harga Bitcoin terpenuhi, ia akan membuat tato wajah seseorang di pantatnya.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/XBitcode/status/1744186241539522568#m">08 Jan 2024 02:36:20@XBitcode</a>: @XBitcode berbicara tentang potensi DriveChain dan perubahan positif yang dapat dibawanya bagi pengembangan teknologi Bitcoin.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/XBitcode/status/1744254042073690574#m">08 Jan 2024 07:05:44@XBitcode</a>: Dalam tweet lainnya, @XBitcode menjelaskan mengenai pentingnya memilih arah yang positif dalam pengembangan Bitcoin.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ercwl/status/1744179087562739748#m">08 Jan 2024 02:07:54@ercwl</a>: @ercwl memberikan komentar tentang penurunan kapasitas saluran Lightning Network di bawah 10.000 BTC.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1744236724132495770#m">08 Jan 2024 05:56:56@real_vijay</a>: Dalam serangkaian tweet, @real_vijay membahas konsekuensi potensial dari adopsi Bitcoin ETF oleh lembaga keuangan tradisional.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/lopp/status/1744211226165449120#m">08 Jan 2024 04:15:36@lopp</a>: @lopp membagikan informasi tentang alat open source untuk mentranskripsi konten audio menjadi teks yang legible.</p>
+<p>Dalam artikel ini, kita melihat betapa ekspektasi tinggi terhadap pergerakan harga Bitcoin telah memicu serangkaian prediksi dan komentar yang menarik dari berbagai tokoh industri kripto di Twitter. Antusiasme ini mencerminkan ketidakpastian yang sedang dirasakan oleh para pelaku pasar terhadap masa depan Bitcoin. Dari taruhan untuk membuat tato hingga pembahasan teknologi, komunitas kripto terus memperdebatkan dan meramalkan pergerakan harga Bitcoin yang menarik untuk dimonitor.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

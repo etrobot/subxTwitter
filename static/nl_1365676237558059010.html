@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,77 +83,84 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweets Compilation</h1>
+            <h2>Tweets Rondom 08 Jan 2024</h2>
 <ul>
 <li>
-<p><em>07 Jan 2024 03:02:56</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1743830549150535698#m">@sweatystartup</a></strong>: I regret my earlier tweet about Bill Ackman. He’s positively impacting a lot of things and I think his mission is worthy. I’m glad there are a lot of people like him out there.</p>
+<p><strong>05:17:45 @ShaanVP</strong>: <a href="https://x.com/ShaanVP/status/1744226866255606116#m">Link</a><br />
+  Wat zou je doen als je niet bang was? (serieuze vraag)</p>
 </li>
 <li>
-<p><em>07 Jan 2024 02:13:25</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/Hemdawg_/status/1743818088443756861#m">@Hemdawg_</a></strong>: VV’d up <a href="https://x.com/jackbutcher" title="Jack Butcher">Jack Butcher</a> <a href="https://x.com/visualizevalue" title="VV">@visualizevalue</a> ✍️
-  <img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.oksocial.net/pic/media%2FGDNJTtcWwAAm0qN.jpg" /></p>
-</li>
-<li>
-<p><em>07 Jan 2024 01:28:06</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1743806684181430642#m">@sweatystartup</a></strong>: If I could say ONE THING to every wanna be entrepreneur in the world:
-  <img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.oksocial.net/pic/amplify_video_thumb%2F1743806523514449920%2Fimg%2FAFsVtAFOP9I7vijf.jpg" /></p>
-</li>
-<li>
-<p><em>07 Jan 2024 01:03:28</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1743800485650256058#m">@sweatystartup</a></strong>: If you’ve been dating somebody for more than 3 years, you have two options:
-    1) get engaged.
-    2) break up.
-    There are zero exceptions. Grow up, make a commitment and start a family.</p>
-</li>
-<li>
-<p><em>07 Jan 2024 00:45:18</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1743795914710364211#m">@mkobach</a>:</strong> Not only should this be a business, it could be an employer subsidized perk.<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.oksocial.net/pic/media%2FGDNJTtcWwAAm0qN.jpg" /></p>
-</li>
-<li>
-<p><em>07 Jan 2024 00:41:50</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1743795041301098869#m">@mkobach</a>:</strong> I've published 4 papers in peer-reviewed journals. I could pass a lie detector that I never plagiarized even one sentence. But I wouldn't bet my thumb that an AI wouldn't still find something.</p>
-</li>
-<li>
-<p><em>06 Jan 2024 23:40:10</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/nateliason/status/1743779521399005603#m">@nateliason</a>:</strong> Man if y’all were confused by Tenet wait till you find Primer</p>
-</li>
-<li>
-<p><em>06 Jan 2024 14:24:47</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/TheStalwart/status/1743639757022798142#m">@TheStalwart</a>:</strong> "corruption inside China’s Rocket Force and throughout the nation’s defense industrial base is so extensive that US officials now believe Xi is less likely to contemplate major military action in the coming years than would otherwise have been the case..." <a href="https://www.bloomberg.com/news/articles/2024-01-06/us-intelligence-shows-flawed-china-missiles-led-xi-jinping-to-purge-military?srnd=premium&amp;sref=vuYGislZ">bloomberg.com/news/articles/…</a><br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.oksocial.net/pic/card_img%2F1743617198088671232%2FvgcLAdHc%3Fformat%3Djpg%26name%3D800x419" /></p>
-</li>
-<li>
-<p><em>06 Jan 2024 23:27:12</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1743776257588801640#m">@sweatystartup</a>:</strong> When you’re at a wedding there is one thing you can do to make the party better: Dance with the grandmas. Old ladies LOVE dancing but their grumpy husbands do not.</p>
-</li>
-<li>
-<p><em>06 Jan 2024 23:25:54</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/paulg/status/1743775930714050749#m">@paulg</a>:</strong> Reading progress reports from <a href="https://x.com/arcinstitute" title="Arc Institute">Arc Institute</a> is inspiring. They get so much done so fast. They're like a startup of research. It must be very exciting to work there.</p>
-</li>
-<li>
-<p><em>06 Jan 2024 23:22:25</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743775053894852751#m">@businessbarista</a>:</strong> A $27bn business had to hand print our shirts because 10 vendors couldn’t get the job done in time. Well done, <a href="https://x.com/HubSpot" title="HubSpot">HubSpot</a>. Scrappy as hell. T-minus 2 days. More to come from your resident <a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a>.<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image 1" src="https://nitter.oksocial.net/pic/media%2FGDMiKw1WcAAuIoC.jpg" /><br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image 2" src="https://nitter.oksocial.net/pic/media%2FGDMiKwtWgAAIiob.jpg" /></p>
-</li>
-<li>
-<p><em>06 Jan 2024 23:00:00</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/fortelabs/status/1743769412170047496#m">@fortelabs</a>:</strong> Reputation isn't built overnight but through daily deeds over time. Consistency in your actions builds trust and shapes how the world sees you</p>
-</li>
-<li>
-<p><em>06 Jan 2024 22:33:37</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/MiaFarrow/status/1743762773287322080#m">@MiaFarrow</a>:</strong> While a violent mob was attacking our Capitol, a group of 147 Republicans with the same goal had been working from inside to discount Joe Biden’s electoral votes. 117 of these members of Congress are running for reelection in 2024. They are treasonous. Vote them out<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.oksocial.net/pic/media%2FGDMW__4WEAAjlF1.jpg" /></p>
-</li>
-<li>
-<p><em>06 Jan 2024 22:34:39</em><br />
-<strong><br><a style="color:#5da2ff;" href="https://x.com/MollyJongFast/status/1743763034756010179#m">@MollyJongFast</a>:</strong> You know that Republican senators could have saved us from this, right? Like this might not be Mitt Romney‘s fault but republicans could have voted him guilty, and this whole thing would be over? The cognitive dissonance here is stunning…</p>
+<p><strong>14:04:40 @johnnyxbrown</strong>: <a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">Link</a><br />
+  7 levensveranderende inzichten uit "Atomic Habits" van James Clear:</p>
 </li>
 </ul>
-<h1>Interpretation and Comments</h1>
-<p>These tweets cover a wide range of topics, from business and entrepreneurship to political events and personal reflections. The tweets reflect the diverse interests and opinions of the individuals on the platform, providing a snapshot of current events and personal perspectives. From discussions about relationships and commitment to reflections on life learnings and political commentary, Twitter continues to be a platform for sharing diverse viewpoints and engaging in public discourse.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/media%2FGDPrWSlXgAAmoWL.jpg" /></p>
+<ul>
+<li>
+<p><strong>03:32:13 @mechsicko</strong>: <a href="https://x.com/mechsicko/status/1744200308543332432#m">Link</a><br />
+  De Fysieke Onmogelijkheid van Dood in het Bewustzijn van Iemand Die Leeft<br />
+  Kunstenaar || Damien Hirst<br />
+  Jaar || 1991<br />
+  Type || Tijgershaai, glas, staal, 5% formaldehyde-oplossing<br />
+  Medium || <a href="https://x.com/opepenedition" title="Opepen Edition">@opepenedition</a><br />
+  Beweging || minimalisme, pixel, meme<br />
+  Onderwerp || Leven, schijnbare dood<br />
+  Cc: <a href="https://x.com/jackbutcher" title="Jack Butcher">@jackbutcher</a><br />
+  🪢</p>
+</li>
+<li>
+<p><strong>03:30:00 @sweatystartup</strong>: <a href="https://x.com/sweatystartup/status/1744199748515504221#m">Link</a><br />
+  Wat de media je niet vertelt:<br />
+  De wereld is een geweldige plek.<br />
+  Mensen doen elke dag hun best om andere mensen te helpen.<br />
+  Gunsten. Hulp.<br />
+  Ze zullen letterlijk hun auto aan de kant zetten in landelijk Amerika om je te helpen je probleem op te lossen.<br />
+  De wereld is een uitstekende plek.</p>
+</li>
+<li>
+<p><strong>03:14:05 @jackbutcher</strong>: <a href="https://x.com/jackbutcher/status/1744195745484243166#m">Link</a><br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+</li>
+<li>
+<p><strong>02:36:53 @mkobach</strong>: <a href="https://x.com/mkobach/status/1744186379741938012#m">Link</a><br />
+  Ik haat deze advertenties. Ben ik hier alleen?</p>
+</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/media%2FGDML6uTWgAAVgDx.jpg" /></p>
+<ul>
+<li><strong>20:36:23 @alijla2021</strong>: <a href="https://x.com/alijla2021/status/1743733269571440760#m">Link</a><br />
+  Twee uur tussen de twee foto's</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding1" src="https://nitter.catsarch.com/pic/media%2FGDL8KhsXAAA137g.jpg" />
+  <img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding2" src="https://nitter.catsarch.com/pic/media%2FGDL8KhnXgAAs6CE.jpg" /></p>
+<ul>
+<li><strong>01:21:10 @bunya_eth</strong>: <a href="https://x.com/bunya_eth/status/1744167328529453128#m">Link</a><br />
+  Pepermissionless straatkunst</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" /></p>
+<ul>
+<li><strong>23:32:37 @businessbarista</strong>: <a href="https://x.com/businessbarista/status/1744140008640946497#m">Link</a><br />
+  Ga gratis naar het Nationaal Kampioenschap (dankzij <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>) ✅<br />
+  Verzin een virale marketingstunt ✅  </li>
+<li>
+<p>Spot de 8 oranje fans voor $<br />
+  Pers neemt contact op om het verhaal te dekken ✅<br />
+  Kom op live tv &amp; ga viraal op sociale media ⬜️<br />
+  De reis gaat verder.<br />
+<a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a></p>
+</li>
+<li>
+<p><strong>23:34:44 @businessbarista</strong>: <a href="https://x.com/businessbarista/status/1744140540474462318#m">Link</a><br />
+  Hij scoort:</p>
+</li>
+<li>
+<p><strong>00:25:09 @sweatystartup</strong>: <a href="https://x.com/sweatystartup/status/1744153230756475351#m">Link</a><br />
+  Chris Kirk met ijskoud water in zijn aderen.</p>
+</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1744153108026961921%2Fimg%2FUV7EmO5qVe3az-QE.jpg" /></p>
+<h2>Interpretatie en Commentaar</h2>
+<p>De tweets van vandaag variëren van kunstbeschrijvingen en marketingstunts tot eerbetonen aan geneeskundige doorbraken. Het is interessant om te zien hoe verschillende mensen Twitter gebruiken om een verscheidenheid aan onderwerpen aan te kaarten.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

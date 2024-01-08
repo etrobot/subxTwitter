@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,48 +83,102 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Notícias do Twitter - 06 de janeiro de 2024</h1>
+            <h1>Notícias do Twitter</h1>
+<h2>08 Jan 2024</h2>
+<ul>
+<li><strong>05:17:45 -</strong> <em>@ShaanVP</em>  </li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">Tweet original</a><br />
+  "O que você faria se não tivesse medo? (pergunta séria)"</li>
+</ul>
+<h2>07 Jan 2024</h2>
+<ul>
+<li><strong>14:04:40 -</strong> <em>@johnnyxbrown</em>  </li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnnyxbrown/status/1743997081679704446#m">Tweet original</a><br />
+  "7 insights que mudam a vida do livro “Atomic Habits” de James Clear"</p>
+</li>
+<li>
+<p><strong>19:46:05 -</strong> <em>@ElliotHershberg</em>  </p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ElliotHershberg/status/1744082999048613920#m">Tweet original</a><br />
+  "Progressos na leitura, escrita e edição do DNA têm sido imparáveis."</p>
+</li>
+<li>
+<p><strong>21:50:21 -</strong> <em>@cremieuxrecueil</em>  </p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">Tweet original</a><br />
+  "Universidade Rice oferece curso de “Afroquímica”"</p>
+</li>
+<li>
+<p><strong>23:32:37 -</strong> <em>@businessbarista</em>  </p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140008640946497#m">Tweet original</a><br />
+  "Ir para o Campeonato Nacional de Futebol Americano de graça (obrigado <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>) ✅"</p>
+</li>
+<li>
+<p><strong>23:34:44 -</strong> <em>@businessbarista</em>  </p>
+</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140540474462318#m">Tweet original</a><br />
+  "Ele marca:"</li>
+</ul>
+<h2>06 Jan 2024</h2>
+<ul>
+<li><strong>20:36:23 -</strong> <em>@alijla2021</em>  </li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/alijla2021/status/1743733269571440760#m">Tweet original</a><br />
+  "Duas horas entre as duas fotos"</li>
+</ul>
+<h2>08 Jan 2024</h2>
+<ul>
+<li><strong>03:32:13 -</strong> <em>@mechsicko</em>  </li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">Tweet original</a><br />
+  "A Impossibilidade Física da Morte na Mente de Alguém Vivo"</p>
+</li>
+<li>
+<p><strong>03:30:00 -</strong> <em>@sweatystartup</em>  </p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">Tweet original</a><br />
+  "O que a mídia não te conta: O mundo é um ótimo lugar."</p>
+</li>
+<li>
+<p><strong>03:14:05 -</strong> <em>@jackbutcher</em>  </p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">Tweet original</a><br />
+  "Img"</p>
+</li>
+<li>
+<p><strong>02:36:53 -</strong> <em>@mkobach</em>  </p>
+</li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">Tweet original</a><br />
+  "Eu odeio esses anúncios. Estou sozinho nessa?"</p>
+</li>
+<li>
+<p><strong>01:21:10 -</strong> <em>@bunya_eth</em>  </p>
+</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/bunya_eth/status/1744167328529453128#m">Tweet original</a><br />
+  "Arte de rua permissiva"</li>
+</ul>
+<h2>Citações</h2>
+<ul>
+<li><strong>07 Jan 2024</strong> - <em>@businessbarista</em>  </li>
+<li>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743371381952118893#m">Tweet citado</a><br />
+  "É oficial. <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> vai me enviar e 7 amigos para sentar na linha de 50 jardas no Campeonato Nacional de Futebol Americano."</p>
+</li>
+<li>
+<p><strong>07 Jan 2024</strong> - <em>@businessbarista</em>  </p>
+</li>
+<li><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743670718422740998#m">Tweet citado</a><br />
+  "Meus amigos e eu vamos sentar na linha de 50 jardas no Campeonato Nacional de Futebol Americano de graça graças ao <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>."</li>
+</ul>
 <hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/typesfast/status/1743654060673093754#m">15:21:38 - @typesfast</a>: 95% dos navios porta-contentores que teriam passado pelo Mar Vermelho estão agora a contornar a Ponta Sul de África a partir desta manhã. Os navios que desviam do seu percurso ordinário estão marcados a laranja no mapa da <a href="https://x.com/flexport" title="Flexport">@flexport</a> abaixo.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Flexport" src="https://nitter.nohost.network/pic/media%2FGDK0IEYaQAEKdD2.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/paulg/status/1743681297170469316#m">17:09:51 - @paulg</a>: Curiosamente, eu nunca teria conhecido a Jessica se não fosse pela Harvard Extension School. Conheci-a quando foi convidada para uma festa na minha casa por alguém que conheceu numa aula de teatro que frequentou na Extension School.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1743680717689647298#m">17:07:33 - @mkobach</a>: O Twitter precisa atualizar o seu algoritmo para corrigir o problema das respostas.</p>
-<p>Os principais comentários para qualquer tweet devem ser respostas relevantes ao tweet original. Em vez disso, os utilizadores descobriram como manipular o sistema ao publicar vídeos virais irrelevantes como respostas.</p>
-<p>Por favor, corrijam isto <a href="https://x.com/elonmusk" title="Elon Musk">@elonmusk</a>.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743670718422740998#m">16:27:49 - @businessbarista</a>: Os meus amigos e eu estamos sentados na linha de 50 jardas no Campeonato Nacional de graça, graças ao <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>.</p>
-<p>Missão 1 cumprida.</p>
-<p>Missão 2: tornar-se viral.</p>
-<p>Aqui está o plano...</p>
-<p>É hora de jogar um jogo (e sim, há dinheiro envolvido).</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1743673608285663626#m">16:39:18 - @businessbarista</a>: Acho que esta é a primeira vez na história que um estádio de futebol se transformou em Onde está o Waldo.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">13:52:01 - @dutchtide</a>: Mais pintura hoje, venha participar na transmissão ao vivo para se divertir e ver do que se trata a abertura de hoje! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Pintura" src="https://nitter.nohost.network/pic/card_img%2F1743691027071021056%2FBZS3c3G6%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665938430333149#m">16:08:50 - @AliAbdaal</a>: Não pode comparecer ao Workshop Anual de Planeamento de hoje? Não se preocupe!</p>
-<p>Pode ainda participar na diversão respondendo às seguintes perguntas para ajudá-lo a refletir sobre o ano passado e manifestar o seu melhor eu para 2024.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665955132027187#m">16:08:54 - @AliAbdaal</a>: 🚀 A olhar para o futuro: Com base nas suas experiências em 2023, o que gostaria de fazer de forma diferente em 2024? Há novas áreas que gostaria de explorar ou mudanças que deseja fazer?</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665957220839593#m">16:08:54 - @AliAbdaal</a>: Sinta-se à vontade para partilhar os seus pensamentos sobre estas perguntas nos comentários, ou marcar este tópico para alguma escrita pessoal.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">16:05:22 - @dickiebush</a>: O que escrevi hoje: Sábado 6/1/24</p>
-<p>Tempo total de escrita: 3 horas e 17 minutos</p>
-<p>• Registado 10 coisas que estavam na mente (30 minutos)</p>
-<p>• Terminei o meu resumo semanal do "o que aconteceu" e "o que aprendi" (30 minutos)</p>
-<p>• Escrevi 20 tweets trabalhando no meu backlog de ideias (30 minutos)</p>
-<p>• Esbocei 2 posts longos para deixá-los marinar em segundo plano esta semana (60 minutos)</p>
-<p>• Escrevi ideias sobre o meu ritmo de conteúdo para o próximo trimestre para a nossa reunião de conteúdo na segunda-feira (30 minutos)</p>
-<p>A sentir-me num bom fluxo para começar o ano.</p>
-<p>• As ideias estão fervilhando</p>
-<p>• Cappuccinos estão a ser consumidos</p>
-<p>Empolgado por manter isto durante todo o ano.</p>
-<p>Agora, o que escreveu hoje?</p>
-<p>Deixe uma resposta para que eu saiba - leio todas elas.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Escrita" src="https://nitter.nohost.network/pic/media%2FGDK98zfXwAA_7fa.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652948737995139#m">15:17:13 - @jackbutcher</a>: coordenação de juros compostos</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652879821332720#m">15:16:56 - @jackbutcher</a>: bom dia</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Composição" src="https://nitter.nohost.network/pic/media%2FGDKy_2QWwAA0XRu.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743648532278501424#m">14:59:40 - @gregisenberg</a>: Acabámos de concluir o nosso retiro executivo de início de 2024 em Miami e tenho algumas notas para partilhar consigo</p>
-<p>10 lições do nosso retiro a construir o nosso conglomerado de 8 números:</p>
-<p><em>Notas e links adicionais omitidos devido ao limite de caracteres.</em></p>
-<hr />
-<p>Este artigo resume uma série de tweets do Twitter em 06 de janeiro de 2024. Os tweets abordam tópicos como desvios de navios porta-contentores, encontros inesperados em Harvard, atualizações do Twitter, um desafio de jogo no Campeonato Nacional, pintura ao vivo, workshops de planeamento anual, reflexões sobre o ano anterior, rotina de escrita diária, coordenação de juros compostos e 10 lições de um retiro executivo. Cada tweet fornece uma visão única dos acontecimentos e pensamentos dos autores.</p>
+<p>Esses são alguns dos tweets que estão movimentando as redes sociais. Fique por dentro das últimas notícias e comentários do Twitter.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

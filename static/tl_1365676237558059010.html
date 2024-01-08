@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,73 +83,26 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Container Ships Redirected Due to Red Sea Situation</h1>
-<p><strong>@typesfast</strong><br />
-<em>06 Jan 2024 15:21:38</em><br />
-<a href="https://x.com/typesfast/status/1743654060673093754#m">Link to tweet</a></p>
-<p>Container ships that typically transit the Red Sea have been redirected to go around the Southern Tip of Africa due to a current situation. The ships diverting from their usual course are marked in orange on the Flexport map.</p>
+            <h1>Highlights ng Twitter</h1>
+<h2>Enero 8, 2024</h2>
+<h3>[05:17:45]</h3>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">@ShaanVP</a>: Ano ang gagawin mo kung hindi ka natatakot? (seryosong tanong)</p>
+<p>Ang tweet na ito ay nagtatanong kung ano ang mga bagay na gustong gawin ng isang tao kung wala siyang takot. Isang pagsubok ito sa mga reader na pagnilayan ang kanilang mga hangarin at mga bagay na gustong gawin sa buhay.</p>
+<h3>[03:30:00]</h3>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">@sweatystartup</a>: Ano ang hindi sinasabi ng media:</p>
+<p>Ang tweet na ito ay nagpapakita ng positibong pananaw sa mundo, na may mga tao na handang tumulong sa kapwa tao. Ibinabahagi nito ang mga magagandang karanasan at ang kabutihang-palad ng mundo.</p>
+<h3>[03:14:05]</h3>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">@jackbutcher</a>: </p>
+<p>Ang tweet na ito ay may kaugnayan sa isang larawan na nagpapakita ng isang mensahe o konsepto. Ang larawang ito ay maaaring naglalaman ng mahalagang impormasyon na maaring makakuha ng interes ng mga mambabasa.</p>
+<h3>[02:36:53]</h3>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">@mkobach</a>: Galit sa mga ads. Nag-iisa ba ako dito?</p>
+<p>Ang tweet na ito ay nagpapahayag ng damdamin ukol sa mga ads o advertisement. Ipinapakita nito ang personal na opinyon ng may-akda patungkol sa advertising.</p>
+<h3>[01:21:10]</h3>
+<p><br><a style="color:#5da2ff;" href="https://x.com/bunya_eth/status/1744167328529453128#m">@bunya_eth</a>: Pepermissionless street art</p>
+<p>Ang tweet na ito ay nagpapakita ng isang larawan na may kaugnayan sa street art. Ipinapakita nito ang pagpapahalaga sa sining at kultura ng isang komunidad.</p>
 <hr />
-<p><strong>@paulg</strong><br />
-<em>06 Jan 2024 17:09:51</em><br />
-<a href="https://x.com/paulg/status/1743681297170469316#m">Link to tweet</a></p>
-<p>Personal anecdote of meeting someone at Harvard Extension School.</p>
-<hr />
-<p><strong>@mkobach</strong><br />
-<em>06 Jan 2024 17:07:33</em><br />
-<a href="https://x.com/mkobach/status/1743680717689647298#m">Link to tweet</a></p>
-<p>Suggestion for Twitter to update their algorithm to better manage reply content.</p>
-<hr />
-<p><strong>@businessbarista</strong><br />
-<em>06 Jan 2024 16:27:49</em><br />
-<a href="https://x.com/businessbarista/status/1743670718422740998#m">Link to tweet</a></p>
-<p>Announcement of a viral game during the National Championship and how to participate.</p>
-<hr />
-<p><strong>@businessbarista</strong><br />
-<em>06 Jan 2024 16:39:18</em><br />
-<a href="https://x.com/businessbarista/status/1743673608285663626#m">Link to tweet</a></p>
-<p>Comment on the novelty of turning a football stadium into a "Where’s Waldo" game.</p>
-<hr />
-<p><strong>@dutchtide</strong><br />
-<em>06 Jan 2024 13:52:01</em><br />
-<a href="https://x.com/dutchtide/status/1743631508307411091#m">Link to tweet</a></p>
-<p>Invitation to join a painting livestream.</p>
-<hr />
-<p><strong>@AliAbdaal</strong><br />
-<em>06 Jan 2024 16:08:50</em><br />
-<a href="https://x.com/AliAbdaal/status/1743665938430333149#m">Link to tweet</a></p>
-<p>Engagement prompt for a reflection on 2023 and setting goals for 2024.</p>
-<hr />
-<p><strong>@AliAbdaal</strong><br />
-<em>06 Jan 2024 16:08:54</em><br />
-<a href="https://x.com/AliAbdaal/status/1743665955132027187#m">Link to tweet</a></p>
-<p>Further prompts to reflect on experiences and goals for 2024.</p>
-<hr />
-<p><strong>@AliAbdaal</strong><br />
-<em>06 Jan 2024 16:08:54</em><br />
-<a href="https://x.com/AliAbdaal/status/1743665957220839593#m">Link to tweet</a></p>
-<p>Encouragement for users to share their thoughts on the prompts.</p>
-<hr />
-<p><strong>@dickiebush</strong><br />
-<em>06 Jan 2024 16:05:22</em><br />
-<a href="https://x.com/dickiebush/status/1743665067642536281#m">Link to tweet</a></p>
-<p>Account of the author’s writing activities for the day.</p>
-<hr />
-<p><strong>@jackbutcher</strong><br />
-<em>06 Jan 2024 15:17:13</em><br />
-<a href="https://x.com/jackbutcher/status/1743652948737995139#m">Link to tweet</a></p>
-<p>Cryptic tweet about "compounding coordination".</p>
-<hr />
-<p><strong>@jackbutcher</strong><br />
-<em>06 Jan 2024 15:16:56</em><br />
-<a href="https://x.com/jackbutcher/status/1743652879821332720#m">Link to tweet</a></p>
-<p>Simple greeting "gm".</p>
-<hr />
-<p><strong>@gregisenberg</strong><br />
-<em>06 Jan 2024 14:59:40</em><br />
-<a href="https://x.com/gregisenberg/status/1743648532278501424#m">Link to tweet</a></p>
-<p>Reflections and lessons from a recent executive offsite.</p>
-<hr />
-<p><em>This is a compilation of tweets featuring a variety of topics such as current events, personal anecdotes, social media suggestions, and reflections on personal and professional development. Based on the content, it is evident that Twitter serves as a platform for diverse forms of expression and communication.</em></p>
+<p>Ibinigay ang tweet compilation ni <a href="https://x.com/ShaanVP">ShaanVP</a> tungkol sa kawalan ng takot, pagpapahalaga sa kagandahan ng mundo ni <a href="https://x.com/sweatystartup">sweatystartup</a>, at mga larawan ng sining at konseptwal na mensahe ni <a href="https://x.com/jackbutcher">jackbutcher</a> at <a href="https://x.com/mkobach">mkobach</a>. Nagpapakita ito ng iba't ibang interes at opinyon ng mga indibidwal sa platform ng Twitter.</p>
+<p>Kung nais mong malaman ang iba't ibang pananaw at opinyon ng mga tao sa social media, maaari kang mag-follow sa kanilang mga Twitter accounts. Mag-register na rin para sa mga update sa aming blog upang maging updated sa mga kaganapan sa social media at iba pang relevanteng balita.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

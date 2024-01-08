@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,34 +83,74 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>تغريدات</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743691921946464496#m">06 يناير 2024 17:52:05@AaronvanW</a>: 
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLWj-UWUAA6oua.jpg" /><br><br><a style="color:#5da2ff;" href="https://x.com/UnleashedChat/status/1743685126658121845#m">06 يناير 2024 17:25:04@UnleashedChat</a>: <a href="https://Unleashed.Chat">Unleashed.Chat</a> V0.1.2 مباشر  </p>
-<ul>
-<li>تحسينات أداء الواجهة الأمامية.  </li>
-<li>إصلاح الخطأ الذي جعل التمرير لأعلى في نافذة الدردشة مستحيلًا أثناء بث البوت.  </li>
-<li>تحسين الخصوصية بين الخوادم ووحدات المعالجة المركزية.</li>
-</ul>
-<p><br><a style="color:#5da2ff;" href="https://x.com/UnleashedChat/status/1743301355467395260#m">x.com/UnleashedChat/status/1743301355467395260#m</a>
-<br><br><a style="color:#5da2ff;" href="https://x.com/TuurDemeester/status/1743686667200770223#m">06 يناير 2024 17:31:12@TuurDemeester</a>: إيثيريوم كان دائمًا "جافا سكريبت على البلوكشين"، ولم يكن مشروعًا حقيقيًا للسيبربانك.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Leishman/status/1743683398256714102#m">x.com/Leishman/status/1743683398256714102#m</a>
-<br><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743667528620970391#m">06 يناير 2024 16:15:09@AaronvanW</a>: إنه أمر مثير للاهتمام بالفعل.  </p>
-<p><br><a style="color:#5da2ff;" href="https://www.amazon.nl/-/en/gp/bestsellers/books">amazon.nl/-/en/gp/bestseller…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLAXcNWAAAkiEU.jpg" /><br><br><a style="color:#5da2ff;" href="https://x.com/theinstagibbs/status/1743682932584112603#m">06 يناير 2024 17:16:21@theinstagibbs</a>: هل قمت بتنسيق نمو البقرة لنشرها
-<br><br><a style="color:#5da2ff;" href="https://x.com/AaronvanW/status/1743686605041258906#m">06 يناير 2024 17:30:57@AaronvanW</a>: 
-<br><br><a style="color:#5da2ff;" href="https://x.com/real_vijay/status/1743683157097062550#m">06 يناير 2024 17:17:15@real_vijay</a>: إيجابيات صندوق الاستثمار المتداول: تدفق جماهيري ضخم من رؤوس الأموال العالمية إلى مخزون مقاوم للتضخم.  </p>
-<p>سلبيات صندوق الاستثمار المتداول: زيادة مخاطر التركيز الوديعة (السبب الرئيسي في أن الذهب أصبح عرضة لهجوم الدولة)  </p>
-<p>يجب علينا العمل على التخفيف من هذا المخاطر قدر الإمكان.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLOl3jaMAANUiX.jpg" /><br><br><a style="color:#5da2ff;" href="https://x.com/mikealfred/status/1743666811449806911#m">06 يناير 2024 16:12:18@mikealfred</a>: يجب عليك أن تقف فقط وتأخذ لحظة لتعجب بدببة البتكوين. هؤلاء الأشخاص يعملون بجد أكثر من أي شخص آخر على الكوكب وكلها عبث. لا توجد مكافأة بعد سنوات وسنوات من الفرص المفقودة والخسائر. قدرة تحمل الألم خارجة عن القيود. أنا لا شيء إلا معجب.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ZACFutures/status/1743644668926071217#m">x.com/ZACFutures/status/1743644668926071217#m</a>
-<br><br><a style="color:#5da2ff;" href="https://x.com/NickTimiraos/status/1743667579011371388#m">06 يناير 2024 16:15:21@NickTimiraos</a>: تعليقات ملحوظة من لوري لوغان هذا الصباح حول QT:  </p>
-<p>تقول إنه يجب عليهم تباطؤ في سحب الخزانة حيث تقترب أرصدة الإيقاف العكسي الليلي من "مستوى منخفض". (هذا شيء يقوله المحللون أنه يمكن أن يحدث بحلول منتصف العام)  </p>
-<p>تباطؤ QT يقلل "من احتمالية أن يضطروا إلى الإيقاف مبكرا."</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLAa5NXkAAXk-G.jpg" /><br><br><a style="color:#5da2ff;" href="https://x.com/nvk/status/1743674018694066373#m">06 يناير 2024 16:40:56@nvk</a>: كلما دخلت في وقت سابق، زاد ألمك وندمك.   </p>
-<p>لكن بدون هذه الانفعالات لم يكن هناك توزيع وتأثير شبكي.  </p>
-<p>على الرغم من تدمير أيام العملات، أنا ممتن فقط لأنني كنت قادرًا على رؤيتها.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/JoeCarlasare/status/1743666701244174443#m">...المزيد</a></p>
-<p><strong>ملاحظة الصحافي</strong>: تظهر التغريدات بحجم الاهتمام الكبير لدى الأفراد حيال عملة البيتكوين وسوق الاستثمار المتداول. يبدو أن هناك تقدير كبير للتطور والتحسين الواضح في منصات الدفع الرقمية والتقنيات المالية.</p>
+            <h1>تقرير: أحداث تويتر حول البيتكوين وسوق العملات المشفرة</h1>
+<hr />
+<h2>08 يناير 2024</h2>
+<h3>04:52:49</h3>
+<h4>@derekmross</h4>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="رابط التغريدة" src="https://x.com/derekmross/status/1744220590259491057#m" />
+"هههه صديقي إذا حصلت هذه الأمور سأقوم بطباعة هذا التغريدة وأكلها."</p>
+<h3>05:02:26</h3>
+<h4>@TwoMinuteTimmy</h4>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="رابط التغريدة" src="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m" />
+"مهما كان الناتج سيكون شمعة كبيرة."</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="صورة" src="https://nitter.catsarch.com/pic/media%2FGDS5lcZaEAEpSYL.jpg" /></p>
+<h3>06:36:32</h3>
+<h4>@DecentraSuze</h4>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="رابط التغريدة" src="https://x.com/DecentraSuze/status/1744246691824353540#m" />
+"في انتظار قرار الجنة الأمريكية للأوراق المالية خلال منتصف الأسبوع بشأن صندوق البيتكوين المتداول. هل يمكن أن يؤدي هذا إلى نقص في إمدادات البيتكوين؟"</p>
+<h3>06:43:02</h3>
+<h4>@BTCRoel</h4>
+<p>"If we reach $1M bitcoin price before 15-01-2024 i put a small <a href="https://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> logo tattoo on my ass."</p>
+<h3>06:46:54</h3>
+<h4>@Macronaut_</h4>
+<p>"تذكرت عندما قلت 47 مليون. ولكن كنت أمزح بشكلٍ جزئي. أنت تبدأ في تخويفي. لكنني أحب ذلك."</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="رابط التغريدة" src="https://x.com/Macronaut_/status/1744249302183186779#m" /></p>
+<hr />
+<h3>مقابل السوق</h3>
+<p>يتوقع سيناريو معين لزيادة القيم النقدية للعملات المشفرة خلال الفترة القادمة</p>
+<hr />
+<h3>التوقعات لعام 2023</h3>
+<p>يرى ويفكان أن هناك توقعات لعام 2023 يمكن أن يتوفر الهواء بشكلٍ أسهل</p>
+<hr />
+<h3>08 يناير 2024</h3>
+<h3>02:36:20</h3>
+<h4>@XBitcode</h4>
+<p>"نعم, يعلمون ولكنهم لا يسمحون للمنافسة الحرة بالتقدم وتحقيق الأفضل كأداة كل في حل واحد للبيتكوين. Drivechain سوف تغير المستقبل بشكلٍ إيجابي واليوم نحن في مفترق طرق مع اختيارين. الأول هو الاستمرار في الطريقة القديمة مع العديد من السبل للتمركز وتدمير الثورة التكنولوجية والثاني الطريق الإيجابي, طريق Drivechain, العالم المستقبلي الذي تم تصليح أخطاء العالم وتقسيم عالم البيتكوين إلى عالمين. الخيار في يدنا وكلنا سنكون مسؤولين عن العالم المستقبلي الذي ستعيش فيه أجيالنا القادمة. نحن جميعنا مسؤولون عن تحسين العالم المستقبلي. لا تحسن المكاسب المادية شيئًا, إنها مجرد رقم على الشاشة, ولكن التكنولوجيا تحسن الأشياء ويجب علينا ترك التطور الطبيعي لا التطور القسري."</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="رابط التغريدة" src="https://x.com/XBitcode/status/1744186241539522568#m" /></p>
+<hr />
+<h3>توجيه الأعمال</h3>
+<p>تقدم وجهة نظر الشركة حول توقعات الناتج</p>
+<hr />
+<h3>08 يناير 2024</h3>
+<h3>04:26:31</h3>
+<h4>@Excellion</h4>
+<p>"أنا فقط أتأكد من أنني لا زلت الوحيد الذي يقول <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a> يمكن أن يصل إلى 1 مليون دولار في أيام أو أسابيع صحيح؟ لأن عندما يحدث ذلك لا أريد أي منكم الذئبة الشرسة القائلة أنكم أيضًا تحدثتوا عن ذلك."</p>
+<h3>05:35:06</h3>
+<h4>@Excellion</h4>
+<p>"فنياً، أنا أكثر تفاؤلًا من بالاجي. قال إنه في 90 يومًا وأنا أقول أيام أو أسابيع. الأسابيع ينبغي أن تعني حدًا علويًا من 7 أسابيع، لذا لا يمكن أن تكون أشهرًا."</p>
+<hr />
+<h3>08 يناير 2024</h3>
+<h3>05:56:56</h3>
+<h4>@real_vijay</h4>
+<p>"هناك قلق مشروع حقيقي بأن التركيز الوديع يجلبه صندوق البيتكوين يزيد من مخاطر حدث 6102. يجب أن يتم ملاحظة أن هناك بعض الحماية القانونية ضد ذلك عبر التعديل الخامس في الولايات المتحدة..."</p>
+<h3>05:56:57</h3>
+<h4>@real_vijay</h4>
+<p>"المصادرة للذهب في عام 1933 يمكن تجاوز هذه الحماية لأن الدولارات كانت تعتبر مكافئة للذهب (يمكن تحصيلها مقابلهم) وبالتالي يمكن للحكومة الأمريكية أن تأخذ الذهب من الناس وتعطيهم وعدًا بالورق (الدولارات) مقابل ذلك. الأمر نفسه لا يمكن قوله عن <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a>."</p>
+<h3>05:56:58</h3>
+<h4>@real_vijay</h4>
+<p>"هذا لا يعني أن المصادرة غير ممكنة أو حتى غير محتملة في المدى الطويل. إلا أن الدستور الأمريكي يوفر البعض من الحماية القانونية ضد ذلك."</p>
+<h3>04:52:50</h3>
+<h4>@real_vijay</h4>
+<p>"هذا الأسبوع أتابع <a href="https://x.com/dotkrueger" title="Fred Krueger">@dotkrueger</a>. مع عدة صناديق بيتكوين ETFs التي سيتم الموافقة عليها هذا الأسبوع، سوف يستيقظ العالم المالي التقليدي على تكنولوجيا NgU. فريد يقدم وجهة نظر TradFi حول البيتكوين التي وجدتها مثيرة وثمينة. اتبع فريد في هذا الأسبوع المهم!"</p>
+<h3>04:15:36</h3>
+<h4>@lopp</h4>
+<p>"هل ترغب في تحويل محتواك الصوتي إلى نص قابل للقراءة؟ تأكد من استخدام أفضل الأدوات للمهمة! لقد اختبرت مجموعة متنوعة من البرمجيات مفتوحة المصدر للعثور على أفضل المشاريع الدقيقة والفعّالة. <a href="https://x.com/search?q=%23repost">#repost</a><br />
+<a href="https://blog.lopp.net/open-source-transcription-software-comparisons/">blog.lopp.net/open-source-tr…</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="صورة" src="https://nitter.catsarch.com/pic/card_img%2F1744199429362454529%2Fc6yzNJsL%3Fformat%3Djpg%26name%3D800x419" /></p>
+<hr />
+<h2>انتهى التقرير</h2>
+<p>يرصد هذا التقرير الأحداث الرئيسية المتعلقة بالبيتكوين وسوق العملات المشفرة.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

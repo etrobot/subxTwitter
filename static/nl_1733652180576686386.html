@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,110 +83,46 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweets van 7 januari 2024</h1>
-<h2>02:18:12</h2>
-<p><strong>@ylecun</strong>
-<a href="https://x.com/ylecun/status/1743819291110060368#m">Link naar tweet</a>
-Paris AI staat in vuur en vlam.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/osanseviero/status/1743644562873110691#m">@osanseviero</a></h2>
-<p>"De AI-ecosysteem in Frankrijk staat in vuur en vlam🔥. Het heeft geweldig talent en middelen. Hier zijn 10 feiten die je misschien nog niet kent:" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/osanseviero/status/1743644562873110691#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/SVG__Collection/status/1743679060218114175#m">@SVG__Collection</a></h2>
-<p>"Wat zijn de 10 meest iconische Blue Note albums? Een draadje 🧵<br />
-Om de 85e verjaardag van Blue Note Records te vieren, duiken we in hun beroemdste albums...<br />
-1. Lee Morgan – The Sidewinder (1963)<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/media%2FGDLJ42FXIAAk22s.jpg" />" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/SVG__Collection/status/1743679060218114175#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743769605087035585#m">@joaomdmoura</a></h2>
-<p>"Mensen vroegen me om menselijke input toe te voegen aan de uitvoering van crewAI, het is vrij eenvoudig. Ik schreef een heel voorbeeld erover" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743769605087035585#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/ChrisMurphyCT/status/1741889841699172488#m">@ChrisMurphyCT</a></h2>
-<p>"In 2022 keurde het congres de eerste significante wapenveiligheidswetgeving in 30 jaar goed. In 2023 daalde het aantal moorden (ongeveer 3/4 daarvan zijn schietpartijen) met 13% - DE GROOTSTE GEVERIFIEERDE DALENDE DALING IN DE GESCHIEDENIS VAN DE VS. Geen toeval." (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/ChrisMurphyCT/status/1741889841699172488#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/gdb/status/1743738179730198830#m">@gdb</a></h2>
-<p>"Een uitdaging bij het voorspellen van de impact van toekomstige technologie is het anticiperen op hoe de wereld in de tussentijd zal veranderen. Het beschrijven van Uber voor het internet, smartphones en GPS lijkt behoorlijk moeilijk - en toch moeten we dat doen voor geavanceerde AI. Gelukkig valt er veel te leren van recente vooruitgang." (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/gdb/status/1743738179730198830#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/lateinteraction/status/1743701097301360885#m">@lateinteraction</a></h2>
-<p>"Ik blijf echt onder de indruk van wat LlamaIndex heeft kunnen opbouwen in de RAG-ruimte. Naar mijn mening benaderen ze een one-stop-shop voor flexibele, kant-en-klare zoekworkflows voor LM-applicatieontwikkelaars.<br />
-Indrukwekkend werk, <a href="https://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> en team!" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/lateinteraction/status/1743701097301360885#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/gabrielpeyre/status/1743512725983232224#m">@gabrielpeyre</a></h2>
-<p>"Door vijf punten in algemene positie gaat een enkele kegelsnede. [Link naar Wikipedia]" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/gabrielpeyre/status/1743512725983232224#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/Rainmaker1973/status/1743663721476772303#m">@Rainmaker1973</a></h2>
-<p>"Het geweldige uitzicht van een SpaceX Falcon 9 die naar de baan suist, met in 90 seconden het eerste deel dat terugkeert, gezien vanuit de boordcamera" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/Rainmaker1973/status/1743663721476772303#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/paulkrugman/status/1743689077860290956#m">@paulkrugman</a></h2>
-<p>"Dus, ik blijf mediabeweringen zien dat het wonder van 2023 - snelle desinflatie met solide groei - iets was dat economen onmogelijk achtten. Ahum. Hier is een figuur uit Krugman en Wells 7e editie, binnenkort" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/paulkrugman/status/1743689077860290956#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/reach_vb/status/1743698310181917096#m">@reach_vb</a></h2>
-<p>"MIT-gecertificeerd Phi draait op Mac aangedreven door Rust! 🦀<br />
-Chic en snel, aangedreven door Candle! ⚡<br />
-Net zo eenvoudig als uitvoeren:<br />
-cargo run --example phi --release --features metal -- --model 2 --prompt "Een skiër glijdt van een wrijvingsloze helling van 40m hoogte en 80m lengte. Wat is de snelheid van de skiër onderaan?" --quantized" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/reach_vb/status/1743698310181917096#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">@alexgleith</a></h2>
-<p>"Wist je dat je met 2 Python-bibliotheken, 6 regels code en ongeveer 15 seconden satellietgegevens van overal ter wereld kunt laden? Dit is zoveel eenvoudiger dan het vroeger was!" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">@hwchase17</a></h2>
-<p>"Dit is een van mijn favoriete recente tutorials. 4 uur lang!!!" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">@LangChainAI</a></h2>
-<p>"Op zoek naar een actief weekend?<br />
-Deze video van <a href="https://x.com/krishnaik06" title="Krish Naik">@krishnaik06</a> heeft alles voor je. Het duurt meer dan 4 uur en behandelt:" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">@taranjeetio</a></h2>
-<p>"Een Opensourcebijdrager genaamd Joe heeft recent ondersteuning toegevoegd voor Google Drive-map als datalader in <a href="https://x.com/embedchain" title="embedchain">@embedchain</a>.<br />
-De lader gebruikt <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>'s Google Drive-lader." (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743683126491316460#m">@hwchase17</a></h2>
-<p>"Heel eenvoudige manier om RAG-apps te bouwen<br />
-Vandaag introduceren we een front-end laag in <a href="https://x.com/embedchain" title="embedchain">@embedchain</a>.<br />
-Gewoon de server starten &amp; krijgen<br />
-• Klaar gemaakte chat-UI<br />
-• Beheerderspaneel (inkapselingsbeheer)<br />
-• REST-API's<br />
-• UI om gegevensbronnen te configureren (binnenkort beschikbaar)<br />
-Aangedreven door <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a> <a href="https://x.com/nextjs" title="Next.js">@nextjs</a> <a href="https://x.com/FastAPI" title="FastAPI">@FastAPI</a>" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743683126491316460#m">Link naar tweet</a></p>
-<p>Samengesteld door: Senior Editor
-Datum: 07 Jan 2024</p>
-<h1>Tweets van 7 januari 2024</h1>
-<h2>02:18:12</h2>
-<p><strong>@ylecun</strong>
-<a href="https://x.com/ylecun/status/1743819291110060368#m">Link naar tweet</a>
-Paris AI staat in vuur en vlam.</p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/osanseviero/status/1743644562873110691#m">@osanseviero</a></h2>
-<p>"De AI-ecosysteem in Frankrijk staat in vuur en vlam🔥. Het heeft geweldig talent en middelen. Hier zijn 10 feiten die je misschien nog niet kent:" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/osanseviero/status/1743644562873110691#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/SVG__Collection/status/1743679060218114175#m">@SVG__Collection</a></h2>
-<p>"Wat zijn de 10 meest iconische Blue Note albums? Een draadje 🧵<br />
-Om de 85e verjaardag van Blue Note Records te vieren, duiken we in hun beroemdste albums...<br />
-1. Lee Morgan – The Sidewinder (1963)<br />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/media%2FGDLJ42FXIAAk22s.jpg" />" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/SVG__Collection/status/1743679060218114175#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743769605087035585#m">@joaomdmoura</a></h2>
-<p>"Mensen vroegen me om menselijke input toe te voegen aan de uitvoering van crewAI, het is vrij eenvoudig. Ik schreef een heel voorbeeld erover" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743769605087035585#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/ChrisMurphyCT/status/1741889841699172488#m">@ChrisMurphyCT</a></h2>
-<p>"In 2022 keurde het congres de eerste significante wapenveiligheidswetgeving in 30 jaar goed. In 2023 daalde het aantal moorden (ongeveer 3/4 daarvan zijn schietpartijen) met 13% - DE GROOTSTE GEVERIFIEERDE DALENDE DALING IN DE GESCHIEDENIS VAN DE VS. Geen toeval." (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/ChrisMurphyCT/status/1741889841699172488#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/gdb/status/1743738179730198830#m">@gdb</a></h2>
-<p>"Een uitdaging bij het voorspellen van de impact van toekomstige technologie is het anticiperen op hoe de wereld in de tussentijd zal veranderen. Het beschrijven van Uber voor het internet, smartphones en GPS lijkt behoorlijk moeilijk - en toch moeten we dat doen voor geavanceerde AI. Gelukkig valt er veel te leren van recente vooruitgang." (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/gdb/status/1743738179730198830#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/lateinteraction/status/1743701097301360885#m">@lateinteraction</a></h2>
-<p>"Ik blijf echt onder de indruk van wat LlamaIndex heeft kunnen opbouwen in de RAG-ruimte. Naar mijn mening benaderen ze een one-stop-shop voor flexibele, kant-en-klare zoekworkflows voor LM-applicatieontwikkelaars.<br />
-Indrukwekkend werk, <a href="https://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> en team!" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/lateinteraction/status/1743701097301360885#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/gabrielpeyre/status/1743512725983232224#m">@gabrielpeyre</a></h2>
-<p>"Door vijf punten in algemene positie gaat een enkele kegelsnede. [Link naar Wikipedia]" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/gabrielpeyre/status/1743512725983232224#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/Rainmaker1973/status/1743663721476772303#m">@Rainmaker1973</a></h2>
-<p>"Het geweldige uitzicht van een SpaceX Falcon 9 die naar de baan suist, met in 90 seconden het eerste deel dat terugkeert, gezien vanuit de boordcamera" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/Rainmaker1973/status/1743663721476772303#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/paulkrugman/status/1743689077860290956#m">@paulkrugman</a></h2>
-<p>"Dus, ik blijf mediabeweringen zien dat het wonder van 2023 - snelle desinflatie met solide groei - iets was dat economen onmogelijk achtten. Ahum. Hier is een figuur uit Krugman en Wells 7e editie, binnenkort" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/paulkrugman/status/1743689077860290956#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/reach_vb/status/1743698310181917096#m">@reach_vb</a></h2>
-<p>"MIT-gecertificeerd Phi draait op Mac aangedreven door Rust! 🦀<br />
-Chic en snel, aangedreven door Candle! ⚡<br />
-Net zo eenvoudig als uitvoeren:<br />
-cargo run --example phi --release --features metal -- --model 2 --prompt "Een skiër glijdt van een wrijvingsloze helling van 40m hoogte en 80m lengte. Wat is de snelheid van de skiër onderaan?" --quantized" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/reach_vb/status/1743698310181917096#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">@alexgleith</a></h2>
-<p>"Wist je dat je met 2 Python-bibliotheken, 6 regels code en ongeveer 15 seconden satellietgegevens van overal ter wereld kunt laden? Dit is zoveel eenvoudiger dan het vroeger was!" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">@hwchase17</a></h2>
-<p>"Dit is een van mijn favoriete recente tutorials. 4 uur lang!!!" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">@LangChainAI</a></h2>
-<p>"Op zoek naar een actief weekend?<br />
-Deze video van <a href="https://x.com/krishnaik06" title="Krish Naik">@krishnaik06</a> heeft alles voor je. Het duurt meer dan 4 uur en behandelt:" (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">@taranjeetio</a></h2>
-<p>"Een Opensourcebijdrager genaamd Joe heeft recent ondersteuning toegevoegd voor Google Drive-map als datalader in <a href="https://x.com/embedchain" title="embedchain">@embedchain</a>.<br />
-De lader gebruikt <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>'s Google Drive-lader." (Vertaling uit het Engels)<br><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">Link naar tweet</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743683126491316460#m">@hwchase17</a></h2>
-<p>"Heel eenvoudige manier om RAG-apps te bouwen<br />
-Vandaag introduceren we een front-end laag in <a href="https://x.com/embedchain" title="embedchain">@embedchain</a>.<br />
-Gewoon de server starten &amp; krijgen<br />
-• Klaar gemaakte chat-UI<br />
-• Beheerderspaneel (inkapselingsbeheer)<br />
-• REST-API's<br />
-• UI om gegevensbronnen te configureren (binnenkort beschikbaar)<br />
-Aangedre</p>
+            <h1>Nederlands Blogartikel</h1>
+<h2>Tweets van 07 Jan 2024</h2>
+<ul>
+<li>
+<p><strong>14:30:24</strong> [@joaomdmoura](https://x.com/joaomdmoura/status/1744003557320274075#m): Recording a new video on a complete local models crew of AI Agents 🚣✨
+  <img style="max-width: 20rem;margin:0.2rem auto;" alt="image" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+</li>
+<li>
+<p><strong>20:54:23</strong> [@llama_index](https://x.com/llama_index/status/1744100187046543416#m): Our Open-Source Roadmap 🗺️<br />
+  We hebben grote plannen in 2024 om het LlamaIndex-ecosysteem nog krachtiger, toegankelijker en productierijp te maken voor alle LLM-ontwikkelaars die kerngebruikscases (RAG, agents en meer) bouwen.<br />
+<a href="https://github.com/run-llama/llama_index/discussions/9888">Lees meer</a>
+  <img style="max-width: 20rem;margin:0.2rem auto;" alt="image" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+</li>
+<li>
+<p><strong>19:29:38</strong> [@SVG__Collection](https://x.com/SVG__Collection/status/1744078860805697679#m): THELONIOUS MONK<br />
+  Een dissonante tovenaar, die briljantie oproept in muzikale chaos… 🎹
+  <img style="max-width: 20rem;margin:0.2rem auto;" alt="image" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></p>
+</li>
+<li>
+<p><strong>08:05:04</strong> [@Rainmaker1973](https://x.com/Rainmaker1973/status/1743906585305350244#m): Building a Mercedes-AMG G63 V8 engine.<br />
+<a href="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1743863069070024705%2Fimg%2FreqbqXtwxXo8zIiW.jpg">Video</a></p>
+</li>
+</ul>
+<h2>Tweets van 08 Jan 2024</h2>
+<ul>
+<li>
+<p><strong>02:11:10</strong> [@karpathy](https://x.com/karpathy/status/1744179910347039080#m): e/ia - Intelligence Amplification...
+  <img style="max-width: 20rem;margin:0.2rem auto;" alt="image" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+</li>
+<li>
+<p><strong>03:32:39</strong> [@karpathy](https://x.com/karpathy/status/1744200417784045799#m): (I’ll add thoughts to thread as they come up. )<br />
+  Denken aan deze tools als puur het uitbreiden van intelligentie voelt te beperkend, kan net zo belangrijk begrepen worden als verbeeldingsversterking; we zien dat ook veel met generatieve IA.</p>
+</li>
+<li>
+<p><strong>01:46:47</strong> [@erichorvitz](https://x.com/erichorvitz/status/1744173774646222917#m): Belangrijke ideeën van <a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> "VS wordt geconfronteerd met de grootste COVID-golf sinds Omicron. Waarom spelen we nog steeds alsof?"<br />
+<a href="https://tinyurl.com/ms8esuz6">Link naar artikel</a></p>
+</li>
+</ul>
+<h2>Interpretatie en Commentaar</h2>
+<p>De bovenstaande tweets bevatten informatie over AI-ontwikkelingen, open-source initiatieven en een diverse reeks onderwerpen rondom technologische vooruitgang. Het lijkt erop dat er interesse is in samenwerking en het delen van kennis in de AI-gemeenschap. De ontwikkelingen lijken veelbelovend en het is duidelijk dat er veel vooruitgang wordt geboekt in verschillende aspecten van kunstmatige intelligentie. De tweet van [@Rainmaker1973](https://x.com/Rainmaker1973/status/1743906585305350244#m) over het bouwen van een Mercedes-AMG G63 V8-motor biedt een interessante kijk op technologische vooruitgang buiten de wereld van AI. Al met al lijkt het erop dat er veel energie en enthousiasme is voor nieuwe ontwikkelingen in de technologische sector.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

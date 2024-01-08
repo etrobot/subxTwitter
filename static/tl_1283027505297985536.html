@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,47 +83,84 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Balita: Mga Tweet Ngayong Araw</h1>
-<h2>06 January 2024</h2>
-<h4>14:22:40</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">@arvidkahl</a>: Ako ay magdiriwang ng aking ika-39 kaarawan ngayon. 🥳</p>
-<p>Bilang isang regalo sa inyo (at sa aking sarili 😉), inilalabas ko ang The Bootstrapper’s Bundle:</p>
+            <h1>Narito ang Iilang Kabatiran Mula sa Twitter</h1>
+<h2>08 Enero 2024</h2>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge" title="marckohlbrugge">@marckohlbrugge</a></h3>
 <ul>
-<li>Zero to Sold (ebook+audiobook)</li>
-<li>The Embedded Entrepreneur (eBook, audiobook &amp; toolkit)</li>
-<li>Find your Following (full course + toolkit)</li>
+<li>
+<p>$20/mo adds up with loyal community members (<a href="https://wip.co">wip.co</a>)
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" /></p>
+</li>
+<li>
+<p>On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)</p>
+</li>
 </ul>
-<p>Presyong kaarawan: $20!</p>
-<p><br><a style="color:#5da2ff;" href="https://bootstrappedfounder.gumroad.com/l/bootstrappers-bundle">bootstrappedfounder.gumroad.…</a></p>
-<h4>17:41:30</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/damengchen/status/1743689261910749659#m">@damengchen</a>: Maligayang kaarawan, Arvid! Patuloy mo kaming pinai-inspire 🫶</p>
-<h4>17:43:04</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743689654275035464#m">@arvidkahl</a>: 🥰</p>
-<h4>17:21:34</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1743684244272980171#m">@thepatwalls</a>: May naririnig bang nagtatayo ngayon ng negosyo ngayong Sabado? (ipakita ang iyong setup)</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="image" src="https://nitter.nohost.network/pic/media%2FGDLPhNBWcAAufiU.jpg" /></p>
-<h4>17:09:24</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743681182028460057#m">@5harath</a>: Huwag maging bato ng pag-ikot sa iyong buhay.<br />
-Maging bato ng pundasyon sa buhay ng iba.</p>
-<h4>17:05:37</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dr/status/1743680228768034840#m">@dr</a>: 2024 na ba ang taon na makakamit ko ang isang produkto na higit sa $5k MRR?</p>
-<h4>16:52:42</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743676979813958134#m">@levelsio</a>: Ano ang estratehiya ng SQLite kapag ang mga database ay masyadong malaki?  </p>
-<p>Ang photos.db ng Photo AI ay may 35.2GB na may 7,270,478 na mga larawan (metadata lang, ang mga larawan ay naka-imbak sa R2)  </p>
-<p>Dapat ko bang gawing isang script na inilalagay ang mga lumang larawan sa photos_archive.db upang panatilihin ang photos.db na mabilis?</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="image" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<h4>16:56:39</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743677974480670803#m">@levelsio</a>: Ang pagbibigay ng partition sa database ay maganda ngunit<br />
-1) gumugulo ang walang hanggang pagination, dahil gumagamit ako ng OFFSET para kunin ang mga lumang larawan kapag nag-scroll ang mga tao sa kanilang archive ng larawan<br />
-2) kapag nagdagdag ako ng mga bagong feature at nagbago sa istruktura ng DB, kailangan ko ring baguhin ang lahat ng lumang mga bahagi.</p>
-<h4>16:53:02</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1743677062140112902#m">@marckohlbrugge</a>: Ang paggamit ng Postmark ay isang kasiyahan. Nag-switch ako 1.5 na taon na ang nakalilipas at walang regreto. Magaling din ang kanilang customer service 👌</p>
-<p>Nagbibigay ang mga bootstrappers ng $75 kredito: <a href="https://postmarkapp.com/for/bootstrapped-startups">postmarkapp.com/for/bootstra…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="image" src="https://nitter.nohost.network/pic/card_img%2F1743302376641945600%2FKch6ZBRQ%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h4>13:52:01</h4>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">@dutchtide</a>: Magpipinta ako ngayon, sumali sa aking livestream para makita kung ano ang aking gawa ngayon! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="image" src="https://nitter.nohost.network/pic/card_img%2F1743694619827752960%2FapilBoVw%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h4>Ang mga sumunod sa itaas ay ilan lamang sa mga naitala sa Twitter ngayong araw. Abangan ang mga update mula sa mga personalidad at negosyo sa social media platform.</h4>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/neuranne" title="neuranne">@neuranne</a></h3>
+<ul>
+<li>It finally happened. After years of taking my journal everywhere with me, I lost a notebook. (last seen photo attached)<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTeB2NXcAATn1g.jpg" /></li>
+</ul>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/michwirantono" title="michwirantono">@michwirantono</a></h3>
+<ul>
+<li>Shipping from 37,000 ft above. The grind doesn’t stop! 💪 <a href="https://x.com/AlbertPurnama" title="Albert Purnama">@albertpurnama</a>
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1744236052959944704%2Fpu%2Fimg%2F2t_sRpSnwtDJxgSO.jpg" /></li>
+</ul>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/tdinh_me" title="tdinh_me">@tdinh_me</a></h3>
+<ul>
+<li>I've been battling with this ERR_NETWORK_CHANGED issue for 2 months now, if you know how to fix it please share ideas 😅<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTCKywbEAAC5fF.jpg" /></li>
+</ul>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/Shpigford" title="Shpigford">@Shpigford</a></h3>
+<ul>
+<li>hey you’re pretty great and i’m glad you’re here.</li>
+</ul>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/Jessicameher" title="Jessicameher">@Jessicameher</a></h3>
+<ul>
+<li>I worked at InVision during its heyday, from $15m-$100m in revenue. If nothing but to share an important takeaway for other founders, Figma is not why InVision failed...</li>
+</ul>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa" title="dannypostmaa">@dannypostmaa</a></h3>
+<ul>
+<li>2024 is going to be a fun year
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTkcNaoAAmeLH.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTmLebIAAo3e6.jpg" /></li>
+</ul>
+<p>Maaaring ikonsulta ang mga nasabing kaganapan sa mga kaibigan at kamag-anak. Sariwain ang dating nararamdaman patungo sa bagong oportunidad at magkaroon ng panibagong inspirasyon.</p>
+<p>Mag-ingat at magpakatatag para maabot ang mga mithiin.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl" title="arvidkahl">@arvidkahl</a></h3>
+<ul>
+<li>llama.cpp is magical. I use it at Podline for mistral-based summarization in a GPU-less server backend. Slowish, but for a background service, a FREE one, it’s Massive.</li>
+</ul>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/rrhoover" title="rrhoover">@rrhoover</a></h3>
+<ul>
+<li>These 2024 prediction from <a href="https://x.com/anuatluru" title="anu ☻">@anuatluru</a> align with many of my interests</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSt0b9WkAAcS6q.jpg" /></p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls" title="thepatwalls">@thepatwalls</a></h3>
+<ul>
+<li>Just got off the phone with my 3 best friends. They're all buying Teslas within the next month. Seems like the default option for buying a car in 2024... (not financial advice)</li>
+</ul>
+<p>Ang naging reaksyon ng mga kaibigan o kamag-anak ay makabuluhan dahil nagkakaroon sila ng mga bagong ideya na maaaring magamit sa pagpapalago ng kanilang sariling follower base sa iba't ibang pahina ng social media.</p>
+<p>Railan na natin ng trendy articles at posts miski sa maliit na grupo ng mga tao.</p>
+<hr />
+<p>Maaaring makatulong sa iyong pagsulong sa iyong sariling page.</p>
+<p>Nawa'y muling magbukas ka ng mga journal at muling magsimulang magbasa ng mga insights na iyong isinulat.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa" title="dannypostmaa">@dannypostmaa</a></h3>
+<ul>
+<li>so I only last week found out about this feature in ChatGPT where you can just have conversations with it and it’s absolutely blowing my mind... 🔥</li>
+</ul>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSXYLabwAA41bu.jpg" /></p>
+<p>Ang mga bagong features at tools sa ChatGPT ay maaaring maging malaking tulong lalo na sa pag papalawak ng iyong abang pampubliko.</p>
+<p>Maaari mo nang gamitin ang iyong boses na maging malaking tulong sa iyong pang araw-araw na pakikipag usap sa iyong mga social media apps.</p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/DenLoginoff" title="DenLoginoff">@DenLoginoff</a></h3>
+<ul>
+<li>As I struggle to get started on growing audience with Twitter/X/etc, here are a few helpful tidbits I learned from <a href="https://x.com/MeetKevon" title="Kevon Cheung 🥦">@MeetKevon</a>’s newsletter today...</li>
+</ul>
+<p>Ang pakikinig sa mga iba't ibang networking ay maaaring maging tulong sa pagpapalawak ng iyong audience sa Twitter.</p>
+<p>Maaaring mahirap ito ngunit maaari mo itong maabot sa medyo simpleng paraan at sa iyong sariling bagay na natutunan, bagay na dapat ding maishare sa iba't ibang followers.</p>
+<hr />
+<p>Nawa'y mapagtagumpayan mo ang iyong patuloy na pagsubok sa pagpapalawak ng iyong sariling audience!</p>
+<p>I-text back si <a href="https://x.com/MeetKevon" title="Kevon Cheung 🥦">@MeetKevon</a> para sa marami pang detalye at impormasyon.</p>
+<p>Maging handa na maglahad ng iyong sariling mga natutunan at ito'y maiiwanan mo sa mga bagong darating na followers!</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

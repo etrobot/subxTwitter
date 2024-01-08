@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,40 +83,42 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>最新AI和開發相關新聞</h1>
-<h2>《2024年1月6日的推文》</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Dev__Digest/status/1743651419486405060#m">15:11:08@Dev__Digest</a>: 新視頻介紹如何使用<a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>和<a href="https://x.com/UnstructuredIO" title="UnstructuredIO">@UnstructuredIO</a>  </p>
-<p><br><a style="color:#5da2ff;" href="https://youtu.be/2B161Dpvyxw">youtu.be/2B161Dpvyxw</a></p>
-<p><br><a style="color:#5da2ff;" href="https://youtu.be/2B161Dpvyxw"><img style="max-width: 20rem;margin:0.5rem;" alt="影片" src="https://nitter.catsarch.com/pic/media%2FGDKxuH4bQAAsqOf.jpg" /></a></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743548363214082171#m">06 Jan 2024 08:21:38@ylecun</a>: 升級獎賞。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743369932178628944#m">05 Jan 2024 20:32:36@taranjeetio</a>: 🙌🏻<a href="https://x.com/embedchain" title="embedchain">@embedchain</a>再次登上<a href="https://x.com/github" title="GitHub">@github</a>全球趨勢。   </p>
-<p>🙏🏻 感謝大家的支持。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/_philschmid/status/1743545280086053032#m">06 Jan 2024 08:09:22@_philschmid</a>: 我們從<a href="https://x.com/Microsoft" title="Microsoft">@Microsoft</a>得到了一份晚到的聖誕禮物！🎁🤗 Microsoft將其小型LLM phi-2的許可證更改為MIT！🚀  </p>
-<p>phi-2是一個訓練有素的2.7億參數LLM，包括合成數據，實現了MMLU的56.7分，超越了Google Gemini Nano。  </p>
-<p>總結一下：<br />
-🧮 2.7B參數基礎模型<br />
-📱 量子化需要約1GB內存<br />
-📜 2048個令牌的上下文長度。 
-🚀 超越Google Gemini Nano (3.2B) 
-🧑🏻‍💻 擅長編碼，尤其是Python 
-🗣️ 以MIT許可發行<br />
-🤗 在Hugging Face上可用  </p>
-<p>謝謝<a href="https://x.com/SebastienBubeck" title="Sebastien Bubeck">@SebastienBubeck</a>和Team，對這一變化的貢獻！開源社區將從中受益！🤗</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/_philschmid/status/1743545280086053032#m"><img style="max-width: 20rem;margin:0.5rem;" alt="圖片" src="https://nitter.catsarch.com/pic/media%2FGDJRGybXkAAUdSU.jpg" /></a></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743421900519600400#m">05 Jan 2024 23:59:06@llama_index</a>: 別錯過<a href="https://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a>在<a href="https://x.com/weights_biases" title="Weights &amp; Biases">@weights_biases</a>的Gradient Dissent播客上的節目。他們討論：<br />
-👉🏻 LlamaIndex在AI框架生態系統中的差異化<br />
-👉🏻 檢索增強生成的真實世界用例<br />
-👉🏻 為AI開發和評估數據集<br />
-👉🏻 避免幻覺和偏見<br />
-👉🏻 管理LlamaIndex等大型開源項目的挑戰<br />
-👉🏻 還有更多！  </p>
-<p>到YouTube上看看：<a href="https://www.youtube.com/watch?v=xejCaLsYzV4">youtube.com/watch?v=xejCaLsY…</a><br />
-或在您喜歡的播客應用程序上收聽！</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743421900519600400#m"><img style="max-width: 20rem;margin:0.5rem;" alt="圖片" src="https://nitter.catsarch.com/pic/media%2FGDHg-gWawAA6FEg.jpg" /></a></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1743323977919992086#m">05 Jan 2024 17:30:00@joaomdmoura</a>: Langsmith對於調試crewAI執行幫助很大，真的很有幫助 &lt;3</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/DrJimFan/status/1743406712198205522#m">05 Jan 2024 22:58:45@DrJimFan</a>: 感謝Tony分享幕後視頻！敏捷硬件平台是通向通用機器人的重要一步。讓我們一次性解決AI挑戰！</p>
-<hr />
-<p>以上是一些推文。您是一個繁體中文博客的資深編輯。請將以上推文編譯成一篇繁體中文的文章，以格式呈現，包括推文時間、作者（如果有的話）和Twitter鏈接（如果有的話）。是）以及Twitter內容以及您的解釋和評論</p>
+            <h1>最新人工智慧領域的推文</h1>
+<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1744003557320274075#m">07 Jan 2024 14:30:24@joaomdmoura</a>: 正在拍攝一個關於完整本地模型團隊的AI代理的新影片 🚣✨</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy/status/1744179910347039080#m">08 Jan 2024 02:11:10@karpathy</a>: e/ia - Intelligence Amplification<br />
+- 不是尋求建立取代人類的超級智能神裔實體。<br />
+- 建構“心智的自行車”工具，增強和擴展人類的信息處理能力。<br />
+- 考慮到所有人類，而非前百分位數。<br />
+- 忠於電腦先驅者Ashby，Licklider，Bush，Engelbart，...</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/karpathy/status/1744200417784045799#m">08 Jan 2024 03:32:39@karpathy</a>: （我會隨著思考進程附加想法）。<br />
+認為這些工具僅僅是擴展智能感覺太限制了，同樣地，可以理解為想像力擴展；我們也在使用生成型IA看到許多這樣的情況。</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/erichorvitz/status/1744173774646222917#m">08 Jan 2024 01:46:47@erichorvitz</a>: 重要的想法來自<a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> "U.S. is facing biggest COVID wave since Omicron. Why are we still playing make-believe?" <a href="https://tinyurl.com/ms8esuz6">tinyurl.com/ms8esuz6</a> 我們可以做得更好。以下是<a href="https://x.com/UWproteindesign" title="Institute for Protein Design">@UWproteindesign</a>關於阻擋Covid尖峰蛋白的設計。作為保護性鼻藥噴霧的基礎有希望。</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1743680481504514049#m">06 Jan 2024 17:06:37@jerryjliu0</a>: 在過去一兩年中，RAG研究有很多有趣的進展，而且幸運的是，所有這些努力都在同一個地方追踪！
+“具有大型語言模型的檢索擴增生成：一項調查”由高等人等所做的工作將所有RAG研究分為三類：1）預訓練模型（例如RETRO），2）微調+RAG（例如RA-DIT），3）推理模式下的RAG（例如DSP）。</p>
+<p>林（llama_index）側重於最後一個類別，論文對所有不同的組件進行了解釋。</p>
+<p>查看論文！<a href="https://arxiv.org/abs/2312.10997">arxiv.org/abs/2312.10997</a></p>
+<p>此論文啟發了儀（nerdai）撰寫的博客文章：“<a href="https://blog.llamaindex.ai/a-cheat-sheet-and-some-recipes-for-building-advanced-rag-803a9d94c41b">blog.llamaindex.ai/a-cheat-s…</a>”</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDLMBzca0AACfBu.jpg" /></p>
+<p>...（以下省略）</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/joaomdmoura/status/1744175292921348320#m">08 Jan 2024 01:52:49@joaomdmoura</a>: 今天，crewAI在<a href="https://x.com/github" title="GitHub">@github</a>上是最受關注的項目 🚀💖📈
+感謝所有的愛和支持</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1744100187046543416#m">07 Jan 2024 20:54:23@llama_index</a>: 我們的開源路線圖 🗺️
+我們在2024年有很多計劃，讓<a href="https://x.com/llama_index" title="LlamaIndex 🦙">@llama_index</a>生態系統更加強大、易於訪問並適合所有正在構建其核心用例（RAG、代理等）的LLM開發人員。</p>
+<p>我們將我們的3-6個月路線圖（感謝Logan Markewich編寫此內容！）列出四個高層次目標：
+1️⃣ 使LlamaIndex準備投入生產製造
+2️⃣ 使LlamaIndex對所有用戶易於訪問
+3️⃣ 增加高級功能（RAG、代理、多模態等）
+4️⃣ 保持AI生態系統的領先地位</p>
+<p>這是一份不斷更新的文件（最後更新-今天），將會隨著月份的變化而變化。請在我們的Github討論頁上查看！
+<a href="https://github.com/run-llama/llama_index/discussions/9888">github.com/run-llama/llama_i…</a></p>
+<p>讓我們知道您的反饋/想法，並查看我們的貢獻指南，如果您希望幫助解決問題！ 
+[<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+<p>...（以下省略）</p>
+<p>現有時和 Twitter 鏈接是用於使讀者能夠瀏覽原始推文內容。最新的人工智慧領域的推文反映了社群內正在進行的研究和開發工作，也表明了各公司和團隊在不同領域的最新進展。</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,31 +83,70 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Les tweets du jour</h1>
-<p><em>06 jan 2024 15:21:38 - @typesfast</em></p>
-<p>95% des navires porte-conteneurs qui auraient traversé la mer Rouge font maintenant le tour de la pointe sud de l'Afrique ce matin. Les navires détournés de leur trajectoire habituelle sont marqués en orange sur la carte de <a href="https://x.com/flexport" title="Flexport">@flexport</a> ci-dessous.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDK0IEYaQAEKdD2.jpg" /></p>
-<p><em>06 jan 2024 17:09:51 - @paulg</em></p>
-<p>Curieusement, je n'aurais jamais rencontré Jessica si ce n'était pas pour la Harvard Extension School. Je l'ai rencontrée lorsqu'elle a été invitée à une fête chez moi par quelqu'un qu'elle avait rencontré dans un cours de théâtre qu'elle avait suivi à l'Extension School.</p>
-<p><em>06 jan 2024 17:07:33 - @mkobach</em></p>
-<p>Twitter doit mettre à jour son algorithme pour résoudre son problème de réponses. Les réponses principales à n'importe quel tweet devraient être des commentaires pertinents au tweet original. Au lieu de cela, les utilisateurs ont trouvé comment manipuler le système en postant des vidéos virales sans rapport en réponse. Veuillez régler cela <a href="https://x.com/elonmusk" title="Elon Musk">@elonmusk</a>.</p>
-<p><em>06 jan 2024 16:27:49 - @businessbarista</em></p>
-<p>Mes amis et moi sommes assis au centre du terrain pour le championnat national gratuitement grâce à <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>. Mission accomplie. Mission 2 : devenir viral. Voici le plan... Il est temps de jouer à un jeu (et oui, de l'argent est impliqué)...</p>
-<p><em>06 jan 2024 16:39:18 - @businessbarista</em></p>
-<p>Je pense que c'est la première fois dans l'histoire qu'un stade de football a été transformé en Où est Charlie.</p>
-<p><em>06 jan 2024 13:52:01 - @dutchtide</em></p>
-<p>Peinture aujourd'hui, rejoignez la diffusion en direct pour voir de quoi il s'agit! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/card_img%2F1743691027071021056%2FBZS3c3G6%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><em>06 jan 2024 16:08:50 - @AliAbdaal</em></p>
-<p>Vous ne pouvez pas assister à l'atelier de planification annuel aujourd'hui? Pas de soucis ! Vous pouvez toujours participer en répondant aux questions suivantes pour réfléchir à l'année passée et manifester votre meilleur moi pour 2024. Commençons par réfléchir à 2023.</p>
-<p><em>06 jan 2024 16:05:22 - @dickiebush</em></p>
-<p>Ce que j'ai écrit aujourd'hui : Samedi 6 janv 24. Temps d'écriture total : 3 heures, 17 minutes. • Journal sur les 10 choses qui étaient importantes (30 minutes). • Fini ma recapitulation hebdomadaire "ce qui s'est passé" et "ce que j'ai appris" (30 minutes). • Écrit 20 tweets en travaillant sur mon retard d'idées (30 minutes). • Rédigé 2 articles à laisser mariner en arrière-plan cette semaine (60 minutes). • Idées sur ma cadence de contenu pour le prochain trimestre pour notre réunion de contenu de lundi (30 minutes). Je me sens dans un bon flux pour commencer l'année. • Les idées bouillonnent • Les cappuccinos se bousculent.</p>
-<p><em>06 jan 2024 15:17:13 - @jackbutcher</em></p>
-<p>Coordination de la capitalisation</p>
-<p><em>06 jan 2024 14:59:40 - @gregisenberg</em></p>
-<p>Nous venons de terminer notre réunion exécutive de lancement 2024 à Miami et j'ai quelques notes à partager avec vous. 10 leçons de notre réunion pour construire notre holding à huit chiffres.</p>
+            <h1>Les Derniers Tweets</h1>
+<h2>08 Jan 2024</h2>
+<h3>05:17:45 - <a href="https://x.com/ShaanVP/status/1744226866255606116#m">ShaanVP</a></h3>
+<p>"What would you do if you weren't afraid? (serious question)"</p>
+<p>A question to ponder on and perhaps a call to action for self-reflection.</p>
 <hr />
-<p>Cet article a compilé les tweets récents publiés le 6 janvier 2024. Ils couvrent divers sujets tels que la navigation maritime, les rencontres fortuites, les suggestions de contenu, les réflexions et planifications personnelles, ainsi que des conseils en affaires. Ces tweets offrent un aperçu captivant de la diversité des conversations et sujets d'actualité sur Twitter.</p>
+<h3>03:32:13 - <a href="https://x.com/mechsicko/status/1744200308543332432#m">mechsicko</a></h3>
+<p>"The Physical Impossibility of Death in the Mind of Someone Living
+Artist || Damien Hirst
+Year || 1991
+Type || Tiger shark, glass, steel, 5% formaldehyde solution
+Medium || <a href="https://x.com/opepenedition" title="Opepen Edition">@opepenedition</a>
+Movement || minimalism, pixel, meme
+Subject || Life, apparent death
+Cc: <a href="https://x.com/jackbutcher" title="Jack Butcher">@jackbutcher</a> 🪢"</p>
+<p>A tweet discussing an art piece by Damien Hirst, prompting a discussion on life and death.</p>
+<hr />
+<h3>03:30:00 - <a href="https://x.com/sweatystartup/status/1744199748515504221#m">sweatystartup</a></h3>
+<p>"What the media doesn’t tell you:
+The world is a great place.
+Human beings go out of their way every single day to help other human beings.
+Favors. Help.
+They’ll literally pull their car over in rural America to help you solve your problem.
+The world is an excellent place."</p>
+<p>An uplifting message about the kindness and generosity of people in the world.</p>
+<hr />
+<h3>02:36:53 - <a href="https://x.com/mkobach/status/1744186379741938012#m">mkobach</a></h3>
+<p>"I hates these ads. Am I alone here?"</p>
+<p>A rant about annoying advertisements, perhaps a relatable sentiment for many.</p>
+<hr />
+<h3>01:21:10 - <a href="https://x.com/bunya_eth/status/1744167328529453128#m">bunya_eth</a></h3>
+<p>"Pepermissionless street art"</p>
+<p>An intriguing mention of street art with a creative perspective.</p>
+<h2>07 Jan 2024</h2>
+<h3>14:04:40 - <a href="https://x.com/johnnyxbrown/status/1743997081679704446#m">johnnyxbrown</a></h3>
+<p>"7 life-changing insights from “Atomic Habits” by James Clear"</p>
+<p>A recommendation for a book and its valuable insights.</p>
+<hr />
+<h3>19:46:05 - <a href="https://x.com/ElliotHershberg/status/1744082999048613920#m">ElliotHershberg</a></h3>
+<p>"Progress in reading, writing, and editing DNA has been relentless.
+With all of these new tools, why haven't we successfully cured every disease with a genetic basis?"</p>
+<p>A discussion on the progress in genetic research and the challenges it still faces.</p>
+<hr />
+<h3>17:06:45 - <a href="https://x.com/johnbryanesq/status/1744042901280104535#m">johnbryanesq</a></h3>
+<p>"Some have asked for pics of the Revolutionary War fort we discovered inside an old plantation house in West Virginia..."</p>
+<p>An intriguing teaser about the discovery of a historical site.</p>
+<hr />
+<h2>06 Jan 2024</h2>
+<h3>20:36:23 - <a href="https://x.com/alijla2021/status/1743733269571440760#m">alijla2021</a></h3>
+<p>"Two hours between the two photos"</p>
+<p>A cryptic tweet accompanied by two photos, sparking curiosity.</p>
+<hr />
+<h3>14:34:57 - <a href="https://x.com/mikeholden/status/1744004703136989331#m">mikeholden</a></h3>
+<p>"I had zero interest in Monday night’s national championship game..."</p>
+<p>A lighthearted remark about an unexpected interest in a sports event.</p>
+<hr />
+<h3>23:32:37 - <a href="https://x.com/businessbarista/status/1744140008640946497#m">businessbarista</a></h3>
+<p>"Go to the National Championship for free (thx @HubSpot) ✅"</p>
+<p>A mention of attending an event and the involvement of a brand.</p>
+<h3>23:34:44 - <a href="https://x.com/businessbarista/status/1744140540474462318#m">businessbarista</a></h3>
+<p>"He scores: (no content)"</p>
+<hr />
+<h3>23:35:28 - <a href="https://x.com/businessbarista/status/1744140726210814317#m">businessbarista</a></h3>
+<p>"Step 2: Create a crazy marketing stunt (no content)"</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

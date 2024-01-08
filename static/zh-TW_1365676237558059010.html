@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/media/EXZ1_hkUYAA56JA?format=png&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,33 +83,74 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1365676237558059010">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Life Reflections for 2024</h1>
-<h3>Tweets Compilation</h3>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665938430333149#m">06 Jan 2024 16:08:50 @AliAbdaal</a>:</strong><br />
-Can't attend the Annual Planning Workshop today? No worries! You can still join in on the fun by answering the following prompts to help you reflect on the past year and manifest your best self for 2024 🎉 Let's start by reflecting on 2023 👇</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665955132027187#m">06 Jan 2024 16:08:54 @AliAbdaal</a>:</strong><br />
-🚀 Looking Forward: Based on your experiences in 2023, what would you like to do differently in 2024? Are there new areas you’d like to explore or changes you want to make?</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/AliAbdaal/status/1743665957220839593#m">06 Jan 2024 16:08:54 @AliAbdaal</a>:</strong><br />
-Feel free to share your thoughts on these prompts in the comments, or bookmark this thread for some personal journaling 📝 Let's support each other as we look back and move forward!</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652948737995139#m">06 Jan 2024 15:17:13 @jackbutcher</a>:</strong><br />
-compounding coordination</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1743652879821332720#m">06 Jan 2024 15:16:56 @jackbutcher</a>:</strong><br />
-gm</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743648532278501424#m">06 Jan 2024 14:59:40 @gregisenberg</a>:</strong><br />
-We just finished our 2024 kickoff exec offsite in Miami and I have some notes to share with you... (content continues in multiple tweets)</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/gregisenberg/status/1743652378677498244#m">06 Jan 2024 15:14:57 @gregisenberg</a>:</strong><br />
-We're hiring like crazy (share this to spread it):...(content continues in multiple tweets)</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/LukeRangeWalker/status/1743291992514117744#m">05 Jan 2024 15:22:54 @LukeRangeWalker</a>:</strong><br />
-I used to think social media was a waste of time… But carefully choosing and curating the media I consume on X and YouTube has accelerated my learning this last year. Sahil Bloom is always throwing out good inspiration for a well-lived life. Thanks for sharing Sahil! (quoting tweet from @SahilBloom)</p>
-<p><strong><br><a style="color:#5da2ff;" href="https://x.com/SahilBloom/status/1743262510801666276#m">05 Jan 2024 @SahilBloom</a>:</strong><br />
-Today is my 33rd birthday... (content continues in multiple tweets)</p>
-<h3>Article</h3>
-<p>今天稍為康寧地看一下自己今年的過去，一年是創造改變的契機，並且回顧過去的生活、學習、經驗。</p>
-<p>一個人一生會遇到很多難題和挑戰，但選擇自己的難題是最好的解決方法。身為一個人，你可能無法擁有所有答案，也許不需要擁有所有答案，向正確方向前行，擁抱好奇心，圍繞著優秀的人，未來一定不會差。不論下一步是什麼，始終應該把重點放在行動上，因為行動才是最重要的。</p>
-<p>這些都是一些發人深省的生活道理，希望這些引述的推文能夠觸動你的心靈，讓你在2024年充滿成長和希望！</p>
-<p>(Translation: Today is a good opportunity to take a slightly more compassionate look at your past year, and it is an opportunity to create change. A year is an opportunity to create change, and review your past life, learning, and experiences.</p>
-<p>A person will encounter many difficulties and challenges in their lifetime, but choosing their own difficulties is the best way to solve them. As a person, you may not have all the answers, and maybe you don't need to have all the answers. Moving in the right direction, embracing curiosity, and surrounding yourself with excellent people, the future will definitely not be bad. Whatever the next step is, the focus should always be on action, because action is the most important.</p>
-<p>These are some thought-provoking life lessons, and hopefully these quoted tweets will touch your heart and fill you with growth and hope in 2024!)</p>
+            <h1>Twitter 推文精選</h1>
+<h2>2024年1月8日</h2>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ShaanVP/status/1744226866255606116#m">ShaanVP</a>
+- what would you do if you weren't afraid? (serious question)</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnnyxbrown/status/1743997081679704446#m">Johnnyxbrown</a>
+- 7 life-changing insights from “Atomic Habits” by James Clear:
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDPrWSlXgAAmoWL.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">mechsicko</a>
+- The Physical Impossibility of Death in the Mind of Someone Living<br />
+Artist || Damien Hirst<br />
+Year || 1991<br />
+Type || Tiger shark, glass, steel, 5% formaldehyde solution<br />
+Medium || <a href="https://x.com/opepenedition" title="Opepen Edition">@opepenedition</a> <br />
+Movement || minimalism, pixel, meme<br />
+Subject || Life, apparent death<br />
+Cc: <a href="https://x.com/jackbutcher" title="Jack Butcher">@jackbutcher</a> <br />
+🪢</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744199748515504221#m">sweatystartup</a>
+- What the media doesn’t tell you: The world is a great place. Human beings go out of their way every single day to help other human beings. Favors. Help. They’ll literally pull their car over in rural America to help you solve your problem. The world is an excellent place.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">jackbutcher</a>
+- <img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mkobach/status/1744186379741938012#m">mkobach</a>
+- I hates these ads. Am I alone here?
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDML6uTWgAAVgDx.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/alijla2021/status/1743733269571440760#m">alijla2021</a>
+- Two hours between the two photos
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image1" src="https://nitter.catsarch.com/pic/media%2FGDL8KhsXAAA137g.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image2" src="https://nitter.catsarch.com/pic/media%2FGDL8KhnXgAAs6CE.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/bunya_eth/status/1744167328529453128#m">bunya_eth</a>
+- Pepermissionless street art</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ElliotHershberg/status/1744082999048613920#m">@ElliotHershberg</a>
+- Progress in reading, writing, and editing DNA has been relentless. With all of these new tools, why haven't we successfully cured every disease with a genetic basis? There are several reasons—including financing the cost of clinical development for rare diseases—but there is a looming technical bottleneck: Delivering gene therapies safely and specifically inside the body is a really hard problem. <a href="https://x.com/Dyno_Tx" title="Dyno Therapeutics, Inc.">@Dyno_Tx</a> is on a mission to solve this problem. Led by <a href="https://x.com/ekelsic" title="Eric Kelsic (he/him)">@ekelsic</a>, the team is combining high-throughput biology (massive multiplexed experiments) with AI to design new gene therapy vectors. So far, they've landed several pharma partnerships, closed a massive Series A led by <a href="https://x.com/a16zBioHealth" title="a16z Bio + Health">@a16zBioHealth</a>, and launched several new delivery products into the market. In order to understand what they're working on, I’ve spoken with many of the company’s co-founders and investors, visited their labs, read every paper they’ve published, and reviewed countless private and public materials on the company. For the first CoB essay of 2024, I'm sharing their story. Studying Dyno’s thesis and initial efforts in detail reveals many lessons. We’ll examine new measurement technologies, the challenges of biological sequence design, how to pick problems worth solving, and what the horizontal biotech platforms of the future might look like. Read here: <a href="https://centuryofbio.com/p/dyno">centuryofbio.com/p/dyno</a> <img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQ6PeUXIAAhmok.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">cremieuxrecueil</a>
+- Rice University has a course called "Afrochemistry" where students will "apply chemical tools and analysis to understand Black life in the U.S."
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDRWYc4WIAA27g_.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744153230756475351#m">sweatystartup</a>
+- Chris Kirk with ice water in his veins.
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1744153108026961921%2Fimg%2FUV7EmO5qVe3az-QE.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mikeholden/status/1744004703136989331#m">mikeholden</a>
+- I had zero interest in Monday night’s national championship game but now I’ll be following along just to see if <a href="https://x.com/businessbarista" title="Alex Lieberman">@businessbarista</a> and his friends get on TV in their <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> shirts.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnbryanesq/status/1744042901280104535#m">johnbryanesq</a>
+- Some have asked for pics of the Revolutionary War fort we discovered inside an old plantation house in West Virginia. Almost none of the original Rev War frontier log forts survive. Historians believed an old log fort know as Byrnside’s Fort was still there, inside the walls of this large house. But… We had to buy the property first before being able to take a crowbar to it to see if the logs were inside the walls. I was 90% sure they were there… <img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQVxTTWQAExoQb.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140008640946497#m">businessbarista</a>
+- Go to the National Championship for free (thx <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>) ✅ Come up with a viral marketing stunt ✅ - Spot the 8 orange fans for $ Press reaches out to cover the story ✅ Get on live TV &amp; go viral on social ⬜️ The journey continues. #<a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140540474462318#m">businessbarista</a>
+- He scores:
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/ElliotHershberg/status/1744082999048613920#m">ElliotHershberg</a>
+- Progress in reading, writing, and editing DNA has been relentless. With all of these new tools, why haven't we successfully cured every disease with a genetic basis? There are several reasons—including financing the cost of clinical development for rare diseases—but there is a looming technical bottleneck: Delivering gene therapies safely and specifically inside the body is a really hard problem. <a href="https://x.com/Dyno_Tx" title="Dyno Therapeutics, Inc.">@Dyno_Tx</a> is on a mission to solve this problem. Led by <a href="https://x.com/ekelsic" title="Eric Kelsic (he/him)">@ekelsic</a>, the team is combining high-throughput biology (massive multiplexed experiments) with AI to design new gene therapy vectors. So far, they've landed several pharma partnerships, closed a massive Series A led by <a href="https://x.com/a16zBioHealth" title="a16z Bio + Health">@a16zBioHealth</a>, and launched several new delivery products into the market. In order to understand what they're working on, I’ve spoken with many of the company’s co-founders and investors, visited their labs, read every paper they’ve published, and reviewed countless private and public materials on the company. For the first CoB essay of 2024, I'm sharing their story. Studying Dyno’s thesis and initial efforts in detail reveals many lessons. We’ll examine new measurement technologies, the challenges of biological sequence design, how to pick problems worth solving, and what the horizontal biotech platforms of the future might look like. Read here: <a href="https://centuryofbio.com/p/dyno">centuryofbio.com/p/dyno</a> <img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQ6PeUXIAAhmok.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/cremieuxrecueil/status/1744114273519853935#m">cremieuxrecueil</a>
+- Rice University has a course called "Afrochemistry" where students will "apply chemical tools and analysis to understand Black life in the U.S."
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDRWYc4WIAA27g_.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/sweatystartup/status/1744153230756475351#m">sweatystartup</a>
+- Chris Kirk with ice water in his veins.
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1744153108026961921%2Fimg%2FUV7EmO5qVe3az-QE.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mikeholden/status/1744004703136989331#m">mikeholden</a>
+- I had zero interest in Monday night’s national championship game but now I’ll be following along just to see if <a href="https://x.com/businessbarista" title="Alex Lieberman">@businessbarista</a> and his friends get on TV in their <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a> shirts.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/johnbryanesq/status/1744042901280104535#m">johnbryanesq</a>
+- Some have asked for pics of the Revolutionary War fort we discovered inside an old plantation house in West Virginia. Almost none of the original Rev War frontier log forts survive. Historians believed an old log fort know as Byrnside’s Fort was still there, inside the walls of this large house. But… We had to buy the property first before being able to take a crowbar to it to see if the logs were inside the walls. I was 90% sure they were there… <img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQVxTTWQAExoQb.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140008640946497#m">businessbarista</a>
+- Go to the National Championship for free (thx <a href="https://x.com/HubSpot" title="HubSpot">@HubSpot</a>) ✅ Come up with a viral marketing stunt ✅ - Spot the 8 orange fans for $ Press reaches out to cover the story ✅ Get on live TV &amp; go viral on social ⬜️ The journey continues. #<a href="https://x.com/search?q=%23HubSpotPartner">#HubSpotPartner</a></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140540474462318#m">businessbarista</a>
+- He scores:
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Image" src="https://nitter.catsarch.com/pic/media%2FGDQajBZWwAAsXhy.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/businessbarista/status/1744140726210814317#m">businessbarista</a>
+- Step 2: Create a crazy marketing stunt</p>
+<hr />
+<p>以上為最新的推文，涵蓋了各種話題，包括心理學問題、藝術作品、科技進步、大學課程以及朋友間趣味活動等。這些推文反映了社交媒體上的多樣性和活力，也是當下網絡世界的一個縮影。</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

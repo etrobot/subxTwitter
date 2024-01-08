@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,49 +84,56 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Novos Tweets sobre Design!</h1>
-<ol>
-<li><strong>PinterestDesign (05 Jan 2024 19:24:22)</strong></li>
-<li><strong>Link:</strong> <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">PinterestDesign</a></li>
-<li><strong>Conteúdo:</strong> Novo em nosso blog, uma exploração de como dar de volta nos recompensa muito em troca.</li>
-<li>Mentorship =<ul>
-<li>conexão com a comunidade local</li>
-<li>apresentar estudantes ao design de produtos digitais como uma opção de carreira</li>
-<li>aprender enquanto ensina outras pessoas</li>
-<li>e muito mais</li>
-</ul>
-</li>
-<li>
-<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">Visualizar mais</a></p>
-</li>
-<li>
-<p><strong>PinterestDesign (04 Jan 2024 20:22:30)</strong></p>
-</li>
-<li><strong>Link:</strong> <a href="https://x.com/PinterestDesign/status/1743005001557889096#m">PinterestDesign</a></li>
-<li>
-<p><strong>Conteúdo:</strong> Adoramos ver isso! O que você está pinando em 2024? <a href="https://x.com/jstrelioff/status/1742648294726070344#m">Ver mais</a></p>
-</li>
-<li>
-<p><strong>MicrosoftDesign (04 Jan 2024 18:50:50)</strong></p>
-</li>
-<li><strong>Link:</strong> <a href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">MicrosoftDesign</a></li>
-<li>
-<p><strong>Conteúdo:</strong> O papel de parede deste mês é trazido a você por #OliviaXu 😍. Para baixar este papel de parede e mais, confira ➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
-</li>
-<li>
-<p><strong>SalesforceUX (28 Dec 2023 18:07:01)</strong></p>
-</li>
-<li><strong>Link:</strong> <a href="https://x.com/SalesforceUX/status/1740434190347174281#m">SalesforceUX</a></li>
-<li>
-<p><strong>Conteúdo:</strong> Itai Asseo, Chefe de Tecnologia Emergente, Salesforce Ignite, e sua equipe experimentaram uma variedade de ferramentas de IA para ver quão rapidamente podiam se adaptar às tarefas. <a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">Saiba mais</a></p>
-</li>
-<li>
-<p><strong>SalesforceUX (27 Dec 2023 19:54:02)</strong></p>
-</li>
-<li><strong>Link:</strong> <a href="https://x.com/SalesforceUX/status/1740098733746839762#m">SalesforceUX</a></li>
-<li><strong>Conteúdo:</strong> Junte-se à Equipe de Design da Salesforce! Confira esses cargos. <a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">Lead/Principal UX Designer</a> <a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">Senior/Lead Researcher, Research &amp; Insights</a></li>
-</ol>
-<p>Os Tweets acima fornecem insights sobre tendências e desenvolvimentos atuais no mundo do design, incluindo mentorship, papel de parede, ferramentas de IA, oportunidades de emprego, e atualizações de temas e experiências de design. A partir desses tweets, é evidente que o design está sempre evoluindo e impactando várias áreas, como carreira, tecnologia e inovação.</p>
+            <h1>Novo Ano, Novas Conexões!</h1>
+<p>Por <a href="https://x.com/ADPList" title="ADPList">@ADPList</a>: "🌟 Novo Ano, Novas Conexões! O Meetup de Bangalore da ADPList está aqui! 🚀</p>
+<p>🎉 Olá Designers, Gerentes de Produto, Mentores e Inovadores!</p>
+<p>Prepare-se para um início eletrizante do ano no Meetup de Bangalore da ADPList. Estamos reunindo uma comunidade dinâmica de profissionais, mentores e entusiastas no coração de nossa cidade.</p>
+<p>🤝 Conectar, Conversar e Cativar: Mergulhe em um mundo de talentos incríveis de nossa indústria em um ambiente descontraído. Compartilhe sua jornada, inspire-se em outros e forje conexões que podem moldar o seu futuro. Sua próxima grande colaboração pode estar a apenas uma conversa de distância!</p>
+<p>🎤 Palestras que Inspiram Ideias: Estamos trazendo palestrantes que compartilharão insights inovadores e dicas para a vida. Aprendizado está prestes a se tornar muito mais divertido.</p>
+<p>🌈 Cheers para <a href="https://x.com/LottieFiles" title="LottieFiles">@LottieFiles</a>: Um grande agradecimento ao LottieFiles por ser nosso parceiro de destaque para este evento. Sua abordagem inovadora para animação está mudando o jogo!</p>
+<p>🏢 Muito obrigado para <a href="https://x.com/zeta_ux" title="Zeta Design">@zeta_ux</a>: Elogios ao Zeta por nos hospedar em seu espaço super legal. É o cenário perfeito para ideias e interações florescerem.</p>
+<p>🍔 Comida, Diversão e Refrescos: As conversas não terminam com as palestras. Junte-se a nós para uma ótima comida e risadas depois. Lembre-se, algumas das melhores conexões são feitas durante uma refeição casual!</p>
+<p>📢 Espalhe a Palavra: Convide seus colegas e amigos. Quanto mais, melhor!</p>
+<p>🎟️ Vagas Limitadas: Corra, garanta o seu lugar agora!
+🔗 Registre-se agora: <a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a></p>
+<p>Junte-se a nós no Meetup de Bangalore da ADPList e faça parte de uma comunidade que está moldando o futuro. Vamos aprender, crescer e ter sucesso juntos.</p>
+<p>Até lá!</p>
+<h1>ADPListBangalore #NetworkingEvent #LottieFiles #Meetup #BangaloreEvents #ProfessionalGrowth"</h1>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDOEDaCasAABv3m.jpg" /></p>
+<p>Data e Hora: 07 Jan 2024 06:43:10
+Autor: <a href="https://x.com/zeta_ux">@zeta_ux</a>
+Link: <a href="https://x.com/zeta_ux/status/1743885974206341243#m">Tweet</a></p>
+<hr />
+<h1>Explorações de Como Dar de Volta</h1>
+<p>Por <a href="https://x.com/PinterestDesign" title="Pinterest Design">@PinterestDesign</a>: "Novo em nosso blog, uma exploração de como dar de volta nos recompensa muito em troca.</p>
+<p>Mentoria = 
+✅ conexão com a comunidade local
+✅ introduzir estudantes ao design de produtos digitais como opção de carreira
+✅ aprender enquanto ensina outros
+…e muito mais</p>
+<p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">Leia mais</a>"</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Artigo" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p>Data e Hora: 05 Jan 2024 19:24:22
+Autor: <a href="https://x.com/PinterestDesign">@PinterestDesign</a>
+Link: <a href="https://x.com/PinterestDesign/status/1743352760982979056#m">Tweet</a></p>
+<h1>Recursos Úteis para Design</h1>
+<p>Por <a href="https://x.com/jstrelioff" title="Jessica Strelioff">@jstrelioff</a>: "Eu uso <a href="https://x.com/Pinterest" title="Pinterest">@Pinterest</a> talvez uma quantidade constrangedora? Mas compartilhei caso meus painéis sejam recursos úteis para alguém! Tenho um painel para a maioria dos aspectos do design: logos, tipografia, ilustração, fotografia, etc.</p>
+<p>Sinta-se à vontade para seguir ao longo ⇣ <a href="https://www.pinterest.com/jstrelioff/_saved/">pinterest.com/jstrelioff/_sa…</a>"</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem1" src="https://nitter.catsarch.com/pic/media%2FGC8hAGQXIAAHQeV.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem2" src="https://nitter.catsarch.com/pic/media%2FGC8hBW0XsAAf-F-.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem3" src="https://nitter.catsarch.com/pic/media%2FGC8hCXzXkAAIppi.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem4" src="https://nitter.catsarch.com/pic/media%2FGC8hGr2WkAAVZ1H.jpg" /></p>
+<p>Data e Hora: 04 Jan 2024 18:50:50
+Autor: <a href="https://x.com/jstrelioff">@jstrelioff</a>
+Link: <a href="https://x.com/jstrelioff/status/1742648294726070344#m">Tweet</a></p>
+<h1>Papel de Parede do Mês</h1>
+<p>Pelo <a href="https://x.com/MicrosoftDesign" title="Microsoft Design">@MicrosoftDesign</a>: "O papel de parede deste mês é trazido a você por <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍. <br />
+Para baixar este papel de parede e mais, confira ➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a>"</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Papel de Parede" src="https://nitter.catsarch.com/pic/media%2FGDBQ1EPa8AALLre.jpg" /></p>
+<p>Data e Hora: 04 Jan 2024 20:22:30
+Autor: <a href="https://x.com/MicrosoftDesign">@MicrosoftDesign</a>
+Link: <a href="https://x.com/MicrosoftDesign/status/1743005001557889096#m">Tweet</a></p>
+<p>Este é apenas um trecho do artigo. O artigo completo incluiria todos os tweets acima, bem como interpretações e comentários adicionais sobre o conteúdo.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

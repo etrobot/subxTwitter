@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,46 +83,71 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Kumpulan Twitter: Teknologi dan Pembelajaran Bahasa Mesin</h1>
-<h2>Artikel</h2>
-<p>Berikut adalah sejumlah tweet terkini yang melibatkan teknologi dan pembelajaran dalam bidang bahasa mesin.</p>
-<h3>05 Januari 2024 10:19:23 oleh @alexgleith</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/alexgleith/status/1743215612221137269#m">@alexgleith</a> mengunggah tweet yang menyatakan betapa mudahnya sekarang untuk memuat data satelit dari mana pun di dunia dengan hanya 2 pustaka Python, 6 baris kod, dan sekitar 15 saat.</p>
-<h3>06 Januari 2024 17:44:56 oleh @hwchase17</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743690126369402905#m">@hwchase17</a> membagikan tutorial favoritnya yang berdurasi 4 jam.</p>
-<h3>06 Januari 2024 17:44:07 oleh @LangChainAI</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743689917442711705#m">@LangChainAI</a> mengajak orang untuk menonton video tutorial yang berdurasi lebih dari 4 jam.</p>
-<h3>06 Januari 2024 17:17:08 oleh @hwchase17</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743683126491316460#m">@hwchase17</a> membagikan cara mudah untuk membangun aplikasi rag.</p>
-<h3>06 Januari 2024 17:16:24 oleh @hwchase17</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1743682944345219289#m">@hwchase17</a> menunjukkan kekagumannya melihat LangChain digunakan secara modular.</p>
-<h3>06 Januari 2024 16:00:29 oleh @taranjeetio</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743663836992070139#m">@taranjeetio</a> berbagi kontribusi seorang kontributor open source yang menambahkan dukungan untuk folder Google Drive sebagai pemuat data dalam embedchain.</p>
-<h3>06 Januari 2024 17:06:37 oleh @jerryjliu0</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1743680481504514049#m">@jerryjliu0</a> merekomendasikan sebuah penelitian tentang generasi dengan penambahan informasi hubungan.</p>
-<h3>06 Januari 2024 16:24:06 oleh @LangChainAI</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/LangChainAI/status/1743669782321492206#m">@LangChainAI</a> mengumumkan peluncuran 2 tutorial YouTube baru.</p>
-<h3>06 Januari 2024 16:19:11 oleh @ylecun</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743668544993189951#m">@ylecun</a> membagikan beberapa tips tentang desain slide yang tidak dapat diterima.</p>
-<h3>06 Januari 2024 15:11:08 oleh @Dev__Digest</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Dev__Digest/status/1743651419486405060#m">@Dev__Digest</a> mengumumkan video baru tentang memulai dengan LangChain dan UnstructuredIO.</p>
-<h3>05 Januari 2024 20:32:36 oleh @taranjeetio</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/taranjeetio/status/1743369932178628944#m">@taranjeetio</a> menyatakan bahwa embedchain sedang trend di seluruh dunia di GitHub.</p>
-<h3>06 Januari 2024 08:21:38 oleh @ylecun</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743548363214082171#m">@ylecun</a> mengunggah tweet tentang 'reward densification'.</p>
-<h3>05 Januari 2024 23:59:06 oleh @llama_index</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743421900519600400#m">@llama_index</a> mengumumkan kehadiran Jerry Liu di podcast Weights &amp; Biases, Gradient Dissent.</p>
-<h3>06 Januari 2024 08:09:22 oleh @_philschmid</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/_philschmid/status/1743545280086053032#m">@_philschmid</a> menjelaskan tentang perubahan lisensi Microsoft untuk model LLM phi-2.</p>
-<h3>05 Januari 2024 16:26:42 oleh @MatthewBerman</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MatthewBerman/status/1743308046770839776#m">@MatthewBerman</a> membagikan informasi tentang CrewAI, yang memungkinkan pembuatan tim agen AI.</p>
-<h3>06 Januari 2024 03:31:21 oleh @ylecun</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1743475311939887438#m">@ylecun</a> mengunggah emoji yang menarik.</p>
-<h3>05 Januari 2024 17:20:29 oleh @llama_index</h3>
-<p><br><a style="color:#5da2ff;" href="https://x.com/llama_index/status/1743321585128521849#m">@llama_index</a> membagikan jawaban terperinci untuk mengatasi masalah dalam generasi augmented retrieval.</p>
-<p>Ini adalah kumpulan tweet terkini tentang teknologi dan pembelajaran bahasa mesin. Dari tutorial yang panjang hingga kemudahan dalam memuat data satelit, tweet-tweet ini menghadirkan beragam informasi yang menarik untuk dipelajari dan diaplikasikan dalam pengembangan teknologi masa depan.</p>
+            <h1>Berita AI Terkini</h1>
+<h2>07 Januari 2024</h2>
+<p><strong>14:30:24</strong>
+<strong>@joaomdmoura</strong>: Recording a new video on a complete local models crew of AI Agents 🚣✨
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+<p>Justeru, Joao Moura sedang merakam video baru mengenai kru model AI tempatan yang lengkap.</p>
+<h2>08 Januari 2024</h2>
+<p><strong>02:11:10</strong>
+<strong>@karpathy</strong>: e/ia - Intelligence Amplification<br />
+- Tidak mencari untuk membina entiti Tuhan yang sangat bijak yang menggantikan manusia.
+- Membina alat "basikal untuk minda" yang memberdayakan dan memperluaskan keupayaan pemprosesan maklumat manusia.
+- Di kalangan semua manusia, bukan dalam peratusan teratas.
+- Setia kepada pion komputer Ashby, Licklider, Bush, Engelbart, ...</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+<p>Yang diungkapkan oleh Andrej Karpathy mengenai amplifikasi kecerdasan dalam bidang kecerdasan buatan.</p>
+<p><strong>03:32:39</strong>
+<strong>@karpathy</strong>: (I’ll add thoughts to thread as they come up. )<br />
+Pemikiran mengenai alat ini sebagai pemperluasan kecerdasan semata-mata terasa terlalu membatasi, ia juga boleh difahami sebagai pemperluasan imaginasi; kita juga melihat banyak perkara ini dengan generative IA.</p>
+<p>Andaian yang dibuat oleh Andrej Karpathy berkaitan dengan pemikiran baru dalam pemperluasan kecerdasan.</p>
+<p><strong>01:46:47</strong>
+<strong>@erichorvitz</strong>: Idea penting dari Eric Topol "U.S. is facing biggest COVID wave since Omicron. Why are we still playing make-believe?" tinyurl.com/ms8esuz6. Kami boleh melakukan lebih baik.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+<p>Eric Horvitz berkongsi mengenai gelombang COVID yang besar di Amerika Syarikat dan bagaimana kita boleh meningkatkan usaha kita dalam menangani pandemik ini.</p>
+<p><strong>06 Januari 2024</strong>
+<strong>17:06:37</strong>
+<strong>@jerryjliu0</strong>: Pada tahun-tahun sebelum ini telah banyak penyelidikan RAG yang menarik, dan untungnya untuk anda, semua usaha ini dilacak di satu tempat!</p>
+<p>Jerry Liu berkongsi mengenai kajian terperinci RAG yang boleh didapati secara percuma.</p>
+<h2>08 Januari 2024</h2>
+<p><strong>03:08:51</strong>
+<strong>@jerryjliu0</strong>: omg this is me just realizing the link is broken</p>
+<p>Jerry Liu sedang mengemas kini mengenai pautan yang rosak.</p>
+<p><strong>02:49:37</strong>
+<strong>@RisingSayak</strong>: Thanks to the benevolent hard work of many in the community who continue to come up with cool tricks for LoRA + DreamBooth.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="huggingface.co/blog/sdxl_lor…" src="https://huggingface.co/blog/sdxl_lora_advanced_script" /></p>
+<p>Rising Sayak berkongsi mengenai peningkatan teknologi AI yang baru.</p>
+<p><strong>01:52:49</strong>
+<strong>@joaomdmoura</strong>: And there you have it, crewAI is number one on @github trending today 🚀💖📈<br />
+Thank you for all the love and support</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+<p>Joao Moura berkongsi mengenai kejayaan aplikasinya di platform GitHub.</p>
+<p><strong>08 Januari 2024</strong>
+<strong>@llama_index</strong>: Our Open-Source Roadmap 🗺️</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="github.com/run-llama/llama_i…" src="https://github.com/run-llama/llama_index/discussions/9888" /></p>
+<p>Pihak LlamaIndex berkongsi mengenai rancangan pembangunan perisian sumber terbuka mereka.</p>
+<p><strong>07 Januari 2024</strong>
+<strong>08:05:04</strong>
+<strong>@Rainmaker1973</strong>: Building a Mercedes-AMG G63 V8 engine.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="📹 Mr. Benz" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1743863069070024705%2Fimg%2FreqbqXtwxXo8zIiW.jpg" /></p>
+<p>Rainmaker1973 berkongsi mengenai pembinaan enjin kereta.</p>
+<p><strong>19:29:38</strong>
+<strong>@SVG__Collection</strong>: THELONIOUS MONK
+A dissonant sorcerer, conjuring brilliance in musical chaos… 🎹</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></p>
+<p>SVG Collection berkongsi mengenai tokoh penting dalam dunia muzik.</p>
+<p><strong>22:58:32</strong>
+<strong>@ylecun</strong>: Venture capital firm Andreessen-Horowitz @a16z wrote a letter to the UK House of Lords in defense of open source AI platforms.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDRmSs4WkAIjOUM.jpg" /></p>
+<p>Yann LeCun berkongsi mengenai sokongan firma modal ventura untuk platform AI sumber terbuka.</p>
+<p><strong>22:13:21</strong>
+<strong>@lateinteraction</strong>: Over the past 4 years, we built a massive stack around ColBERT: a retrieval paradigm that performs robustly on hard queries, adapts easily to hard domains, and searches billions of tokens in milliseconds.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="More info" src="https://nitter.catsarch.com/pic/media%2FGDQ4ElpagAAY6dN.jpg" /></p>
+<p>Pihak Late Interaction berkongsi mengenai pembinaan teknologi AI yang ketara.</p>
 <hr />
-<p>Terima kasih telah membaca. Jangan lupa untuk mengikuti akun resmi Twitter dari para pengguna di atas untuk informasi lebih lanjut.</p>
+<p>Anda boleh membaca pesanan berkenaan dengan pengintegrasian RAGatouille dan LangChain <a href="https://x.com/LangChainAI/status/1744080648481260015#m">di sini</a>.</p>
+<p>Ini adalah rencana untuk menghimpunkan maklumat terkini dalam dunia kecerdasan buatan. Boleh jadi bermanfaat untuk pembaca yang berminat dalam perkembangan terkini dalam bidang ini.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

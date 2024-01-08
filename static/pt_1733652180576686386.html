@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,44 +83,98 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweets Recentes</h1>
-<h2>LangChainAI - 06 Jan 2024 17:44:07</h2>
-<p>Procurando por uma atividade de fim de semana ativa? Este vídeo apresentado por <a href="https://x.com/krishnaik06" title="Krish Naik">@krishnaik06</a> tem mais de <strong>4</strong> horas de duração e cobre diversos tópicos interessantes. Confira: <a href="https://piped.video/watch?v=aWKrL4z5H6w">piped.video/watch?v=aWKrL4z5…</a></p>
-<h2>hwchase17 - 06 Jan 2024 17:44:56</h2>
-<p>Este é um dos meus tutoriais recentes favoritos. São 4 horas de duração! <a href="https://x.com/hwchase17/status/1743690126369402905#m">x.com/hwchase17/status/1743690126369402905#m</a></p>
-<h2>hwchase17 - 06 Jan 2024 17:17:08</h2>
-<p>Forma muito fácil de construir aplicações RAG. <a href="https://x.com/hwchase17/status/1743683126491316460#m">x.com/hwchase17/status/1743683126491316460#m</a></p>
-<h2>hwchase17 - 06 Jan 2024 17:16:24</h2>
-<p>Ótimo ver LangChain sendo usado modularmente. <a href="https://x.com/hwchase17/status/1743682944345219289#m">x.com/hwchase17/status/1743682944345219289#m</a></p>
-<h2>taranjeetio - 06 Jan 2024 16:00:29</h2>
-<p>Um contribuidor de código aberto chamado Joe recentemente adicionou suporte para Google Drive como carregador de dados em <a href="https://x.com/embedchain" title="embedchain">@embedchain</a>. O carregador utiliza o carregador de Google Drive da <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a>.</p>
-<h2>jerryjliu0 - 06 Jan 2024 17:06:37</h2>
-<p>Houve muita pesquisa interessante sobre RAG nos últimos anos e todas essas iniciativas estão rastreadas em um único lugar. Confira o artigo "Retrieval-Augmented Generation for Large Language Models: A Survey" de Gao et al. que categoriza toda essa pesquisa de forma admirável.</p>
-<h2>LangChainAI - 06 Jan 2024 16:24:06</h2>
-<p>Nós lançamos 2 tutoriais no YouTube nesta semana, perfeitos para um final de semana divertido. Confira os tutoriais:
-- Full Stack RAG App with TypeScript (por <a href="https://x.com/BraceSproul" title="Brace">@BraceSproul</a>): <a href="https://piped.video/rQdibOsL1ps">piped.video/rQdibOsL1ps</a>
-- AutoPrompt Builder (com participação especial do Hosted LangServe): <a href="https://piped.video/watch?v=mmBo8nlu2j0">piped.video/watch?v=mmBo8nlu…</a></p>
-<h2>ylecun - 06 Jan 2024 16:19:11</h2>
-<p>Aqui está uma lista de erros inaceitáveis no design de slides. Entre eles: não usar todo o espaço, fontes muito pequenas, gráficos sem rótulos nos eixos, slides sem título, interruptores de slides lentos e extravagantes, informações de balas sem sentido e clipart ilustrativo não informativo. <a href="https://x.com/ylecun/status/1743668544993189951#m">x.com/ylecun/status/1743668544993189951#m</a></p>
-<h2>Dev__Digest - 06 Jan 2024 15:11:08</h2>
-<p>Novo vídeo sobre como começar com <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a> e <a href="https://x.com/UnstructuredIO" title="UnstructuredIO">@UnstructuredIO</a>. <a href="https://piped.video/2B161Dpvyxw">piped.video/2B161Dpvyxw</a></p>
-<h2>taranjeetio - 05 Jan 2024 20:32:36</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/embedchain" title="embedchain">@embedchain</a> está tendendo mundialmente novamente no <a href="https://x.com/github" title="GitHub">@github</a>. Obrigado a todos pelo apoio. <a href="https://nitter.nohost.network/pic/ext_tw_video_thumb%2F1743369853069852672%2Fpu%2Fimg%2FCkxYtIOoCGUVNhTE.jpg">nitter.nohost.network/pic/ext_tw_video_thumb%2F174336985…</a></p>
-<h2>ylecun - 06 Jan 2024 08:21:38</h2>
-<p>Densificação de recompensa. <a href="https://x.com/sainingxie/status/1743513013406064840#m">x.com/sainingxie/status/1743513013406064840#m</a></p>
-<h2>llama_index - 05 Jan 2024 23:59:06</h2>
-<p>Não perca <a href="https://x.com/jerryjliu0" title="Jerry Liu">@jerryjliu0</a> no podcast <a href="https://x.com/weights_biases" title="Weights &amp; Biases">@weights_biases</a>, Gradient Dissent! Eles cobrem diversos tópicos interessantes. Confira no YouTube ou no seu app de podcast favorito. <a href="https://nitter.nohost.network/pic/media%2FGDHg-gWawAA6FEg.jpg">nitter.nohost.network/pic/media%2FGDHg-gWawAA6FEg.jpg</a></p>
-<h2>_philschmid - 06 Jan 2024 08:09:22</h2>
-<p>Recebemos um presente de Natal tardio da <a href="https://x.com/Microsoft" title="Microsoft">@Microsoft</a>! A Microsoft acabou de mudar a licença de seu pequeno LLM phi-2 para MIT! O modelo possui 2.7 bilhões de parâmetros e é licenciado sob MIT. <a href="https://nitter.nohost.network/pic/media%2FGDJRGybXkAAUdSU.jpg">nitter.nohost.network/pic/media%2FGDJRGybXkAAUdSU.jpg</a></p>
-<h2>MatthewBerman - 05 Jan 2024 16:26:42</h2>
-<p>CrewAI permite a criação de incríveis equipes de agentes de IA, de forma simples e intuitiva. Confira: <a href="https://nitter.nohost.network/pic/media%2FGDF28_6aIAA1Iid.jpg">nitter.nohost.network/pic/media%2FGDF28_6aIAA1Iid.jpg</a></p>
-<h2>ylecun - 06 Jan 2024 03:31:21</h2>
-<p>😂😂 <a href="https://x.com/REVOLVO_OCELOTS/status/1743379197006152174#m">x.com/REVOLVO_OCELOTS/status/1743379197006152174#m</a></p>
-<h2>llama_index - 05 Jan 2024 17:20:29</h2>
-<p>Cheat sheet avançado de RAG + Receitas 🧑‍🍳. Confira o post completo no blog. <a href="https://nitter.nohost.network/pic/media%2FGDGFnUnbQAAG0ET.jpg">nitter.nohost.network/pic/media%2FGDGFnUnbQAAG0ET.jpg</a></p>
-<h2>joaomdmoura - 05 Jan 2024 17:30:00</h2>
-<p>Langsmith me ajuda muito na depuração das execuções do CrewAI, realmente potencializa alguns dos desenvolvimentos. <a href="https://x.com/joaomdoura/status/1743323977919992086#m">x.com/joaomdoura/status/1743323977919992086#m</a></p>
-<p>Espero que esta compilação de tweets recentes sobre IA e desenvolvimento de software seja útil para os leitores interessados em acompanhar as últimas notícias e tendências nesse campo emocionante!</p>
+            <h1>Tweets em Destaque</h1>
+<ul>
+<li><strong>07 Jan 2024 14:30:24 - @joaomdmoura</strong></li>
+<li>Gravação de um novo vídeo sobre uma equipe de modelos locais completos de Agentes de IA 🚣✨</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDPx_BLW4AA2SCb.jpg" /></p>
+</li>
+<li>
+<p><strong>08 Jan 2024 02:11:10 - @karpathy</strong></p>
+</li>
+<li>Verdades pesadas sobre Inteligência Amplificada  </li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDSOzaMbwAAUKln.jpg" /></p>
+</li>
+<li>
+<p><strong>08 Jan 2024 03:32:39 - @karpathy</strong></p>
+</li>
+<li>Adicionando pensamentos ao segmento conforme surgirem. </li>
+<li>
+<p>Ampliação da imaginação com ferramentas IA gerativas.</p>
+</li>
+<li>
+<p><strong>08 Jan 2024 01:46:47 - @erichorvitz</strong></p>
+</li>
+<li>Ideias importantes de <a href="https://x.com/EricTopol" title="Eric Topol">@EricTopol</a> sobre a atual onda de COVID nos EUA e pesquisa promissora do <a href="https://x.com/UWproteindesign" title="Institute for Protein Design">@UWproteindesign</a>.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDSKjSzW4AA7CZ_.jpg" /></p>
+</li>
+<li>
+<p><strong>06 Jan 2024 17:06:37 - @jerryjliu0</strong></p>
+</li>
+<li>Destaque para pesquisa RAG do ano passado e artigos relacionados.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDLMBzca0AACfBu.jpg" /></p>
+</li>
+<li>
+<p><strong>08 Jan 2024 03:08:51 - @jerryjliu0</strong></p>
+</li>
+<li>
+<p>Corrigindo link quebrado para o artigo mencionado.</p>
+</li>
+<li>
+<p><strong>08 Jan 2024 02:49:37 - @RisingSayak</strong></p>
+</li>
+<li>Agradecimento pelo trabalho e link para artigo sobre desenvolvimento de truques para LoRA + DreamBooth.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/card_img%2F1742268534476939264%2F3UFVm0dP%3Fformat%3Djpg%26name%3D800x419" /></p>
+</li>
+<li>
+<p><strong>08 Jan 2024 01:52:49 - @joaomdmoura</strong></p>
+</li>
+<li>Destaque para o GitHub trending do crewAI.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDSCGl8XMAE4k8j.jpg" /></p>
+</li>
+<li>
+<p><strong>07 Jan 2024 20:54:23 - @llama_index</strong></p>
+</li>
+<li>Apresentação do roteiro de código aberto para 2024.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDRJvT0bEAAaIYq.jpg" /></p>
+</li>
+<li>
+<p><strong>07 Jan 2024 08:05:04 - @Rainmaker1973</strong></p>
+</li>
+<li>Construção de um motor Mercedes-AMG G63 V8.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Vídeo" src="https://nitter.catsarch.com/pic/amplify_video_thumb%2F1743863069070024705%2Fimg%2FreqbqXtwxXo8zIiW.jpg" /></p>
+</li>
+<li>
+<p><strong>07 Jan 2024 19:29:38 - @SVG__Collection</strong></p>
+</li>
+<li>Homenagem a Thelonious Monk, músico inovador.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDQ2eowW8AAMaKo.jpg" /></p>
+</li>
+<li>
+<p><strong>07 Jan 2024 22:58:32 - @ylecun</strong></p>
+</li>
+<li>Empresa de capital de risco a16z defende plataformas de IA de código aberto.</li>
+<li>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDRmSs4WkAIjOUM.jpg" /></p>
+</li>
+<li>
+<p><strong>07 Jan 2024 22:13:21 - @lateinteraction</strong></p>
+</li>
+<li>Announcingização dos avanços do ColBERT.</li>
+<li><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagem" src="https://nitter.catsarch.com/pic/media%2FGDQ4ElpagAAY6dN.jpg" /></li>
+</ul>
+<hr />
+<p>Artigo interpretativo a ser adicionado:</p>
+<p>Neste artigo, exploramos uma série de tweets sobre Inteligência Artificial (IA) e avanços recentes em modelos linguísticos de grande escala (LLMs) em 2024. As postagens revelam os tópicos em destaque, como inteligência amplificada, pesquisa RAG, roadmap de código aberto, engenharia automotiva e homenagem a Thelonious Monk. A comunidade continua a mostrar entusiasmo e dedicação no desenvolvimento e aprimoramento das capacidades de IA, e este artigo fornece uma visão abrangente desses avanços.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

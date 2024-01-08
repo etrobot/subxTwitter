@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,60 +84,45 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Artikel: Explorasi Dibalik Membantu dan Mendapat Banyak Penghargaan</h1>
-<h3>Oleh: @PinterestDesign</h3>
-<h3>Waktu Tweet: 05 Jan 2024 19:24:22</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">Link Tweet</a></h3>
-<p>Pada blog kami yang baru, kami melakukan eksplorasi tentang bagaimana memberi balik memberikan banyak penghargaan kepada kita. Mentorship membawa manfaat seperti terkoneksi dengan komunitas lokal, memperkenalkan siswa kepada desain produk digital sebagai pilihan karir, belajar sambil mengajar orang lain, dan masih banyak lagi.</p>
-<h3>Oleh: @PinterestDesign</h3>
-<h3>Waktu Tweet: 04 Jan 2024 20:22:30</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743005001557889096#m">Link Tweet</a></h3>
-<p>Ayo bagikan apa yang kamu pinning di tahun 2024!</p>
-<h3>Oleh: @MicrosoftDesign</h3>
-<h3>Waktu Tweet: 04 Jan 2024 18:50:50</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">Link Tweet</a></h3>
-<p>Gambar latar belakang bulan ini disediakan oleh #OliviaXu 😍. 
-Unduh gambar latar belakang ini dan lainnya di <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
-<h3>Oleh: @SalesforceUX</h3>
-<h3>Waktu Tweet: 28 Dec 2023 18:07:01</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1740434190347174281#m">Link Tweet</a></h3>
-<p>Itai Asseo, Kepala Teknologi Berkembang, Salesforce Ignite, dan timnya bereksperimen dengan berbagai alat AI teratas untuk melihat seberapa cepat mereka bisa memahami tugas. </p>
-<h3>Oleh: @SalesforceUX</h3>
-<h3>Waktu Tweet: 27 Dec 2023 19:54:02</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1740098733746839762#m">Link Tweet</a></h3>
-<p>Bergabunglah dengan Tim Desain Salesforce! Periksa peran-peran ini.
-1. Lead/Principal UX Designer <a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">salesforce.wd12.myworkdayjob…</a>
-2. Senior/Lead Researcher, Research &amp; Insights <a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">salesforce.wd12.myworkdayjob…</a></p>
-<h3>Oleh: @MicrosoftDesign</h3>
-<h3>Waktu Tweet: 22 Dec 2023 17:00:00</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">Link Tweet</a></h3>
-<p>Musim liburan ini kami bekerja sama dengan seniman AI <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> untuk menciptakan representasi visual kenangan liburan di seluruh dunia.</p>
-<h3>Oleh: @materialdesign</h3>
-<h3>Waktu Tweet: 20 Dec 2023 19:00:57</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/materialdesign/status/1737548659972059565#m">Link Tweet</a></h3>
-<p>Setia warna telah tiba!<br />
-Anda dapat mengaktifkan Color Match di pengaturan untuk membuat skema yang dihasilkan lebih cocok dengan input warna kunci Anda.</p>
-<h3>Oleh: @lyftdesignteam</h3>
-<h3>Waktu Tweet: 19 Dec 2023 17:39:12</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/lyftdesignteam/status/1737165697917333931#m">Link Tweet</a></h3>
-<p>Dan begitu saja, semua selesai! Kami menutup tahun 2023 dengan melihat kembali pencapaian divers dan momen tak terlupakan tim.</p>
-<h3>Oleh: @SalesforceUX</h3>
-<h3>Waktu Tweet: 15 Dec 2023 21:23:06</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1735772496488497635#m">Link Tweet</a></h3>
-<p>Bagaimana dunia AI akan terlihat pada tahun 2030? Lihat posting ini tentang bagaimana tim Salesforce Futures bermitra dengan pembuat film untuk menciptakan visi masa depan dengan AI.</p>
-<h3>Oleh: @materialdesign</h3>
-<h3>Waktu Tweet: 13 Dec 2023 20:09:53</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/materialdesign/status/1735029292180848685#m">Link Tweet</a></h3>
-<p>Anatomi bilah pencarian meliputi:
-1. Wadah
-2. Tombol ikon terkemuka
-3. Teks pendukung
-4.Avatar atau ikon trailing (opsional)</p>
-<h3>Oleh: @PinterestDesign</h3>
-<h3>Waktu Tweet: 13 Dec 2023 14:56:05</h3>
-<h3><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1734950323481924000#m">Link Tweet</a></h3>
-<p>Kami juga menyukai estetika "Be Jelly" ini (dan pujian Pinterest Lens!)</p>
-<p>Terima kasih sudah membaca artikel ini yang berisi kumpulan tweet terkait desain produk, teknologi AI, dan career development. Kami berharap artikel ini bermanfaat bagi Anda para pembaca yang ingin selalu update dengan informasi terbaru seputar desain produk dan teknologi.</p>
+            <h1>Kumpulan Tweet Terbaru dalam Dunia Desain</h1>
+<hr />
+<p>Tanggal: 07 Jan 2024 06:43:10<br />
+Pengguna: <a href="https://x.com/zeta_ux">@zeta_ux</a><br />
+Tautan: <a href="https://lu.ma/adplistmeetupblr">New year, new vibes! 🎉Excited to kick off 2024 with our fresh Design Meetup! Join us as we dive into creativity, share ideas, and make this year design-tastic! 🥳Registration &amp; More details 👇lu.ma/adplistmeetupblr#zeta #design #ux #meetup #bangalore</a><br />
+Komentar: Tweet ini mengumumkan acara Design Meetup untuk memulai tahun 2024 dengan suasana yang segar dan penuh kreativitas. Acara ini diharapkan dapat menjadi wadah untuk berbagi ide dan meningkatkan pengalaman desain.</p>
+<hr />
+<p>Tanggal: 05 Jan 2024 19:24:22<br />
+Pengguna: <a href="https://x.com/PinterestDesign">@PinterestDesign</a><br />
+Tautan: <a href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">New on our blog, an exploration of how giving back rewards us so much in return. Mentorship = ✅ connection with local community✅ introducing students to digital product design as a career option✅ learning while teaching others…and much more pinterest.design/reasons-to-…</a><br />
+Komentar: Tweet ini menginformasikan tentang artikel baru di blog Pinterest Design yang membahas tentang pentingnya memberikan pembelajaran balik (mentorship) dan manfaat yang diperoleh dari hal tersebut.</p>
+<hr />
+<p>Tanggal: 04 Jan 2024 20:22:30<br />
+Pengguna: <a href="https://x.com/PinterestDesign">@PinterestDesign</a><br />
+Komentar: Tweet ini mengajak pengguna untuk berbagi kustomisasi desain mereka di Pinterest untuk saling menginspirasi.</p>
+<hr />
+<p>Tanggal: 04 Jan 2024 18:50:50<br />
+Pengguna: <a href="https://x.com/MicrosoftDesign">@MicrosoftDesign</a><br />
+Tautan: <a href="https://msft.it/60059NwpZ">This month’s wallpaper is brought to you by #OliviaXu 😍.To download this wallpaper and more check out ➡️msft.it/60059NwpZ</a><br />
+Komentar: Microsoft Design membagikan wallpaper bulanan yang dihadirkan oleh OliviaXu.</p>
+<hr />
+<p>Tanggal: 28 Dec 2023 18:07:01<br />
+Pengguna: <a href="https://x.com/SalesforceUX">@SalesforceUX</a><br />
+Tautan: <a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">Itai Asseo, Head of Emerging Technology, Salesforce Ignite, and his team experimented with a range of top AI tools to see how quickly they could get up to speed on tasks. Check out which AI tools saved the most time and in what ways. #DreamDesigners ⬇️salesforce.com/blog/can-an-a…</a><br />
+Komentar: SalesforceUX membagikan artikel yang membahas eksperimen tim mereka dalam menggunakan berbagai alat kecerdasan buatan (AI) untuk menghemat waktu.</p>
+<hr />
+<p>Tanggal: 27 Dec 2023 19:54:02<br />
+Pengguna: <a href="https://x.com/SalesforceUX">@SalesforceUX</a><br />
+Komentar: SalesforceUX mengumumkan lowongan pekerjaan di tim desain Salesforce.</p>
+<hr />
+<p>Tanggal: 22 Dec 2023 17:00:00<br />
+Pengguna: <a href="https://x.com/MicrosoftDesign">@MicrosoftDesign</a><br />
+Tautan: <a href="https://microsoft.com/holidays">This holiday season we teamed up with #AI artist @elliepritts to recreate visual representations of holiday memories around the world. Head to ➡️microsoft.com/holidays to learn more about Ellie's process and prompts that brought illustrations like these to life.</a><br />
+Komentar: Microsoft Design bekerja sama dengan seniman AI, Ellie Pritts, untuk menciptakan representasi visual kenangan liburan dari seluruh dunia.</p>
+<hr />
+<p>Tanggal: 20 Dec 2023 19:00:54<br />
+Pengguna: <a href="https://x.com/materialdesign">@materialdesign</a><br />
+Komentar: Twitter resmi Material Design mengumumkan pembaruan pengalaman tema dalam Material Theme Builder 2.0.</p>
+<p>Semua tweet di atas menunjukkan perkembangan terbaru dalam industri desain dan teknologi. Dari pengumuman acara, artikel, hingga lowongan pekerjaan, berbagai informasi menarik dapat diambil dari setiap tweet tersebut. Dengan semakin berkembangnya dunia desain, pantau terus perkembangannya melalui platform-platform digital.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

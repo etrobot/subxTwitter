@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,70 +83,30 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>Artículo en Español</h2>
-<hr />
-<h3>Tweets del 06 de enero de 2024</h3>
-<ul>
-<li><strong>@thepatwalls</strong></li>
-<li>¿Alguien construyendo en este bonito sábado?  </li>
-</ul>
-<p>(muéstrame tu configuración)</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Enlace a la imagen" src="https://nitter.nohost.network/pic/media%2FGDLPhNBWcAAufiU.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1743684244272980171#m">Link del tweet</a></p>
-<ul>
-<li><strong>@5harath</strong></li>
-<li>Sé una piedra rodante en tu vida.  </li>
-</ul>
-<p>Sé una piedra angular en la vida de alguien más.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743681182028460057#m">Link del tweet</a></p>
-<ul>
-<li><strong>@dr</strong></li>
-<li>¿Será 2024 el año en que finalmente obtenga un producto que supere los $5k MRR (Ingresos mensuales recurrentes)?</li>
-</ul>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dr/status/1743680228768034840#m">Link del tweet</a></p>
-<ul>
-<li><strong>@levelsio</strong></li>
-<li>¿Cuál es la estrategia de SQLite para cuando las bases de datos se vuelven demasiado grandes?  </li>
-</ul>
-<p>La base de datos photos.db de Photo AI tiene 35.2GB con 7,270,478 fotos en ella ahora (solo metadatos, las imágenes se almacenan en R2).  </p>
-<p>¿Debería hacer un script que vacíe las fotos más antiguas y las coloque en un photos_archive.db y mantener la photos.db rápida?</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Imagen relacionada" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743676979813958134#m">Link del tweet</a></p>
-<ul>
-<li><strong>@levelsio</strong></li>
-<li>La partición de la base de datos es buena, pero<br />
-  1) la paginación infinita se vuelve un poco más difícil de esa manera, porque uso OFFSET para obtener las fotos más antiguas cuando las personas se desplazan hacia abajo en su archivo de fotos<br />
-  2) cuando añado nuevas características y cambio la estructura de la base de datos, también tendré que hacer cambios en todas las antiguas</li>
-</ul>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743677974480670803#m">Link del tweet</a></p>
-<ul>
-<li><strong>@marckohlbrugge</strong></li>
-<li>Postmark ha sido un deleite de usar. Cambié hace 1.5 años y no me arrepiento. También tienen un excelente servicio al cliente. 👌  </li>
-</ul>
-<p>Han sido adquiridos desde hace un tiempo, lo que suele ser el comienzo del fin, pero parece que son la excepción  </p>
-<p>Los emprendedores reciben un crédito de $75: <a href="https://postmarkapp.com/for/bootstrapped-startups">postmarkapp.com/for/bootstra…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Imagen relacionada" src="https://nitter.nohost.network/pic/card_img%2F1743302376641945600%2FKch6ZBRQ%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743661828339614146#m">Link del tweet</a></p>
-<ul>
-<li><strong>@dutchtide</strong></li>
-<li>Más pintura hoy, ¡ven y únete a la transmisión en vivo para sentir el ambiente y ver de qué se trata la obra de hoy!</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Imagen relacionada" src="https://nitter.nohost.network/pic/card_img%2F1743688379433140224%2FoaIffG4M%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">Link del tweet</a></p>
-<hr />
-<h3>Comentarios y Reflexiones</h3>
-<ul>
-<li>
-<p>A través de los tweets, podemos ver a personas compartiendo sus experiencias, dudas, logros y proyectos personales. La comunidad en Twitter parece ser un ambiente dinámico y lleno de interacciones.</p>
-</li>
-<li>
-<p>Parece que la discusión técnica sobre el manejo de bases de datos grandes y la eficiencia en el almacenamiento de fotos es un tema recurrente entre la audiencia de estos tweets. Esto resalta la relevancia y el interés en aspectos técnicos y tecnológicos en la comunidad emprendedora.</p>
-</li>
-<li>
-<p>También se puede observar el apoyo y aprecio mutuo entre algunos de los usuarios, lo que muestra la camaradería y el espíritu colaborativo que existe entre ellos.</p>
-</li>
-</ul>
-<hr />
+            <h3>Artículo en Español:</h3>
+<p>A continuación se presentan algunos tweets recientes que destacan temas variados, desde emprendimiento y tecnología hasta reflexiones personales y arte.</p>
+<h4>08 de Ene 2024 08:48:09 - Marc Kohlbrugge</h4>
+<p>$20/mo se acumula con miembros leales de la comunidad (<a href="https://wip.co">wip.co</a>)
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" /></p>
+<h4>08 de Ene 2024 08:49:03 - Marc Kohlbrugge</h4>
+<p>Por otro lado, no tenemos muchos miembros que paguen, por lo que MRR es bastante bajo (alrededor de $1,000 actualmente).</p>
+<h4>08 de Ene 2024 07:42:59 - Neuranne</h4>
+<p>Después de años llevando mi diario a todas partes, perdí una libreta. (foto adjunta)
+Estas páginas contenían meses de autorreflexión, ideas y sueños. Aunque debería estar triste, de alguna manera se siente bien.
+La pérdida proporcionó una oportunidad inesperada para practicar el arte de dejar ir. Hay algo especial en perder un objeto destinado a registrar tus pensamientos.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDTeB2NXcAATn1g.jpg" /></p>
+<h4>08 de Ene 2024 05:54:29 - Mich Wirantono</h4>
+<p>¡Envío desde 37,000 pies de altura! ¡El trabajo no se detiene!</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Video" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1744236052959944704%2Fpu%2Fimg%2F2t_sRpSnwtDJxgSO.jpg" /></p>
+<h4>08 de Ene 2024 05:41:10 - Tdinh Me</h4>
+<p>He estado luchando con el problema ERR_NETWORK_CHANGED durante 2 meses, si sabes cómo solucionarlo, por favor comparte ideas.
+Aparece aleatoriamente. Estoy usando Chrome/macOS Sonoma. He buscado a través de innumerables enlaces en Google/Reddit/ChatGPT sin resultados.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="Imagen" src="https://nitter.catsarch.com/pic/media%2FGDTCKywbEAAC5fF.jpg" /></p>
+<h4>08 de Ene 2024 05:04:33 - Shpigford</h4>
+<p>Oye, eres bastante genial y me alegra que estés aquí.</p>
+<h4>08 de Ene 2024 01:43:41 - Jessica Meher</h4>
+<p>Trabajé en InVision durante su auge, de $15m a $100m en ingresos. Si solo para compartir una lección importante para otros fundadores, Figma no es la razón por la que InVision fracasó. Simplemente, InVision falló porque dejó de escuchar a los clientes.</p>
+<p>Estos son solo algunos de los temas que se están discutiendo en Twitter en este momento. Desde desafíos técnicos hasta reflexiones personales y actualizaciones de negocio, el mundo de Twitter nos ofrece una amplia gama de temas para explorar. ¿Qué tweet te ha llamado más la atención? ¿Cuál es tu interpretación de los temas que se discuten en estos tweets?</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

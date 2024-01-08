@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1274429237349552129/shZgINIk?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,38 +83,47 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="967467772341923840">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweets Compilatie</h1>
-<p><strong>06 Jan 2024 21:14:52 - Jonas Schnelli</strong>
-<a href="https://x.com/_jonasschnelli_/status/1743742955259584903#m">@<em>jonasschnelli</em></a>: Wat zijn de AQUA wallet seed bip32-afleidingspaden?<br />
-Waarschijnlijk geen gebruik van BIP44 denk ik?  </p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Excellion" title="Samson Mow">@Excellion</a> <a href="https://x.com/LarryBitcoin" title="Lawrence Nahum">@LarryBitcoin</a></p>
-<p><strong>07 Jan 2024 03:05:40 - Samson Mow</strong>
-<a href="https://x.com/Excellion/status/1743831238329471192#m">@Excellion</a>: Antwoord gegeven als quote zodat anderen het kunnen zien.
-<br><br><a style="color:#5da2ff;" href="https://x.com/Excellion/status/1743831026303111367#m">@Excellion</a>: .<a href="https://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> gebruikt:  </p>
-<p>BIP49-afleidingspaden voor <a href="https://x.com/Liquid_BTC" title="Liquid Network 🌊">@Liquid_BTC</a> <br />
-BIP84-afleidingspaden voor <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a>  </p>
-<p>We gebruiken geen P2PKH, dus geen BIP44  </p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/media%2FGDMEb_QXwAAOuGJ.jpg" /></p>
-<p><strong>06 Jan 2024 12:43:44 - BTC Perception</strong>
-<a href="https://x.com/BTCPerception/status/1743614323258163669#m">@BTCPerception</a>: Opwindende update 👀  </p>
-<p>Je kunt nu inloggen op het Bitcoin Perception data dashboard en direct bekijken welke outlets de meest negatieve of positieve <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a> -dekking hebben gehad in een bepaalde tijdsperiode.  </p>
-<p>Goed nieuws: het dashboard wordt binnenkort gratis toegankelijk voor het publiek!</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/ext_tw_video_thumb%2F1743613844985962496%2Fpu%2Fimg%2FDbTxTEZMlxEv6v3p.jpg" /></p>
-<p><strong>06 Jan 2024 21:20:28 - gigachurros</strong>
-<a href="https://x.com/gigachurros/status/1743744365913075735#m">@gigachurros</a>: Bitcoin zal uiteindelijk de menselijke governance verbeteren. Het zal de overheid aanzienlijk transparanter en efficiënter maken dan het nu is.</p>
-<blockquote>
-<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a> ethos zal uiteindelijk invloed hebben op hoe wij als samenleving denken over menselijke governance. Democratie is een constante 51% aanval.</p>
-</blockquote>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/ext_tw_video_thumb%2F1743709081737871360%2Fpu%2Fimg%2FFaZEBj8gfCWnnwEs.jpg" /></p>
-<p><strong>07 Jan 2024 00:44:02 - FromKulak</strong>
-<a href="https://x.com/FromKulak/status/1743795594080997873#m">@FromKulak</a>: 🧵 Jefferson Davis' duizend pagina's tellende "The Rise and Fall of The Confederate Government" is een boek waarvan mensen altijd verbaasd zijn dat het bestaat.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/media%2FGDM0Z25WEAAWw3S.png" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.oksocial.net/pic/media%2FGDM0lIFXsAAOGIh.jpg" /></p>
-<p><strong>07 Jan 2024 00:25:52 - piratebeachbum2</strong>
-<a href="https://x.com/piratebeachbum2/status/1743791023807934647#m">@piratebeachbum2</a>: Al die nep Breaking News-accounts die enorme volgers hebben verzameld en clickbait-headlines verspreiden die totaal onzin zijn voor betrokkenheid zijn verschrikkelijk. Nog erger zijn de mensen die deze valse accounts retweeten of citeren!</p>
-<hr />
-<p>Geplaatst op Nederlands blog op 07 Jan 2024</p>
-<p><em>Interpretatie en commentaar: Hier zijn enkele interessante tweets van verschillende gebruikers over uiteenlopende onderwerpen, waaronder de AQUA wallet seed bip32-afleidingspaden, Bitcoin's invloed op governance, en de publicatie van controversiële boeken. De tweets geven verschillende perspectieven en zorgen voor boeiende discussies.</em></p>
+            <h1>Tweets van 08 januari 2024</h1>
+<ul>
+<li><strong>04:52:49</strong> - <a href="https://x.com/derekmross/status/1744220590259491057#m">@derekmross</a>: lol my man if that happens ill print out this tweet and eat it.</li>
+<li><strong>05:02:26</strong> - <a href="https://x.com/TwoMinuteTimmy/status/1744223011778294088#m">@TwoMinuteTimmy</a>: Whatever it ends up being it’s going to be a large candle.
+    <img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/media%2FGDS5lcZaEAEpSYL.jpg" /></li>
+<li><strong>06:36:32</strong> - <a href="https://x.com/DecentraSuze/status/1744246691824353540#m">@DecentraSuze</a>: Anticipating the SEC's midweek decision on a bitcoin spot ETF. Could this lead to a bitcoin supply crunch?<br />
+My latest <a href="https://x.com/Forbes" title="Forbes">@Forbes</a> article featuring <a href="https://x.com/Excellion" title="Samson Mow">@Excellion</a> <a href="https://x.com/Scaramucci" title="Anthony Scaramucci">@Scaramucci</a> <a href="https://x.com/NateGeraci" title="Nate Geraci">@NateGeraci</a> <a href="https://x.com/ForbesCrypto" title="Forbes Crypto">@ForbesCrypto</a> <a href="https://x.com/search?q=%23Bitcoin">#Bitcoin</a><br />
+<a href="https://www.forbes.com/sites/digital-assets/2024/01/08/how-will-a-bitcoin-spot-etf-affect-bitcoins-price/">forbes.com/sites/digital-ass…</a>
+    <img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/card_img%2F1744245077579276288%2F9MNW9PQn%3Fformat%3Djpg%26name%3D800x419" /></li>
+<li><strong>06:43:02</strong> - <a href="https://x.com/BTCRoel/status/1744248325761536510#m">@BTCRoel</a>: If we reach $1M bitcoin price before 15-01-2024 i put a small <a href="https://x.com/AquaBitcoin" title="AQUA Wallet">@AquaBitcoin</a> logo tattoo on my ass</li>
+<li><strong>06:46:54</strong> - <a href="https://x.com/Macronaut_/status/1744249302183186779#m">@Macronaut_</a>: Remember I said 47 mil. BUT I WAS AT LEAST HALF JOKING.<br />
+YOURE BEGINNIG TO SCARE ME.<br />
+BUT I LIKE IT<br />
+<em>Citaat: "blackrock has 9.4tril AUM. 9.4 * .849 for the right bitcoin position % = 7.98 trillion that Blackrock will need to allocate to bitcoin to follow their paper 7.98 * 118 b of a multiplier == 941 trillion dollar market cap so #bitcoin will be about $47 million per coin."</em> <a href="https://x.com/Macronaut_/status/1728629092063547576#m">Bron</a></li>
+<li><strong>07:05:44</strong> - <a href="https://x.com/XBitcode/status/1744254042073690574#m">@XBitcode</a>: Yes, they know and they do not allow free competition to go ahead and bring the best of the best as all in one solution for Bitcoin. Drivechain will change the future in a positive way and today we are at a cross road with two choices. One is to continue the old way with many centralising and destroying the technological revolution and second the positive way, Drivechain way, the future world in which we have repaired the past mistake of splitting the Bitcoin world into two worlds. The choice is on us and only all of us will be responsible for the future world in which our next generations live. We all have big responsibility to improve the future world. Material gains do not improve anything, it is just a number on the screen but the technology improves things and we must leave natural evolution not the forced one.<br />
+Enable #Bip300
+    *Citaat: "21. Lightning Network public channel capacity stays below 10,000 BTC." <a href="https://x.com/ercwl/status/1609805910364524550#m">Bron</a></li>
+<li><strong>08: Jan 2024 06:36:48</strong> - <a href="https://x.com/Spartacus____X/status/1744246757423280366#m">@Spartacus____X</a>: If this happens I’ll tattoo your face on my ass. March 31st. $1m US goddamned D per Bitcoin.
+    *Citaat: Just making sure here, I’m still the only one saying #Bitcoin can go to $1M in days to weeks right? Because when it happens I don’t want any of you bearish MFers saying you also called it. - <a href="https://x.com/Excellion/status/1744213971559956719#m">@Excellion</a></li>
+<li><strong>06:30:05</strong> - <a href="https://x.com/loudmouthgrant/status/1744245066913222718#m">@loudmouthgrant</a>: If this happens I will film myself painting my grandmas toenails</li>
+<li><strong>04:26:31</strong> - <a href="https://x.com/Excellion/status/1744213971559956719#m">@Excellion</a>: Just making sure here, I’m still the only one saying #Bitcoin can go to $1M in days to weeks right? Because when it happens I don’t want any of you bearish MFers saying you also called it.</li>
+<li><strong>05:35:06</strong> - <a href="https://x.com/Excellion/status/1744231232425394509#m">@Excellion</a>: Technically I’m more bullish than Balaji. He said 90 days and I’m saying days to weeks. Weeks should imply an upper bound of 7 weeks, so it cannot be months.</li>
+<li><strong>06:35:13</strong> - <a href="https://x.com/wtogami/status/1744246360814268541#m">@wtogami</a>: Just watch it stuck at $44k for 8 weeks then suddenly $1M to spite you.</li>
+<li><strong>07 Jan 2024 23:09:00</strong> - <a href="https://x.com/paulg/status/1744134067753189716#m">@paulg</a>: I don't think journalists or universities grasp how much their reputation has suffered, and that it's due to their own intellectual dishonesty. A generation ago newspapers and universities were esteemed institutions. Now you see open contempt for them.<br />
+<em>Citaat: "I am done with this "news" organization for life." <a href="https://x.com/Suhail/status/1744131236648677433#m">Bron</a></em></li>
+<li><strong>07 Jan 2024 22:57:45</strong> - <a href="https://x.com/Suhail/status/1744131236648677433#m">@Suhail</a>: I am done with this "news" organization for life.</li>
+<li><strong>08 Jan 2024 05:56:56</strong> - <a href="https://x.com/real_vijay/status/1744236724132495770#m">@real_vijay</a>: 1/ There is a legitimate concern that the custodial concentration brought about by a #Bitcoin ETF increases the risk of a 6102 event. It should be noted there is some legal protection against this with the US 5th amendment...</li>
+<li><strong>08 Jan 2024 05:56:57</strong> - <a href="https://x.com/real_vijay/status/1744236730889494649#m">@real_vijay</a>: 3/ The confiscation of gold in 1933 could get around this protection because dollars were considered equivalent to gold (redeemable at par) and so the US government could take people's gold and give them a paper promise in return (dollars).<br />
+The same cannot be said of #Bitcoin.</li>
+<li><strong>08 Jan 2024 05:56:58</strong> - <a href="https://x.com/real_vijay/status/1744236734081286489#m">@real_vijay</a>: 4/ This is not to say that confiscation is impossible or even unlikely in the long term. Only that the US Constitution affords some legal protection against it.</li>
+<li><strong>08 Jan 2024 04:52:50</strong> - <a href="https://x.com/real_vijay/status/1744220595083231396#m">@real_vijay</a>: This week I'm following <a href="https://x.com/dotkrueger" title="Fred Krueger">@dotkrueger</a>. With several #Bitcoin ETFs to be approved this week the TradFi world is going to wake up to NgU technology.<br />
+Fred brings a TradFi perspective to Bitcoin that I've found interesting and valuable. Follow Fred on this momentous week!</li>
+<li><strong>08 Jan 2024 04:15:36</strong> - <a href="https://x.com/lopp/status/1744211226165449120#m">@lopp</a>: Are you interested in transcribing your audio content into legible text? Make sure you use the best tool for the job! I've tested a variety of open source software to find the most accurate and performant projects. #repost<br />
+<a href="https://blog.lopp.net/open-source-transcription-software-comparisons/">blog.lopp.net/open-source-tr…</a>
+    <img style="max-width: 20rem;margin:0.2rem auto;" alt="Afbeelding" src="https://nitter.catsarch.com/pic/card_img%2F1744199429362454529%2Fc6yzNJsL%3Fformat%3Djpg%26name%3D800x419" /></li>
+</ul>
+<p><strong>Opmerkingen</strong>
+- De tweets lijken te suggereren dat er een grote gebeurtenis plaatsvindt met betrekking tot Bitcoin en ETFs.
+- Er is veel optimisme over de mogelijke waardestijging van Bitcoin tot $1 miljoen.
+- Er wordt ook gesproken over de mogelijke impact van een Bitcoin ETF op de markt en de wettelijke bescherming tegen confiscatie van Bitcoin.</p>
+<p>Dit kan wijzen op een spannende tijd voor de Bitcoin-markt en investeerders die hopen op grote winsten.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

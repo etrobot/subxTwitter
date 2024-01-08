@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,83 +83,74 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>العربية: مقالة</h1>
-<h2>تويتات</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">06 يناير 2024 14:22:40 Arvid Kahl</a>: أنا اليوم 39 عاماً. 🥳</p>
-<p>كهدية لك (ولنفسي 😉)، سأقوم بإصدار حزمة البوتسرابر:</p>
-<ul>
-<li>Zero to Sold (كتاب إلكتروني + كتاب صوتي)</li>
-<li>The Embedded Entrepreneur (كتاب إلكتروني، كتاب صوتي، ومجموعة الأدوات)</li>
-<li>Find your Following (دورة كاملة + مجموعة الأدوات)</li>
-</ul>
-<p>سعر العيد: 20 دولار!</p>
-<p><br><a style="color:#5da2ff;" href="https://bootstrappedfounder.gumroad.com/l/bootstrappers-bundle">bootstrappedfounder.gumroad.…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743637874245775360%2FGFgmRFev%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/damengchen/status/1743689261910749659#m">06 يناير 2024 17:41:30 damengchen</a>: عيد ميلاد سعيد، أرفيد! استمر في إلهامنا 🫶</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743689654275035464#m">06 يناير 2024 17:43:04 Arvid Kahl</a>: 🥰</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1743684244272980171#m">06 يناير 2024 17:21:34 thepatwalls</a>: هل يقوم أي شخص ببناء شيء اليوم؟</p>
-<p>(أرني إعدادك)</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLPhNBWcAAufiU.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743681182028460057#m">06 يناير 2024 17:09:24 5harath</a>: كن حجراً دورياً في حياتك.</p>
-<p>كن حجر الزاوية في حياة شخص آخر.</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dr/status/1743680228768034840#m">06 يناير 2024 17:05:37 dr</a>: هل عام 2024 سيكون العام الذي أجعل فيه المنتج يتجاوز أخيراً 5000 دولار شهرياً؟</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743676979813958134#m">06 يناير 2024 16:52:42 levelsio</a>: ما هو استراتيجية SQLite عندما تصبح قواعد البيانات كبيرة جداً؟</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743677974480670803#m">06 يناير 2024 16:56:39 levelsio</a>: تقسيم قاعدة البيانات رائع ولكن
-1) تصبح الوصول اللانهائي أكثر صعوبة بهذه الطريقة، لأنني استخدم OFFSET للحصول على صورهم القديمة عندما يتمررون في أرشيف الصور
-2) عندما أضيف ميزات جديدة وأغير بنية قاعدة البيانات، سيكون عليّ تغيير القديمة أيضًا</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1743677062140112902#m">06 يناير 2024 16:53:02 marckohlbrugge</a>: كان من دواعي سروري استخدام Postmark. انتقلت إليهم قبل عام ونصف وليس لدي أي أسف. خدمة عملاء رائعة أيضًا 👌</p>
-<p>تحصل رواد الأعمال على ائتمان 75 دولار: <a href="https://postmarkapp.com/for/bootstrapped-startups">postmarkapp.com/for/bootstra…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743302376641945600%2FKch6ZBRQ%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">06 يناير 2024 13:52:01 dutchtide</a>: المزيد من الرسم اليوم، تعال وانضم إلى البث المباشر لتشعر بالأجواء وترى ما يتعلق بالخدمة العمومية اليوم! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">x.com/i/broadcasts/1nA…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743694619827752960%2FapilBoVw%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1742602163954593808#m">03 يناير 2024 17:41:46 neuranne</a>: أنا اليوم 34 عاماً! 
-تخلي الأهداف الخطية قد غيرت حياتي. للاحتفال بعيدي الميلاد، أقدم 3400 دولار لمساعدة 4 أشخاص على أن يصبحوا علماء لحياتهم الخاصة.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/card_img%2F1743694619827752960%2FapilBoVw%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743670111116870006#m">06 يناير 2024 16:25:24 5harath</a>: متاح لمدة 30 دقيقة القادمة، أسألني أي شيء 👇🏼</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743661828339614146#m">06 يناير 2024 15:52:30 levelsio</a>: أقوم بتغيير كل شيء من SendGrid إلى <a href="https://x.com/postmarkapp" title="Postmark">@postmarkapp</a> هذا الأسبوع. 
-أنا أحب كل شيء في Postmark، من عملية التسجيل، وتسجيل الدخول، والتصميم، والألوان، إلى واجهة المستخدم، كلها تعمل بشكل جيد للغاية</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK6mWmWEAAhDPq.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743666966508757324#m">06 يناير 2024 16:12:55 levelsio</a>: هذا الجزء مذهل ❤️</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK_0NeX0AAT63B.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1743665621831737797#m">06 يناير 2024 16:07:34 Shpigford</a>: هذا هو اللغز الحقيقي الذي أواجهه:
-هل يجب علي أن أبني أدوات مالية متجهة نحو العملاء النهائيين أم الشركات؟
-يبدو أن العمل مع العملاء النهائيين مغريًا تمامًا لأنه لا توجد أدوات عظيمة في السوق.
-لكن هذا المسار كان بالفعل طريقًا مباشرًا إلى الألم والمعاناة.
-لذلك ربما الحكمة تقول جرب المسار مع الشركات؟</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743665532987957639#m">06 يناير 2024 16:07:13 5harath</a>: هذا صفقة رائعة يا رفاق🔥
-حصلت على جميع الكتب والدورة و1000٪ تستحق ولكن بهذا السعر تحصل على أفضل صفقة. اذهب لذلك وجعل يوم أرفيد خاصًا إضافيًا 👇🏼</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">06 يناير 2024 16:05:22 dickiebush</a>: ما كتبت اليوم: السبت 6/1/24
-إجمالي وقت الكتابة: 3 ساعات و 17 دقيقة
-• سجلت باليومية عشرة أشياء كانت في أعلى تفكيري (30 دقيقة)
-• انتهى تقريري الأسبوعي "ما حدث" و "ما تعلمت" (30 دقيقة)
-• كتبت 20 تغريدة تعمل من خلال احتياجاتي (30 دقيقة)
-• صياغة مشاركتين طويلتين للسماح لهما بالنضوج في الخلفية هذا الأسبوع (60 دقيقة)
-• كتبت أفكارًا حول وتيرة المحتوى للربع القادم لاجتماع المحتوى الخاص بنا يوم الاثنين (30 دقيقة)
-أشعر بتدفق جيد لبداية العام.
-• الأفكار تدور
-• الكابتشينو تصطف بالداخل
-متحمس للحفاظ على هذا طوال العام.
-الآن، ماذا كتبت اليوم؟
-اترك تعليقًا لتعلمني—أقرأ كل واحد منهم.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK98zfXwAA_7fa.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743644092972540176#m">06 يناير 2024 14:42:01 levelsio</a>: اكتشفت للتو أن برميل الصور الخاص بي R2 (<a href="https://x.com/Cloudflare" title="Cloudflare">@Cloudflare</a> S3) موجود في غرب أوروبا لأن عندما أنشأته في لوحة القيادة يختار Cloudflare تلقائياً استنادًا إلى موقع متصفحك الحالي وكنت في أوروبا: 
-Aws\Result Object (data:Aws\Result:private) =&gt; Array (LocationConstraint =&gt; WEUR
-لكن خادم الويب الخاص بي في الولايات المتحدة و Replicate أيضًا في الولايات المتحدة، لذا يقوم بالكثير من الرحلات الدائرية غير الضرورية من الولايات المتحدة - إلى أوروبا والعودة
-هل هناك طريقة يمكنني استخدامها لهجرة برميل R2 من Cloudflare إلى موقع جديد بسهولة؟ يمكنني إنشاء برميل جديد ولكن لست متأكدًا من كيفية نقل كل شيء.
-هو 34.89 تيرابايت في البرميل الآن، لذا فهو كبير بعض الشيء للتحرك أيضًا</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743657953020850287#m">06 يناير 2024 15:37:06 levelsio</a>: حسنًا، عملت، أنشأت للتو برميلًا جديدًا photoai-us-west واستخدام ذلك مع <a href="https://r2-us-west.photoai.com">r2-us-west.photoai.com</a>
-وجدت أن عمليات النقل بين الولايات المتحدة وأوروبا استغرقت وقتًا طويلاً من Replicate الولايات المتحدة إلى خادمي الولايات المتحدة إلى R2 أوروبا إلى Replicate الولايات المتحدة إلخ. من <a href="https://x.com/DanielLockyer" title="Daniel Lockyer">@DanielLockyer</a> عند إعداد New Relic على خادمي
-مع R2 الأوروبي استغرق 1500 مللي ثانية (برتقالي)، مع الولايات المتحدة يستغرق 500 مللي ثانية (ويعتبر وردي فاتح)، لذا الآن سريع 3 مرات!
-ليس فقط دورة واحدة، لأنها كاملة وتشمل عملية تصفية الصور، الزيادة في الحجم، إضافة الضوضاء وما إلى ذلك.</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK3DgkXcAAeQeX.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.nohost.network/pic/media%2FGDK3DgiWoAA2Lfg.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MeetKevon/status/1743655540524486875#m">06 يناير 2024 15:27:31 MeetKevon</a>: إليك موقع بناء في ظاهرة عامة. 
-يمكنك أن ترى كيف يعود ري للمشاركة التي تم مشاركتها سابقًا.
-هذا يشكل سرد قصصي جميل - كيف لا تثق بها؟</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743653439840616891#m">06 يناير 2024 15:19:10 5harath</a>: انضم إلي لتتمني أسعد عيد ميلاد لأحد أطيب وأصدق البشر الذين عرفتهم على الإطلاق 🍾
-<a href="https://x.com/arvidkahl" title="Arvid Kahl">@arvidkahl</a> أحبّك وأتمنى لك دلوًا ملؤه السعادة والازدهار طوال الحياة ❤️</p>
-<p>[06 يناير 2024 15:26</p>
+            <h1>تويتر العربية</h1>
+<hr />
+<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744279812305530993#m">08 يناير 2024 08:48:09</a>: 
+<strong>@marckohlbrugge</strong>: $20/mo adds up with loyal community members (wip.co)</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744280039171236096#m">08 يناير 2024 08:49:03</a>: 
+<strong>@marckohlbrugge</strong>: On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1744263413889413404#m">08 يناير 2024 07:42:59</a>: 
+<strong>@neuranne</strong>: لقد فقدت دفتر يومي. يبدو أن الخسارة أعطتني فرصة غير متوقعة لممارسة فن التخلي. أشعر بتجدد الحماس تجاه اليوميات.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTeB2NXcAATn1g.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/michwirantono/status/1744236108878328278#m">08 يناير 2024 05:54:29</a>: 
+<strong>@michwirantono</strong>: شحن من ارتفاع 37,000 قدم. العمل لا يتوقف!</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1744236052959944704%2Fpu%2Fimg%2F2t_sRpSnwtDJxgSO.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/tdinh_me/status/1744232759600824622#m">08 يناير 2024 05:41:10</a>: 
+<strong>@tdinh_me</strong>: لقد كنت أكافح مع مشكلة ERR_NETWORK_CHANGED لشهرين الآن، إذا كنت تعرف كيفية حلها فالرجاء مشاركة الأفكار.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTCKywbEAAC5fF.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1744223542869143772#m">08 يناير 2024 05:04:33</a>: 
+<strong>@Shpigford</strong>: أنت رائع وأنا سعيد بوجودك.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Jessicameher/status/1744172995331998188#m">08 يناير 2024 01:43:41</a>: 
+<strong>@Jessicameher</strong>: لوربيت العمل في InVision أثناء ازدهارها</p>
+<hr />
+<p>Quoting: </p>
+<blockquote>
+<p>Jason Fried (@jasonfried): "It's not nuts, it's perfectly reasonable. [...]</p>
+<p>Bootstrap, or raise $350M, at some point, the business has to work, or it's gone. [...]</p>
+<p>Sad to see, but a sight you'll keep seeing. All this funding can't cover up fundamental economics forever. And too much funding makes it exponentially worse." | Nitter
+x.com/jasonfried/status/1743460783059845601#m</p>
+</blockquote>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744181420099346548#m">08 يناير 2024 02:17:10</a>: 
+<strong>@dannypostmaa</strong>: 2024 سيكون عامًا ممتعًا</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTkcNaoAAmeLH.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1744207695941398619#m">08 يناير 2024 04:01:35</a>: 
+<strong>@arvidkahl</strong>: llama.cpp ساحر. أستخدمه في Podline لتلخيص المسترال في خلفية خادم بدون GPU. بطيء، لكن لخدمة خلفية، مجانية، إنه ضخم.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744211423130267705#m">08 يناير 2024 04:16:23</a>: 
+<strong>@dannypostmaa</strong>: يجب أن أبدأ اللعب بهذا مرة أخرى الآن بانتهاء الاتفاق الخاص بي</p>
+<p><br><a style="color:#5da2ff;" href="https://anu.substack.com/p/2024">08 يناير 2024 01:43:41</a>: 
+<strong>@rrhoover</strong>: تتوافق هذه التوقعات لعام 2024 مع العديد من اهتماماتي</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSt0b9WkAAcS6q.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://anu.substack.com/p/2024">08 يناير 2024 03:32:13</a>: 
+<strong>@rrhoover</strong>: هنا المشاركة: anu.substack.com/p/2024</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">08 يناير 2024 03:14:05</a>: 
+<strong>@mechsicko</strong>: المستحيل الجسدي للموت في عقل شخص حي</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">08 يناير 2024 03:14:05</a>: 
+<strong>@jackbutcher</strong>: </p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/matteing/status/1744190891332366786#m">08 يناير 2024 02:54:48</a>: 
+<strong>@matteing</strong>: مفاجأة Alt + Click على الرمز في Xcode.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743550693024083968%2FPCJUqo2_%3Fformat%3Djpg%26name%3D800x419" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1744185711492735451#m">08 يناير 2024 02:34:13</a>: 
+<strong>@thepatwalls</strong>: تواصلت مع أصدقائي الثلاثة وقرروا شراء تسلا خلال الشهر القادم.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744184048791204088#m">08 يناير 2024 02:27:37</a>: 
+<strong>@dannypostmaa</strong>: اكتشفت هذه الميزة في ChatGPT الأسبوع الماضي وهي تفجير عقلي.</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSWI3pbQAA1RbD.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744185419707961649#m">08 يناير 2024 02:33:04</a>: 
+<strong>@dannypostmaa</strong>: 🔥</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSXYLabwAA41bu.jpg" /></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/DenLoginoff/status/1744163844019179636#m">08 يناير 2024 01:07:20</a>: 
+<strong>@DenLoginoff</strong>: وأثناء بذل جهد لبدء نمو الجمهور مع تويتر/إكس، إليك بعض النصائح المفيدة التي تعلمتها اليوم.</p>
+<p><strong>@MeetKevon</strong>: (جون برون) المجلة الأسبوعية:<br />
+1. لا تحاول نمو 1000 متابع في 10 أيام - من الأفضل بكثير تطوير عدد قليل من الصداقات الحقيقية مع مجموعة صغيرة متماسكة من الأشخاص يمكن أن يساعدوا بعضهم البعض.<br />
+2. البقاء بسيطًا - تغريدات قصيرة ولكن ذات مغزى.<br />
+3. مشاركة تعلماتك الشخصية على أمل أن تساعد شخصًا آخر (نصيحة ميتا!) - ليس هناك حاجة لتبدو مستشارًا فيها، اهدف فقط إلى أن تكون مفيدًا وكن مفتوحًا بأنك لا تزال تتعلم.</p>
+<hr />
+<p>هذه كانت بعض التغريدات المثيرة للاهتمام التي يمكن أن تكون محل اهتمام القراء. يتناول تعليق جيسيكا مهير تجربتها الشخصية أثناء عملها في InVision ويقدم نظرة مختلفة حول سبب فشل الشركة. وتعرض تغريدة جاسون فريد وجهة نظره حول مصير الشركات التي لا يمكنها الاستفادة من اقتصادياتها الأساسية.</p>
+<p>سيكون عام 2024 عامًا مثيرًا بالنسبة لبعض الأشخاص، مثل داني بوستما وآرفيد كاهل. كما أن فحص تقنيات جديدة مثل Alt + Click في Xcode مثير للإعجاب.</p>
+<p>يظهر تفاعل مستخدم التويتر دان بوستما مع ChatGPT بأنه فاجأته الميزة التي اكتشفها وكيف تفتح آفاقا جديدة له.</p>
+<p>من جانب آخر، يروي دين لوجينوف تعلماته من خلال نشرية المنشط الرقمي كيفون تشونج. يشير إلى أهمية الصداقات الحقيقية والمشاركة المعنوية عبر وسائل التواصل الاجتماعي.</p>
+<p><strong>أخيرًا، هذه التغريدات والتعليقات تعكس مجموعة متنوعة من الأفكار والمشاعر للمستخدمين على تويتر. تقدم نظرة عامة على الأحداث والتطورات التي تجري في مجتمعنا والعالم التقني.</strong></p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

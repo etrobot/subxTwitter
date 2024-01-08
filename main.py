@@ -54,12 +54,16 @@ def getTwList(twitter_user:str):
             feed = parse(rss_url)
             df = pd.json_normalize(feed.entries)
             df['timestamp'] = df['published'].apply(lambda x: pd.Timestamp(x).timestamp())
-            return df,nit
+            # df.to_csv('test.csv',index=False)
+            disc=feed.feed.title.split('/')[0].strip()
+            print(disc)
+            return df,disc,nit
         except Exception as e:
             print(e)
             continue
 
-def addSubInfo(html_fragment:str,mail:str,expired:str):
+def addSubInfo(disc:str,listId:str,html_fragment:str,mail:str,expired:str):
+    listHref=f'<p><a href="https://twitter.com/i/lists/{listId}">twitter.com/i/lists/{disc}</a></p>'
     button = f'''<a style="display: inline-block;
                padding: 4px;
                background-color: #2a79ef;
@@ -72,7 +76,7 @@ def addSubInfo(html_fragment:str,mail:str,expired:str):
                font-size: 16px;"
        href="https://subx.fun/pay?email={mail}">$5 for 3 months</a>
             '''
-    return html_fragment + '\n\n subscription expired on %s ' %expired  + button + f'<p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
+    return listHref + html_fragment + '\n\n subscription expired on %s ' %expired  + button + f'<p><a href="https://subx.fun/unsubscribe?email={mail}">Unsubscribe</a></p>'
 
 def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, model='openai/gpt-3.5-turbo-1106'):
     '''
@@ -102,7 +106,7 @@ def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, mod
                 oripost = session.get(matches[0]).text
                 quote = BeautifulSoup(oripost, 'html.parser').title.string.replace(" | nitter", '')
                 df.at[k, 'summary'] = re.sub(pattern, "<blockquote>%s</blockquote>" % quote, v['summary'])
-    df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] + df['author'] + ']' + '(' + df[
+    df['content'] ='[' + df['published'].str[len('Sun, '):-len(' GMT')] +' '+ df['author'] + ']' + '(' + df[
         'id'].str.replace(nitter, 'x.com') + '): ' + df['summary']
     df['content'] = df['content'].astype(str).apply(lambda x: markdownify(x))
     # df.to_csv('test.csv', index=False)
@@ -124,7 +128,7 @@ def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, mod
                         api_key=os.environ['OPENAI_API_KEY'],
     )["choices"][0]["message"][
         "content"]
-    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:0.5rem;" alt="').replace('http://','https://')
+    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-width: 20rem;margin:0.2rem auto;" alt="').replace('http://','https://')
     return result
 
 def run():
@@ -143,7 +147,7 @@ def run():
         expired=v['EXPIRE_DATE'].strftime("%Y/%m/%d")
         print(v)
         print(checkTime, pushTime,v['MAIL_TIME'])
-        tweetDf,nit=getTwList(v['TARGET_ID'])
+        tweetDf,disc,nit=getTwList(v['TARGET_ID'])
         sumhtml= sumTweets(tweetDf,nit,lang=v['LANG'])
         if '@' in mail:
             sendEmail(addSubInfo(sumhtml, mail, expired), receiver=mail)

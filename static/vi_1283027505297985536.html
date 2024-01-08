@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,138 +83,108 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweets ngày 06 tháng 1 năm 2024</h1>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">@arvidkahl</a></h2>
-<ul>
-<li>14:22:40</li>
-<li>Hôm nay tôi bước sang tuổi 39 🥳 </li>
-<li>Tặng mình và mọi người, tôi phát hành The Bootstrapper’s Bundle với giá ngày sinh nhật là $20!</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/card_img%2F1743637874245775360%2FGFgmRFev%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/damengchen/status/1743689261910749659#m">@damengchen</a></h2>
-<ul>
-<li>17:41:30</li>
-<li>Chúc mừng sinh nhật, Arvid! Hãy tiếp tục truyền cảm hứng cho chúng tôi 🫶 </li>
-</ul>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1743684244272980171#m">@thepatwalls</a></h2>
-<ul>
-<li>17:21:34</li>
-<li>Ai đang xây dựng sản phẩm vào ngày thứ bảy này không?</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDLPhNBWcAAufiU.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743681182028460057#m">@5harath</a></h2>
-<ul>
-<li>17:09:24</li>
-<li>Hãy là một viên đá lăn trong cuộc sống của bạn.  </li>
-<li>Hãy là một viên góc của cuộc sống của ai khác.</li>
-</ul>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/dr/status/1743680228768034840#m">@dr</a></h2>
-<ul>
-<li>17:05:37</li>
-<li>Liệu 2024 có phải là năm tôi cuối cùng đưa sản phẩm lên trên $5k MRR không?</li>
-</ul>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743676979813958134#m">@levelsio</a></h2>
-<ul>
-<li>16:52:42</li>
-<li>Chiến lược SQLite khi cơ sở dữ liệu trở nên quá lớn là gì? </li>
-<li>Ảnh trong photos.db là 35.2GB với 7,270,478 ảnh (chỉ là dữ liệu về ảnh, ảnh được lưu trữ trên R2) </li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743677974480670803#m">@levelsio</a></h2>
-<ul>
-<li>16:56:39</li>
-<li>Phân vùng cơ sở dữ liệu là cách tốt nhưng...</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1743677062140112902#m">@marckohlbrugge</a></h2>
-<ul>
-<li>16:53:02</li>
-<li>Postmark rất tuyệt vời để sử dụng. Chuyển từ 1,5 năm trước và không hối tiếc. Dịch vụ khách hàng tuyệt vời.</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/card_img%2F1743302376641945600%2FKch6ZBRQ%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/MeetKevon/status/1743655540524486875#m">@MeetKevon</a></h2>
-<ul>
-<li>15:27:31</li>
-<li>Đây là một kiệt tác xây dựng công khai. Đừng bỏ lỡ bài viết trước đó của Marie.</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/card_img%2F1743697293159571457%2Fh4J3qpjG%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/dickiebush/status/1743665067642536281#m">@dickiebush</a></h2>
-<ul>
-<li>16:05:22</li>
-<li>Những gì tôi viết hôm nay: Thứ bảy 6/1/24</li>
-<li>Tổng thời gian viết: 3 giờ 17 phút</li>
-<li>• Hãy để lại ý kiến của bạn để tôi biết - tôi đọc tất cả chúng.</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDK98zfXwAA_7fa.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">@dutchtide</a></h2>
-<ul>
-<li>13:52:01</li>
-<li>Hôm nay tiếp tục vẽ tranh, hãy đến và tham gia buổi trực tiếp để cảm nhận và xem hôm nay có gì mới!</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/card_img%2F1743697293159571457%2Fh4J3qpjG%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1742602163954593808#m">@neuranne</a></h2>
-<ul>
-<li>03:41:46</li>
-<li>Hôm nay tôi bước sang tuổi 34!</li>
-<li>Để kỷ niệm sinh nhật của tôi, tôi muốn tặng $3400 để giúp 4 người trở thành nhà khoa học của cuộc đời họ.</li>
-</ul>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/5harath/status/1743653439840616891#m">@5harath</a></h2>
-<ul>
-<li>15:19:10</li>
-<li>Hãy cùng tôi chúc mừng sinh nhật hạnh phúc nhất cho một trong những con người tốt nhất và chân thành nhất mà tôi từng biết 🍾</li>
-</ul>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743661828339614146#m">@levelsio</a></h2>
-<ul>
-<li>15:52:30</li>
-<li>Chuyển từ SendGrid sang @postmarkapp trong tuần này</li>
-<li>Tôi yêu mọi thứ về Postmark, từ việc đăng ký, đăng nhập, thiết kế, màu sắc, giao diện, tất cả đều hoạt động tốt</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDK6mWmWEAAhDPq.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743655199141421399#m">@arvidkahl</a></h2>
-<ul>
-<li>15:26:09</li>
-<li>Aww, cảm ơn nhiều Sharath. Tôi cũng yêu bạn. Trò chuyện với bạn và thấy bạn tạo nên là một phần lớn tại sao tôi cảm thấy hạnh phúc quanh năm :)</li>
-</ul>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743657953020850287#m">@levelsio</a></h2>
-<ul>
-<li>15:37:06</li>
-<li>Ok đã hoạt động, tôi vừa tạo một rổng mới và sử dụng <a href="https://r2-us-west.photoai.com">r2-us-west.photoai.com</a></li>
-<li>Với R2 EU mất 1500ms (màu cam), với Mỹ mất 500ms (màu hồng nhạt), vì vậy giờ nhanh gấp 3 lần!</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDK3DgkXcAAeQeX.jpg" />
-<img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDK3DgiWoAA2Lfg.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743666966508757324#m">@levelsio</a></h2>
-<ul>
-<li>16:12:55</li>
-<li>Phần này tuyệt vời ❤️</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDK_0NeX0AAT63B.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743661828339614146#m">@levelsio</a></h2>
-<ul>
-<li>14:42:01</li>
-<li>Tôi vừa phát hiện ra rằng R2 của Photo AI của tôi được đặt ở Tây Âu vì khi tôi tạo nó trong bảng điều khiển Cloudflare, Cloudflare tự động chọn nó dựa trên vị trí hiện tại của trình duyệt của bạn và tôi ở châu Âu.</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDKxeNLX0AAjt2u.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743644092972540176#m">@levelsio</a></h2>
-<ul>
-<li>15:10:02</li>
-<li>Tôi đánh giá cao những món quà sinh nhật của mình 🥰</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDKxeNLX0AAjt2u.jpg" /></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743644092972540176#m">@levelsio</a></h2>
-<ul>
-<li>14:05:55</li>
-<li>Có lẽ nên xây dựng công cụ tài chính B2C hay B2B?</li>
-<li>B2C hấp dẫn vì thị trường chưa có công cụ tốt.</li>
-</ul>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Ảnh" src="https://nitter.nohost.network/pic/media%2FGDKxeNLX0AAjt2u.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743644092972540176#m">Xem trên Twitter</a></p>
-<h2><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">@arvidkahl</a></h2>
-<ul>
-<li>15:46:03</li>
-<li>Đây thực sự là một vụ trộm. Nhận tất cả các sách và khóa học và 1000% đáng giá nhưng với giá này, bạn đang nhận được giao dịch tốt nhất. Hãy thử và làm cho ngày của Arvid trở nên đặc biệt hơn</li>
-</ul>
-<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1743639220206391414#m">Xem trên Twitter</a></p>
+            <h1>Các Tweet Khoảnh khắc từ Twitter</h1>
+<h2>Ngày 08 tháng 01 năm 2024</h2>
+<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744279812305530993#m">08 Jan 2024 08:48:09 - @marckohlbrugge</a>: $20/mo adds up with loyal community members (<a href="https://wip.co">wip.co</a>)<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" /><br />
+$20 mỗi tháng tăng lên với các thành viên cộng đồng trung thành.</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744280039171236096#m">08 Jan 2024 08:49:03 - @marckohlbrugge</a>: Mặt khác, chúng tôi không có quá nhiều thành viên trả tiền nên MRR (doanh thu hàng tháng) khá thấp (xung quanh $1,000 hiện tại).<br />
+<br></p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1744263413889413404#m">08 Jan 2024 07:42:59 - @neuranne</a>: Cuối cùng thì nó cũng xảy ra. Sau nhiều năm mang theo sổ nhật ký mọi nơi, tôi đã mất mất một quyển sổ tay. (hình ảnh gần đây kèm theo) Tôi nên buồn và tuy nhiên, có vẻ như việc này đúng đắn.<br />
+Các trang đó chứa tháng năm tự nghĩa, ý tưởng và ước mơ.<br />
+Tôi cảm thấy tưởng trọng về việc mất cuốn sổ tay.<br />
+Mất quyển sổ tay đã mang đến một cơ hội bất ngờ để thực hành nghệ thuật buông bỏ.<br />
+Có một điều đặc biệt khi mất một vật meant để ghi lại suy nghĩ của bạn. Nó gần như trở thành một lưu niệm Mor.<br />
+Tất cả những gì được có sẽ bị mất<br />
+Điều gì nảy nở sẽ rụt lui<br />
+Nơi có cuộc gặp gỡ<br />
+sẽ có sự tách rời<br />
+Điều gì được sinh ra chắc chắn sẽ chết
+Tôi cũng đã gặp khó khăn trong việc viết nhật ký trong vài tuần qua.<br />
+Việc mất sổ tay đã mang đến một tình yêu mới đối với việc viết nhật ký hàng ngày.<br />
+Tổng thể, tôi cảm thấy hồi hộp lại về việc viết nhật ký hàng ngày.<br />
+(Và vì cuốn sổ tay này đã bị ngừng sản xuất, tôi đang tìm kiếm các thương hiệu tốt! lý tưởng là gắn vữa, không viết.)</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTeB2NXcAATn1g.jpg" /> </p>
+<p>Cảm ơn @neuranne đã chia sẻ trải nghiệm của bạn.</p>
+<p>[<a href="https://x.com/neuranne/status/1744263413889413404#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/michwirantono/status/1744236108878328278#m">08 Jan 2024 05:54:29 - @michwirantono</a>: Shipping from 37,000 ft above. The grind doesn’t stop! 💪 @albertpurnama</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1744236052959944704%2Fpu%2Fimg%2F2t_sRpSnwtDJxgSO.jpg" /> </p>
+<p>Cảm ơn @michwirantono đã chia sẻ.</p>
+<p>[<a href="https://x.com/michwirantono/status/1744236108878328278#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/tdinh_me/status/1744232759600824622#m">08 Jan 2024 05:41:10 - @tdinh_me</a>: Tôi đã phải chiến đấu với vấn đề ERR_NETWORK_CHANGED trong 2 tháng qua, nếu bạn biết cách sửa chữa xin chia sẻ ý tưởng 😅<br />
+Ngẫu nhiên xảy ra. Tôi đang sử dụng Chrome/macOS Sonoma.<br />
+Tìm kiếm qua vô số liên kết trên Google/Reddit/ChatGPT nhưng không có kết quả 🤦</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTCKywbEAAC5fF.jpg" /></p>
+<p>Cảm ơn @tdinh_me đã chia sẻ trải nghiệm của bạn.</p>
+<p>[<a href="https://x.com/tdinh_me/status/1744232759600824622#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1744223542869143772#m">08 Jan 2024 05:04:33 - @Shpigford</a>: hey you’re pretty great and i’m glad you’re here.<br />
+[<a href="https://x.com/Shpigford/status/1744223542869143772#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Jessicameher/status/1744172995331998188#m">08 Jan 2024 01:43:41 - @Jessicameher</a>: Rất tiếc khi một công ty tuyên bố phá sản và mọi người mất việc làm vì điều đó. Nhưng nếu bạn không thể xây dựng một công ty có thể tự mình nuôi sống được, đó chính là điều xảy ra. 
+[<a href="https://x.com/Jessicameher/status/1744172995331998188#m">Read More</a>]</p>
+<p>Quan điểm cá nhân: Rất đáng tiếc khi một công ty phá sản và mọi người mất việc làm, nhưng nếu bạn không thể xây dựng một công ty có thể tự mình nuôi sống được, đó chính là điều xảy ra. </p>
+<blockquote>
+<p>Jason Fried (@jasonfried): "It's not nuts, it's perfectly reasonable ... All this funding can't cover up fundamental economics forever. And too much funding makes it exponentially worse." | Nitter <a href="https://x.com/jasonfried/status/1743460783059845601#m">x.com/jasonfried/status/1743460783059845601#m</a></p>
+</blockquote>
+<p>Ý kiến: Tuy rất tiếc khi một công ty phá sản và mọi người mất việc làm, nhưng nếu bạn không thể xây dựng một công ty có thể tự mình nuôi sống được, đó chính là điều xảy ra. Tất cả vốn đầu tư không thể che giấu được kinh tế cơ bản mãi mãi. Và quá nhiều vốn đầu tư khiến mọi thứ trở nên tồi tệ một cách kinh khủng.
+[<a href="https://x.com/jasonfried/status/1743460783059845601#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744181420099346548#m">08 Jan 2024 02:17:10 - @dannypostmaa</a>: Năm 2024 sẽ là một năm thú vị<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTkcNaoAAmeLH.jpg" /><br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSTmLebIAAo3e6.jpg" /></p>
+<p>Cảm ơn @dannypostmaa đã chia sẻ.</p>
+<p>[<a href="https://x.com/dannypostmaa/status/1744181420099346548#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/arvidkahl/status/1744207695941398619#m">08 Jan 2024 04:01:35 - @arvidkahl</a>: llama.cpp is magical. I use it at Podline for mistral-based summarization in a GPU-less server backend. Slowish, but for a background service, a FREE one, it’s Massive. 
+[<a href="https://x.com/arvidkahl/status/1744207695941398619#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744211423130267705#m">08 Jan 2024 04:16:23 - @dannypostmaa</a>: need to start playing with this again now my non compete is ending
+[<a href="https://x.com/dannypostmaa/status/1744211423130267705#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/rrhoover/status/1744210409664475327#m">08 Jan 2024 04:12:22 - @rrhoover</a>: These 2024 prediction from @anuatluru align with many of my interests<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSt0b9WkAAcS6q.jpg" /></p>
+<p>Cảm ơn @rrhoover đã chia sẻ.</p>
+<p>[<a href="https://x.com/rrhoover/status/1744210409664475327#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/rrhoover/status/1744210508394152128#m">08 Jan 2024 04:12:45 - @rrhoover</a>: Here's the post: <a href="https://anu.substack.com/p/2024">anu.substack.com/p/2024</a>
+[<a href="https://x.com/rrhoover/status/1744210508394152128#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/mechsicko/status/1744200308543332432#m">08 Jan 2024 03:32:13 - @mechsicko</a>: The Physical Impossibility of Death in the Mind of Someone Living<br />
+￼<br />
+Artist || Damien Hirst<br />
+Year || 1991<br />
+Type || Tiger shark, glass, steel, 5% formaldehyde solution<br />
+Medium || @opepenedition <br />
+Movement || minimalism, pixel, meme<br />
+Subject || Life, apparent death</p>
+<p>Cảm ơn @mechsicko đã chia sẻ.</p>
+<p>[<a href="https://x.com/mechsicko/status/1744200308543332432#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/jackbutcher/status/1744195745484243166#m">08 Jan 2024 03:14:05 - @jackbutcher</a>: 
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSgme9XAAAN4E4.png" /></p>
+<p>Cảm ơn @jackbutcher đã chia sẻ.</p>
+<p>[<a href="https://x.com/jackbutcher/status/1744195745484243166#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/matteing/status/1744190891332366786#m">08 Jan 2024 02:54:48 - @matteing</a>: Alt + Click on symbol on Xcode surprised me.<br />
+[<a href="https://x.com/matteing/status/1744190891332366786#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/thepatwalls/status/1744185711492735451#m">08 Jan 2024 02:34:13 - @thepatwalls</a>: Just got off the phone with my 3 best friends. They're all buying Teslas within the next month. Seems like the default option for buying a car in 2024.<br />
+I guess it's time to buy more TSLA.<br />
+(not financial advice)<br />
+[<a href="https://x.com/thepatwalls/status/1744185711492735451#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744184048791204088#m">08 Jan 2024 02:27:37 - @dannypostmaa</a>: so I only last week found out about this feature in ChatGPT where you can just have conversations with it and it’s absolutely blowing my mind<br />
+when Apple fixed Siri to be like this it’s gonna be a game changer and I might use voice for the first time ever<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSWI3pbQAA1RbD.jpg" />  </p>
+<p>Cảm ơn @dannypostmaa đã chia sẻ.</p>
+<p>[<a href="https://x.com/dannypostmaa/status/1744184048791204088#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/dannypostmaa/status/1744185419707961649#m">08 Jan 2024 02:33:04 - @dannypostmaa</a>: 🔥<br />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDSXYLabwAA41bu.jpg" /></p>
+<p>Cảm ơn @dannypostmaa đã chia sẻ.</p>
+<p>[<a href="https://x.com/dannypostmaa/status/1744185419707961649#m">Read More</a>]</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/DenLoginoff/status/1744163844019179636#m">08 Jan 2024 01:07:20 - @DenLoginoff</a>: As I struggle to get started on growing audience with Twitter/X/etc, here are a few helpful tidbits I learned from @MeetKevon’s newsletter today:<br />
+1. Don’t try to grow 1000 followers in 10 days - much better to develop a few genuine connections with a small close-knit group of people that can all help each other<br />
+2. Keep It Simple - short but meaningful tweets (tough one!)<br />
+3. Share you personal learnings in the hope it helps someone else (meta advice!) - no need to sound authoritative on it, just aim to be helpful, and be open that you’re still learning🥦<br />
+[<a href="https://x.com/DenLoginoff/status/1744163844019179636#m">Read More</a>]</p>
+<p>Bài viết bởi: Người viết chưa đến danh.  </p>
+<blockquote>
+<p>Văn Kevon: Đồng ý với thông tin từ @DenLoginoff </p>
+</blockquote>
+<p>Tác giả: Chia sẻ những mẹo hữu ích từ bản tin của @MeetKevon.<br />
+Quan điểm cá nhân: Thông tin rất hữu ích, cảm ơn bạn đã chia sẻ.</p>
+<p>[<a href="https://x.com/DenLoginoff/status/1744163844019179636#m">Read More</a>]</p>
+<hr />
+<p>Vui lòng lưu ý rằng các bài viết và ý kiến cá nhân chỉ là nguồn cung cấp thông tin và đề xuất.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

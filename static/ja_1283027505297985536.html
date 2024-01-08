@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,42 +83,56 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>06 Jan 2024 17:21:34</h2>
-<p><strong>@thepatwalls</strong>
-Anyone building on this fine Saturday?<br />
-(show me your setup)</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDLPhNBWcAAufiU.jpg" />
-<a href="https://x.com/thepatwalls/status/1743684244272980171#m">Original Tweet</a></p>
-<h2>06 Jan 2024 17:09:24</h2>
-<p><strong>@5harath</strong>
-Be a rolling stone in your life.<br />
-Be a cornerstone in someone else’s life.</p>
-<h2>06 Jan 2024 17:05:37</h2>
-<p><strong>@dr</strong>
-Is 2024 the year I finally get a product past $5k MRR?</p>
-<h2>06 Jan 2024 16:52:42</h2>
-<p><strong>@levelsio</strong>
-What's the SQLite strategy for when databases get too big?<br />
-Photo AI's photos.db is 35.2GB with 7,270,478 photos in it now (just metadata, pics are stored on R2)<br />
-Should I make a script that empties older photos and put them in a photos_archive.db and keep the photos.db fast?</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/media%2FGDLIukUXMAA5vBf.png" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/levelsio/status/1743676979813958134#m">Original Tweet</a></p>
-<p>（article content continues...）</p>
-<h2>06 Jan 2024 13:52:01</h2>
-<p><strong>@dutchtide</strong>
-More painting today, come and join the livestream to vibe and see what todays opepen is all about! <a href="https://x.com/i/broadcasts/1nAKEaoABeaKL">Link</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="Image" src="https://nitter.nohost.network/pic/card_img%2F1743688379433140224%2FoaIffG4M%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/dutchtide/status/1743631508307411091#m">Original Tweet</a></p>
-<h2>03 Jan 2024 17:41:46</h2>
-<p><strong>@neuranne</strong>
-I’m turning 34 today!<br />
-Letting go of linear goals has changed my life. To celebrate my birthday, I’m giving away $3400 to help 4 people become scientists of their own life.<br />
-Tell me about an experiment you want to run, where $850 would help make it happen.<br />
-Maybe it’s a video essay, a podcast miniseries, an indie research paper, a series of illustrations, a conference…<br />
-This could allow you to take some time off work, cover travel costs, purchase supplies, etc.<br />
-To maximize positive impact, there would ideally be some form of artifact people can consume at scale.<br />
-This is my first time doing something like this so i’m probably missing things – feel free to ask questions :)</p>
-<p>（article content continues...）</p>
+            <h2>最新のツイート記事</h2>
+<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744279812305530993#m">08 Jan 2024 08:48:09@marckohlbrugge</a>: 
+$20/mo adds up with loyal community members (<a href="https://wip.co">wip.co</a>)</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTtHhTakAA3Uhf.png" /></p>
+<p>マークは、毎月$20が集まり、忠実なコミュニティメンバーに対して蓄積されると述べています。</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/marckohlbrugge/status/1744280039171236096#m">08 Jan 2024 08:49:03@marckohlbrugge</a>:
+On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)</p>
+<p>マークは、「一方で、私たちにはそれほど多くの有料会員がいないため、現在のMRRはかなり低いです（約$1,000）」と述べています。</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/neuranne/status/1744263413889413404#m">08 Jan 2024 07:42:59@neuranne</a>: 
+何年も日記をどこにでも持ち歩いてきた結果、ノートをなくしてしまいました。（最後に見た写真を添付）</p>
+<p>これらのページには、自己反省、アイデア、夢が数ヶ月分記載されていました。
+悲しいべきかと思いきや、なぜか正しいように感じます。</p>
+<p>そのノートを失うことによって予期せぬ機会が提供され、離れることの芸術を実践する機会を与えられました。</p>
+<p>自分の考えを記録するために作られたアイテムを失うことは何か特別なものです。それはほぼモルモリ・モリのお守りになります。</p>
+<p>全ては獲得されていくでしょう
+上昇するものは下降するでしょう
+会合があるところにも別れがあるでしょう
+生まれたものは確かに死ぬでしょう</p>
+<p>この数週間、私は日記を書くのに苦労していました。</p>
+<p>ノートを失うことで、日記を書く行為とそれらのノートに蓄積された洞察に対する新たな感謝の気持ちが生まれました。</p>
+<p>全体的に、私は日々の日記に対する新たな興奮を感じています。</p>
+<p>（そして、このノートは廃盤になっているので、いいブランドを探しています！理想的にはスパイラルバウンド、罫線がないもの）</p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTeB2NXcAATn1g.jpg" /></p>
+<hr />
+<p><strong>Comments and Interpretation:</strong>
+ニューランは、大切な日記を失ったことで新たな気持ちに気づき、日記を書くことへの感謝の気持ちが芽生えています。彼女の失ったノートに詰まったアイデアと考えに代わるものが次々と出てきていることを示唆しています。</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/michwirantono/status/1744236108878328278#m">08 Jan 2024 05:54:29@michwirantono</a>: 
+37,000フィート上からの出荷。努力は止まりません！💪 <a href="https://x.com/AlbertPurnama" title="AlbertPurnama">@albertpurnama</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/ext_tw_video_thumb%2F1744236052959944704%2Fpu%2Fimg%2F2t_sRpSnwtDJxgSO.jpg" /></p>
+<hr />
+<p><br><a style="color:#5da2ff;" href="https://x.com/tdinh_me/status/1744232759600824622#m">08 Jan 2024 05:41:10@tdinh_me</a>: 
+私は2ヶ月間このERR_NETWORK_CHANGEDの問題と戦っています。解決策を知っている場合はアイデアを共有してください 😅</p>
+<p>ランダムに発生します。Chrome/macOS Sonomaを使用しています。</p>
+<p>Google/Reddit/ChatGPTで数え切れない程のリンクを検索しましたが、何の結果も出ません 🤦</p>
+<h2><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDTCKywbEAAC5fF.jpg" /></h2>
+<h2><br><a style="color:#5da2ff;" href="https://x.com/Shpigford/status/1744223542869143772#m">08 Jan 2024 05:04:33@Shpigford</a>: お前はかなり素晴らしくて、君がここにいてくれて嬉しいよ。</h2>
+<p><strong>Comments &amp; Interpretation:</strong>
+Shpigfordは、フォロワーや読者に向けて愛情を示すツイートを投稿しています。</p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/Jessicameher/status/1744172995331998188#m">08 Jan 2024 01:43:41@Jessicameher</a>:
+InVisionでの最盛期に働いていました、売上は$15Mから$100Mになりました。創業者にとっては重要な収穫の1つを他の創業者と共有するためだけに、InVisionが失敗したのはFigmaのせいではありません。</p>
+<p>単純にInVisionが顧客の声を聞くのをやめたために失敗したのです。</p>
+<p>Figmaは長年にわたってInVisionの顧客が求めていたツールを構築しました。InVisionはAdobeとSketchに勝つこと及び、あまりにも積極的なタイムラインでエンドツーエンドのデザインシステムを所有しようとすることに全集中しており、その瞬間に顧客の必要性を解決することを見失いました。</p>
+<p>分かりやすく言えば、InVisionは顧客とデザインコミュニティを非常に愛していました。彼らはデザイナーに声や席を与える運動を推進しました。彼らはソフトウェアだけでなく目的も販売しました。また、自らのフォーカスを解決したカテゴリーに創り上げました。</p>
+<p>しかしInVisionはAdobeに焦点を合わせる中で、Figmaは静かに良い製品を着実に構築していました。Figmaは2018年までたった$15Mを調達し、最初の$1Mの収益を得るまでに8年かかりました。</p>
+<p>私はInVisionの創業者やチームに対して非常に尊敬と愛情を持っており、長期の企業を構築することがいかに難しいかを第一線で知っています。私は関わる人々全員に向けて、驚く程の悲しみを感じています。</p>
+<p>しかし、本当に簡単にイノベーターのジレンマを指摘することは難しいのですが（完全に妥当なポイント）、私の視点から（他の尊敬する方々とは異なるかもしれません）、Figmaの参入はInVisionの内部的な弱点を露呈しました。すでに$100Mのビジネスになっている時点で、本当に間に合わせるのは非常に難しいです。</p>
+<hr />
+<p><strong>Comments &amp; Interpretation:</strong>
+Jessicameherは、InVisionがFigmaに敗れた理由について共有しています。InVisionの失敗は、顧客と彼らがその時点で必要としていたものを解決することを見失ったことによるものであると述べています。</p>
+<p>*Please note: The actual twitter content has been translated.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

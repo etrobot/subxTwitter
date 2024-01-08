@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,62 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,45 +84,40 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1432003348744470530">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>最新推文</h2>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">05 Jan 2024 19:24:22@PinterestDesign</a>: 在我們的部落格上有關於如何回饋在很多方面都會讓我們獲得回報的探索。</p>
-<p><em>mentorship =</em>
-✅ 與當地社區建立聯繫
-✅ 將學生介紹進數字產品設計這個職業選擇
-✅ 在教導他人的過程中學習
-… 還有更多</p>
+            <h1>最新設計相關推文</h1>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/zeta_ux/status/1743885974206341243#m">zeta_ux</a> (07 Jan 2024 06:43:10)</h3>
+<p>新的一年，新的氛圍！🎉<br />
+非常期待以全新的設計見面會開啟2024年！加入我們，一起探索創意，分享想法，讓今年成為設計的絢爛一年！🥳  </p>
+<p>註冊與更多詳細資訊👇<a href="https://lu.ma/adplistmeetupblr">lu.ma/adplistmeetupblr</a>  </p>
+<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23zeta">#zeta</a> <a href="https://x.com/search?q=%23design">#design</a> <a href="https://x.com/search?q=%23ux">#ux</a> <a href="https://x.com/search?q=%23meetup">#meetup</a> <a href="https://x.com/search?q=%23bangalore">#bangalore</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDOGzhybQAA_eAw.jpg" /></p>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743352760982979056#m">PinterestDesign</a> (05 Jan 2024 19:24:22)</h3>
+<p>在我們的博客上，我們探索了回饋如何在許多方面給予我們回報。</p>
+<p>指導 = <br />
+✅ 與當地社區建立聯繫<br />
+✅ 將學生介紹為數位產品設計師作為職業選擇<br />
+✅ 在教授他人的過程中學習<br />
+…以及更多  </p>
 <p><br><a style="color:#5da2ff;" href="https://pinterest.design/reasons-to-mentor-high-schoolers-reflections-from-my-first-year-06002c61cb3c?source=social.tw">pinterest.design/reasons-to-…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
-<h2>引述:</h2>
-<blockquote>
-<p>Jessica Strelioff (@jstrelioff): "我可能一直在 Peinterest 上使用的數量有點令人尷尬，但我想分享我的收藏板，以便能對任何人有所幫助！我有設計的方方面面的板：標誌、字體、插圖、攝影等。</p>
-<p>歡迎跟著我一起看⇣ <a href="https://www.pinterest.com/jstrelioff/_saved/">www.pinterest.com/jstrelioff/_saved/</a>" | Nitter <a href="https://x.com/jstrelioff/status/1742648294726070344#m">x.com/jstrelioff/status/1742648294726070344#m</a></p>
-</blockquote>
-<p>我在 Pinterest 上可能一直使用的數量有點令人尷尬，但我想分享我的收藏板，以便能對任何人有所幫助！我有設計的方方面面的板：標誌、字體、插圖、攝影等。</p>
-<p>歡迎跟著我一起看⇣ <a href="https://www.pinterest.com/jstrelioff/_saved/">www.pinterest.com/jstrelioff/_saved/</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hAGQXIAAHQeV.jpg" /></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hBW0XsAAf-F-.jpg" /></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hCXzXkAAIppi.jpg" /></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hGr2WkAAVZ1H.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743005001557889096#m">04 Jan 2024 20:22:30@PinterestDesign</a>: 我們喜歡看到這些！你在 2024 年釘的是什麼？</p>
-<p>以下為對應的圖片。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">04 Jan 2024 18:50:50@MicrosoftDesign</a>: 本月的桌布由 #OliviaXu 提供😍。</p>
-<p>要下載這個桌布以及更多，請查看➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDBQ1EPa8AALLre.jpg" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1740434190347174281#m">28 Dec 2023 18:07:01@SalesforceUX</a>: Salesforce Ignite 新興技術主管 Itai Asseo 及其團隊試驗了一系列頂級人工智慧工具，以查看他們在任務上有多快上手。</p>
-<p>查看哪些人工智慧工具節省了最多時間以及以什麼方式。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/search?q=%23DreamDesigners">#DreamDesigners</a> ⬇️ <br />
-<a href="https://www.salesforce.com/blog/can-an-ai-sidekick-make-us-faster-and-more-creative/">salesforce.com/blog/can-an-a…</a></p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1742974656301391874%2FyYAEE-0g%3Fformat%3Djpg%26name%3D800x419" /></p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/SalesforceUX/status/1740098733746839762#m">27 Dec 2023 19:54:02@SalesforceUX</a>: 加入 Salesforce 設計團隊！查看這些職位。</p>
-<p>Lead/Principal UX Designer
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Lead-Principal-Product-Designer--AI_JR218456-1">salesforce.wd12.myworkdayjob…</a></p>
-<p>Senior/Lead Researcher, Research &amp; Insights
-<a href="https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/India---Hyderabad/UX-Senior-Lead-Principal-Researcher--Research---Insights_JR221575">salesforce.wd12.myworkdayjob…</a></p>
-<p>幫助我們為一個更具包容性的世界推動變革。</p>
-<p><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1738242997282877755#m">22 Dec 2023 17:00:00@MicrosoftDesign</a>: 在這個假期季節，我們與 #AI 藝術家 <a href="https://x.com/elliepritts" title="ellie pritts 🐸 (she/they)">@elliepritts</a> 合作，重新打造了圍繞世界各地的假期回憶的視覺表現。</p>
-<p>前往➡️ <a href="https://microsoft.com/holidays">microsoft.com/holidays</a> 了解更多關於 Ellie 的過程和為什麼這些插畫能夠如此生動地呈現出來。</p>
-<p><img style="max-width: 20rem;margin:0.5rem;" alt="" src="https://nitter.catsarch.com/pic/media%2FGB9hYVDWMAAMnTA.jpg" /></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/card_img%2F1743349875918409728%2FqxkNNHYN%3Fformat%3Djpg%26name%3D800x419" /></p>
+<h3><br><a style="color:#5da2ff;" href="https://x.com/PinterestDesign/status/1743005001557889096#m">PinterestDesign</a> (04 Jan 2024 20:22:30)</h3>
+<p>我們很喜歡看到這些！你在2024年會釘選什麼呢？</p>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/jstrelioff/status/1742648294726070344#m">jstrelioff</a></h3>
+<p>我可能用 <a href="https://x.com/Pinterest" title="Pinterest">@Pinterest</a> 的次數有點令人尷尬？但我想分享這些對許多人有幫助的資源！我有關於設計的大部分方面的專板：標誌、字體、插圖、攝影等等。<br />
+歡迎跟著我一起看⇣ <a href="https://www.pinterest.com/jstrelioff/_saved/">www.pinterest.com/jstrelioff/_saved/</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hAGQXIAAHQeV.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hBW0XsAAf-F-.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hCXzXkAAIppi.jpg" />
+<img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGC8hGr2WkAAVZ1H.jpg" /></p>
+<hr />
+<h3><br><a style="color:#5da2ff;" href="https://x.com/MicrosoftDesign/status/1742981931527197012#m">MicrosoftDesign</a> (04 Jan 2024 18:50:50)</h3>
+<p>這個月的桌布是由 <a href="https://x.com/search?q=%23OliviaXu">#OliviaXu</a> 😍 所創作的。<br />
+要下載這個桌布以及更多內容，請查看➡️ <a href="https://msft.it/60059NwpZ">msft.it/60059NwpZ</a></p>
+<p><img style="max-width: 20rem;margin:0.2rem auto;" alt="" src="https://nitter.catsarch.com/pic/media%2FGDBQ1EPa8AALLre.jpg" /></p>
+<p>以上是一些有關設計的推文，希望能為您帶來一些啟發！</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

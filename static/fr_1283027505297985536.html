@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton to Twitter List</title>
+    <title>GPT Subscripton for Twitter List</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    <link rel="stylesheet" href="/static/style.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
@@ -17,9 +17,61 @@
 </head>
 <body class="bg-gray-50 dark">
 <div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
+<div class="sidebar w-full max-w-sm items-center"></div>
+<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
+    <div class="text-sm px-2 pb-2 pt-2">
+        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
+            <div class="flex items-center  w-full">
+                <input type="number" name="target_id" placeholder="Enter target ID" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
+                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
+                   rel="noopener noreferrer"
+                   class="border border-white rounded px-3 py-1  mr-2">
+                    ?
+                </a>
+            </div>
+            <div class="flex items-center mt-1 w-full">
+                <input type="email" name="email" placeholder="Enter your email address" required
+                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
+                <select id="language-select"
+                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
+                    <option value="zh-CN">简体中文</option>
+                    <option value="zh-TW">繁體中文</option>
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="es">Español</option>
+                    <option value="pt">Português</option>
+                    <option value="de">Deutsch</option>
+                    <option value="fr">Français</option>
+                    <option value="ar">العربية</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="tl">Filipino</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="pl">Polski</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="th">ไทย</option>
+                </select>
+            </div>
+            <div class="flex mt-1 w-full">
+                <input type="time" id="mail-time" required
+                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
+                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
+                        id="subscribe-btn">Subscribe
+                </button>
+                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
+            </div>
+            <input type="hidden" name="current_language" id="current-language" value="">
 
-    <div class="flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="flex w-full items-center space-x-2 ">
+        </form>
+        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
+    </div>
+</div>
+<div id="parentContainer" class="flex flex-wrap m-2">
+
+    <div class="flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-sm mx-auto">
+        <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360" class="object-none w-full h-full"/>
             </div>
@@ -31,30 +83,50 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1283027505297985536">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h2>Article</h2>
+            <h1>Titre: Les Tweets du 08 Janvier 2024</h1>
 <hr />
-<p>06 Jan 2024 17:50:11 - @Suhail: Il est intéressant de constater que publier sur Twitter (ce que je ferais gratuitement) permet de payer plus que le plus haut abonnement sur Twitter (que je ne paierais normalement pas).</p>
-<p>06 Jan 2024 14:22:40 - @arvidkahl: Je fête mes 39 ans aujourd'hui. 🥳</p>
-<p>En cadeau pour vous (et pour moi 😉), je lance The Bootstrapper’s Bundle :</p>
-<p>Zero to Sold (ebook+audiobook)
-The Embedded Entrepreneur (eBook, audiobook &amp; toolkit)
-Find your Following (cours complet + trousse à outils)</p>
-<p>Prix d'anniversaire : 20 $ !</p>
-<p>06 Jan 2024 17:41:30 - @damengchen: Joyeux anniversaire, Arvid! Continue de nous inspirer 🫶</p>
-<p>06 Jan 2024 17:43:04 - @arvidkahl: 🥰</p>
-<p>06 Jan 2024 17:21:34 - @thepatwalls: Qui travaille en ce beau samedi ? (montrez-moi votre configuration)</p>
-<p>06 Jan 2024 17:09:24 - @5harath: Soyez une pierre qui roule dans votre vie.
-Soyez une pierre angulaire dans la vie de quelqu'un d'autre.</p>
-<p>06 Jan 2024 17:05:37 - @dr: Est-ce que 2024 sera enfin l'année où je dépasserai les 5000 $ de revenu mensuel pour un produit ?</p>
-<p>06 Jan 2024 16:52:42 - @levelsio: Quelle est la stratégie de SQLite lorsque les bases de données deviennent trop volumineuses ?</p>
-<p>Photo AI's photos.db fait 35,2 Go avec 7 270 478 photos (seulement des métadonnées, les images sont stockées sur R2)</p>
-<p>Devrais-je créer un script qui vide les anciennes photos et les met dans un photos_archive.db et maintient la rapidité de photos.db ?</p>
-<p>06 Jan 2024 16:56:39 - @levelsio: La partition de la base de données est agréable mais 1) la pagination infinie devient un peu plus difficile de cette façon, car j'utilise OFFSET pour obtenir les anciennes photos lorsque les gens défilent dans leur archive de photos; 2) lorsque j'ajoute de nouvelles fonctionnalités et que je change la structure de la base de données, je devrai également changer sur toutes les anciennes.</p>
-<p>06 Jan 2024 16:53:02 - @marckohlbrugge: Postmark a été un plaisir à utiliser. Je les ai utilisés il y a 1,5 ans et je ne le regrette pas. Un excellent service client aussi 👌</p>
-<p>06 Jan 2024 16:07:34 - @Shpigford: Voici le véritable dilemme que j'ai : dois-je construire des outils financiers B2C ou B2B ?</p>
-<p>Le B2C est attrayant presque entièrement parce qu'il n'y a pas d'excellents outils sur le marché. Mais cette voie a déjà été un chemin direct vers la douleur et la souffrance. Alors peut-être que la sagesse dit d'essayer la voie B2B ?</p>
+<ul>
+<li><strong>08 Jan 2024 08:48:09</strong> - <a href="https://x.com/marckohlbrugge/status/1744279812305530993#m">marckohlbrugge</a>: </li>
+<li>" $20/mo adds up with loyal community members (<a href="https://wip.co">wip.co</a>)"</li>
+</ul>
+<p>Le tweet mentionne une stratégie de tarification mensuelle qui représente une somme importante pour les membres fidèles de la communauté.</p>
+<ul>
+<li><strong>08 Jan 2024 08:49:03</strong> - <a href="https://x.com/marckohlbrugge/status/1744280039171236096#m">marckohlbrugge</a>:</li>
+<li>"On the other hand, we don't have that many paying members so MRR is quite low (around $1,000 currently)"</li>
+</ul>
+<p>Ce tweet indique que malgré la tarification mensuelle mentionnée précédemment, le nombre de membres payants est faible, ce qui limite considérablement les revenus mensuels.</p>
+<ul>
+<li><strong>08 Jan 2024 07:42:59</strong> - <a href="https://x.com/neuranne/status/1744263413889413404#m">neuranne</a>:</li>
+<li>L'auteur partage son expérience de perte de son carnet de notes et exprime son désir de trouver un nouveau carnet pour continuer à pratiquer le journal intime.</li>
+</ul>
+<p>Ce commentaire partage une réflexion personnelle sur la perte d'un carnet de notes et la signification qu'elle revêt pour l'auteur. La perte a suscité un renouveau d'enthousiasme pour le journal intime.</p>
+<ul>
+<li><strong>08 Jan 2024 05:54:29</strong> - <a href="https://x.com/michwirantono/status/1744236108878328278#m">michwirantono</a>:</li>
+<li>"Shipping from 37,000 ft above. The grind doesn’t stop! 💪 <a href="https://x.com/AlbertPurnama" title="Albert Purnama">@albertpurnama</a>"</li>
+</ul>
+<p>L'auteur partage une photo de lui ou d'elle effectuant une tâche de travail depuis un avion en vol à 37 000 pieds. Cela montre son engagement professionnel même en déplacement.</p>
+<ul>
+<li><strong>08 Jan 2024 05:41:10</strong> - <a href="https://x.com/tdinh_me/status/1744232759600824622#m">tdinh_me</a>:</li>
+<li>"I've been battling with this ERR_NETWORK_CHANGED issue for 2 months now, if you know how to fix it please share ideas 😅"</li>
+</ul>
+<p>L'auteur exprime sa frustration face à un problème technique persistant et sollicite des conseils pour le résoudre.</p>
+<ul>
+<li><strong>08 Jan 2024 05:04:33</strong> - <a href="https://x.com/Shpigford/status/1744223542869143772#m">Shpigford</a>:</li>
+<li>"hey you’re pretty great and i’m glad you’re here."</li>
+</ul>
+<p>Cet encouragement positif vise à apporter du réconfort et à renforcer la confiance en soi des lecteurs.</p>
+<ul>
+<li><strong>08 Jan 2024 01:43:41</strong> - <a href="https://x.com/Jessicameher/status/1744172995331998188#m">Jessicameher</a>:</li>
+<li>L'auteur partage une réflexion sur l'échec de la société InVision et comment Figma a réussi en répondant aux besoins des clients. Elle souligne également l'importance de rester concentré sur le produit principal.</li>
+</ul>
+<p>Ce commentaire offre un aperçu approfondi de la dynamique concurrentielle dans l'industrie du design, et des leçons importantes pour les fondateurs de startups.</p>
+<ul>
+<li><strong>08 Jan 2024 02:17:10</strong> - <a href="https://x.com/dannypostmaa/status/1744181420099346548#m">dannypostmaa</a>:</li>
+<li>"2024 is going to be a fun year"</li>
+<li>Lauteur partage son enthousiasme pour l'année à venir, exprimant ses anticipations positives pour 2024.</li>
+</ul>
 <hr />
-<p>Vous avez maintenant un aperçu de certaines discussions intéressantes sur Twitter. Il semble que la journée a été marquée par l'anniversaire de @arvidkahl et la sortie de son "Bootstrapper’s Bundle". De plus, des discussions sur le développement de produits, la migration de bases de données et l'utilisation de différents outils sont également en cours. Restez branché pour plus de mises à jour stimulantes de la communauté Twitter !</p>
+<p>Ces tweets reflètent une variété de sujets allant des défis techniques aux réflexions personnelles, en passant par l'optimisme pour l'avenir. Ils offrent également des aperçus sur les progrès professionnels, la stratégie commerciale et les créations artistiques.</p>
         </div><br>{{path}}
     </div>
-<script src="/static/index.js"></script></body>
+</div><script src="/static/index.js"></script></body>

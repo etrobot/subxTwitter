@@ -5,9 +5,8 @@ import os
 # replace_str='subscribe by id in your language.<br><div class="title font-bold">Start for FREE</div>'
 
 
-# target_str= '''<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>'''
-# replace_str = '''<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
-# <div class="sidebar w-full max-w-sm items-center"></div>'''
+target_str= '''<br><br><br><br><br><br><br><br>'''
+replace_str = '''<br><br><br><br><br><br>'''
 
 # target_str= '''img style="max-width: 20rem;margin:0.2rem auto;"'''
 # replace_str = '''img style="max-width: 20rem;margin:1rem;"'''

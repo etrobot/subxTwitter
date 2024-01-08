@@ -44,7 +44,7 @@ domTemplate='''
         </div>
         <div class="mt-2 text-sm overflow-hidden h-60">
             {{sumTweets}}
-        </div><br>{{path}}
+        </div><br><br><br><br><br><br>
     </div>
 '''
 
@@ -56,89 +56,13 @@ domFinal='''
     </div>
 '''
 
-htmlHead='''<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GPT Subscripton for Twitter List</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="/static/style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7398757278741889"
-         crossorigin="anonymous"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XV4CMHELK9"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('config', 'G-XV4CMHELK9');
-    </script>
-</head>
-<body class="bg-gray-50 dark">
-<div><button id="theme-toggle" class="px-2 rounded">🌒</button></div>
-<div class="sidebar w-full max-w-sm items-center"></div>
-<div class="flex flex-col fixed bottom-0 w-full subcard backdrop-filter backdrop-blur-lg">
-    <div class="text-sm px-2 pb-2 pt-2">
-        <form id="subscribe-form" action="/subscribe" method="post" class="flex flex-col mb-2">
-            <div class="flex items-center  w-full">
-                <input type="number" name="target_id" placeholder="Enter target ID" required
-                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300  w-full">
-                <a href="https://business.twitter.com/en/blog/twitter-101-lists.html" target="_blank"
-                   rel="noopener noreferrer"
-                   class="border border-white rounded px-3 py-1  mr-2">
-                    ?
-                </a>
-            </div>
-            <div class="flex items-center mt-1 w-full">
-                <input type="email" name="email" placeholder="Enter your email address" required
-                       class="m-1 border border-gray-300 rounded px-4 py-1 focus:outline-none focus:ring focus:border-blue-300 w-full max-w-xs">
-                <select id="language-select"
-                        class="w-1/2 border border-white mr-1 ml-auto bg-transparent py-1 rounded">
-                    <option value="zh-CN">简体中文</option>
-                    <option value="zh-TW">繁體中文</option>
-                    <option value="en">English</option>
-                    <option value="ja">日本語</option>
-                    <option value="ko">한국어</option>
-                    <option value="es">Español</option>
-                    <option value="pt">Português</option>
-                    <option value="de">Deutsch</option>
-                    <option value="fr">Français</option>
-                    <option value="ar">العربية</option>
-                    <option value="id">Bahasa Indonesia</option>
-                    <option value="ms">Bahasa Melayu</option>
-                    <option value="tl">Filipino</option>
-                    <option value="vi">Tiếng Việt</option>
-                    <option value="pl">Polski</option>
-                    <option value="nl">Nederlands</option>
-                    <option value="th">ไทย</option>
-                </select>
-            </div>
-            <div class="flex mt-1 w-full">
-                <input type="time" id="mail-time" required
-                       class="w-20 m-1 border border-gray-300 rounded-full py-1 focus:ring focus:border-blue-300">
-                <button type="submit" class="bg-blue-500 text-white py-1 rounded-full m-1 w-full"
-                        id="subscribe-btn">Subscribe
-                </button>
-                <input type="hidden" name="mail_time" id="mail-time-timestamp" value="">
-            </div>
-            <input type="hidden" name="current_language" id="current-language" value="">
-
-        </form>
-        <span class="text-xs" id="time-label">Daily Push Time</span><span class="fixed bottom-2 right-2">© subxTwitter 2024</span>
-    </div>
-</div>
-<div id="parentContainer" class="flex flex-wrap m-2">
-'''
-
-htmlTail='''</div><script src="/static/index.js"></script></body>
-'''
-
 def output(lang:str):
         doms = []
         for li in lists:
             htmlstr = localTweets(f'static/{lang}_{li["id"]}.html')
-            atriclePath='<a href="/lang/{p}">more</a>'.format(p=lang + '_' + li['id'])
+            atriclePath='<a class="ml-auto"  style="color:#5da2ff;" href="/lang/{p}">more</a>'.format(p=lang + '_' + li['id'])
             dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
-            doms.append(dom.replace("{{path}}",atriclePath).replace('max-w-screen-md mx-auto','mx-1'))
+            doms.append(dom.replace("<br><br><br><br><br><br>",atriclePath).replace('max-w-screen-md mx-auto','mx-1'))
         doms.append(domFinal)
         fulldom='\n'.join(doms)
         with open('templates/template.html', 'r') as f:
@@ -167,8 +91,12 @@ def prepare():
                 filename = f'static/{lang}_{li["id"]}.html'
                 sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
                 dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
+                with open('templates/template.html', 'r') as f:
+                    template = f.read()
+                idleDom = dom.replace('card ', '').replace(' overflow-hidden h-60', '')
+                rendered_template = template.replace('{{gptDoms}}', idleDom)
                 with open(filename, 'w') as f:
-                    f.write(htmlHead + dom.replace('card ', '').replace(' overflow-hidden h-60', '') + htmlTail)
+                    f.write(rendered_template)
             except Exception as e:
                 print(e)
             output(lang)
@@ -198,8 +126,12 @@ def mission():
             sumhtml = sumTweets(df=tweetDf,nitter=nit, lang=v['LANG'])
             sendEmail(addSubInfo(disc,v["TARGET_ID"],sumhtml, mail, expired), receiver=mail)
             dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", v["TARGET_ID"]).replace("{{name}}",disc)
+            with open('templates/template.html', 'r') as f:
+                template = f.read()
+            idleDom = dom.replace('card ', '').replace(' overflow-hidden h-60', '')
+            rendered_template = template.replace('{{gptDoms}}', idleDom)
             with open(filename, 'w') as f:
-                f.write(htmlHead + dom.replace('card ', '').replace(' overflow-hidden h-60', '') + htmlTail)
+                f.write(rendered_template)
             output(v['LANG'])
         sql_update = "UPDATE users SET mail_time = :new_mail_time WHERE email = :email"
         cursor.execute(sql_update, {"new_mail_time": v['MAIL_TIME'] + timedelta(days=1), "email": mail})

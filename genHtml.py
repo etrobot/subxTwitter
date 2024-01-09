@@ -1,5 +1,5 @@
 from main import *
-import os
+import os,sys
 
 lists=[
     {'id':'1733652180576686386','name':'AGI Thoughts','headPicId':'https://pbs.twimg.com/list_banner_img/1733654690490200064/ig-cUZfi?format=jpg&name=360x360'},
@@ -139,5 +139,7 @@ def mission():
         cursor.connection.commit()
 
 if __name__=='__main__':
-    # mission()
-    prepare()
+    if sys.argv[-1]=='-p':
+        prepare()
+    else:
+        mission()

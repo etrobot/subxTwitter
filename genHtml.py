@@ -1,3 +1,5 @@
+import time
+
 from main import *
 import os,sys
 
@@ -8,10 +10,10 @@ lists=[
     {'id': '1283027505297985536', 'name': 'Building In Public', 'headPicId': 'https://pbs.twimg.com/list_banner_img/1283027805253533698/B7VpTOsQ?format=jpg&name=360x360'},
     {'id': '1432003348744470530', 'name': 'Design Teams', 'headPicId': 'https://pbs.twimg.com/list_banner_img/1432005358386483206/8bsQ-_Po?format=jpg&name=360x360'},
 ]
+
 langs = {
-    'zh-CN': '简体中文',
-    'zh-TW': '繁體中文',
-    'en': 'English',
+    # 'zh-CN': '简体中文',
+    # 'zh-TW': '繁體中文',
     'ja': '日本語',
     'ko': '한국어',
     'es': 'Español',
@@ -25,7 +27,8 @@ langs = {
     'vi': 'Tiếng Việt',
     'pl': 'Polski',
     'nl': 'Nederlands',
-    'th':'ไทย'
+    'th':'ไทย',
+    'en': 'English'
 }
 
 
@@ -48,34 +51,38 @@ domTemplate='''
     </div>
 '''
 
-domFinal='''
-<div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-    <div class="mt-2 text-sm overflow-hidden h-60">
-        <p>You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language.</p>
-        <p class="title font-bold">Start for FREE</p>
-    </div><br><br><br><br><br>
-</div>
-'''
 
-def output(lang:str):
-        doms = []
+def output(lang:str,doms=None):
+    domFinal = '''
+        <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
+            <div class="mt-2 text-sm overflow-hidden h-80">
+                <p>You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language.</p>
+                <p class="title font-bold">Start for FREE</p>
+            </div><br><br><br><br><br>
+        </div>
+        '''
+    if doms is None:
+        doms = {}
         for li in lists:
-            htmlstr = localTweets(f'static/{lang}_{li["id"]}.html')
-            atriclePath='<a class="ml-auto mt-1 text-xs"  style="color:#5da2ff;" href="/lang/{p}">show more</a>'.format(p=lang + '_' + li['id'])
-            dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
-            doms.append(dom.replace("<br><br><br><br><br><br>",atriclePath).replace('max-w-screen-md mx-auto','mx-1'))
-        doms.append(domFinal)
-        fulldom='\n'.join(doms)
-        with open('templates/template.html', 'r') as f:
-            template = f.read()
-        rendered_template = template.replace('{{gptDoms}}',fulldom)
-        with open('static/%s.html'%lang, 'w') as f:
+            doms[li["id"]] = localTweets(f'static/{lang}_{li["id"]}.html')
+    for li in lists:
+        atriclePath='<a class="ml-auto mt-1 text-xs"  style="color:#5da2ff;" href="/lang/{p}">show more</a>'.format(p=lang + '_' + li['id'])
+        dom = domTemplate.replace('{{sumTweets}}',doms[li["id"]]).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
+        doms[li["id"]]=dom.replace("<br><br><br><br><br><br>",atriclePath).replace('max-w-screen-md mx-auto','mx-1')
+    domstr=list(doms.values())
+    domstr.append(domFinal)
+    fulldom='\n'.join(domstr)
+    with open('templates/template.html', 'r') as f:
+        template = f.read()
+    rendered_template = template.replace('{{gptDoms}}',fulldom)
+    with open('static/%s.html'%lang, 'w') as f:
+        f.write(rendered_template)
+    if lang=='en':
+        with open('static/index.html', 'w') as f:
             f.write(rendered_template)
-        if lang=='en':
-            with open('static/index.html', 'w') as f:
-                f.write(rendered_template)
 
 def localTweets(filename:str):
+    print('open ',filename)
     with open(filename, 'r') as file:
         content = file.read()
     # 使用BeautifulSoup解析HTML
@@ -86,21 +93,28 @@ def localTweets(filename:str):
 
 def prepare():
         for lang in langs.keys():
+            doms=dict()
             for li in lists:
                 tweetDf, disc, nit = getTwList(li['id'])
-                try:
-                    filename = f'static/{lang}_{li["id"]}.html'
-                    sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
-                    dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
-                    with open('templates/template.html', 'r') as f:
-                        template = f.read()
-                    idleDom = dom.replace('card ', '').replace(' overflow-hidden h-60', '')
-                    rendered_template = template.replace('{{gptDoms}}', idleDom)
-                    with open(filename, 'w') as f:
-                        f.write(rendered_template)
-                except Exception as e:
-                    print(e)
-            output(lang)
+                retry=5
+                while retry>0:
+                    try:
+                        filename = f'static/{lang}_{li["id"]}.html'
+                        sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
+                        doms[li['id']] = sumhtml
+                        dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
+                        with open('templates/template.html', 'r') as f:
+                            template = f.read()
+                        idleDom = dom.replace('card ', '').replace(' overflow-hidden h-80', '')
+                        rendered_template = template.replace('{{gptDoms}}', idleDom)
+                        with open(filename, 'w') as f:
+                            f.write(rendered_template)
+                    except Exception as e:
+                        print(e)
+                        time.sleep(30)
+                        retry-=1
+                        continue
+            output(lang,doms)
 
 def mission():
     pd.set_option('display.max_columns', None)
@@ -129,7 +143,7 @@ def mission():
             dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", v["TARGET_ID"]).replace("{{name}}",disc)
             with open('templates/template.html', 'r') as f:
                 template = f.read()
-            idleDom = dom.replace('card ', '').replace(' overflow-hidden h-60', '')
+            idleDom = dom.replace('card ', '').replace(' overflow-hidden h-80', '')
             rendered_template = template.replace('{{gptDoms}}', idleDom)
             with open(filename, 'w') as f:
                 f.write(rendered_template)
@@ -141,5 +155,6 @@ def mission():
 if __name__=='__main__':
     if sys.argv[-1]=='-p':
         prepare()
+        # output('zh-TW')
     else:
         mission()

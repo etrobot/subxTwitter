@@ -5,8 +5,8 @@ import os
 # replace_str='subscribe by id in your language.<br><div class="title font-bold">Start for FREE</div>'
 
 
-target_str= '''<br><br><br><br><br><br><br><br>'''
-replace_str = '''<br><br><br><br><br><br>'''
+target_str= '''>more</a>'''
+replace_str = '''>show more</a>'''
 
 # target_str= '''img style="max-width: 20rem;margin:0.2rem auto;"'''
 # replace_str = '''img style="max-width: 20rem;margin:1rem;"'''

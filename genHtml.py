@@ -30,7 +30,7 @@ langs = {
 
 
 domTemplate='''
-    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-md mx-1">
+    <div class="card flex flex-col rounded-xl my-1 p-4 bg-gray-500 bg-opacity-5 max-w-screen-md mx-auto">
         <div class="flex w-full items-center space-x-2 max-w-screen-lg">
             <div class="w-16 h-10 rounded overflow-hidden">
                 <img src="{{headPicId}}" class="object-none w-full h-full"/>
@@ -42,25 +42,26 @@ domTemplate='''
             </a>
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="{{listId}}">🔔</button>
         </div>
-        <div class="mt-2 text-sm overflow-hidden h-60">
+        <div class="mt-2 text-sm overflow-hidden h-80">
             {{sumTweets}}
         </div><br><br><br><br><br><br>
     </div>
 '''
 
 domFinal='''
-    <div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
-        <div class="mt-2 text-sm overflow-hidden h-60">
-            You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language.
-        </div><br><div class="title">Start for FREE</div><br><br><br><br><br>
-    </div>
+<div class="card flex flex-col rounded-xl mx-1 my-1 p-4 bg-gray-500 bg-opacity-5">
+    <div class="mt-2 text-sm overflow-hidden h-60">
+        <p>You can <a style="color:#5da2ff;" href="https://business.twitter.com/en/blog/twitter-101-lists.html">edit your own Twitter List</a> and subscribe by id in your language.</p>
+        <p class="title font-bold">Start for FREE</p>
+    </div><br><br><br><br><br>
+</div>
 '''
 
 def output(lang:str):
         doms = []
         for li in lists:
             htmlstr = localTweets(f'static/{lang}_{li["id"]}.html')
-            atriclePath='<a class="ml-auto"  style="color:#5da2ff;" href="/lang/{p}">more</a>'.format(p=lang + '_' + li['id'])
+            atriclePath='<a class="ml-auto mt-1 text-xs"  style="color:#5da2ff;" href="/lang/{p}">show more</a>'.format(p=lang + '_' + li['id'])
             dom = domTemplate.replace('{{sumTweets}}',htmlstr).replace("{{listId}}",li['id']).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
             doms.append(dom.replace("<br><br><br><br><br><br>",atriclePath).replace('max-w-screen-md mx-auto','mx-1'))
         doms.append(domFinal)
@@ -84,21 +85,21 @@ def localTweets(filename:str):
     return div_element.prettify()
 
 def prepare():
-    for li in lists:
-        tweetDf,disc,nit = getTwList(li['id'])
         for lang in langs.keys():
-            try:
-                filename = f'static/{lang}_{li["id"]}.html'
-                sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
-                dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
-                with open('templates/template.html', 'r') as f:
-                    template = f.read()
-                idleDom = dom.replace('card ', '').replace(' overflow-hidden h-60', '')
-                rendered_template = template.replace('{{gptDoms}}', idleDom)
-                with open(filename, 'w') as f:
-                    f.write(rendered_template)
-            except Exception as e:
-                print(e)
+            for li in lists:
+                tweetDf, disc, nit = getTwList(li['id'])
+                try:
+                    filename = f'static/{lang}_{li["id"]}.html'
+                    sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
+                    dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
+                    with open('templates/template.html', 'r') as f:
+                        template = f.read()
+                    idleDom = dom.replace('card ', '').replace(' overflow-hidden h-60', '')
+                    rendered_template = template.replace('{{gptDoms}}', idleDom)
+                    with open(filename, 'w') as f:
+                        f.write(rendered_template)
+                except Exception as e:
+                    print(e)
             output(lang)
 
 def mission():
@@ -138,4 +139,5 @@ def mission():
         cursor.connection.commit()
 
 if __name__=='__main__':
-    mission()
+    # mission()
+    prepare()

@@ -1,6 +1,8 @@
 import time
-
-from main import *
+from datetime import datetime,timedelta
+from main import sumTweets,sendEmail,getTwList,select_data_as_dataframe,addSubInfo,cursor
+import pandas as pd
+from bs4 import BeautifulSoup
 import os,sys
 
 lists=[

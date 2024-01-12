@@ -116,11 +116,11 @@ def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, mod
             contents.append(tweet)
         else:
             break
-    tweets = '<br>'.join(contents).replace(nitter, 'x.com').replace('x.com/pic',nitter+'/pic')
+    tweets = '<hr>'.join(contents).replace(nitter, 'x.com').replace('x.com/pic',nitter+'/pic')
     prompt = "<tweets>{tweets}</tweets>\nThe above are some tweets. You are a senior editor of a {lang} blog focusing on edition of tweets. " \
               "Please compile the above tweets into a {lang} article formatted in markdown, keeping " \
               "the format that including  tweeting time, author,Twitter link, " \
-              "and Twitter content, add your {lang} comment after every tweet. " \
+              "and Twitter content, kindly comment after every tweet in language {lang}. " \
              "If you can tidy all the tweets well, you will get USD200 as extra bonus."
     prompt = prompt.format(tweets=tweets.replace('\n\n','\n').replace('\_','_'),lang=lang)
     print('tweets:', prompt)
@@ -129,7 +129,7 @@ def sumTweets(df:pd.DataFrame,nitter:str,lang = '中文',length:int = 10000, mod
                         api_key=os.environ['OPENAI_API_KEY'],
     )["choices"][0]["message"][
         "content"]
-    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><br><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-height: 16rem;margin:1rem;" alt="').replace('http://','https://')
+    result=markdown(result.replace('```','').replace('markdown',''),extensions=['markdown.extensions.tables']).replace('><a href','><a style="color:#5da2ff;" href').replace('<img alt="','<img style="max-height: 16rem;margin:1rem;" alt="').replace('http://','https://')
     return result
 
 def run():

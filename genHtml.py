@@ -98,24 +98,24 @@ def prepare():
             doms=dict()
             for li in lists:
                 tweetDf, disc, nit = getTwList(li['id'])
-                retry=5
-                while retry>0:
-                    try:
-                        filename = f'static/{lang}_{li["id"]}.html'
-                        sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
-                        doms[li['id']] = sumhtml
-                        dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
-                        with open('templates/template.html', 'r') as f:
-                            template = f.read()
-                        idleDom = dom.replace('card ', '').replace(' overflow-hidden h-80', '')
-                        rendered_template = template.replace('{{gptDoms}}', idleDom)
-                        with open(filename, 'w') as f:
-                            f.write(rendered_template)
-                    except Exception as e:
-                        print(e)
-                        time.sleep(30)
-                        retry-=1
-                        continue
+                # retry=5
+                # while retry>0:
+                #     try:
+                filename = f'static/{lang}_{li["id"]}.html'
+                sumhtml = sumTweets(df=tweetDf, nitter=nit, lang=langs[lang])
+                doms[li['id']] = sumhtml
+                dom = domTemplate.replace('{{sumTweets}}', sumhtml).replace("{{listId}}", li["id"]).replace("{{name}}",li['name']).replace("{{headPicId}}",li['headPicId'])
+                with open('templates/template.html', 'r') as f:
+                    template = f.read()
+                idleDom = dom.replace('card ', '').replace(' overflow-hidden h-80', '')
+                rendered_template = template.replace('{{gptDoms}}', idleDom)
+                with open(filename, 'w') as f:
+                    f.write(rendered_template)
+                    # except Exception as e:
+                    #     print(e)
+                    #     time.sleep(30)
+                    #     retry-=1
+                    #     continue
             output(lang,doms)
 
 def mission():

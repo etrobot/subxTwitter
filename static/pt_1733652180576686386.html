@@ -25,7 +25,7 @@
     <div class="w-full text-center font-bold">
         <div class="title">GPT Subscripton to Twitter List</div>
     </div>
-    <p class="text-xs mt-4 w-80 m-auto leading-loose">
+    <div class="text-xs my-4 w-80 m-auto leading-loose">
         <a href="/lang/zh-CN" class="border-b-2 mr-2">简体中文</a>
         <a href="/lang/zh-TW" class="border-b-2 mr-2">繁體中文</a>
         <a href="/lang/en" class="border-b-2 mr-2">English</a>
@@ -44,7 +44,10 @@
         <a href="/lang/nl" class="border-b-2 mr-2">Nederlands</a>
         <a href="/lang/th" class="border-b-2 mr-2">ไทย</a>
         <a href="/static/privacy.html" class="text-blue-500 border-b-2 mr-2">Privacy</a>
-    </p>
+    </div>
+<div class="w-full text-center">
+    <a target=_blank href="https://discord.com/api/oauth2/authorize?client_id=1185508364701151284&permissions=8797166831616&scope=bot" class="mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Chat GPT-4 Free</a>
+</div>
 </div>
 <div id="parentContainer" class="flex flex-wrap m-2">
     
@@ -61,47 +64,92 @@
             <button class="subx bg-blue-400 text-white px-3 py-1  rounded-full" value="1733652180576686386">🔔</button>
         </div>
         <div class="mt-2 text-sm">
-            <h1>Tweets Recentes</h1>
-<p><br><a style="color:#5da2ff;" href="https://x.com/ylecun/status/1744561157724119418#m">09 Jan 2024 03:26:07 @ylecun</a>: A velocidade com que uma tecnologia se dissemina na economia é limitada pela rapidez com que as pessoas aprendem a usá-la.</p>
-<p>Comentário: Interessante reflexão sobre a adoção da inteligência artificial e seu impacto sócio-econômico. </p>
-<p>Quoting: </p>
-<blockquote>
-<p>Martin Signoux (@MartinSignoux): "A maturidade da tecnologia não é suficiente para impulsionar a adoção.</p>
-<p>Análise esclarecedora sobre a ascensão dos tratores nas fazendas dos EUA, colocada em paralelo com a inteligência artificial generativa, feita pela @TheEconomist </p>
-<p>A adoção da IA e seu impacto sócio-econômico subseqüente levará anos, se não décadas</p>
-<p>Hora de se preparar, não de entrar em pânico" | Nitter
-<a href="https://x.com/MartinSignoux/status/1744390950971900041#m">x.com/MartinSignoux/status/1744390950971900041#m</a></p>
-</blockquote>
+            <h1>Tweets</h1>
 <hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/RisingSayak/status/1744549780804747725#m">09 Jan 2024 02:40:54 @RisingSayak</a>: O que faz o SSD-1B funcionar tão bem? </p>
-<p>Apesar do cenário competitivo, <a href="https://x.com/_yatharthg">@_yatharthg</a>, Vishnu, <a href="https://x.com/prabhalah">@prabhalah</a> junto comigo e Patrick decidimos trabalhar em um relatório técnico para isso!</p>
-<p>Liberem os modelos e, se útil, então liberem um relatório. Adoro essa cultura ❤️</p>
-<p><br><a style="color:#5da2ff;" href="https://arxiv.org/abs/2401.02677">arxiv.org/abs/2401.02677</a></p>
-<p>Comentário: Interessante ver a colaboração em torno do desenvolvimento tecnológico.</p>
+<p><strong>14 Jan 2024 21:38:00 @hwchase17</strong></p>
+<p>Que vale a pena ressaltar que este não é apenas um código de demonstração - esta é uma aplicação completa com autenticação do Google, compartilhamento de bate-papo, gerenciamento de sessão, etc. </p>
+<p>s/o <a href="https://x.com/kplley" title="Kpolley">@kplley</a> por construir isso </p>
+<p>Utiliza intensamente <a href="https://x.com/vercel" title="Vercel">@vercel</a>, então s/o para eles também</p>
 <hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1744534744996720964#m">09 Jan 2024 01:41:09 @jerryjliu0</a>: Definir um RAG DAG avançado em &lt; 20 linhas de código, ver todos os traços registrados em uma linha de código ⚡️</p>
-<p>Uma característica adicional em nossa <a href="https://x.com/llama_index">@llama_index</a> Query Interface é que todas as execuções serão automaticamente registradas em provedores de observabilidade downstream como <a href="https://x.com/ArizePhoenix">@ArizePhoenix</a>.</p>
-<p>Confira nosso guia aqui: <a href="https://docs.llamaindex.ai/en/stable/examples/pipeline/query_pipeline.html">docs.llamaindex.ai/en/stable…</a></p>
-<p>Comentário: Ótima adição à interface de consulta, facilitando o rastreamento e a observação.</p>
+<p><strong>14 Jan 2024 19:59:51 @jerryjliu0</strong></p>
+<p>Aqui está um artigo interessante de Barnett et al. (@DeakinA2I2) que descreve 7 pontos de falha na construção de um pipeline RAG sobre seus dados.</p>
+<ol>
+<li>🚫 Conteúdo ausente (não indexado)</li>
+<li>🚫 Ausente no conjunto recuperado top-k</li>
+<li>🚫 Ausente no conjunto reclassificado</li>
+<li>🚫 Não extraído (no contexto, mas o LLM não pôde usar)</li>
+<li>🚫 Formato incorreto (por exemplo, JSON)</li>
+<li>🚫 Especificidade incorreta (não no nível certo de granularidade)</li>
+<li>🚫 Incompleto - a resposta sintetizada responde apenas parte da pergunta</li>
+</ol>
+<p>...</p>
+<p>Se eu fosse adicionar mais alguns, acrescentaria pontos de falha durante a compreensão/reescrever a fase da consulta (especialmente se você está construindo agentes).</p>
+<p>Confira o artigo: <a href="https://arxiv.org/pdf/2401.05856.pdf">arxiv.org/pdf/2401.05856.pdf</a></p>
 <hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/jerryjliu0/status/1744530919833362699#m">09 Jan 2024 01:25:57 @jerryjliu0</a>: A RAG multilíngue é importante! 🌏</p>
-<p>O SeaLLM-Chat-7B é um modelo interessante otimizado para idiomas do Sudeste Asiático: Vietnamita, Indonésio, Tailandês, Malaio, Khmer, Lao, Tagalo, Birmanês.</p>
-<p>Confira como construir um pipeline RAG sobre seus documentos tailandeses abaixo 👇</p>
-<p>Post: <a href="https://blog.float16.cloud/thai-rag-with-llamaindex-weaviate-seallm/">blog.float16.cloud/thai-rag-…</a></p>
-<p>SeaLLM model no <a href="https://x.com/huggingface">@huggingface</a>: <a href="https://huggingface.co/SeaLLMs/SeaLLM-7B-Chat">huggingface.co/SeaLLMs/SeaLL…</a></p>
-<p>Comentário: Excelente avanço na adoção da tecnologia para idiomas menos comuns.</p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/altryne/status/1744529202244637000#m">09 Jan 2024 01:19:08 @altryne</a>: O que é melhor, RAG, Finetune ou talvez Finetune + RAG?</p>
-<p>Quem vai participar desta maratona de programação, organizada por <a href="https://x.com/togethercompute">@togethercompute</a>, <a href="https://x.com/LangChainAI">@LangChainAI</a> e <a href="https://x.com/weights_biases">@weights_biases</a> para descobrir isso?</p>
-<p>(🙋‍♂️ acabei de reservar meu voo, nos vemos na AGI house)</p>
-<p>Comentário: Uma ótima oportunidade para explorar os diferentes aspectos da tecnologia de inteligência artificial.</p>
-<hr />
-<p><br><a style="color:#5da2ff;" href="https://x.com/hwchase17/status/1744523501435019600#m">09 Jan 2024 00:56:29 @hwchase17</a>: Há MUITA coisa na LangChain v0.1.0</p>
-<p>Fizemos um vídeo para cada conceito importante</p>
-<p>5-10 minutos, percorre o conceito em alto nível e, em seguida, a maioria tem alguns exemplos de código (Python e JS disponíveis)</p>
-<p>Comentário: Excelente iniciativa de disponibilizar um material educativo tão completo.</p>
-<hr />
-<p>Artigo compilado por: Editor Sênior</p>
+<p><strong>14 Jan 2024 06:12:09 @konrad_gnat</strong></p>
+<p>Estar em San Francisco agora é o momento mais emocionante </p>
+<p>Participando de hackathons e conversando com fundadores, por exemplo, da Langchain </p>
+<p>Usando e construindo ferramentas e sentindo como ela está evoluindo </p>
+<p>Conhecendo fundadores cujas startups decolam </p>
+<p>Registrando evolução tangível </p>
+<p>Não perca de vista o seu caminho</p>
+<p>...</p>
+<p><strong>13 Jan 2024 19:22:55 @konrad_gnat</strong></p>
+<p>Indo para os primeiros hackathons de 2024 </p>
+<p>Construindo com <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a> JS e ajustando modelos com <a href="https://x.com/UseTogetherAI" title="togetherAI">@UseTogetherAI</a> </p>
+<p>em <a href="https://x.com/agihouse_org" title="AGI House">@agihouse_org</a></p>
+<p>...</p>
+<p><strong>14 Jan 2024 19:19:00 @LangChainAI</strong></p>
+<p>🦜👪LangChain JS Tutorial </p>
+<p>Leon van Zyl (<a href="https://x.com/leonvz" title="Leon van Zyl">@leonvz</a>) lançou um excelente tutorial sobre como começar com LangChain JS </p>
+<p>Se você é um desenvolvedor web que deseja começar, definitivamente confira isso! </p>
+<p><a style="color:#5da2ff;" href="https://www.youtube.com/watch?v=MaSynwSIty4">youtube.com/watch?v=MaSynwSI…</a></p>
+<p>...</p>
+<p><strong>14 Jan 2024 18:20:39 @bclavie</strong></p>
+<p>💯  </p>
+<p>Construí o RAGatouille porque simplesmente não queria esperar para ter APIs mais convenientes do ColBERT. </p>
+<p>O próximo passo é lógico: não posso esperar para alguém construir o ColBERT-como-serviço!</p>
+<p>(se você o fizer, você terá a palavra final sobre se é pronunciado Col-BERT ou Col-BAIR)</p>
+<p>...</p>
+<p><strong>14 Jan 2024 18:17:00 @LangChainAI</strong></p>
+<p>🦜🧠Adicionando memória conversacional ao seu aplicativo RAG </p>
+<p>A principal interface do usuário para aplicações LLM é o bate-papo. Isso torna importante saber como adicionar memória conversacional aos seus aplicativos - inclusive seus aplicativos RAG! </p>
+<p><a style="color:#5da2ff;" href="https://x.com/curious_kaylynn" title="Kaylynn Watson">@curious_kaylynn</a> guia passo a passo de como fazer exatamente isso! </p>
+<p><a style="color:#5da2ff;" href="https://www.youtube.com/watch?v=l1JRl3Mvln0">youtube.com/watch?v=l1JRl3Mv…</a></p>
+<p>...</p>
+<p><strong>14 Jan 2024 19:36:38 @ylecun</strong></p>
+<p>Amo isso. 
+É por isso que as plataformas de IA de código aberto vão vencer: é a única maneira para a IA atender a idiomas, culturas, valores e centros de interesse altamente diversos.</p>
+<p>...</p>
+<p><strong>14 Jan 2024 19:17:56 @gdb</strong></p>
+<p>para programar, primeiro limpe sua mente</p>
+<p>...</p>
+<p><strong>14 Jan 2024 19:04:20 @karpathy</strong></p>
+<p>Ideia: safeLinux. Todos os programas que você conhece e adora agora atualizados com segurança para parar os maus atores em seus rastros.</p>
+<p>$ ls 
+Desculpe, não consigo listar os arquivos neste diretório porque um ou mais arquivos podem conter conteúdo inseguro. Posso ajudá-lo com mais alguma coisa?</p>
+<p>...</p>
+<p><strong>14 Jan 2024 17:46:27 @Moi39017963</strong></p>
+<p>Um bom RAG, assim como um bom IR em geral, necessita de muito trabalho e ajuste para casos de uso específicos... </p>
+<p>E 2 casos de uso poderiam ter fluxos de trabalho RAG/IR muito diferentes, em minha experiência</p>
+<p>...</p>
+<p><strong>14 Jan 2024 18:06:56 @ylecun</strong></p>
+<p>A Meta investe duas vezes mais em P&amp;D do que a Amazon, Alphabet e Microsoft, e quatro vezes mais do que a Apple, quando normalizada pela receita. 
+A única outra grande empresa de tecnologia que chega perto é a Nvidia. 
+Isso diz muito sobre quem está construindo a tecnologia de amanhã.</p>
+<p>...</p>
+<p><strong>14 Jan 2024 17:58:49 @ylecun</strong></p>
+<p>Precisamos de vários assistentes de IA pelos mesmos motivos que precisamos de várias fontes de notícias e informações. 
+Precisamos de plataformas de IA de código aberto pelos mesmos motivos que precisamos de canais de distribuição de informações agnósticas em relação ao conteúdo. 
+Diversidade.</p>
+<p>...</p>
+<p><strong>14 Jan 2024 15:24:26 @itsafiz</strong></p>
+<p>Construa um aplicativo de IA de Resposta a Perguntas para Dados de Áudio! </p>
+<p>Hoje, veremos como podemos construir um aplicativo de IA de perguntas e respostas para dados de áudio usando <a href="https://x.com/AssemblyAI" title="AssemblyAI">@AssemblyAI</a>, <a href="https://x.com/LangChainAI" title="LangChain">@LangChainAI</a> e <a href="https://x.com/OpenAI" title="OpenAI">@OpenAI</a> </p>
+<p>Em apenas 3 passos simples, podemos alcançar isso. </p>
+<p>Vamos começar 🚀</p>
+<p>...</p>
+<h1>Fim dos tweets</h1>
         </div><br><br><br><br><br><br>
     </div>
 

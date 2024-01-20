@@ -213,6 +213,8 @@ async def subscribe(request: Request):
             return templates.TemplateResponse("pay.html", {"request": request, "usermail": email})
         conn.commit()
         print("The record has been updated.")
+        info = email + "<br>✅ Subscribed %s <br>daily push on Greenwich Mean Time (GMT) " % row[1] + row[3].strftime(
+            "%H:%M") + "<br>Expire Date：" + expire_date.strftime("%Y/%m/%d")
     else:
         cursor.execute("INSERT INTO users (email, target_id, mail_time, expire_date,lang) VALUES (:email, :target_id, :mail_time, :expire_date, :lang)",
             email=email,
@@ -223,9 +225,9 @@ async def subscribe(request: Request):
         )
         conn.commit()
         print("A new record has been inserted.")
-
+        info = email + "<br>✅ Subscribed %s <br>daily push on Greenwich Mean Time (GMT) " % expire_date + mail_time.strftime(
+            "%H:%M") + "<br>Expire Date：" + expire_date.strftime("%Y/%m/%d")
     conn.close()
-    info = email+"<br>✅ Subscribed %s <br>daily push on Greenwich Mean Time (GMT) "%row[1]+row[3].strftime("%H:%M")+"<br>Expire Date："+expire_date.strftime("%Y/%m/%d")
     info = '<div class="w-full text-center m-4">%s</div>'%info
     return templates.TemplateResponse("base.html", {"request": request, "main": info})
 
